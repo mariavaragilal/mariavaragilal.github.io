@@ -1,0 +1,52 @@
+{
+	"name": "CV-MVaragilal",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"@reduxjs/toolkit": "^2.9.0",
+		"gatsby": "^5.15.0",
+		"gatsby-omni-font-loader": "^2.0.2",
+		"gatsby-plugin-image": "^3.15.0",
+		"gatsby-plugin-manifest": "^5.15.0",
+		"gatsby-plugin-postcss": "^6.15.0",
+		"gatsby-plugin-sass": "^6.15.0",
+		"gatsby-plugin-sharp": "^5.15.0",
+		"gatsby-source-filesystem": "^5.15.0",
+		"gatsby-transformer-sharp": "^5.15.0",
+		"i18next": "^25.5.2",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"react-helmet": "^6.1.0",
+		"react-i18next": "^15.7.3",
+		"react-redux": "^9.2.0",
+		"sass": "^1.77.8"
+	},
+	"devDependencies": {
+		"@tailwindcss/postcss": "^4.1.13",
+		"autoprefixer": "^10.4.21",
+		"gh-pages": "^6.3.0",
+		"postcss": "^8.5.6",
+		"tailwindcss": "^4.1.13",
+		"tailwindcss-animate": "^1.0.7"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"scripts": {
+		"develop": "gatsby develop",
+		"build": "gatsby build",
+		"serve": "gatsby serve",
+		"clean": "gatsby clean",
+		"lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+		"deploy": "npm run build && gh-pages -d public"
+	}
+}

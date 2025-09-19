@@ -1,0 +1,93 @@
+{
+	"cv": {
+		"name": "Maria Varagilal",
+		"title": "Digital Product Designer",
+		"summary": "Digital Product Designer & Frontend Developer with 10+ years of experience delivering digital products from concept to production. Skilled in design systems, UX strategy, and frontend implementation using JavaScript, React, Redux, HTML, and CSS. Passionate about crafting user experiences that are as performant as they are intuitive."
+	},
+	"nav": {
+		"about": "about",
+		"education": "education",
+		"awards": "awards",
+		"experience": "experience"
+	},
+	"experience": {
+		"securibox": {
+			"company": "Securibox",
+			"location": "Lisbon Area, Portugal",
+			"position": "Head Digital Product Designer",
+			"period": "September 2015 - Present",
+			"description": [
+				"Defined product experience, interface, and brand strategy.",
+				"Architected product flows and content organization to optimize usability.",
+				"Implemented designs into code with JavaScript, Redux, Gatsby, HTML, and CSS.",
+				"Built responsive, accessible UIs aligned with design systems.",
+				"Partnered with engineers to integrate APIs and deliver scalable features.",
+				"Drove continuous product improvement across design and frontend.",
+				"Operated in a fast-paced, product-driven environment, balancing design leadership and hands-on coding in a lean team setting."
+			]
+		},
+		"youngnetwork": {
+			"company": "YoungNetwork Group",
+			"location": "Campo grande, Lisboa, Portugal",
+			"position": "UI/UX Designer",
+			"period": "January 2013 - September 2015",
+			"description": ["Development of projects internally and externally.", "Design and development of graphic concepts, proposals and projects for mobile and web app.", "Social Media campaigns, images and apps."]
+		},
+		"infoportugal": {
+			"company": "InfoPortugal S.A.",
+			"location": "Lisboa area, Portugal",
+			"position": "Graphic Designer",
+			"period": "September 2012 - January 2013",
+			"description": ["Development of projects internally and externally. The tasks include developing graphic concepts, designing brochures, guides, roadmaps, and digital and paper infographics.", "Development of proposals and projects for mobile and web app."]
+		},
+		"cofina": {
+			"company": "Cofina media",
+			"location": "Lisboa area, Portugal",
+			"position": "Intern Designer",
+			"period": "July 2012 - August 2012",
+			"description": ["Design and development of editorial pages for magazines TV GUIA and FLASH"]
+		}
+	},
+	"education": {
+		"university": {
+			"name": "Universidade Lusíada de Lisboa",
+			"degree": "Licentiata degree, Design",
+			"period": "2008 - 2011"
+		},
+		"academy": {
+			"name": "Academia Flag",
+			"degree": "Pós-Graduação, Design Comunicação",
+			"period": "2011 - 2012"
+		}
+	},
+	"awards": {
+		"younglions": {
+			"name": "Young Lions Portugal",
+			"award": "Bronze cyber",
+			"date": "May 2014"
+		},
+		"behance": {
+			"name": "Behance",
+			"award": "Web Design Served",
+			"date": "July 2013"
+		}
+	},
+	"about": {
+		"quote": "Do it with passion, or not at all",
+		"description1": "Energetic by nature and licensed in Design, it's during the undergraduate degree that the passion for the digital arrived. An authentic Workaholic & Perfectionist, nothing is perfect and everything has room for improvement.",
+		"description2": "Leveling up — from pixels to production — bridging design and code with JavaScript, modern frameworks, Redux, and clean UI development to turn ideas into full experiences that are thought through, built out, and ready to perform.",
+		"skills": {
+			"productDesign": "Product Design",
+			"userInterface": "User Interface",
+			"userExperience": "User Experience",
+			"react": "React",
+			"redux": "Redux"
+		}
+	},
+	"location": "Lisbon",
+	"404": {
+		"title": "Page Not Found",
+		"description": "Sorry, the page you are looking for does not exist.",
+		"backHome": "Back to Home"
+	}
+}
