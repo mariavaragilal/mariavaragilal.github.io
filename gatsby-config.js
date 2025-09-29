@@ -78,14 +78,6 @@ module.exports = {
 			},
 		},
 		{
-			resolve: "gatsby-plugin-purgecss",
-			options: {
-				develop: false,
-				purgeOnly: ["src/assets/stylesheets/"],
-				content: ["./src/**/*.js", "./src/**/*.jsx", "./src/**/*.ts", "./src/**/*.tsx"],
-			},
-		},
-		{
 			resolve: "gatsby-omni-font-loader",
 			options: {
 				enableListener: true,
