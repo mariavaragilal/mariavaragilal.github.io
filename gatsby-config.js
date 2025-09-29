@@ -12,9 +12,9 @@ module.exports = {
 	flags: {
 		FAST_DEV: true,
 		PRESERVE_FILE_DOWNLOAD_CACHE: true,
-		PARALLEL_SOURCING: true,
-		DEV_SSR: true,
-		PARTIAL_HYDRATION: true,
+		PARALLEL_SOURCING: false,
+		DEV_SSR: false,
+		PARTIAL_HYDRATION: false,
 		DETECT_NODE_MUTATIONS: false,
 	},
 	jsxRuntime: "automatic",
@@ -67,20 +67,6 @@ module.exports = {
 						type: "image/png",
 					},
 				],
-			},
-		},
-		{
-			resolve: "gatsby-plugin-preload-fonts",
-			options: {
-				preload: true,
-				display: "swap",
-			},
-		},
-		{
-			resolve: "gatsby-plugin-preload-fonts",
-			options: {
-				extract: true,
-				format: "woff2",
 			},
 		},
 		{
