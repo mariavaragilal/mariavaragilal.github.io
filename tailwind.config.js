@@ -4,7 +4,9 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ["Rubik", "Inter", "Google Sans Code", "ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif"],
+				sans: ["Rubik", "Inter", "ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif"],
+				mono: ["Google Sans Code", "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"],
+				"google-sans-code": ["Google Sans Code", "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"],
 			},
 			fontWeight: {
 				light: "300",

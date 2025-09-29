@@ -49,7 +49,7 @@ const Layout = ({ children, title, description, showWork, ...others }) => {
 			<ThemeProvider>
 				<I18nextProvider i18n={i18n}>
 					<ErrorBoundary>
-						<div className="flex flex-col gap-2 bg-slate-100 dark:bg-slate-900 p-2 font-[Google Sans Code]" {...others}>
+						<div className="flex flex-col gap-2 bg-slate-100 dark:bg-slate-900 p-2 font-google-sans-code" {...others}>
 							<header className="flex flex-wrap justify-between align-center gap-2" role="banner">
 								<Copyright />
 								<nav className="flex items-center gap-2" role="navigation" aria-label="Site navigation">
