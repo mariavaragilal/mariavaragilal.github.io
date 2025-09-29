@@ -51,7 +51,7 @@
 	"education": {
 		"university": {
 			"name": "Universidade Lusíada de Lisboa",
-			"degree": "Licentiata degree, Design",
+			"degree": "Bachelor’s Degree, Design",
 			"period": "2008 - 2011"
 		},
 		"academy": {
@@ -77,7 +77,7 @@
 		"description1": "Energetic by nature and licensed in Design, it's during the undergraduate degree that the passion for the digital arrived. An authentic Workaholic & Perfectionist, nothing is perfect and everything has room for improvement.",
 		"description2": "Leveling up — from pixels to production — bridging design and code with JavaScript, modern frameworks, Redux, and clean UI development to turn ideas into full experiences that are thought through, built out, and ready to perform.",
 		"skills": {
-			"productDesign": "Product Design",
+			"productDesign": "SaaS Product Design",
 			"userInterface": "User Interface",
 			"userExperience": "User Experience",
 			"react": "React",

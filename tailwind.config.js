@@ -4,7 +4,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ["Rubik", "ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif"],
+				sans: ["Rubik", "Inter", "Google Sans Code", "ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif"],
 			},
 			fontWeight: {
 				light: "300",
@@ -79,10 +79,42 @@ module.exports = {
 						height: "0",
 					},
 				},
+				"terminal-sweep": {
+					"0%": {
+						"background-position": "-200% 0",
+						opacity: "0.8",
+					},
+					"50%": {
+						opacity: "1",
+					},
+					"100%": {
+						"background-position": "200% 0",
+						opacity: "0.8",
+					},
+				},
+				"terminal-glow": {
+					"0%": {
+						"text-shadow": "0 0 5px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.2), 0 0 15px rgba(0, 0, 0, 0.1)",
+					},
+					"100%": {
+						"text-shadow": "0 0 2px rgba(0, 0, 0, 0.2), 0 0 5px rgba(0, 0, 0, 0.1), 0 0 8px rgba(0, 0, 0, 0.05)",
+					},
+				},
+				"terminal-glow-dark": {
+					"0%": {
+						"text-shadow": "0 0 5px rgba(255, 255, 255, 0.3), 0 0 10px rgba(255, 255, 255, 0.2), 0 0 15px rgba(255, 255, 255, 0.1)",
+					},
+					"100%": {
+						"text-shadow": "0 0 2px rgba(255, 255, 255, 0.2), 0 0 5px rgba(255, 255, 255, 0.1), 0 0 8px rgba(255, 255, 255, 0.05)",
+					},
+				},
 			},
 			animation: {
 				"accordion-down": "accordion-down 0.2s ease-out",
 				"accordion-up": "accordion-up 0.2s ease-out",
+				"terminal-sweep": "terminal-sweep 0.6s ease-in-out",
+				"terminal-glow": "terminal-glow 0.5s ease-in-out infinite alternate",
+				"terminal-glow-dark": "terminal-glow-dark 0.5s ease-in-out infinite alternate",
 			},
 		},
 	},

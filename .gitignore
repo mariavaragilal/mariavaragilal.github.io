@@ -50,3 +50,6 @@ coverage/
 # Temporary folders
 tmp/
 temp/
+
+# Ignore all files and folders starting with . in src/
+src/**/.*

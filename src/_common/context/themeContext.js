@@ -13,8 +13,11 @@ export const ThemeProvider = ({ children }) => {
 	const [resolvedTheme, setResolvedTheme] = useState("light");
 
 	useEffect(() => {
+		// Only run on client side
+		if (typeof window === "undefined") return;
+
 		const getSystemTheme = () => {
-			if (typeof window !== "undefined" && window.matchMedia) return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+			if (window.matchMedia) return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 			return "light";
 		};
 
@@ -35,6 +38,9 @@ export const ThemeProvider = ({ children }) => {
 	}, [theme]);
 
 	useEffect(() => {
+		// Only run on client side
+		if (typeof document === "undefined") return;
+
 		const root = document.documentElement;
 
 		if (resolvedTheme === "dark") root.classList.add("dark");

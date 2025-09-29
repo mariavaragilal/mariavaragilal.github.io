@@ -3,12 +3,15 @@
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
-		"@reduxjs/toolkit": "^2.9.0",
+		"ajv": "^8.17.1",
 		"gatsby": "^5.15.0",
 		"gatsby-omni-font-loader": "^2.0.2",
 		"gatsby-plugin-image": "^3.15.0",
 		"gatsby-plugin-manifest": "^5.15.0",
 		"gatsby-plugin-postcss": "^6.15.0",
+		"gatsby-plugin-preload-fonts": "^2.15.0",
+		"gatsby-plugin-purgecss": "^6.2.1",
+		"gatsby-plugin-robots-txt": "^1.8.0",
 		"gatsby-plugin-sass": "^6.15.0",
 		"gatsby-plugin-sharp": "^5.15.0",
 		"gatsby-source-filesystem": "^5.15.0",
@@ -18,13 +21,26 @@
 		"react-dom": "^18.3.1",
 		"react-helmet": "^6.1.0",
 		"react-i18next": "^15.7.3",
-		"react-redux": "^9.2.0",
-		"sass": "^1.77.8"
+		"sass": "^1.77.8",
+		"sass-loader": "^16.0.5",
+		"semver": "^7.7.2"
 	},
 	"devDependencies": {
 		"@tailwindcss/postcss": "^4.1.13",
+		"@testing-library/jest-dom": "^6.1.4",
+		"@testing-library/react": "^14.1.2",
+		"@testing-library/user-event": "^14.5.1",
 		"autoprefixer": "^10.4.21",
+		"eslint": "^8.57.0",
+		"eslint-plugin-jsx-a11y": "^6.8.0",
+		"eslint-plugin-react": "^7.33.2",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"gatsby-plugin-offline": "^6.15.0",
+		"gatsby-plugin-sitemap": "^6.15.0",
+		"gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.32",
 		"gh-pages": "^6.3.0",
+		"jest": "^29.7.0",
+		"jest-environment-jsdom": "^29.7.0",
 		"postcss": "^8.5.6",
 		"tailwindcss": "^4.1.13",
 		"tailwindcss-animate": "^1.0.7"
@@ -46,7 +62,14 @@
 		"build": "gatsby build",
 		"serve": "gatsby serve",
 		"clean": "gatsby clean",
+		"reset": "rm -rf node_modules package-lock.json",
+		"cache": "npm cache verify && npm cache clean --force",
+		"kill": "lsof -ti:8000 && kill -9 50083",
 		"lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-		"deploy": "npm run build && gh-pages -d public"
+		"test": "jest",
+		"test:watch": "jest --watch",
+		"test:coverage": "jest --coverage",
+		"deploy": "npm run build && gh-pages -d public",
+		"i": "npm install"
 	}
 }
