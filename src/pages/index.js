@@ -31,7 +31,7 @@ const IndexPage = () => {
 								</LazyTerminalTypeEffect>
 								<p
 									className='text-xl font-[Rubik] tracking-wide text-slate-800 dark:text-slate-300'>
-									Head Digital Product Designer & Frontend Implementer · Securibox
+									Head Digital Product Designer & Frontend Development
 								</p>
 								<p className='max-w-2xl text-xl leading-relaxed text-slate-500 dark:text-slate-400'>
 									+ 10 years turning SaaS products into single unified platforms — through strategy, design systems, and React.
