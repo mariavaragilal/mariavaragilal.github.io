@@ -10,7 +10,7 @@ const IndexPage = () => {
 	const toggleApp = (index) =>  setOpenAppIndex(openAppIndex === index ? null : index);
 	
 	return (
-		<Layout title='Maria Varagilal' description='Digital Product Designer & Frontend Developer'>
+		<Layout title='MVP Framework' description='Digital Product Designer & Frontend Developer'>
 			<div className='max-w-5xl lg:max-w-full m-auto shadow-lg rounded-lg relative w-full bg-white dark:bg-slate-900'>
 
 				<main>
