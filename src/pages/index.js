@@ -153,8 +153,8 @@ const IndexPage = () => {
 								</div>
 							</div>
 							<div className='mt-9 rounded border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900/40 px-6 py-5'>
-								<p className='text-[14px] italic leading-relaxed text-slate-900 dark:text-slate-100'>
-								The pillars are designed to be universally applicable. I can walk into any B2B SaaS with fragmented solutions and run the same 5-step process — delivering the same order-of-magnitude improvements in consistency, speed, and enterprise perception.
+								<p className='text-[1.2rem] italic leading-relaxed text-slate-900 dark:text-slate-100'>
+								The pillars are intended to be universally applicable. Applying the MVP process enables order-of-magnitude gains in consistency, speed, and overall enterprise-level perception.
 								</p>
 							</div>
 						</div>
