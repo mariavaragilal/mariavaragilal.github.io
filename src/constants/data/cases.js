@@ -14,7 +14,6 @@ export const cases = [
 			'Smoother, more predictable user experience',
 			'Reusable patterns for team efficiency and design-to-development alignment'
 		],
-		logo: '/images/securibox-logo.png',
 		caseStudy: {
 			role: 'Head Digital Product Designer & Frontend Development',
 			tools: 'Sketch · Figma · Gatsby · Bootstrap · React · Redux',
