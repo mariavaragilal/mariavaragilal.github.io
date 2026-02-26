@@ -1,93 +1,102 @@
 {
-	"cv": {
-		"name": "Maria Varagilal",
-		"title": "Digital Product Designer",
-		"summary": "Designer de Produto Digital & Frontend Developer com mais de 10 anos de experiência na entrega de produtos digitais, desde o conceito até à produção. Especialização em sistemas de design, estratégia de UX e implementação frontend com JavaScript, React, Redux, HTML e CSS. Foco na criação de experiências de utilizador tão intuitivas quanto eficientes em desempenho."
-	},
-	"nav": {
-		"about": "sobre",
-		"education": "educação",
-		"awards": "prémios",
-		"experience": "experiência"
-	},
-	"experience": {
-		"securibox": {
-			"company": "Securibox",
-			"location": "Área de Lisboa, Portugal",
-			"position": "Head Digital Product Designer",
-			"period": "Setembro 2015 - Presente",
-			"description": [
-				"Definição da experiência do produto, interface e estratégia de marca.",
-				"Arquitetura de fluxos do produto e organização de conteúdos para otimização da usabilidade.",
-				"Implementação de designs em código com JavaScript, Redux, Gatsby, HTML e CSS.",
-				"Criação de interfaces responsivas e acessíveis, alinhadas com sistemas de design.",
-				"Colaboração com engenheiros na integração de APIs e entrega de funcionalidades escaláveis.",
-				"Condução da melhoria contínua do produto em design e frontend.",
-				"Atuação em ambiente dinâmico e orientado para o produto, com equilíbrio entre liderança de design e desenvolvimento prático em equipa enxuta."
-			]
-		},
-		"youngnetwork": {
-			"company": "YoungNetwork Group",
-			"location": "Campo grande, Lisboa, Portugal",
-			"position": "Designer UI/UX",
-			"period": "Janeiro 2013 - Setembro 2015",
-			"description": ["Desenvolvimento de projetos internos e externos.", "Design e desenvolvimento de conceitos gráficos, propostas e projetos para aplicações móveis e web.", "Campanhas de redes sociais, imagens e aplicações."]
-		},
-		"infoportugal": {
-			"company": "InfoPortugal S.A.",
-			"location": "Área de Lisboa, Portugal",
-			"position": "Designer Gráfica",
-			"period": "Setembro 2012 - Janeiro 2013",
-			"description": ["Desenvolvimento de projetos internos e externos. As tarefas incluem desenvolver conceitos gráficos, desenhar brochuras, guias, mapas de rota e infografias digitais e em papel.", "Desenvolvimento de propostas e projetos para aplicações móveis e web."]
-		},
-		"cofina": {
-			"company": "Cofina media",
-			"location": "Área de Lisboa, Portugal",
-			"position": "Designer Estagiária",
-			"period": "Julho 2012 - Agosto 2012",
-			"description": ["Design e desenvolvimento de páginas editoriais para as revistas TV GUIA e FLASH"]
-		}
-	},
-	"education": {
-		"university": {
-			"name": "Universidade Lusíada de Lisboa",
-			"degree": "Licenciatura, Design",
-			"period": "2008 - 2011"
-		},
-		"academy": {
-			"name": "Academia Flag",
-			"degree": "Pós-Graduação, Design Comunicação",
-			"period": "2011 - 2012"
-		}
-	},
-	"awards": {
-		"younglions": {
-			"name": "Young Lions Portugal",
-			"award": "Bronze cyber",
-			"date": "Maio 2014"
-		},
-		"behance": {
-			"name": "Behance",
-			"award": "Web Design Served",
-			"date": "Julho 2013"
-		}
-	},
-	"about": {
-		"quote": "Faz com paixão, ou não faças de todo.",
-		"description1": "Energética por natureza e licenciada em Design, foi durante a licenciatura que surgiu a paixão pelo digital. Autêntica workaholic e perfeccionista, acreditando que nada é perfeito e que tudo pode ser melhorado.",
-		"description2": "Evolução constante — do pixel à produção — fazendo a ponte entre design e código com JavaScript, frameworks modernas, Redux e desenvolvimento de interfaces limpas, transformando ideias em experiências completas, pensadas ao detalhe, implementadas e prontas a ter impacto.",
-		"skills": {
-			"productDesign": "Design de Produto SaaS",
-			"userInterface": "Interface de Utilizador",
-			"userExperience": "Experiência de Utilizador",
-			"react": "React",
-			"redux": "Redux"
-		}
-	},
-	"location": "Lisboa",
-	"404": {
-		"title": "Página Não Encontrada",
-		"description": "Desculpe, a página que procura não existe.",
-		"backHome": "Voltar ao Início"
-	}
+  "404": {
+    "title": "Página Não Encontrada",
+    "description": "Desculpe, a página que procura não existe.",
+    "backHome": "Voltar ao Início"
+  },
+  "cv": {
+    "name": "Maria Varagilal",
+    "title": "Senior Product Designer & Front-End Expertise",
+    "summary": "Designer de Produto Digital & Frontend Developer com mais de 10 anos de experiência na entrega de produtos digitais, desde o conceito até à produção. Especialização em sistemas de design, estratégia de UX e implementação frontend com JavaScript, React, Redux, HTML e CSS. Foco na criação de experiências de utilizador tão intuitivas quanto eficientes em desempenho."
+  },
+  "nav": {
+    "about": "sobre",
+    "education": "educação",
+    "awards": "prémios",
+    "experience": "experiência"
+  },
+  "experience": {
+    "securibox": {
+      "company": "Securibox",
+      "location": "Área de Lisboa, Portugal",
+      "position": "Head Digital Product Designer",
+      "period": "Setembro 2015 - Presente",
+      "description": [
+        "Definição da experiência do produto, interface e estratégia de marca.",
+        "Arquitetura de fluxos do produto e organização de conteúdos para otimização da usabilidade.",
+        "Implementação de designs em código com JavaScript, Redux, Gatsby, HTML e CSS.",
+        "Criação de interfaces responsivas e acessíveis, alinhadas com sistemas de design.",
+        "Colaboração com engenheiros na integração de APIs e entrega de funcionalidades escaláveis.",
+        "Condução da melhoria contínua do produto em design e frontend.",
+        "Atuação em ambiente dinâmico e orientado para o produto, com equilíbrio entre liderança de design e desenvolvimento prático em equipa enxuta."
+      ]
+    },
+    "youngnetwork": {
+      "company": "YoungNetwork Group",
+      "location": "Campo grande, Lisboa, Portugal",
+      "position": "Designer UI/UX",
+      "period": "Janeiro 2013 - Setembro 2015",
+      "description": [
+        "Desenvolvimento de projetos internos e externos.",
+        "Design e desenvolvimento de conceitos gráficos, propostas e projetos para aplicações móveis e web.",
+        "Campanhas de redes sociais, imagens e aplicações."
+      ]
+    },
+    "infoportugal": {
+      "company": "InfoPortugal S.A.",
+      "location": "Área de Lisboa, Portugal",
+      "position": "Designer Gráfica",
+      "period": "Setembro 2012 - Janeiro 2013",
+      "description": [
+        "Desenvolvimento de projetos internos e externos. As tarefas incluem desenvolver conceitos gráficos, desenhar brochuras, guias, mapas de rota e infografias digitais e em papel.",
+        "Desenvolvimento de propostas e projetos para aplicações móveis e web."
+      ]
+    },
+    "cofina": {
+      "company": "Cofina media",
+      "location": "Área de Lisboa, Portugal",
+      "position": "Designer Estagiária",
+      "period": "Julho 2012 - Agosto 2012",
+      "description": [
+        "Design e desenvolvimento de páginas editoriais para as revistas TV GUIA e FLASH"
+      ]
+    }
+  },
+  "education": {
+    "university": {
+      "name": "Universidade Lusíada de Lisboa",
+      "degree": "Licenciatura, Design",
+      "period": "2008 - 2011"
+    },
+    "academy": {
+      "name": "Academia Flag",
+      "degree": "Pós-Graduação, Design Comunicação",
+      "period": "2011 - 2012"
+    }
+  },
+  "awards": {
+    "younglions": {
+      "name": "Young Lions Portugal",
+      "award": "Bronze cyber",
+      "date": "Maio 2014"
+    },
+    "behance": {
+      "name": "Behance",
+      "award": "Web Design Served",
+      "date": "Julho 2013"
+    }
+  },
+  "about": {
+    "quote": "Faz com paixão, ou não faças de todo.",
+    "description1": "Energética por natureza e licenciada em Design, foi durante a licenciatura que surgiu a paixão pelo digital. Autêntica workaholic e perfeccionista, acreditando que nada é perfeito e que tudo pode ser melhorado.",
+    "description2": "Evolução constante — do pixel à produção — fazendo a ponte entre design e código com JavaScript, frameworks modernas, Redux e desenvolvimento de interfaces limpas, transformando ideias em experiências completas, pensadas ao detalhe, implementadas e prontas a ter impacto.",
+    "skills": {
+      "productDesign": "Design de Produto SaaS",
+      "userInterface": "Interface de Utilizador",
+      "userExperience": "Experiência de Utilizador",
+      "react": "React",
+      "redux": "Redux"
+    }
+  },
+  "location": "Lisboa"
 }

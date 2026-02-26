@@ -43,8 +43,8 @@ module.exports = {
 		{
 			resolve: "gatsby-plugin-manifest",
 			options: {
-				name: "Maria Varagilal CV",
-				short_name: "CV",
+				name: "Maria Varagilal",
+				short_name: "MV",
 				start_url: "/",
 				background_color: "#ffffff",
 				theme_color: "#030213",
@@ -92,8 +92,12 @@ module.exports = {
 						file: "https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700&display=swap",
 					},
 					{
-						name: "Google Sans Code",
-						file: "https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap",
+						name: "DM Sans",
+						file: "https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap",
+					},
+					{
+						name: "DM Sans",
+						file: "https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300..800;1,300..800&display=swap",
 					},
 					{
 						name: "Material Symbols Rounded",

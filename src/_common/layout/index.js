@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { I18nextProvider } from "react-i18next";
 import { useLocation } from "@reach/router";
+import { Link } from "gatsby";
 
 import i18n from "../../constants/i18n";
 import { initWebVitals } from "../../constants/utils/webVitals";
@@ -49,12 +50,29 @@ const Layout = ({ children, title, description, showWork, ...others }) => {
 			<ThemeProvider>
 				<I18nextProvider i18n={i18n}>
 					<ErrorBoundary>
-						<div className="flex flex-col gap-2 bg-slate-100 dark:bg-slate-900 p-2 font-google-sans-code" {...others}>
+						<div className="flex flex-col gap-2 bg-slate-100 dark:bg-slate-900 p-2 font-dm-sans" {...others}>
 							<header className="flex flex-wrap justify-between align-center gap-2" role="banner">
-								<Copyright />
 								<nav className="flex items-center gap-2" role="navigation" aria-label="Site navigation">
+									<Link
+										to='/'
+										className={'mx-3 text-[11px] uppercase tracking-[0.22em] transition hover:bg-slate-100 dark:hover:bg-slate-100 hover:text-slate-900 dark:hover:text-slate-900 ' + (location.pathname === '/' ? 'text-blue-600 dark:text-blue-400' : 'text-slate-900 dark:text-slate-100')}
+									>
+										#MVP
+									</Link>
+									<span className="hidden sm:block text-slate-200 dark:text-slate-500 sm:mx-2" aria-hidden="true">
+										|
+									</span>
+									<Link
+										to='/cv'
+										className={'mx-3 text-[11px] uppercase tracking-[0.22em] transition hover:bg-slate-100 dark:hover:bg-slate-100 hover:text-slate-900 dark:hover:text-slate-900 ' + (location.pathname === '/cv' || location.pathname.startsWith('/cv/') ? 'text-blue-600 dark:text-blue-400' : 'text-slate-900 dark:text-slate-100')}
+									>
+										CV
+									</Link>
+								</nav>
+								<nav className="flex items-center gap-2" role="navigation" aria-label="Site navigation">
+									
 									<ThemeToggle />
-									<span className="hidden sm:block text-slate-500 dark:text-slate-500 sm:mx-2" aria-hidden="true">
+									<span className="hidden sm:block text-slate-200 dark:text-slate-500 sm:mx-2" aria-hidden="true">
 										|
 									</span>
 									<Languages />

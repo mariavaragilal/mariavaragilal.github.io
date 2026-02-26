@@ -4,9 +4,9 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ["Rubik", "Inter", "ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif"],
-				mono: ["Google Sans Code", "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"],
-				"google-sans-code": ["Google Sans Code", "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"],
+				sans: ["Rubik", "Inter", "ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif", "ui-sans-serif", '"Apple Color Emoji"', '"Segoe UI Emoji"', '"Segoe UI Symbol"', '"Noto Color Emoji"'],
+				mono: ["DM Sans", "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"],
+				"dm-sans": ["DM Sans", "ui-sans-serif", "system-ui", "sans-serif"],
 			},
 			fontWeight: {
 				light: "300",
@@ -119,6 +119,7 @@ module.exports = {
 				"terminal-glow-dark": "terminal-glow-dark 0.5s ease-in-out infinite alternate",
 			},
 		},
+		container: { center: true, padding: "2rem", screens: { "2xl": "1400px" } },
 	},
 	plugins: [require("tailwindcss-animate")],
 };
