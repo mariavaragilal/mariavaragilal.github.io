@@ -47,6 +47,9 @@ pids
 # Coverage directory used by tools like istanbul
 coverage/
 
+# Bundle analysis output (may contain sensitive paths)
+bundle-report.html
+
 # Temporary folders
 tmp/
 temp/

@@ -1,6 +1,8 @@
-import React, { useState, useEffect, useRef, useCallback, useMemo, cloneElement, isValidElement, lazy, Suspense } from "react";
+import React, { useState, useEffect, useRef, useCallback, useMemo, cloneElement, isValidElement, Suspense } from 'react';
 
-const TerminalTypeEffect = ({ children, className = "", animationType = "shuffle", triggerOnLoad = true, triggerOnHover = false, duration, delay = 0, element = "span", rel, ...others }) => {
+const FRAME_MS = 1000 / 60;
+
+const TerminalTypeEffect = ({ children, className = '', animationType = 'shuffle', triggerOnLoad = true, triggerOnHover = false, duration = 1200, delay = 0, element = 'span', rel, ...others }) => {
 	// Default props:
 	// - className: '' (empty string)
 	// - animationType: 'shuffle' (options: shuffle, cursor, futuristic, line)
@@ -44,27 +46,17 @@ const TerminalTypeEffect = ({ children, className = "", animationType = "shuffle
 		return String(element || "");
 	}, []);
 
-	// Helper function to create animated JSX with opacity-based styling
 	const createAnimatedJSX = useCallback(
 		(originalElement, animatedText, currentIndex = -1, textArray = []) => {
-			// Handle string elements
-			if (typeof originalElement === "string") {
-				if (currentIndex === -1) return animatedText;
-
-				// Create JSX with opacity styling for each character
-				return animatedText.split("").map((char, index) => {
-					const opacity = index < currentIndex ? "opacity-100" : index === currentIndex ? "opacity-100" : "opacity-0";
-					return (
-						<span key={index} className={opacity}>
-							{char}
-						</span>
-					);
+			const charClass = (isVisible) => 'inline-block transition-opacity duration-150 ' + (isVisible ? 'opacity-100' : 'opacity-0');
+			if (typeof originalElement === 'string') {
+				return animatedText.split('').map((char, index) => {
+					const visible = index <= currentIndex;
+					return <span key={index} className={charClass(visible)}>{char}</span>;
 				});
 			}
-
-			// Handle React elements
 			if (isValidElement(originalElement)) {
-				if (originalElement.type === "br") return originalElement;
+				if (originalElement.type === 'br') return originalElement;
 				if (originalElement.props && originalElement.props.children) {
 					const newProps = {
 						...originalElement.props,
@@ -73,31 +65,21 @@ const TerminalTypeEffect = ({ children, className = "", animationType = "shuffle
 					return cloneElement(originalElement, newProps);
 				}
 			}
-
-			// Handle arrays of children
 			if (Array.isArray(originalElement)) {
 				let textIndex = 0;
 				return originalElement.map((child, _childIndex) => {
-					if (typeof child === "string") {
+					if (typeof child === 'string') {
 						const textLength = child.length;
 						const textSlice = animatedText.slice(textIndex, textIndex + textLength);
 						textIndex += textLength;
-
-						if (currentIndex === -1) return textSlice;
-
-						// Create JSX with opacity styling for each character
-						return textSlice.split("").map((char, charIndex) => {
+						return textSlice.split('').map((char, charIndex) => {
 							const globalIndex = textIndex - textLength + charIndex;
-							const opacity = globalIndex < currentIndex ? "opacity-100" : globalIndex === currentIndex ? "opacity-100" : "opacity-0";
-							return (
-								<span key={globalIndex} className={opacity}>
-									{char}
-								</span>
-							);
+							const visible = globalIndex <= currentIndex;
+							return <span key={globalIndex} className={charClass(visible)}>{char}</span>;
 						});
-					} else if (isValidElement(child) && child.type === "br") {
-						return child;
-					} else if (isValidElement(child)) {
+					}
+					if (isValidElement(child) && child.type === 'br') return child;
+					if (isValidElement(child)) {
 						const childText = extractTextFromJSX(child);
 						const textLength = childText.length;
 						const textSlice = animatedText.slice(textIndex, textIndex + textLength);
@@ -107,11 +89,8 @@ const TerminalTypeEffect = ({ children, className = "", animationType = "shuffle
 					return child;
 				});
 			}
-
-			// Handle other cases
-			if (typeof originalElement === "string") return animatedText;
+			if (typeof originalElement === 'string') return animatedText;
 			if (isValidElement(originalElement)) return createAnimatedJSX(originalElement, animatedText, currentIndex, textArray);
-
 			return animatedText;
 		},
 		[extractTextFromJSX]
@@ -144,58 +123,49 @@ const TerminalTypeEffect = ({ children, className = "", animationType = "shuffle
 	);
 
 	const animateText = useCallback(
-		(originalChildren, type) => {
+		(originalChildren, type, animDuration) => {
 			if (!originalChildren) return;
-
 			setIsAnimating(true);
 			const textContent = extractTextFromJSX(originalChildren);
-			const textArray = textContent.split("");
+			const textArray = textContent.split('');
+			const totalFrames = Math.max(textArray.length, Math.round((animDuration || 1200) / FRAME_MS));
+			const framesPerChar = Math.max(1, Math.round(totalFrames / textArray.length));
 			let currentIndex = 0;
 			let characterFrames = 0;
 
 			const animate = () => {
 				if (currentIndex < textArray.length) {
-					// Create animated text maintaining original characters for width
 					const animatedText = textArray
 						.map((char, index) => {
 							if (index < currentIndex) return char;
 							if (index === currentIndex) return getRandomChar(type);
-							return char; // Keep original character for width preservation
+							return char;
 						})
-						.join("");
-
-					// Create JSX with opacity-based styling
+						.join('');
 					const animatedJSX = createAnimatedJSX(originalChildren, animatedText, currentIndex, textArray);
 					setDisplayText(animatedJSX);
-
 					characterFrames++;
-					if (characterFrames >= 12) {
+					if (characterFrames >= framesPerChar) {
 						currentIndex++;
 						characterFrames = 0;
 					}
 				} else {
-					// Final reveal - show original text
 					setDisplayText(originalChildren);
-					setTimeout(() => setIsAnimating(false), 500);
+					setTimeout(() => setIsAnimating(false), 300);
 					return;
 				}
-
 				animationRef.current = requestAnimationFrame(animate);
 			};
-
 			animationRef.current = requestAnimationFrame(animate);
 		},
 		[createAnimatedJSX, extractTextFromJSX, getRandomChar]
 	);
 
 	const handleMouseEnter = () => {
-		if (shouldTriggerOnHover) {
-			// If mouse has left before, reset and start animation
-			if (hasMouseLeft) {
-				setDisplayText(children);
-				setHasMouseLeft(false);
-				setTimeout(() => animateText(children, animationType), 50);
-			}
+		if (shouldTriggerOnHover && hasMouseLeft) {
+			setDisplayText(children);
+			setHasMouseLeft(false);
+			setTimeout(() => animateText(children, animationType, duration), 50);
 		}
 	};
 
@@ -212,13 +182,17 @@ const TerminalTypeEffect = ({ children, className = "", animationType = "shuffle
 
 	useEffect(() => {
 		if (triggerOnLoad) {
+			const prefersReducedMotion = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+			if (prefersReducedMotion) {
+				setDisplayText(children || '');
+				return;
+			}
 			const timer = setTimeout(() => {
-				animateText(children, animationType);
+				animateText(children, animationType, duration);
 			}, delay);
-
 			return () => clearTimeout(timer);
 		}
-	}, [children, animationType, triggerOnLoad, delay, animateText]);
+	}, [children, animationType, triggerOnLoad, delay, duration, animateText]);
 
 	useEffect(() => {
 		return () => {
@@ -234,8 +208,7 @@ const TerminalTypeEffect = ({ children, className = "", animationType = "shuffle
 		<Element
 			ref={textRef}
 			rel={rel}
-			className={"relative transition-all ease-in-out " + (duration ? "duration-500 " : "duration-500 ") + (isAnimating ? "" : "drop-shadow-[0_0_5px_rgba(0,0,0,0.1)] dark:drop-shadow-[0_0_5px_rgba(255,255,255,0.1)] ") + className}
-			style={duration ? { transitionDuration: duration + "ms" } : {}}
+			className={'relative ' + (isAnimating ? '' : 'drop-shadow-[0_0_5px_rgba(0,0,0,0.1)] dark:drop-shadow-[0_0_5px_rgba(255,255,255,0.1)] ') + className}
 			{...(shouldTriggerOnHover && { onMouseEnter: handleMouseEnter, onMouseLeave: handleMouseLeave })}
 			{...others}>
 			{displayText}

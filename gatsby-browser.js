@@ -1,17 +1,17 @@
 // Stylesheets
 // ==========================================
 // Stylesheets: Vendors
-// import "@mdi/font/css/materialdesignicons.min.css"
+// import '@mdi/font/css/materialdesignicons.min.css'
 
 // Stylesheets: Global
-import "./src/assets/stylesheets/index.scss";
+import './src/assets/stylesheets/index.scss';
 
 export const onInitialClientRender = () => {
 	// Hide the loading indicator after the page loads
 	setTimeout(function () {
-		const loader = document.getElementById("___loader");
+		const loader = document.getElementById('___loader');
 		if (loader) {
-			loader.style.display = "none";
+			loader.style.display = 'none';
 		}
 	}, 100);
 };
@@ -19,23 +19,35 @@ export const onInitialClientRender = () => {
 // Enable hot reloading for better development experience
 export const onRouteUpdate = () => {
 	// Force re-render on route changes
-	if (typeof window !== "undefined") {
+	if (typeof window !== 'undefined') {
 		window.scrollTo(0, 0);
 	}
 };
 
-// Handle HMR errors gracefully
+// Handle HMR errors gracefully + expand accordions for print
 export const onClientEntry = () => {
+	if (typeof window === 'undefined') return;
+
+	// Expand all accordion panels before print (Work + Method sections)
+	const expandForPrint = () => {
+		document.querySelectorAll('[data-print-expand]').forEach((el) => {
+			el.style.setProperty('display', 'block', 'important');
+			el.style.setProperty('visibility', 'visible', 'important');
+			el.classList.remove('hidden');
+		});
+	};
+	window.addEventListener('beforeprint', expandForPrint);
+
 	// Only run in development
-	if (process.env.NODE_ENV !== "development") return;
+	if (process.env.NODE_ENV !== 'development') return;
 
 	// Override console.error to filter out HMR-related errors
 	const originalConsoleError = console.error;
 	console.error = (...args) => {
-		const message = args.join(" ");
-		if (message.includes("removeChild") && message.includes("Cannot read properties of null")) {
+		const message = args.join(' ');
+		if (message.includes('removeChild') && message.includes('Cannot read properties of null')) {
 			// This is a common HMR error, just warn instead of error
-			console.warn("HMR warning (ignored):", ...args);
+			console.warn('HMR warning (ignored):', ...args);
 			return;
 		}
 		originalConsoleError.apply(console, args);

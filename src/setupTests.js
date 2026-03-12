@@ -1,18 +1,18 @@
-import "@testing-library/jest-dom";
+import '@testing-library/jest-dom';
 
 // Mock Gatsby
-global.__PATH_PREFIX__ = "";
+global.__PATH_PREFIX__ = '';
 
 // Mock reach router
-jest.mock("@reach/router", () => ({
+jest.mock('@reach/router', () => ({
 	useLocation: () => ({
-		pathname: "/",
+		pathname: '/',
 	}),
 	navigate: jest.fn(),
 }));
 
 // Mock react-i18next
-jest.mock("react-i18next", () => ({
+jest.mock('react-i18next', () => ({
 	useTranslation: () => ({
 		t: (key) => key,
 		i18n: {
@@ -23,12 +23,12 @@ jest.mock("react-i18next", () => ({
 }));
 
 // Mock react-helmet
-jest.mock("react-helmet", () => ({
+jest.mock('react-helmet', () => ({
 	Helmet: ({ children }) => children,
 }));
 
 // Mock window.matchMedia
-Object.defineProperty(window, "matchMedia", {
+Object.defineProperty(window, 'matchMedia', {
 	writable: true,
 	value: jest.fn().mockImplementation((query) => ({
 		matches: false,

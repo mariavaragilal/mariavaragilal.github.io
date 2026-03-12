@@ -4,7 +4,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ["Rubik", "Inter", "ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif", "ui-sans-serif", '"Apple Color Emoji"', '"Segoe UI Emoji"', '"Segoe UI Symbol"', '"Noto Color Emoji"'],
+				sans: ["Rubik", "ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif", "ui-sans-serif", '"Apple Color Emoji"', '"Segoe UI Emoji"', '"Segoe UI Symbol"', '"Noto Color Emoji"'],
 				mono: ["DM Sans", "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"],
 				"dm-sans": ["DM Sans", "ui-sans-serif", "system-ui", "sans-serif"],
 			},
@@ -65,22 +65,6 @@ module.exports = {
 				},
 			},
 			keyframes: {
-				"accordion-down": {
-					from: {
-						height: "0",
-					},
-					to: {
-						height: "var(--radix-accordion-content-height)",
-					},
-				},
-				"accordion-up": {
-					from: {
-						height: "var(--radix-accordion-content-height)",
-					},
-					to: {
-						height: "0",
-					},
-				},
 				"terminal-sweep": {
 					"0%": {
 						"background-position": "-200% 0",
@@ -117,6 +101,18 @@ module.exports = {
 				"terminal-sweep": "terminal-sweep 0.6s ease-in-out",
 				"terminal-glow": "terminal-glow 0.5s ease-in-out infinite alternate",
 				"terminal-glow-dark": "terminal-glow-dark 0.5s ease-in-out infinite alternate",
+			},
+			justifyContent: {
+				'inherit': 'inherit',
+			},
+			alignItems: {
+				'inherit': 'inherit',
+			},
+			flexWrap: {
+				'inherit': 'inherit',
+			},
+			flexDirection: {
+				'inherit': 'inherit',
 			},
 		},
 		container: { center: true, padding: "2rem", screens: { "2xl": "1400px" } },

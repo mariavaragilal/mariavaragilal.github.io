@@ -6,8 +6,8 @@
   },
   "cv": {
     "name": "Maria Varagilal",
-    "title": "Senior Product Designer & Front-End Expertise",
-    "summary": "Digital Product Designer & Frontend Developer with 10+ years of experience delivering digital products from concept to production. Skilled in design systems, UX strategy, and frontend implementation using JavaScript, React, Redux, HTML, and CSS. Passionate about crafting user experiences that are as performant as they are intuitive."
+    "title": "Senior Product Designer & Frontend Developement",
+    "summary": "Technical Product Designer that ships code with 10+ years of experience delivering digital products from concept to production. Skilled in design systems, UX strategy, and frontend implementation using JavaScript, React, Redux, HTML, and CSS. Passionate about crafting user experiences that are as performant as they are intuitive."
   },
   "nav": {
     "about": "about",
@@ -19,7 +19,7 @@
     "securibox": {
       "company": "Securibox",
       "location": "Lisbon Area, Portugal",
-      "position": "Head Digital Product Designer",
+      "position": "Head Technical Product Designer",
       "period": "September 2015 - Present",
       "description": [
         "Defined product experience, interface, and brand strategy.",

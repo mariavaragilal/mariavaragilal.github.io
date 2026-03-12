@@ -5,12 +5,11 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-const fs = require("fs-extra");
+const fs = require('fs-extra');
 
-// Ensure plugin target directories exist with permissive permissions to avoid EPERM
-// when working in iCloud-synced folders during development (fixes copyFile failures).
+// Ensure plugin target directories exist to avoid EPERM during build.
 exports.onPreBootstrap = async () => {
-	const paths = [".cache/caches/gatsby-plugin-offline", "public/~partytown", "public/~partytown/debug"];
+	const paths = ['.cache/caches/gatsby-plugin-offline', 'public/~partytown', 'public/~partytown/debug'];
 
 	for (const p of paths) {
 		try {
@@ -25,7 +24,7 @@ exports.onPreBootstrap = async () => {
 };
 
 exports.onCreateWebpackConfig = ({ actions, stage }) => {
-	if (stage === "develop") {
+	if (stage === 'develop') {
 		actions.setWebpackConfig({
 			resolve: {
 				fallback: {
@@ -33,12 +32,11 @@ exports.onCreateWebpackConfig = ({ actions, stage }) => {
 					path: false,
 				},
 				alias: {
-					"@common": require("path").resolve(__dirname, "src/_common"),
-					"@docs": require("path").resolve(__dirname, "src/pages/docs"),
+					'@common': require('path').resolve(__dirname, 'src/_common'),
 				},
 			},
 			watchOptions: {
-				ignored: ["**/node_modules/**", "**/.cache/**", "**/public/**", "**/.git/**", "**/.DS_Store", "**/.Trash/**", "**/Library/Mobile Documents/com~apple~CloudDocs/**/.Trash/**", "**/bundle-report.html"],
+				ignored: ['**/node_modules/**', '**/.cache/**', '**/public/**', '**/.git/**', '**/.DS_Store', '**/.Trash/**', '**/Library/Mobile Documents/com~apple~CloudDocs/**/.Trash/**', '**/bundle-report.html'],
 				poll: 1000,
 				aggregateTimeout: 1000,
 			},
@@ -51,8 +49,7 @@ exports.onCreateWebpackConfig = ({ actions, stage }) => {
 					path: false,
 				},
 				alias: {
-					"@common": require("path").resolve(__dirname, "src/_common"),
-					"@docs": require("path").resolve(__dirname, "src/pages/docs"),
+					'@common': require('path').resolve(__dirname, 'src/_common'),
 				},
 			},
 		});

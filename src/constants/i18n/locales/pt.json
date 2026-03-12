@@ -6,7 +6,7 @@
   },
   "cv": {
     "name": "Maria Varagilal",
-    "title": "Senior Product Designer & Front-End Expertise",
+    "title": "Senior Product Designer & Frontend Developement",
     "summary": "Designer de Produto Digital & Frontend Developer com mais de 10 anos de experiência na entrega de produtos digitais, desde o conceito até à produção. Especialização em sistemas de design, estratégia de UX e implementação frontend com JavaScript, React, Redux, HTML e CSS. Foco na criação de experiências de utilizador tão intuitivas quanto eficientes em desempenho."
   },
   "nav": {
@@ -19,7 +19,7 @@
     "securibox": {
       "company": "Securibox",
       "location": "Área de Lisboa, Portugal",
-      "position": "Head Digital Product Designer",
+      "position": "Head Technical Product Designer",
       "period": "Setembro 2015 - Presente",
       "description": [
         "Definição da experiência do produto, interface e estratégia de marca.",

@@ -1,4 +1,4 @@
-export const MONTHS = Array.from({ length: 12 }, (_, i) => new Date(2000, i).toLocaleString("fr", { month: "short" }).toUpperCase().replace(".", ""));
+export const MONTHS = Array.from({ length: 12 }, (_, i) => new Date(2000, i).toLocaleString('fr', { month: 'short' }).toUpperCase().replace('.', ''));
 export const YEARS = (src) => {
 	if (!src?.length) return [new Date().getFullYear()];
 
@@ -53,34 +53,34 @@ export const FORMAT_DURATION = (startDate, endDate = null) => {
 	const { years, months } = GET_DURATION(startDate, endDate);
 
 	if (years === 0) {
-		return months === 1 ? "(1 month)" : `(${months} months)`;
+		return months === 1 ? '(1 month)' : '(' + months + ' months)';
 	} else if (months === 0) {
-		return years === 1 ? "(1 year)" : `(${years} years)`;
+		return years === 1 ? '(1 year)' : '(' + years + ' years)';
 	} else {
-		const yearText = years === 1 ? "year" : "years";
-		const monthText = months === 1 ? "month" : "months";
-		return `(${years} ${yearText} ${months} ${monthText})`;
+		const yearText = years === 1 ? 'year' : 'years';
+		const monthText = months === 1 ? 'month' : 'months';
+		return '(' + years + ' ' + yearText + ' ' + months + ' ' + monthText + ')';
 	}
 };
 
 export const FORMAT_DATE = (dateString, includeTime = false) => {
-	if (!dateString) return "";
+	if (!dateString) return '';
 
 	// Check if it's an ISO date (2024-08-30T00:00:00)
-	if (dateString.includes("T")) {
+	if (dateString.includes('T')) {
 		const date = new Date(dateString);
 		const options = {
-			day: "2-digit",
-			month: "2-digit",
-			year: "numeric",
+			day: '2-digit',
+			month: '2-digit',
+			year: 'numeric',
 		};
 
 		if (includeTime) {
-			options.hour = "2-digit";
-			options.minute = "2-digit";
+			options.hour = '2-digit';
+			options.minute = '2-digit';
 		}
 
-		return includeTime ? date.toLocaleString("fr-FR", options) : date.toLocaleDateString("fr-FR", options);
+		return includeTime ? date.toLocaleString('fr-FR', options) : date.toLocaleDateString('fr-FR', options);
 	}
 
 	return dateString; // Return as is if already formatted
@@ -89,41 +89,41 @@ export const FORMAT_DATE = (dateString, includeTime = false) => {
 export const FORMAT_DATETIME = (dateString) => FORMAT_DATE(dateString, true);
 
 export const FORMAT_PERCENTAGE = (value) => {
-	const formatter = new Intl.NumberFormat("fr-FR", {
-		style: "percent",
+	const formatter = new Intl.NumberFormat('fr-FR', {
+		style: 'percent',
 		minimumFractionDigits: 0,
 		maximumFractionDigits: 2,
 	});
-	return value == null ? "" : formatter.format(value);
+	return value == null ? '' : formatter.format(value);
 };
 
 export const FORMAT_NUMBER = (value) => {
-	const formatter = new Intl.NumberFormat("fr-FR", {
-		style: "decimal",
-		currency: "EUR",
+	const formatter = new Intl.NumberFormat('fr-FR', {
+		style: 'decimal',
+		currency: 'EUR',
 		maximumFractionDigits: 2,
 	});
-	return value == null ? "" : formatter.format(value);
+	return value == null ? '' : formatter.format(value);
 };
 
 export const FORMAT_AMOUNT = (value) => {
-	const formatter = new Intl.NumberFormat("fr-FR", {
-		style: "currency",
-		currency: "EUR",
+	const formatter = new Intl.NumberFormat('fr-FR', {
+		style: 'currency',
+		currency: 'EUR',
 		minimumFractionDigits: 2,
 	});
 
 	let amount = 0;
-	if (typeof value === "object" && value !== null) {
-		amount = Object.values(value).find((val) => typeof val === "number") ?? 0;
-	} else if (typeof value === "number") {
+	if (typeof value === 'object' && value !== null) {
+		amount = Object.values(value).find((val) => typeof val === 'number') ?? 0;
+	} else if (typeof value === 'number') {
 		amount = value;
 	}
 
-	return value == null ? "" : formatter.format(amount);
+	return value == null ? '' : formatter.format(amount);
 };
 
-export const FORMAT_RATE = new Intl.NumberFormat("fr-FR", {
-	style: "percent",
+export const FORMAT_RATE = new Intl.NumberFormat('fr-FR', {
+	style: 'percent',
 	maximumFractionDigits: 2,
 });
