@@ -8,7 +8,7 @@ export const ContactSection = () => (
 		<div className='mx-auto max-w-full grid gap-x-10 gap-y-6 md:grid-cols-2'>
 			<div>
 				<p className='text-[.75em] uppercase tracking-[0.2em] font-semibold text-current/66 mb-3'>Get in touch</p>
-				<h2 id='contact-heading' className='mb-4 font-mono text-[1.6rem] leading-tight text-foreground sm:text-[1.8rem]'>
+				<h2 id='contact-heading' className='mb-4 font-mono font-medium text-[1.6rem] leading-tight text-foreground sm:text-[1.8rem]'>
 					Let's build something that lasts.
 				</h2>
 				<p className='max-w-2xl mb-4 text-[1rem] leading-relaxed text-current/66'>
