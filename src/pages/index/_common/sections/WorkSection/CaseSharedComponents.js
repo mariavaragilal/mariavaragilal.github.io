@@ -3,7 +3,7 @@ import React from 'react';
 // Link card (live work)
 export const LinkCard = ({ url, label, role, featured = false }) => (
 	<a href={url} target='_blank' rel='noopener noreferrer' className={'block rounded-lg border p-4 transition-colors hover:bg-accent ' + (featured ? 'border-primary/50 bg-accent/50' : 'border-border')}>
-		<p className='font-[Rubik] font-medium text-base text-foreground'>{label}</p>
+		<p className='font-mono text-base text-foreground'>{label}</p>
 		{role && <p className='text-sm text-muted-foreground mt-0.5'>{role}</p>}
 		<span className='text-xs text-muted-foreground mt-1 inline-block' aria-hidden>↗</span>
 	</a>

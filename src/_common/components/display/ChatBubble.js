@@ -17,8 +17,8 @@ const TYPE_DEFAULTS = {
 
 export function ChatBubble({ type, children, show, delayClass, width, variant = 'default' }) {
 	const base = 'transition-all duration-400 rounded-2xl text-[0.88rem] leading-relaxed';
-	const question = 'self-end max-w-[85%] py-2.5 px-4 rounded-[16px_16px_4px_16px]';
-	const answer = 'self-start max-w-[92%] w-[auto] py-3 px-4 rounded-[16px_16px_16px_4px]';
+	const question = 'self-end max-w-[85%] py-2.5 px-4 rounded-[1rem_1rem_0.25rem_1rem]';
+	const answer = 'self-start max-w-[92%] w-[auto] py-3 px-4 rounded-[1rem_1rem_0.25rem_1rem]';
 	const colorClass = VARIANTS[variant] || TYPE_DEFAULTS[type];
 	const visible = show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2';
 	const widthClass = width && WIDTH_CLASSES[width] ? WIDTH_CLASSES[width] : '';

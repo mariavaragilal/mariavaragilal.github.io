@@ -8,11 +8,11 @@ const CVHeader = () => {
 		<header className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-8 border-b border-border'>
 			<div className='block w-full'>
 				<h1 className='sr-only'>CV</h1>
-				<p className='text-7xl/15 font-bold text-foreground max-w-xs min-h-[7.5rem] font-[Rubik] tracking-tighter'>{t('cv.name')}</p>
+				<p className='text-7xl/15 text-foreground max-w-xs min-h-[7.5rem] font-mon tracking-tighter font-medium'>{t('cv.name')}</p>
 			</div>
 			<div className='block mt-auto'>
-				<p className='text-[1.5em] text-foreground mb-0'>{t('location')}</p>
-				<p className='text-[1.5em] text-foreground font-bold mt-0 mb-0 w-full'>{t('cv.title')}</p>
+				<p className='text-[1em] text-foreground mb-0'>{t('location')}</p>
+				<p className='font-mon font-medium leading-[1.175em] text-[1.675em] text-foreground mt-0 mb-0 w-full'>{t('cv.title')}</p>
 				<a href='https://www.linkedin.com/in/mariavaragilal' target='_blank' rel='noopener noreferrer' className='text-[1em] text-current/66 hover:text-blue-600 dark:hover:text-blue-400 hover:underline'>linkedin.com/in/mariavaragilal</a>
 			</div>
 			<nav className='p-0 mt-auto' aria-label='External profiles'>

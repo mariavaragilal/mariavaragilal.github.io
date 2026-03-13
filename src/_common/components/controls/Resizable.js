@@ -35,7 +35,7 @@ export const ResizableHandle = ({ withHandle = false, className = '', ...props }
 	>
 		{withHandle && (
 			<div className='z-10 flex h-4 w-3 items-center justify-center rounded-sm border bg-border'>
-				<span aria-hidden='true' className='text-[8px] leading-none'>⋮</span>
+				<span aria-hidden='true' className='text-[.5rem] leading-none'>⋮</span>
 			</div>
 		)}
 	</div>

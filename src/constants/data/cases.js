@@ -279,7 +279,6 @@ export const workCases = {
 					clients: [
 						{ url: 'https://www.connectlime.com/en/work/GererMaBoite', label: 'Gerer Ma Boite — POS for entrepreneurs', role: 'Senior Design oversight & final UI · acquired by CEGID' },
 						{ url: 'https://www.connectlime.com/work/HotelAppz/', label: 'HotelAppz — hotel CRM platform', role: 'Senior Design supervision' },
-						{ url: 'https://www.magestimmo.com', label: 'Magestimmo — property management', role: 'App design · brand and public site by third parties · app.magestimmo.com' },
 						{ url: 'https://www.assistarobase.fr', label: 'Assist@ — admin life management', role: 'App design · brand and public site by third parties · employer portal runs on Securibox' },
 					],
 					dribbble: [
@@ -368,20 +367,6 @@ export const workCases = {
 					links: [{ url: 'https://www.assistarobase.fr', label: 'Assist@', role: 'App design' }],
 				},
 			},
-			{
-				period: '2019',
-				status: 'shipped',
-				title: 'Magestimmo — Property Management',
-				subtitle: 'Real-estate app — public site by third parties',
-				role: 'Product Designer',
-				tools: 'Figma · SaaS UI',
-				pillars: 'Pillars 3, 5',
-				highlight: 'Designed and optimized user flows for the tenant & landlord management interface. Implemented a scalable SaaS UI with intuitive property workflows.',
-				results: ['Intuitive property workflows', 'Scalable SaaS UI', 'User-friendly interface'],
-				references: {
-					links: [{ url: 'https://app.magestimmo.com', label: 'Magestimmo app', role: 'App design' }],
-				},
-			},
 		],
 	},
 	'Earlier work': {
@@ -411,19 +396,19 @@ export const workCases = {
 					],
 				},
 				caseStudy: {
-					businessProblem: 'Epaye aimed to offer electronic payroll for everyone, but fintech adoption depends on trust. The product and landing needed to feel approachable to non-technical decision-makers.',
+					businessProblem: 'Epaye — the electronic payroll for all — positions itself as the ideal entry point to start dematerialisation in a company. It simplifies and automates all steps of pay between employer and employee. The challenge: build a digital identity and product from scratch, rooted in one core pillar — human relationships.',
 					strategicDecision: {
 						intro: 'The design question:',
 						question: 'How do we make payroll tech feel approachable and trustworthy to non-technical decision-makers?',
 					},
 					process: [
-						{ phase: 'Phase 1', label: 'Discovery', title: 'Value proposition definition', description: 'Mapped user needs and competitive landscape for payroll solutions.' },
-						{ phase: 'Phase 2', label: 'Design', title: 'Product + landing concept', description: 'App flows and landing page proposal with distinctive visual identity (marble, gooey elements).' },
+						{ phase: 'Phase 1', label: 'Concept', title: 'Brand pillar — human relationships', description: 'Defined the brand around one core pillar: the complexity and beauty of human iterations in payroll.' },
+						{ phase: 'Phase 2', label: 'Design', title: 'Digital identity & product concept', description: 'Product and landing concept that visualises human relationships — a brand and digital identity built from this foundation.' },
 					],
-					tradeoffsLearnings: 'Chose a bold visual language (marble, gooey elements) to differentiate in a sector dominated by conservative interfaces — a deliberate bet on standing out over blending in.',
+					tradeoffsLearnings: 'Built on a brand new concept: instead of focusing on trust or adoption alone, the identity rests on human relationships — making the abstract tangible through a distinctive visual language. A deliberate bet on standing out over blending in a sector dominated by conservative interfaces.',
 					quote: {
-						title: 'Electronic payroll for everyone.',
-						subtitle: 'Clarity and trust for adoption in a sector where both are earned, not assumed.',
+						title: 'The electronic payroll for all.',
+						subtitle: 'The ideal entry point to start dematerialisation — a brand that reflects the complexity and beauty of human relationships.',
 					},
 				},
 			},

@@ -49,7 +49,7 @@ export const ChartTooltipContent = ({ active, payload, label, className = '', in
 							)}
 							<div className='flex flex-1 justify-between leading-none'>
 								<span className='text-muted-foreground'>{cfgItem.label || item.name}</span>
-								<span className='font-mono font-medium tabular-nums'>{item.value}</span>
+								<span className='font-mono tabular-nums'>{item.value}</span>
 							</div>
 						</div>
 					);
@@ -68,7 +68,7 @@ export const ChartLegendContent = ({ payload, className = '', ...props }) => {
 				const cfgItem = config[item.dataKey || item.value] || {};
 				return (
 					<div key={i} className='flex items-center gap-1.5'>
-						<div className='h-2 w-2 shrink-0 rounded-[2px]' style={{ background: cfgItem.color || item.color }}/>
+						<div className='h-2 w-2 shrink-0 rounded-[2px]' style={{ background: cfgItem.color || item.color }} />
 						<span className='text-muted-foreground'>{cfgItem.label || item.value}</span>
 					</div>
 				);

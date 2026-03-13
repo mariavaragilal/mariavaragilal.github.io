@@ -6,9 +6,9 @@ const CVAboutSection = () => {
 	const { t } = useTranslation();
 	return (
 		<section>
-			<h2 className='font-[Rubik] tracking-tighter text-4xl text-foreground font-bold mb-3'>{t('nav.about')}</h2>
+			<h2 className='font-mon font-medium tracking-tighter text-4xl text-foreground mb-3'>{t('nav.about')}</h2>
 			<p className='text-[1em] mb-4 text-foreground'>{t('cv.summary')}</p>
-			<blockquote className='text-[1em] font-bold mb-4 text-foreground'>{t('about.quote')}</blockquote>
+			<blockquote className='text-[1em] mb-4 text-foreground font-medium'>{t('about.quote')}</blockquote>
 			<p className='text-[1em] text-current/66 leading-relaxed mb-2'>{t('about.description1')}</p>
 			<p className='text-[1em] text-current/66 leading-relaxed mb-4'>{t('about.description2')}</p>
 			<div className='flex flex-wrap gap-2'>

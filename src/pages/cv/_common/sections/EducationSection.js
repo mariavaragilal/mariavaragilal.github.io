@@ -5,7 +5,7 @@ const CVEducationSection = () => {
 	const { t } = useTranslation();
 	return (
 		<section>
-			<h2 className='font-[Rubik] tracking-tighter text-4xl text-foreground font-bold mb-3'>{t('nav.education')}</h2>
+			<h2 className='font-mon font-medium tracking-tighter text-4xl text-foreground mb-3'>{t('nav.education')}</h2>
 			<div className='space-y-4'>
 				<div className='pb-4 border-b border-border'>
 					<h3 className='text-[1.25em] text-foreground pr-4 leading-tight font-bold'>

@@ -71,7 +71,7 @@ export const AccordionTrigger = ({ className = '', gridCols, triggerGrid, icon, 
 		<motion.span
 			animate={{ rotate: showRotated ? 45 : 0 }}
 			transition={{ duration: 0.2, ease: 'easeInOut' }}
-			className='font-[Rubik] font-thin text-xl leading-none'
+			className='font-mono font-thin text-xl leading-none'
 			aria-hidden='true'
 		>+</motion.span>
 	);

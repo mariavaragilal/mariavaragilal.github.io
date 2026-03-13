@@ -11,8 +11,8 @@ export const CaseStudyBlock = ({ caseStudy }) => (
 					{caseStudy.businessProblem ? <p className='text-base leading-relaxed text-current/88 mb-4'>{caseStudy.businessProblem}</p> : null}
 					{caseStudy.strategicDecision ? (
 						<Card variant='default' className='px-6 py-5'>
-							<p className='mb-0 text-base text-current/88'>{caseStudy.strategicDecision.intro}</p>
-							<p className='font-[Rubik] font-medium text-lg leading-snug text-foreground'>{caseStudy.strategicDecision.question}</p>
+							<p className='text-[1em] leading-relaxed text-current/66'>{caseStudy.strategicDecision.intro}</p>
+							<p className='font-mono font-medium tracking-tight text-xl leading-snug text-foreground'>{caseStudy.strategicDecision.question}</p>
 						</Card>
 					) : null}
 				</div>

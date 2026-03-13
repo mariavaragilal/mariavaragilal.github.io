@@ -4,7 +4,7 @@
 
 export const person = {
 	name: 'Maria Varagilal',
-	jobTitle: 'Head Technical Product Designer',
+	jobTitle: 'Senior Technical Product Designer',
 	description: 'Principal-level Technical Product Designer who ships code. 10+ years unifying fragmented SaaS platforms into trusted, scalable experiences. Skilled in design systems, UX strategy, React, Redux, and frontend implementation.',
 	url: 'https://mariavaragilal.github.io',
 	image: 'https://mariavaragilal.github.io/images/avatar.png',
@@ -16,7 +16,7 @@ export const person = {
 		{ name: 'Universidade Lusíada de Lisboa', description: 'Bachelor\'s Degree in Design' },
 		{ name: 'Academia Flag', description: 'Pós-Graduação in Design Comunicação' },
 	],
-	worksFor: { name: 'Securibox', url: 'https://www.securibox.eu', description: 'Head Technical Product Designer' },
+	worksFor: { name: 'Securibox', url: 'https://www.securibox.eu', description: 'Senior Technical Product Designer' },
 	awards: [
 		{ name: 'Bronze cyber', description: 'Young Lions Portugal', date: '2014-05-01' },
 		{ name: 'Web Design Served', description: 'Behance', date: '2013-07-01' },
@@ -99,7 +99,7 @@ export const pillars = [
 			principle: 'Cohesion Before Creation',
 			ask: 'Why bridge design and code?',
 			answer:
-				'A design system only works if it lives in the product. When it drifts from what shipped, it becomes shelfware — and the fragmentation starts again.',
+				'A design system only works if it lives in the product. When it drifts from what is shipped, it becomes shelfware — and the fragmentation starts again.',
 			checkpoint:
 				'Tokens validated in production, not just approved in Figma.',
 		},
@@ -230,7 +230,7 @@ export const evolution = {
 		{ step: 'Build', desc: 'Create within defined boundaries', pillar: 'Pillar 4' },
 		{ step: 'Launch', desc: 'Reach the MVP line and release', pillar: 'Pillar 3' },
 		{ step: 'Test', desc: 'Learn from real users and real data', pillar: 'Pillar 5' },
-		{ step: 'Refine', desc: 'Iterate while protecting the original lens', pillar: 'Pillar 1 + Pillar 2' },
+		{ step: 'Refine', desc: 'Iterate while protecting the vision', pillar: 'Pillar 1 + Pillar 2' },
 	],
 	closing: 'Each pass through the loop sharpens the product and deepens understanding. The role of leadership is to protect clarity, confidence, and consistency — so the team can release, learn, and move forward with purpose.',
 	whyItMatters: 'Declaring Done creates the space to learn. Learning keeps the vision honest. The cycle builds quiet, compounding advantage that no single feature sprint can replicate.',

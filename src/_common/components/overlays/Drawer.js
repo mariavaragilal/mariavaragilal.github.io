@@ -6,7 +6,7 @@ const HEADER = 'grid gap-1.5 p-4 text-center sm:text-left';
 const FOOTER = 'mt-auto flex flex-col gap-2 p-4';
 const TITLE = 'text-lg font-semibold leading-none tracking-tight';
 const DESCRIPTION = 'text-sm text-muted-foreground';
-const HANDLE = 'mx-auto mt-4 h-2 w-[100px] rounded-full bg-muted shrink-0';
+const HANDLE = 'mx-auto mt-4 h-2 w-24 rounded-full bg-muted shrink-0';
 
 const DrawerContext = createContext({ open: false, onOpenChange: null });
 
@@ -75,10 +75,10 @@ export const DrawerContent = ({ children, className = '', ...props }) => {
 						animate={{ y: 0 }}
 						exit={{ y: '100%' }}
 						transition={{ type: 'spring', damping: 30, stiffness: 300 }}
-						className={'fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border bg-background ' + className}
+						className={'fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-sm border bg-background ' + className}
 						{...props}
 					>
-						<div className={HANDLE}/>
+						<div className={HANDLE} />
 						{children}
 					</motion.div>
 				</>
@@ -95,11 +95,11 @@ export const DrawerClose = ({ children, asChild = false, ...props }) => {
 };
 
 export const DrawerHeader = ({ className = '', ...props }) => (
-	<div className={HEADER + ' ' + className} {...props}/>
+	<div className={HEADER + ' ' + className} {...props} />
 );
 
 export const DrawerFooter = ({ className = '', ...props }) => (
-	<div className={FOOTER + ' ' + className} {...props}/>
+	<div className={FOOTER + ' ' + className} {...props} />
 );
 
 export const DrawerTitle = ({ className = '', children, ...props }) => (
@@ -107,5 +107,5 @@ export const DrawerTitle = ({ className = '', children, ...props }) => (
 );
 
 export const DrawerDescription = ({ className = '', ...props }) => (
-	<p className={DESCRIPTION + ' ' + className} {...props}/>
+	<p className={DESCRIPTION + ' ' + className} {...props} />
 );

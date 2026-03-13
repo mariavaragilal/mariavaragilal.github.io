@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import { Badge, Button, Card, CardAction, CardDescription, CardHeader, CardTitle } from '../../../../../_common/components';
 import { focusRing } from '../../../../../constants/utils/a11y';
 
-const DEFAULT_ICON_CLASSNAME = 'font-[Rubik] font-thin text-xl leading-none';
+const DEFAULT_ICON_CLASSNAME = 'font-mono font-thin text-xl leading-none';
 
 const defaultIcon = (showRotated, iconChar, iconClassName) => (
 	<motion.span
@@ -22,12 +22,12 @@ export const CaseCard = ({ app, isSelected, onToggle, href, icon, iconChar = '+'
 	const isLink = !!href;
 	const hostnameEl = app.references?.links?.[0] ? (
 		isLink ? (
-			<span className='mt-2 inline-flex items-center gap-1 text-xs text-muted-foreground'>
+			<span className='mt-2 inline-flex items-center gap-1 text-xs text-current/66'>
 				{new URL(app.references.links[0].url).hostname.replace('www.', '')}
 				<span aria-hidden>↗</span>
 			</span>
 		) : (
-			<a href={app.references.links[0].url} target='_blank' rel='noopener noreferrer' onClick={(e) => e.stopPropagation()} className='mt-2 inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-primary transition-colors'>
+			<a href={app.references.links[0].url} target='_blank' rel='noopener noreferrer' onClick={(e) => e.stopPropagation()} className='mt-2 inline-flex items-center gap-1 text-xs text-current/66 hover:text-primary transition-colors'>
 				{new URL(app.references.links[0].url).hostname.replace('www.', '')}
 				<span aria-hidden>↗</span>
 			</a>
@@ -42,9 +42,9 @@ export const CaseCard = ({ app, isSelected, onToggle, href, icon, iconChar = '+'
 					) : (
 						<Badge variant='outline' size='sm' className=' tracking-[0.06em] uppercase'>concept</Badge>
 					)}
-					<span className='font-[Rubik] text-xl font-semibold text-primary w-full'>{app.title}</span>
+					<span className='font-mono text-xl font-medium text-primary w-full'>{app.title}</span>
 				</CardTitle>
-				<CardDescription className='text-sm text-current/50 leading-snug'>
+				<CardDescription className='text-md text-current/66'>
 					{app.subtitle}
 				</CardDescription>
 				{hostnameEl}
@@ -64,9 +64,9 @@ export const CaseCard = ({ app, isSelected, onToggle, href, icon, iconChar = '+'
 					) : (
 						<Badge variant='outline' size='sm' className=' tracking-[0.06em] uppercase'>concept</Badge>
 					)}
-					<span className='font-[Rubik] text-xl font-semibold text-primary w-full'>{app.title}</span>
+					<span className='font-mono text-xl font-medium text-primary w-full'>{app.title}</span>
 				</CardTitle>
-				<CardDescription className='text-sm text-current/50 leading-snug'>
+				<CardDescription className='text-md text-current/66'>
 					{app.subtitle}
 				</CardDescription>
 				{hostnameEl}

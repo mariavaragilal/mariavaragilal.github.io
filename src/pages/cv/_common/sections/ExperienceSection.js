@@ -12,7 +12,7 @@ const CVExperienceSection = () => {
 	};
 	return (
 		<section>
-			<h2 className='font-[Rubik] tracking-tighter text-4xl text-foreground font-bold mb-3'>{t('nav.experience')}</h2>
+			<h2 className='font-mon font-medium tracking-tighter text-4xl text-foreground mb-3'>{t('nav.experience')}</h2>
 			<div className='space-y-12'>
 				<div className='pb-12'>
 					<div className='grid grid-cols-1 md:grid-cols-2 gap-8 mb-6'>
@@ -25,12 +25,12 @@ const CVExperienceSection = () => {
 							<p className='text-[.875em] text-current/66'>{FORMAT_DURATION('2015-09-01')}</p>
 						</div>
 						<div className='block'>
-							<h4 className='text-[1.125em] font-bold text-foreground mb-2'>{t('experience.securibox.position')}</h4>
+							<h4 className='text-[1.125em] text-foreground mb-2'>{t('experience.securibox.position')}</h4>
 							<ul className='text-[1em] text-current/66 space-y-1'>{renderDescription('experience.securibox.description')}</ul>
 						</div>
 					</div>
 				</div>
-				<Separator/>
+				<Separator />
 				<div className='grid grid-cols-1 md:grid-cols-2 gap-6 pb-12'>
 					<div>
 						<h3 className='text-[1.25em] text-foreground font-bold'>
@@ -41,11 +41,11 @@ const CVExperienceSection = () => {
 						<p className='text-[.875em] text-current/66'>{FORMAT_DURATION('2013-01-01', '2015-09-01')}</p>
 					</div>
 					<div>
-						<h4 className='text-[1.125em] font-bold text-foreground mb-2'>{t('experience.youngnetwork.position')}</h4>
+						<h4 className='text-[1.125em] text-foreground mb-2'>{t('experience.youngnetwork.position')}</h4>
 						<ul className='text-[1em] text-current/66 space-y-1'>{renderDescription('experience.youngnetwork.description')}</ul>
 					</div>
 				</div>
-				<Separator/>
+				<Separator />
 				<div className='grid grid-cols-1 md:grid-cols-2 gap-6 pb-12'>
 					<div>
 						<h3 className='text-[1.25em] text-foreground font-bold'>
@@ -56,11 +56,11 @@ const CVExperienceSection = () => {
 						<p className='text-[.875em] text-current/66'>{FORMAT_DURATION('2012-09-01', '2013-01-01')}</p>
 					</div>
 					<div>
-						<h4 className='text-[1.125em] font-bold text-foreground mb-2'>{t('experience.infoportugal.position')}</h4>
+						<h4 className='text-[1.125em] text-foreground mb-2'>{t('experience.infoportugal.position')}</h4>
 						<ul className='text-[1em] text-current/66 space-y-1'>{renderDescription('experience.infoportugal.description')}</ul>
 					</div>
 				</div>
-				<Separator/>
+				<Separator />
 				<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
 					<div>
 						<h3 className='text-[1.25em] text-foreground font-bold'>{t('experience.cofina.company')}</h3>
@@ -69,7 +69,7 @@ const CVExperienceSection = () => {
 						<p className='text-[.875em] text-current/66'>{FORMAT_DURATION('2012-07-01', '2012-08-01')}</p>
 					</div>
 					<div>
-						<h4 className='text-[1.125em] font-bold text-foreground mb-2'>{t('experience.cofina.position')}</h4>
+						<h4 className='text-[1.125em] text-foreground mb-2'>{t('experience.cofina.position')}</h4>
 						<ul className='text-[1em] text-current/66 space-y-1'>{renderDescription('experience.cofina.description')}</ul>
 					</div>
 				</div>
