@@ -97,7 +97,6 @@ const IndexPage = () => {
 
 	return (
 		<Layout title={null} description='Technical Product Designer that ships code exploring AI & LLM — prompting for agent interfaces.' className='text-foreground'>
-			<h1 className={srOnly}>Maria Varagilal</h1>
 			<a href='#main-content' className={srOnly + ' focus:static focus:w-auto focus:h-auto focus:p-3 focus:m-0 focus:overflow-visible focus:whitespace-normal focus:bg-primary focus:text-primary-foreground z-50'}>Skip to main content</a>
 			<StickyNav showScrollTop={showScrollTop} isScrolled={isScrolled} activeSection={activeSection} onScrollToSection={scrollToSection} navOpen={navOpen} setNavOpen={setNavOpen} />
 			<IntroSection onScrollToWork={scrollToWork} />

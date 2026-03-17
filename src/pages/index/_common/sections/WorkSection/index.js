@@ -7,9 +7,11 @@ import { CaseCard } from './CaseCard';
 import { CaseDetail } from './CaseDetail';
 import { CaseSectionHeading } from './CaseSharedComponents';
 
+const _initialSelected = Object.fromEntries(Object.entries(workCases).map(([group, data]) => [group, data.cases[0]]));
+
 export const WorkSection = () => {
 	const [expandedGroup, setExpandedGroup] = useState('Securibox');
-	const [selectedByGroup, setSelectedByGroup] = useState({});
+	const [selectedByGroup, setSelectedByGroup] = useState(_initialSelected);
 	const toggleGroup = (groupName) => setExpandedGroup((prev) => (prev === groupName ? null : groupName));
 	const toggleCase = (groupName, app) => setSelectedByGroup((prev) => {
 		const current = prev[groupName];
@@ -31,7 +33,7 @@ export const WorkSection = () => {
 					Design to Production
 				</LazyTerminalTypeEffect>
 				<p className='text-lg leading-relaxed text-current/88 max-w-2xl mt-10'>
-					I design it, I build it. Below is live work — brand identity, design systems, flows, and frontend development I worked on.
+					I design it, I build it. Below is live work — brand identity, design systems, flows, and frontend development I worked on. Technologies include React, Gatsby, Figma, Redux, Bootstrap, AngularJS, and more.
 				</p>
 			</div>
 			<div className='relative flex flex-col gap-8'>
@@ -51,39 +53,40 @@ export const WorkSection = () => {
 										<p className='leading-relaxed text-current/66'>{group.context}</p>
 									</div>
 								</AccordionTrigger>
-								<AccordionContent animate={false}>
+								<AccordionContent animate={false} ariaLabel={groupName + ' case studies'}>
 									<div className='px-1 pb-6'>
-										<div className='grid gap-3 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-[repeat(auto-fill,minmax(25rem,1fr))]'>
-											{group.cases.map((app) => (
-												<CaseCard key={app.title} app={app} isSelected={selectedCase?.title === app.title} onToggle={() => toggleCase(groupName, app)} />
-											))}
-										</div>
-										{selectedCase ? (
-											<div className='mt-6'>
-												<Card variant='default' className='px-6 py-8 lg:px-10'>
-													<div className='grid grid-cols-1 md:grid-cols-2 mb-6'>
-														<div className='flex flex-col'>
-															<p className='text-2xl font-mono font-medium text-foreground mb-0.5'>{selectedCase.title}</p>
-															<p className='text-md text-current/66'>{selectedCase.subtitle}</p>
-														</div>
-														{(selectedCase.role || selectedCase.tools) ? (
-															<div className='flex flex-col md:flex-row gap-x-4 gap-y-2 text-sm text-current/66 mt-2 justify-end md:ml-auto md:pl-6'>
-																{selectedCase.role ? <div className='relative'><CaseSectionHeading className='mb-0'>Role</CaseSectionHeading><span>{selectedCase.role}</span></div> : null}
-																{selectedCase.tools ? <div className='relative'><CaseSectionHeading className='mb-0'>Tools</CaseSectionHeading><span>{selectedCase.tools}</span></div> : null}
+										<div className='grid gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[repeat(auto-fill,minmax(25rem,1fr))]'>
+											{group.cases.flatMap((app) => {
+												const isSelected = selectedCase?.title === app.title;
+												return [
+													<CaseCard key={app.title} app={app} isSelected={isSelected} onToggle={() => toggleCase(groupName, app)} as='h4' />,
+													...(isSelected && selectedCase ? [
+														<Card key={app.title + '-detail'} as='div' variant='default' className='md:order-last md:col-span-2 lg:col-span-3 xl:col-span-full px-6 py-8 lg:px-10' role='region' aria-label={'Case study: ' + selectedCase.title}>
+															<div className='grid grid-cols-1 md:grid-cols-2 mb-6'>
+																<div className='flex flex-col'>
+																	<p className='text-2xl font-mono font-medium text-foreground mb-0.5'>{selectedCase.title}</p>
+																	<p className='text-md text-current/66'>{selectedCase.subtitle}</p>
+																</div>
+																{(selectedCase.role || selectedCase.tools) ? (
+																	<div className='flex flex-col md:flex-row gap-x-4 gap-y-2 text-sm text-current/66 mt-2 justify-end md:ml-auto md:pl-6'>
+																		{selectedCase.role ? <div className='relative'><CaseSectionHeading as='h5' className='mb-0'>Role</CaseSectionHeading><span>{selectedCase.role}</span></div> : null}
+																		{selectedCase.tools ? <div className='relative'><CaseSectionHeading as='h5' className='mb-0'>Tools</CaseSectionHeading><span>{selectedCase.tools}</span></div> : null}
+																	</div>
+																) : null}
+																{selectedCase.references?.links?.[0] ?
+																	<a href={selectedCase.references.links[0].url} target='_blank' rel='noopener noreferrer' onClick={(e) => e.stopPropagation()} className='mt-4 inline-flex md:hidden items-center gap-1 text-xs text-current/66 hover:text-primary transition-colors'>
+																		{new URL(selectedCase.references.links[0].url).hostname.replace('www.', '')}
+																		<span aria-hidden>↗</span>
+																	</a>
+																	: null}
 															</div>
-														) : null}
-														{selectedCase.references?.links?.[0] ?
-															<a href={selectedCase.references.links[0].url} target='_blank' rel='noopener noreferrer' onClick={(e) => e.stopPropagation()} className='mt-4 inline-flex md:hidden items-center gap-1 text-xs text-current/66 hover:text-primary transition-colors'>
-																{new URL(selectedCase.references.links[0].url).hostname.replace('www.', '')}
-																<span aria-hidden>↗</span>
-															</a>
-															: null}
-													</div>
-													<Separator decorative />
-													<CaseDetail app={selectedCase} />
-												</Card>
-											</div>
-										) : null}
+															<Separator decorative />
+															<CaseDetail app={selectedCase} />
+														</Card>
+													] : []),
+												];
+											})}
+										</div>
 									</div>
 								</AccordionContent>
 							</AccordionItem>

@@ -14,7 +14,6 @@ export const StickyNav = ({ showScrollTop, isScrolled, activeSection, onScrollTo
 	// const navMenuResponsive = navOpen ? 'flex-col absolute top-full right-0 mt-1 rounded-2xl bg-background/95 backdrop-blur-md p-2 shadow-lg gap-0 md:static md:flex-row md:mt-0 md:min-w-0 md:rounded-none md:bg-transparent md:backdrop-blur-none md:p-0 md:shadow-none md:gap-1' : 'hidden';
 	return (
 		<motion.nav initial={isAnimated ? { y: -100 } : { y: 0 }} animate={isAnimated ? { y: 0 } : { y: 0 }} transition={{ duration: 0.6, ease: 'easeInOut' }} className={'md:max-w-[25.5em] lg:mx-auto justify-center items-center text-center rounded-full sticky z-100 transition-all duration-300 translate-y-0 opacity-100 print:hidden ' + (showScrollTop ? ' mx-6 bg-background/80 backdrop-blur-md border border-border my-3 px-5 top-3' : ' mx-auto text-current p-6 pb-0')} aria-label='Section navigation'>
-			<h1 className='sr-only'>Navigation</h1>
 			<div className='relative mx-auto py-2.5 flex flex-wrap justify-between items-center justify-between'>
 				<Link to='/' className={'font-medium text-[.725rem] uppercase sm:tracking-[.2em]' + (isScrolled ? ' text-foreground' : ' text-current')}>
 					<img src={logo} alt='Maria Varagilal' className='w-8 sm:w-4.5 rounded-sm sm: rounded-xs aspect-square inline-block' />

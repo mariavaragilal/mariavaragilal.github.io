@@ -88,7 +88,7 @@ export const MethodSection = ({ expandedPillar, togglePillarDetail }) => (
 				<div className='grid grid-cols-1 xl:grid-cols-3 gap-px rounded-lg overflow-hidden bg-border min-w-0' role='list' aria-label='Outcomes'>
 					{outcomes.map((o) => (
 						<div key={o.principle} className='bg-background p-4 sm:p-5 md:p-6 min-w-0 break-words' role='listitem'>
-							<p className='font-mono text-xl font-medium text-primary mb-1'>{o.principle}</p>
+							<h4 className='font-mono text-xl font-medium text-primary mb-1'>{o.principle}</h4>
 							<p className='text-[.675rem] font-semibold tracking-[0.06em] uppercase text-current/66 mb-2.5'>{o.drivenBy}</p>
 							<p className='text-[0.8125rem] leading-[1.55] text-current/66'>{o.protects}</p>
 						</div>
@@ -104,8 +104,8 @@ export const MethodSection = ({ expandedPillar, togglePillarDetail }) => (
 					{evolution.loop.map((item, i) => (
 						<div key={item.step} role='listitem' className='flex gap-2.5 items-start bg-background p-4 sm:px-2.5 min-w-0 break-words'>
 							<span className='font-mono text-[0.8125rem] font-lighttext-current/66 shrink-0 mt-0.5'>{i + 1}.</span>
-							<div>
-								<p className='font-mono text-xl font-medium text-primary mb-1'>{item.step}</p>
+							<div className='relative'>
+								<h4 className='font-mono text-xl font-medium text-primary mb-1'>{item.step}</h4>
 								<p className='text-[.675rem] font-semibold tracking-[0.06em] uppercase text-current/66 mb-2.5'>{item.pillar}</p>
 								<p className='text-[0.8125rem] leading-[1.55] text-current/66'>{item.desc}</p>
 							</div>

@@ -11,8 +11,8 @@ const DEFAULT_HEADER_PADDING = 'pt-6 [.border-b]:pb-6';
 const DEFAULT_CONTENT_PADDING = '[&:last-child]:pb-6';
 const DEFAULT_FOOTER_PADDING = 'pb-6 [.border-t]:pt-6';
 const HEADER_BASE = 'grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 w-full has-data-[slot=card-action]:grid-cols-[1fr_auto]';
-const TITLE = 'leading-none font-semibold tracking-tight';
-const DESCRIPTION = 'text-sm text-current/66';
+const TITLE = 'leading-none font-medium tracking-tight';
+const DESCRIPTION = 'text-base text-current/66';
 const CONTENT_BASE = '';
 const FOOTER_BASE = 'flex items-center';
 const ACTION = 'col-start-2 row-span-2 row-start-1 self-start justify-self-end';
@@ -37,8 +37,8 @@ export const CardHeader = ({ className = '', headerPadding: headerPaddingProp, .
 	return <div data-slot='card-header' className={HEADER_BASE + ' ' + (useHeaderPaddingOnly ? headerPadding : padding + ' ' + headerPadding) + ' ' + className} {...props} />;
 };
 
-export const CardTitle = ({ className = '', children, ...props }) => (
-	<h4 data-slot='card-title' className={TITLE + ' ' + className} {...props}>{children}</h4>
+export const CardTitle = ({ className = '', as: Tag = 'h4', children, ...props }) => (
+	<Tag data-slot='card-title' className={TITLE + ' ' + className} {...props}>{children}</Tag>
 );
 
 export const CardDescription = ({ className = '', ...props }) => (

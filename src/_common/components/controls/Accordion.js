@@ -120,11 +120,12 @@ export const AccordionTrigger = ({ className = '', gridCols, triggerGrid, icon, 
 	);
 };
 
-export const AccordionContent = ({ className = '', animate: shouldAnimate = true, children, ...props }) => {
+export const AccordionContent = ({ className = '', animate: shouldAnimate = true, ariaLabel, children, ...props }) => {
 	const { isOpen, triggerId, panelId } = useContext(AccordionItemContext);
+	const regionProps = ariaLabel ? { 'aria-label': ariaLabel } : { 'aria-labelledby': triggerId };
 
 	if (!shouldAnimate) return (
-		<div id={panelId} role='region' aria-labelledby={triggerId} className={isOpen ? '' : 'hidden'} data-print-expand>
+		<div id={panelId} role='region' className={isOpen ? '' : 'hidden'} data-print-expand {...regionProps}>
 			{children}
 		</div>
 	);
@@ -135,7 +136,7 @@ export const AccordionContent = ({ className = '', animate: shouldAnimate = true
 				<motion.div
 					id={panelId}
 					role='region'
-					aria-labelledby={triggerId}
+					{...regionProps}
 					initial={{ height: 0, opacity: 0 }}
 					animate={{ height: 'auto', opacity: 1 }}
 					exit={{ height: 0, opacity: 0 }}
