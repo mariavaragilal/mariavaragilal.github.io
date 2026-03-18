@@ -97,7 +97,14 @@ export const WorkSection = () => {
 													return [
 														<CaseCard key={app.title} app={app} isSelected={isSelected} onToggle={() => selectCase(groupName, app)} as='h4' />,
 														...(isSelected && selectedCase ? [
-															<CaseDrawer key={app.title + '-detail'} open={drawerOpen} onClose={closeDrawer} app={drawerCase} />
+															<CaseDrawer
+																key={app.title + '-detail'}
+																open={drawerOpen}
+																onClose={closeDrawer}
+																app={drawerCase}
+																cases={group.cases}
+																onSelectCase={(nextApp) => selectCase(groupName, nextApp)}
+															/>
 														] : []),
 													];
 												})}
