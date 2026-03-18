@@ -14,7 +14,7 @@ const defaultIcon = (showRotated, iconChar, iconClassName, prefersReducedMotion)
 	>{iconChar}</motion.span>
 );
 
-export const CaseCard = ({ app, isSelected, onToggle, href, icon, iconChar = '+', iconClassName = DEFAULT_ICON_CLASSNAME, as }) => {
+export const CaseCard = ({ app, isSelected, onToggle, href, icon, iconChar = '+', iconClassName = DEFAULT_ICON_CLASSNAME, as, id }) => {
 	const [isHovered, setIsHovered] = useState(false);
 	const [prefersReducedMotion, setPrefersReducedMotion] = useState(() => (typeof window !== 'undefined' ? window.matchMedia('(prefers-reduced-motion: reduce)').matches : true));
 	useEffect(() => {
@@ -41,7 +41,7 @@ export const CaseCard = ({ app, isSelected, onToggle, href, icon, iconChar = '+'
 		)
 	) : null;
 	return isLink ? (
-		<Card as='a' href={href} target='_blank' rel='noopener noreferrer' variant='default' className={cardClass}>
+		<Card as='a' href={href} target='_blank' rel='noopener noreferrer' variant='default' className={cardClass} id={id}>
 			<CardHeader className='flex gap-1' headerPadding='p-0'>
 				<span className='text-lg font-medium flex flex-wrap items-center gap-2.5'>
 					{app.status === 'shipped' ? (
@@ -68,7 +68,7 @@ export const CaseCard = ({ app, isSelected, onToggle, href, icon, iconChar = '+'
 			</CardHeader>
 		</Card>
 	) : (
-		<Card as='button' type='button' variant='default' onClick={onToggle} className={cardClass} aria-expanded={isSelected} aria-label={app.title + ' — ' + (isSelected ? 'Showing full case study, click to close' : 'Click to view full case study details')}>
+		<Card as='button' type='button' variant='default' onClick={onToggle} className={cardClass} id={id} aria-expanded={isSelected} aria-label={app.title + ' — ' + (isSelected ? 'Showing full case study, click to close' : 'Click to view full case study details')}>
 			<CardHeader className='flex gap-1' headerPadding='p-0'>
 				<span className='text-lg font-medium flex flex-wrap items-center gap-2.5'>
 					{app.status === 'shipped' ? (

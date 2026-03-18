@@ -1,4 +1,5 @@
 import { useEffect, useSyncExternalStore } from 'react';
+import { Button } from '../../components';
 
 const HMR_PATTERNS = ['removeChild', 'Cannot read properties of null', 'hotModuleReplacement'];
 const isHmrError = (msg) => HMR_PATTERNS.some(p => msg && msg.includes(p));
@@ -54,7 +55,7 @@ export const ErrorBoundary = ({ children }) => {
 				</div>
 				<h2 className='text-xl text-foreground mb-2'>Something went wrong</h2>
 				<p className='text-current/66 mb-4'>We&apos;re sorry, but something unexpected happened. Please try refreshing the page.</p>
-				<button onClick={() => typeof window !== 'undefined' && window.location.reload()} className='px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200'>Refresh Page</button>
+				<Button variant='default' onClick={() => typeof window !== 'undefined' && window.location.reload()}>Refresh Page</Button>
 				{process.env.NODE_ENV === 'development' && error && (
 					<details className='mt-4 text-left'>
 						<summary className='cursor-pointer text-sm text-current/66'>Error Details (Development)</summary>

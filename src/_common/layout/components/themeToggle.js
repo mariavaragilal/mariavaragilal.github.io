@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { Button } from '../../components';
 import { useTheme } from '../../hooks/useTheme';
 
 const ThemeToggle = () => {
@@ -68,14 +69,14 @@ const ThemeToggle = () => {
 
 	return (
 		<div className='relative ml-auto justify-end' ref={dropdownRef}>
-			<button type='button' onClick={() => setIsOpen(!isOpen)} className='group flex items-center gap-2 px-3 py-1 text-sm font-medium rounded-lg bg-background text-current/88 hover:bg-accent hover:border-border transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background' aria-label='Theme selector' aria-expanded={isOpen} aria-haspopup='true'>
+			<Button type='button' variant='ghost' size='sm' onClick={() => setIsOpen(!isOpen)} className='group flex items-center gap-2 px-3 py-1 h-auto' aria-label='Theme selector' aria-expanded={isOpen} aria-haspopup='true'>
 				<span className='text-current/66 group-hover:text-foreground transition-colors'>{theme === 'light' ? '☀️' : theme === 'dark' ? '🌙' : '💻'}</span>
-			</button>
+			</Button>
 			<AnimatePresence>
 				{isClient && isOpen && (
 					<motion.div initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }} transition={{ duration: 0.2 }} className='absolute right-0 p-1 mt-2 w-48 border-0 bg-popover rounded-xl shadow-xl border border-border z-50 overflow-hidden' role='menu' aria-label='Theme selection menu'>
 					{themes.map((themeOption, index) => (
-						<button key={themeOption.value} role='menuitem' onClick={() => handleThemeChange(themeOption.value)} className={'w-full flex items-center gap-3 px-4 py-3 text-sm text-left transition-colors duration-150 ' + (theme === themeOption.value ? 'bg-accent text-primary' : 'text-current/88 hover:bg-accent') + ' ' + (index === 0 ? 'rounded-t-lg' : '') + ' ' + (index === themes.length - 1 ? 'rounded-b-lg' : '')} aria-current={theme === themeOption.value ? 'true' : 'false'} aria-describedby={'theme-' + themeOption.value + '-description'}>
+						<Button key={themeOption.value} as='button' role='menuitem' variant='ghost' onClick={() => handleThemeChange(themeOption.value)} className={'w-full flex items-center gap-3 px-4 py-3 text-sm text-left justify-start h-auto rounded-none ' + (theme === themeOption.value ? 'bg-accent text-primary' : 'text-current/88 hover:bg-accent') + ' ' + (index === 0 ? 'rounded-t-lg' : '') + ' ' + (index === themes.length - 1 ? 'rounded-b-lg' : '')} aria-current={theme === themeOption.value ? 'true' : 'false'} aria-describedby={'theme-' + themeOption.value + '-description'}>
 							<span className='text-lg' aria-hidden='true'>{themeOption.icon}</span>
 							<div className='flex-1'>
 								<div className='font-medium'>{themeOption.label}</div>
@@ -86,7 +87,7 @@ const ThemeToggle = () => {
 									<path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd'/>
 								</svg>
 							)}
-						</button>
+						</Button>
 					))}
 					</motion.div>
 				)}

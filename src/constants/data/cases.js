@@ -86,12 +86,12 @@ export const workCases = {
 				pillars: 'Consumer · Trust · Systems',
 				highlight: 'Cube asks users to hand over login credentials for their bank, telecoms, insurance, and retail accounts so automated agents collect documents on their behalf. The design problem: making something inherently invasive feel safe, clear, and worth doing — across 319 integrations, designed and built in production.',
 				results: [
-					'319 agent integrations across banking, telecoms, utilities, HR, retail, and government services',
-					'10 document categories surfaced through a single taxonomy',
-					'3 cloud sync destinations — Securibox, Google Drive, OneDrive — unified folder architecture',
-					'2 view modes (list and card) from the same component system',
-					'Full mobile layout — redesigned single-column with bottom tab navigation, not a responsive shrink',
-					'Bilingual FR/EN throughout',
+					'Agent integrations across multiple industries: banking, utilities, HR, retail, ...',
+					'Document categories surfaced through a single taxonomy',
+					'Cloud sync destinations — Securibox, Google Drive, OneDrive — unified folder architecture',
+					'List and card view modes from the same component system',
+					'Mobile designed as single-column with bottom tab navigation, not just a scaled-down responsive version.',
+					'Bilingual French/English throughout',
 				],
 				references: {
 					links: [{ url: 'https://cube.securibox.eu', label: 'Cube - Own your data', role: 'Sub-brand, product design, frontend' }],

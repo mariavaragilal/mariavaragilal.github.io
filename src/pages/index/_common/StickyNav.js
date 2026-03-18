@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import { motion } from 'motion/react';
-
+import { Button } from '../../../_common/components';
 import logo from '../../../assets/images/avatar.png';
 
 export const SECTIONS = [
@@ -19,12 +19,6 @@ export const StickyNav = ({ showScrollTop, isScrolled, activeSection, onScrollTo
 					<img src={logo} alt='Maria Varagilal' className='w-8 sm:w-4.5 rounded-sm sm: rounded-xs aspect-square inline-block' />
 					<span className='hidden sm:inline ml-2'>MariaVaragilal</span>
 				</Link>
-				<button type='button' onClick={() => setNavOpen(!navOpen)} className='hidden p-2 -m-2 rounded-lg' aria-expanded={navOpen} aria-controls='nav-menu'>
-					<span className='sr-only'>{navOpen ? 'Close menu' : 'Open menu'}</span>
-					<svg className='w-5 h-5' fill='none' stroke='currentColor' viewBox='0 0 24 24' aria-hidden='true'>
-						{navOpen ? <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M6 18L18 6M6 6l12 12' /> : <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M4 6h16M4 12h16M4 18h16' />}
-					</svg>
-				</button>
 				<div id='nav-menu' className='flex flex-wrap justify-center items-center mt-0 min-w-0 rounded-none bg-transparent backdrop-blur-none p-0 shadow-none sm:gap-1'>
 					{SECTIONS.map((s) => (
 						<a

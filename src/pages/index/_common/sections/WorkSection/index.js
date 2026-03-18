@@ -1,28 +1,53 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Card, Separator } from '../../../../../_common/components';
 import { AccordionItem, AccordionTrigger, AccordionContent } from '../../../../../_common/components/controls/Accordion';
 import { workCases } from '../../../../../constants/data/cases';
+import { findCaseByHash, toSlug } from '../../../../../constants/utils/structuredData';
 import { LazyTerminalTypeEffect } from '../../../../../constants/utils/terminalTypeEffect';
 import { CaseCard } from './CaseCard';
 import { CaseDrawer } from './CaseDrawer';
 
 const _initialSelected = Object.fromEntries(Object.entries(workCases).map(([group]) => [group, null]));
 
+const getInitialStateFromHash = () => {
+	if (typeof window === 'undefined') return null;
+	return findCaseByHash(workCases, window.location.hash);
+};
+
 export const WorkSection = () => {
 	const [expandedGroup, setExpandedGroup] = useState('Securibox');
 	const [selectedByGroup, setSelectedByGroup] = useState(_initialSelected);
 	const [drawerOpen, setDrawerOpen] = useState(false);
 	const [drawerGroup, setDrawerGroup] = useState(null);
+	const didScrollRef = useRef(false);
+
+	useEffect(() => {
+		const hashMatch = getInitialStateFromHash();
+		if (!hashMatch) return;
+		setExpandedGroup(hashMatch.groupName);
+		setSelectedByGroup((prev) => ({ ...prev, [hashMatch.groupName]: hashMatch.app }));
+		setDrawerOpen(true);
+		setDrawerGroup(hashMatch.groupName);
+		if (didScrollRef.current) return;
+		didScrollRef.current = true;
+		setTimeout(() => {
+			const slug = toSlug(hashMatch.app.title);
+			const el = document.getElementById('case-' + slug);
+			if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+		}, 100);
+	}, []);
 
 	const toggleGroup = (groupName) => setExpandedGroup((prev) => (prev === groupName ? null : groupName));
 	const selectCase = (groupName, app) => {
 		const current = selectedByGroup[groupName];
 		if (current?.title === app.title) {
 			setDrawerOpen(false);
+			if (typeof window !== 'undefined') history.replaceState(null, '', window.location.pathname);
 		} else {
 			setSelectedByGroup((prev) => ({ ...prev, [groupName]: app }));
 			setDrawerGroup(groupName);
 			setDrawerOpen(true);
+			if (typeof window !== 'undefined') history.replaceState(null, '', '#' + toSlug(app.title));
 		}
 	};
 	const closeDrawer = () => {
@@ -31,6 +56,7 @@ export const WorkSection = () => {
 			setSelectedByGroup((prev) => ({ ...prev, [drawerGroup]: null }));
 		}
 		setDrawerGroup(null);
+		if (typeof window !== 'undefined') history.replaceState(null, '', window.location.pathname);
 	};
 
 	const drawerCase = drawerGroup ? selectedByGroup[drawerGroup] : null;
@@ -95,7 +121,7 @@ export const WorkSection = () => {
 												{group.cases.flatMap((app) => {
 													const isSelected = selectedCase?.title === app.title;
 													return [
-														<CaseCard key={app.title} app={app} isSelected={isSelected} onToggle={() => selectCase(groupName, app)} as='h4' />,
+														<CaseCard key={app.title} id={'case-' + toSlug(app.title)} app={app} isSelected={isSelected} onToggle={() => selectCase(groupName, app)} as='h4' />,
 														...(isSelected && selectedCase ? [
 															<CaseDrawer
 																key={app.title + '-detail'}

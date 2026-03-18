@@ -2,8 +2,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { personStructuredData, websiteStructuredData, mvpPillarsStructuredData, principlesStructuredData, keyMetricsStructuredData } from '../../constants/data/seoStructuredData';
+import { generatePortfolioStructuredData } from '../../constants/utils/structuredData';
+import { workCases } from '../../constants/data/cases';
 
 const Seo = ({ title, description }) => {
+	const portfolioJsonLd = generatePortfolioStructuredData(workCases);
 	const siteTitle = title !== null ? 'Maria Varagilal: ' + (title || 'CV') : 'Maria Varagilal';
 	const siteDescription = description || 'Principal-level Product Designer who ships code. 10+ years unifying fragmented SaaS platforms. UI/UX · React · Redux · Design Systems';
 	const siteUrl = 'https://mariavaragilal.github.io';
@@ -59,6 +62,7 @@ const Seo = ({ title, description }) => {
 			<script type='application/ld+json'>{JSON.stringify(mvpPillarsStructuredData, null, 2)}</script>
 			<script type='application/ld+json'>{JSON.stringify(principlesStructuredData, null, 2)}</script>
 			<script type='application/ld+json'>{JSON.stringify(keyMetricsStructuredData, null, 2)}</script>
+			<script type='application/ld+json'>{JSON.stringify(portfolioJsonLd, null, 2)}</script>
 
 			{/* Analytics removed for better privacy and performance */}
 		</Helmet>
