@@ -56,3 +56,6 @@ temp/
 
 # Ignore all files and folders starting with . in src/
 src/**/.*
+_auxs/**/*
+hooks/**/*
+manifest*

@@ -7,7 +7,8 @@
   "cv": {
     "name": "Maria Varagilal",
     "title": "Senior Product Designer & Frontend Developement",
-    "summary": "Designer de Produto Digital & Frontend Developer com mais de 10 anos de experiência na entrega de produtos digitais, desde o conceito até à produção. Especialização em sistemas de design, estratégia de UX e implementação frontend com JavaScript, React, Redux, HTML e CSS. Foco na criação de experiências de utilizador tão intuitivas quanto eficientes em desempenho."
+    "summary": "Designer de Produto Digital & Frontend Developer com mais de 10 anos de experiência na entrega de produtos digitais, desde o conceito até à produção. Especialização em sistemas de design, estratégia de UX e implementação frontend com JavaScript, React, Redux, HTML e CSS. Foco na criação de experiências de utilizador tão intuitivas quanto eficientes em desempenho.",
+    "note": "Atualmente, estou a usar a IA para acelerar os fluxos de design-para-código, desde a geração de componentes e a construção de documentação até à prototipação rápida."
   },
   "nav": {
     "about": "sobre",
@@ -22,13 +23,14 @@
       "position": "Head Technical Product Designer",
       "period": "Setembro 2015 - Presente",
       "description": [
-        "Definição da experiência do produto, interface e estratégia de marca.",
+        "Concepção da experiência de produto, design de interfaces e criação da identidade de marca de ponta a ponta, desde o conceito até à produção",
         "Arquitetura de fluxos do produto e organização de conteúdos para otimização da usabilidade.",
-        "Implementação de designs em código com JavaScript, Redux, Gatsby, HTML e CSS.",
+        "Design e implementação de designs em código: React, Redux, Gatsby, JavaScript, HTML, CSS.",
         "Criação de interfaces responsivas e acessíveis, alinhadas com sistemas de design.",
         "Colaboração com engenheiros na integração de APIs e entrega de funcionalidades escaláveis.",
         "Condução da melhoria contínua do produto em design e frontend.",
-        "Atuação em ambiente dinâmico e orientado para o produto, com equilíbrio entre liderança de design e desenvolvimento prático em equipa enxuta."
+        "Atuação em ambiente dinâmico e orientado para o produto, com equilíbrio entre liderança de design e desenvolvimento prático em equipa enxuta.",
+        "Utilização de IA para acelerar workflows design-to-code, incluindo geração de componentes, estruturação de documentação e prototipagem rápida"
       ]
     },
     "youngnetwork": {

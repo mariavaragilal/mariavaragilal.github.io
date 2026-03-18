@@ -1,12 +1,27 @@
 import { useState, useRef, createContext, useContext } from 'react';
 import { focusRing } from '../../../constants/utils/a11y';
 
-const LIST = 'inline-flex h-9 items-center justify-center rounded-lg bg-muted p-1 text-muted-foreground';
-const TRIGGER_BASE = 'inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium ring-offset-background transition-all disabled:pointer-events-none disabled:opacity-50 ' + focusRing;
-const TRIGGER_ACTIVE = 'bg-background text-foreground shadow';
+const LIST = 'inline-flex h-9 items-center justify-center rounded-lg';
+const TRIGGER_BASE = 'inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium ring-offset-background transition-all disabled:pointer-events-none disabled:opacity-50 ' + focusRing;
 const CONTENT = 'mt-2 ring-offset-background';
 
-const TabsContext = createContext({ activeTab: '', handleChange: () => {} });
+const TRIGGER_VARIANTS = {
+	default: { active: 'bg-background text-foreground shadow', inactive: '' },
+	underline: { active: 'border-b-2 border-current text-foreground shadow-none bg-transparent rounded-none', inactive: 'border-b-2 border-transparent text-current/66 rounded-none shadow-none bg-transparent' },
+	outline: { active: 'border-b-2 border-border text-foreground shadow-none bg-transparent rounded-none', inactive: 'border-b-2 border-transparent text-current/66 rounded-none shadow-none bg-transparent' },
+};
+
+const BUTTON_VARIANTS = {
+	default: 'bg-primary text-primary-foreground hover:bg-primary/90',
+	destructive: 'bg-destructive text-white hover:bg-destructive/90',
+	outline: 'border border-foreground/20 bg-background text-foreground hover:bg-accent hover:text-accent-foreground',
+	secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/66 hover:text-primary',
+	ghost: 'hover:bg-accent hover:text-accent-foreground',
+	link: 'text-primary underline-offset-4 hover:underline',
+	primary: 'bg-primary text-primary-foreground hover:bg-primary/90',
+};
+
+const TabsContext = createContext({ activeTab: '', handleChange: () => { } });
 
 export const Tabs = ({ defaultValue, value: controlledValue, onValueChange, className = '', children, ...props }) => {
 	const [internal, setInternal] = useState(defaultValue || '');
@@ -44,9 +59,12 @@ export const TabsList = ({ className = '', children, ...props }) => {
 	);
 };
 
-export const TabsTrigger = ({ value, className = '', disabled, children, ...props }) => {
+export const TabsTrigger = ({ value, variant = 'default', buttonVariant, className = '', disabled, children, ...props }) => {
 	const { activeTab, handleChange } = useContext(TabsContext);
 	const isActive = activeTab === value;
+	const v = TRIGGER_VARIANTS[variant] || TRIGGER_VARIANTS.default;
+	let activeClass = isActive ? v.active : v.inactive;
+	if (buttonVariant && isActive && BUTTON_VARIANTS[buttonVariant]) activeClass = activeClass + ' ' + BUTTON_VARIANTS[buttonVariant];
 	return (
 		<button
 			role='tab'
@@ -56,7 +74,7 @@ export const TabsTrigger = ({ value, className = '', disabled, children, ...prop
 			id={'tab-' + value}
 			disabled={disabled}
 			tabIndex={isActive ? 0 : -1}
-			className={TRIGGER_BASE + ' ' + (isActive ? TRIGGER_ACTIVE : '') + ' ' + className}
+			className={TRIGGER_BASE + ' ' + activeClass + ' ' + className}
 			onClick={() => handleChange(value)}
 			{...props}
 		>

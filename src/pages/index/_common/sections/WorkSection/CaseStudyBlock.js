@@ -18,7 +18,7 @@ export const CaseStudyBlock = ({ caseStudy, as: Tag = 'div' }) => (
 		) : null}
 		{caseStudy.process && caseStudy.process.length > 0 ? (
 			<div>
-				<CaseSectionHeading as='h6'>Process</CaseSectionHeading>
+				<CaseSectionHeading as='h6'>{caseStudy.processHeading || 'Process'}</CaseSectionHeading>
 				<div className='space-y-0'>
 					{caseStudy.process.map((p, pi) => (
 						<div key={p.phase + p.label}>
@@ -57,7 +57,7 @@ export const CaseStudyBlock = ({ caseStudy, as: Tag = 'div' }) => (
 		) : null}
 		{caseStudy.tradeoffsLearnings ? (
 			<div>
-				<CaseSectionHeading as='h6'>Trade-offs & Learnings</CaseSectionHeading>
+				<CaseSectionHeading as='h6'>{caseStudy.tradeoffsHeading || 'Trade-offs & Learnings'}</CaseSectionHeading>
 				{caseStudy.tradeoffsLearnings.split('\n\n').map((para, i) => (
 					<p key={i} className='text-base leading-relaxed text-current/88 last:mb-4'>{para}</p>
 				))}

@@ -3,15 +3,9 @@ import { Link } from 'gatsby';
 import { motion } from 'motion/react';
 import { LazyTerminalTypeEffect } from '../../../../constants/utils/terminalTypeEffect';
 import { Button, Card } from '../../../../_common/components';
+import { keyMetrics } from '../../../../constants/data/mvpData';
 
 export const IntroSection = ({ scrollToWork }) => {
-
-	const METRICS = [
-		{ value: '9', label: 'Digital products', ctx: 'designed & shipped' },
-		{ value: '5+', label: 'Platforms unified', ctx: 'single experience' },
-		{ value: '4+', label: 'B2B SaaS', ctx: 'complex workflows' },
-		{ value: '10+', label: 'Years', ctx: 'experience' },
-	];
 
 	return (
 		<header className='relative w-full rounded-t-lg' aria-labelledby='hero-heading'>
@@ -21,7 +15,7 @@ export const IntroSection = ({ scrollToWork }) => {
 						<div className='flex flex-wrap justify-inherit gap-3 text-current/44'>
 							<span className='text-[.75em] uppercase tracking-[0.2em] font-semibold'>Lisbon</span>
 							<span className='text-current/66' aria-hidden='true'>·</span>
-							<span className='text-[.75em] uppercase tracking-[0.2em] font-semibold'>B2B · SaaS · Fintech · AI exploration</span>
+							<span className='text-[.75em] uppercase tracking-[0.2em] font-semibold'>B2B · SaaS · Fintech · AI-accelerated design & development</span>
 						</div>
 						<LazyTerminalTypeEffect
 							animationType='cursor'
@@ -36,7 +30,7 @@ export const IntroSection = ({ scrollToWork }) => {
 							Senior Technical Product Designer that ships code.
 						</p>
 						<p className='max-w-3xl text-xl leading-relaxed text-current/66'>
-							10+ years turning SaaS products into unified platforms: designing the system, writing the code, protecting the vision as products scale.
+							10+ years turning SaaS products into unified platforms: designing the system, writing the code, protecting the vision as products scale. Today, I use AI to accelerate every stage — from design system workflows to production-ready components.
 						</p>
 						<div className='flex flex-wrap gap-3'>
 							<Button as='a' href='#work' variant='default' size='label' onClick={scrollToWork}>
@@ -49,7 +43,7 @@ export const IntroSection = ({ scrollToWork }) => {
 					</div>
 					{/* a11y: stats as definition list — cited from platform unification projects */}
 					<div className='grid grid-cols-2 gap-1 rounded border border-background bg-background' aria-label='Key metrics'>
-						{METRICS.map((metric, index) => (
+						{keyMetrics.map((metric, index) => (
 							<Card variant='secondary' className='px-5 py-6' as={motion.div} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: index * 0.25 }} key={metric.label}>
 								<dd className='font-mono text-[clamp(1.2rem,5vw,2.5rem)] leading-tight tracking-tight text-current'>{metric.value}</dd>
 								<dt className='mt-1 text-[.75em] uppercase font-medium tracking-[0.16em] text-current/88'>{metric.label}</dt>

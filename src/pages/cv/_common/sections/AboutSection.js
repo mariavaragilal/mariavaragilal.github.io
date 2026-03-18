@@ -18,6 +18,7 @@ const CVAboutSection = () => {
 				<Badge variant='secondary'>{t('about.skills.react')}</Badge>
 				<Badge variant='secondary'>{t('about.skills.redux')}</Badge>
 			</div>
+			<p className='text-[.875em] text-current/44 leading-relaxed mt-4 italic'>— {t('cv.note')}</p>
 		</section>
 	);
 };

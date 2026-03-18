@@ -57,5 +57,5 @@ export const keyMetricsStructuredData = {
 	name: 'Platform Unification Key Metrics',
 	description: 'Outcomes from applying the MVP Method to B2B SaaS platform unification',
 	creator: { '@type': 'Person', name: person.name },
-	variableMeasured: keyMetrics.map((m) => ({ '@type': 'PropertyValue', name: m.name, value: m.value })),
+	variableMeasured: keyMetrics.map((m) => ({ '@type': 'PropertyValue', name: m.label + ' — ' + m.ctx, value: m.value })),
 };

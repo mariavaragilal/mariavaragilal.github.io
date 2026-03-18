@@ -1,30 +1,26 @@
 import React from 'react';
 import { LazyTerminalTypeEffect } from '../../../../constants/utils/terminalTypeEffect';
-import { pillars, outcomes, evolution } from '../../../../constants/data/mvpData';
+import { method, pillars, outcomes, evolution } from '../../../../constants/data/mvpData';
 import { Card, Badge, Separator, ChatBubbleQuestion, ChatBubbleAnswer, Insight } from '../../../../_common/components';
 import { AccordionItem, AccordionTrigger, AccordionContent } from '../../../../_common/components/controls/Accordion';
 
 export const MethodSection = ({ expandedPillar, togglePillarDetail }) => (
 	<Card as='section' id='framework' aria-labelledby='framework-heading' className='border-border px-6 py-16 lg:px-12 lg:py-24 space-y-16'>
 		<div className='w-full mx-auto max-w-full'>
-			<p className='text-[.75em] uppercase tracking-[0.2em] font-semibold text-current/66 mb-3'>My playbook</p>
+			<p className='text-[.75em] uppercase tracking-[0.2em] font-semibold text-current/66 mb-3'>{method.label}</p>
 			<LazyTerminalTypeEffect
 				animationType='futuristic'
 				element='h2'
 				className='mb-1 font-mono font-medium lg:font-normal text-[2.75em] lg:text-[clamp(2rem,6vw,5rem)] tracking-[-.05em] lg:tracking-tighter leading-[1em] lg:leading-18 text-foreground'
 				id='framework-heading'>
-				The MVP Method
+				{method.heading}
 			</LazyTerminalTypeEffect>
-			<p className='text-[1.25em] text-current tracking-wide underline'>Maria Varagilal Playbook</p>
+			<p className='text-[1.25em] text-current tracking-wide underline'>{method.subtitle}</p>
 			<div className='grid gap-x-10 gap-y-6 md:grid-cols-[minmax(0,.8fr)_minmax(0,1.4fr)] mt-10'>
 				<div className='space-y-4 text-[1.125rem] leading-relaxed text-foreground'>
-					<p>
-						Growth creates complexity. When a single product becomes a platform of interconnected solutions, the biggest risk is losing the feeling of one company.
-					</p>
+					<p>{method.intro.column1}</p>
 				</div>
-				<p className='text-[1.125rem] leading-relaxed text-current/88'>
-					The MVP Method is the approach I&apos;ve developed and refined throughout my career — translating the philosophy behind my work into a repeatable practice. Applied across strategy, design, implementation, and rollout — not just documentation — it protects the original vision as products evolve.
-				</p>
+				<p className='text-[1.125rem] leading-relaxed text-current/88'>{method.intro.column2}</p>
 			</div>
 			{/* <p className='max-w- mb-10 text-[1.125rem] leading-relaxed pr-6'>
 				<span className='underline'>When the pillars operate together, they produce 3 interlocking principles:</span> <strong className='text-current'>Clarity, Confidence, Consistency</strong>

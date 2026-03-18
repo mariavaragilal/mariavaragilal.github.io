@@ -20,7 +20,7 @@ export const CaseLink = ({ url, label, role, featured = false, platform }) => {
 
 // Section helpers
 export const CaseSectionHeading = ({ as: Tag = 'h1', children, className = '' }) => (
-	<Tag className={'mb-1 text-xs uppercase tracking-[0.18em] font-semibold text-current/66 ' + className}>{children}</Tag>
+	<Tag className={'mb-1 text-xs uppercase tracking-[0.18em] font-semibold text-current/44 ' + className}>{children}</Tag>
 );
 
 export const CaseSection = ({ heading, children, as: Tag = 'div', headingAs = 'h1' }) => (

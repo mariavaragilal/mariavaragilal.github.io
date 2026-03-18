@@ -10,8 +10,8 @@ export const person = {
 	image: 'https://mariavaragilal.github.io/images/avatar.png',
 	sameAs: ['https://www.linkedin.com/in/mariavaragilal', 'https://codepen.io/mariavaragilal', 'https://dribbble.com/mariavaragilal', 'https://be.net/mariavaragilal'],
 	address: { locality: 'Lisbon', country: 'Portugal' },
-	knowsAbout: ['User Experience Design', 'User Interface Design', 'Product Design', 'React', 'Redux', 'JavaScript', 'Design Systems', 'Frontend Development', 'AI-Augmented', 'LLM prompting'],
-	skills: ['UX Design', 'UI Design', 'React', 'Redux', 'JavaScript', 'Design Systems', 'Gatsby'],
+	knowsAbout: ['User Experience Design', 'User Interface Design', 'Product Design', 'React', 'Redux', 'JavaScript (ES6+)', 'Design Systems', 'Frontend Development', 'AI-Augmented', 'LLM prompting'],
+	skills: ['UX Design', 'UI Design', 'React', 'Redux', 'JavaScript (ES6+)', 'Design Systems', 'Gatsby'],
 	education: [
 		{ name: 'Universidade Lusíada de Lisboa', description: 'Bachelor\'s Degree in Design' },
 		{ name: 'Academia Flag', description: 'Pós-Graduação in Design Comunicação' },
@@ -21,6 +21,28 @@ export const person = {
 		{ name: 'Bronze cyber', description: 'Young Lions Portugal', date: '2014-05-01' },
 		{ name: 'Web Design Served', description: 'Behance', date: '2013-07-01' },
 	],
+};
+
+export const keyMetrics = [
+	{ value: '9', label: 'Digital products', ctx: 'designed & shipped' },
+	{ value: '5+', label: 'Platforms unified', ctx: 'single experience' },
+	{ value: '4+', label: 'B2B SaaS', ctx: 'complex workflows' },
+	{ value: '10+', label: 'Years', ctx: 'experience' },
+];
+
+
+// ─────────────────────────────────────────────────────────────────────────────
+// MVP Method
+// ─────────────────────────────────────────────────────────────────────────────
+
+export const method = {
+	label: 'My playbook',
+	heading: 'The MVP Method',
+	subtitle: 'Maria Varagilal Playbook',
+	intro: {
+		column1: 'Growth creates complexity. When a single product becomes a platform of interconnected solutions, the biggest risk is losing the feeling of one company.',
+		column2: 'The MVP Method is the approach I\'ve developed and refined throughout my career — translating the philosophy behind my work into a repeatable practice. Applied across strategy, design, implementation, and rollout — not just documentation — it protects the original vision as products evolve.',
+	},
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -150,18 +172,6 @@ export const outcomes = [
 		protects: 'A unified experience that evolves without losing its identity'
 	},
 ];
-
-// ─────────────────────────────────────────────────────────────────────────────
-// Key metrics — platform unification outcomes (for SEO Dataset schema)
-// ─────────────────────────────────────────────────────────────────────────────
-
-export const keyMetrics = [
-	{ name: 'Brand consistency', value: 'Scaled' },
-	{ name: 'Task completion', value: 'Reduced' },
-	{ name: 'Services support friction', value: 'Reduced' },
-	{ name: 'Experience', value: '10+ years' },
-];
-
 // ─────────────────────────────────────────────────────────────────────────────
 // Philosophy — manifest commitments
 //
@@ -234,4 +244,109 @@ export const evolution = {
 	],
 	closing: 'Each pass through the loop sharpens the product and deepens understanding. The role of leadership is to protect clarity, confidence, and consistency — so the team can release, learn, and move forward with purpose.',
 	whyItMatters: 'Declaring Done creates the space to learn. Learning keeps the vision honest. The cycle builds quiet, compounding advantage that no single feature sprint can replicate.',
+};
+
+// ─────────────────────────────────────────────────────────────────────────────
+// AI & LLM exploration
+// ─────────────────────────────────────────────────────────────────────────────
+
+export const aiExploration = {
+	id: 'ai-exploration',
+	ariaLabelledBy: 'ai-exploration-heading',
+	label: 'AI & LLM exploration',
+	heading: 'AI within Boundaries',
+	intro: [
+		'AI accelerates execution, not clarity. That distinction shapes where AI enters the workflow — and where it does not. The MVP Method still applies: boundaries first. AI operates within them.',
+		'Without constraints, AI generates fast and drifts faster. A prompt that yields a decent component today yields an inconsistent one tomorrow — wrong spacing, broken hierarchy, tone that doesn\'t match. Speed without guardrails is fragmentation at scale.',
+		'The answer stays the same: clarity first, execution second. The shift is that those boundaries must now live inside the prompting itself.',
+	],
+	skillsInPrompting: {
+		title: 'Skills in prompting',
+		intro: [
+			'Reusable, domain-specific instructions that encode boundaries into AI context: project conventions, coding standards, design tokens, constraints.',
+			'A skill is not a prompt template — it mirrors the design system.',
+			'Result: less correcting, more iterating; repeatable tasks accelerate.',
+			'Skills encode the same boundaries that guide human decisions.',
+		],
+		skills: [
+			{
+				name: 'Prompt Architect',
+				type: 'methodology',
+				methodology: [
+					{ step: '1. DECONSTRUCT', description: 'Extract core intent, map what\'s provided vs. missing' },
+					{ step: '2. DIAGNOSE', description: 'Identify ambiguity, missing constraints, weak definitions' },
+					{ step: '3. DEVELOP', description: 'Select techniques, enrich context, apply optimizations' },
+					{ step: '4. DELIVER', description: 'Clean copy-paste block + explanation' },
+				],
+				anatomy: [
+					{ part: '1. Role', description: 'Expertise, perspective, explicit tradeoffs' },
+					{ part: '2. Task', description: 'Specific deliverable, format, end state' },
+					{ part: '3. Context', description: 'Facts the model can\'t infer: constraints, risks' },
+					{ part: '4. Reasoning', description: 'Why this matters — steers judgment calls' },
+					{ part: '5. Stop Conditions', description: 'When output is complete and verified' },
+					{ part: '6. Output', description: 'Structure, format, field labels' },
+				],
+				result: 'Transforms rough ideas into precision prompts. Same systematic approach every time — repeatable quality.',
+			},
+			{
+				name: 'Design System',
+				type: 'structure',
+				structure: {
+					name: 'design-system/',
+					type: 'folder',
+					children: [
+						{ name: 'SKILL.md', type: 'file' },
+						{ name: 'references/', type: 'folder', children: [{ name: 'tokens.md', type: 'file' }, { name: 'component-patterns.md', type: 'file' }, { name: 'guidelines.md', type: 'file' }, { name: 'ui-refinement-checklist.md', type: 'file' }] },
+						{ name: 'subagents/', type: 'folder', children: [{ name: 'component-scaffolder.md', type: 'file' }, { name: 'component-auditor.md', type: 'file' }, { name: 'token-auditor.md', type: 'file' }, { name: 'ui-auditor.md', type: 'file' }] },
+						{ name: 'scripts/', type: 'folder', children: [{ name: 'generate-component.py', type: 'file' }, { name: 'export-tokens.py', type: 'file' }, { name: 'validate-component.sh', type: 'file' }] },
+					],
+				},
+				features: [
+					{ title: 'Token System', description: 'Semantic Tailwind classes, CSS custom properties, dark mode variables — never hardcode values' },
+					{ title: 'Component Anatomy', description: 'Single CVA (class-variance-authority) + cn() style for .js/.jsx/.tsx, compound patterns, controlled/uncontrolled state' },
+					{ title: 'Accessibility Rules', description: 'focusRing on every interactive element, disabled states, ARIA patterns' },
+					{ title: 'Subagents', description: 'Specialized tasks: scaffold new components, audit existing ones, validate tokens' },
+				],
+				result: 'AI generates components that match the system exactly — same tokens, same patterns, same accessibility rules. No drift.',
+			},
+			{
+				name: 'Project Conventions',
+				type: 'structure',
+				structure: {
+					name: 'project-conventions/',
+					type: 'folder',
+					children: [
+						{ name: 'SKILL.md', type: 'file' },
+						{ name: 'references/', type: 'folder', children: [{ name: 'vite-structure.md', type: 'file' }, { name: 'next-structure.md', type: 'file' }, { name: 'naming-conventions.md', type: 'file' }, { name: 'coding-standards.md', type: 'file' }, { name: 'testing-ci.md', type: 'file' }, { name: 'typescript-patterns.md', type: 'file' }] },
+						{ name: 'subagents/', type: 'folder', children: [{ name: 'feature-scaffolder.md', type: 'file' }, { name: 'conventions-reviewer.md', type: 'file' }, { name: 'placement-advisor.md', type: 'file' }] },
+						{ name: 'scripts/', type: 'folder', children: [{ name: 'create-component.sh', type: 'file' }, { name: 'check-conventions.sh', type: 'file' }] },
+					],
+				},
+				features: [
+					{ title: 'Project Structure', description: 'Vite/Next/Gatsby patterns, feature vs shared folders, barrel exports, path aliases' },
+					{ title: 'Naming Conventions', description: 'Files, components, hooks, utils, constants — consistent patterns across codebase' },
+					{ title: 'Coding Standards', description: 'ESLint rules, Prettier config, import order, comment style, error handling' },
+					{ title: 'Team Distribution', description: 'Placement rules for new features, handoff documentation patterns' },
+				],
+				result: 'AI places files correctly, follows team conventions, generates code that passes linting. No refactoring needed.',
+			},
+		],
+	},
+	whatDoesntWorkTitle: 'What doesn\'t work',
+	whatDoesntWork: [
+		{ title: 'AI without boundaries', description: 'Generating UI from a blank prompt produces components that look plausible but drift from the system. Every output needs manual correction — the speed gain disappears.' },
+		{ title: 'AI as the starting point', description: 'When AI leads ideation before the problem is clear, it anchors the team on what\'s easy to generate — not what needs to be solved. Cohesion before creation applies here too.' },
+		{ title: 'One-shot prompting', description: 'A single prompt rarely produces production-ready output. The value is in the iteration loop — prompt, evaluate against the boundaries, refine — the same Build–Launch–Test–Refine cycle.' },
+	],
+	whereAICreatesValueTitle: 'Where AI creates real value',
+	whereAICreatesValue: [
+		{ title: 'Ideation & copy', description: 'Exploring directions at the pace of conversation. Rough concepts to production-ready tone in minutes — with brand voice encoded in the skill.' },
+		{ title: 'Rapid prototyping', description: 'From problem statement to interactive prototype — testing layout, hierarchy, and flow before committing to production code.' },
+		{ title: 'Design system scaling', description: 'Scaffolding new components that respect existing tokens, spacing, and hierarchy. The skill enforces consistency — the designer focuses on intent.' },
+		{ title: 'Documentation & handoff', description: 'Generating component documentation, changelog entries, and implementation notes that follow project conventions without starting from scratch.' },
+	],
+	blockquote: {
+		main: 'AI scales the execution. The boundaries stay.',
+		secondary: 'Grounding in clear boundaries and constraints keeps work unified and meaningful, no matter the pace.',
+	},
 };

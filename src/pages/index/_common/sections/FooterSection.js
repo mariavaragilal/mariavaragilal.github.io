@@ -10,6 +10,7 @@ export const FooterSection = () => {
 		'Motion',
 		'Custom component library',
 		'Theme system',
+		'JavaScript (ES6+)',
 		'Accessibility - a11y',
 		'i18n',
 		'SEO & structured data',

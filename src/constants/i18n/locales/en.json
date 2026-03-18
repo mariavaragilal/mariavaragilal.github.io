@@ -7,7 +7,8 @@
   "cv": {
     "name": "Maria Varagilal",
     "title": "Senior Product Designer & Frontend Developement",
-    "summary": "Technical Product Designer that ships code with 10+ years of experience delivering digital products from concept to production. Skilled in design systems, UX strategy, and frontend implementation using JavaScript, React, Redux, HTML, and CSS. Passionate about crafting user experiences that are as performant as they are intuitive."
+    "summary": "Technical Product Designer that ships code with 10+ years of experience delivering digital products from concept to production. Skilled in design systems, UX strategy, and frontend implementation using JavaScript, React, Redux, HTML, and CSS. Passionate about crafting user experiences that are as performant as they are intuitive.",
+    "note": "Currently using AI to accelerate design-to-code workflows, from component generation and documentation scaffolding to rapid prototyping."
   },
   "nav": {
     "about": "about",
@@ -22,13 +23,14 @@
       "position": "Head Technical Product Designer",
       "period": "September 2015 - Present",
       "description": [
-        "Defined product experience, interface, and brand strategy.",
+        "Shaped product experience, interface design, and end-to-end brand identity creation from concept to production",
         "Architected product flows and content organization to optimize usability.",
-        "Implemented designs into code with JavaScript, Redux, Gatsby, HTML, and CSS.",
+        "Designed and implemented designs into code: React, Redux, Gatsby, JavaScript, HTML, CSS.",
         "Built responsive, accessible UIs aligned with design systems.",
-        "Partnered with engineers to integrate APIs and deliver scalable features.",
+        "Partnered with engineers on API integration and scalable feature delivery across a lean team.",
         "Drove continuous product improvement across design and frontend.",
-        "Operated in a fast-paced, product-driven environment, balancing design leadership and hands-on coding in a lean team setting."
+        "Operated in a fast-paced, product-driven environment, balancing design leadership and hands-on coding in a lean team setting.",
+        "Currently using AI to accelerate design-to-code workflows, from component generation and documentation scaffolding to rapid prototyping."
       ]
     },
     "youngnetwork": {
