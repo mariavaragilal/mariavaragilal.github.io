@@ -5,6 +5,7 @@ const CARD_VARIANTS = {
 	default: 'bg-card text-card-foreground gap-x-6',
 	secondary: 'bg-secondary/50 text-secondary-foreground',
 	muted: 'bg-secondary/25 text-card-foreground border-border',
+	inverse: 'bg-primary/5',
 };
 const DEFAULT_PADDING = 'px-6';
 const DEFAULT_HEADER_PADDING = 'pt-6 [.border-b]:pb-6';

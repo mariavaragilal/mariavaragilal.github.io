@@ -39,41 +39,60 @@ export const CaseStudyBlock = ({ caseStudy, as: Tag = 'div' }) => (
 			</div>
 		) : null}
 		{caseStudy.implementation ? (
-			<div>
-				<CaseSectionHeading as='h6'>Implementation</CaseSectionHeading>
-				{caseStudy.implementation.split('\n\n').map((para, i) => (
-					<p key={i} className='text-base leading-relaxed text-current/88 last:mb-4'>{para}</p>
-				))}
-			</div>
-		) : null}
-		{caseStudy.resultsMetrics && caseStudy.resultsMetrics.length > 0 ? (
-			<CaseSection heading='Results & Metrics' headingAs='h6'>
-				<div className='relative flex flex-wrap gap-1 space-y-1'>
-					{caseStudy.resultsMetrics.map((m) => (
-						<ChatBubbleAnswer width='fit-content' variant='inverse' key={m}>{m}</ChatBubbleAnswer>
+			<CaseSection heading='Implementation' headingAs='h6' className='mb-4'>
+				<Card variant='inverse' className='grid gap-4 md:gap-8 lg:gap-10 md:grid-cols-2 xl:grid-cols-[repeat(auto-fill,minmax(15rem,1fr))] p-4 md:p-8 lg:px-10 text-current'>
+					{(Array.isArray(caseStudy.implementation) ? caseStudy.implementation : caseStudy.implementation.split('\n\n')).map((para, i) => (
+						typeof para === 'object' && para.heading && para.items ? (
+							<div key={i} className='flex flex-col'>
+								<p className='text-[.65em] uppercase tracking-[0.18em] font-semibold text-current mb-1'>{para.heading}</p>
+								<ul className='space-y-0.5 text-xs leading-relaxed text-current/88 font-mono'>
+									{para.items.map((item, j) => <li key={j} className='flex gap-2'><span className='text-current/50 shrink-0'>—</span><span>{item}</span></li>)}
+								</ul>
+							</div>
+						) : (
+							<p key={i} className='space-y-0.5 text-xs leading-relaxed text-current/88 font-mono'>{para}</p>
+						)
 					))}
-				</div>
+				</Card>
 			</CaseSection>
 		) : null}
-		{caseStudy.tradeoffsLearnings ? (
-			<div>
-				<CaseSectionHeading as='h6'>{caseStudy.tradeoffsHeading || 'Trade-offs & Learnings'}</CaseSectionHeading>
-				{caseStudy.tradeoffsLearnings.split('\n\n').map((para, i) => (
-					<p key={i} className='text-base leading-relaxed text-current/88 last:mb-4'>{para}</p>
-				))}
-			</div>
-		) : null}
-		{caseStudy.quote ? (
-			<Blockquote>
-				<BlockquoteMain>{caseStudy.quote.title}</BlockquoteMain>
-				{caseStudy.quote.subtitle ? <BlockquoteSecondary>{caseStudy.quote.subtitle}</BlockquoteSecondary> : null}
-			</Blockquote>
-		) : null}
-		{caseStudy.skillsDemonstrated ? (
-			<div>
-				<CaseSectionHeading as='h6'>Skills</CaseSectionHeading>
-				<p className='text-base leading-relaxed text-current/88'>{caseStudy.skillsDemonstrated}</p>
-			</div>
-		) : null}
-	</Card>
+		{
+			caseStudy.resultsMetrics && caseStudy.resultsMetrics.length > 0 ? (
+				<CaseSection heading='Results & Metrics' headingAs='h6' className='mb-4'>
+					<div className='relative flex flex-wrap gap-1 space-y-1'>
+						{caseStudy.resultsMetrics.map((m) => (
+							<ChatBubbleAnswer width='fit-content' variant='inverse' key={m}>{m}</ChatBubbleAnswer>
+						))}
+					</div>
+				</CaseSection>
+			) : null
+		}
+		{
+			caseStudy.tradeoffsLearnings ? (
+				<CaseSection heading={caseStudy.tradeoffsHeading || 'Trade-offs & Learnings'} headingAs='h6' className='mb-4'>
+					<Card variant='default' className='px-6 py-6 space-y-0.5'>
+						{(Array.isArray(caseStudy.tradeoffsLearnings) ? caseStudy.tradeoffsLearnings : caseStudy.tradeoffsLearnings.split('\n\n')).map((para, i) => (
+							<p key={i} className='leading-relaxed text-current/88'>{para}</p>
+						))}
+					</Card>
+				</CaseSection>
+			) : null
+		}
+		{
+			caseStudy.quote ? (
+				<Blockquote>
+					<BlockquoteMain>{caseStudy.quote.title}</BlockquoteMain>
+					{caseStudy.quote.subtitle ? <BlockquoteSecondary>{caseStudy.quote.subtitle}</BlockquoteSecondary> : null}
+				</Blockquote>
+			) : null
+		}
+		{
+			caseStudy.skillsDemonstrated ? (
+				<div>
+					<CaseSectionHeading as='h6'>Skills</CaseSectionHeading>
+					<p className='text-base leading-relaxed text-current/88'>{caseStudy.skillsDemonstrated}</p>
+				</div>
+			) : null
+		}
+	</Card >
 );

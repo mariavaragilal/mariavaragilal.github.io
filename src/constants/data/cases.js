@@ -99,7 +99,7 @@ export const workCases = {
 				},
 				caseStudy: {
 					processHeading: 'Key decisions',
-					tradeoffsHeading: 'What I\'d do differently',
+					tradeoffsHeading: 'Trade-offs & Learnings',
 					businessProblem: 'Cube asks users to hand over login credentials for their bank, telecoms, insurance, and retail accounts so automated agents collect documents on their behalf. The technology works. The design problem is the moment of handing over those credentials: making something inherently invasive feel safe, clear, and worth doing. Everything else follows from that.\n\nI designed both the consumer product (Cube) and the developer integration experience (SCA) for the same underlying technology. One audience needed emotional trust and simplicity. The other needed API flexibility and precision. Both shipped in production code.',
 					strategicDecision: {
 						intro: 'Users already wanted to automate. The only question that mattered:',
@@ -125,8 +125,45 @@ export const workCases = {
 							description: 'The dashboard has three columns: My Collection (user-pulled documents), My Agents (configuration and status), and HR Documents pushed by the user\'s employer. The tension: Cube is a product the user controls. HR Documents arrive without user action, from their company. The decision: keep them visible but explicitly labelled and spatially separated — "HR DOCUMENTS" header — so the source is always legible. The same logic applies to the files explorer: Securibox-collected folders, employer folders, and personal cloud (Google Drive, OneDrive) appear as siblings under the same root. Different origins, unified view — never presented as if they came from the same place.',
 						},
 					],
-					implementation: 'Built in React (app) and Gatsby (landing page). Designed and built: the agent card and list component system with shared sidebar filter (document taxonomy, sort, view toggle); the credential form with masked fields, help tooltips, password visibility toggle, and persistent MFA action; the synchronisation status panel with sync history and document count; the 3-column dashboard and its mobile reorganisation (single column, bottom tab navigation); the files explorer with folder tree and multi-source root architecture; connected applications settings (Google Drive, OneDrive, revoke flows); bilingual FR/EN with i18n throughout.',
-					tradeoffsLearnings: 'The design assumes a user who understands what an "agent" does before they add one. In practice, the first question a new user faces — "which agent should I add?" — is answered by a 319-item list with no guidance on where to start. There\'s no onboarding path that says: here\'s what\'s most commonly connected, here\'s what you\'ll get from it, here\'s how long it takes.\n\nIf I rebuilt the activation flow now, the first screen after signup would be a three-step guided setup — pick one agent, enter credentials, see your first document retrieved — before showing the full library. Getting someone to their first successful sync is the only thing that matters in the first session. The current design treats that as something the user figures out on their own.',
+					implementation: [
+						{
+							heading: 'Landing page',
+							items: [
+								'Static site with Gatsby — fast load, SEO-friendly',
+								'Introduces what agents are — automated document collectors that connect to your providers',
+								'Explains how agents work — credential-based sync, document categories, cloud destinations',
+								'Value proposition and trust — designed to build understanding before users reach the app, reducing the anxiety of credential handover',
+								'Bilingual FR/EN with i18n — language follows user preference',
+							],
+						},
+						{
+							heading: 'App',
+							items: [
+								'Built in React',
+								'Agent card and list component system with shared sidebar filter (document taxonomy, sort, view toggle)',
+								'Credential form with masked fields, help tooltips, password visibility toggle, and persistent MFA action',
+								'Synchronisation status panel with sync history and document count',
+								'3-column dashboard and its mobile reorganisation (single column, bottom tab navigation)',
+								'Files explorer with folder tree and multi-source root architecture',
+								'Connected applications settings (Google Drive, OneDrive, revoke flows)',
+								'Bilingual FR/EN with i18n throughout',
+							],
+						},
+						{
+							heading: 'Branding',
+							items: [
+								'Cube Branding & Visual identity.',
+								'Cube Brand guidelines: usage, spacing, typography, colour, visual hierarchy, and visual patterns.',
+								'Cube Brand assets: logos, icons, colour palettes, typography, and visual patterns.', 'Cube Brand application: application of the brand to the app and landing page.',
+							],
+						},
+					],
+					tradeoffsLearnings: [
+						'The landing page (cube.securibox.eu) introduces what agents are and how they work — it was intentionally designed alongside the app to handle that initial layer of understanding.',
+						'Inside the app, there used to be a step-by-step walkthrough. I chose to remove it to reduce friction and give users space to explore naturally. Instead of pushing actions or asking for immediate commitment, the experience stays open and pressure-free — no insistence on credentials, no urgency to configure an agent.',
+						'When no agent is set up, the interface remains intentionally minimal, showing a single clear entry point: "Configure your first agent." Only after interacting with it do users see the available agent options. This progressive reveal keeps the experience lightweight while still enabling discovery.',
+						'The result is a flow that respects the user\'s pace, builds trust early, and avoids overwhelming them upfront.',
+					],
 				},
 			},
 			{
@@ -150,7 +187,7 @@ export const workCases = {
 				},
 				caseStudy: {
 					processHeading: 'Key decisions',
-					tradeoffsHeading: 'What I\'d do differently',
+					tradeoffsHeading: 'Trade-offs & Learnings',
 					businessProblem: 'SCA is the infrastructure Cube runs on — but its users are developers and operations teams, not consumers. Developers need to integrate document collection into their own products. Operations teams need to monitor hundreds of agents across thousands of accounts in real time. Two completely different jobs on the same platform, both requiring clarity at scale.',
 					strategicDecision: {
 						intro: 'The operator challenge:',
@@ -182,8 +219,41 @@ export const workCases = {
 							description: 'The time-series chart shows pink/red as the aggregate activity baseline across all agents, with specific agents highlighted in distinct colours when selected. The multi-layer area chart means the overall system rhythm is always visible as context — individual agent anomalies stand out against it. A spike in one agent\'s activity that matches the baseline rhythm is expected behaviour. The same spike outside the normal cycle is the signal worth investigating. The chart makes that distinction visible without requiring separate views.',
 						},
 					],
-					implementation: 'Built in React across three surfaces. BackOffice: full BO frontend across all six sections — dashboard with aggregate metrics and API health indicators; CloudAgents grid and list with filter system (Type, Usage, Sort, Availability, Status, Category); agent detail with sync activity chart and status breakdowns; agent field configuration modal (multilingual FR/EN/PT, per-field type and validation); support section in card and list view with per-account sync history drill-down; statistics multi-layer area chart with agent selection; permission configuration (users, teams, API clients, certificate management); profile and dark/light theme toggle. Webview: CloudAgents client onboarding flow, white-label credential form frontend. Also shipped: Securibox ID unified account system (me.securibox.eu) — SSO across Cube, SCA, and all Securibox products.',
-					tradeoffsLearnings: 'The BackOffice was designed section by section as the product grew, and it shows: each section has strong internal coherence but the relationships between sections are implicit. An operations person debugging a sync issue moves between Données de support (find the failing account) → CloudAgents (inspect the agent config) → Statistiques (check the timeline) — but nothing in the navigation reflects that workflow.\n\nI\'d redesign the BO around the common support workflow as the primary path, with agent configuration and permissions as secondary. The current structure mirrors how the product was built, not how it gets used.',
+					implementation: [
+						{
+							heading: 'BackOffice',
+							items: [
+								'Full BO frontend across all six sections — dashboard with aggregate metrics and API health indicators',
+								'CloudAgents grid and list with filter system (Type, Usage, Sort, Availability, Status, Category)',
+								'Agent detail with sync activity chart and status breakdowns',
+								'Agent field configuration modal (multilingual FR/EN/PT, per-field type and validation)',
+								'Support section in card and list view with per-account sync history drill-down',
+								'Statistics multi-layer area chart with agent selection',
+								'Permission configuration (users, teams, API clients, certificate management)',
+								'Profile and dark/light theme toggle',
+							],
+						},
+						{
+							heading: 'Webview',
+							items: [
+								'Embeddable credential form — clients embed in their own products',
+								'White-label — field labels, placeholders, validation configurable per integration',
+							],
+						},
+						{
+							heading: 'Branding',
+							items: [
+								'SCA logo and visual identity — distinct within the Securibox product family',
+								'Brand guidelines applied across BackOffice, Webview, and landing page',
+								'Landing page concept and design — product introduction for developers and operators',
+							],
+						},
+					],
+					tradeoffsLearnings: [
+						'The BackOffice was designed to support the configuration and management of agents. Each section is internally coherent, while the relationships between them remain intentionally implicit.',
+						'Some connections are naturally discoverable. *CloudAgents* and *Statistiques*, for example, are tightly linked — users can move from an individual agent to its statistics in an isolated view, and back again. *Support* operates at the account level, and the transition between support and account management is straightforward enough that it doesn\'t require explicit linking.',
+						'This structure reflects how the product was originally built. Over time, though, it could evolve to better align with how it\'s actually used — shifting the BackOffice toward a support-first workflow as the primary entry point, with agent configuration and permissions becoming secondary paths.',
+					],
 				},
 			},
 			{
