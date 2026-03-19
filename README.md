@@ -1,7 +1,6 @@
-# mariavaragilal.github.io
-
-This repository contains a responsive, accessible personal CV website built with Gatsby, React, and Tailwind CSS. It presents professional information — summary, experience, education, skills and contact — in a clean, printable layout that is easy to update and deploy.
-
+# Maria Varagilal
+ 
+Personal portfolio and CV — Senior Technical Product Designer that ships code. Built with Gatsby, React, and Tailwind CSS. Presents 10+ years of B2B SaaS product work through detailed case studies, a design methodology (the MVP Method), and a full CV.
 ## ✨ Features
 
 - **Responsive Design** - Optimized for desktop, tablet, and mobile devices
