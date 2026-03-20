@@ -17,7 +17,7 @@ const Seo = ({ title, description }) => {
 			<html lang='en' />
 			<meta charset='UTF-8' />
 			<meta name='viewport' content='width=device-width, initial-scale=1.0' />
-			<meta httpEquiv='Content-Security-Policy' content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com; img-src 'self' data: https:; connect-src 'self';" />
+			<meta httpEquiv='Content-Security-Policy' content={'default-src \'self\'; script-src \'self\' \'unsafe-inline\' \'unsafe-eval\' https://www.googletagmanager.com; style-src \'self\' \'unsafe-inline\' https://fonts.googleapis.com; font-src \'self\' https://fonts.gstatic.com https://fonts.googleapis.com; img-src \'self\' data: https:; frame-src https://www.googletagmanager.com; connect-src \'self\' https://www.google-analytics.com https://www.googletagmanager.com https://region1.google-analytics.com https://stats.g.doubleclick.net;'}/>
 			<meta itemProp='name' content={siteTitle} />
 			<title>{siteTitle}</title>
 			<meta name='description' content={siteDescription} />
