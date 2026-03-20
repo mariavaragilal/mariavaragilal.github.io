@@ -30,6 +30,7 @@ module.exports = {
 				ignore: ['**/components/**', '**/_common/**', '**/_shared/**', '**/index/index.js'],
 			},
 		},
+		'gatsby-plugin-react-helmet',
 		'gatsby-plugin-image',
 		'gatsby-plugin-sharp',
 		'gatsby-transformer-sharp',
@@ -82,14 +83,6 @@ module.exports = {
 			},
 		},
 		{
-			resolve: 'gatsby-plugin-robots-txt',
-			options: {
-				host: 'https://mariavaragilal.github.io',
-				sitemap: 'https://mariavaragilal.github.io/sitemap.xml',
-				policy: [{ userAgent: '*', allow: '/' }],
-			},
-		},
-		{
 			resolve: 'gatsby-omni-font-loader',
 			options: {
 				enableListener: true,
@@ -126,15 +119,23 @@ module.exports = {
 				],
 			},
 		},
-		// Enable these heavy file-copying plugins only in production or when explicitly allowed.
-		...(process.env.NODE_ENV === 'production' || process.env.ENABLE_OFFLINE === 'true' ? ['gatsby-plugin-offline'] : []),
 		{
 			resolve: 'gatsby-plugin-sitemap',
 			options: {
-				createLinkInHead: true,
+				createLinkInHead: false,
 				excludes: [],
 			},
 		},
+		{
+			resolve: 'gatsby-plugin-robots-txt',
+			options: {
+				host: 'https://mariavaragilal.github.io',
+				sitemap: 'https://mariavaragilal.github.io/sitemap.xml',
+				policy: [{ userAgent: '*', allow: '/' }],
+			},
+		},
+		// Enable these heavy file-copying plugins only in production or when explicitly allowed.
+		...(process.env.NODE_ENV === 'production' || process.env.ENABLE_OFFLINE === 'true' ? ['gatsby-plugin-offline'] : []),
 		// Bundle analyser only in production when explicitly requested (avoids slow plugin load in dev).
 		...(process.env.NODE_ENV === 'production' && process.env.ANALYZE_BUNDLE === 'true'
 			? [

@@ -24,7 +24,6 @@ const Seo = ({ title, description }) => {
 			<meta name='keywords' content='Maria Varagilal, Principal Product Designer, Frontend Dev, UI, UX, React, Redux, Design Systems, B2B SaaS' />
 			<meta name='author' content='Maria Varagilal' />
 			<meta httpEquiv='X-UA-Compatible' content='IE=edge' />
-			<meta name='google-site-verification' content='r7xo1KhMjSdlYA2KULzXVzTERDUgkiiLQlit_u_2MCk'/>
 
 			{/* Open Graph / Facebook */}
 			<meta property='og:type' content='website' />
@@ -56,6 +55,7 @@ const Seo = ({ title, description }) => {
 			{/* DNS prefetch for external resources */}
 			<link rel='dns-prefetch' href='//fonts.googleapis.com' />
 			<link rel='dns-prefetch' href='//fonts.gstatic.com' />
+			<link rel='sitemap' type='application/xml' href={siteUrl + '/sitemap.xml'}/>
 
 			{/* Structured Data */}
 			<script type='application/ld+json'>{JSON.stringify(personStructuredData, null, 2)}</script>

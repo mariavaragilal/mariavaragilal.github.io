@@ -5,6 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
+const path = require('path');
 const fs = require('fs-extra');
 
 // Ensure plugin target directories exist to avoid EPERM during build.
@@ -20,6 +21,18 @@ exports.onPreBootstrap = async () => {
 			// Non-fatal: write minimal message to stdout for troubleshooting without failing lint
 			process.stdout.write(`Could not ensure directory ${p}: ${e && e.message ? e.message : e}\n`);
 		}
+	}
+};
+
+// gatsby-plugin-sitemap emits sitemap-index.xml; copy to sitemap.xml so /sitemap.xml and robots.txt match.
+exports.onPostBuild = async () => {
+	const publicDir = path.join(__dirname, 'public');
+	const indexPath = path.join(publicDir, 'sitemap-index.xml');
+	const legacyPath = path.join(publicDir, 'sitemap.xml');
+	try {
+		if (await fs.pathExists(indexPath)) await fs.copy(indexPath, legacyPath);
+	} catch (e) {
+		process.stdout.write('onPostBuild sitemap copy: ' + (e && e.message ? e.message : e) + '\n');
 	}
 };
 

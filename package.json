@@ -3,18 +3,16 @@
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
+		"ajv": "^8.17.1",
 		"class-variance-authority": "^0.7.1",
 		"clsx": "^2.1.1",
-		"tailwind-merge": "^2.6.0",
-		"ajv": "^8.18.0",
 		"gatsby": "^5.16.1",
 		"gatsby-omni-font-loader": "^2.0.2",
 		"gatsby-plugin-image": "^3.16.0",
 		"gatsby-plugin-manifest": "^5.16.0",
 		"gatsby-plugin-offline": "^6.16.0",
 		"gatsby-plugin-postcss": "^6.16.0",
-		"gatsby-plugin-preload-fonts": "^4.16.0",
-		"gatsby-plugin-purgecss": "^6.2.1",
+		"gatsby-plugin-react-helmet": "^6.16.0",
 		"gatsby-plugin-robots-txt": "^1.8.0",
 		"gatsby-plugin-sass": "^6.16.0",
 		"gatsby-plugin-sharp": "^5.16.0",
@@ -28,8 +26,7 @@
 		"react-helmet": "^6.1.0",
 		"react-i18next": "^16.5.6",
 		"sass": "^1.97.3",
-		"sass-loader": "^16.0.7",
-		"semver": "^7.7.4"
+		"tailwind-merge": "^2.6.0"
 	},
 	"devDependencies": {
 		"@tailwindcss/postcss": "^4.2.1",
