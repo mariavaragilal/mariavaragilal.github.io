@@ -68,18 +68,6 @@ module.exports = {
 				legacy: true,
 				// theme_color_in_manifest: true,
 				// display_override: ['window-controls-overlay'],
-				icons: [
-					{
-						src: 'src/assets/images/avatar.png',
-						sizes: '192x192',
-						type: 'image/png',
-					},
-					{
-						src: 'src/assets/images/avatar.png',
-						sizes: '512x512',
-						type: 'image/png',
-					},
-				],
 			},
 		},
 		{

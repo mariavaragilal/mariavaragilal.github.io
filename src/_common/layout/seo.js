@@ -17,7 +17,7 @@ const Seo = ({ title, description }) => {
 			<html lang='en' />
 			<meta charset='UTF-8' />
 			<meta name='viewport' content='width=device-width, initial-scale=1.0' />
-			<meta httpEquiv='Content-Security-Policy' content={'default-src \'self\'; script-src \'self\' \'unsafe-inline\' \'unsafe-eval\' https://www.googletagmanager.com; style-src \'self\' \'unsafe-inline\' https://fonts.googleapis.com; font-src \'self\' https://fonts.gstatic.com https://fonts.googleapis.com; img-src \'self\' data: https:; frame-src https://www.googletagmanager.com; connect-src \'self\' https://www.google-analytics.com https://www.googletagmanager.com https://region1.google-analytics.com https://stats.g.doubleclick.net;'}/>
+			<meta httpEquiv='Content-Security-Policy' content={'default-src \'self\'; script-src \'self\' \'unsafe-inline\' \'unsafe-eval\' https://www.googletagmanager.com; style-src \'self\' \'unsafe-inline\' https://fonts.googleapis.com; font-src \'self\' https://fonts.gstatic.com https://fonts.googleapis.com; img-src \'self\' data: https:; frame-src https://www.googletagmanager.com; connect-src \'self\' https://www.google-analytics.com https://www.googletagmanager.com https://region1.google-analytics.com https://stats.g.doubleclick.net;'} />
 			<meta itemProp='name' content={siteTitle} />
 			<title>{siteTitle}</title>
 			<meta name='description' content={siteDescription} />
@@ -30,18 +30,14 @@ const Seo = ({ title, description }) => {
 			<meta property='og:url' content={siteUrl} />
 			<meta property='og:title' content={siteTitle} />
 			<meta property='og:description' content={siteDescription} />
-			<meta property='og:image' content={siteUrl + '/src/assets/images/avatar.png'} />
+			<meta property='og:image' content={siteUrl + '/avatar.png'} />
 
 			{/* Twitter */}
 			<meta name='twitter:card' content='summary_large_image' />
 			<meta name='twitter:url' content={siteUrl} />
 			<meta name='twitter:title' content={siteTitle} />
 			<meta name='twitter:description' content={siteDescription} />
-			<meta name='twitter:image' content={siteUrl + '/src/assets/images/avatar.png'} />
-
-			{/* Favicon — Gatsby manifest copies avatar to public */}
-			<link rel='icon' type='image/png' href='/src/assets/images/avatar.png' />
-			<link rel='apple-touch-icon' href='/src/assets/images/avatar.png' />
+			<meta name='twitter:image' content={siteUrl + '/avatar.png'} />
 
 			{/* Critical CSS for above-the-fold content */}
 			<style dangerouslySetInnerHTML={{ __html: criticalCss }} />
@@ -50,12 +46,13 @@ const Seo = ({ title, description }) => {
 			<link rel='preload' href='https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap' as='style' onLoad={'this.onload=null;this.rel=' + "'stylesheet'"} />
 			<link rel='preconnect' href='https://fonts.googleapis.com' />
 			<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
-			<link rel='preload' href='/src/assets/images/avatar.png' as='image' />
+			{/* Same asset as src/assets/images/avatar.png — static/avatar.png copies to site root on build */}
+			<link rel='preload' href='/avatar.png' as='image' />
 
 			{/* DNS prefetch for external resources */}
 			<link rel='dns-prefetch' href='//fonts.googleapis.com' />
 			<link rel='dns-prefetch' href='//fonts.gstatic.com' />
-			<link rel='sitemap' type='application/xml' href={siteUrl + '/sitemap.xml'}/>
+			<link rel='sitemap' type='application/xml' href={siteUrl + '/sitemap.xml'} />
 
 			{/* Structured Data */}
 			<script type='application/ld+json'>{JSON.stringify(personStructuredData, null, 2)}</script>

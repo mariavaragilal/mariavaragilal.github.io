@@ -7,7 +7,7 @@ export const person = {
 	jobTitle: 'Technical Product Designer & Frontend Development',
 	description: 'Principal Technical Product Designer who ships code. 10+ years delivering digital products from concept to production. Skilled in design systems, product strategy, React, Redux, and frontend implementation.',
 	url: 'https://mariavaragilal.github.io',
-	image: 'https://mariavaragilal.github.io/images/avatar.png',
+	image: 'https://mariavaragilal.github.io/avatar.png',
 	sameAs: ['https://www.linkedin.com/in/mariavaragilal', 'https://codepen.io/mariavaragilal', 'https://dribbble.com/mariavaragilal', 'https://be.net/mariavaragilal'],
 	address: { locality: 'Lisbon', country: 'Portugal' },
 	knowsAbout: ['User Experience Design', 'User Interface Design', 'Product Design', 'React', 'Redux', 'JavaScript (ES6+)', 'Design Systems', 'Frontend Development', 'AI-Augmented', 'LLM prompting'],
