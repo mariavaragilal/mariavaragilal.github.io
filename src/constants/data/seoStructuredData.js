@@ -57,6 +57,8 @@ export const buildKeyMetricsStructuredData = (mv) => ({
 	'@type': 'Dataset',
 	name: mv.intro.metricsAriaLabel + ' — ' + mv.method.heading,
 	description: mv.workSection.p1,
+	url: person.url + '/',
+	license: person.url + '/license.txt',
 	creator: { '@type': 'Person', name: person.name },
 	variableMeasured: mv.keyMetrics.map((m) => ({ '@type': 'PropertyValue', name: m.label + ' — ' + m.ctx, value: m.value })),
 });
