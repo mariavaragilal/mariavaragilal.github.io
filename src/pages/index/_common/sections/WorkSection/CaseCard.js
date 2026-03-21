@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
+import { useTranslation } from 'react-i18next';
 import { Badge, Button, Card, CardAction, CardDescription, CardHeader, CardTitle } from '../../../../../_common/components';
 import { focusRing } from '../../../../../constants/utils/a11y';
 
@@ -14,7 +15,9 @@ const defaultIcon = (showRotated, iconChar, iconClassName, prefersReducedMotion)
 	>{iconChar}</motion.span>
 );
 
-export const CaseCard = ({ app, isSelected, onToggle, href, icon, iconChar = '+', iconClassName = DEFAULT_ICON_CLASSNAME, as, id }) => {
+export const CaseCard = ({ app, isSelected, onToggle, href, icon, iconChar = '+', iconClassName = DEFAULT_ICON_CLASSNAME, as: _as, id }) => {
+	const { t } = useTranslation();
+	const ui = t('mv.caseUi', { returnObjects: true }) || {};
 	const [isHovered, setIsHovered] = useState(false);
 	const [prefersReducedMotion, setPrefersReducedMotion] = useState(() => (typeof window !== 'undefined' ? window.matchMedia('(prefers-reduced-motion: reduce)').matches : true));
 	useEffect(() => {
@@ -40,14 +43,15 @@ export const CaseCard = ({ app, isSelected, onToggle, href, icon, iconChar = '+'
 			</a>
 		)
 	) : null;
+	const cardAria = app.title + ' — ' + (isSelected ? ui.cardAriaOpen : ui.cardAriaClosed);
 	return isLink ? (
 		<Card as='a' href={href} target='_blank' rel='noopener noreferrer' variant='default' className={cardClass} id={id}>
 			<CardHeader className='flex gap-1' headerPadding='p-0'>
 				<span className='text-lg font-medium flex flex-wrap items-center gap-2.5'>
 					{app.status === 'shipped' ? (
-						<Badge variant='secondary' size='sm' className=' tracking-[0.06em] uppercase'>shipped</Badge>
+						<Badge variant='secondary' size='sm' className=' tracking-[0.06em] uppercase'>{ui.shipped}</Badge>
 					) : (
-						<Badge variant='outline' size='sm' className=' tracking-[0.06em] uppercase'>concept</Badge>
+						<Badge variant='outline' size='sm' className=' tracking-[0.06em] uppercase'>{ui.concept}</Badge>
 					)}
 					<CardTitle className='font-mono text-xl text-primary w-full'>{app.title}</CardTitle>
 				</span>
@@ -68,13 +72,13 @@ export const CaseCard = ({ app, isSelected, onToggle, href, icon, iconChar = '+'
 			</CardHeader>
 		</Card>
 	) : (
-		<Card as='button' type='button' variant='default' onClick={onToggle} className={cardClass} id={id} aria-expanded={isSelected} aria-label={app.title + ' — ' + (isSelected ? 'Showing full case study, click to close' : 'Click to view full case study details')}>
+		<Card as='button' type='button' variant='default' onClick={onToggle} className={cardClass} id={id} aria-expanded={isSelected} aria-label={cardAria}>
 			<CardHeader className='flex gap-1' headerPadding='p-0'>
 				<span className='text-lg font-medium flex flex-wrap items-center gap-2.5'>
 					{app.status === 'shipped' ? (
-						<Badge variant='secondary' size='sm' className=' tracking-[0.06em] uppercase'>shipped</Badge>
+						<Badge variant='secondary' size='sm' className=' tracking-[0.06em] uppercase'>{ui.shipped}</Badge>
 					) : (
-						<Badge variant='outline' size='sm' className=' tracking-[0.06em] uppercase'>concept</Badge>
+						<Badge variant='outline' size='sm' className=' tracking-[0.06em] uppercase'>{ui.concept}</Badge>
 					)}
 					<CardTitle className='font-mono text-xl text-primary w-full'>{app.title}</CardTitle>
 				</span>

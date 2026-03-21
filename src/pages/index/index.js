@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 
 // _Common	
 import Layout from '../../_common/layout';
@@ -8,7 +9,7 @@ import { ScrollToTop } from '../_common/ScrollToTop';
 import { srOnly } from '../../constants/utils/a11y';
 
 // Components
-import { StickyNav, SECTIONS } from './_common/StickyNav';
+import { StickyNav } from './_common/StickyNav';
 import { IntroSection } from './_common/sections/IntroSection';
 import { MethodSection } from './_common/sections/MethodSection';
 import { WorkSection } from './_common/sections/WorkSection';
@@ -16,13 +17,19 @@ import { ContactSection } from './_common/sections/ContactSection';
 import { FooterSection } from './_common/sections/FooterSection';
 
 const IndexPage = () => {
-	const [expandedPillar, setExpandedPillar] = useState({});
+	const { t } = useTranslation();
+	const stickyNav = useMemo(() => {
+		const raw = t('mv.stickyNav', { returnObjects: true });
+		return raw && typeof raw === 'object' ? raw : { sections: [] };
+	}, [t]);
+	const navSections = stickyNav.sections || [];
+	const [expandedDimension, setExpandedDimension] = useState({});
 	const [showScrollTop, setShowScrollTop] = useState(false);
 	const [activeSection, setActiveSection] = useState(null);
 	const [navOpen, setNavOpen] = useState(false);
 	const [isScrolled, setIsScrolled] = useState(false);
 
-	const togglePillarDetail = (index) => setExpandedPillar((prev) => ({ ...prev, [index]: !prev[index] }));
+	const toggleDimensionDetail = (index) => setExpandedDimension((prev) => ({ ...prev, [index]: !prev[index] }));
 
 	const scrollToWork = (e) => {
 		e.preventDefault();
@@ -81,10 +88,10 @@ const IndexPage = () => {
 		const onScroll = () => {
 			const threshold = 120;
 			let current = null;
-			for (let i = SECTIONS.length - 1; i >= 0; i--) {
-				const el = document.getElementById(SECTIONS[i].id);
+			for (let i = navSections.length - 1; i >= 0; i--) {
+				const el = document.getElementById(navSections[i].id);
 				if (el && el.getBoundingClientRect().top <= threshold) {
-					current = SECTIONS[i].id;
+					current = navSections[i].id;
 					break;
 				}
 			}
@@ -93,20 +100,21 @@ const IndexPage = () => {
 		onScroll();
 		window.addEventListener('scroll', onScroll, { passive: true });
 		return () => window.removeEventListener('scroll', onScroll);
-	}, []);
+	// eslint-disable-next-line react-hooks/exhaustive-deps -- nav tracks stickyNav.sections via locale
+	}, [stickyNav]);
 
 	return (
-		<Layout title={null} description='Technical Product Designer that ships code exploring AI & LLM — prompting for agent interfaces.' className='text-foreground'>
-			<a href='#main-content' className={srOnly + ' focus:static focus:w-auto focus:h-auto focus:p-3 focus:m-0 focus:overflow-visible focus:whitespace-normal focus:bg-primary focus:text-primary-foreground z-50'}>Skip to main content</a>
-			<StickyNav showScrollTop={showScrollTop} isScrolled={isScrolled} activeSection={activeSection} onScrollToSection={scrollToSection} navOpen={navOpen} setNavOpen={setNavOpen} />
-			<IntroSection onScrollToWork={scrollToWork} />
+		<Layout title={null} description={t('home.description')} className='text-foreground'>
+			<a href='#main-content' className={srOnly + ' focus:static focus:w-auto focus:h-auto focus:p-3 focus:m-0 focus:overflow-visible focus:whitespace-normal focus:bg-primary focus:text-primary-foreground z-50'}>{t('home.skipToMain')}</a>
+			<StickyNav showScrollTop={showScrollTop} isScrolled={isScrolled} activeSection={activeSection} onScrollToSection={scrollToSection} navOpen={navOpen} setNavOpen={setNavOpen} stickyNav={stickyNav}/>
+			<IntroSection onScrollToWork={scrollToWork}/>
 			<main className='flex flex-col bg-background text-foreground' id='main-content'>
-				<MethodSection expandedPillar={expandedPillar} togglePillarDetail={togglePillarDetail} />
-				<WorkSection />
-				<ContactSection />
+				<MethodSection expandedDimension={expandedDimension} toggleDimensionDetail={toggleDimensionDetail}/>
+				<WorkSection/>
+				<ContactSection/>
 			</main>
-			<ScrollToTop visible={showScrollTop} />
-			<FooterSection />
+			<ScrollToTop visible={showScrollTop}/>
+			<FooterSection/>
 		</Layout>
 	);
 };

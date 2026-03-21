@@ -10,8 +10,8 @@ const gtmInlineScript = '(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({\'gtm.sta
  */
 export const onRenderBody = ({ setHeadComponents, setPreBodyComponents }) => {
 	setHeadComponents([
-		<script key='gtm' dangerouslySetInnerHTML={{ __html: gtmInlineScript }}/>,
-		<meta key='google-site-verification' name='google-site-verification' content={GOOGLE_SITE_VERIFICATION_CONTENT}/>,
+		<script key='gtm' dangerouslySetInnerHTML={{ __html: gtmInlineScript }} />,
+		<meta key='google-site-verification' name='google-site-verification' content={GOOGLE_SITE_VERIFICATION_CONTENT} />,
 	]);
-	setPreBodyComponents([<noscript key='gtm-noscript'><iframe src={'https://www.googletagmanager.com/ns.html?id=' + GTM_CONTAINER_ID} height='0' width='0' style={{ display: 'none', visibility: 'hidden' }} title='Google Tag Manager'/></noscript>]);
+	setPreBodyComponents([<noscript key='gtm-noscript'><iframe src={'https://www.googletagmanager.com/ns.html?id=' + GTM_CONTAINER_ID} height='0' width='0' style={{ display: 'none', visibility: 'hidden' }} title='Google Tag Manager' /></noscript>]);
 };

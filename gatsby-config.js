@@ -66,8 +66,6 @@ module.exports = {
 				cache_busting_mode: 'query',
 				include_favicon: true,
 				legacy: true,
-				// theme_color_in_manifest: true,
-				// display_override: ['window-controls-overlay'],
 			},
 		},
 		{

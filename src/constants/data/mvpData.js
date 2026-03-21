@@ -23,164 +23,18 @@ export const person = {
 	],
 };
 
-export const keyMetrics = [
-	{ value: '9', label: 'Digital products', ctx: 'designed & shipped' },
-	{ value: '5+', label: 'Platforms unified', ctx: 'single experience' },
-	{ value: '4+', label: 'B2B SaaS', ctx: 'complex workflows' },
-	{ value: '10+', label: 'Years', ctx: 'experience' },
-];
-
+// Landing copy (method, dimensions, outcomes, evolution, keyMetrics, work cases) lives in
+// src/constants/i18n/locales/mv.en.json — edit that file directly.
 
 // ─────────────────────────────────────────────────────────────────────────────
-// MVP Method
-// ─────────────────────────────────────────────────────────────────────────────
-
-export const method = {
-	label: 'My playbook',
-	heading: 'The MVP Method',
-	subtitle: 'Maria Varagilal Playbook',
-	intro: {
-		column1: 'Growth creates complexity. When a single product becomes a platform of interconnected solutions, the biggest risk is losing the feeling of one company.',
-		column2: 'The MVP Method is the approach I\'ve developed and refined throughout my career — translating the philosophy behind my work into a repeatable practice. Applied across strategy, design, implementation, and rollout — not just documentation — it protects the original vision as products evolve.',
-	},
-};
-
-// ─────────────────────────────────────────────────────────────────────────────
-// MVP Method — pillars
-//
-// summary = the pitch (card view, overview)
-// detail  = what you learn when you expand (new information, never restates summary)
-// ─────────────────────────────────────────────────────────────────────────────
-
-export const pillars = [
-	{
-		num: '01',
-		title: 'Brand & Experience Audit',
-		icon: '◎',
-		groundedIn: ['Cohesion'],
-		summary:
-			'Map every touchpoint — portals, mobile, emails, onboarding, internal tools. Score visual and UX consistency and surface fragmentation risks before they cost clients.',
-		philosophy: {
-			principle: 'Cohesion Before Creation',
-			ask: 'Why start here?',
-			answer:
-				'Before any line is drawn or code is written, the most important work is seeing the problem clearly. Mapping every touchpoint creates the real picture — who the user actually is, what they\'re trying to achieve, and where the experience is quietly breaking down.',
-			checkpoint:
-				'If the problem isn\'t clear, nothing built on top of it will be.',
-		},
-		detail: [
-			'Each touchpoint is scored for visual consistency, UX coherence, and accessibility. Treat the entire ecosystem as one experience — not a collection of products. Fragmentation risks surface here before they cost clients.',
-		],
-	},
-	{
-		num: '02',
-		title: 'Unified Brand Principles',
-		icon: '◆',
-		groundedIn: ['Boundaries'],
-		summary:
-			'Distill company vision into 4–6 actionable principles every designer, developer, and stakeholder can reference instantly.',
-		philosophy: {
-			principle: 'Boundaries',
-			ask: 'How do you protect the vision?',
-			answer:
-				'Modern product development is full of subtle distractions: new APIs, visual flourishes, technologies added simply because they\'re possible. Intentional boundaries remind teams what truly matters. If it doesn\'t serve the committed problem, it doesn\'t ship now.',
-			checkpoint:
-				'Every \'yes\' to a distraction is an invisible \'no\' to the vision.',
-		},
-		detail: [
-			'Principles are not documentation — they\'re decision-making tools. When a designer, developer, or stakeholder faces a trade-off, the principles answer the question before a meeting is needed.',
-		],
-	},
-	{
-		num: '03',
-		title: 'Priority & Flow Architecture',
-		icon: '⬡',
-		groundedIn: ['Priority'],
-		summary:
-			'A 2×2 matrix (Business Value vs. User Friction) decides what gets unified first. High Value + High Friction ships first — shared auth, core navigation, document viewer. Low-friction items come later.',
-		philosophy: {
-			principle: 'Priority & Threshold',
-			ask: 'When is enough enough?',
-			answer:
-				'The MVP line is an act of discipline, not compromise. The 2×2 matrix makes priorities visible and shared: what must launch now, and what can wait without weakening the core.',
-			checkpoint:
-				'The product tells you what to refine — the backlog never will.',
-		},
-		detail: [
-			'The matrix turns prioritisation into a shared, visible decision — not a political one. High Value + High Friction ships first. Low-friction items queue without blocking momentum.',
-		],
-	},
-	{
-		num: '04',
-		title: 'Design-Language Implementation',
-		icon: '◈',
-		groundedIn: ['Priority', 'Boundaries'],
-		summary:
-			'The design language flows from strategy into production. Instead of documentation alone, I bridge design and implementation so it reaches the product — teams get something they can ship, not just specifications.',
-		philosophy: {
-			principle: 'Cohesion Before Creation',
-			ask: 'Why bridge design and code?',
-			answer:
-				'A design system only works if it lives in the product. When it drifts from what is shipped, it becomes shelfware — and the fragmentation starts again.',
-			checkpoint:
-				'Tokens validated in production, not just approved in Figma.',
-		},
-		detail: [
-			'Tokens, components, and patterns are validated in production — not just approved in Figma. The gap between what was designed and what launched closes to zero.',
-		],
-	},
-	{
-		num: '05',
-		title: 'Continuous Alignment & Measurement',
-		icon: '↻',
-		groundedIn: ['Cohesion', 'Boundaries'],
-		summary:
-			'Ongoing loop that keeps strategy, execution, and outcomes moving in the same direction so the unified brand stays alive.',
-		philosophy: {
-			principle: 'Evolution',
-			ask: 'How does it stay honest?',
-			answer:
-				'Each commitment evolves through the same cycle: build within boundaries, launch at the MVP line, test with real users, refine while protecting the lens.',
-			checkpoint:
-				'Declaring \'done\' creates the space to learn.',
-		},
-		detail: [
-			'Measurement is built into the loop — not added after. Cohesion scores are re-run after each major release. New contributors and features are potential drift points the loop catches.',
-		],
-	},
-];
-
-
-// ─────────────────────────────────────────────────────────────────────────────
-// Outcomes — when the pillars operate together
-// ─────────────────────────────────────────────────────────────────────────────
-
-export const outcomes = [
-	{
-		principle: 'Clarity',
-		drivenBy: 'Pillar 1 + Pillar 3',
-		protects: 'Seeing only what truly matters — stripping noise before it compounds'
-	},
-	{
-		principle: 'Confidence',
-		drivenBy: 'Pillar 4',
-		protects: 'Decisions made once, launched, and trusted — no second-guessing in production'
-	},
-	{
-		principle: 'Consistency',
-		drivenBy: 'Pillar 2 + Pillar 5',
-		protects: 'A unified experience that evolves without losing its identity'
-	},
-];
-// ─────────────────────────────────────────────────────────────────────────────
-// Philosophy — manifest commitments
+// Philosophy — MVP Method (three commitments: cohesion, priority, boundaries)
 //
 // Markup convention: {{bold:text}} marks inline emphasis.
 // Render helper: str.split(/(\{\{bold:.*?\}\})/g) then match {{bold:(.+)}}
 // to wrap in <strong> — keeps data free of JSX.
 // ─────────────────────────────────────────────────────────────────────────────
 
-export const manifest = [
+export const method = [
 	{
 		num: '01',
 		title: 'Cohesion Before Creation',
@@ -229,22 +83,6 @@ export const manifest = [
 		whyItMatters: 'Every \'yes\' to a distraction is an invisible \'no\' to the vision.'
 	},
 ];
-
-// ─────────────────────────────────────────────────────────────────────────────
-// Evolution loop
-// ─────────────────────────────────────────────────────────────────────────────
-
-export const evolution = {
-	intro: 'Each commitment describes how it evolves, but the underlying cycle is the same across all three — the steady learning loop that keeps the vision honest.',
-	loop: [
-		{ step: 'Build', desc: 'Create within defined boundaries', pillar: 'Pillar 4' },
-		{ step: 'Launch', desc: 'Reach the MVP line and release', pillar: 'Pillar 3' },
-		{ step: 'Test', desc: 'Learn from real users and real data', pillar: 'Pillar 5' },
-		{ step: 'Refine', desc: 'Iterate while protecting the vision', pillar: 'Pillar 1 + Pillar 2' },
-	],
-	closing: 'Each pass through the loop sharpens the product and deepens understanding. The role of leadership is to protect clarity, confidence, and consistency — so the team can release, learn, and move forward with purpose.',
-	whyItMatters: 'Declaring Done creates the space to learn. Learning keeps the vision honest. The cycle builds quiet, compounding advantage that no single feature sprint can replicate.',
-};
 
 // ─────────────────────────────────────────────────────────────────────────────
 // AI & LLM exploration

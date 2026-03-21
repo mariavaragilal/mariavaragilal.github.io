@@ -14,9 +14,9 @@ const Layout = ({ children, title, description, showWork, className, ...others }
 	const wrapperClass = 'flex flex-col font-dm-sans ' + (isLandingPage ? 'gap-0 p-0 bg-max-w-5xl lg:max-w-full m-auto shadow-lg rounded-lg relative w-full bg-secondary text-foreground text-foreground text-foreground' : 'gap-2 bg-secondary p-2 text-foreground');
 	return (
 		<React.Fragment>
-			<Seo title={title} description={description}/>
-			<ThemeProvider>
-				<I18nextProvider i18n={i18n}>
+			<I18nextProvider i18n={i18n}>
+				<Seo title={title} description={description}/>
+				<ThemeProvider>
 					<ErrorBoundary>
 						<div className={wrapperClass} data-print-root {...others}>
 							<LayoutHeader pathname={pathname} isLandingPage={isLandingPage}/>
@@ -25,8 +25,8 @@ const Layout = ({ children, title, description, showWork, className, ...others }
 							</LayoutMain>
 						</div>
 					</ErrorBoundary>
-				</I18nextProvider>
-			</ThemeProvider>
+				</ThemeProvider>
+			</I18nextProvider>
 		</React.Fragment>
 	);
 };

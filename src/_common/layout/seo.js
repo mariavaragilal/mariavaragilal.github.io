@@ -1,12 +1,21 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { personStructuredData, websiteStructuredData, mvpPillarsStructuredData, principlesStructuredData, keyMetricsStructuredData } from '../../constants/data/seoStructuredData';
+import { useTranslation } from 'react-i18next';
+import { personStructuredData, buildWebsiteStructuredData, buildMvpDimensionsStructuredData, buildPrinciplesStructuredData, buildKeyMetricsStructuredData } from '../../constants/data/seoStructuredData';
 import { generatePortfolioStructuredData } from '../../constants/utils/structuredData';
-import { workCases } from '../../constants/data/cases';
+import mvEn from '../../constants/i18n/locales/mv.en.json';
 
 const Seo = ({ title, description }) => {
-	const portfolioJsonLd = generatePortfolioStructuredData(workCases);
+	const { i18n } = useTranslation();
+	const bundle = i18n.getResourceBundle(i18n.language, 'translation');
+	const mv = bundle.mv || mvEn;
+	const htmlLang = i18n.language.indexOf('pt') === 0 ? 'pt' : 'en';
+	const websiteStructuredData = buildWebsiteStructuredData(mv);
+	const mvpDimensionsStructuredData = buildMvpDimensionsStructuredData(mv);
+	const principlesStructuredData = buildPrinciplesStructuredData(mv);
+	const keyMetricsStructuredData = buildKeyMetricsStructuredData(mv);
+	const portfolioJsonLd = generatePortfolioStructuredData(mv.workCases, mv);
 	const siteTitle = title !== null ? 'Maria Varagilal: ' + (title || 'CV') : 'Maria Varagilal';
 	const siteDescription = description || 'Principal-level Product Designer who ships code. 10+ years unifying fragmented SaaS platforms. UI/UX · React · Redux · Design Systems';
 	const siteUrl = 'https://mariavaragilal.github.io';
@@ -14,7 +23,7 @@ const Seo = ({ title, description }) => {
 
 	return (
 		<Helmet>
-			<html lang='en' />
+			<html lang={htmlLang} />
 			<meta charset='UTF-8' />
 			<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 			<meta httpEquiv='Content-Security-Policy' content={'default-src \'self\'; script-src \'self\' \'unsafe-inline\' \'unsafe-eval\' https://www.googletagmanager.com; style-src \'self\' \'unsafe-inline\' https://fonts.googleapis.com; font-src \'self\' https://fonts.gstatic.com https://fonts.googleapis.com; img-src \'self\' data: https:; frame-src https://www.googletagmanager.com; connect-src \'self\' https://www.google-analytics.com https://www.googletagmanager.com https://region1.google-analytics.com https://stats.g.doubleclick.net;'} />
@@ -57,7 +66,7 @@ const Seo = ({ title, description }) => {
 			{/* Structured Data */}
 			<script type='application/ld+json'>{JSON.stringify(personStructuredData, null, 2)}</script>
 			<script type='application/ld+json'>{JSON.stringify(websiteStructuredData, null, 2)}</script>
-			<script type='application/ld+json'>{JSON.stringify(mvpPillarsStructuredData, null, 2)}</script>
+			<script type='application/ld+json'>{JSON.stringify(mvpDimensionsStructuredData, null, 2)}</script>
 			<script type='application/ld+json'>{JSON.stringify(principlesStructuredData, null, 2)}</script>
 			<script type='application/ld+json'>{JSON.stringify(keyMetricsStructuredData, null, 2)}</script>
 			<script type='application/ld+json'>{JSON.stringify(portfolioJsonLd, null, 2)}</script>

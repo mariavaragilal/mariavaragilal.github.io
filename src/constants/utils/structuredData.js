@@ -20,7 +20,8 @@ export const findCaseByHash = (cases, hash) => {
 	const slug = hash.replace('#', '');
 	for (const [groupName, group] of Object.entries(cases)) {
 		for (const app of group.cases) {
-			if (toSlug(app.title) === slug) return { groupName, app };
+			const appSlug = app.slug || toSlug(app.title);
+			if (appSlug === slug) return { groupName, app };
 		}
 	}
 	return null;
@@ -57,7 +58,7 @@ const buildKeywords = (app) => {
 };
 
 const buildCreativeWork = (app, groupName) => {
-	const slug = toSlug(app.title);
+	const slug = app.slug || toSlug(app.title);
 	const url = BASE_URL + '/#' + slug;
 	const work = {
 		'@type': 'CreativeWork',
@@ -81,18 +82,26 @@ const buildCreativeWork = (app, groupName) => {
 	return work;
 };
 
-export const generatePortfolioStructuredData = (cases) => {
+const defaultPersonBlurb = '10+ years turning SaaS products into unified platforms — designing the system, writing the code, protecting the vision as products scale.';
+const defaultPortfolioName = 'Maria Varagilal — Portfolio';
+const defaultPortfolioDesc = 'Design to Production — brand identity, design systems, and frontend development across B2B SaaS and fintech products.';
+
+export const generatePortfolioStructuredData = (cases, mv) => {
 	const allCases = [];
 	Object.entries(cases).forEach(([groupName, group]) => {
 		group.cases.forEach((app) => allCases.push(buildCreativeWork(app, groupName)));
 	});
+	const workHeading = mv && mv.workSection ? mv.workSection.heading : null;
+	const workP1 = mv && mv.workSection ? mv.workSection.p1 : null;
+	const introBody = mv && mv.intro ? mv.intro.body : null;
+	const personDesc = introBody && introBody.length > 320 ? introBody.slice(0, 317) + '...' : (introBody || defaultPersonBlurb);
 	const personSchema = {
 		'@type': 'Person',
 		'@id': BASE_URL + '/#person',
 		name: person.name,
 		url: BASE_URL,
 		jobTitle: person.jobTitle,
-		description: '10+ years turning SaaS products into unified platforms — designing the system, writing the code, protecting the vision as products scale.',
+		description: personDesc,
 		knowsAbout: ['Product Design', 'UX Design', 'Design Systems', 'Frontend Development', 'React', 'Gatsby', 'JavaScript', 'Accessibility (WCAG)', 'B2B SaaS', 'API Design', 'Brand Identity'],
 		sameAs: person.sameAs,
 		hasOccupation: { '@type': 'Occupation', name: 'Technical Product Designer', occupationLocation: { '@type': 'City', name: 'Lisbon' } },
@@ -102,8 +111,8 @@ export const generatePortfolioStructuredData = (cases) => {
 	const portfolioSchema = {
 		'@type': 'CollectionPage',
 		'@id': BASE_URL + '/#portfolio',
-		name: 'Maria Varagilal — Portfolio',
-		description: 'Design to Production — brand identity, design systems, and frontend development across B2B SaaS and fintech products.',
+		name: workHeading ? person.name + ' — ' + workHeading : defaultPortfolioName,
+		description: workP1 || defaultPortfolioDesc,
 		url: BASE_URL,
 		author: { '@id': BASE_URL + '/#person' },
 		hasPart: allCases.map((c) => ({ '@id': c['@id'] })),

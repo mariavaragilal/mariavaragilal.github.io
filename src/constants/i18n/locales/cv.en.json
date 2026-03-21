@@ -93,8 +93,12 @@
       "date": "July 2013"
     }
   },
+  "home": {
+    "description": "Technical Product Designer that ships code exploring AI & LLM — prompting for agent interfaces.",
+    "skipToMain": "Skip to main content"
+  },
   "about": {
-    "quote": "Do it with passion, or not at all",
+    "quote": "Do it with passion, or not at all.",
     "description1": "Energetic by nature and licensed in Design—during the undergraduate degree the passion for digital took hold. Authentic Workaholic & Perfectionist: nothing is perfect and everything has room for improvement.",
     "description2": "From pixels to production—bridging design and code with JavaScript, modern frameworks, Redux, and clean UI development to turn ideas into full experiences that are thought through, built out, and ready to perform.",
     "skills": {

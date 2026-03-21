@@ -93,8 +93,12 @@
       "date": "Julho 2013"
     }
   },
+  "home": {
+    "description": "Designer de Produto Técnico que entrega código em produção, explorando IA e LLM — com prompts para interfaces de agentes.",
+    "skipToMain": "Saltar para o conteúdo principal"
+  },
   "about": {
-    "quote": "Faz com paixão, ou não faças de todo.",
+    "quote": "Do it with passion, or not at all.",
     "description1": "Energética por natureza e licenciada em Design, foi na licenciatura que surgiu a paixão pelo digital. Autêntica workaholic e perfeccionista: nada é perfeito e tudo tem margem para melhorar.",
     "description2": "Evolução constante — do pixel à produção — fazendo a ponte entre design e código com JavaScript, frameworks modernos, Redux e desenvolvimento de interfaces limpas, transformando ideias em experiências completas, pensadas ao detalhe, implementadas e prontas a ter impacto.",
     "skills": {

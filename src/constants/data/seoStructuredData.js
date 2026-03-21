@@ -1,8 +1,9 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// SEO structured data (derived from person, pillars)
+// SEO structured data (derived from person + active-locale mv bundle from i18n)
+// Callers pass `mv` from i18n.getResourceBundle(lng, 'translation').mv
 // ─────────────────────────────────────────────────────────────────────────────
 
-import { person, pillars, outcomes, keyMetrics } from './mvpData';
+import { person } from './mvpData';
 
 export const personStructuredData = {
 	'@context': 'https://schema.org',
@@ -21,41 +22,41 @@ export const personStructuredData = {
 	award: person.awards.map((a) => ({ '@type': 'Award', name: a.name, description: a.description, datePublished: a.date })),
 };
 
-export const websiteStructuredData = {
+export const buildWebsiteStructuredData = (mv) => ({
 	'@context': 'https://schema.org',
 	'@type': 'WebSite',
 	name: person.name + '—' + person.jobTitle,
-	description: 'CV of Maria Varagilal, Technical Product Designer that ships code',
+	description: mv.intro.title,
 	url: person.url,
 	author: { '@type': 'Person', name: person.name },
 	inLanguage: ['en', 'pt'],
 	copyrightYear: new Date().getFullYear(),
 	publisher: { '@type': 'Person', name: person.name },
-};
+});
 
-export const mvpPillarsStructuredData = {
+export const buildMvpDimensionsStructuredData = (mv) => ({
 	'@context': 'https://schema.org',
 	'@type': 'ItemList',
-	name: 'MVP Method — Five Operational Pillars',
-	description: 'Maria Varagilal Playbook: execution system that operationalises the Manifest (Cohesion, Priority, Boundaries) through five pillars',
-	numberOfItems: pillars.length,
-	itemListElement: pillars.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.title })),
-};
+	name: mv.method.heading + ' — ' + mv.method.label,
+	description: mv.method.subtitle,
+	numberOfItems: mv.dimensions.length,
+	itemListElement: mv.dimensions.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.title })),
+});
 
-export const principlesStructuredData = {
+export const buildPrinciplesStructuredData = (mv) => ({
 	'@context': 'https://schema.org',
 	'@type': 'ItemList',
-	name: 'Three Interlocking Principles',
-	description: 'Outcomes when the Manifest is operationalised through the MVP Method — Clarity, Confidence, Consistency',
-	numberOfItems: outcomes.length,
-	itemListElement: outcomes.map((o, i) => ({ '@type': 'ListItem', position: i + 1, name: o.principle, description: o.protects })),
-};
+	name: mv.methodSection.outcomesHeading,
+	description: mv.methodSection.outcomesLead,
+	numberOfItems: mv.outcomes.length,
+	itemListElement: mv.outcomes.map((o, i) => ({ '@type': 'ListItem', position: i + 1, name: o.principle, description: o.protects })),
+});
 
-export const keyMetricsStructuredData = {
+export const buildKeyMetricsStructuredData = (mv) => ({
 	'@context': 'https://schema.org',
 	'@type': 'Dataset',
-	name: 'Platform Unification Key Metrics',
-	description: 'Outcomes from applying the MVP Method to B2B SaaS platform unification',
+	name: mv.intro.metricsAriaLabel + ' — ' + mv.method.heading,
+	description: mv.workSection.p1,
 	creator: { '@type': 'Person', name: person.name },
-	variableMeasured: keyMetrics.map((m) => ({ '@type': 'PropertyValue', name: m.label + ' — ' + m.ctx, value: m.value })),
-};
+	variableMeasured: mv.keyMetrics.map((m) => ({ '@type': 'PropertyValue', name: m.label + ' — ' + m.ctx, value: m.value })),
+});
