@@ -14,9 +14,13 @@ const CVAboutSection = () => {
 			<div className='flex flex-wrap gap-2'>
 				<Badge variant='secondary'>{t('about.skills.productDesign')}</Badge>
 				<Badge variant='secondary'>{t('about.skills.userInterface')}</Badge>
-				<Badge variant='secondary'>{t('about.skills.userExperience')}</Badge>
 				<Badge variant='secondary'>{t('about.skills.react')}</Badge>
+				<Badge variant='secondary'>{t('about.skills.graphicDesign')}</Badge>
+				<Badge variant='secondary'>{t('about.skills.javaScriptEs6')}</Badge>
 				<Badge variant='secondary'>{t('about.skills.redux')}</Badge>
+				<Badge variant='secondary'>{t('about.skills.frontEnd')}</Badge>
+				<Badge variant='secondary'>{t('about.skills.webDesign')}</Badge>
+				<Badge variant='secondary'>{t('about.skills.aiTools')}</Badge>
 			</div>
 			<p className='text-[.875em] text-current/44 leading-relaxed mt-4 italic'>— {t('cv.note')}</p>
 		</section>

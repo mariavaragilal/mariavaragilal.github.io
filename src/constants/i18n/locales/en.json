@@ -6,8 +6,8 @@
   },
   "cv": {
     "name": "Maria Varagilal",
-    "title": "Senior Product Designer & Frontend Developement",
-    "summary": "Technical Product Designer that ships code with 10+ years of experience delivering digital products from concept to production. Skilled in design systems, UX strategy, and frontend implementation using JavaScript, React, Redux, HTML, and CSS. Passionate about crafting user experiences that are as performant as they are intuitive.",
+    "title": "Senior Technical Product Designer & Frontend Development",
+    "summary": "Technical Product Designer with 10+ years of experience delivering digital products from concept to production. Skilled in design systems, product strategy, and frontend implementation using JavaScript, React, Redux, HTML, and CSS.",
     "note": "Currently using AI to accelerate design-to-code workflows, from component generation and documentation scaffolding to rapid prototyping."
   },
   "nav": {
@@ -16,26 +16,31 @@
     "awards": "awards",
     "experience": "experience"
   },
+  "duration": {
+    "year": "year",
+    "years": "years",
+    "month": "month",
+    "months": "months"
+  },
   "experience": {
     "securibox": {
       "company": "Securibox",
-      "location": "Lisbon Area, Portugal",
+      "location": "Lisbon, Portugal",
       "position": "Head Technical Product Designer",
       "period": "September 2015 - Present",
       "description": [
-        "Shaped product experience, interface design, and end-to-end brand identity creation from concept to production",
-        "Architected product flows and content organization to optimize usability.",
-        "Designed and implemented designs into code: React, Redux, Gatsby, JavaScript, HTML, CSS.",
+        "Shaped product experience, UI design, and end-to-end brand identity.",
+        "Architected product flows and content organization.",
+        "Designed and implemented designs into code using React, Redux, Gatsby, JavaScript, HTML, and CSS.",
         "Built responsive, accessible UIs aligned with design systems.",
-        "Partnered with engineers on API integration and scalable feature delivery across a lean team.",
-        "Drove continuous product improvement across design and frontend.",
-        "Operated in a fast-paced, product-driven environment, balancing design leadership and hands-on coding in a lean team setting.",
-        "Currently using AI to accelerate design-to-code workflows, from component generation and documentation scaffolding to rapid prototyping."
+        "Partnered with engineers on API integration and feature delivery.",
+        "Operated in a fast-paced, product-driven environment, balancing leadership with hands-on coding.",
+        "Used AI to accelerate design-to-code workflows."
       ]
     },
     "youngnetwork": {
       "company": "YoungNetwork Group",
-      "location": "Campo grande, Lisboa, Portugal",
+      "location": "Campo Grande, Lisbon, Portugal",
       "position": "UI/UX Designer",
       "period": "January 2013 - September 2015",
       "description": [
@@ -46,7 +51,7 @@
     },
     "infoportugal": {
       "company": "InfoPortugal S.A.",
-      "location": "Lisboa area, Portugal",
+      "location": "Lisbon, Portugal",
       "position": "Graphic Designer",
       "period": "September 2012 - January 2013",
       "description": [
@@ -56,7 +61,7 @@
     },
     "cofina": {
       "company": "Cofina media",
-      "location": "Lisboa area, Portugal",
+      "location": "Lisbon, Portugal",
       "position": "Intern Designer",
       "period": "July 2012 - August 2012",
       "description": [
@@ -72,7 +77,7 @@
     },
     "academy": {
       "name": "Academia Flag",
-      "degree": "Pós-Graduação, Design Comunicação",
+      "degree": "Specialization, Communication Design",
       "period": "2011 - 2012"
     }
   },
@@ -89,15 +94,19 @@
     }
   },
   "about": {
-    "quote": "Do it with passion, or not at all.",
-    "description1": "Energetic by nature and licensed in Design, it's during the undergraduate degree that the passion for the digital arrived. An authentic Workaholic & Perfectionist, nothing is perfect and everything has room for improvement.",
-    "description2": "Leveling up — from pixels to production — bridging design and code with JavaScript, modern frameworks, Redux, and clean UI development to turn ideas into full experiences that are thought through, built out, and ready to perform.",
+    "quote": "Do it with passion, or not at all",
+    "description1": "Energetic by nature and licensed in Design—during the undergraduate degree the passion for digital took hold. Authentic Workaholic & Perfectionist: nothing is perfect and everything has room for improvement.",
+    "description2": "From pixels to production—bridging design and code with JavaScript, modern frameworks, Redux, and clean UI development to turn ideas into full experiences that are thought through, built out, and ready to perform.",
     "skills": {
-      "productDesign": "SaaS Product Design",
+      "productDesign": "Product Design",
       "userInterface": "User Interface",
-      "userExperience": "User Experience",
       "react": "React",
-      "redux": "Redux"
+      "graphicDesign": "Graphic Design",
+      "javaScriptEs6": "JavaScript (ES6+)",
+      "redux": "Redux",
+      "frontEnd": "FrontEnd",
+      "webDesign": "Web Design",
+      "aiTools": "AI tools"
     }
   },
   "location": "Lisbon"

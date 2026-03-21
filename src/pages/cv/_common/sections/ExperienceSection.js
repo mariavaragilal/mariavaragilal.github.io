@@ -5,6 +5,12 @@ import { Separator } from '../../../../_common/components';
 
 const CVExperienceSection = () => {
 	const { t } = useTranslation();
+	const durationLabels = {
+		year: t('duration.year'),
+		years: t('duration.years'),
+		month: t('duration.month'),
+		months: t('duration.months'),
+	};
 	const renderDescription = (key) => {
 		const items = t(key, { returnObjects: true });
 		if (!Array.isArray(items)) return null;
@@ -22,7 +28,7 @@ const CVExperienceSection = () => {
 							</h3>
 							<p className='text-[1em] text-current/66'>{t('experience.securibox.location')}</p>
 							<p className='text-[1em] text-current/66 mt-2'>{t('experience.securibox.period')}</p>
-							<p className='text-[.875em] text-current/66'>{FORMAT_DURATION('2015-09-01')}</p>
+							<p className='text-[.875em] text-current/66'>{FORMAT_DURATION('2015-09-01', null, durationLabels)}</p>
 						</div>
 						<div className='block'>
 							<h4 className='text-[1.125em] text-foreground mb-2'>{t('experience.securibox.position')}</h4>
@@ -38,7 +44,7 @@ const CVExperienceSection = () => {
 						</h3>
 						<p className='text-[1em] text-current/66'>{t('experience.youngnetwork.location')}</p>
 						<p className='text-[1em] text-current/66 mt-2'>{t('experience.youngnetwork.period')}</p>
-						<p className='text-[.875em] text-current/66'>{FORMAT_DURATION('2013-01-01', '2015-09-01')}</p>
+						<p className='text-[.875em] text-current/66'>{FORMAT_DURATION('2013-01-01', '2015-09-01', durationLabels)}</p>
 					</div>
 					<div>
 						<h4 className='text-[1.125em] text-foreground mb-2'>{t('experience.youngnetwork.position')}</h4>
@@ -53,7 +59,7 @@ const CVExperienceSection = () => {
 						</h3>
 						<p className='text-[1em] text-current/66'>{t('experience.infoportugal.location')}</p>
 						<p className='text-[1em] text-current/66 mt-2'>{t('experience.infoportugal.period')}</p>
-						<p className='text-[.875em] text-current/66'>{FORMAT_DURATION('2012-09-01', '2013-01-01')}</p>
+						<p className='text-[.875em] text-current/66'>{FORMAT_DURATION('2012-09-01', '2013-01-01', durationLabels)}</p>
 					</div>
 					<div>
 						<h4 className='text-[1.125em] text-foreground mb-2'>{t('experience.infoportugal.position')}</h4>
@@ -66,7 +72,7 @@ const CVExperienceSection = () => {
 						<h3 className='text-[1.25em] text-foreground font-bold'>{t('experience.cofina.company')}</h3>
 						<p className='text-[1em] text-current/66'>{t('experience.cofina.location')}</p>
 						<p className='text-[1em] text-current/66 mt-2'>{t('experience.cofina.period')}</p>
-						<p className='text-[.875em] text-current/66'>{FORMAT_DURATION('2012-07-01', '2012-08-01')}</p>
+						<p className='text-[.875em] text-current/66'>{FORMAT_DURATION('2012-07-01', '2012-08-01', durationLabels)}</p>
 					</div>
 					<div>
 						<h4 className='text-[1.125em] text-foreground mb-2'>{t('experience.cofina.position')}</h4>

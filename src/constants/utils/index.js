@@ -48,17 +48,21 @@ export const GET_DURATION = (startDate, endDate = null) => {
 	return { years, months };
 };
 
-// Format duration string
-export const FORMAT_DURATION = (startDate, endDate = null) => {
+// Format duration string. Optional `labels`: { year, years, month, months } for i18n (defaults to English).
+export const FORMAT_DURATION = (startDate, endDate = null, labels = null) => {
 	const { years, months } = GET_DURATION(startDate, endDate);
+	const ySing = labels ? labels.year : 'year';
+	const yPlural = labels ? labels.years : 'years';
+	const mSing = labels ? labels.month : 'month';
+	const mPlural = labels ? labels.months : 'months';
 
 	if (years === 0) {
-		return months === 1 ? '(1 month)' : '(' + months + ' months)';
+		return months === 1 ? '(1 ' + mSing + ')' : '(' + months + ' ' + mPlural + ')';
 	} else if (months === 0) {
-		return years === 1 ? '(1 year)' : '(' + years + ' years)';
+		return years === 1 ? '(1 ' + ySing + ')' : '(' + years + ' ' + yPlural + ')';
 	} else {
-		const yearText = years === 1 ? 'year' : 'years';
-		const monthText = months === 1 ? 'month' : 'months';
+		const yearText = years === 1 ? ySing : yPlural;
+		const monthText = months === 1 ? mSing : mPlural;
 		return '(' + years + ' ' + yearText + ' ' + months + ' ' + monthText + ')';
 	}
 };

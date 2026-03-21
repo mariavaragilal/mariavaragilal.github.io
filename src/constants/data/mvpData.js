@@ -4,8 +4,8 @@
 
 export const person = {
 	name: 'Maria Varagilal',
-	jobTitle: 'Senior Technical Product Designer',
-	description: 'Principal-level Technical Product Designer who ships code. 10+ years unifying fragmented SaaS platforms into trusted, scalable experiences. Skilled in design systems, UX strategy, React, Redux, and frontend implementation.',
+	jobTitle: 'Technical Product Designer & Frontend Development',
+	description: 'Principal Technical Product Designer who ships code. 10+ years delivering digital products from concept to production. Skilled in design systems, product strategy, React, Redux, and frontend implementation.',
 	url: 'https://mariavaragilal.github.io',
 	image: 'https://mariavaragilal.github.io/images/avatar.png',
 	sameAs: ['https://www.linkedin.com/in/mariavaragilal', 'https://codepen.io/mariavaragilal', 'https://dribbble.com/mariavaragilal', 'https://be.net/mariavaragilal'],
@@ -14,9 +14,9 @@ export const person = {
 	skills: ['UX Design', 'UI Design', 'React', 'Redux', 'JavaScript (ES6+)', 'Design Systems', 'Gatsby'],
 	education: [
 		{ name: 'Universidade Lusíada de Lisboa', description: 'Bachelor\'s Degree in Design' },
-		{ name: 'Academia Flag', description: 'Pós-Graduação in Design Comunicação' },
+		{ name: 'Academia Flag', description: 'Specialization in Communication Design' },
 	],
-	worksFor: { name: 'Securibox', url: 'https://www.securibox.eu', description: 'Senior Technical Product Designer' },
+	worksFor: { name: 'Securibox', url: 'https://www.securibox.eu', description: 'Head Technical Product Designer' },
 	awards: [
 		{ name: 'Bronze cyber', description: 'Young Lions Portugal', date: '2014-05-01' },
 		{ name: 'Web Design Served', description: 'Behance', date: '2013-07-01' },
