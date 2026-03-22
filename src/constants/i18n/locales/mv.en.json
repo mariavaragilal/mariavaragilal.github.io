@@ -1059,6 +1059,7 @@
     "p1": "I design it, I build it. Below is live work — brand identity, design systems, flows, and frontend development I worked on. Technologies include React, Gatsby, Figma, Redux, Bootstrap, AngularJS, and more.",
     "p2Lead": "Brand & identity:",
     "p2": "Logos, visual language, and cohesive experience across ecosystems and products.",
+    "p3": "Each project opens a detailed view — full case study or summary with outcomes — select a card to read it.",
     "designSystemKicker": "Design system — this site",
     "designSystemBody": "Custom component library (50+ components): Built with React, Tailwind v4, theme system, and accessibility in mind.",
     "designSystemComponents": [
@@ -1135,6 +1136,9 @@
     "nextCase": "Next case",
     "cardAriaOpen": "Showing full case study, click to close",
     "cardAriaClosed": "Click to view full case study details",
+    "fullCaseStudy": "Read in full",
+    "summaryOutcomes": "Summary & outcomes",
+    "readDetails": "Read details",
     "caseStudyBlock": {
       "context": "Context",
       "processDefault": "Process",

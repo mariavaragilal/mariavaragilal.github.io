@@ -10,6 +10,7 @@ const VARIANTS = {
 	ghost: 'hover:bg-accent hover:text-accent-foreground',
 	link: 'text-primary underline-offset-4 hover:underline',
 	primary: 'bg-primary text-primary-foreground hover:bg-primary/90',
+	inverse: ' bg-foreground/90 text-background hover:bg-foreground',
 };
 
 const SIZES = {
@@ -19,9 +20,10 @@ const SIZES = {
 	icon: 'size-9',
 	fab: 'size-12 rounded-full',
 	label: 'px-5 py-2.5 text-[.8em] font-medium uppercase tracking-[0.18em]',
+	unset: 'h-auto',
 };
 
-export const Button = ({ variant = 'default', size = 'default', as: Component = 'button', className = '', readOnly, children, ...props }) => {
+export const Button = ({ variant = 'default', size = null, as: Component = 'button', className = '', readOnly, children, ...props }) => {
 	const Comp = Component;
 	const classes = BASE + ' ' + (VARIANTS[variant] || VARIANTS.default) + ' ' + (SIZES[size] || SIZES.default) + ' ' + className;
 	return <Comp className={classes} data-readonly={readOnly} {...props}>{children}</Comp>;

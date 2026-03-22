@@ -42,7 +42,7 @@ export const WorkSection = () => {
 			const el = document.getElementById('case-' + slug);
 			if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 		}, 100);
-	// eslint-disable-next-line react-hooks/exhaustive-deps -- workCases follows i18n.language
+		// eslint-disable-next-line react-hooks/exhaustive-deps -- workCases follows i18n.language
 	}, [i18n.language]);
 
 	const toggleGroup = (groupName) => setExpandedGroup((prev) => (prev === groupName ? null : groupName));
@@ -111,7 +111,7 @@ export const WorkSection = () => {
 						const selectedCase = selectedByGroup[groupName];
 						return (
 							<React.Fragment key={groupName}>
-								<Separator decorative/>
+								<Separator decorative />
 								<AccordionItem className='flex flex-col gap-4' isExpanded={isExpanded} onToggle={() => toggleGroup(groupName)}>
 									<AccordionTrigger icon='plus' gridCols='md:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)_1.6rem] items-start' triggerPadding='p-0'>
 										<div className='flex flex-col'>
@@ -123,13 +123,13 @@ export const WorkSection = () => {
 										</div>
 									</AccordionTrigger>
 									<AccordionContent animate={false} ariaLabel={groupName + ' case studies'}>
-										<div className='px-1 pb-6'>
+										<div className='px-1 pb-6 -mx-3 lg:mx-0'>
 											<div className='grid gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[repeat(auto-fill,minmax(25rem,1fr))]'>
 												{group.cases.flatMap((app) => {
 													const isSelected = selectedCase?.title === app.title;
 													const slug = caseSlug(app);
 													return [
-														<CaseCard key={app.title} id={'case-' + slug} app={app} isSelected={isSelected} onToggle={() => selectCase(groupName, app)} as='h4'/>,
+														<CaseCard key={app.title} id={'case-' + slug} app={app} isSelected={isSelected} onToggle={() => selectCase(groupName, app)} as='h4' />,
 														...(isSelected && selectedCase ? [
 															<CaseDrawer
 																key={app.title + '-detail'}
@@ -151,6 +151,6 @@ export const WorkSection = () => {
 					})}
 				</div>
 			</Card>
-		</React.Fragment>
+		</React.Fragment >
 	);
 };

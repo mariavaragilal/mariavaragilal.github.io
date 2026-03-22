@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
-import { Badge, Button, Card, CardAction, CardDescription, CardHeader, CardTitle } from '../../../../../_common/components';
+import { Badge, Button, Card, CardAction, CardDescription, CardContent, CardHeader, CardTitle } from '../../../../../_common/components';
 import { focusRing } from '../../../../../constants/utils/a11y';
 
 const DEFAULT_ICON_CLASSNAME = 'font-mono font-thin text-xl leading-none';
@@ -28,16 +28,17 @@ export const CaseCard = ({ app, isSelected, onToggle, href, icon, iconChar = '+'
 	}, []);
 	const showRotated = isSelected || isHovered;
 	const resolvedIcon = typeof icon === 'function' ? icon(showRotated) : (icon !== undefined ? icon : defaultIcon(showRotated, iconChar, iconClassName, prefersReducedMotion));
-	const cardClass = 'flex flex-col items-start p-4 w-full cursor-pointer text-left rounded-lg transition-colors ' + (isSelected ? 'border-primary/50 bg-card/75 ring-2 ring-primary/15' : 'border-border hover:bg-card/75') + ' ' + focusRing;
+	const cardClassBase = 'flex flex-col items-start p-4 w-full text-left rounded-lg transition-colors ' + (isSelected ? 'border-primary/50 bg-card/75 ring-2 ring-primary/15' : 'border-border hover:bg-card/75') + ' ' + focusRing;
+	const cardClassLink = cardClassBase + ' cursor-pointer';
 	const isLink = !!href;
 	const hostnameEl = app.references?.links?.[0] ? (
 		isLink ? (
-			<span className='inline-flex items-center gap-1 text-xs text-muted-foreground'>
+			<span className='inline-flex items-center gap-1 font-mono text-[0.65rem] text-current/88'>
 				{new URL(app.references.links[0].url).hostname.replace('www.', '')}
 				<span aria-hidden>↗</span>
 			</span>
 		) : (
-			<a href={app.references.links[0].url} target='_blank' rel='noopener noreferrer' onClick={(e) => e.stopPropagation()} className='inline-flex items-center gap-1 text-xs text-muted-foreground hover: transition-colors'>
+			<a href={app.references.links[0].url} target='_blank' rel='noopener noreferrer' className='inline-flex items-center gap-1 font-mono text-[0.65rem] text-current/88 underline-offset-2 hover:underline hover:text-current'>
 				{new URL(app.references.links[0].url).hostname.replace('www.', '')}
 				<span aria-hidden>↗</span>
 			</a>
@@ -45,58 +46,69 @@ export const CaseCard = ({ app, isSelected, onToggle, href, icon, iconChar = '+'
 	) : null;
 	const cardAria = app.title + ' — ' + (isSelected ? ui.cardAriaOpen : ui.cardAriaClosed);
 	return isLink ? (
-		<Card as='a' href={href} target='_blank' rel='noopener noreferrer' variant='default' className={cardClass} id={id}>
+		<Card as='a' href={href} target='_blank' rel='noopener noreferrer' variant='default' className={cardClassLink} id={id}>
 			<CardHeader className='flex gap-1' headerPadding='p-0'>
-				<span className='text-lg font-medium flex flex-wrap items-center gap-2.5'>
-					{app.status === 'shipped' ? (
-						<Badge variant='secondary' size='sm' className=' tracking-[0.06em] uppercase'>{ui.shipped}</Badge>
-					) : (
-						<Badge variant='outline' size='sm' className=' tracking-[0.06em] uppercase'>{ui.concept}</Badge>
-					)}
-					<CardTitle className='font-mono text-xl text-primary w-full'>{app.title}</CardTitle>
-				</span>
-				<CardDescription>
-					{app.subtitle}
-				</CardDescription>
-				{(app.tools || hostnameEl) ? (
-					<div className='mt-2 flex flex-col gap-1'>
-						{app.tools ? <span className='block text-xs text-muted-foreground'>{app.tools}</span> : null}
-						{hostnameEl}
-					</div>
-				) : null}
+				<div className='flex flex-col space-y-2'>
+					<span className='text-lg font-medium flex flex-wrap items-center gap-2.5'>
+						{app.status === 'shipped' ? (
+							<Badge variant='secondary' size='sm' className=' tracking-[0.06em] uppercase'>{ui.shipped}</Badge>
+						) : (
+							<Badge variant='outline' size='sm' className=' tracking-[0.06em] uppercase'>{ui.concept}</Badge>
+						)}
+						<CardTitle className='font-mono text-xl text-primary w-full'>{app.title}</CardTitle>
+					</span>
+					<CardDescription>
+						{app.subtitle}
+					</CardDescription>
+				</div>
 				<CardAction>
-					<Button as='span' variant='secondary' size='icon' aria-hidden='true' className='shrink-0 size-11' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+					<Button title={ui.fullCaseStudy} as='span' variant='secondary' size='icon' aria-hidden='true' className='shrink-0 size-11' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
 						{resolvedIcon}
 					</Button>
+					<p className='font-mono text-[0.65rem] leading-relaxed text-current/88 sr-only'>{ui.fullCaseStudy}<span aria-hidden>↗</span></p>
 				</CardAction>
 			</CardHeader>
+
+			{(app.tools || hostnameEl) ? (
+				<CardContent className='rounded-md border border-border/40 bg-secondary/75 w-full mt-auto' customPadding='px-4 py-2'>
+					<div className='flex flex-col gap-0.5'>
+						{app.tools ? <span className='font-mono text-[0.65rem] leading-relaxed line-clamp-1'>{app.tools}</span> : null}
+						{hostnameEl}
+					</div>
+				</CardContent>
+			) : null}
 		</Card>
 	) : (
-		<Card as='button' type='button' variant='default' onClick={onToggle} className={cardClass} id={id} aria-expanded={isSelected} aria-label={cardAria}>
-			<CardHeader className='flex gap-1' headerPadding='p-0'>
-				<span className='text-lg font-medium flex flex-wrap items-center gap-2.5'>
-					{app.status === 'shipped' ? (
-						<Badge variant='secondary' size='sm' className=' tracking-[0.06em] uppercase'>{ui.shipped}</Badge>
-					) : (
-						<Badge variant='outline' size='sm' className=' tracking-[0.06em] uppercase'>{ui.concept}</Badge>
-					)}
-					<CardTitle className='font-mono text-xl text-primary w-full'>{app.title}</CardTitle>
-				</span>
-				<CardDescription>
+		<Card as='div' variant='default' className={cardClassBase} id={id} aria-label={cardAria}>
+			<CardHeader as='button' type='button' className='flex flex-col gap-2 text-start mb-4 cursor-pointer' headerPadding='p-0' enableActionSlot={false} aria-expanded={isSelected} onClick={onToggle}>
+				<div className='grid flex-wrap flex-1 grid has-data-[slot=card-action]:grid-cols-[1fr_auto] mb-0'>
+					<span className='text-lg font-medium flex flex-wrap items-center gap-2.5'>
+						{app.status === 'shipped' ? (
+							<Badge variant='secondary' size='sm' className=' tracking-[0.06em] uppercase'>{ui.shipped}</Badge>
+						) : (
+							<Badge variant='outline' size='sm' className=' tracking-[0.06em] uppercase'>{ui.concept}</Badge>
+						)}
+						<CardTitle className='font-mono text-xl text-primary w-full text-inherit'>{app.title}</CardTitle>
+					</span>
+					<CardAction>
+						<Button title={ui.fullCaseStudy} as='span' variant='secondary' size='icon' aria-hidden='true' className='shrink-0 size-11' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+							{resolvedIcon}
+						</Button>
+						<p className='font-mono text-[0.65rem] leading-relaxed text-current/88 sr-only'>{ui.fullCaseStudy}<span aria-hidden>↗</span></p>
+					</CardAction>
+				</div>
+				<CardDescription className='text-[1em] lg:max-w-[90%]'>
 					{app.subtitle}
 				</CardDescription>
-				{(app.tools || hostnameEl) ? (
-					<div className='mt-2 flex flex-col gap-1'>
-						{app.tools ? <span className='block text-xs text-muted-foreground'>{app.tools}</span> : null}
+			</CardHeader>
+			{(app.tools || hostnameEl) ? (
+				<CardContent className='rounded-md border border-border/40 bg-secondary/75 w-full mt-auto' customPadding='px-4 py-2'>
+					<div className='flex flex-col gap-0.5'>
+						{app.tools ? <span className='font-mono text-[0.65rem] leading-relaxed line-clamp-1'>{app.tools}</span> : null}
 						{hostnameEl}
 					</div>
-				) : null}
-				<CardAction>
-					<Button as='span' variant='secondary' size='icon' aria-hidden='true' className='shrink-0 size-11' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-						{resolvedIcon}
-					</Button>
-				</CardAction>
-			</CardHeader>
+				</CardContent>
+			) : null}
 		</Card>
 	);
 };

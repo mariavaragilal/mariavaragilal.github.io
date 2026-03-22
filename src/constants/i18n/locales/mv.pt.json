@@ -1059,6 +1059,7 @@
 	  "p1": "Eu concebo, eu construo. Abaixo está o trabalho ao vivo — identidade de marca, sistemas de design, fluxos e desenvolvimento frontend em que trabalhei. As tecnologias incluem React, Gatsby, Figma, Redux, Bootstrap, AngularJS e mais.",
 	  "p2Lead": "Marca e identidade:",
 	  "p2": "Logótipos, linguagem visual e experiência coesa em ecossistemas e produtos.",
+	  "p3": "Cada projecto abre uma vista detalhada — estudo de caso completo ou resumo com resultados — seleccione um cartão para ler.",
 	  "designSystemKicker": "Sistema de design — este site",
 	  "designSystemBody": "Biblioteca de componentes personalizada (50+ componentes): Construída com React, Tailwind v4, sistema de temas e acessibilidade em mente.",
 	  "designSystemComponents": [
@@ -1135,6 +1136,9 @@
 	  "nextCase": "Próximo caso",
 	  "cardAriaOpen": "A mostrar estudo de caso completo, clique para fechar",
 	  "cardAriaClosed": "Clique para ver detalhes completos do estudo de caso",
+	  "fullCaseStudy": "Ler Caso",
+	  "summaryOutcomes": "Resumo e resultados",
+	  "readDetails": "Ver detalhes",
 	  "caseStudyBlock": {
 		"context": "Contexto",
 		"processDefault": "Processo",
