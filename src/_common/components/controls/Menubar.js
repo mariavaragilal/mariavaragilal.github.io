@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect, createContext, useContext } from 'react';
 import { focusRing } from '../../../constants/utils/a11y';
+import { cn } from '../../../constants/utils/cn';
 
 const ROOT = 'flex h-9 items-center space-x-1 rounded-md border bg-background p-1 shadow-sm';
 const TRIGGER = 'flex cursor-default select-none items-center rounded-sm px-3 py-1 text-sm font-medium outline-none hover:bg-accent hover:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground ' + focusRing;
@@ -15,7 +16,7 @@ export const Menubar = ({ className = '', children, ...props }) => {
 	const [openMenu, setOpenMenu] = useState(null);
 	return (
 		<MenubarContext.Provider value={{ openMenu, setOpenMenu }}>
-			<div role='menubar' className={ROOT + ' ' + className} {...props}>{children}</div>
+			<div role='menubar' className={cn(ROOT, className)} {...props}>{children}</div>
 		</MenubarContext.Provider>
 	);
 };
@@ -48,7 +49,7 @@ export const MenubarTrigger = ({ className = '', children, ...props }) => {
 			aria-haspopup='menu'
 			aria-expanded={isOpen}
 			data-state={isOpen ? 'open' : 'closed'}
-			className={TRIGGER + ' ' + className}
+			className={cn(TRIGGER, className)}
 			onClick={() => setOpenMenu(isOpen ? null : value)}
 			onMouseEnter={() => { if (openMenu !== null) setOpenMenu(value); }}
 			{...props}
@@ -62,39 +63,39 @@ export const MenubarContent = ({ className = '', children, ...props }) => {
 	const { isOpen } = useContext(MenuItemContext);
 	if (!isOpen) return null;
 	return (
-		<div role='menu' className={'absolute top-full left-0 mt-1 ' + CONTENT + ' ' + className} {...props}>
+		<div role='menu' className={cn('absolute top-full left-0 mt-1', CONTENT, className)} {...props}>
 			{children}
 		</div>
 	);
 };
 
 export const MenubarItem = ({ className = '', inset, children, ...props }) => (
-	<div role='menuitem' tabIndex={0} className={(inset ? 'pl-8 ' : '') + ITEM + ' ' + className} {...props}>{children}</div>
+	<div role='menuitem' tabIndex={0} className={cn(inset && 'pl-8', ITEM, className)} {...props}>{children}</div>
 );
 
 export const MenubarSeparator = ({ className = '', ...props }) => (
-	<div role='separator' className={SEPARATOR_CLS + ' ' + className} {...props}/>
+	<div role='separator' className={cn(SEPARATOR_CLS, className)} {...props}/>
 );
 
 export const MenubarLabel = ({ className = '', inset, ...props }) => (
-	<div className={(inset ? 'pl-8 ' : '') + LABEL_CLS + ' ' + className} {...props}/>
+	<div className={cn(inset && 'pl-8', LABEL_CLS, className)} {...props}/>
 );
 
 export const MenubarShortcut = ({ className = '', ...props }) => (
-	<span className={'ml-auto text-xs tracking-widest text-muted-foreground ' + className} {...props}/>
+	<span className={cn('ml-auto text-xs tracking-widest text-muted-foreground', className)} {...props}/>
 );
 
 export const MenubarSub = ({ children }) => <>{children}</>;
 
 export const MenubarSubTrigger = ({ className = '', inset, children, ...props }) => (
-	<div role='menuitem' aria-haspopup='menu' tabIndex={0} className={(inset ? 'pl-8 ' : '') + ITEM + ' ' + className} {...props}>
+	<div role='menuitem' aria-haspopup='menu' tabIndex={0} className={cn(inset && 'pl-8', ITEM, className)} {...props}>
 		{children}
 		<span aria-hidden='true' className='ml-auto'>▶</span>
 	</div>
 );
 
 export const MenubarSubContent = ({ className = '', ...props }) => (
-	<div role='menu' className={'absolute left-full top-0 ' + CONTENT + ' ' + className} {...props}/>
+	<div role='menu' className={cn('absolute left-full top-0', CONTENT, className)} {...props}/>
 );
 
 export const MenubarCheckboxItem = ({ className = '', checked, children, onCheckedChange, ...props }) => (
@@ -102,7 +103,7 @@ export const MenubarCheckboxItem = ({ className = '', checked, children, onCheck
 		role='menuitemcheckbox'
 		aria-checked={checked}
 		tabIndex={0}
-		className={'pl-8 ' + ITEM + ' ' + className}
+		className={cn('pl-8', ITEM, className)}
 		onClick={() => onCheckedChange && onCheckedChange(!checked)}
 		onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onCheckedChange && onCheckedChange(!checked); } }}
 		{...props}
@@ -119,7 +120,7 @@ export const MenubarRadioItem = ({ className = '', checked, children, onCheckedC
 		role='menuitemradio'
 		aria-checked={checked}
 		tabIndex={0}
-		className={'pl-8 ' + ITEM + ' ' + className}
+		className={cn('pl-8', ITEM, className)}
 		onClick={() => onCheckedChange && onCheckedChange()}
 		onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onCheckedChange && onCheckedChange(); } }}
 		{...props}

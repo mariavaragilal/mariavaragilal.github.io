@@ -1,13 +1,8 @@
 {
-  "404": {
-    "title": "Página Não Encontrada",
-    "description": "Desculpe, a página que procura não existe.",
-    "backHome": "Voltar ao Início"
-  },
   "cv": {
     "name": "Maria Varagilal",
-    "title": "Senior Technical Product Designer & Frontend Developer",
-    "summary": "Designer de Produto Digital e Frontend Developer com mais de 10 anos de experiência. Especialização em sistemas de design, estratégia de UX e implementação frontend com JavaScript, React, Redux, HTML e CSS. Foco na criação de experiências de utilizador intuitivas, eficientes e de elevado desempenho.",
+    "title": "Senior Technical Product Designer & Frontend Development",
+    "summary": "Designer de Produto Técnico com mais de 10 anos de experiência a entregar produtos digitais do conceito à produção. Especialização em sistemas de design, estratégia de produto e implementação frontend com JavaScript, React, Redux, HTML e CSS.",
     "note": "Atualmente a usar IA para acelerar os fluxos de design-para-código, desde a geração de componentes e a construção de documentação até à prototipação rápida."
   },
   "nav": {
@@ -29,13 +24,13 @@
       "position": "Head Technical Product Designer",
       "period": "Setembro 2015 - Presente",
       "description": [
-        "Concepção da experiência de produto, design de interfaces e criação de identidade de marca de ponta a ponta.",
-        "Arquitetura de fluxos de produto e organização de conteúdos.",
-        "Design e implementação de designs em código: React, Redux, Gatsby, JavaScript, HTML e CSS.",
-        "Interfaces responsivas e acessíveis alinhadas com sistemas de design.",
-        "Colaboração com engenheiros na integração de APIs e entrega de funcionalidades.",
-        "Atuação em ambiente orientado ao produto, com equilíbrio entre liderança e execução prática em código.",
-        "Utilização de IA para acelerar fluxos design-to-code, , incluindo geração de componentes, estruturação de documentação e prototipagem rápida."
+        "Liderança da estratégia e da visão de design de ponta a ponta: definição da experiência de produto, do design UI/UX, da arquitectura de informação e da identidade de marca num portfólio B2B SaaS multi-produto.",
+        "Concepção de fluxos de produto intuitivos, organização de conteúdos e fluxos de trabalho empresariais complexos, da descoberta à entrega.",
+        "Funções de designer sénior e frontend developer em simultâneo: interfaces pixel-perfect no Figma e tradução directa para código em produção com React, Redux, Vite, Gatsby, JavaScript, HTML e CSS.",
+        "Construção de interfaces totalmente responsivas, acessíveis e performantes, em conformidade com as regras do sistema de design e padrões de acessibilidade partilhados.",
+        "Colaboração diária com equipas de engenharia em integração de APIs, decisões de arquitectura técnica, implementação de funcionalidades e entrega de código de elevada qualidade.",
+        "Equilíbrio entre liderança estratégica de design e execução técnica profunda num ambiente acelerado e orientado ao produto.",
+        "Utilização de ferramentas de IA para acelerar de forma significativa os fluxos de design para código, mantendo a qualidade de design e a excelência de engenharia."
       ]
     },
     "youngnetwork": {
@@ -94,7 +89,7 @@
     }
   },
   "home": {
-    "description": "Designer de Produto Técnico que entrega código em produção, explorando IA e LLM — com prompts para interfaces de agentes.",
+    "description": "Techincal Product Designer Sénior que lança código. Mais de 10 anos a transformar produtos SaaS em plataformas unificadas — sistemas de design, React e o Método MVP.",
     "skipToMain": "Saltar para o conteúdo principal"
   },
   "about": {

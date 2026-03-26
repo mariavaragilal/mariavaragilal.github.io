@@ -10,11 +10,7 @@ import { srOnly } from '../../constants/utils/a11y';
 
 // Components
 import { StickyNav } from './_common/StickyNav';
-import { IntroSection } from './_common/sections/IntroSection';
-import { MethodSection } from './_common/sections/MethodSection';
-import { WorkSection } from './_common/sections/WorkSection';
-import { ContactSection } from './_common/sections/ContactSection';
-import { FooterSection } from './_common/sections/FooterSection';
+import { IntroSection, MethodSection, WorkSection, ContactSection, FooterSection } from './_common/sections';
 
 const IndexPage = () => {
 	const { t } = useTranslation();
@@ -100,21 +96,21 @@ const IndexPage = () => {
 		onScroll();
 		window.addEventListener('scroll', onScroll, { passive: true });
 		return () => window.removeEventListener('scroll', onScroll);
-	// eslint-disable-next-line react-hooks/exhaustive-deps -- nav tracks stickyNav.sections via locale
+		// eslint-disable-next-line react-hooks/exhaustive-deps -- nav tracks stickyNav.sections via locale
 	}, [stickyNav]);
 
 	return (
 		<Layout title={null} description={t('home.description')} className='text-foreground'>
 			<a href='#main-content' className={srOnly + ' focus:static focus:w-auto focus:h-auto focus:p-3 focus:m-0 focus:overflow-visible focus:whitespace-normal focus:bg-primary focus:text-primary-foreground z-50'}>{t('home.skipToMain')}</a>
-			<StickyNav showScrollTop={showScrollTop} isScrolled={isScrolled} activeSection={activeSection} onScrollToSection={scrollToSection} navOpen={navOpen} setNavOpen={setNavOpen} stickyNav={stickyNav}/>
-			<IntroSection onScrollToWork={scrollToWork}/>
+			<StickyNav showScrollTop={showScrollTop} isScrolled={isScrolled} activeSection={activeSection} onScrollToSection={scrollToSection} navOpen={navOpen} setNavOpen={setNavOpen} stickyNav={stickyNav} />
+			<IntroSection onScrollToWork={scrollToWork} />
 			<main className='flex flex-col bg-background text-foreground' id='main-content'>
-				<MethodSection expandedDimension={expandedDimension} toggleDimensionDetail={toggleDimensionDetail}/>
-				<WorkSection/>
-				<ContactSection/>
+				<MethodSection expandedDimension={expandedDimension} toggleDimensionDetail={toggleDimensionDetail} />
+				<WorkSection />
+				<ContactSection />
 			</main>
-			<ScrollToTop visible={showScrollTop}/>
-			<FooterSection/>
+			<ScrollToTop visible={showScrollTop} />
+			<FooterSection />
 		</Layout>
 	);
 };

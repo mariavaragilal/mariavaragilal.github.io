@@ -1,1151 +1,1466 @@
 {
 	"keyMetrics": [
-	  {
-		"value": "9",
-		"label": "Produtos digitais",
-		"ctx": "concebidos e lançados"
-	  },
-	  {
-		"value": "5+",
-		"label": "Plataformas unificadas",
-		"ctx": "experiência única"
-	  },
-	  {
-		"value": "4+",
-		"label": "B2B SaaS",
-		"ctx": "fluxos complexos"
-	  },
-	  {
-		"value": "10+",
-		"label": "Anos",
-		"ctx": "experiência"
-	  }
+		{
+			"value": "9",
+			"label": "Produtos digitais",
+			"ctx": "concebidos e lançados"
+		},
+		{
+			"value": "5+",
+			"label": "Plataformas unificadas",
+			"ctx": "experiência única"
+		},
+		{
+			"value": "4+",
+			"label": "B2B SaaS",
+			"ctx": "fluxos complexos"
+		},
+		{
+			"value": "10+",
+			"label": "Anos",
+			"ctx": "experiência"
+		}
 	],
 	"method": {
-	  "label": "O meu playbook",
-	  "heading": "O Método MVP",
-	  "subtitle": "Playbook de Maria Varagilal",
-	  "intro": {
-		"column1": "O crescimento gera complexidade. Quando um único produto se torna uma plataforma de soluções interligadas, o maior risco é perder a sensação de uma única empresa.",
-		"column2": "O Método MVP é a abordagem que desenvolvi e refinei ao longo da minha carreira — traduzindo a filosofia por trás do meu trabalho numa prática repetível. Aplicada à estratégia, design, implementação e lançamento — não apenas documentação — protege a visão original à medida que os produtos evoluem."
-	  }
+		"label": "O meu playbook",
+		"heading": "O Método MVP",
+		"subtitle": "Maria Varagilal Playbook",
+		"mediumFraming": "Em escala empresarial o Método mapeia muitos pontos de contacto; aqui aplica-se a mesma disciplina à escala deste portefólio — com provas no trabalho abaixo (Dimensão 4).",
+		"intro": {
+			"column1": "O crescimento gera complexidade. Quando um único produto se torna uma plataforma de soluções interligadas, o maior risco é perder a sensação de uma experiência única.",
+			"column2": "O Método MVP é a abordagem que desenvolvi e refinei ao longo da minha carreira — traduzindo a filosofia por trás do meu trabalho numa prática repetível. Aplicada à estratégia, design, implementação e lançamento — não apenas documentação — protege a visão original à medida que os produtos evoluem."
+		}
 	},
 	"dimensions": [
-	  {
-		"num": "01",
-		"title": "Auditoria de Marca e Experiência",
-		"icon": "◎",
-		"groundedIn": [
-		  "Coesão"
-		],
-		"summary": "Mapear todos os pontos de contacto — portais, aplicações móveis, e-mails, onboarding, ferramentas internas. Avalie a consistência visual e de UX e identifique riscos de fragmentação antes que custem aos clientes.",
-		"philosophy": {
-		  "principle": "Coesão Antes da Criação",
-		  "ask": "Por que começar aqui?",
-		  "answer": "Antes de qualquer linha ser desenhada ou código escrito, o trabalho mais importante é ver o problema claramente. Mapear todos os pontos de contacto cria a imagem real — quem é realmente o utilizador, o que está a tentar alcançar e onde a experiência se está a quebrar silenciosamente.",
-		  "checkpoint": "Se o problema não estiver claro, nada construído sobre ele estará."
+		{
+			"num": "01",
+			"title": "Auditoria de Marca e Experiência",
+			"icon": "◎",
+			"groundedIn": [
+				"Coesão"
+			],
+			"summary": "Mapear todos os pontos de contacto — portais, aplicações móveis, e-mails, onboarding, ferramentas internas. Avalie a consistência visual e de UX e identifique riscos de fragmentação antes que custem aos clientes.",
+			"philosophy": {
+				"principle": "Coesão Antes da Criação",
+				"ask": "Por que começar aqui?",
+				"answer": "Antes de qualquer linha ser desenhada ou código escrito, o trabalho mais importante é ver o problema claramente. Mapear todos os pontos de contacto cria a imagem real — quem é realmente o utilizador, o que está a tentar alcançar e onde a experiência se está a quebrar silenciosamente.",
+				"checkpoint": "Se o problema não estiver claro, nada construído sobre ele estará."
+			},
+			"detail": [
+				"Cada ponto de contacto é avaliado quanto à consistência visual, coerência de UX e acessibilidade. Trate todo o ecossistema como uma única experiência — não uma coleção de produtos. Os riscos de fragmentação são identificados aqui antes que custem aos clientes."
+			]
 		},
-		"detail": [
-		  "Cada ponto de contacto é avaliado quanto à consistência visual, coerência de UX e acessibilidade. Trate todo o ecossistema como uma única experiência — não uma coleção de produtos. Os riscos de fragmentação são identificados aqui antes que custem aos clientes."
-		]
-	  },
-	  {
-		"num": "02",
-		"title": "Princípios de Marca Unificados",
-		"icon": "◆",
-		"groundedIn": [
-		  "Limites"
-		],
-		"summary": "Destilar a visão da empresa em princípios accionáveis que todos os designers, programadores e partes interessadas possam consultar instantaneamente.",
-		"philosophy": {
-		  "principle": "Limites",
-		  "ask": "Como protege a visão?",
-		  "answer": "O desenvolvimento moderno de produtos está cheio de distracções subtis: novas APIs, floreios visuais, tecnologias adicionadas simplesmente porque são possíveis. Limites intencionais lembram as equipas do que realmente importa. Se não serve o problema comprometido, não é lançado agora.",
-		  "checkpoint": "Cada 'sim' a uma distracção é um 'não' invisível à visão."
+		{
+			"num": "02",
+			"title": "Princípios de Marca Unificados",
+			"icon": "◆",
+			"groundedIn": [
+				"Limites"
+			],
+			"summary": "Destilar a visão da empresa em princípios accionáveis que todos os designers, programadores e partes interessadas possam consultar instantaneamente.",
+			"philosophy": {
+				"principle": "Limites",
+				"ask": "Como protege a visão?",
+				"answer": "O desenvolvimento moderno de produtos está cheio de distracções subtis: novas APIs, floreios visuais, tecnologias adicionadas simplesmente porque são possíveis. Limites intencionais lembram as equipas do que realmente importa. Se não serve o problema comprometido, não é lançado agora.",
+				"checkpoint": "Cada 'sim' a uma distracção é um 'não' invisível à visão."
+			},
+			"detail": [
+				"Os princípios não são documentação — são ferramentas de tomada de decisão. Quando um designer, programador ou parte interessada enfrenta uma troca, os princípios respondem à pergunta antes de uma reunião ser necessária."
+			]
 		},
-		"detail": [
-		  "Os princípios não são documentação — são ferramentas de tomada de decisão. Quando um designer, programador ou parte interessada enfrenta uma troca, os princípios respondem à pergunta antes de uma reunião ser necessária."
-		]
-	  },
-	  {
-		"num": "03",
-		"title": "Arquitetura de Prioridade e Fluxo",
-		"icon": "⬡",
-		"groundedIn": [
-		  "Prioridade"
-		],
-		"summary": "Matriz 2×2 (Valor de Negócio vs. Fricção do Utilizador) decide o que é priorizado. Alto Valor + Alta Fricção lança primeiro — autenticação partilhada, navegação central, visualizador de documentos. Itens de baixa fricção vêm depois.",
-		"philosophy": {
-		  "principle": "Prioridade e Limiar",
-		  "ask": "Quando é suficiente?",
-		  "answer": "A linha MVP é um acto de disciplina, não de compromisso. A matriz 2×2 torna as prioridades visíveis e partilhadas: o que deve ser lançado agora e o que pode esperar sem enfraquecer o núcleo.",
-		  "checkpoint": "O produto diz-lhe o que refinar — o backlog nunca dirá."
+		{
+			"num": "03",
+			"title": "Arquitetura de Prioridade e Fluxo",
+			"icon": "⬡",
+			"groundedIn": [
+				"Prioridade"
+			],
+			"summary": "Matriz 2×2 (Valor de Negócio vs. Fricção do Utilizador) decide o que é priorizado. Alto Valor + Alta Fricção lança primeiro — autenticação partilhada, navegação central, visualizador de documentos. Itens de baixa fricção vêm depois.",
+			"philosophy": {
+				"principle": "Prioridade e Limiar",
+				"ask": "Quando é suficiente?",
+				"answer": "A linha MVP é um acto de disciplina, não de compromisso. A matriz 2×2 torna as prioridades visíveis e partilhadas: o que deve ser lançado agora e o que pode esperar sem enfraquecer o núcleo.",
+				"checkpoint": "O produto diz-lhe o que refinar — o backlog nunca dirá."
+			},
+			"detail": [
+				"A matriz transforma a priorização numa decisão partilhada e visível — não política. Alto Valor + Alta Fricção lança primeiro. Itens de baixa fricção ficam em fila sem bloquear o impulso."
+			]
 		},
-		"detail": [
-		  "A matriz transforma a priorização numa decisão partilhada e visível — não política. Alto Valor + Alta Fricção lança primeiro. Itens de baixa fricção ficam em fila sem bloquear o impulso."
-		]
-	  },
-	  {
-		"num": "04",
-		"title": "Implementação da Linguagem de Design",
-		"icon": "◈",
-		"groundedIn": [
-		  "Prioridade",
-		  "Limites"
-		],
-		"summary": "A linguagem de design flui da estratégia para a produção. Em vez de apenas documentação, faço a ponte entre design e implementação para que chegue ao produto — as equipas recebem algo que podem lançar, não apenas especificações.",
-		"philosophy": {
-		  "principle": "Coesão Antes da Criação",
-		  "ask": "Por que fazer a ponte entre design e código?",
-		  "answer": "Um sistema de design só funciona se viver no produto. Quando se afasta do que é lançado, torna-se prateleira — e a fragmentação começa de novo.",
-		  "checkpoint": "Tokens validados em produção, não apenas aprovados no Figma."
+		{
+			"num": "04",
+			"title": "Implementação da Linguagem de Design",
+			"icon": "◈",
+			"groundedIn": [
+				"Prioridade",
+				"Limites"
+			],
+			"summary": "A linguagem de design flui da estratégia para a produção. Em vez de apenas documentação, faço a ponte entre design e implementação para que chegue ao produto — as equipas recebem algo que podem lançar, não apenas especificações.",
+			"philosophy": {
+				"principle": "Coesão Antes da Criação",
+				"ask": "Por que fazer a ponte entre design e código?",
+				"answer": "Um sistema de design só funciona se viver no produto. Quando se afasta do que é lançado, torna-se prateleira — e a fragmentação começa de novo.",
+				"checkpoint": "Tokens validados em produção, não apenas aprovados no Figma."
+			},
+			"detail": [
+				"Tokens, componentes e padrões são validados em produção — não apenas aprovados no Figma. A lacuna entre o que foi desenhado e o que foi lançado fecha-se para zero."
+			]
 		},
-		"detail": [
-		  "Tokens, componentes e padrões são validados em produção — não apenas aprovados no Figma. A lacuna entre o que foi desenhado e o que foi lançado fecha-se para zero."
-		]
-	  },
-	  {
-		"num": "05",
-		"title": "Alinhamento Contínuo e Medição",
-		"icon": "↻",
-		"groundedIn": [
-		  "Coesão",
-		  "Limites"
-		],
-		"summary": "Ciclo contínuo que mantém a estratégia, execução e resultados na mesma direcção para que a marca unificada permaneça viva.",
-		"philosophy": {
-		  "principle": "Evolução",
-		  "ask": "Como se mantém honesto?",
-		  "answer": "Cada compromisso evolui através do mesmo ciclo: construir dentro de limites, lançar na linha MVP, testar com utilizadores reais, refinar enquanto protege a lente.",
-		  "checkpoint": "Declarar 'feito' cria o espaço para aprender."
-		},
-		"detail": [
-		  "A medição é integrada no ciclo — não adicionada depois. As pontuações de coesão são reavaliadas após cada lançamento importante. Novos colaboradores e funcionalidades são potenciais pontos de desvio que o ciclo detecta."
-		]
-	  }
+		{
+			"num": "05",
+			"title": "Alinhamento Contínuo e Medição",
+			"icon": "↻",
+			"groundedIn": [
+				"Coesão",
+				"Limites"
+			],
+			"summary": "Ciclo contínuo que mantém a estratégia, execução e resultados na mesma direcção para que a marca unificada permaneça viva.",
+			"philosophy": {
+				"principle": "Evolução",
+				"ask": "Como se mantém honesto?",
+				"answer": "Cada compromisso evolui através do mesmo ciclo: construir dentro de limites, lançar na linha MVP, testar com utilizadores reais, refinar enquanto protege a lente.",
+				"checkpoint": "Declarar 'feito' cria o espaço para aprender."
+			},
+			"detail": [
+				"A medição é integrada no ciclo — não adicionada depois. As pontuações de coesão são reavaliadas após cada lançamento importante. Novos colaboradores e funcionalidades são potenciais pontos de desvio que o ciclo detecta."
+			]
+		}
 	],
 	"outcomes": [
-	  {
-		"principle": "Clareza",
-		"drivenBy": "Dimensão 1 + Dimensão 3",
-		"protects": "Ver apenas o que realmente importa — remover ruído antes que se acumule"
-	  },
-	  {
-		"principle": "Confiança",
-		"drivenBy": "Dimensão 4",
-		"protects": "Decisões tomadas uma vez, lançadas e confiáveis — sem segundas dúvidas em produção"
-	  },
-	  {
-		"principle": "Consistência",
-		"drivenBy": "Dimensão 2 + Dimensão 5",
-		"protects": "Uma experiência unificada que evolui sem perder a sua identidade"
-	  }
+		{
+			"principle": "Clareza",
+			"drivenBy": "Dimensão 1 + Dimensão 3",
+			"protects": "Ver apenas o que realmente importa — remover ruído antes que se acumule"
+		},
+		{
+			"principle": "Confiança",
+			"drivenBy": "Dimensão 4",
+			"protects": "Decisões tomadas uma vez, lançadas e confiáveis — sem segundas dúvidas em produção"
+		},
+		{
+			"principle": "Consistência",
+			"drivenBy": "Dimensão 2 + Dimensão 5",
+			"protects": "Uma experiência unificada que evolui sem perder a sua identidade"
+		}
 	],
 	"evolution": {
-	  "intro": "Cada compromisso descreve como evolui, mas o ciclo subjacente é o mesmo em todos os três — o ciclo de aprendizagem constante que mantém a visão honesta.",
-	  "loop": [
-		{
-		  "step": "Construir",
-		  "desc": "Criar dentro de limites definidos",
-		  "dimension": "Dimensão 4"
-		},
-		{
-		  "step": "Lançar",
-		  "desc": "Alcançar a linha MVP e lançar",
-		  "dimension": "Dimensão 3"
-		},
-		{
-		  "step": "Testar",
-		  "desc": "Aprender com utilizadores reais e dados reais",
-		  "dimension": "Dimensão 5"
-		},
-		{
-		  "step": "Refinar",
-		  "desc": "Iterar enquanto protege a visão",
-		  "dimension": "Dimensão 1 + Dimensão 2"
-		}
-	  ],
-	  "closing": "Cada passagem pelo ciclo afina o produto e aprofunda a compreensão. O papel da liderança é proteger a clareza, confiança e consistência — para que a equipa possa lançar, aprender e avançar com propósito.",
-	  "whyItMatters": "Declarar 'Feito' cria o espaço para aprender. Aprender mantém a visão honesta. O ciclo constrói uma vantagem silenciosa e composta que nenhum sprint de funcionalidade única pode replicar."
+		"intro": "Cada compromisso descreve como evolui, mas o ciclo subjacente é o mesmo em todos os três — o ciclo de aprendizagem constante que mantém a visão honesta.",
+		"loop": [
+			{
+				"step": "Construir",
+				"desc": "Criar dentro de limites definidos",
+				"dimension": "Dimensão 4"
+			},
+			{
+				"step": "Lançar",
+				"desc": "Alcançar a linha MVP e lançar",
+				"dimension": "Dimensão 3"
+			},
+			{
+				"step": "Testar",
+				"desc": "Aprender com utilizadores reais e dados reais",
+				"dimension": "Dimensão 5"
+			},
+			{
+				"step": "Refinar",
+				"desc": "Iterar enquanto protege a visão",
+				"dimension": "Dimensão 1 + Dimensão 2"
+			}
+		],
+		"closing": "Cada passagem pelo ciclo afina o produto e aprofunda a compreensão. O papel da liderança é proteger a clareza, confiança e consistência — para que a equipa possa lançar, aprender e avançar com propósito.",
+		"whyItMatters": "Declarar 'Feito' cria o espaço para aprender. Aprender mantém a visão honesta. O ciclo constrói uma vantagem silenciosa e composta que nenhum sprint de funcionalidade única pode replicar."
 	},
 	"workCases": {
-	  "Securibox": {
-		"context": "Concebi e desenvolvi toda a família de produtos — identidade de marca, sistema de design e frontend de produção em todas as propriedades.",
-		"period": "2015–Presente",
-		"cases": [
-		  {
+		"Securibox": {
+			"context": "Concepção e desenvolvimento de toda a família de produtos — identidade de marca, sistema de design e frontend de produção em todas as propriedades.",
 			"period": "2015–Presente",
-			"status": "lançado",
-			"title": "Securibox: Identidade Unificada",
-			"subtitle": "Soluções automatizadas de recolha, análise e classificação de dados e documentos · de produtos individuais a ecossistema",
-			"role": "Designer de Produto Técnico Principal e Desenvolvimento Frontend",
-			"tools": "Sketch · Figma · Gatsby · Bootstrap · React · Redux · Acessibilidade (WCAG)",
-			"dimensions": "As 5 dimensões",
-			"highlight": "Liderei a criação de uma fundação unificada de marca e experiência. Propus e entreguei uma Marca de Soluções Unificada — linguagem visual coesa, filosofia de experiência partilhada e padrões reutilizáveis em produção.",
-			"results": [
-			  "Identidade de marca e logótipo desde o zero",
-			  "Transformação de produtos individuais em ecossistema unificado",
-			  "Padrões reutilizáveis e melhor alinhamento design-desenvolvimento",
-			  "Redução do tempo de conclusão de tarefas e fricção em fluxos"
-			],
-			"references": {
-			  "links": [
+			"cases": [
 				{
-				  "url": "https://www.securibox.eu",
-				  "label": "Site corporativo",
-				  "role": "Marca, sistema de design, construção Gatsby"
+					"period": "2015–Presente",
+					"status": "lançado",
+					"title": "Securibox: Identidade Unificada",
+					"subtitle": "Soluções automatizadas de recolha, análise e classificação de dados e documentos · de produtos individuais a ecossistema",
+					"role": "Designer de Produto Técnico Principal e Desenvolvimento Frontend",
+					"tools": "Sketch · Figma · Gatsby · Bootstrap · React · Vite · Redux · Acessibilidade (WCAG)",
+					"dimensions": "As 5 dimensões",
+					"highlight": "Liderança na criação de uma fundação unificada de marca e experiência. Proposta e entrega de uma Marca de Soluções Unificada — linguagem visual coesa, filosofia de experiência partilhada e padrões reutilizáveis em produção.",
+					"results": [
+						"Identidade de marca e logótipo desde o zero",
+						"Transformação de produtos individuais em ecossistema unificado",
+						"Padrões reutilizáveis e melhor alinhamento design-desenvolvimento",
+						"Redução do tempo de conclusão de tarefas e fricção em fluxos"
+					],
+					"references": {
+						"links": [
+							{
+								"url": "https://www.securibox.eu",
+								"label": "Site corporativo",
+								"role": "Marca, sistema de design, construção Gatsby"
+							},
+							{
+								"url": "https://cube.securibox.eu",
+								"label": "Cube - Controle os seus dados",
+								"role": "Sub-marca, design de produto, frontend"
+							},
+							{
+								"url": "https://www.securibox.eu/solutions/sca",
+								"label": "SCA - CloudAgents",
+								"role": "Design de produto API, página de destino"
+							},
+							{
+								"url": "https://accounts.securibox.eu/id/register",
+								"label": "Securibox ID — Autenticação",
+								"role": "UX de identidade, fluxos de registo"
+							},
+							{
+								"url": "https://me.securibox.eu",
+								"label": "Me - Conta Securibox",
+								"role": "Gestão de conta"
+							},
+							{
+								"url": "https://rh.securibox.eu",
+								"label": "RH — Distribuição de recibos de salário",
+								"role": "Design de produto"
+							}
+						],
+						"dribbble": [
+							{
+								"url": "https://dribbble.com/shots/3440959-cube-securibox-eu",
+								"label": "Cube — Securibox"
+							},
+							{
+								"url": "https://dribbble.com/shots/3188588-sca-securibox-eu",
+								"label": "SCA — Securibox CloudAgents"
+							}
+						]
+					},
+					"caseStudy": {
+						"businessProblem": "À medida que a Securibox se expandiu além do serviço original de gestão de documentos para múltiplas soluções, cada produto surgiu isoladamente. Sem princípios partilhados, as inconsistências acumularam-se nas interfaces, comportamentos e expressão de marca — fragmentando a experiência e enfraquecendo a confiança numa plataforma que precisava de sentir-se como uma única empresa.",
+						"strategicDecision": {
+							"intro": "Todas as decisões começaram com uma pergunta:",
+							"question": "Isto faz a Securibox sentir-se como uma única empresa de confiança — ou múltiplas ferramentas separadas?"
+						},
+						"process": [
+							{
+								"phase": "Fase 1",
+								"label": "Auditoria",
+								"title": "Auditoria de Marca e Experiência",
+								"description": "Mapeamento de todos os pontos de contacto — portais, aplicações móveis, e-mails, onboarding e ferramentas internas. Avaliação da consistência visual e de UX para identificar riscos de fragmentação."
+							},
+							{
+								"phase": "Fase 2",
+								"label": "Princípios",
+								"title": "Princípios de Marca Unificados",
+								"description": "Tradução da visão da empresa em quatro princípios accionáveis: Confiança através da Clareza, Precisão em Cada Interacção, Fluxo Sem Costuras, Acessível por Defeito."
+							},
+							{
+								"phase": "Fase 3",
+								"label": "Recursos",
+								"title": "Biblioteca de Marca e Activos da Empresa",
+								"description": "Criação da biblioteca de marca no Sketch e definição de recursos centrais da empresa — logótipo, apresentações, documentação e modelos. Migração posterior do sistema para Figma para melhorar a colaboração e escalabilidade."
+							},
+							{
+								"phase": "Fase 4",
+								"label": "Implementação",
+								"title": "Linguagem de Design em Produção",
+								"description": "Implementação da linguagem de design directamente em produção com Gatsby e regras de configuração Bootstrap. O Bootstrap foi escolhido intencionalmente para reduzir a sobrecarga de documentação e simplificar a adopção — criando um sistema partilhado para designers e programadores."
+							},
+							{
+								"phase": "Fase 5",
+								"label": "Alinhamento",
+								"title": "Alinhamento Contínuo e Medição",
+								"description": "Estabelecimento de um ciclo contínuo para manter a estratégia, execução e resultados alinhados, garantindo que a marca unificada evolui de forma consistente à medida que equipas e produtos crescem."
+							}
+						],
+						"implementation": {
+							"design": [
+								{
+									"heading": "Marca, conceito e narrativa",
+									"items": [
+										"Marca Securibox: logótipo e identidade visual construídos desde o zero — sistema de cores, tipografia, estilo de imagem e regras de aplicação alinhadas com o posicionamento da empresa.",
+										"História e posicionamento de marca: como a Securibox é apresentada no mercado — automação de dados e documentos, confiança e credibilidade empresarial — em narrativa e mensagens-chave antes de qualquer detalhe de produto individual.",
+										"Voz e tom: como a marca fala no site corporativo, em lançamentos e comunicação de base — distintiva e suficientemente séria para contextos regulados, sem parecer um SaaS genérico.",
+										"Princípios como carácter de marca — Confiança através da Clareza, Precisão em Cada Interacção, Fluxo Sem Costuras, Acessível por Defeito — transmitidos em mensagem e interacção para que o nome Securibox signifique algo reconhecível, não um rótulo de fornecedor genérico."
+									]
+								},
+								{
+									"heading": "Sistema unificado e pontos de contacto",
+									"items": [
+										"Marca de Soluções Unificada: uma linguagem de design e padrões partilhados para que produtos que tinham crescido de forma separada continuem a ler-se como um ecossistema Securibox — site corporativo, interfaces de produto, portais white-label e superfícies viradas para o cliente.",
+										"Fundamentos reutilizáveis: hierarquia, espaçamento, grelhas e padrões de UI para páginas de marketing, aplicações com sessão iniciada, onboarding, e-mail e molduras white-label.",
+										"Intenção de componentes e lógica de layout documentadas para design e engenharia partilharem o mesmo vocabulário — biblioteca de marca no Sketch, mais tarde migrada para Figma para escala e colaboração.",
+										"Cobertura mapeada para canais reais: sites públicos, interfaces de produto, entradas de conta e autenticação, superfícies de RH e de operador, portais de clientes empresariais — bem como a relação com sub-marcas (Cube, SCA, RH, Securibox ID, Me) para a família manter-se coerente sem nivelar cada público."
+									]
+								}
+							],
+							"code": [
+								{
+									"heading": "O que foi construído",
+									"items": [
+										"Gatsby: propriedades corporativas e de marketing em sites estáticos com a linguagem de design aplicada em produção.",
+										"Bootstrap: marca codificada através de configuração partilhada (tokens, grelhas, componentes) para as mesmas regras alimentarem especificações e CSS em produção.",
+										"React com Redux quando necessário: experiências de produto — cube.securibox.eu, superfícies de operador e Webview relacionadas com SCA, Securibox ID, Me, RH e portais de clientes white-label no âmbito deste trabalho.",
+										"Acessibilidade: padrões orientados para WCAG e revisão integrados na UI lançada, não acrescentados depois.",
+										"Consistência entre propriedades: uma disciplina de implementação na base React/Gatsby para que o desvio apareça como excepção, não como regra."
+									]
+								}
+							]
+						},
+						"resultsMetrics": [
+							"Consistência de marca melhorada em todos os pontos de contacto virados para o cliente",
+							"Implementação React/Redux/Gatsby com foco em desempenho e acessibilidade (WCAG)",
+							"Melhor alinhamento design-desenvolvimento — menos iterações de entrega por componente",
+							"Percepção reforçada de uma plataforma coesa e fiável junto de clientes empresariais",
+							"Tempo de conclusão de tarefas reduzido"
+						],
+						"tradeoffsLearnings": "A priorização de orientações e princípios partilhados em vez de floreios visuais implicou reduzir algumas iterações iniciais de design para garantir adopção.\n\nA unificação provou ser tanto cultural como de design. A identidade foi construída para permanecer resiliente — garantindo consistência mesmo quando as equipas evoluem.",
+						"quote": {
+							"title": "Defina o que importa, reduza o espaço entre design e produção.",
+							"subtitle": "Menos documentação, menos entregas. O Bootstrap foi uma escolha estratégica, não um atalho."
+						}
+					},
+					"slug": "securibox-unified-identity"
 				},
 				{
-				  "url": "https://cube.securibox.eu",
-				  "label": "Cube - Controle os seus dados",
-				  "role": "Sub-marca, design de produto, frontend"
+					"period": "2015",
+					"status": "lançado",
+					"title": "Cube - Controle os seus dados",
+					"role": "Designer de Produto Técnico Principal e Desenvolvimento Frontend",
+					"tools": "Figma · React · Gatsby · Acessibilidade (WCAG)",
+					"subtitle": "Tornar a entrega de credenciais segura e que vale a pena — demonstrando uma tecnologia",
+					"dimensions": "Consumidor · Confiança · Sistemas",
+					"highlight": "O Cube pede aos utilizadores que entreguem credenciais de login das suas contas bancárias, telecomunicações, seguros e retalho para que agentes automatizados recolham documentos em seu nome. O problema de design: tornar algo intrinsecamente invasivo seguro, claro e que vale a pena — em mais de 300 integrações, concebido e construído em produção.",
+					"results": [
+						"Integrações de agentes em múltiplos sectores: banca, utilities, RH, retalho, ...",
+						"Categorias de documentos expostas através de uma taxonomia única",
+						"Destinos de sincronização na cloud — Securibox, Google Drive, OneDrive — arquitectura de pastas unificada",
+						"Modos de vista em lista e cartão do mesmo sistema de componentes",
+						"Mobile concebido como coluna única com navegação por separadores inferiores, não apenas uma versão responsiva reduzida.",
+						"Bilingue Francês/Inglês em todo o lado"
+					],
+					"references": {
+						"links": [
+							{
+								"url": "https://cube.securibox.eu",
+								"label": "Cube - Controle os seus dados",
+								"role": "Sub-marca, design de produto, frontend"
+							}
+						],
+						"dribbble": [
+							{
+								"url": "https://dribbble.com/shots/3440959-cube-securibox-eu",
+								"label": "Design Cube"
+							}
+						]
+					},
+					"caseStudy": {
+						"processHeading": "Decisões chave",
+						"tradeoffsHeading": "Compromissos e Aprendizagens",
+						"businessProblem": "O Cube pede aos utilizadores que entreguem credenciais de login das suas contas bancárias, telecomunicações, seguros e retalho para que agentes automatizados recolham documentos em seu nome. A tecnologia funciona. O problema de design é o momento de entregar essas credenciais: tornar algo intrinsecamente invasivo seguro, claro e que vale a pena. Tudo o resto decorre disso.\n\nO trabalho incluiu tanto o produto para consumidores (Cube) como a experiência de integração para programadores (SCA) sobre a mesma tecnologia subjacente. Um público precisava de confiança emocional e simplicidade. O outro precisava de flexibilidade de API e precisão. Ambos foram lançados em código de produção.",
+						"strategicDecision": {
+							"intro": "Os utilizadores já queriam automatizar. A única pergunta que importava:",
+							"question": "Posso confiar em si com as minhas credenciais?"
+						},
+						"process": [
+							{
+								"phase": "Decisão 1",
+								"label": "Confiança",
+								"title": "Credenciais e estado de sincronização no mesmo ecrã — espacialmente separados, não atrás de um separador",
+								"description": "O instinto é colocar o estado de sincronização num ecrã separado. Em vez disso, as credenciais ficam à esquerda, o estado de sincronização à direita — mesma vista, zonas diferentes. Os utilizadores que regressam para verificar um agente não devem navegar para confirmar que funcionou. O botão MFA é persistente no canto superior direito, sempre acessível sem perturbar o formulário. O caminho de migalhas da pasta aparece também aqui — ver exactamente onde os documentos vão aterrar, no momento de guardar as credenciais, reduz a ansiedade de que os dados vão para um local desconhecido."
+							},
+							{
+								"phase": "Decisão 2",
+								"label": "Escala",
+								"title": "Duas vistas para mais de 300 agentes — ambas necessárias",
+								"description": "Um utilizador que sabe exactamente qual o fornecedor que quer precisa de uma lista rápida com estado à vista. Um utilizador em exploração precisa de densidade de logótipos — para sentir a escala do que é possível. Vista em lista: nome do fornecedor, tipos de documentos, última sincronização e estado de ligação numa linha. Vista em cartão: mesmos dados, grelha mais densa, priorizando a identidade do fornecedor e a acção de adicionar. A barra lateral de filtro é idêntica em ambos os modos — mesmo sistema, duas expressões. O selo \"Indisponível\" foi uma decisão tardia: os testes mostraram que os utilizadores não conseguiam distinguir funcional de não configurado apenas com um ponto de estado, por isso foi adicionado o texto explícito ao lado do sinal de cor."
+							},
+							{
+								"phase": "Decisão 3",
+								"label": "Legibilidade",
+								"title": "A terceira coluna do dashboard — manter as origens legíveis",
+								"description": "O dashboard tem três colunas: A Minha Colecção (documentos puxados pelo utilizador), Os Meus Agentes (configuração e estado), e Documentos RH enviados pelo empregador do utilizador. A tensão: o Cube é um produto que o utilizador controla. Os Documentos RH chegam sem acção do utilizador, da empresa. A decisão: mantê-los visíveis mas explicitamente rotulados e espacialmente separados — cabeçalho \"DOCUMENTOS RH\" — para que a origem seja sempre legível. A mesma lógica aplica-se ao explorador de ficheiros: pastas recolhidas pela Securibox, pastas do empregador e cloud pessoal (Google Drive, OneDrive) aparecem como irmãos sob a mesma raiz. Origens diferentes, vista unificada — nunca apresentadas como se viessem do mesmo lugar."
+							}
+						],
+						"implementation": {
+							"design": [
+								{
+									"heading": "Marca, conceito e narrativa",
+									"items": [
+										"Cube como sub-marca distinta: logótipo, sistema de cores, tipografia, iconografia e hierarquia visual — acessível e orientada à confiança, não uma interface B2B genérica.",
+										"Posicionamento e narrativa: «Controle os seus dados» e automação em linguagem clara — a ideia de agentes e sincronização baseada em credenciais enquadrada antes do pedido, para o produto ler-se como controlo pessoal compreensível e não infraestrutura opaca.",
+										"Aplicação de marca: orientações, espaçamento, padrões e uso de activos de forma consistente na aplicação e no site público.",
+										"Site de marketing: ordem da história na página de destino e texto bilingue FR/EN — o que são os agentes, como funciona a sincronização, categorias e destinos — para valor e confiança crescerem antes da instalação."
+									]
+								},
+								{
+									"heading": "Experiência de produto",
+									"items": [
+										"Descoberta de agentes: modos lista e cartão com uma barra lateral de filtro partilhada (taxonomia de documentos, ordenação, alternar vista); rotulagem explícita quando uma integração está indisponível.",
+										"Credenciais e sincronização: uma vista com credenciais e estado em zonas separadas; entrada MFA persistente; campos mascarados, tooltips de ajuda, visibilidade da palavra-passe; migalhas que mostram onde os documentos vão aterrar.",
+										"Dashboard e ficheiros: três colunas com origens legíveis (incluindo documentos de RH enviados pelo empregador); explorador com uma árvore sobre raízes Securibox, empregador e cloud pessoal; definições de aplicações ligadas e padrões de revogação.",
+										"Mobile: layout em coluna única com navegação por separadores inferiores — concebido para telemóvel, não uma grelha de desktop reduzida."
+									]
+								}
+							],
+							"code": [
+								{
+									"heading": "O que foi construído",
+									"items": [
+										"Site de marketing: geração estática com Gatsby; i18n FR/EN.",
+										"Shell da aplicação: React com cadeia de ferramentas baseada em Vite; i18n FR/EN em todo o lado.",
+										"Agentes: vistas em grelha e lista com sistema de filtro partilhado (taxonomia, ordenação, alternar vista).",
+										"UI de credenciais: mascaramento, tooltips de ajuda, alternar visibilidade da palavra-passe, acção MFA persistente; painel de estado de sincronização com histórico e contagens de documentos.",
+										"Dashboard: layout de três colunas e reorganização para mobile (coluna única, separadores inferiores).",
+										"Explorador de ficheiros: árvore de pastas com arquitectura de raiz multi-origem (Securibox, empregador, Google Drive, OneDrive).",
+										"Aplicações ligadas: definições e fluxos de revogação para destinos na cloud na UI."
+									]
+								}
+							]
+						},
+						"tradeoffsLearnings": [
+							"A página de destino (cube.securibox.eu) introduz o que são os agentes e como funcionam — foi intencionalmente concebida ao lado da aplicação para lidar com essa camada inicial de compreensão.",
+							"Dentro da aplicação, existia antes um walkthrough passo a passo. A sua remoção visou reduzir fricção e dar espaço aos utilizadores para explorar naturalmente. Em vez de forçar acções ou pedir compromisso imediato, a experiência permanece aberta e sem pressão — sem insistência em credenciais, sem urgência para configurar um agente.",
+							"Quando nenhum agente está configurado, a interface permanece intencionalmente minimalista, mostrando um único ponto de entrada claro: \"Configure o seu primeiro agente.\" Só após interagir com ele é que os utilizadores veem as opções disponíveis. Esta revelação progressiva mantém a experiência leve enquanto permite a descoberta.",
+							"O resultado é um fluxo que respeita o ritmo do utilizador, constrói confiança cedo e evita sobrecarregá-lo desde o início."
+						]
+					},
+					"slug": "cube-own-your-data"
 				},
 				{
-				  "url": "https://www.securibox.eu/solutions/sca",
-				  "label": "SCA - CloudAgents",
-				  "role": "Design de produto API, página de destino"
+					"period": "2015",
+					"status": "lançado",
+					"title": "SCA - CloudAgents",
+					"subtitle": "Conceber a camada de operador para um produto API — da configuração de agentes à monitorização de sincronização em mais de 500 integrações",
+					"role": "Designer de Produto Técnico Principal e Desenvolvimento Frontend",
+					"tools": "Figma · React · Vite · Bootstrap · Acessibilidade (WCAG)",
+					"dimensions": "Programador · Operações · Sistemas",
+					"highlight": "A SCA é a infraestrutura em que o Cube funciona. O trabalho abrangeu ambos os lados da mesma tecnologia: o produto para consumidores onde os utilizadores recolhem os seus documentos e a plataforma de operador onde os programadores configuram integrações e as equipas de operações as monitorizam em escala.",
+					"results": [
+						"Mais de 500 integrações de fornecedores acessíveis através de uma única API",
+						"BackOffice com 6 secções operacionais, gestão de permissões baseada em funções, tema escuro e claro",
+						"BackOffice multilingue — Francês, Inglês, Português",
+						"Webview white-label implementado em portais de clientes empresariais"
+					],
+					"references": {
+						"links": [
+							{
+								"url": "https://www.securibox.eu/solutions/sca/",
+								"label": "Cloud Agents",
+								"role": "Design de produto API, página de destino"
+							}
+						],
+						"dribbble": [
+							{
+								"url": "https://dribbble.com/shots/3188588-sca-securibox-eu",
+								"label": "Design SCA"
+							}
+						]
+					},
+					"caseStudy": {
+						"processHeading": "Decisões chave",
+						"tradeoffsHeading": "Compromissos e Aprendizagens",
+						"businessProblem": "A SCA é a infraestrutura em que o Cube funciona — mas os seus utilizadores são programadores e equipas de operações, não consumidores. Os programadores precisam de integrar a recolha de documentos nos seus próprios produtos. As equipas de operações precisam de diagnosticar falhas de sincronização e acompanhar o estado dos agentes em grande número de contas — muitas vezes sob pressão de tempo. Dois trabalhos completamente diferentes na mesma plataforma, ambos exigindo clareza em escala.",
+						"strategicDecision": {
+							"intro": "O desafio do operador:",
+							"question": "Como conceber uma plataforma que sirva programadores a configurar integrações e equipas de operações a depurar falhas de sincronização — sem colapsar dois trabalhos muito diferentes numa única interface confusa?"
+						},
+						"process": [
+							{
+								"phase": "Decisão 1",
+								"label": "Navegação",
+								"title": "Navegação em três secções — separando os trabalhos ao nível superior",
+								"description": "A página inicial do BO apresenta três caminhos explícitos: gestão de agentes (gerir todos os agentes), suporte e diagnóstico (monitorizar e depurar sincronizações), configuração de permissões (gerir utilizadores e equipas). A decisão de separá-los ao nível da navegação — não atrás de portões de permissão — veio dos diferentes modos mentais que servem. Um administrador a editar definições de campos de agentes nunca deve aterrar acidentalmente na monitorização de sincronização. O dashboard abaixo mostra a saúde agregada em cerca de 10 segundos: contagem de agentes, estados de sucesso/erro de sincronização, tempo de resposta da API e disponibilidade. O operador percebe primeiro o estado global do sistema e só depois aprofunda na secção certa."
+							},
+							{
+								"phase": "Decisão 2",
+								"label": "Limites",
+								"title": "A configuração de campos Webview — onde o controlo do cliente termina e a responsabilidade da plataforma começa",
+								"description": "O Webview é o formulário de credenciais incorporável que os clientes colocam nos seus próprios produtos. O que esse formulário mostra — rótulos de campos, ordem, texto de placeholder, padrões de validação, se um campo está mascarado — é controlado aqui no BackOffice, não pelo código do cliente. O comportamento crítico de segurança permanece na plataforma Securibox (credenciais, MFA, sessões) — não é configurável pelo cliente por integração. A apresentação de campos é configurável: rótulos, posição, regex, obrigatório/opcional. Isto permite aos clientes personalizar a experiência numa tarde sem negociar a camada de confiança por integração. A Securibox mantém as garantias de segurança em todas as integrações sem excepções caso a caso."
+							},
+							{
+								"phase": "Decisão 3",
+								"label": "Estado",
+								"title": "Dois sinais de estado distintos por sincronização — porque podem divergir",
+								"description": "Cada operação de sincronização mostra dois valores de estado: estado do relatório de entrega e estado do processo de sincronização. Uma sincronização pode completar-se com sucesso enquanto o relatório de entrega falha. Uma sincronização pode terminar com \"nada novo para descarregar\" — um sucesso, não uma falha. Quatro estados de processo usam codificação de cor explícita em vistas de cartão e lista: verde (Terminado), vermelho (erros), laranja (estados de credencial/validação), amarelo (avisos). O detalhe por conta mostra a linha temporal completa do histórico de sincronização — data de sincronização, data de entrega, documentos detectados vs descarregados, ambos os campos de estado por linha — ao lado do alternador de agendamento automático. A pessoa a investigar uma sincronização falhada muitas vezes precisa de reagendar imediatamente; enterrar esse controlo nas definições do agente adicionaria uma mudança de contexto desnecessária."
+							},
+							{
+								"phase": "Decisão 4",
+								"label": "Visualização de dados",
+								"title": "O gráfico de estatísticas — ritmo agregado como contexto para sinais individuais",
+								"description": "O gráfico de séries temporais mostra rosa/vermelho como linha de base de actividade agregada em todos os agentes, com agentes específicos destacados em cores distintas quando seleccionados. O gráfico de área multi-camadas significa que o ritmo geral do sistema está sempre visível como contexto — anomalias individuais de agentes destacam-se contra ele. Um pico na actividade de um agente que coincide com o ritmo de base é comportamento esperado. O mesmo pico fora do ciclo normal é o sinal que vale a pena investigar. O gráfico torna essa distinção visível sem exigir vistas separadas."
+							}
+						],
+						"implementation": {
+							"design": [
+								{
+									"heading": "Marca, conceito e narrativa",
+									"items": [
+										"Logótipo e identidade visual SCA — uma identidade voltada para programadores e operadores dentro da família Securibox, relacionada com o Cube mas claramente distinta do produto para consumidores.",
+										"Aplicação de marca: orientações e padrões no BackOffice, Webview e página de destino pública.",
+										"Página de destino e posicionamento: como CloudAgents e o produto API são apresentados a audiências técnicas e de operações — clareza e credibilidade antes de UI densa."
+									]
+								},
+								{
+									"heading": "Experiência de produto",
+									"items": [
+										"Arquitectura de informação do BackOffice: três trabalhos de topo mantidos separados (agentes, suporte a sincronizações, permissões); dashboard como instantâneo curto de saúde agregada antes de aprofundar.",
+										"Gestão de agentes: navegação, filtragem e vistas de detalhe em escala; modelo de configuração de campos para integrações (rótulos, tipos, validação) como superfície de design.",
+										"Investigação de sincronização: duas dimensões de estado (relatório de entrega vs processo), vocabulário de cor partilhado, histórico por conta com controlos onde a depuração acontece — incluindo reagendar sem sair do contexto.",
+										"Estatísticas: vista de séries temporais em que a actividade agregada permanece visível como fundo quando agentes específicos são destacados.",
+										"Webview incorporável: apresentação configurável de campos (rótulos, ordem, placeholders, validação) vs comportamento de segurança da plataforma; incorporação white-label em produtos de clientes.",
+										"Interface de operador: tema escuro e claro, densidade e legibilidade para sessões longas — distinta de uma UI de marketing para consumidores."
+									]
+								}
+							],
+							"code": [
+								{
+									"heading": "O que foi construído",
+									"items": [
+										"Stack: UIs do BackOffice e Webview em React com Vite; dados de APIs HTTP — atualização de estado na navegação e ao atualizar a página (não descrito como push em tempo real).",
+										"Dashboard: métricas agregadas e indicadores de saúde da API.",
+										"CloudAgents: grelha e lista com sistema de filtro (Tipo, Utilização, Ordenação, Disponibilidade, Estado, Categoria); detalhe de agente com visualização de actividade de sincronização.",
+										"Configuração de agentes: modal de configuração de campos com tipo e validação por campo; FR/EN/PT no BackOffice.",
+										"Suporte: vistas em cartão e lista com detalhe do histórico de sincronização por conta.",
+										"Estatísticas: gráfico de área multi-camadas com seleção de agente.",
+										"Permissões: utilizadores, equipas, clientes API e gestão de certificados na UI (fluxos no produto, não emissão completa ou ciclo de vida PKI).",
+										"Webview: fluxos de credenciais e revogação sobre APIs HTTP; validação e tratamento de erros no cliente; i18n FR/EN.",
+										"Perfil, alternador de tema claro/escuro, restantes elementos de interface multilingues do BackOffice."
+									]
+								}
+							]
+						},
+						"tradeoffsLearnings": [
+							"O BackOffice foi concebido para suportar a configuração e gestão de agentes. Cada secção é internamente coerente, enquanto as relações entre elas permanecem intencionalmente implícitas.",
+							"Algumas ligações são naturalmente descobertas. *CloudAgents* e *Statistiques*, por exemplo, estão fortemente ligadas — os utilizadores podem transitar de um agente individual para as suas estatísticas numa vista isolada, e regressar facilmente. O *Support* opera ao nível da conta, e a transição entre suporte e gestão de conta é suficientemente direta para não necessitar de ligações explícitas.",
+							"Esta estrutura reflete a construção original do produto. Hoje, poderia evoluir para melhor se alinhar com a sua utilização atual — deslocando o BackOffice para um fluxo centrado no suporte como ponto de entrada principal, com a configuração de agentes e as permissões a tornarem-se caminhos secundários."
+						]
+					},
+					"slug": "sca-cloudagents"
 				},
 				{
-				  "url": "https://accounts.securibox.eu/id/register",
-				  "label": "Securibox ID — Autenticação",
-				  "role": "UX de identidade, fluxos de registo"
+					"period": "2019",
+					"status": "lançado",
+					"title": "Me - Conta Securibox",
+					"subtitle": "Identidade e arquitectura de conta entre produtos — uma camada de conta a servir todo o ecossistema Securibox",
+					"role": "Designer de Produto Técnico Principal",
+					"tools": "Figma · UX de Conta",
+					"dimensions": "Dimensões 3, 5",
+					"highlight": "Concepção do hub de gestão de conta que dá aos utilizadores controlo sobre o seu perfil, preferências e dados em todo o ecossistema Securibox.",
+					"results": [
+						"Definições de conta unificadas em todos os produtos",
+						"Gestão de perfil e preferências",
+						"Única fonte de verdade para dados de utilizador",
+						"Consistência de dados sem fragmentação específica de produto"
+					],
+					"references": {
+						"links": [
+							{
+								"url": "https://me.securibox.eu",
+								"label": "Securibox Me - Gestão de conta",
+								"role": "Gestão de conta"
+							}
+						]
+					},
+					"caseStudy": {
+						"businessProblem": "À medida que o ecossistema Securibox crescia, os utilizadores não tinham um local central para gerir o seu perfil, preferências ou contas ligadas. Cada produto operava isoladamente, criando fricção e fragmentação de dados.",
+						"strategicDecision": {
+							"intro": "O desafio da conta:",
+							"question": "Como podemos dar aos utilizadores uma única casa para a sua conta enquanto mantemos cada experiência de produto focada e descomplicada?"
+						},
+						"process": [
+							{
+								"phase": "Fase 1",
+								"label": "Estratégia",
+								"title": "Conceito de hub de conta",
+								"description": "Definição do âmbito da gestão centralizada de conta — perfil, preferências, contas ligadas — sem duplicar definições específicas de produto."
+							},
+							{
+								"phase": "Fase 2",
+								"label": "Design",
+								"title": "Experiência de conta unificada",
+								"description": "Concepção do hub Me como uma única casa para controlo de conta, integrado no Cube, SCA, RH e portais de clientes."
+							}
+						],
+						"implementation": {
+							"design": [
+								{
+									"heading": "O que foi concebido",
+									"items": [
+										"Arquitectura de informação para um hub central: perfil, preferências e contas ligadas sem duplicar definições específicas de produto.",
+										"Um único modelo mental de conta entre Cube, SCA, RH e portais de clientes para os utilizadores reconhecerem uma camada de identidade ao mudar de produto."
+									]
+								}
+							],
+							"code": [
+								{
+									"heading": "O que foi construído",
+									"items": [
+										"O hub Me em produção (me.securibox.eu) implementa a especificação em coordenação com engenharia; a UI de conta existe também nas bases de código de cada produto, com propriedade e cadência de lançamento diferentes por equipa."
+									]
+								}
+							]
+						}
+					},
+					"slug": "me-securibox-account"
 				},
 				{
-				  "url": "https://me.securibox.eu",
-				  "label": "Me - Conta Securibox",
-				  "role": "Gestão de conta"
+					"period": "2017",
+					"status": "lançado",
+					"title": "Securibox ID",
+					"subtitle": "Autenticação e registo críticos de segurança — equilibrar conversão, confiança e acessibilidade WCAG no primeiro momento em que os utilizadores encontram a plataforma",
+					"role": "Designer de Produto Técnico Principal",
+					"tools": "Figma · React · Vite · Acessibilidade (WCAG)",
+					"dimensions": "Dimensões 3, 5",
+					"highlight": "Concepção da experiência central de autenticação usada por todos os produtos Securibox — uma única camada de identidade consistente em todo o ecossistema.",
+					"results": [
+						"Integração OAuth Google e Microsoft",
+						"Fluxos de registo e login consistentes em todo o ecossistema",
+						"Formulários de autenticação conformes com WCAG",
+						"Única identidade em todos os produtos Securibox"
+					],
+					"references": {
+						"links": [
+							{
+								"url": "https://accounts.securibox.eu/id/register",
+								"label": "Securibox ID",
+								"role": "UX de identidade, fluxos de registo"
+							}
+						]
+					},
+					"caseStudy": {
+						"businessProblem": "Todos os produtos Securibox requeriam autenticação. Sem uma camada central de identidade, os utilizadores enfrentavam registos repetidos e fluxos inconsistentes em todo o ecossistema, erodindo a confiança.",
+						"strategicDecision": {
+							"intro": "A questão da identidade:",
+							"question": "Como tornar a autenticação num ponto de entrada de confiança para uma plataforma unificada, e não num portão em cada produto individual?"
+						},
+						"process": [
+							{
+								"phase": "Fase 1",
+								"label": "Fluxos",
+								"title": "Design de UX de identidade",
+								"description": "Concepção de fluxos OAuth (Google, Microsoft) e de fluxos de registo para consistência entre produtos."
+							},
+							{
+								"phase": "Fase 2",
+								"label": "Acessibilidade",
+								"title": "Autenticação conforme RGPD",
+								"description": "Garantia de que formulários e fluxos de autenticação cumpriam os padrões RGPD — crítico para clientes empresariais."
+							}
+						],
+						"implementation": {
+							"design": [
+								{
+									"heading": "O que foi concebido",
+									"items": [
+										"Caminhos OAuth (Google, Microsoft) e registo por e-mail como primeiro passo consistente para o ecossistema Securibox.",
+										"Registo e recuperação moldados para a autenticação parecer um ponto de entrada acolhedor, não um portão separado por produto.",
+										"Textos e consentimentos alinhados com o RGPD para expectativas empresariais."
+									]
+								}
+							],
+							"code": [
+								{
+									"heading": "O que foi construído",
+									"items": [
+										"UI de produção em React (Vite): redirecionamentos OAuth, registo e início de sessão com e-mail/palavra-passe, recuperação e URLs de retorno entre produtos com validação no cliente alinhada às expectativas do servidor.",
+										"Formulários controlados, erros explícitos e ordem de foco orientada a WCAG para resultados previsíveis em revisão.",
+										"Uma estrutura de interface partilhada para os produtos dependentes herdarem o mesmo comportamento de teclado, padrões de erro e sinais de confiança."
+									]
+								}
+							]
+						},
+						"skillsDemonstrated": "UX de autenticação · Consistência entre produtos",
+						"tradeoffsLearnings": "A autenticação é muitas vezes tratada como um pensamento posterior. A centralidade no sistema de design garantiu que cada produto herdasse a mesma linha de base de confiança.",
+						"quote": {
+							"title": "Uma identidade em toda a plataforma.",
+							"subtitle": "Autenticação que parece um acolhimento, não um ponto de controlo."
+						}
+					},
+					"slug": "securibox-id"
 				},
 				{
-				  "url": "https://rh.securibox.eu",
-				  "label": "RH — Distribuição de recibos de salário",
-				  "role": "Design de produto"
+					"period": "2017",
+					"status": "lançado",
+					"title": "RH — Distribuição de Recibos de Salário",
+					"subtitle": "Plataforma B2B de recibos de salário de dois lados — operações em massa de RH de um lado, acesso seguro de empregados do outro, com conformidade regulamentar integrada em todos os fluxos",
+					"role": "Designer de Produto",
+					"tools": "Figma",
+					"dimensions": "Dimensões 1, 4",
+					"highlight": "Concepção e desenvolvimento de uma aplicação sobre as soluções Securibox para responder à norma francesa de 2017: recibos de salário digitais por defeito, com direito de opt-out dos empregados e entrega segura de documentos.",
+					"results": [
+						"Fluxos de utilizador que traduzem a norma de 2017 em escolhas claras de opt-in/opt-out",
+						"Arquitectura de informação para entrega segura de recibos de salário",
+						"Design de produto white-label alimentado pelas soluções Securibox"
+					],
+					"references": {
+						"links": [
+							{
+								"url": "https://rh.securibox.eu",
+								"label": "Portal RH",
+								"role": "Design de produto"
+							}
+						]
+					},
+					"caseStudy": {
+						"businessProblem": "Em 2017, a França autorizou os empregadores a emitir recibos de salário em formato electrónico por defeito. Os empregadores devem informar os empregados mas não precisam de permissão para mudar. Os empregados mantêm o direito legal de opt-out e pedir papel. A Securibox precisava de um produto construído sobre as suas soluções existentes — recolha, análise e entrega segura de documentos — para apoiar esta norma enquanto garante acesso confidencial e de longo prazo.",
+						"strategicDecision": {
+							"intro": "A questão de design:",
+							"question": "Como responder à norma de 2017 — recibos de salário digitais por defeito, opt-out de papel para empregados — com um produto que garante acesso seguro, pessoal e de longo prazo?"
+						},
+						"process": [
+							{
+								"phase": "Fase 1",
+								"label": "Fundação",
+								"title": "Mapeamento das soluções Securibox",
+								"description": "Identificação de como as soluções existentes de documentos e entrega segura da Securibox poderiam servir o caso de uso de recibos de salário — recolha, análise e acesso digital."
+							},
+							{
+								"phase": "Fase 2",
+								"label": "Conformidade",
+								"title": "Norma e necessidades do utilizador",
+								"description": "Mapeamento do quadro legal de 2017: electrónico por defeito, direito de opt-out dos empregados, obrigações mensais dos empregadores."
+							},
+							{
+								"phase": "Fase 3",
+								"label": "Design",
+								"title": "Experiência do portal RH",
+								"description": "Concepção do portal RH sobre a Securibox — entrega segura de documentos, acesso intuitivo ao digital — para PMEs francesas e os seus empregados."
+							}
+						],
+						"implementation": {
+							"design": [
+								{
+									"heading": "O que foi concebido",
+									"items": [
+										"Fluxos do lado do empregador e do empregado alinhados com a norma de 2017: digital por defeito, opt-out claro para papel e obrigações visíveis em linguagem simples.",
+										"Arquitectura de informação para entrega segura de recibos de salário e acesso pessoal a longo prazo; tom de confiança e estados de erro quando o acesso ou o consentimento falham."
+									]
+								}
+							],
+							"code": [
+								{
+									"heading": "O que foi construído",
+									"items": [
+										"Produto RH white-label sobre soluções Securibox: entrega segura de documentos e acesso implementados através das capacidades existentes da plataforma; trabalho de frontend de produção no âmbito deste papel, não emissão ou infraestrutura PKI personalizada."
+									]
+								}
+							]
+						},
+						"skillsDemonstrated": "Design de produto de plataforma · UX regulamentar · Entrega segura de documentos",
+						"tradeoffsLearnings": "Construir sobre soluções Securibox acelerou a entrega. A norma mudou o comportamento da noite para o dia — a aplicação tinha de parecer confiável desde o primeiro dia, com os empregados confiantes de que optar pelo digital não comprometeria o acesso ou a confidencialidade.",
+						"quote": {
+							"title": "Recibos de salário digitais para todos.",
+							"subtitle": "Soluções Securibox, construídas para a norma de 2017."
+						}
+					},
+					"slug": "rh-hr-payslip-distribution"
 				}
-			  ],
-			  "dribbble": [
-				{
-				  "url": "https://dribbble.com/shots/3440959-cube-securibox-eu",
-				  "label": "Cube — Securibox"
-				},
-				{
-				  "url": "https://dribbble.com/shots/3188588-sca-securibox-eu",
-				  "label": "SCA — Securibox CloudAgents"
-				}
-			  ]
-			},
-			"caseStudy": {
-			  "businessProblem": "À medida que a Securibox se expandiu além do serviço original de gestão de documentos para múltiplas soluções, cada produto surgiu isoladamente. Sem princípios partilhados, as inconsistências acumularam-se nas interfaces, comportamentos e expressão de marca — fragmentando a experiência e enfraquecendo a confiança numa plataforma que precisava de sentir-se como uma única empresa.",
-			  "strategicDecision": {
-				"intro": "Todas as decisões começaram com uma pergunta:",
-				"question": "Isto faz a Securibox sentir-se como uma única empresa de confiança — ou múltiplas ferramentas separadas?"
-			  },
-			  "process": [
-				{
-				  "phase": "Fase 1",
-				  "label": "Auditoria",
-				  "title": "Auditoria de Marca e Experiência",
-				  "description": "Mapeei todos os pontos de contacto — portais, aplicações móveis, e-mails, onboarding e ferramentas internas. Avaliei a consistência visual e de UX para identificar riscos de fragmentação."
-				},
-				{
-				  "phase": "Fase 2",
-				  "label": "Princípios",
-				  "title": "Princípios de Marca Unificados",
-				  "description": "Traduza a visão da empresa em quatro princípios accionáveis: Confiança através da Clareza, Precisão em Cada Interacção, Fluxo Sem Costuras, Acessível por Defeito."
-				},
-				{
-				  "phase": "Fase 3",
-				  "label": "Recursos",
-				  "title": "Biblioteca de Marca e Activos da Empresa",
-				  "description": "Construí a biblioteca de marca no Sketch e defini recursos centrais da empresa — logótipo, apresentações, documentação e modelos. Mais tarde migrei o sistema para Figma para melhorar a colaboração e escalabilidade."
-				},
-				{
-				  "phase": "Fase 4",
-				  "label": "Implementação",
-				  "title": "Linguagem de Design em Produção",
-				  "description": "Implementei a linguagem de design directamente em produção usando Gatsby e regras de configuração Bootstrap. O Bootstrap foi escolhido intencionalmente para reduzir a sobrecarga de documentação e simplificar a adopção — criando um sistema partilhado para designers e programadores."
-				},
-				{
-				  "phase": "Fase 5",
-				  "label": "Alinhamento",
-				  "title": "Alinhamento Contínuo e Medição",
-				  "description": "Estabeleci um ciclo contínuo para manter a estratégia, execução e resultados alinhados, garantindo que a marca unificada evolui de forma consistente à medida que equipas e produtos crescem."
-				}
-			  ],
-			  "implementation": "O sistema de marca foi inicialmente construído no Sketch e mais tarde migrado para Figma. Nessa fase, os activos centrais da empresa — incluindo o logótipo, apresentações e documentação — já estavam normalizados.\n\nTraduza o sistema de design directamente para produção usando Gatsby, definindo regras de configuração Bootstrap para codificar a marca. O Bootstrap foi escolhido intencionalmente para minimizar a sobrecarga de documentação e simplificar a adopção e suporte nas equipas.\n\nA lógica de aplicação foi construída, com consistência aplicada em cube.securibox.eu, sca.securibox.eu e portais de clientes white-label.",
-			  "resultsMetrics": [
-				"Consistência de marca melhorada em todos os pontos de contacto virados para o cliente",
-				"Implementação React/Redux/Gatsby com foco em desempenho e acessibilidade (WCAG)",
-				"Melhor alinhamento design-desenvolvimento — menos iterações de entrega por componente",
-				"Percepção reforçada de uma plataforma coesa e fiável junto de clientes empresariais",
-				"Tempo de conclusão de tarefas reduzido"
-			  ],
-			  "tradeoffsLearnings": "Priorizar orientações e princípios partilhados em vez de floreios visuais significou reduzir algumas iterações iniciais de design para garantir adopção.\n\nA unificação provou ser tanto cultural como de design. A identidade foi construída para permanecer resiliente — garantindo consistência mesmo quando as equipas evoluem.",
-			  "quote": {
-				"title": "Defina o que importa, reduza o espaço entre design e produção.",
-				"subtitle": "Menos documentação, menos entregas. O Bootstrap foi uma escolha estratégica, não um atalho."
-			  }
-			},
-			"slug": "securibox-unified-identity"
-		  },
-		  {
-			"period": "2015",
-			"status": "lançado",
-			"title": "Cube - Controle os seus dados",
-			"role": "Designer de Produto Técnico Principal e Desenvolvimento Frontend",
-			"tools": "Figma · React · Gatsby · Acessibilidade (WCAG)",
-			"subtitle": "Tornar a entrega de credenciais segura e que vale a pena — demonstrando uma tecnologia",
-			"dimensions": "Consumidor · Confiança · Sistemas",
-			"highlight": "O Cube pede aos utilizadores que entreguem credenciais de login das suas contas bancárias, telecomunicações, seguros e retalho para que agentes automatizados recolham documentos em seu nome. O problema de design: tornar algo intrinsecamente invasivo seguro, claro e que vale a pena — em 319 integrações, concebido e construído em produção.",
-			"results": [
-			  "Integrações de agentes em múltiplos sectores: banca, utilities, RH, retalho, ...",
-			  "Categorias de documentos expostas através de uma taxonomia única",
-			  "Destinos de sincronização na cloud — Securibox, Google Drive, OneDrive — arquitectura de pastas unificada",
-			  "Modos de vista em lista e cartão do mesmo sistema de componentes",
-			  "Mobile concebido como coluna única com navegação por separadores inferiores, não apenas uma versão responsiva reduzida.",
-			  "Bilingue Francês/Inglês em todo o lado"
-			],
-			"references": {
-			  "links": [
-				{
-				  "url": "https://cube.securibox.eu",
-				  "label": "Cube - Controle os seus dados",
-				  "role": "Sub-marca, design de produto, frontend"
-				}
-			  ],
-			  "dribbble": [
-				{
-				  "url": "https://dribbble.com/shots/3440959-cube-securibox-eu",
-				  "label": "Design Cube"
-				}
-			  ]
-			},
-			"caseStudy": {
-			  "processHeading": "Decisões chave",
-			  "tradeoffsHeading": "Compromissos e Aprendizagens",
-			  "businessProblem": "O Cube pede aos utilizadores que entreguem credenciais de login das suas contas bancárias, telecomunicações, seguros e retalho para que agentes automatizados recolham documentos em seu nome. A tecnologia funciona. O problema de design é o momento de entregar essas credenciais: tornar algo intrinsecamente invasivo seguro, claro e que vale a pena. Tudo o resto decorre disso.\n\nConcebi tanto o produto para consumidores (Cube) como a experiência de integração para programadores (SCA) para a mesma tecnologia subjacente. Um público precisava de confiança emocional e simplicidade. O outro precisava de flexibilidade de API e precisão. Ambos foram lançados em código de produção.",
-			  "strategicDecision": {
-				"intro": "Os utilizadores já queriam automatizar. A única pergunta que importava:",
-				"question": "Posso confiar em si com as minhas credenciais?"
-			  },
-			  "process": [
-				{
-				  "phase": "Decisão 1",
-				  "label": "Confiança",
-				  "title": "Credenciais e estado de sincronização na mesma ecrã — espacialmente separados, não atrás de um separador",
-				  "description": "O instinto é colocar o estado de sincronização num ecrã separado. Em vez disso, as credenciais ficam à esquerda, o estado de sincronização à direita — mesma vista, zonas diferentes. Os utilizadores que regressam para verificar um agente não devem navegar para confirmar que funcionou. O botão MFA é persistente no canto superior direito, sempre acessível sem perturbar o formulário. O caminho de migalhas da pasta aparece também aqui — ver exactamente onde os documentos vão aterrar, no momento de guardar as credenciais, reduz a ansiedade de que os dados vão para um local desconhecido."
-				},
-				{
-				  "phase": "Decisão 2",
-				  "label": "Escala",
-				  "title": "Duas vistas para 319 agentes — ambas necessárias",
-				  "description": "Um utilizador que sabe exactamente qual o fornecedor que quer precisa de uma lista rápida com estado à vista. Um utilizador em exploração precisa de densidade de logótipos — para sentir a escala do que é possível. Vista em lista: nome do fornecedor, tipos de documentos, última sincronização e estado de ligação numa linha. Vista em cartão: mesmos dados, grelha mais densa, priorizando a identidade do fornecedor e a acção de adicionar. A barra lateral de filtro é idêntica em ambos os modos — mesmo sistema, duas expressões. O selo \"Indisponível\" foi uma decisão tardia: os testes mostraram que os utilizadores não conseguiam distinguir funcional de não configurado apenas com um ponto de estado, por isso foi adicionado o texto explícito ao lado do sinal de cor."
-				},
-				{
-				  "phase": "Decisão 3",
-				  "label": "Legibilidade",
-				  "title": "A terceira coluna do dashboard — manter as origens legíveis",
-				  "description": "O dashboard tem três colunas: A Minha Colecção (documentos puxados pelo utilizador), Os Meus Agentes (configuração e estado), e Documentos RH enviados pelo empregador do utilizador. A tensão: o Cube é um produto que o utilizador controla. Os Documentos RH chegam sem acção do utilizador, da empresa. A decisão: mantê-los visíveis mas explicitamente rotulados e espacialmente separados — cabeçalho \"DOCUMENTOS RH\" — para que a origem seja sempre legível. A mesma lógica aplica-se ao explorador de ficheiros: pastas recolhidas pela Securibox, pastas do empregador e cloud pessoal (Google Drive, OneDrive) aparecem como irmãos sob a mesma raiz. Origens diferentes, vista unificada — nunca apresentadas como se viessem do mesmo lugar."
-				}
-			  ],
-			  "implementation": [
-				{
-				  "heading": "Página de destino",
-				  "items": [
-					"Site estático com Gatsby — carregamento rápido, SEO-friendly",
-					"Introduz o que são os agentes — coletores automatizados de documentos que se ligam aos seus fornecedores",
-					"Explica como funcionam os agentes — sincronização baseada em credenciais, categorias de documentos, destinos na cloud",
-					"Proposta de valor e confiança — concebida para construir compreensão antes de os utilizadores chegarem à aplicação, reduzindo a ansiedade da entrega de credenciais",
-					"Bilingue FR/EN com i18n — a língua segue a preferência do utilizador"
-				  ]
-				},
-				{
-				  "heading": "Aplicação",
-				  "items": [
-					"Construída em React",
-					"Sistema de componentes de cartão e lista de agentes com barra lateral de filtro partilhada (taxonomia de documentos, ordenação, alternar vista)",
-					"Formulário de credenciais com campos mascarados, tooltips de ajuda, alternar visibilidade de palavra-passe e acção MFA persistente",
-					"Painel de estado de sincronização com histórico de sincronização e contagem de documentos",
-					"Dashboard de 3 colunas e sua reorganização para mobile (coluna única, navegação por separadores inferiores)",
-					"Explorador de ficheiros com árvore de pastas e arquitectura de raiz multi-origem",
-					"Definições de aplicações ligadas (Google Drive, OneDrive, fluxos de revogação)",
-					"Bilingue FR/EN com i18n em todo o lado"
-				  ]
-				},
-				{
-				  "heading": "Marca",
-				  "items": [
-					"Identidade visual e marca Cube.",
-					"Orientações de marca Cube: utilização, espaçamento, tipografia, cor, hierarquia visual e padrões visuais.",
-					"Activos de marca Cube: logótipos, ícones, paletas de cores, tipografia e padrões visuais.",
-					"Aplicação de marca Cube: aplicação da marca à aplicação e página de destino."
-				  ]
-				}
-			  ],
-			  "tradeoffsLearnings": [
-				"A página de destino (cube.securibox.eu) introduz o que são os agentes e como funcionam — foi intencionalmente concebida ao lado da aplicação para lidar com essa camada inicial de compreensão.",
-				"Dentro da aplicação, existia antes um walkthrough passo a passo. Escolhi removê-lo para reduzir fricção e dar espaço aos utilizadores para explorar naturalmente. Em vez de forçar acções ou pedir compromisso imediato, a experiência permanece aberta e sem pressão — sem insistência em credenciais, sem urgência para configurar um agente.",
-				"Quando nenhum agente está configurado, a interface permanece intencionalmente minimalista, mostrando um único ponto de entrada claro: \"Configure o seu primeiro agente.\" Só após interagir com ele é que os utilizadores veem as opções disponíveis. Esta revelação progressiva mantém a experiência leve enquanto permite a descoberta.",
-				"O resultado é um fluxo que respeita o ritmo do utilizador, constrói confiança cedo e evita sobrecarregá-lo desde o início."
-			  ]
-			},
-			"slug": "cube-own-your-data"
-		  },
-		  {
-			"period": "2015",
-			"status": "lançado",
-			"title": "SCA - CloudAgents",
-			"subtitle": "Conceber a camada de operador para um produto API — da configuração de agentes à monitorização de sincronização em mais de 500 integrações",
-			"role": "Designer de Produto Técnico Principal e Desenvolvimento Frontend",
-			"tools": "Figma · React · Bootstrap · Acessibilidade (WCAG)",
-			"dimensions": "Programador · Operações · Sistemas",
-			"highlight": "A SCA é a infraestrutura em que o Cube funciona. Concebi ambos os lados da mesma tecnologia: o produto para consumidores onde os utilizadores recolhem os seus documentos e a plataforma de operador onde os programadores configuram integrações e as equipas de operações as monitorizam em escala.",
-			"results": [
-			  "Mais de 500 integrações de fornecedores acessíveis através de uma única API",
-			  "BackOffice com 6 secções operacionais, gestão de permissões baseada em funções, tema escuro e claro",
-			  "BackOffice multilingue — Francês, Inglês, Português",
-			  "Webview white-label implementado em portais de clientes empresariais"
-			],
-			"references": {
-			  "links": [
-				{
-				  "url": "https://www.securibox.eu/solutions/sca/",
-				  "label": "Cloud Agents",
-				  "role": "Design de produto API, página de destino"
-				}
-			  ],
-			  "dribbble": [
-				{
-				  "url": "https://dribbble.com/shots/3188588-sca-securibox-eu",
-				  "label": "Design SCA"
-				}
-			  ]
-			},
-			"caseStudy": {
-			  "processHeading": "Decisões chave",
-			  "tradeoffsHeading": "Compromissos e Aprendizagens",
-			  "businessProblem": "A SCA é a infraestrutura em que o Cube funciona — mas os seus utilizadores são programadores e equipas de operações, não consumidores. Os programadores precisam de integrar a recolha de documentos nos seus próprios produtos. As equipas de operações precisam de monitorizar centenas de agentes em milhares de contas em tempo real. Dois trabalhos completamente diferentes na mesma plataforma, ambos exigindo clareza em escala.",
-			  "strategicDecision": {
-				"intro": "O desafio do operador:",
-				"question": "Como conceber uma plataforma que sirva programadores a configurar integrações e equipas de operações a depurar falhas de sincronização — sem colapsar dois trabalhos muito diferentes numa única interface confusa?"
-			  },
-			  "process": [
-				{
-				  "phase": "Decisão 1",
-				  "label": "Navegação",
-				  "title": "Navegação em três secções — separando os trabalhos ao nível superior",
-				  "description": "A página inicial do BO apresenta três caminhos explícitos: CloudAgents (gerir todos os agentes), Données de support (monitorizar e depurar sincronizações), Configuration des permissions (gerir utilizadores e equipas). A decisão de separá-los ao nível da navegação — não atrás de portões de permissão — veio dos diferentes modos mentais que servem. Um administrador a editar definições de campos de agentes nunca deve aterrar acidentalmente na monitorização de sincronização. O dashboard abaixo mostra a saúde agregada em 10 segundos: contagem de agentes, estados de sucesso/erro de sincronização, tempo de resposta da API e disponibilidade. Conheça primeiro o estado do sistema, depois vá para a secção certa."
-				},
-				{
-				  "phase": "Decisão 2",
-				  "label": "Limites",
-				  "title": "A configuração de campos Webview — onde o controlo do cliente termina e a responsabilidade da plataforma começa",
-				  "description": "O Webview é o formulário de credenciais incorporável que os clientes colocam nos seus próprios produtos. O que esse formulário mostra — rótulos de campos, ordem, texto de placeholder, padrões de validação, se um campo está mascarado — é controlado aqui no BackOffice, não pelo código do cliente. O comportamento crítico de segurança é fixo: transmissão de credenciais, tratamento de MFA, gestão de sessão. A apresentação de campos é configurável: rótulos, posição, regex, obrigatório/opcional. Isto permite aos clientes marcar a experiência numa tarde sem negociar a camada de confiança por integração. A Securibox mantém as garantias de segurança em todas as integrações sem excepções caso a caso."
-				},
-				{
-				  "phase": "Decisão 3",
-				  "label": "Estado",
-				  "title": "Dois sinais de estado distintos por sincronização — porque podem divergir",
-				  "description": "Cada operação de sincronização mostra dois valores de estado: estado do relatório de entrega e estado do processo de sincronização. Uma sincronização pode completar-se com sucesso enquanto o relatório de entrega falha. Uma sincronização pode terminar com \"nada novo para descarregar\" — um sucesso, não uma falha. Quatro estados de processo usam codificação de cor explícita em vistas de cartão e lista: verde (Terminado), vermelho (erros), laranja (estados de credencial/validação), amarelo (avisos). O detalhe por conta mostra a linha temporal completa do histórico de sincronização — data de sincronização, data de entrega, documentos detectados vs descarregados, ambos os campos de estado por linha — ao lado do alternador de agendamento automático. A pessoa a investigar uma sincronização falhada muitas vezes precisa de reagendar imediatamente; enterrar esse controlo nas definições do agente adicionaria uma mudança de contexto desnecessária."
-				},
-				{
-				  "phase": "Decisão 4",
-				  "label": "Visualização de dados",
-				  "title": "O gráfico de estatísticas — ritmo agregado como contexto para sinais individuais",
-				  "description": "O gráfico de séries temporais mostra rosa/vermelho como linha de base de actividade agregada em todos os agentes, com agentes específicos destacados em cores distintas quando seleccionados. O gráfico de área multi-camadas significa que o ritmo geral do sistema está sempre visível como contexto — anomalias individuais de agentes destacam-se contra ele. Um pico na actividade de um agente que coincide com o ritmo de base é comportamento esperado. O mesmo pico fora do ciclo normal é o sinal que vale a pena investigar. O gráfico torna essa distinção visível sem exigir vistas separadas."
-				}
-			  ],
-			  "implementation": [
-				{
-				  "heading": "BackOffice",
-				  "items": [
-					"Frontend completo do BO em todas as seis secções — dashboard com métricas agregadas e indicadores de saúde da API",
-					"Grelha e lista de CloudAgents com sistema de filtro (Tipo, Utilização, Ordenação, Disponibilidade, Estado, Categoria)",
-					"Detalhe de agente com gráfico de actividade de sincronização e decomposições de estado",
-					"Modal de configuração de campos de agente (multilingue FR/EN/PT, tipo e validação por campo)",
-					"Secção de suporte em vista de cartão e lista com detalhe do histórico de sincronização por conta",
-					"Gráfico de estatísticas de área multi-camadas com selecção de agente",
-					"Configuração de permissões (utilizadores, equipas, clientes API, gestão de certificados)",
-					"Perfil e alternador de tema escuro/claro"
-				  ]
-				},
-				{
-				  "heading": "Webview",
-				  "items": [
-					"Formulário de credenciais incorporável — clientes incorporam nos seus próprios produtos",
-					"White-label — rótulos de campos, placeholders, validação configuráveis por integração"
-				  ]
-				},
-				{
-				  "heading": "Marca",
-				  "items": [
-					"Logótipo e identidade visual SCA — distinta dentro da família de produtos Securibox",
-					"Orientações de marca aplicadas no BackOffice, Webview e página de destino",
-					"Conceito e design da página de destino — introdução do produto para programadores e operadores"
-				  ]
-				}
-			  ],
-			  "tradeoffsLearnings": [
-				"O BackOffice foi concebido para suportar a configuração e gestão de agentes. Cada secção é internamente coerente, enquanto as relações entre elas permanecem intencionalmente implícitas.",
-				"Algumas ligações são naturalmente descobertas. *CloudAgents* e *Statistiques*, por exemplo, estão fortemente ligadas — os utilizadores podem transitar de um agente individual para as suas estatísticas numa vista isolada, e regressar facilmente.O *Support* opera ao nível da conta, e a transição entre suporte e gestão de conta é suficientemente direta para não necessitar de ligações explícitas.",
-				"Esta estrutura reflete a construção original do produto. Hoje, poderia evoluir para melhor se alinhar com a sua utilização atual — deslocando o BackOffice para um fluxo centrado no suporte como ponto de entrada principal, com a configuração de agentes e as permissões a tornarem-se caminhos secundários."
-			  ]
-			},
-			"slug": "sca-cloudagents"
-		  },
-		  {
+			]
+		},
+		"ConnectLime": {
+			"context": "Criação da marca da agência e do site desde o zero — seguida de entrega de produtos de clientes através do estúdio.",
 			"period": "2019",
-			"status": "lançado",
-			"title": "Me - Conta Securibox",
-			"subtitle": "Identidade e arquitectura de conta entre produtos — uma camada de conta a servir todo o ecossistema Securibox",
-			"role": "Designer de Produto Técnico Principal",
-			"tools": "Figma · UX de Conta",
-			"dimensions": "Dimensões 3, 5",
-			"highlight": "Concebi o hub de gestão de conta que dá aos utilizadores controlo sobre o seu perfil, preferências e dados em todo o ecossistema Securibox.",
-			"results": [
-			  "Definições de conta unificadas em todos os produtos",
-			  "Gestão de perfil e preferências",
-			  "Única fonte de verdade para dados de utilizador",
-			  "Consistência de dados sem fragmentação específica de produto"
-			],
-			"references": {
-			  "links": [
+			"cases": [
 				{
-				  "url": "https://me.securibox.eu",
-				  "label": "Securibox Me - Gestão de conta",
-				  "role": "Gestão de conta"
-				}
-			  ]
-			},
-			"caseStudy": {
-			  "businessProblem": "À medida que o ecossistema Securibox crescia, os utilizadores não tinham um local central para gerir o seu perfil, preferências ou contas ligadas. Cada produto operava isoladamente, criando fricção e fragmentação de dados.",
-			  "strategicDecision": {
-				"intro": "O desafio da conta:",
-				"question": "Como podemos dar aos utilizadores uma única casa para a sua conta enquanto mantemos cada experiência de produto focada e descomplicada?"
-			  },
-			  "process": [
-				{
-				  "phase": "Fase 1",
-				  "label": "Estratégia",
-				  "title": "Conceito de hub de conta",
-				  "description": "Defini o âmbito da gestão centralizada de conta — perfil, preferências, contas ligadas — sem duplicar definições específicas de produto."
+					"period": "2019",
+					"status": "lançado",
+					"title": "Site e Marca ConnectLime",
+					"subtitle": "Agência digital B2B · identidade de marca + web",
+					"role": "Designer UX/UI e Desenvolvedor de Marca · 2019",
+					"tools": "Figma · Gatsby · Orientações de Marca",
+					"dimensions": "Dimensões 1, 2, 3",
+					"highlight": "Criação de identidade de marca completa e site desde o conceito até à implementação — clareza e confiança para decisores não técnicos.",
+					"results": [
+						"Definição profunda de identidade de marca — logótipo, sistema de cores, tipografia",
+						"Estratégia de conteúdo e arquitectura de informação",
+						"Presença profissional e maior geração de leads",
+						"Bilingue FR/EN com adaptação cultural"
+					],
+					"references": {
+						"links": [
+							{
+								"url": "https://www.connectlime.com/en/",
+								"label": "ConnectLime — estúdio de produto digital",
+								"role": "Identidade de marca, site, bilingue"
+							}
+						],
+						"clients": [
+							{
+								"url": "https://www.connectlime.com/en/work/GererMaBoite",
+								"label": "Gerer Ma Boite — POS para empreendedores",
+								"role": "Supervisão de design sénior e UI final · adquirido pela CEGID"
+							},
+							{
+								"url": "https://www.connectlime.com/work/HotelAppz/",
+								"label": "HotelAppz — plataforma CRM para hotéis",
+								"role": "Supervisão de design sénior"
+							},
+							{
+								"url": "https://www.assistarobase.fr",
+								"label": "Assist@ — gestão de vida administrativa",
+								"role": "Design de aplicação · marca e site público por terceiros · portal de empregador corre em Securibox"
+							}
+						],
+						"dribbble": [
+							{
+								"url": "https://dribbble.com/shots/7212848-CONNECTLIME-Createurs-de-solutions-digitales",
+								"label": "Design ConnectLime"
+							}
+						]
+					},
+					"caseStudy": {
+						"businessProblem": "A ConnectLime, agência digital para startups e PMEs, carecia de diferenciação e confiança. Apresentação de serviços fragmentada e navegação fraca significava que potenciais clientes saíam sem engajar.",
+						"strategicDecision": {
+							"intro": "O princípio orientador:",
+							"question": "Como equilibrar credibilidade com acessibilidade para PMEs a escolher um parceiro digital?"
+						},
+						"process": [
+							{
+								"phase": "Fase 1",
+								"label": "Investigação",
+								"title": "Auditoria de marca e análise de concorrentes",
+								"description": "Agências europeias de referência. Conteúdo focado em resultados preferido pelo público-alvo."
+							},
+							{
+								"phase": "Fase 2",
+								"label": "Design",
+								"title": "Estratégia de conteúdo, arquitectura e identidade de marca",
+								"description": "Estratégia de conteúdo e arquitectura de informação. Definição profunda de identidade de marca: logótipo, sistema de cores, tipografia."
+							},
+							{
+								"phase": "Fase 3",
+								"label": "Construção",
+								"title": "Implementação do site",
+								"description": "Bilingue FR/EN com adaptação cultural. Sistema de temas adaptativo com detecção inteligente das preferências do utilizador."
+							}
+						],
+						"implementation": {
+							"design": [
+								{
+									"heading": "O que foi concebido",
+									"items": [
+										"Orientações de marca, especificações ao nível de componente e estratégia de conteúdo bilingue para o cliente poder evoluir o site sem partir o sistema."
+									]
+								}
+							],
+							"code": [
+								{
+									"heading": "O que foi construído",
+									"items": [
+										"Site de marketing construído com Gatsby e React: tratamento claro/escuro a partir da preferência do utilizador, i18n FR/EN, entrega do repositório para propriedade do cliente."
+									]
+								}
+							]
+						},
+						"resultsMetrics": [
+							"Presença digital profissional estabelecida desde o zero",
+							"Bilingue FR/EN com i18n — culturalmente adaptado, não apenas traduzido",
+							"Sistema de temas adaptativo lançado em produção"
+						],
+						"tradeoffsLearnings": "Prioridade à simplicidade em detrimento da densidade de funcionalidades — evitou-se acrescentar conteúdo que diluiria a mensagem. O alinhamento de partes interessadas em 'comunicar profissionalismo através da simplicidade' acelerou as decisões.",
+						"quote": {
+							"title": "Comunique profissionalismo através da simplicidade.",
+							"subtitle": "Clareza e confiança para decisores não técnicos a escolher um parceiro digital."
+						}
+					},
+					"slug": "connectlime-website-brand"
 				},
 				{
-				  "phase": "Fase 2",
-				  "label": "Design",
-				  "title": "Experiência de conta unificada",
-				  "description": "Concebi o hub Me como uma única casa para controlo de conta, integrado no Cube, SCA, RH e portais de clientes."
-				}
-			  ]
-			},
-			"slug": "me-securibox-account"
-		  },
-		  {
-			"period": "2017",
-			"status": "lançado",
-			"title": "Securibox ID",
-			"subtitle": "Autenticação e registo críticos de segurança — equilibrar conversão, confiança e acessibilidade WCAG no primeiro momento em que os utilizadores encontram a plataforma",
-			"role": "Designer de Produto Técnico Principal",
-			"tools": "Figma · Acessibilidade (WCAG)",
-			"dimensions": "Dimensões 3, 5",
-			"highlight": "Concebi a experiência central de autenticação usada por todos os produtos Securibox — criando uma única camada de identidade consistente em todo o ecossistema.",
-			"results": [
-			  "Integração OAuth Google e Microsoft",
-			  "Fluxos de registo e login consistentes em todo o ecossistema",
-			  "Formulários de autenticação conformes com WCAG",
-			  "Única identidade em todos os produtos Securibox"
-			],
-			"references": {
-			  "links": [
-				{
-				  "url": "https://accounts.securibox.eu/id/register",
-				  "label": "Securibox ID",
-				  "role": "UX de identidade, fluxos de registo"
-				}
-			  ]
-			},
-			"caseStudy": {
-			  "businessProblem": "Todos os produtos Securibox requeriam autenticação. Sem uma camada central de identidade, os utilizadores enfrentavam registos repetidos e fluxos inconsistentes em todo o ecossistema, erodindo a confiança.",
-			  "strategicDecision": {
-				"intro": "A questão da identidade:",
-				"question": "Como tornar a autenticação como um ponto de entrada de confiança para uma plataforma unificada, não um portão em cada produto individual?"
-			  },
-			  "process": [
-				{
-				  "phase": "Fase 1",
-				  "label": "Fluxos",
-				  "title": "Design de UX de identidade",
-				  "description": "Concebi fluxos OAuth (Google, Microsoft) e fluxos de registo para consistência entre produtos."
+					"period": "2019",
+					"status": "lançado",
+					"title": "Gerer Ma Boite (GMB)",
+					"subtitle": "Plataforma SaaS de ponto de venda para empreendedores · adquirida pela CEGID",
+					"role": "Designer Sénior",
+					"tools": "Figma · AngularJS · Azure",
+					"dimensions": "Dimensões 2, 3, 4",
+					"highlight": "Actuação como Designer Sénior, com mentoria à equipa do projecto e intervenção para entregar a UI final. A plataforma foi mais tarde adquirida pela CEGID e integrada na sua oferta empresarial.",
+					"results": [
+						"Mentoria à equipa de produto nas fases de estratégia, marca e arquitectura",
+						"Entrega do design de UI final, com acabamento polido e coeso",
+						"Plataforma construída em ~8 semanas com frontend AngularJS e backend Azure robusto",
+						"Integrada com APIs Dropbox, Revolut, Stripe e SendGrid",
+						"Adquirida pela CEGID e integrada na sua solução empresarial"
+					],
+					"references": {
+						"links": [
+							{
+								"url": "https://www.connectlime.com/en/work/GererMaBoite",
+								"label": "Estudo de caso Gerer Ma Boite",
+								"role": "Supervisão de design sénior e UI final"
+							}
+						]
+					},
+					"slug": "gerer-ma-boite-gmb"
 				},
 				{
-				  "phase": "Fase 2",
-				  "label": "Acessibilidade",
-				  "title": "Autenticação conforme RGPD",
-				  "description": "Garantiu que formulários e fluxos de autenticação cumpriam os padrões RGPD — crítico para clientes empresariais."
-				}
-			  ],
-			  "skillsDemonstrated": "UX de autenticação · Consistência entre produtos",
-			  "tradeoffsLearnings": "A autenticação é muitas vezes tratada como um pensamento posterior. Torná-la central no sistema de design garantiu que cada produto herdasse a mesma linha de base de confiança.",
-			  "quote": {
-				"title": "Uma identidade em toda a plataforma.",
-				"subtitle": "Autenticação que parece um acolhimento, não um ponto de controlo."
-			  }
-			},
-			"slug": "securibox-id"
-		  },
-		  {
-			"period": "2017",
-			"status": "lançado",
-			"title": "RH — Distribuição de Recibos de Salário",
-			"subtitle": "Plataforma B2B de recibos de salário de dois lados — operações em massa de RH de um lado, acesso seguro de empregados do outro, com conformidade regulamentar integrada em todos os fluxos",
-			"role": "Designer de Produto",
-			"tools": "Figma",
-			"dimensions": "Dimensões 1, 4",
-			"highlight": "Concebi e desenvolvi uma aplicação sobre as soluções Securibox para responder à norma francesa de 2017: recibos de salário digitais por defeito, com direito de opt-out dos empregados e entrega segura de documentos.",
-			"results": [
-			  "Fluxos de utilizador que traduzem a norma de 2017 em escolhas claras de opt-in/opt-out",
-			  "Arquitectura de informação para entrega segura de recibos de salário",
-			  "Design de produto white-label alimentado pelas soluções Securibox"
-			],
-			"references": {
-			  "links": [
-				{
-				  "url": "https://rh.securibox.eu",
-				  "label": "Portal RH",
-				  "role": "Design de produto"
-				}
-			  ]
-			},
-			"caseStudy": {
-			  "businessProblem": "Em 2017, a França autorizou os empregadores a emitir recibos de salário em formato electrónico por defeito. Os empregadores devem informar os empregados mas não precisam de permissão para mudar. Os empregados mantêm o direito legal de opt-out e pedir papel. A Securibox precisava de um produto construído sobre as suas soluções existentes — recolha, análise e entrega segura de documentos — para apoiar esta norma enquanto garante acesso confidencial e de longo prazo.",
-			  "strategicDecision": {
-				"intro": "A questão de design:",
-				"question": "Como responder à norma de 2017 — recibos de salário digitais por defeito, opt-out de papel para empregados — com um produto que garante acesso seguro, pessoal e de longo prazo?"
-			  },
-			  "process": [
-				{
-				  "phase": "Fase 1",
-				  "label": "Fundação",
-				  "title": "Mapeamento das soluções Securibox",
-				  "description": "Identifiquei como as soluções existentes de documentos e entrega segura da Securibox poderiam servir o caso de uso de recibos de salário — recolha, análise e acesso digital."
+					"period": "2018",
+					"status": "lançado",
+					"title": "HotelAppz",
+					"subtitle": "Plataforma CRM de nova geração para hotéis",
+					"role": "Supervisão de design sénior",
+					"tools": "Figma · React · Sistemas PMS",
+					"dimensions": "Dimensões 2, 3, 4",
+					"highlight": "Supervisão e mentoria de design sénior para uma plataforma CRM completa para hotéis. Acompanhamento da equipa em estratégia de produto, marca e desenvolvimento UX/UI.",
+					"results": [
+						"Supervisão do design de produto e da experiência do utilizador",
+						"Mentoria à equipa de design em arquitectura de informação e padrões de interacção",
+						"Garantia de que integrações com sistemas PMS mantinham consistência de UX",
+						"Feedback positivo de utilizadores destacou facilidade de uso e compreensão das necessidades dos hoteleiros"
+					],
+					"references": {
+						"links": [
+							{
+								"url": "https://www.connectlime.com/work/HotelAppz/",
+								"label": "Estudo de caso HotelAppz",
+								"role": "Supervisão de design sénior"
+							},
+							{
+								"url": "https://hoteltechreport.com/marketing/hotel-crm/hotelappz",
+								"label": "HotelAppz no Hotel Tech Report",
+								"role": "Perfil de produto e avaliações"
+							}
+						]
+					},
+					"slug": "hotelappz"
 				},
 				{
-				  "phase": "Fase 2",
-				  "label": "Conformidade",
-				  "title": "Norma e necessidades do utilizador",
-				  "description": "Mapeei o quadro legal de 2017: electrónico por defeito, direito de opt-out dos empregados, obrigações mensais dos empregadores."
+					"period": "2019",
+					"status": "lançado",
+					"title": "Assist@ — Gestão de Vida Administrativa",
+					"subtitle": "Gestão de vida e portal de empregados — corre em RH Securibox white-label)",
+					"role": "Designer de Produto",
+					"tools": "Figma · Design de aplicação",
+					"dimensions": "Dimensões 2, 4",
+					"highlight": "Implementação da experiência central da aplicação para esta startup francesa de RH. Concepção de micro-interacções e fluxos para melhorar a experiência do utilizador.",
+					"results": [
+						"Fluxos administrativos limpos",
+						"Micro-interacções e fluxos para melhorar a experiência do utilizador"
+					],
+					"references": {
+						"links": [
+							{
+								"url": "https://www.assistarobase.fr",
+								"label": "Assist@",
+								"role": "Design de aplicação"
+							}
+						]
+					},
+					"slug": "assist-admin-life-management"
+				}
+			]
+		},
+		"Earlier work": {
+			"context": "Outras propostas e conceitos premiados.",
+			"period": "2013–2016",
+			"cases": [
+				{
+					"period": "2016",
+					"status": "proposta",
+					"title": "Epaye — Folha de Salário Electrónica",
+					"subtitle": "Fintech · proposta (aplicação + página de destino)",
+					"role": "Designer de Produto e UX · 2016",
+					"tools": "Figma · Design de produto · Página de destino",
+					"dimensions": "Dimensões 1, 2, 3",
+					"highlight": "Conceito de produto e página de destino para uma solução fintech — folha de salário electrónica para todos.",
+					"results": [
+						"Conceito de produto e página de destino",
+						"Proposta de valor clara para adopção de folha de salário",
+						"Linguagem visual primeiro-confiança para fintech"
+					],
+					"references": {
+						"dribbble": [
+							{
+								"url": "https://dribbble.com/mariavaragilal",
+								"label": "Design Epaye"
+							}
+						],
+						"behance": [
+							{
+								"url": "https://www.behance.net/gallery/41258845/Epaye-la-paye-lectronique-pour-tous",
+								"label": "Epaye | Folha de Salário Electrónica"
+							}
+						]
+					},
+					"caseStudy": {
+						"businessProblem": "A Epaye — a folha de salário electrónica para todos — posiciona-se como o ponto de entrada ideal para iniciar a desmaterialização numa empresa. Simplifica e automatiza todos os passos de pagamento entre empregador e empregado. O desafio: construir uma identidade digital e produto desde o zero, enraizado numa dimensão central — relações humanas.",
+						"strategicDecision": {
+							"intro": "A questão de design:",
+							"question": "Como tornar a tecnologia de folha de salário acessível e confiável para decisores não técnicos?"
+						},
+						"process": [
+							{
+								"phase": "Fase 1",
+								"label": "Conceito",
+								"title": "Dimensão de marca — relações humanas",
+								"description": "Definição da marca em torno de uma dimensão central: a complexidade e beleza das interacções humanas na folha de salário."
+							},
+							{
+								"phase": "Fase 2",
+								"label": "Design",
+								"title": "Identidade digital e conceito de produto",
+								"description": "Conceito de produto e página de destino que visualiza relações humanas — uma marca e identidade digital construídas a partir desta base."
+							}
+						],
+						"tradeoffsLearnings": "Construído sobre um conceito novo: em vez de focar apenas em confiança ou adopção, a identidade assenta em relações humanas — tornando o abstracto tangível através de uma linguagem visual distinta. Uma aposta deliberada em destacar-se em vez de misturar-se num sector dominado por interfaces conservadoras.",
+						"quote": {
+							"title": "A folha de salário electrónica para todos.",
+							"subtitle": "O ponto de entrada ideal para iniciar a desmaterialização — uma marca que reflecte a complexidade e beleza das relações humanas."
+						}
+					},
+					"slug": "epaye-electronic-payroll"
 				},
 				{
-				  "phase": "Fase 3",
-				  "label": "Design",
-				  "title": "Experiência do portal RH",
-				  "description": "Concebi o portal RH sobre a Securibox — entrega segura de documentos, acesso intuitivo ao digital — para PMEs francesas e seus empregados."
-				}
-			  ],
-			  "skillsDemonstrated": "Design de produto de plataforma · UX regulamentar · Entrega segura de documentos",
-			  "tradeoffsLearnings": "Construir sobre soluções Securibox acelerou a entrega. A norma mudou o comportamento da noite para o dia — a aplicação tinha de parecer confiável desde o primeiro dia, com os empregados confiantes de que optar pelo digital não comprometeria o acesso ou a confidencialidade.",
-			  "quote": {
-				"title": "Recibos de salário digitais para todos.",
-				"subtitle": "Soluções Securibox, construídas para a norma de 2017."
-			  }
-			},
-			"slug": "rh-hr-payslip-distribution"
-		  }
-		]
-	  },
-	  "ConnectLime": {
-		"context": "Construí a marca da agência e o site desde o zero — depois entreguei produtos de clientes através do estúdio.",
-		"period": "2019",
-		"cases": [
-		  {
-			"period": "2019",
-			"status": "lançado",
-			"title": "Site e Marca ConnectLime",
-			"subtitle": "Agência digital B2B · identidade de marca + web",
-			"role": "Designer UX/UI e Desenvolvedor de Marca · 2019",
-			"tools": "Figma · React · Gatsby · Orientações de Marca",
-			"dimensions": "Dimensões 1, 2, 3",
-			"highlight": "Construí identidade de marca completa e site desde o conceito até à implementação — clareza e confiança para decisores não técnicos.",
-			"results": [
-			  "Definição profunda de identidade de marca — logótipo, sistema de cores, tipografia",
-			  "Estratégia de conteúdo e arquitectura de informação",
-			  "Presença profissional e maior geração de leads",
-			  "Bilingue FR/EN com adaptação cultural"
-			],
-			"references": {
-			  "links": [
-				{
-				  "url": "https://www.connectlime.com/en/",
-				  "label": "ConnectLime — estúdio de produto digital",
-				  "role": "Identidade de marca, site, bilingue"
-				}
-			  ],
-			  "clients": [
-				{
-				  "url": "https://www.connectlime.com/en/work/GererMaBoite",
-				  "label": "Gerer Ma Boite — POS para empreendedores",
-				  "role": "Supervisão de design sénior e UI final · adquirido pela CEGID"
+					"period": "2014",
+					"status": "proposta",
+					"title": "Campanha Digital Continente.pt",
+					"subtitle": "Retalho · Bronze Young Lions",
+					"role": "Equipa criativa · Bronze Young Lions · 2014",
+					"tools": "Direcção criativa · Campanha digital",
+					"dimensions": "Dimensões 1, 2",
+					"highlight": "Bronze Young Lions 2014 — proposta de campanha criativa para fortalecer a ligação da marca com famílias portuguesas.",
+					"results": [
+						"Bronze Young Lions 2014",
+						"Conceito inovador de storytelling digital",
+						"Ligação mais forte com base de clientes diversa"
+					],
+					"caseStudy": {
+						"businessProblem": "A Continente precisava de fortalecer a ligação emocional com famílias portuguesas enquanto se destacava no retalho. A marca requeria inovação sem perder a sua imagem familiar de confiança.",
+						"strategicDecision": {
+							"intro": "O desafio criativo:",
+							"question": "Como fortalecer a ligação emocional com famílias portuguesas enquanto mostramos inovação?"
+						},
+						"process": [
+							{
+								"phase": "Conceito",
+								"label": "Campanha",
+								"title": "Proposta de campanha",
+								"description": "Conceito de campanha digital e direcção criativa para a marca familiar da Continente."
+							}
+						],
+						"tradeoffsLearnings": "Equilíbrio entre storytelling digital ousado e respeito pelos valores familiares estabelecidos da Continente — inovação que estendeu a marca em vez de a perturbar.",
+						"quote": {
+							"title": "Destaque-se no retalho sem perder confiança.",
+							"subtitle": "Storytelling digital ousado que estende os valores familiares da Continente em vez de os perturbar."
+						}
+					},
+					"references": {
+						"dribbble": [
+							{
+								"url": "https://dribbble.com/shots/2409291-Continente-Bronze-Young-Lions-14",
+								"label": "Continente | Bronze Young Lions '14"
+							}
+						],
+						"behance": [
+							{
+								"url": "https://www.behance.net/gallery/16891063/Bronze-Young-Lions-2014-Continentept",
+								"label": "Bronze Young Lions 2014, Continente.pt"
+							}
+						]
+					},
+					"slug": "continentept-digital-campaign"
 				},
 				{
-				  "url": "https://www.connectlime.com/work/HotelAppz/",
-				  "label": "HotelAppz — plataforma CRM para hotéis",
-				  "role": "Supervisão de design sénior"
+					"period": "2014",
+					"status": "proposta",
+					"title": "SCP GameBox",
+					"subtitle": "Clube desportivo · proposta (conceito de site)",
+					"role": "Proposta digital e site · 2014",
+					"tools": "Design · Proposta · Web",
+					"dimensions": "Dimensões 1, 2",
+					"highlight": "Proposta digital e conceito de site para o Sporting Clube de Portugal.",
+					"results": [
+						"Conceito de site e proposta digital",
+						"Experiência de marca Sporting",
+						"Apresentação clara de ofertas e vantagens"
+					],
+					"references": {
+						"dribbble": [
+							{
+								"url": "https://dribbble.com/shots/1741544-SCP-GameBox-14-15",
+								"label": "Design SCP GameBox"
+							}
+						]
+					},
+					"caseStudy": {
+						"businessProblem": "A SCP GameBox 14'15 precisava de apresentar ofertas e vantagens de forma autêntica à marca e público desportivo do Sporting Clube de Portugal.",
+						"strategicDecision": {
+							"intro": "O objectivo de design:",
+							"question": "Como apresentar as ofertas e vantagens da SCP de forma autêntica ao clube?"
+						},
+						"process": [
+							{
+								"phase": "Proposta",
+								"label": "Conceito",
+								"title": "Conceito de proposta digital",
+								"description": "Estrutura da proposta e apresentação visual para o conceito de site."
+							}
+						],
+						"tradeoffsLearnings": "Foco na experiência de marca e proposta de valor — a identidade do clube liderou o design em vez de impor um modelo genérico.",
+						"quote": {
+							"title": "Apresentação clara de valor para o Sporting Club.",
+							"subtitle": "Deixe a identidade do Sporting Club liderar o design — autenticidade sobre modelo."
+						}
+					},
+					"slug": "scp-gamebox"
 				},
 				{
-				  "url": "https://www.assistarobase.fr",
-				  "label": "Assist@ — gestão de vida administrativa",
-				  "role": "Design de aplicação · marca e site público por terceiros · portal de empregador corre em Securibox"
+					"period": "2013",
+					"status": "proposta",
+					"title": "CCV — Correios de Cabo Verde",
+					"subtitle": "Correios · proposta (página de destino + moeda)",
+					"role": "Design de página de destino · 2013",
+					"tools": "Design · Página de destino · UX governamental",
+					"dimensions": "Dimensões 1, 2, 3",
+					"highlight": "Conceito de página de destino para os correios de Cabo Verde — câmbio de moeda, encomendas estrangeiras e serviços postais.",
+					"results": [
+						"Conceito de página de destino",
+						"UX de câmbio e serviços postais",
+						"Presença digital no sector governamental"
+					],
+					"references": {
+						"dribbble": [
+							{
+								"url": "https://dribbble.com/shots/1676694-CCV-Correios-de-Cabo-Verde",
+								"label": "CCV — Correios de Cabo Verde"
+							}
+						]
+					},
+					"caseStudy": {
+						"businessProblem": "Os Correios de Cabo Verde (CCV) precisavam de uma presença digital para câmbio de moeda, encomendas estrangeiras e serviços postais — ofertas complexas para uma base de utilizadores diversa.",
+						"strategicDecision": {
+							"intro": "O desafio de UX:",
+							"question": "Como apresentar serviços postais e de câmbio para uma base de utilizadores diversa?"
+						},
+						"process": [
+							{
+								"phase": "Design",
+								"label": "Conceito",
+								"title": "Conceito de estrutura da página de destino",
+								"description": "Arquitectura de informação e proposta de design visual para câmbio de moeda, encomendas estrangeiras e serviços postais."
+							}
+						],
+						"tradeoffsLearnings": "Prioridade à clareza e à acessibilidade num contexto governamental — onde confiança e usabilidade importam mais do que ambição visual.",
+						"quote": {
+							"title": "Tornar serviços postais e de câmbio claros e acessíveis.",
+							"subtitle": "Confiança e usabilidade primeiro num contexto governamental."
+						}
+					},
+					"slug": "ccv-correios-de-cabo-verde"
 				}
-			  ],
-			  "dribbble": [
+			]
+		},
+		"AI dentro de limites": {
+			"context": "Projectos paralelos em IA: experiências e ferramentas que construo para o meu fluxo de trabalho. Um exemplo concreto abaixo.",
+			"period": "Pessoal",
+			"cases": [
 				{
-				  "url": "https://dribbble.com/shots/7212848-CONNECTLIME-Createurs-de-solutions-digitales",
-				  "label": "Design ConnectLime"
+					"period": "2025",
+					"status": "ideia",
+					"title": "Prompt Architect",
+					"subtitle": "Uma skill que codifica disciplina em prompts — não uma biblioteca de dicas.",
+					"role": "Autora · ferramentas pessoais",
+					"tools": "Agent Skills · Markdown",
+					"dimensions": "IA · Skills · Instructions",
+					"highlight": "Projecto paralelo: desenvolvi prompting com restrições primeiro no meu trabalho e conversas, depois cristalizei o fluxo 4-D e a anatomia em seis partes numa skill — primeiro a vedação, a execução por baixo; a IA redige dentro dos carris que eu defino.",
+					"results": [
+						"Dois formatos de distribuição — Skill para workflows, bloco de texto para qualquer ferramenta de IA",
+						"Artefacto SKILL.md com títulos de framework fixos",
+						"A mesma anatomia em cada pedido — menos deriva, menos retrabalho",
+						"Prova de que skills espelham limites, não modelos"
+					],
+					"references": {
+						"sources": [
+							"Material em que me apoiei — não exaustivo.",
+							{
+								"theme": "Skills",
+								"links": [
+									{
+										"label": "Introduction to Agent Skills",
+										"url": "https://anthropic.skilljar.com/introduction-to-agent-skills"
+									},
+									{
+										"label": "Agent Skills",
+										"url": "https://agentskills.io"
+									}
+								]
+							},
+							{
+								"theme": "Metodologia 4-D",
+								"links": [
+									{
+										"label": "Anthropic AI Fluency Framework Foundations",
+										"url": "https://anthropic.skilljar.com/ai-fluency-framework-foundations"
+									},
+									{
+										"label": "GPT Central (Substack)",
+										"url": "https://gptcentral.substack.com/p/mastering-prompt-engineering-with-618"
+									},
+									{
+										"label": "Lyra Prompt Optimization Guide (Scribd)",
+										"url": "https://www.scribd.com/document/893913227/Lyra-Prompt-Optimization-Guide"
+									}
+								]
+							},
+							{
+								"theme": "Prompting guides — 6-part anatomy",
+								"links": [
+									{
+										"label": "OpenAI — GPT-5 prompting guide",
+										"url": "https://developers.openai.com/cookbook/examples/gpt-5/gpt-5_prompting_guide"
+									},
+									{
+										"label": "Medium — 6-part framework",
+										"url": "https://medium.com/@syedagulzarbano/ai-prompting-6-part-framework-30538adab337"
+									},
+									{
+										"label": "Medium — goal, return format, warnings, context",
+										"url": "https://medium.com/@feldyjudahk/the-anatomy-of-a-perfect-ai-prompt-goal-return-format-warnings-and-context-dump-893354da0205"
+									},
+									{
+										"label": "Medium — complete guide",
+										"url": "https://onlyoneaman.medium.com/anatomy-of-a-prompt-the-complete-guide-to-crafting-effective-ai-chatgpt-prompts-46a761e06048"
+									},
+									{
+										"label": "Medium — anatomy of the perfect GPT-5 prompt",
+										"url": "https://medium.com/@SarahMorino/the-anatomy-of-the-perfect-gpt-5-prompt-a-complete-guide-for-2025-c0b9947417e9"
+									},
+									{
+										"label": "Instagram — 6-part anatomy breakdown",
+										"url": "https://www.instagram.com/p/DNdfdiTxEiQ/"
+									},
+									{
+										"label": "CyberCorsairs — 6-part framework breakdown",
+										"url": "https://cybercorsairs.com/craft-perfect-ai-prompts-with-this-framework/"
+									}
+								]
+							}
+						]
+					},
+					"caseStudy": {
+						"businessProblem": "Escrevia prompts que pareciam certos no momento e partiam-se na semana seguinte. O problema não era o modelo — era eu. Não tinha forma repetível de fixar papel, restrições e forma de saída antes de pedir texto. Desenvolvi o Prompt Architect para resolver isto de vez, aplicando primeiro prompting com restrições no meu trabalho e nas minhas conversas. Recorri a material muito variado sobre IA online — directrizes estruturadas, documentação e threads de comunidade sobre tirar trabalho real das ferramentas. Não tratei nenhuma fonte como evangelho; mantive o que sobreviveu ao contacto com o meu uso e deitei fora o resto. Refinei o que ficou numa abordagem coesa e prática que faz sentido quando se corre, não quando se admira. Só aí cristalizei numa skill: a anatomia em seis partes e o fluxo 4-D como vedação, com a execução por baixo. O que ficou pronto é um artefacto pequeno com um único trabalho — transformar pedidos vagos em prompts limitados.",
+						"skillsDemonstrated": "Design systems thinking · Product behaviour definition · AI-assisted workflow design",
+						"strategicDecision": {
+							"intro": "A pergunta que respondi antes de escrever uma linha de SKILL.md:",
+							"question": "O que tem de ficar fixo para a IA correr rápido sem reescrever as regras em cada sessão?"
+						},
+						"processHeading": "Como foi construído",
+						"process": [
+							{
+								"phase": "Restrição",
+								"label": "Antes da criação",
+								"title": "Fixei a estrutura primeiro",
+								"description": "Eu fechei os seis títulos da anatomia e a ordem 4-D no SKILL.md — depois de destilar muitas threads numa abordagem que já tinha sobrevivido ao meu uso. Só depois deixei o modelo redigir explicações e exemplos sob cada título. Essa ordem foi a restrição: estrutura antes da prosa."
+							},
+							{
+								"phase": "Julgamento",
+								"label": "Humano",
+								"title": "O que recusei externalizar",
+								"description": "Decidi o que conta como condição para parar, o que pertence ao Output versus a Tarefa, e quais as falhas que importam para esta skill. Estas decisões moldam o comportamento do modelo quando o utilizador é vago — não deleguei a um primeiro rascunho."
+							},
+							{
+								"phase": "Execução",
+								"label": "IA",
+								"title": "O que o modelo fez bem",
+								"description": "Com os carris definidos, a IA preencheu secções, apertou a linguagem e levantou casos extremos em tabelas que eu já tinha definido. Execução — preencher, não orientar."
+							},
+							{
+								"phase": "Edição",
+								"label": "Corte",
+								"title": "Deriva de regulação",
+								"description": "Cortei tudo o que soava como um conselho genérico ou que inflacionava a habilidade ao ponto de a transformar num artigo. A skill espelha um sistema de design:  opinativo, delimitado e reutilizável."
+							}
+						],
+						"implementation": {
+							"design": [
+								{
+									"heading": "Onde a IA entrou",
+									"items": [
+										"Depois de fixar títulos e ordem das secções, a IA redigiu texto de corpo, exemplos e notas de plataforma sob cada título definido.",
+										"A iteração manteve-se dentro da mesma forma de ficheiro — sem secções surpresa nem estruturas alternativos a infiltrar-se.",
+										"Quando o texto derivava para motivação vazia, apaguei. A skill é operacional, não inspiracional."
+									]
+								},
+								{
+									"heading": "Onde o julgamento ficou meu",
+									"items": [
+										"Escolher o formato Agent Skills e a estrutura de ficheiros — o que conta como contrato.",
+										"Definir modos BASIC versus DETAIL e o que cada um pode omitir — isso é comportamento de produto, não cópia.",
+										"Nomear modos de falha na tabela da anatomia — como é \"fraco\" em cada secção."
+									]
+								}
+							],
+							"code": []
+						}
+					},
+					"slug": "prompt-architect-skill"
 				}
-			  ]
-			},
-			"caseStudy": {
-			  "businessProblem": "A ConnectLime, agência digital para startups e PMEs, carecia de diferenciação e confiança. Apresentação de serviços fragmentada e navegação fraca significava que potenciais clientes saíam sem engajar.",
-			  "strategicDecision": {
-				"intro": "O princípio orientador:",
-				"question": "Como equilibrar credibilidade com acessibilidade para PMEs a escolher um parceiro digital?"
-			  },
-			  "process": [
-				{
-				  "phase": "Fase 1",
-				  "label": "Investigação",
-				  "title": "Auditoria de marca e análise de concorrentes",
-				  "description": "Agências europeias de referência. Conteúdo focado em resultados preferido pelo público-alvo."
-				},
-				{
-				  "phase": "Fase 2",
-				  "label": "Design",
-				  "title": "Estratégia de conteúdo, arquitectura e identidade de marca",
-				  "description": "Estratégia de conteúdo e arquitectura de informação. Definição profunda de identidade de marca: logótipo, sistema de cores, tipografia."
-				},
-				{
-				  "phase": "Fase 3",
-				  "label": "Construção",
-				  "title": "Implementação do site",
-				  "description": "Bilingue FR/EN com adaptação cultural. Sistema de temas adaptativo com detecção inteligente das preferências do utilizador."
-				}
-			  ],
-			  "implementation": "Construí o site em Gatsby e React. Sistema de temas adaptativo com detecção inteligente das preferências do utilizador. Bilingue FR/EN com i18n. Entreguei orientações de marca, especificações de componentes e código-fonte ao cliente.",
-			  "resultsMetrics": [
-				"Presença digital profissional estabelecida desde o zero",
-				"Bilingue FR/EN com i18n — culturalmente adaptado, não apenas traduzido",
-				"Sistema de temas adaptativo lançado em produção"
-			  ],
-			  "tradeoffsLearnings": "Priorizei simplicidade sobre densidade de funcionalidades — resisti a adicionar mais conteúdo que diluiria a mensagem. O alinhamento de partes interessadas em 'comunicar profissionalismo através da simplicidade' acelerou as decisões.",
-			  "quote": {
-				"title": "Comunique profissionalismo através da simplicidade.",
-				"subtitle": "Clareza e confiança para decisores não técnicos a escolher um parceiro digital."
-			  }
-			},
-			"slug": "connectlime-website-brand"
-		  },
-		  {
-			"period": "2019",
-			"status": "lançado",
-			"title": "Gerer Ma Boite (GMB)",
-			"subtitle": "Plataforma SaaS de ponto de venda para empreendedores · adquirida pela CEGID",
-			"role": "Designer Sénior",
-			"tools": "Figma · AngularJS · Azure",
-			"dimensions": "Dimensões 2, 3, 4",
-			"highlight": "Actuei como Designer Sénior, mentorizando a equipa do projecto e intervindo para entregar a UI final. A plataforma foi mais tarde adquirida pela CEGID e integrada na sua oferta empresarial.",
-			"results": [
-			  "Mentorizei a equipa de produto nas fases de estratégia, marca e arquitectura",
-			  "Entreguei o design de UI final, garantindo um acabamento polido e coeso",
-			  "Plataforma construída em ~8 semanas com frontend AngularJS e backend Azure robusto",
-			  "Integrada com APIs Dropbox, Revolut, Stripe e SendGrid",
-			  "Adquirida pela CEGID e integrada na sua solução empresarial"
-			],
-			"references": {
-			  "links": [
-				{
-				  "url": "https://www.connectlime.com/en/work/GererMaBoite",
-				  "label": "Estudo de caso Gerer Ma Boite",
-				  "role": "Supervisão de design sénior e UI final"
-				}
-			  ]
-			},
-			"slug": "gerer-ma-boite-gmb"
-		  },
-		  {
-			"period": "2018",
-			"status": "lançado",
-			"title": "HotelAppz",
-			"subtitle": "Plataforma CRM de nova geração para hotéis",
-			"role": "Supervisão de design sénior",
-			"tools": "Figma · React · Sistemas PMS",
-			"dimensions": "Dimensões 2, 3, 4",
-			"highlight": "Forneci supervisão e mentoria de design sénior para uma plataforma CRM completa para hotéis. Supervisionei a equipa através de estratégia de produto, marca e desenvolvimento UX/UI.",
-			"results": [
-			  "Supervisionei o design de produto e Experiência do Utilizador",
-			  "Mentorizei a equipa de design em arquitectura de informação e padrões de interacção",
-			  "Garantiu que integrações com sistemas PMS mantinham consistência de UX",
-			  "Feedback positivo de utilizadores destacou facilidade de uso e compreensão das necessidades dos hoteleiros"
-			],
-			"references": {
-			  "links": [
-				{
-				  "url": "https://www.connectlime.com/work/HotelAppz/",
-				  "label": "Estudo de caso HotelAppz",
-				  "role": "Supervisão de design sénior"
-				},
-				{
-				  "url": "https://hoteltechreport.com/marketing/hotel-crm/hotelappz",
-				  "label": "HotelAppz no Hotel Tech Report",
-				  "role": "Perfil de produto e avaliações"
-				}
-			  ]
-			},
-			"slug": "hotelappz"
-		  },
-		  {
-			"period": "2019",
-			"status": "lançado",
-			"title": "Assist@ — Gestão de Vida Administrativa",
-			"subtitle": "Gestão de vida e portal de empregados — corre em RH Securibox white-label)",
-			"role": "Designer de Produto",
-			"tools": "Figma · Design de aplicação",
-			"dimensions": "Dimensões 2, 4",
-			"highlight": "Implementei a experiência central da aplicação para esta startup francesa de RH. Conceptei micro-interacções e fluxos para melhorar a experiência do utilizador.",
-			"results": [
-			  "Fluxos administrativos limpos",
-			  "Micro-interacções e fluxos para melhorar a experiência do utilizador"
-			],
-			"references": {
-			  "links": [
-				{
-				  "url": "https://www.assistarobase.fr",
-				  "label": "Assist@",
-				  "role": "Design de aplicação"
-				}
-			  ]
-			},
-			"slug": "assist-admin-life-management"
-		  }
-		]
-	  },
-	  "Earlier work": {
-		"context": "Outras propostas e conceitos premiados.",
-		"period": "2013–2016",
-		"cases": [
-		  {
-			"period": "2016",
-			"status": "proposta",
-			"title": "Epaye — Folha de Salário Electrónica",
-			"subtitle": "Fintech · proposta (aplicação + página de destino)",
-			"role": "Designer de Produto e UX · 2016",
-			"tools": "Figma · Design de produto · Página de destino",
-			"dimensions": "Dimensões 1, 2, 3",
-			"highlight": "Conceito de produto e página de destino para uma solução fintech — folha de salário electrónica para todos.",
-			"results": [
-			  "Conceito de produto e página de destino",
-			  "Proposta de valor clara para adopção de folha de salário",
-			  "Linguagem visual primeiro-confiança para fintech"
-			],
-			"references": {
-			  "dribbble": [
-				{
-				  "url": "https://dribbble.com/mariavaragilal",
-				  "label": "Design Epaye"
-				}
-			  ],
-			  "behance": [
-				{
-				  "url": "https://www.behance.net/gallery/41258845/Epaye-la-paye-lectronique-pour-tous",
-				  "label": "Epaye | Folha de Salário Electrónica"
-				}
-			  ]
-			},
-			"caseStudy": {
-			  "businessProblem": "A Epaye — a folha de salário electrónica para todos — posiciona-se como o ponto de entrada ideal para iniciar a desmaterialização numa empresa. Simplifica e automatiza todos os passos de pagamento entre empregador e empregado. O desafio: construir uma identidade digital e produto desde o zero, enraizado numa dimensão central — relações humanas.",
-			  "strategicDecision": {
-				"intro": "A questão de design:",
-				"question": "Como tornar a tecnologia de folha de salário acessível e confiável para decisores não técnicos?"
-			  },
-			  "process": [
-				{
-				  "phase": "Fase 1",
-				  "label": "Conceito",
-				  "title": "Dimensão de marca — relações humanas",
-				  "description": "Defini a marca em torno de uma dimensão central: a complexidade e beleza das interacções humanas na folha de salário."
-				},
-				{
-				  "phase": "Fase 2",
-				  "label": "Design",
-				  "title": "Identidade digital e conceito de produto",
-				  "description": "Conceito de produto e página de destino que visualiza relações humanas — uma marca e identidade digital construídas a partir desta base."
-				}
-			  ],
-			  "tradeoffsLearnings": "Construído sobre um conceito novo: em vez de focar apenas em confiança ou adopção, a identidade assenta em relações humanas — tornando o abstracto tangível através de uma linguagem visual distinta. Uma aposta deliberada em destacar-se em vez de misturar-se num sector dominado por interfaces conservadoras.",
-			  "quote": {
-				"title": "A folha de salário electrónica para todos.",
-				"subtitle": "O ponto de entrada ideal para iniciar a desmaterialização — uma marca que reflecte a complexidade e beleza das relações humanas."
-			  }
-			},
-			"slug": "epaye-electronic-payroll"
-		  },
-		  {
-			"period": "2014",
-			"status": "proposta",
-			"title": "Campanha Digital Continente.pt",
-			"subtitle": "Retalho · Bronze Young Lions",
-			"role": "Equipa criativa · Bronze Young Lions · 2014",
-			"tools": "Direcção criativa · Campanha digital",
-			"dimensions": "Dimensões 1, 2",
-			"highlight": "Bronze Young Lions 2014 — proposta de campanha criativa para fortalecer a ligação da marca com famílias portuguesas.",
-			"results": [
-			  "Bronze Young Lions 2014",
-			  "Conceito inovador de storytelling digital",
-			  "Ligação mais forte com base de clientes diversa"
-			],
-			"caseStudy": {
-			  "businessProblem": "A Continente precisava de fortalecer a ligação emocional com famílias portuguesas enquanto se destacava no retalho. A marca requeria inovação sem perder a sua imagem familiar de confiança.",
-			  "strategicDecision": {
-				"intro": "O desafio criativo:",
-				"question": "Como fortalecer a ligação emocional com famílias portuguesas enquanto mostramos inovação?"
-			  },
-			  "process": [
-				{
-				  "phase": "Conceito",
-				  "label": "Campanha",
-				  "title": "Proposta de campanha",
-				  "description": "Conceito de campanha digital e direcção criativa para a marca familiar da Continente."
-				}
-			  ],
-			  "tradeoffsLearnings": "Equilibrei storytelling digital ousado com respeito pelos valores familiares estabelecidos da Continente — inovação que estendeu a marca em vez de a perturbar.",
-			  "quote": {
-				"title": "Destaque-se no retalho sem perder confiança.",
-				"subtitle": "Storytelling digital ousado que estende os valores familiares da Continente em vez de os perturbar."
-			  }
-			},
-			"references": {
-			  "dribbble": [
-				{
-				  "url": "https://dribbble.com/shots/2409291-Continente-Bronze-Young-Lions-14",
-				  "label": "Continente | Bronze Young Lions '14"
-				}
-			  ],
-			  "behance": [
-				{
-				  "url": "https://www.behance.net/gallery/16891063/Bronze-Young-Lions-2014-Continentept",
-				  "label": "Bronze Young Lions 2014, Continente.pt"
-				}
-			  ]
-			},
-			"slug": "continentept-digital-campaign"
-		  },
-		  {
-			"period": "2014",
-			"status": "proposta",
-			"title": "SCP GameBox",
-			"subtitle": "Clube desportivo · proposta (conceito de site)",
-			"role": "Proposta digital e site · 2014",
-			"tools": "Design · Proposta · Web",
-			"dimensions": "Dimensões 1, 2",
-			"highlight": "Proposta digital e conceito de site para o Sporting Clube de Portugal.",
-			"results": [
-			  "Conceito de site e proposta digital",
-			  "Experiência de marca Sporting",
-			  "Apresentação clara de ofertas e vantagens"
-			],
-			"references": {
-			  "dribbble": [
-				{
-				  "url": "https://dribbble.com/shots/1741544-SCP-GameBox-14-15",
-				  "label": "Design SCP GameBox"
-				}
-			  ]
-			},
-			"caseStudy": {
-			  "businessProblem": "A SCP GameBox 14'15 precisava de apresentar ofertas e vantagens de forma autêntica à marca e público desportivo do Sporting Clube de Portugal.",
-			  "strategicDecision": {
-				"intro": "O objectivo de design:",
-				"question": "Como apresentar as ofertas e vantagens da SCP de forma autêntica ao clube?"
-			  },
-			  "process": [
-				{
-				  "phase": "Proposta",
-				  "label": "Conceito",
-				  "title": "Conceito de proposta digital",
-				  "description": "Estrutura da proposta e apresentação visual para o conceito de site."
-				}
-			  ],
-			  "tradeoffsLearnings": "Foquei na experiência de marca e proposta de valor — deixei a identidade do clube liderar o design em vez de impor um modelo genérico.",
-			  "quote": {
-				"title": "Apresentação clara de valor para o Sporting Club.",
-				"subtitle": "Deixe a identidade do Sporting Club liderar o design — autenticidade sobre modelo."
-			  }
-			},
-			"slug": "scp-gamebox"
-		  },
-		  {
-			"period": "2013",
-			"status": "proposta",
-			"title": "CCV — Correios de Cabo Verde",
-			"subtitle": "Correios · proposta (página de destino + moeda)",
-			"role": "Design de página de destino · 2013",
-			"tools": "Design · Página de destino · UX governamental",
-			"dimensions": "Dimensões 1, 2, 3",
-			"highlight": "Conceito de página de destino para os correios de Cabo Verde — câmbio de moeda, encomendas estrangeiras e serviços postais.",
-			"results": [
-			  "Conceito de página de destino",
-			  "UX de câmbio e serviços postais",
-			  "Presença digital no sector governamental"
-			],
-			"references": {
-			  "dribbble": [
-				{
-				  "url": "https://dribbble.com/shots/1676694-CCV-Correios-de-Cabo-Verde",
-				  "label": "CCV — Correios de Cabo Verde"
-				}
-			  ]
-			},
-			"caseStudy": {
-			  "businessProblem": "Os Correios de Cabo Verde (CCV) precisavam de uma presença digital para câmbio de moeda, encomendas estrangeiras e serviços postais — ofertas complexas para uma base de utilizadores diversa.",
-			  "strategicDecision": {
-				"intro": "O desafio de UX:",
-				"question": "Como apresentar serviços postais e de câmbio para uma base de utilizadores diversa?"
-			  },
-			  "process": [
-				{
-				  "phase": "Design",
-				  "label": "Conceito",
-				  "title": "Conceito de estrutura da página de destino",
-				  "description": "Arquitectura de informação e proposta de design visual para câmbio de moeda, encomendas estrangeiras e serviços postais."
-				}
-			  ],
-			  "tradeoffsLearnings": "Priorizei clareza e acessibilidade num contexto governamental — onde confiança e usabilidade importam mais do que ambição visual.",
-			  "quote": {
-				"title": "Tornar serviços postais e de câmbio claros e acessíveis.",
-				"subtitle": "Confiança e usabilidade primeiro num contexto governamental."
-			  }
-			},
-			"slug": "ccv-correios-de-cabo-verde"
-		  }
-		]
-	  }
+			]
+		}
 	},
 	"intro": {
-	  "locationLine": "Lisboa",
-	  "heroNameLine1": "Maria",
-	  "heroNameLine2": "Varagilal",
-	  "tagline": "B2B · SaaS · Fintech · Design e desenvolvimento acelerados por IA",
-	  "title": "Sénior Technical Product Designer que lança código.",
-	  "body": "Mais de 10 anos a transformar produtos SaaS em plataformas unificadas: desenhar o sistema, escrever o código, proteger a visão à medida que os produtos escalam. Hoje, uso IA para acelerar todas as etapas — desde fluxos de design-para-código até componentes prontos para produção.",
-	  "viewWork": "Ver o Meu Trabalho",
-	  "fullCv": "CV Completo",
-	  "metricsAriaLabel": "Métricas chave"
+		"locationLine": "Lisboa",
+		"heroNameLine1": "Maria",
+		"heroNameLine2": "Varagilal",
+		"tagline": "B2B · SaaS · Fintech · Design e desenvolvimento acelerados por IA",
+		"title": "Techincal Product Designer Sénior que lança código.",
+		"schemaJobTitle": "Techincal Product Designer Sénior e desenvolvimento frontend",
+		"body": "Mais de 10 anos a transformar produtos SaaS em plataformas unificadas: desenhar o sistema, escrever o código, proteger a visão à medida que os produtos escalam. Hoje, uso IA para acelerar todas as etapas — desde fluxos de design-para-código até componentes prontos para produção.",
+		"viewWork": "Ver o Meu Trabalho",
+		"fullCv": "CV Completo",
+		"metricsAriaLabel": "Métricas chave"
 	},
 	"stickyNav": {
-	  "sections": [
-		{
-		  "id": "framework",
-		  "label": "Playbook"
-		},
-		{
-		  "id": "work",
-		  "label": "Trabalho"
-		}
-	  ],
-	  "logoAlt": "Maria Varagilal",
-	  "brandName": "MariaVaragilal",
-	  "ariaLabel": "Navegação por secções"
+		"sections": [
+			{
+				"id": "framework",
+				"label": "Playbook"
+			},
+			{
+				"id": "work",
+				"label": "Trabalho"
+			}
+		],
+		"logoAlt": "Maria Varagilal",
+		"brandName": "MariaVaragilal",
+		"ariaLabel": "Navegação por secções"
 	},
 	"workSection": {
-	  "kicker": "O meu trabalho",
-	  "heading": "Do Design à Produção",
-	  "p1": "Eu concebo, eu construo. Abaixo está o trabalho ao vivo — identidade de marca, sistemas de design, fluxos e desenvolvimento frontend em que trabalhei. As tecnologias incluem React, Gatsby, Figma, Redux, Bootstrap, AngularJS e mais.",
-	  "p2Lead": "Marca e identidade:",
-	  "p2": "Logótipos, linguagem visual e experiência coesa em ecossistemas e produtos.",
-	  "p3": "Cada projecto abre uma vista detalhada — estudo de caso completo ou resumo com resultados — seleccione um cartão para ler.",
-	  "designSystemKicker": "Sistema de design — este site",
-	  "designSystemBody": "Biblioteca de componentes personalizada (50+ componentes): Construída com React, Tailwind v4, sistema de temas e acessibilidade em mente.",
-	  "designSystemComponents": [
-		"Botão",
-		"Acordeão",
-		"Cartão",
-		"Barra lateral",
-		"Diálogo",
-		"Folha",
-		"Menu Suspenso",
-		"Separadores",
-		"Formulário"
-	  ]
+		"kicker": "O meu trabalho",
+		"heading": "Do Design à Produção",
+		"p1": "Eu concebo, eu construo. Abaixo está o trabalho ao vivo — identidade de marca, sistemas de design, fluxos e desenvolvimento frontend em que trabalhei. As tecnologias incluem React, Gatsby, Figma, Redux, Bootstrap, AngularJS e mais.",
+		"p2Lead": "Marca e identidade:",
+		"p2": "Logótipos, linguagem visual e experiência coesa em ecossistemas e produtos.",
+		"p3": "Cada projecto abre uma vista detalhada — estudo de caso completo ou resumo com resultados — seleccione um cartão para ler.",
+		"designSystemKicker": "Sistema de design — este site",
+		"designSystemBody": "Biblioteca de componentes personalizada (50+ componentes): Construída com React, Tailwind v4, sistema de temas e acessibilidade em mente.",
+		"designSystemCtaNote": "Componentes e tokens de design partilham a mesma base de código que esta página.",
+		"designSystemComponents": [
+			"Botão",
+			"Acordeão",
+			"Cartão",
+			"Barra lateral",
+			"Diálogo",
+			"Folha",
+			"Menu Suspenso",
+			"Separadores",
+			"Formulário"
+		]
 	},
 	"methodSection": {
-	  "outcomesKicker": "Resultados",
-	  "outcomesHeading": "Quando as dimensões operam em conjunto",
-	  "outcomesLead": "Estes são resultados, não passos. Emergiram quando as cinco dimensões trabalham em conjunto ao nível da liderança.",
-	  "outcomesListAria": "Resultados",
-	  "evolutionKicker": "Evolução",
-	  "evolutionHeading": "O ciclo que os une",
-	  "evolutionLoopAria": "Ciclo de aprendizagem"
+		"outcomesKicker": "Resultados",
+		"outcomesHeading": "Quando as dimensões operam em conjunto",
+		"outcomesLead": "Estes são resultados, não passos. Emergiram quando as cinco dimensões trabalham em conjunto ao nível da liderança.",
+		"outcomesListAria": "Resultados",
+		"evolutionKicker": "Evolução",
+		"evolutionHeading": "O ciclo que os une",
+		"evolutionLoopAria": "Ciclo de aprendizagem"
 	},
 	"contact": {
-	  "kicker": "Entre em contacto",
-	  "heading": "Vamos construir algo que dure.",
-	  "body": "Dos princípios de marca ao código de produção — construir experiências unificadas que criam coesão, escalam com o negócio e permanecem vivas mesmo quando as equipas mudam.",
-	  "linkedin": "LinkedIn ↗",
-	  "opensNewTab": "(abre num novo separador)",
-	  "fullCv": "CV Completo",
-	  "profilesNavAria": "Perfis externos"
+		"kicker": "Entre em contacto",
+		"heading": "Vamos construir algo que dure.",
+		"body": "Dos princípios de marca ao código de produção — construir experiências unificadas que criam coesão, escalam com o negócio e permanecem vivas mesmo quando as equipas mudam.",
+		"linkedin": "LinkedIn ↗",
+		"opensNewTab": "(abre num novo separador)",
+		"fullCv": "CV Completo",
+		"profilesNavAria": "Perfis externos",
+		"profiles": [
+			{
+				"name": "GitHub",
+				"line": "github.com/mariavaragilal →",
+				"href": "https://github.com/mariavaragilal/"
+			},
+			{
+				"name": "Dribbble",
+				"line": "dribbble.com/mariavaragilal →",
+				"href": "https://dribbble.com/mariavaragilal"
+			},
+			{
+				"name": "CodePen",
+				"line": "codepen.io/mariavaragilal →",
+				"href": "https://codepen.io/mariavaragilal"
+			},
+			{
+				"name": "Behance",
+				"line": "be.net/mariavaragilal →",
+				"href": "https://be.net/mariavaragilal"
+			}
+		]
+	},
+	"seo": {
+		"defaultDescription": "Techincal Product Designer Sénior que lança código. Mais de 10 anos a transformar produtos SaaS em plataformas unificadas — sistemas de design, React e o Método MVP.",
+		"defaultKeywords": "Maria Varagilal, Techincal Product Designer Sénior, desenvolvimento frontend, UI, UX, React, Redux, sistemas de design, B2B SaaS, Método MVP",
+		"occupationDescription": "Concebe e desenvolve produtos digitais do conceito à produção"
 	},
 	"footer": {
-	  "builtWithLabel": "Construído com:",
-	  "builtWithItems": [
-		"React 19",
-		"Gatsby 5",
-		"Tailwind v4",
-		"Motion",
-		"Biblioteca de componentes personalizada",
-		"Sistema de temas",
-		"JavaScript (ES6+)",
-		"Acessibilidade - a11y",
-		"i18n",
-		"SEO e dados estruturados"
-	  ],
-	  "viewSource": "Ver código-fonte",
-	  "referencesLabel": "Referências:",
-	  "wcag": "WCAG",
-	  "mdnA11y": "Acessibilidade MDN",
-	  "builtWithNavAria": "Construído com",
-	  "referencesNavAria": "Referências"
+		"builtWithLabel": "Construído com:",
+		"builtWithItems": [
+			"React 19",
+			"Gatsby 5",
+			"Tailwind v4",
+			"Motion",
+			"Biblioteca de componentes personalizada",
+			"Sistema de temas",
+			"JavaScript (ES6+)",
+			"Acessibilidade - a11y",
+			"i18n",
+			"SEO e dados estruturados"
+		],
+		"viewSource": "Ver código-fonte",
+		"referencesLabel": "Referências:",
+		"wcag": "WCAG",
+		"mdnA11y": "Acessibilidade MDN",
+		"builtWithNavAria": "Construído com",
+		"referencesNavAria": "Referências",
+		"navGlossaryLead": "Na página inicial, «Playbook» na barra fixa é a mesma secção que ",
+		"navGlossaryLink": "O Método MVP",
+		"navGlossaryTail": " (#framework)."
 	},
 	"caseUi": {
-	  "shipped": "lançado",
-	  "concept": "conceito",
-	  "outcomes": "Resultados",
-	  "role": "Papel",
-	  "tools": "Ferramentas",
-	  "live": "Ao vivo",
-	  "directLink": "Link directo",
-	  "clientDeliveries": "Entregas a clientes",
-	  "portfolio": "Portfólio",
-	  "liveWorkNav": "Trabalho ao vivo",
-	  "liveWorkSr": "Trabalho ao vivo: navegação",
-	  "clientDeliveriesNav": "Entregas a clientes",
-	  "clientDeliveriesSr": "Entregas a clientes: navegação",
-	  "portfolioNav": "Portfólio",
-	  "portfolioSr": "Portfólio: navegação",
-	  "caseStudy": "Estudo de caso",
-	  "caseStudyDetailsAria": "Detalhes do estudo de caso",
-	  "caseStudyPrefix": "Estudo de caso:",
-	  "previousCase": "Caso anterior",
-	  "nextCase": "Próximo caso",
-	  "cardAriaOpen": "A mostrar estudo de caso completo, clique para fechar",
-	  "cardAriaClosed": "Clique para ver detalhes completos do estudo de caso",
-	  "fullCaseStudy": "Ler Caso",
-	  "summaryOutcomes": "Resumo e resultados",
-	  "readDetails": "Ver detalhes",
-	  "caseStudyBlock": {
-		"context": "Contexto",
-		"processDefault": "Processo",
-		"implementation": "Implementação",
-		"resultsMetrics": "Resultados e Métricas",
-		"tradeoffsDefault": "Compromissos e Aprendizagens",
-		"skills": "Competências"
-	  }
+		"shipped": "lançado",
+		"concept": "conceito",
+		"ideation": "ideia",
+		"prototyping": "prototipo",
+		"development": "desenvolvimento",
+		"testing": "testing",
+		"deployment": "deployment",
+		"maintenance": "manutenção",
+		"support": "suporte",
+		"enhancement": "melhoria",
+		"outcomes": "Resultados",
+		"role": "Papel",
+		"tools": "Ferramentas",
+		"live": "Ao vivo",
+		"directLink": "Link directo",
+		"clientDeliveries": "Entregas a clientes",
+		"portfolio": "Portfólio",
+		"liveWorkNav": "Trabalho ao vivo",
+		"liveWorkSr": "Trabalho ao vivo: navegação",
+		"clientDeliveriesNav": "Entregas a clientes",
+		"clientDeliveriesSr": "Entregas a clientes: navegação",
+		"portfolioNav": "Portfólio",
+		"portfolioSr": "Portfólio: navegação",
+		"references": {
+			"sourcesHeading": "Fontes",
+			"sourcesNavAria": "Fontes e referências"
+		},
+		"caseStudy": "Estudo de caso",
+		"caseStudyDetailsAria": "Detalhes do estudo de caso",
+		"caseStudyPrefix": "Estudo de caso:",
+		"previousCase": "Caso anterior",
+		"nextCase": "Próximo caso",
+		"cardAriaOpen": "A mostrar estudo de caso completo, clique para fechar",
+		"cardAriaClosed": "Clique para ver detalhes completos do estudo de caso",
+		"fullCaseStudy": "Ler Caso",
+		"summaryOutcomes": "Resumo e resultados",
+		"readDetails": "Ver detalhes",
+		"caseStudyBlock": {
+			"context": "Contexto",
+			"processDefault": "Processo",
+			"implementation": "Implementação",
+			"implementationDesign": "Design",
+			"implementationCode": "Código",
+			"resultsMetrics": "Resultados e Métricas",
+			"tradeoffsDefault": "Compromissos e Aprendizagens",
+			"skills": "Competências"
+		}
 	}
-  }
+}

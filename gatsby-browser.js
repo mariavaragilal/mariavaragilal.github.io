@@ -1,9 +1,3 @@
-// Stylesheets
-// ==========================================
-// Stylesheets: Vendors
-// import '@mdi/font/css/materialdesignicons.min.css'
-
-// Stylesheets: Global
 import './src/assets/stylesheets/index.scss';
 
 export const onInitialClientRender = () => {

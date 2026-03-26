@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect, createContext, useContext } from 'react';
 import { createPortal } from 'react-dom';
 import { focusRing } from '../../../constants/utils/a11y';
+import { cn } from '../../../constants/utils/cn';
 
 const CONTENT = 'z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md animate-in fade-in-80';
 const ITEM_BASE = 'relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none hover:bg-accent hover:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 ' + focusRing;
@@ -49,7 +50,7 @@ export const ContextMenuContent = ({ children, className = '', ...props }) => {
 			role='menu'
 			aria-orientation='vertical'
 			style={{ position: 'fixed', left: pos.x, top: pos.y, zIndex: 50 }}
-			className={CONTENT + ' ' + className}
+			className={cn(CONTENT, className)}
 			{...props}
 		>
 			{children}
@@ -62,7 +63,7 @@ export const ContextMenuItem = ({ className = '', inset, disabled, onSelect, chi
 	const handle = !disabled ? onSelect : undefined;
 	const handleKey = !disabled ? (e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onSelect && onSelect(); } }) : undefined;
 	return (
-		<div role='menuitem' tabIndex={disabled ? -1 : 0} data-disabled={disabled || undefined} className={(inset ? 'pl-8 ' : '') + ITEM_BASE + ' ' + className} onClick={handle} onKeyDown={handleKey} {...props}>
+		<div role='menuitem' tabIndex={disabled ? -1 : 0} data-disabled={disabled || undefined} className={cn(inset && 'pl-8', ITEM_BASE, className)} onClick={handle} onKeyDown={handleKey} {...props}>
 			{children}
 		</div>
 	);
@@ -71,7 +72,7 @@ export const ContextMenuItem = ({ className = '', inset, disabled, onSelect, chi
 export const ContextMenuCheckboxItem = ({ className = '', checked, children, onCheckedChange, ...props }) => {
 	const toggle = () => onCheckedChange && onCheckedChange(!checked);
 	return (
-		<div role='menuitemcheckbox' aria-checked={checked} tabIndex={0} className={'pl-8 ' + ITEM_BASE + ' ' + className} onClick={toggle} onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } }} {...props}>
+		<div role='menuitemcheckbox' aria-checked={checked} tabIndex={0} className={cn('pl-8', ITEM_BASE, className)} onClick={toggle} onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } }} {...props}>
 			<span className='absolute left-2'>{checked && <span aria-hidden='true'>✓</span>}</span>
 			{children}
 		</div>
@@ -85,7 +86,7 @@ export const ContextMenuRadioGroup = ({ children, value, onValueChange, ...props
 export const ContextMenuRadioItem = ({ className = '', children, value, _groupValue, _onGroupChange, ...props }) => {
 	const select = () => _onGroupChange && _onGroupChange(value);
 	return (
-		<div role='menuitemradio' aria-checked={_groupValue === value} tabIndex={0} className={'pl-8 ' + ITEM_BASE + ' ' + className} onClick={select} onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(); } }} {...props}>
+		<div role='menuitemradio' aria-checked={_groupValue === value} tabIndex={0} className={cn('pl-8', ITEM_BASE, className)} onClick={select} onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(); } }} {...props}>
 			<span className='absolute left-2'>{_groupValue === value && <span aria-hidden='true'>●</span>}</span>
 			{children}
 		</div>
@@ -93,15 +94,15 @@ export const ContextMenuRadioItem = ({ className = '', children, value, _groupVa
 };
 
 export const ContextMenuLabel = ({ className = '', inset, ...props }) => (
-	<div className={(inset ? 'pl-8 ' : '') + LABEL_CLS + ' ' + className} {...props}/>
+	<div className={cn(inset && 'pl-8', LABEL_CLS, className)} {...props}/>
 );
 
 export const ContextMenuSeparator = ({ className = '', ...props }) => (
-	<div role='separator' className={SEPARATOR + ' ' + className} {...props}/>
+	<div role='separator' className={cn(SEPARATOR, className)} {...props}/>
 );
 
 export const ContextMenuShortcut = ({ className = '', ...props }) => (
-	<span className={SHORTCUT + ' ' + className} {...props}/>
+	<span className={cn(SHORTCUT, className)} {...props}/>
 );
 
 export const ContextMenuSub = ({ children }) => {
@@ -117,7 +118,7 @@ export const ContextMenuSubTrigger = ({ className = '', inset, children, ...prop
 	const { open, setOpen } = useContext(ContextSubContext);
 	const toggle = () => setOpen(!open);
 	return (
-		<div role='menuitem' aria-haspopup='menu' aria-expanded={open} tabIndex={0} className={(inset ? 'pl-8 ' : '') + ITEM_BASE + ' ' + className} onClick={toggle} onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } }} {...props}>
+		<div role='menuitem' aria-haspopup='menu' aria-expanded={open} tabIndex={0} className={cn(inset && 'pl-8', ITEM_BASE, className)} onClick={toggle} onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } }} {...props}>
 			{children}
 			<span aria-hidden='true' className='ml-auto'>▶</span>
 		</div>
@@ -127,5 +128,5 @@ export const ContextMenuSubTrigger = ({ className = '', inset, children, ...prop
 export const ContextMenuSubContent = ({ className = '', ...props }) => {
 	const { open } = useContext(ContextSubContext);
 	if (!open) return null;
-	return <div role='menu' className={'absolute left-full top-0 ' + CONTENT + ' ' + className} {...props}/>;
+	return <div role='menu' className={cn('absolute left-full top-0', CONTENT, className)} {...props}/>;
 };

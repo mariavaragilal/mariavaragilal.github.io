@@ -4,7 +4,7 @@ import logo from '../../../assets/images/avatar.png';
 
 export const StickyNav = ({ showScrollTop, isScrolled, activeSection, onScrollToSection, navOpen: _navOpen, setNavOpen, isAnimated, stickyNav }) => {
 	return (
-		<motion.nav initial={isAnimated ? { y: -100 } : { y: 0 }} animate={isAnimated ? { y: 0 } : { y: 0 }} transition={{ duration: 0.6, ease: 'easeInOut' }} className={'md:max-w-[28em] lg:mx-auto justify-center items-center text-center rounded-full sticky z-100 transition-all duration-300 translate-y-0 opacity-100 print:hidden ' + (showScrollTop ? ' mx-6 bg-background/80 backdrop-blur-md border border-border my-3 px-5 top-3' : ' mx-auto text-current p-6 pb-0')} aria-label={stickyNav?.ariaLabel}>
+		<motion.nav initial={isAnimated ? { y: -100 } : { y: 0 }} animate={{ y: 0 }} transition={{ duration: 0.6, ease: 'easeInOut' }} className={'md:max-w-[28em] lg:mx-auto justify-center items-center text-center rounded-full sticky z-100 transition-all duration-300 translate-y-0 opacity-100 print:hidden ' + (showScrollTop ? ' mx-6 bg-background/80 backdrop-blur-md border border-border my-3 px-5 top-3' : ' mx-auto text-current p-6 pb-0')} aria-label={stickyNav?.ariaLabel}>
 			<div className='relative mx-auto py-2.5 flex flex-wrap justify-between items-center justify-between'>
 				<Link to='/' className={'font-medium text-[.725rem] uppercase sm:tracking-[.2em]' + (isScrolled ? ' text-foreground' : ' text-current')}>
 					<img src={logo} alt={stickyNav?.logoAlt} className='w-8 sm:w-4.5 rounded-sm sm: rounded-xs aspect-square inline-block' />

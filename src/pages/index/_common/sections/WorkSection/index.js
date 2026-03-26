@@ -27,14 +27,12 @@ export const WorkSection = () => {
 	const didScrollRef = useRef(false);
 
 	useEffect(() => {
-		/* eslint-disable react-hooks/set-state-in-effect -- hydrate accordion/drawer from URL hash */
 		const hashMatch = getInitialStateFromHash();
 		if (!hashMatch) return;
 		setExpandedGroup(hashMatch.groupName);
 		setSelectedByGroup((prev) => ({ ...prev, [hashMatch.groupName]: hashMatch.app }));
 		setDrawerOpen(true);
 		setDrawerGroup(hashMatch.groupName);
-		/* eslint-enable react-hooks/set-state-in-effect */
 		if (didScrollRef.current) return;
 		didScrollRef.current = true;
 		setTimeout(() => {
@@ -102,6 +100,7 @@ export const WorkSection = () => {
 									</React.Fragment>
 								))}
 							</div>
+							<p className='text-sm text-current/55 mt-4'>{ws.designSystemCtaNote}</p>
 						</Card>
 					</div>
 				</div>

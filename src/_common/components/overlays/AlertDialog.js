@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, createContext, useContext } from 'react';
 import { createPortal } from 'react-dom';
 import { focusRing } from '../../../constants/utils/a11y';
+import { cn } from '../../../constants/utils/cn';
 
 const OVERLAY = 'fixed inset-0 z-50 bg-black/80';
 const CONTENT = 'fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg rounded-lg animate-in fade-in-0 zoom-in-95';
@@ -30,7 +31,7 @@ export const AlertDialogPortal = ({ children }) => children;
 export const AlertDialogOverlay = ({ className = '', ...props }) => {
 	const { open } = useContext(AlertDialogContext);
 	if (!open) return null;
-	return <div className={OVERLAY + ' ' + className} aria-hidden='true' {...props}/>;
+	return <div className={cn(OVERLAY, className)} aria-hidden='true' {...props}/>;
 };
 
 export const AlertDialogContent = ({ children, className = '', ...props }) => {
@@ -58,7 +59,7 @@ export const AlertDialogContent = ({ children, className = '', ...props }) => {
 	return createPortal(
 		<>
 			<div className={OVERLAY} aria-hidden='true'/>
-			<div ref={ref} role='alertdialog' aria-modal='true' className={CONTENT + ' ' + className} {...props}>
+			<div ref={ref} role='alertdialog' aria-modal='true' className={cn(CONTENT, className)} {...props}>
 				{children}
 			</div>
 		</>,
@@ -67,28 +68,28 @@ export const AlertDialogContent = ({ children, className = '', ...props }) => {
 };
 
 export const AlertDialogHeader = ({ className = '', ...props }) => (
-	<div className={HEADER + ' ' + className} {...props}/>
+	<div className={cn(HEADER, className)} {...props}/>
 );
 
 export const AlertDialogFooter = ({ className = '', ...props }) => (
-	<div className={FOOTER + ' ' + className} {...props}/>
+	<div className={cn(FOOTER, className)} {...props}/>
 );
 
 export const AlertDialogTitle = ({ className = '', children, ...props }) => (
-	<h2 className={TITLE + ' ' + className} {...props}>{children}</h2>
+	<h2 className={cn(TITLE, className)} {...props}>{children}</h2>
 );
 
 export const AlertDialogDescription = ({ className = '', ...props }) => (
-	<p className={DESCRIPTION + ' ' + className} {...props}/>
+	<p className={cn(DESCRIPTION, className)} {...props}/>
 );
 
 export const AlertDialogAction = ({ className = '', ...props }) => (
-	<button type='button' className={ACTION + ' ' + className} {...props}/>
+	<button type='button' className={cn(ACTION, className)} {...props}/>
 );
 
 export const AlertDialogCancel = ({ className = '', ...props }) => {
 	const { onOpenChange } = useContext(AlertDialogContext);
 	return (
-		<button type='button' className={CANCEL + ' ' + className} onClick={() => onOpenChange && onOpenChange(false)} {...props}/>
+		<button type='button' className={cn(CANCEL, className)} onClick={() => onOpenChange && onOpenChange(false)} {...props}/>
 	);
 };

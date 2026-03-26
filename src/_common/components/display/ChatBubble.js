@@ -1,3 +1,6 @@
+import { cva } from 'class-variance-authority';
+import { cn } from '../../../constants/utils/cn';
+
 const WIDTH_CLASSES = { 'fit-content': 'w-fit', full: 'w-full', auto: 'w-auto' };
 
 const VARIANTS = {
@@ -15,15 +18,24 @@ const TYPE_DEFAULTS = {
 	answer: 'bg-muted text-muted-foreground',
 };
 
+const chatBubbleLayoutVariants = cva('transition-all duration-400 rounded-2xl text-[0.88rem] leading-relaxed', {
+	variants: {
+		type: {
+			question: 'self-end max-w-[85%] py-2.5 px-4 rounded-[1rem_1rem_0.25rem_1rem]',
+			answer: 'self-start max-w-[92%] w-[auto] py-3 px-4 rounded-[1rem_1rem_0.25rem_1rem]',
+		},
+	},
+	defaultVariants: {
+		type: 'answer',
+	},
+});
+
 export function ChatBubble({ type, children, show, delayClass, width, variant = 'default' }) {
-	const base = 'transition-all duration-400 rounded-2xl text-[0.88rem] leading-relaxed';
-	const question = 'self-end max-w-[85%] py-2.5 px-4 rounded-[1rem_1rem_0.25rem_1rem]';
-	const answer = 'self-start max-w-[92%] w-[auto] py-3 px-4 rounded-[1rem_1rem_0.25rem_1rem]';
 	const colorClass = VARIANTS[variant] || TYPE_DEFAULTS[type];
 	const visible = show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2';
 	const widthClass = width && WIDTH_CLASSES[width] ? WIDTH_CLASSES[width] : '';
 	return (
-		<div className={base + ' ' + (type === 'question' ? question : answer) + ' ' + colorClass + ' ' + visible + (widthClass ? ' ' + widthClass : '') + (delayClass ? ' ' + delayClass : '')}>
+		<div className={cn(chatBubbleLayoutVariants({ type }), colorClass, visible, widthClass || undefined, delayClass || undefined)}>
 			{children}
 		</div>
 	);

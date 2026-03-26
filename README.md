@@ -10,19 +10,22 @@ Personal portfolio and CV — Senior Technical Product Designer that ships code.
 - **Accessible** - Semantic HTML and proper contrast ratios
 - **SEO Optimized** - Meta tags and structured data for search engines
 - **PWA Ready** - Progressive Web App capabilities with manifest and service worker
-- **PDF Export** - Built-in PDF generation functionality for easy CV sharing
+- **PDF Export** - Print-optimized layout for easy CV sharing
 
 ## 🛠 Tech Stack
 
 - **Gatsby 5** - Static site generator for React
-- **React 18** - JavaScript library for building user interfaces
+- **React 19** - JavaScript library for building user interfaces
 - **Tailwind CSS 4** - Utility-first CSS framework
 - **Sass** - CSS preprocessor for enhanced styling
 - **React i18next** - Internationalization framework
-- **Redux Toolkit** - State management (configured but not actively used)
-- **html2canvas & jsPDF** - PDF generation capabilities
+- **Motion** - Animation library (Framer Motion successor)
 - **React Helmet** - Document head management
 - **JavaScript** - No TypeScript dependencies
+
+## Design system
+
+Shared UI lives in `src/_common/components/` (see the barrel [`src/_common/components/index.js`](src/_common/components/index.js)). Tailwind classes are composed with **`cn()`** (clsx + tailwind-merge) and **class-variance-authority (CVA)** for variant APIs.
 
 ## 📁 Project Structure
 
@@ -121,7 +124,7 @@ The site will be available at `https://mariavaragilal.github.io`
 
 ## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
+All original content, design, and code in this repository is copyright Maria Varagilal. All rights reserved. See [license.txt](static/license.txt) for details.
 
 ## 👤 Author
 

@@ -1,11 +1,12 @@
 import { Link } from 'gatsby';
 import { useTranslation } from 'react-i18next';
-import { srOnly, focusRing } from '../../../../constants/utils/a11y';
+import { srOnly } from '../../../../constants/utils/a11y';
 import { Button } from '../../../../_common/components';
 
 export const ContactSection = () => {
 	const { t } = useTranslation();
 	const c = t('mv.contact', { returnObjects: true }) || {};
+	const profiles = Array.isArray(c.profiles) ? c.profiles : [];
 	return (
 		<section id='contact' aria-labelledby='contact-heading' className='px-6 py-16 lg:px-12'>
 			<div className='mx-auto max-w-full grid gap-x-10 gap-y-6 md:grid-cols-2'>
@@ -25,26 +26,13 @@ export const ContactSection = () => {
 					</div>
 				</div>
 				<nav className='p-0 mt-auto' aria-label={c.profilesNavAria}>
-					<a href='https://github.com/mariavaragilal/' target='_blank' rel='noreferrer' className={'flex items-center justify-between border-b border-border py-4 text-sm text-foreground ' + focusRing} >
-						<span className='text-[.75em] uppercase tracking-[0.18em] text-current/66'>GitHub</span>
-						<span className='text-[.8em] text-current'>github.com/mariavaragilal →</span>
-						<span className={srOnly}> {c.opensNewTab}</span>
-					</a>
-					<a href='https://dribbble.com/mariavaragilal' target='_blank' rel='noreferrer' className={'flex items-center justify-between border-b border-border py-4 text-sm text-foreground ' + focusRing} >
-						<span className='text-[.75em] uppercase tracking-[0.18em] text-current/66'>Dribbble</span>
-						<span className='text-[.8em] text-current'>dribbble.com/mariavaragilal →</span>
-						<span className={srOnly}> {c.opensNewTab}</span>
-					</a>
-					<a href='https://codepen.io/mariavaragilal' target='_blank' rel='noreferrer' className={'flex items-center justify-between border-b border-border py-4 text-sm text-foreground ' + focusRing} >
-						<span className='text-[.75em] uppercase tracking-[0.18em] text-current/66'>CodePen</span>
-						<span className='text-[.8em] text-current'>codepen.io/mariavaragilal →</span>
-						<span className={srOnly}> {c.opensNewTab}</span>
-					</a>
-					<a href='https://be.net/mariavaragilal' target='_blank' rel='noreferrer' className={'flex items-center justify-between border-b border-border py-4 text-sm text-foreground ' + focusRing} >
-						<span className='text-[.75em] uppercase tracking-[0.18em] text-current/66'>Behance</span>
-						<span className='text-[.8em] text-current'>be.net/mariavaragilal →</span>
-						<span className={srOnly}> {c.opensNewTab}</span>
-					</a>
+					{profiles.map((row) => (
+						<Button key={row.href} as='a' href={row.href} target='_blank' rel='noreferrer' variant='ghost' size='unset' className='w-full inline-flex flex-row justify-between items-center rounded-none border-0 border-b border-border py-4 h-auto min-h-0 text-sm text-foreground font-normal hover:bg-secondary/50 hover:px-5'>
+							<span className='text-[.75em] uppercase tracking-[0.18em] text-current/66'>{row.name}</span>
+							<span className='text-[.8em] text-current'>{row.line}</span>
+							<span className={srOnly}> {c.opensNewTab}</span>
+						</Button>
+					))}
 				</nav>
 			</div>
 		</section>

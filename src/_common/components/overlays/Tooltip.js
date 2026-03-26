@@ -1,4 +1,5 @@
 import React, { useState, useRef, useId, useCallback, createContext, useContext } from 'react';
+import { cn } from '../../../constants/utils/cn';
 
 const CONTENT = 'z-50 overflow-hidden rounded-md bg-primary px-3 py-1.5 text-xs text-primary-foreground animate-in fade-in-0 zoom-in-95';
 
@@ -47,7 +48,7 @@ export const TooltipContent = ({ className = '', children, sideOffset = 4, ...pr
 			role='tooltip'
 			data-state='open'
 			style={{ position: 'absolute', bottom: 'calc(100% + ' + sideOffset + 'px)', left: '50%', transform: 'translateX(-50%)', whiteSpace: 'nowrap' }}
-			className={CONTENT + ' ' + className}
+			className={cn(CONTENT, className)}
 			{...props}
 		>
 			{children}

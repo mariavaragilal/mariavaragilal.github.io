@@ -1,5 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { createPortal } from 'react-dom';
+import { cva } from 'class-variance-authority';
+import { cn } from '../../../constants/utils/cn';
 
 const TOAST_LIMIT = 5;
 const TOAST_DURATION = 4000;
@@ -13,13 +15,20 @@ const POSITIONS = {
 	'bottom-right': 'bottom-0 right-0',
 };
 
-const TYPE_STYLES = {
-	success: 'border-green-200 bg-green-50 text-green-900 dark:border-green-800 dark:bg-green-950 dark:text-green-100',
-	error: 'border-red-200 bg-red-50 text-red-900 dark:border-red-800 dark:bg-red-950 dark:text-red-100',
-	warning: 'border-yellow-200 bg-yellow-50 text-yellow-900 dark:border-yellow-800 dark:bg-yellow-950 dark:text-yellow-100',
-	info: 'border-blue-200 bg-blue-50 text-blue-900 dark:border-blue-800 dark:bg-blue-950 dark:text-blue-100',
-	default: 'border-border bg-background text-foreground',
-};
+const toastVariants = cva('relative pointer-events-auto flex w-full items-center justify-between space-x-4 overflow-hidden rounded-lg border p-4 pr-8 shadow-lg transition-all', {
+	variants: {
+		type: {
+			success: 'border-green-200 bg-green-50 text-green-900 dark:border-green-800 dark:bg-green-950 dark:text-green-100',
+			error: 'border-red-200 bg-red-50 text-red-900 dark:border-red-800 dark:bg-red-950 dark:text-red-100',
+			warning: 'border-yellow-200 bg-yellow-50 text-yellow-900 dark:border-yellow-800 dark:bg-yellow-950 dark:text-yellow-100',
+			info: 'border-blue-200 bg-blue-50 text-blue-900 dark:border-blue-800 dark:bg-blue-950 dark:text-blue-100',
+			default: 'border-border bg-background text-foreground',
+		},
+	},
+	defaultVariants: {
+		type: 'default',
+	},
+});
 
 let listeners = [];
 let memToasts = [];
@@ -49,12 +58,14 @@ const ToastItem = ({ t, onDismiss }) => {
 		return () => clearTimeout(timer);
 	}, [t.id, t.duration, onDismiss]);
 
+	const typeKey = ['success', 'error', 'warning', 'info'].includes(t.type) ? t.type : 'default';
+
 	return (
 		<div
 			role='status'
 			aria-live='polite'
 			aria-atomic='true'
-			className={'relative pointer-events-auto flex w-full items-center justify-between space-x-4 overflow-hidden rounded-lg border p-4 pr-8 shadow-lg transition-all ' + (TYPE_STYLES[t.type] || TYPE_STYLES.default)}
+			className={toastVariants({ type: typeKey })}
 		>
 			<div className='flex flex-col gap-1'>
 				{t.title && <div className='text-sm font-semibold'>{t.title}</div>}
@@ -93,7 +104,7 @@ export const Toaster = ({ position = 'bottom-right', className = '' }) => {
 			role='region'
 			aria-label='Notifications'
 			aria-live='polite'
-			className={'fixed z-[100] flex max-h-screen flex-col-reverse p-4 gap-2 ' + (POSITIONS[position] || POSITIONS['bottom-right']) + ' ' + className}
+			className={cn('fixed z-[100] flex max-h-screen flex-col-reverse p-4 gap-2', POSITIONS[position] || POSITIONS['bottom-right'], className)}
 		>
 			{toasts.map(t => (
 				<ToastItem key={t.id} t={t} onDismiss={dismiss}/>

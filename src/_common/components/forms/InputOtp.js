@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { focusRing } from '../../../constants/utils/a11y';
+import { cn } from '../../../constants/utils/cn';
 
 const CONTAINER = 'flex items-center gap-2';
 const SLOT = 'relative flex h-9 w-9 items-center justify-center rounded-md border border-input bg-input-background text-sm font-medium shadow-sm';
@@ -22,9 +23,9 @@ export const InputOtp = ({ length = 6, value = '', onChange, className = '', ...
 	};
 
 	return (
-		<div className={CONTAINER + ' ' + className} role='group' aria-label='One-time password input' {...props}>
+		<div className={cn(CONTAINER, className)} role='group' aria-label='One-time password input' {...props}>
 			{vals.map((v, i) => (
-				<div key={i} className={SLOT + (v ? ' ring-1 ring-ring' : '')}>
+				<div key={i} className={cn(SLOT, v && 'ring-1 ring-ring')}>
 					<span aria-hidden='true'>{v}</span>
 					<input
 						ref={el => { refs.current[i] = el; }}
@@ -44,7 +45,7 @@ export const InputOtp = ({ length = 6, value = '', onChange, className = '', ...
 };
 
 export const InputOtpGroup = ({ className = '', ...props }) => (
-	<div className={'flex items-center ' + className} {...props}/>
+	<div className={cn('flex items-center', className)} {...props}/>
 );
 
 export const InputOtpSeparator = ({ className = '', ...props }) => (

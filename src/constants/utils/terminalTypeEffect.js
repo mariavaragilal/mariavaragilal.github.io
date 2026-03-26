@@ -227,5 +227,4 @@ const LazyTerminalTypeEffect = ({ children, fallback, ...props }) => {
 	);
 };
 
-export default TerminalTypeEffect;
 export { LazyTerminalTypeEffect };

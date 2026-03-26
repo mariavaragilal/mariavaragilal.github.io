@@ -1,16 +1,31 @@
 import React, { useCallback, useEffect, useRef, useState, createContext, useContext } from 'react';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'motion/react';
+import { cva } from 'class-variance-authority';
 import { focusRing } from '../../../constants/utils/a11y';
+import { cn } from '../../../constants/utils/cn';
 import { Button } from '../controls/Button';
 
 const OVERLAY_BASE = 'fixed inset-0 z-250 cursor-pointer bg-foreground text-current';
 const WRAPPER = 'fixed z-250 overflow-hidden text-foreground';
-const CONTENT = 'absolute inset-0 gap-4 bg-background p-6 shadow-lg text-current';
 const HEADER = 'flex flex-col space-y-2 text-center sm:text-left';
 const FOOTER = 'flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2';
 const TITLE = 'text-lg font-semibold';
 const DESCRIPTION = 'text-sm text-current/66';
+
+const sheetContentVariants = cva('absolute inset-0 gap-4 bg-background p-6 shadow-lg text-current overflow-y-auto', {
+	variants: {
+		side: {
+			top: 'bottom-auto',
+			bottom: 'top-auto',
+			left: 'right-auto',
+			right: 'left-auto',
+		},
+	},
+	defaultVariants: {
+		side: 'right',
+	},
+});
 
 const SIDES = {
 	top: { flush: 'top-0 left-0 right-0', contentAlign: 'bottom-auto', initial: { y: '-100%' }, animate: { y: 0 }, exit: { y: '-100%' } },
@@ -51,7 +66,7 @@ export const SheetClose = ({ children, asChild = false, className = '', ...props
 	const { onOpenChange } = useContext(SheetContext);
 	const handleClose = useCallback(() => onOpenChange && onOpenChange(false), [onOpenChange]);
 	if (asChild && React.isValidElement(children)) return React.cloneElement(children, { onClick: handleClose, ...props });
-	return <Button variant='secondary' size='icon' aria-label='Close' className={'absolute right-4 top-4 shrink-0 size-11 ' + className} onClick={handleClose} {...props}>{children}</Button>;
+	return <Button variant='secondary' size='icon' aria-label='Close' className={cn('absolute right-4 top-4 shrink-0 size-11', className)} onClick={handleClose} {...props}>{children}</Button>;
 };
 
 export const SheetPortal = ({ children }) => createPortal(children, document.body);
@@ -63,7 +78,7 @@ export const SheetOverlay = ({ overlayOpacity = 0.5, onClick, className = '', ..
 		animate={{ opacity: overlayOpacity }}
 		exit={{ opacity: 0 }}
 		transition={{ duration: 0.2 }}
-		className={OVERLAY_BASE + ' ' + className}
+		className={cn(OVERLAY_BASE, className)}
 		aria-hidden='true'
 		onClick={onClick}
 		{...props}
@@ -122,9 +137,9 @@ export const SheetContent = ({ side = 'right', overlayOpacity = 0.5, closeButton
 							animate={sideConfig.animate}
 							exit={sideConfig.exit}
 							transition={TRANSITION}
-							className={WRAPPER + ' ' + (wrapperClassName || sideConfig.flush)}
+							className={cn(WRAPPER, wrapperClassName || sideConfig.flush)}
 							onClick={handleWrapperClick}>
-							<div ref={ref} role='dialog' aria-modal='true' className={CONTENT + ' ' + (sideConfig.contentAlign || '') + ' overflow-y-auto ' + focusRing + ' ' + className} {...props}>
+							<div ref={ref} role='dialog' aria-modal='true' className={cn(sheetContentVariants({ side }), focusRing, className)} {...props}>
 								{closeButton && (
 									<SheetClose>
 										<motion.span animate={{ rotate: 45 }} className='font-mono font-thin text-xl leading-none' aria-hidden='true'>+</motion.span>
@@ -141,17 +156,17 @@ export const SheetContent = ({ side = 'right', overlayOpacity = 0.5, closeButton
 };
 
 export const SheetHeader = ({ className = '', ...props }) => (
-	<div className={HEADER + ' ' + className} {...props} />
+	<div className={cn(HEADER, className)} {...props} />
 );
 
 export const SheetFooter = ({ className = '', ...props }) => (
-	<div className={FOOTER + ' ' + className} {...props} />
+	<div className={cn(FOOTER, className)} {...props} />
 );
 
 export const SheetTitle = ({ className = '', children, ...props }) => (
-	<h2 className={TITLE + ' ' + className} {...props}>{children}</h2>
+	<h2 className={cn(TITLE, className)} {...props}>{children}</h2>
 );
 
 export const SheetDescription = ({ className = '', ...props }) => (
-	<p className={DESCRIPTION + ' ' + className} {...props} />
+	<p className={cn(DESCRIPTION, className)} {...props} />
 );

@@ -1,3 +1,5 @@
+import { cn } from '../../../constants/utils/cn';
+
 const WRAPPER = 'relative w-full overflow-auto';
 const TABLE = 'w-full caption-bottom text-sm';
 const HEADER = '[&_tr]:border-b';
@@ -10,34 +12,34 @@ const CAPTION = 'mt-4 text-sm text-muted-foreground';
 
 export const Table = ({ className = '', ...props }) => (
 	<div className={WRAPPER}>
-		<table className={TABLE + ' ' + className} {...props}/>
+		<table className={cn(TABLE, className)} {...props}/>
 	</div>
 );
 
 export const TableHeader = ({ className = '', ...props }) => (
-	<thead className={HEADER + ' ' + className} {...props}/>
+	<thead className={cn(HEADER, className)} {...props}/>
 );
 
 export const TableBody = ({ className = '', ...props }) => (
-	<tbody className={BODY + ' ' + className} {...props}/>
+	<tbody className={cn(BODY, className)} {...props}/>
 );
 
 export const TableFooter = ({ className = '', ...props }) => (
-	<tfoot className={FOOTER + ' ' + className} {...props}/>
+	<tfoot className={cn(FOOTER, className)} {...props}/>
 );
 
 export const TableRow = ({ className = '', ...props }) => (
-	<tr className={ROW + ' ' + className} {...props}/>
+	<tr className={cn(ROW, className)} {...props}/>
 );
 
 export const TableHead = ({ className = '', ...props }) => (
-	<th className={HEAD + ' ' + className} {...props}/>
+	<th className={cn(HEAD, className)} {...props}/>
 );
 
 export const TableCell = ({ className = '', ...props }) => (
-	<td className={CELL + ' ' + className} {...props}/>
+	<td className={cn(CELL, className)} {...props}/>
 );
 
 export const TableCaption = ({ className = '', ...props }) => (
-	<caption className={CAPTION + ' ' + className} {...props}/>
+	<caption className={cn(CAPTION, className)} {...props}/>
 );

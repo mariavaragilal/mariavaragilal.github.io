@@ -5,28 +5,28 @@
 
 import { person } from './mvpData';
 
-export const personStructuredData = {
+export const buildPersonStructuredData = (mv) => ({
 	'@context': 'https://schema.org',
 	'@type': 'Person',
 	name: person.name,
-	jobTitle: person.jobTitle,
-	description: person.description,
+	jobTitle: mv.intro.schemaJobTitle,
+	description: mv.seo.defaultDescription,
 	url: person.url,
 	image: person.image,
 	sameAs: person.sameAs,
 	address: { '@type': 'PostalAddress', addressLocality: person.address.locality, addressCountry: person.address.country },
 	knowsAbout: person.knowsAbout,
-	hasOccupation: { '@type': 'Occupation', name: person.jobTitle, description: 'Designs and develops digital products from concept to production', skills: person.skills },
+	hasOccupation: { '@type': 'Occupation', name: mv.intro.schemaJobTitle, description: mv.seo.occupationDescription, skills: person.skills },
 	alumniOf: person.education.map((e) => ({ '@type': 'EducationalOrganization', name: e.name, description: e.description })),
 	worksFor: { '@type': 'Organization', name: person.worksFor.name, url: person.worksFor.url, description: person.worksFor.description },
 	award: person.awards.map((a) => ({ '@type': 'Award', name: a.name, description: a.description, datePublished: a.date })),
-};
+});
 
 export const buildWebsiteStructuredData = (mv) => ({
 	'@context': 'https://schema.org',
 	'@type': 'WebSite',
-	name: person.name + '—' + person.jobTitle,
-	description: mv.intro.title,
+	name: person.name + '—' + mv.intro.schemaJobTitle,
+	description: mv.seo.defaultDescription,
 	url: person.url,
 	author: { '@type': 'Person', name: person.name },
 	inLanguage: ['en', 'pt'],

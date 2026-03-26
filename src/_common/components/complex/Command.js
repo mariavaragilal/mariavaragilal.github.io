@@ -1,5 +1,6 @@
 import { useState, createContext, useContext } from 'react';
 import { focusRing } from '../../../constants/utils/a11y';
+import { cn } from '../../../constants/utils/cn';
 
 const ROOT = 'flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground';
 const INPUT_WRAPPER = 'flex items-center border-b px-3';
@@ -18,7 +19,7 @@ export const Command = ({ className = '', children, ...props }) => {
 	const [search, setSearch] = useState('');
 	return (
 		<CommandContext.Provider value={{ search, setSearch }}>
-			<div role='combobox' aria-expanded='true' aria-haspopup='listbox' aria-controls='command-listbox' className={ROOT + ' ' + className} {...props}>
+			<div role='combobox' aria-expanded='true' aria-haspopup='listbox' aria-controls='command-listbox' className={cn(ROOT, className)} {...props}>
 				{children}
 			</div>
 		</CommandContext.Provider>
@@ -51,7 +52,7 @@ export const CommandInput = ({ className = '', placeholder, ...props }) => {
 				aria-autocomplete='list'
 				value={search}
 				onChange={e => setSearch(e.target.value)}
-				className={INPUT + ' ' + className}
+				className={cn(INPUT, className)}
 				placeholder={placeholder}
 				{...props}
 			/>
@@ -60,15 +61,15 @@ export const CommandInput = ({ className = '', placeholder, ...props }) => {
 };
 
 export const CommandList = ({ className = '', children, ...props }) => (
-	<div id='command-listbox' role='listbox' className={LIST + ' ' + className} {...props}>{children}</div>
+	<div id='command-listbox' role='listbox' className={cn(LIST, className)} {...props}>{children}</div>
 );
 
 export const CommandEmpty = ({ className = '', ...props }) => (
-	<div className={EMPTY + ' ' + className} {...props}/>
+	<div className={cn(EMPTY, className)} {...props}/>
 );
 
 export const CommandGroup = ({ heading, className = '', children, ...props }) => (
-	<div role='group' aria-label={heading} className={GROUP + ' ' + className} {...props}>
+	<div role='group' aria-label={heading} className={cn(GROUP, className)} {...props}>
 		{heading && <div className={GROUP_HEADING}>{heading}</div>}
 		{children}
 	</div>
@@ -84,7 +85,7 @@ export const CommandItem = ({ onSelect, disabled, className = '', children, valu
 			role='option'
 			aria-selected='false'
 			data-disabled={disabled || undefined}
-			className={ITEM_BASE + ' ' + className}
+			className={cn(ITEM_BASE, className)}
 			onClick={() => !disabled && onSelect && onSelect(value || '')}
 			onKeyDown={e => { if ((e.key === 'Enter' || e.key === ' ') && !disabled) { e.preventDefault(); onSelect && onSelect(value || ''); } }}
 			tabIndex={disabled ? -1 : 0}
@@ -96,9 +97,9 @@ export const CommandItem = ({ onSelect, disabled, className = '', children, valu
 };
 
 export const CommandSeparator = ({ className = '', ...props }) => (
-	<div role='separator' className={SEPARATOR + ' ' + className} {...props}/>
+	<div role='separator' className={cn(SEPARATOR, className)} {...props}/>
 );
 
 export const CommandShortcut = ({ className = '', ...props }) => (
-	<span className={SHORTCUT + ' ' + className} {...props}/>
+	<span className={cn(SHORTCUT, className)} {...props}/>
 );

@@ -15,11 +15,11 @@ const Layout = ({ children, title, description, showWork, className, ...others }
 	return (
 		<React.Fragment>
 			<I18nextProvider i18n={i18n}>
-				<Seo title={title} description={description}/>
+				<Seo title={title} description={description} />
 				<ThemeProvider>
 					<ErrorBoundary>
 						<div className={wrapperClass} data-print-root {...others}>
-							<LayoutHeader pathname={pathname} isLandingPage={isLandingPage}/>
+							<LayoutHeader pathname={pathname} isLandingPage={isLandingPage} />
 							<LayoutMain isWorkPage={isWorkPage} isLandingPage={isLandingPage} isVisible={isVisible} showWork={showWork} className={className}>
 								{children}
 							</LayoutMain>

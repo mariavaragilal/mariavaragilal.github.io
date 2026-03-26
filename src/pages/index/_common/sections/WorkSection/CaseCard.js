@@ -53,7 +53,7 @@ export const CaseCard = ({ app, isSelected, onToggle, href, icon, iconChar = '+'
 						{app.status === 'shipped' ? (
 							<Badge variant='secondary' size='sm' className=' tracking-[0.06em] uppercase'>{ui.shipped}</Badge>
 						) : (
-							<Badge variant='outline' size='sm' className=' tracking-[0.06em] uppercase'>{ui.concept}</Badge>
+							<Badge variant='outline' size='sm' className=' tracking-[0.06em] uppercase'>{ui[app.status]}</Badge>
 						)}
 						<CardTitle className='font-mono text-xl text-primary w-full'>{app.title}</CardTitle>
 					</span>
@@ -81,7 +81,7 @@ export const CaseCard = ({ app, isSelected, onToggle, href, icon, iconChar = '+'
 	) : (
 		<Card as='div' variant='default' className={cardClassBase} id={id} aria-label={cardAria}>
 			<CardHeader as='button' type='button' className='flex flex-col gap-2 text-start mb-4 cursor-pointer' headerPadding='p-0' enableActionSlot={false} aria-expanded={isSelected} onClick={onToggle}>
-				<div className='grid flex-wrap flex-1 grid has-data-[slot=card-action]:grid-cols-[1fr_auto] mb-0'>
+				<div className='grid flex-wrap flex-1 grid has-data-[slot=card-action]:grid-cols-[1fr_auto] mb-0 w-full'>
 					<span className='text-lg font-medium flex flex-wrap items-center gap-2.5'>
 						{app.status === 'shipped' ? (
 							<Badge variant='secondary' size='sm' className=' tracking-[0.06em] uppercase'>{ui.shipped}</Badge>

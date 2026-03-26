@@ -1,4 +1,5 @@
 import React, { createContext, useContext } from 'react';
+import { cn } from '../../../constants/utils/cn';
 
 const FormFieldContext = createContext(null);
 const useFormField = () => useContext(FormFieldContext);
@@ -14,14 +15,14 @@ export const FormField = ({ name, error, children, ...props }) => (
 );
 
 export const FormItem = ({ className = '', ...props }) => (
-	<div className={'space-y-2 ' + className} {...props}/>
+	<div className={cn('space-y-2', className)} {...props}/>
 );
 
 export const FormLabel = ({ className = '', htmlFor, children, ...props }) => {
 	const ctx = useFormField();
 	const hasError = ctx && ctx.error;
 	return (
-		<label htmlFor={htmlFor} className={'text-sm font-medium leading-none ' + (hasError ? 'text-destructive ' : '') + className} {...props}>{children}</label>
+		<label htmlFor={htmlFor} className={cn('text-sm font-medium leading-none', hasError && 'text-destructive', className)} {...props}>{children}</label>
 	);
 };
 
@@ -45,7 +46,7 @@ export const FormControl = ({ className = '', children, id, ...props }) => {
 };
 
 export const FormDescription = ({ className = '', ...props }) => (
-	<p className={'text-sm text-muted-foreground ' + className} {...props}/>
+	<p className={cn('text-sm text-muted-foreground', className)} {...props}/>
 );
 
 export const FormMessage = ({ className = '', children, ...props }) => {
@@ -57,7 +58,7 @@ export const FormMessage = ({ className = '', children, ...props }) => {
 		<p
 			id={fieldName ? fieldName + '-error' : undefined}
 			role='alert'
-			className={'text-sm font-medium text-destructive ' + className}
+			className={cn('text-sm font-medium text-destructive', className)}
 			{...props}
 		>
 			{children || fieldError}

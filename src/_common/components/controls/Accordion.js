@@ -1,6 +1,7 @@
 import { useState, createContext, useContext, useId } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { focusRing } from '../../../constants/utils/a11y';
+import { cn } from '../../../constants/utils/cn';
 import { Button } from './Button';
 
 const AccordionContext = createContext({ type: 'single', value: null, onValueChange: () => { } });
@@ -45,12 +46,12 @@ export const AccordionItem = ({ value, isExpanded: externalExpanded, onToggle: e
 
 	return (
 		<AccordionItemContext.Provider value={{ value, isOpen, toggle, triggerId, panelId }}>
-			<div className={'relative ' + className} {...props}>{children}</div>
+			<div className={cn('relative', className)} {...props}>{children}</div>
 		</AccordionItemContext.Provider>
 	);
 };
 
-const TRIGGER_BASE = 'flex flex-1 items-center justify-between py-4 text-sm font-medium transition-all hover:underline text-left cursor-default disabled:cursor-not-allowed data-[readonly=true]:cursor-default ' + focusRing;
+const TRIGGER_BASE = 'flex min-w-0 flex-1 items-center justify-between gap-2 py-4 text-sm font-medium transition-all hover:underline text-left break-words cursor-default disabled:cursor-not-allowed data-[readonly=true]:cursor-default ' + focusRing;
 const TRIGGER_GRID = 'flex w-full items-center gap-6 text-left grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] md:col-span-2 cursor-default disabled:cursor-not-allowed data-[readonly=true]:cursor-default ' + focusRing;
 
 const DEFAULT_TRIGGER_PADDING = 'px-1 py-7';
@@ -63,7 +64,7 @@ export const AccordionTrigger = ({ className = '', gridCols, triggerGrid, icon, 
 	const layoutClass = gridCols ? gridLayout : TRIGGER_BASE;
 
 	const chevronIcon = (
-		<span aria-hidden='true' className={'shrink-0 transition-transform duration-200 ' + (isOpen ? 'rotate-180' : '')}>&#9662;</span>
+		<span aria-hidden='true' className={cn('shrink-0 transition-transform duration-200', isOpen && 'rotate-180')}>&#9662;</span>
 	);
 
 	const showRotated = isOpen || isHovered;
@@ -89,7 +90,7 @@ export const AccordionTrigger = ({ className = '', gridCols, triggerGrid, icon, 
 		type: 'button',
 		'aria-expanded': isOpen,
 		'aria-controls': panelId,
-		className: layoutClass + (hasIcon ? '' : ' cursor-pointer') + ' ' + className,
+		className: cn(layoutClass, !hasIcon && 'cursor-pointer', className),
 		'data-readonly': readOnly,
 		onClick: handleClick,
 		onMouseEnter: handleMouseEnter,
@@ -97,7 +98,7 @@ export const AccordionTrigger = ({ className = '', gridCols, triggerGrid, icon, 
 	};
 
 	const iconButton = hasIcon ? (
-		<Button variant='secondary' size='icon' onClick={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} readOnly={readOnly} aria-hidden='true' className={'shrink-0 ' + (iconPosition === 'start' ? '' : 'ml-auto')}>
+		<Button variant='secondary' size='icon' onClick={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} readOnly={readOnly} aria-hidden='true' className='shrink-0 self-center'>
 			{resolvedIconContent}
 		</Button>
 	) : null;
@@ -106,13 +107,13 @@ export const AccordionTrigger = ({ className = '', gridCols, triggerGrid, icon, 
 	const iconFirst = iconPosition === 'start';
 
 	return gridCols ? (
-		<div className={'flex w-full items-center gap-6 md:grid ' + (triggerPadding ? triggerPadding + ' ' : '') + gridCols}>
+		<div className={cn('flex w-full min-w-0 items-center gap-6 md:grid', triggerPadding || undefined, gridCols)}>
 			{iconFirst && iconButton}
 			{content}
 			{!iconFirst && iconButton}
 		</div>
 	) : (
-		<h3 className='flex'>
+		<h3 className='flex w-full min-w-0 items-center gap-2'>
 			{iconFirst && iconButton}
 			{content}
 			{!iconFirst && iconButton}
@@ -141,7 +142,7 @@ export const AccordionContent = ({ className = '', animate: shouldAnimate = true
 					animate={{ height: 'auto', opacity: 1 }}
 					exit={{ height: 0, opacity: 0 }}
 					transition={{ duration: 0.2, ease: 'easeInOut' }}
-					className={'overflow-hidden text-sm ' + className}
+					className={cn('overflow-hidden text-sm', className)}
 					{...props}
 				>
 					<div className='pb-4 pt-0'>{children}</div>

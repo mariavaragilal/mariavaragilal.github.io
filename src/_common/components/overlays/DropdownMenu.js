@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect, createContext, useContext } from 'react';
 import { focusRing } from '../../../constants/utils/a11y';
+import { cn } from '../../../constants/utils/cn';
 
 const CONTENT = 'z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95';
 const ITEM_BASE = 'relative flex cursor-default select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-accent hover:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 ' + focusRing;
@@ -62,7 +63,7 @@ export const DropdownMenuContent = ({ className = '', align = 'start', sideOffse
 			aria-orientation='vertical'
 			data-state='open'
 			style={{ top: 'calc(100% + ' + sideOffset + 'px)' }}
-			className={'absolute ' + (align === 'end' ? 'right-0' : 'left-0') + ' ' + CONTENT + ' ' + className}
+			className={cn('absolute', align === 'end' ? 'right-0' : 'left-0', CONTENT, className)}
 			{...props}
 		>
 			{children}
@@ -75,7 +76,7 @@ export const DropdownMenuItem = ({ className = '', inset, disabled, onSelect, ch
 		role='menuitem'
 		tabIndex={disabled ? -1 : 0}
 		data-disabled={disabled || undefined}
-		className={(inset ? 'pl-8 ' : '') + ITEM_BASE + ' ' + className}
+		className={cn(inset && 'pl-8', ITEM_BASE, className)}
 		onClick={!disabled ? onSelect : undefined}
 		onKeyDown={!disabled ? (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onSelect && onSelect(); } } : undefined}
 		{...props}
@@ -87,7 +88,7 @@ export const DropdownMenuItem = ({ className = '', inset, disabled, onSelect, ch
 export const DropdownMenuCheckboxItem = ({ className = '', checked, children, onCheckedChange, ...props }) => {
 	const toggle = () => onCheckedChange && onCheckedChange(!checked);
 	return (
-		<div role='menuitemcheckbox' aria-checked={checked} tabIndex={0} className={'pl-8 ' + ITEM_BASE + ' ' + className} onClick={toggle} onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } }} {...props}>
+		<div role='menuitemcheckbox' aria-checked={checked} tabIndex={0} className={cn('pl-8', ITEM_BASE, className)} onClick={toggle} onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } }} {...props}>
 			<span className='absolute left-2 flex h-3.5 w-3.5 items-center justify-center'>{checked && <span aria-hidden='true'>✓</span>}</span>
 			{children}
 		</div>
@@ -101,7 +102,7 @@ export const DropdownMenuRadioGroup = ({ children, value, onValueChange, ...prop
 export const DropdownMenuRadioItem = ({ className = '', children, value, _groupValue, _onGroupChange, ...props }) => {
 	const select = () => _onGroupChange && _onGroupChange(value);
 	return (
-		<div role='menuitemradio' aria-checked={_groupValue === value} tabIndex={0} className={'pl-8 ' + ITEM_BASE + ' ' + className} onClick={select} onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(); } }} {...props}>
+		<div role='menuitemradio' aria-checked={_groupValue === value} tabIndex={0} className={cn('pl-8', ITEM_BASE, className)} onClick={select} onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(); } }} {...props}>
 			<span className='absolute left-2 flex h-3.5 w-3.5 items-center justify-center'>{_groupValue === value && <span aria-hidden='true'>●</span>}</span>
 			{children}
 		</div>
@@ -109,15 +110,15 @@ export const DropdownMenuRadioItem = ({ className = '', children, value, _groupV
 };
 
 export const DropdownMenuLabel = ({ className = '', inset, ...props }) => (
-	<div className={(inset ? 'pl-8 ' : '') + LABEL_CLS + ' ' + className} {...props}/>
+	<div className={cn(inset && 'pl-8', LABEL_CLS, className)} {...props}/>
 );
 
 export const DropdownMenuSeparator = ({ className = '', ...props }) => (
-	<div role='separator' className={SEPARATOR + ' ' + className} {...props}/>
+	<div role='separator' className={cn(SEPARATOR, className)} {...props}/>
 );
 
 export const DropdownMenuShortcut = ({ className = '', ...props }) => (
-	<span className={SHORTCUT + ' ' + className} {...props}/>
+	<span className={cn(SHORTCUT, className)} {...props}/>
 );
 
 export const DropdownMenuGroup = ({ className = '', ...props }) => (
@@ -142,7 +143,7 @@ export const DropdownMenuSubTrigger = ({ className = '', inset, children, ...pro
 			aria-expanded={open}
 			tabIndex={0}
 			data-state={open ? 'open' : 'closed'}
-			className={(inset ? 'pl-8 ' : '') + SUB_TRIGGER + ' ' + className}
+			className={cn(inset && 'pl-8', SUB_TRIGGER, className)}
 			onClick={() => setOpen(!open)}
 			onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setOpen(!open); } }}
 			{...props}
@@ -156,5 +157,5 @@ export const DropdownMenuSubTrigger = ({ className = '', inset, children, ...pro
 export const DropdownMenuSubContent = ({ className = '', ...props }) => {
 	const { open } = useContext(DropdownSubContext);
 	if (!open) return null;
-	return <div role='menu' className={'absolute left-full top-0 ' + CONTENT + ' ' + className} {...props}/>;
+	return <div role='menu' className={cn('absolute left-full top-0', CONTENT, className)} {...props}/>;
 };

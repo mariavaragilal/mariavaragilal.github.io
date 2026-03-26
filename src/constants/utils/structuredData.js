@@ -39,7 +39,22 @@ const buildDescription = (app) => {
 	}
 	if (app.caseStudy?.implementation) {
 		const impl = app.caseStudy.implementation;
-		parts.push(Array.isArray(impl) ? impl.map((i) => i.items?.join('. ') || '').join(' ') : impl);
+		const flattenBlocks = (blocks) => {
+			if (blocks == null) return '';
+			const list = Array.isArray(blocks) ? blocks : [blocks];
+			return list.map((b) => {
+				if (typeof b === 'string') return b;
+				if (b && typeof b === 'object' && b.items && Array.isArray(b.items)) return b.items.join('. ');
+				return '';
+			}).join(' ');
+		};
+		if (typeof impl === 'object' && impl !== null && !Array.isArray(impl) && impl.design !== undefined) {
+			parts.push(flattenBlocks(impl.design) + ' ' + flattenBlocks(impl.code));
+		} else if (Array.isArray(impl)) {
+			parts.push(impl.map((i) => (i && i.items ? i.items.join('. ') : '')).join(' '));
+		} else if (typeof impl === 'string') {
+			parts.push(impl);
+		}
 	}
 	if (app.caseStudy?.tradeoffsLearnings) {
 		const tl = app.caseStudy.tradeoffsLearnings;
@@ -123,7 +138,3 @@ export const generatePortfolioStructuredData = (cases, mv) => {
 	};
 };
 
-export const generateCaseStructuredData = (app, groupName) => ({
-	'@context': 'https://schema.org',
-	'@graph': [buildCreativeWork(app, groupName)],
-});

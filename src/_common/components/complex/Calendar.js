@@ -1,14 +1,32 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
+import { cva } from 'class-variance-authority';
 import { focusRing } from '../../../constants/utils/a11y';
+import { cn } from '../../../constants/utils/cn';
 
-const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-const DAYS = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
+const weekdayShortLabels = (locale) => {
+	const out = [];
+	for (let i = 0; i < 7; i++) {
+		const d = new Date(2024, 0, 7 + i);
+		out.push(d.toLocaleDateString(locale, { weekday: 'short' }));
+	}
+	return out;
+};
 
 const NAV_BTN = 'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100 ' + focusRing;
-const DAY_BASE = 'h-8 w-8 p-0 font-normal inline-flex items-center justify-center rounded-md text-sm transition-colors hover:bg-accent hover:text-accent-foreground ' + focusRing;
-const DAY_SELECTED = 'bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground';
-const DAY_TODAY = 'bg-accent text-accent-foreground';
-const DAY_DISABLED = 'text-muted-foreground opacity-50 pointer-events-none';
+
+const calendarDayVariants = cva('p-0 font-normal inline-flex items-center justify-center rounded-md text-sm transition-colors hover:bg-accent hover:text-accent-foreground h-9 w-9 max-w-full shrink-0 ' + focusRing, {
+	variants: {
+		dayState: {
+			plain: '',
+			selected: 'bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground',
+			today: 'bg-accent text-accent-foreground',
+			disabled: 'text-muted-foreground opacity-50 pointer-events-none',
+		},
+	},
+	defaultVariants: {
+		dayState: 'plain',
+	},
+});
 
 const isSameDay = (a, b) => a && b && a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth() && a.getDate() === b.getDate();
 
@@ -21,12 +39,16 @@ const getDaysInMonth = (year, month) => {
 	return days;
 };
 
-export const Calendar = ({ selected, defaultMonth, onSelect, disabled, fromDate, toDate, className = '', ...props }) => {
+export const Calendar = ({ selected, defaultMonth, onSelect, disabled, fromDate, toDate, className = '', locale = 'en-US', ...props }) => {
 	const today = new Date();
 	const initial = defaultMonth || (selected instanceof Date ? selected : today);
 	const [viewDate, setViewDate] = useState(initial);
 	const year = viewDate.getFullYear();
 	const month = viewDate.getMonth();
+	const monthYearTitle = useMemo(() => new Date(year, month, 1).toLocaleDateString(locale, { month: 'long', year: 'numeric' }), [year, month, locale]);
+	const dayHeaders = useMemo(() => weekdayShortLabels(locale), [locale]);
+	const prevMonthAria = locale.indexOf('pt') === 0 ? 'Ir para o mês anterior' : 'Go to previous month';
+	const nextMonthAria = locale.indexOf('pt') === 0 ? 'Ir para o mês seguinte' : 'Go to next month';
 	const days = getDaysInMonth(year, month);
 	const weeks = [];
 	for (let i = 0; i < days.length; i += 7) weeks.push(days.slice(i, i + 7));
@@ -51,26 +73,33 @@ export const Calendar = ({ selected, defaultMonth, onSelect, disabled, fromDate,
 		if (onSelect) onSelect(d);
 	};
 
+	const dayStateFor = (day) => {
+		if (isDisabled(day)) return 'disabled';
+		if (isSelected(day)) return 'selected';
+		if (isSameDay(day, today)) return 'today';
+		return 'plain';
+	};
+
 	return (
-		<div className={'p-3 ' + className} {...props}>
-			<div className='flex flex-col space-y-4'>
-				<div className='relative flex items-center justify-center pt-1'>
-					<div className='text-sm font-medium'>{MONTHS[month] + ' ' + year}</div>
+		<div className={cn('w-full min-w-0 p-3', className)} {...props}>
+			<div className='flex w-full min-w-0 flex-col space-y-4'>
+				<div className='relative flex w-full items-center justify-center pt-1'>
+					<div className='text-sm font-medium'>{monthYearTitle}</div>
 					<div className='absolute flex items-center justify-between inset-x-0'>
-						<button type='button' aria-label='Go to previous month' className={NAV_BTN} onClick={() => setViewDate(new Date(year, month - 1, 1))}>
+						<button type='button' aria-label={prevMonthAria} className={NAV_BTN} onClick={() => setViewDate(new Date(year, month - 1, 1))}>
 							<span aria-hidden='true'>‹</span>
 						</button>
-						<button type='button' aria-label='Go to next month' className={NAV_BTN} onClick={() => setViewDate(new Date(year, month + 1, 1))}>
+						<button type='button' aria-label={nextMonthAria} className={NAV_BTN} onClick={() => setViewDate(new Date(year, month + 1, 1))}>
 							<span aria-hidden='true'>›</span>
 						</button>
 					</div>
 				</div>
-				<table role='grid' aria-label={MONTHS[month] + ' ' + year} className='w-full border-collapse space-y-1'>
+				<table role='grid' aria-label={monthYearTitle} className='w-full min-w-0 border-collapse'>
 					<thead>
-						<tr className='flex'>
-							{DAYS.map(d => (
-								<th key={d} scope='col' className='rounded-md w-8 font-normal text-[0.8rem] text-muted-foreground'>
-									<span aria-hidden='true'>{d}</span>
+						<tr className='flex w-full'>
+							{dayHeaders.map((d, hi) => (
+								<th key={hi} scope='col' className='flex-1 min-w-0 rounded-md px-0.5 font-normal text-[0.8rem] text-muted-foreground'>
+									<span aria-hidden='true' className='block truncate text-center'>{d}</span>
 								</th>
 							))}
 						</tr>
@@ -81,21 +110,23 @@ export const Calendar = ({ selected, defaultMonth, onSelect, disabled, fromDate,
 								{Array(7).fill(null).map((_, di) => {
 									const day = week[di] || null;
 									return (
-										<td key={di} className='h-8 w-8 text-center text-sm p-0 relative'>
+										<td key={di} className='relative flex-1 min-w-0 p-0 text-center text-sm'>
 											{day ? (
-												<button
-													type='button'
-													aria-label={day.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
-													aria-pressed={isSelected(day)}
-													aria-current={isSameDay(day, today) ? 'date' : undefined}
-													disabled={isDisabled(day)}
-													className={DAY_BASE + ' ' + (isSelected(day) ? DAY_SELECTED : isSameDay(day, today) ? DAY_TODAY : '') + (isDisabled(day) ? ' ' + DAY_DISABLED : '')}
-													onClick={() => handleSelect(day)}
-												>
-													{day.getDate()}
-												</button>
+												<div className='flex h-9 w-full items-center justify-center'>
+													<button
+														type='button'
+														aria-label={day.toLocaleDateString(locale, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
+														aria-pressed={isSelected(day)}
+														aria-current={isSameDay(day, today) ? 'date' : undefined}
+														disabled={isDisabled(day)}
+														className={calendarDayVariants({ dayState: dayStateFor(day) })}
+														onClick={() => handleSelect(day)}
+													>
+														{day.getDate()}
+													</button>
+												</div>
 											) : (
-												<span className='invisible' aria-hidden='true'/>
+												<span className='invisible block h-9' aria-hidden='true'/>
 											)}
 										</td>
 									);

@@ -1,4 +1,5 @@
 import { useMemo, createContext, useContext } from 'react';
+import { cn } from '../../../constants/utils/cn';
 
 const ChartContext = createContext({ config: {} });
 
@@ -15,7 +16,7 @@ export const ChartContainer = ({ config = {}, className = '', children, ...props
 
 	return (
 		<ChartContext.Provider value={{ config }}>
-			<div data-chart className={'flex aspect-video justify-center text-xs ' + className} style={style} {...props}>
+			<div data-chart className={cn('flex aspect-video justify-center text-xs', className)} style={style} {...props}>
 				{children}
 			</div>
 		</ChartContext.Provider>
@@ -32,7 +33,7 @@ export const ChartTooltipContent = ({ active, payload, label, className = '', in
 	const { config } = useContext(ChartContext);
 	if (!active || !payload || !payload.length) return null;
 	return (
-		<div className={'grid min-w-[8rem] items-start gap-1.5 rounded-lg border border-border/50 bg-background px-2.5 py-1.5 text-xs shadow-xl ' + className}>
+		<div className={cn('grid min-w-[8rem] items-start gap-1.5 rounded-lg border border-border/50 bg-background px-2.5 py-1.5 text-xs shadow-xl', className)}>
 			{!hideLabel && label && <div className='font-medium'>{label}</div>}
 			<div className='grid gap-1.5'>
 				{payload.map((item, i) => {
@@ -43,7 +44,7 @@ export const ChartTooltipContent = ({ active, payload, label, className = '', in
 						<div key={i} className='flex w-full flex-wrap items-stretch gap-2'>
 							{!hideIndicator && (
 								<div
-									className={'shrink-0 rounded-[2px] ' + (indicator === 'dot' ? 'h-2.5 w-2.5 translate-y-[2px]' : indicator === 'line' ? 'w-1' : 'w-2.5 rounded-[2px]')}
+									className={cn('shrink-0 rounded-[2px]', indicator === 'dot' ? 'h-2.5 w-2.5 translate-y-[2px]' : indicator === 'line' ? 'w-1' : 'w-2.5 rounded-[2px]')}
 									style={indicatorStyle}
 								/>
 							)}
@@ -63,7 +64,7 @@ export const ChartLegendContent = ({ payload, className = '', ...props }) => {
 	const { config } = useContext(ChartContext);
 	if (!payload || !payload.length) return null;
 	return (
-		<div className={'flex flex-wrap items-center gap-4 ' + className} {...props}>
+		<div className={cn('flex flex-wrap items-center gap-4', className)} {...props}>
 			{payload.map((item, i) => {
 				const cfgItem = config[item.dataKey || item.value] || {};
 				return (

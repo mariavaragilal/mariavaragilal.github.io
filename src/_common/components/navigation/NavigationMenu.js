@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect, createContext, useContext } from 'react';
 import { focusRing } from '../../../constants/utils/a11y';
+import { cn } from '../../../constants/utils/cn';
 
 const ROOT = 'relative z-10 flex max-w-max flex-1 items-center justify-center';
 const LIST = 'group flex flex-1 list-none items-center justify-center space-x-1';
@@ -15,7 +16,7 @@ export const NavigationMenu = ({ className = '', children, ...props }) => {
 	const [openItem, setOpenItem] = useState(null);
 	return (
 		<NavContext.Provider value={{ openItem, setOpenItem }}>
-			<nav className={ROOT + ' ' + className} {...props}>
+			<nav className={cn(ROOT, className)} {...props}>
 				{children}
 			</nav>
 		</NavContext.Provider>
@@ -23,7 +24,7 @@ export const NavigationMenu = ({ className = '', children, ...props }) => {
 };
 
 export const NavigationMenuList = ({ className = '', ...props }) => (
-	<ul className={LIST + ' ' + className} {...props}/>
+	<ul className={cn(LIST, className)} {...props}/>
 );
 
 export const NavigationMenuItem = ({ className = '', value, ...props }) => {
@@ -52,12 +53,12 @@ export const NavigationMenuTrigger = ({ className = '', children, ...props }) =>
 			type='button'
 			aria-expanded={isOpen}
 			aria-haspopup='true'
-			className={TRIGGER_BASE + ' ' + className}
+			className={cn(TRIGGER_BASE, className)}
 			onClick={() => setOpenItem(isOpen ? null : value)}
 			{...props}
 		>
 			{children}
-			<span aria-hidden='true' className={'ml-1 inline-block transition-transform duration-200 ' + (isOpen ? 'rotate-180' : '')}>▾</span>
+			<span aria-hidden='true' className={cn('ml-1 inline-block transition-transform duration-200', isOpen && 'rotate-180')}>▾</span>
 		</button>
 	);
 };
@@ -66,24 +67,24 @@ export const NavigationMenuContent = ({ className = '', children, ...props }) =>
 	const { isOpen } = useContext(NavItemContext);
 	if (!isOpen) return null;
 	return (
-		<div className={'absolute ' + CONTENT_BASE + ' ' + className} {...props}>
+		<div className={cn('absolute', CONTENT_BASE, className)} {...props}>
 			{children}
 		</div>
 	);
 };
 
 export const NavigationMenuLink = ({ className = '', href, children, ...props }) => (
-	<a href={href} className={LINK_BASE + ' ' + className} {...props}>{children}</a>
+	<a href={href} className={cn(LINK_BASE, className)} {...props}>{children}</a>
 );
 
 export const NavigationMenuViewport = ({ className = '', ...props }) => (
 	<div className='absolute left-0 top-full flex justify-center'>
-		<div className={VIEWPORT + ' ' + className} {...props}/>
+		<div className={cn(VIEWPORT, className)} {...props}/>
 	</div>
 );
 
 export const NavigationMenuIndicator = ({ className = '', ...props }) => (
-	<div className={'top-full z-[1] flex h-1.5 items-end justify-center overflow-hidden ' + className} {...props}>
+	<div className={cn('top-full z-[1] flex h-1.5 items-end justify-center overflow-hidden', className)} {...props}>
 		<div className='relative top-[60%] h-2 w-2 rotate-45 rounded-tl-sm bg-border shadow-md'/>
 	</div>
 );

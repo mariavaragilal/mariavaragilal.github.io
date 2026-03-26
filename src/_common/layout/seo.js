@@ -2,22 +2,24 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
-import { personStructuredData, buildWebsiteStructuredData, buildMvpDimensionsStructuredData, buildPrinciplesStructuredData, buildKeyMetricsStructuredData } from '../../constants/data/seoStructuredData';
+import { buildPersonStructuredData, buildWebsiteStructuredData, buildMvpDimensionsStructuredData, buildPrinciplesStructuredData, buildKeyMetricsStructuredData } from '../../constants/data/seoStructuredData';
 import { generatePortfolioStructuredData } from '../../constants/utils/structuredData';
 import mvEn from '../../constants/i18n/locales/mv.en.json';
 
 const Seo = ({ title, description }) => {
-	const { i18n } = useTranslation();
+	const { i18n, t } = useTranslation();
 	const bundle = i18n.getResourceBundle(i18n.language, 'translation');
 	const mv = bundle.mv || mvEn;
 	const htmlLang = i18n.language.indexOf('pt') === 0 ? 'pt' : 'en';
+	const personStructuredData = buildPersonStructuredData(mv);
 	const websiteStructuredData = buildWebsiteStructuredData(mv);
 	const mvpDimensionsStructuredData = buildMvpDimensionsStructuredData(mv);
 	const principlesStructuredData = buildPrinciplesStructuredData(mv);
 	const keyMetricsStructuredData = buildKeyMetricsStructuredData(mv);
 	const portfolioJsonLd = generatePortfolioStructuredData(mv.workCases, mv);
 	const siteTitle = title !== null ? 'Maria Varagilal: ' + (title || 'CV') : 'Maria Varagilal';
-	const siteDescription = description || 'Principal-level Product Designer who ships code. 10+ years unifying fragmented SaaS platforms. UI/UX · React · Redux · Design Systems';
+	const siteDescription = description !== null && description !== undefined && description !== '' ? description : t('mv.seo.defaultDescription');
+	const metaKeywords = t('mv.seo.defaultKeywords');
 	const siteUrl = 'https://mariavaragilal.github.io';
 	const criticalCss = 'body { margin: 0; font-family: \'Rubik\', sans-serif; }\n.dark { color-scheme: dark; }\n.bg-slate-100 { background-color: #f1f5f9; }\n.dark .bg-slate-700 { background-color: #334155; }\n.rounded { border-radius: 0.25rem; }';
 
@@ -26,11 +28,11 @@ const Seo = ({ title, description }) => {
 			<html lang={htmlLang} />
 			<meta charset='UTF-8' />
 			<meta name='viewport' content='width=device-width, initial-scale=1.0' />
-			<meta httpEquiv='Content-Security-Policy' content={'default-src \'self\'; script-src \'self\' \'unsafe-inline\' \'unsafe-eval\' https://www.googletagmanager.com; style-src \'self\' \'unsafe-inline\' https://fonts.googleapis.com; font-src \'self\' https://fonts.gstatic.com https://fonts.googleapis.com; img-src \'self\' data: https:; frame-src https://www.googletagmanager.com; connect-src \'self\' https://www.google-analytics.com https://www.googletagmanager.com https://region1.google-analytics.com https://stats.g.doubleclick.net;'} />
+			<meta httpEquiv='Content-Security-Policy' content={'default-src \'self\'; script-src \'self\' \'unsafe-inline\' \'unsafe-eval\'; style-src \'self\' \'unsafe-inline\' https://fonts.googleapis.com; font-src \'self\' https://fonts.gstatic.com https://fonts.googleapis.com; img-src \'self\' data: https:; connect-src \'self\';'} />
 			<meta itemProp='name' content={siteTitle} />
 			<title>{siteTitle}</title>
 			<meta name='description' content={siteDescription} />
-			<meta name='keywords' content='Maria Varagilal, Principal Product Designer, Frontend Dev, UI, UX, React, Redux, Design Systems, B2B SaaS' />
+			<meta name='keywords' content={metaKeywords} />
 			<meta name='author' content='Maria Varagilal' />
 			<meta httpEquiv='X-UA-Compatible' content='IE=edge' />
 
@@ -71,7 +73,6 @@ const Seo = ({ title, description }) => {
 			<script type='application/ld+json'>{JSON.stringify(keyMetricsStructuredData, null, 2)}</script>
 			<script type='application/ld+json'>{JSON.stringify(portfolioJsonLd, null, 2)}</script>
 
-			{/* Analytics removed for better privacy and performance */}
 		</Helmet>
 	);
 };

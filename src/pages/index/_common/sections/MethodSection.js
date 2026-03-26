@@ -35,7 +35,7 @@ export const MethodSection = ({ expandedDimension, toggleDimensionDetail }) => {
 					const isExpanded = expandedDimension[index];
 					return (
 						<React.Fragment key={dimension.num}>
-							<Separator decorative/>
+							<Separator decorative />
 							<AccordionItem className='flex flex-col gap-4' isExpanded={isExpanded} onToggle={() => toggleDimensionDetail(index)}>
 								<AccordionTrigger icon='plus' gridCols='md:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)_1.6rem] items-start' triggerPadding='p-0'>
 									<div className='flex flex-col'>

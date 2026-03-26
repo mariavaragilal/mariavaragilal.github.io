@@ -3,14 +3,6 @@ import '@testing-library/jest-dom';
 // Mock Gatsby
 global.__PATH_PREFIX__ = '';
 
-// Mock reach router
-jest.mock('@reach/router', () => ({
-	useLocation: () => ({
-		pathname: '/',
-	}),
-	navigate: jest.fn(),
-}));
-
 // Mock react-i18next
 jest.mock('react-i18next', () => ({
 	useTranslation: () => ({

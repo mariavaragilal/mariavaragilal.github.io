@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect, createContext, useContext } from 'react';
+import { cn } from '../../../constants/utils/cn';
 
 const CONTENT = 'z-50 w-72 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none animate-in fade-in-0 zoom-in-95';
 
@@ -47,7 +48,7 @@ export const PopoverContent = ({ children, className = '', align = 'center', sid
 			role='dialog'
 			data-state='open'
 			style={{ position: 'absolute', top: 'calc(100% + ' + sideOffset + 'px)', ...alignStyle }}
-			className={CONTENT + ' ' + className}
+			className={cn(CONTENT, className)}
 			{...props}
 		>
 			{children}
@@ -56,5 +57,5 @@ export const PopoverContent = ({ children, className = '', align = 'center', sid
 };
 
 export const PopoverAnchor = ({ className = '', ...props }) => (
-	<div className={'inline-flex ' + className} {...props}/>
+	<div className={cn('inline-flex', className)} {...props}/>
 );

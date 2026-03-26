@@ -1,3 +1,5 @@
+import { cn } from '../../../constants/utils/cn';
+
 const LIST = 'flex flex-wrap items-center gap-1.5 break-words text-sm text-muted-foreground sm:gap-2.5';
 const ITEM = 'inline-flex items-center gap-1.5';
 const LINK = 'transition-colors hover:text-foreground';
@@ -10,29 +12,29 @@ export const Breadcrumb = ({ className = '', ...props }) => (
 );
 
 export const BreadcrumbList = ({ className = '', ...props }) => (
-	<ol className={LIST + ' ' + className} {...props}/>
+	<ol className={cn(LIST, className)} {...props}/>
 );
 
 export const BreadcrumbItem = ({ className = '', ...props }) => (
-	<li className={ITEM + ' ' + className} {...props}/>
+	<li className={cn(ITEM, className)} {...props}/>
 );
 
 export const BreadcrumbLink = ({ className = '', href, children, ...props }) => (
-	<a href={href} className={LINK + ' ' + className} {...props}>{children}</a>
+	<a href={href} className={cn(LINK, className)} {...props}>{children}</a>
 );
 
 export const BreadcrumbPage = ({ className = '', ...props }) => (
-	<span aria-current='page' className={PAGE + ' ' + className} {...props}/>
+	<span aria-current='page' className={cn(PAGE, className)} {...props}/>
 );
 
 export const BreadcrumbSeparator = ({ className = '', children, ...props }) => (
-	<li role='presentation' aria-hidden='true' className={SEPARATOR + ' ' + className} {...props}>
+	<li role='presentation' aria-hidden='true' className={cn(SEPARATOR, className)} {...props}>
 		{children || <span aria-hidden='true'>/</span>}
 	</li>
 );
 
 export const BreadcrumbEllipsis = ({ className = '', ...props }) => (
-	<span role='presentation' aria-hidden='true' className={ELLIPSIS + ' ' + className} {...props}>
+	<span role='presentation' aria-hidden='true' className={cn(ELLIPSIS, className)} {...props}>
 		<span aria-hidden='true'>…</span>
 	</span>
 );

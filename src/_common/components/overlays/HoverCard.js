@@ -1,4 +1,5 @@
 import React, { useState, useRef, createContext, useContext, useCallback } from 'react';
+import { cn } from '../../../constants/utils/cn';
 
 const CONTENT = 'z-50 w-64 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none animate-in fade-in-0 zoom-in-95';
 
@@ -31,7 +32,7 @@ export const HoverCardContent = ({ className = '', align = 'center', sideOffset 
 		<div
 			data-state='open'
 			style={{ position: 'absolute', top: 'calc(100% + ' + sideOffset + 'px)', ...alignStyle }}
-			className={CONTENT + ' ' + className}
+			className={cn(CONTENT, className)}
 			onMouseEnter={show}
 			onMouseLeave={hide}
 			{...props}

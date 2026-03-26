@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Copyright } from '../../../../_common/layout/components/Copyright';
+import Languages from '../../../../_common/layout/components/languages';
 import { srOnly } from '../../../../constants/utils/a11y';
 
 export const FooterSection = () => {
@@ -9,11 +10,12 @@ export const FooterSection = () => {
 	const opensNewTab = t('mv.contact.opensNewTab');
 	const items = f.builtWithItems || [];
 	return (
-		<footer className='relative rounded-b-lg w-full bg-background border-t border-border px-6 py-5 text-[0.8rem] text-current/88 lg:px-12'>
+		<footer className='relative rounded-b-lg w-full bg-background border-t border-border px-6 py-5 text-[0.8rem] text-current/88 lg:px-12 space-y-4'>
+			<div className='flex flex-col justify-between gap-2 sm:flex-row'>
+				<Copyright />
+				<Languages />
+			</div>
 			<div className='mx-auto flex max-w-full flex-col gap-1'>
-				<div className='flex flex-col justify-between gap-2 sm:flex-row'>
-					<Copyright/>
-				</div>
 				<nav aria-label={f.builtWithNavAria} className='flex flex-wrap gap-x-4 gap-y-1'>
 					<span className='text-muted-foreground'>{f.builtWithLabel}</span>
 					<div className='flex flex-wrap items-center gap-x-3 text-current/88'>
@@ -37,5 +39,3 @@ export const FooterSection = () => {
 		</footer>
 	);
 };
-
-export default FooterSection;

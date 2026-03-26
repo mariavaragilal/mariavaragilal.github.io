@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'gatsby';
 import Languages from './languages';
 import ThemeToggle from './themeToggle';

@@ -1,12 +1,13 @@
 import React, { useEffect, useRef, createContext, useContext } from 'react';
 import { createPortal } from 'react-dom';
 import { focusRing } from '../../../constants/utils/a11y';
+import { cn } from '../../../constants/utils/cn';
 
 const OVERLAY = 'fixed inset-0 z-50 bg-black/80';
-const CONTENT = 'fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg rounded-lg animate-in fade-in-0 zoom-in-95 slide-in-from-left-1/2 slide-in-from-top-[48%]';
+const CONTENT = 'fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background text-foreground border-background p-6 shadow-lg rounded-lg animate-in fade-in-0 zoom-in-95 slide-in-from-left-1/2 slide-in-from-top-[48%]';
 const HEADER = 'flex flex-col space-y-1.5 text-center sm:text-left';
 const FOOTER = 'flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2';
-const TITLE = 'text-lg font-semibold leading-none tracking-tight';
+const TITLE = 'text-lg font-semibold leading-none tracking-tight text-current';
 const DESCRIPTION = 'text-sm text-muted-foreground';
 const CLOSE = 'absolute right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 ' + focusRing;
 
@@ -30,7 +31,7 @@ export const DialogPortal = ({ children }) => children;
 export const DialogOverlay = ({ className = '', ...props }) => {
 	const { open } = useContext(DialogContext);
 	if (!open) return null;
-	return <div className={OVERLAY + ' ' + className} aria-hidden='true' {...props}/>;
+	return <div className={cn(OVERLAY, className)} aria-hidden='true' {...props} />;
 };
 
 export const DialogContent = ({ children, className = '', ...props }) => {
@@ -59,8 +60,8 @@ export const DialogContent = ({ children, className = '', ...props }) => {
 	if (!open || typeof document === 'undefined') return null;
 	return createPortal(
 		<>
-			<div className={OVERLAY} aria-hidden='true' onClick={() => onOpenChange && onOpenChange(false)}/>
-			<div ref={ref} role='dialog' aria-modal='true' className={CONTENT + ' ' + className} {...props}>
+			<div className={OVERLAY} aria-hidden='true' onClick={() => onOpenChange && onOpenChange(false)} />
+			<div ref={ref} role='dialog' aria-modal='true' className={cn(CONTENT, className)} {...props}>
 				{children}
 				<button type='button' aria-label='Close' className={CLOSE} onClick={() => onOpenChange && onOpenChange(false)}>
 					<span aria-hidden='true'>×</span>
@@ -78,17 +79,17 @@ export const DialogClose = ({ children, asChild = false, ...props }) => {
 };
 
 export const DialogHeader = ({ className = '', ...props }) => (
-	<div className={HEADER + ' ' + className} {...props}/>
+	<div className={cn(HEADER, className)} {...props} />
 );
 
 export const DialogFooter = ({ className = '', ...props }) => (
-	<div className={FOOTER + ' ' + className} {...props}/>
+	<div className={cn(FOOTER, className)} {...props} />
 );
 
 export const DialogTitle = ({ className = '', children, ...props }) => (
-	<h2 className={TITLE + ' ' + className} {...props}>{children}</h2>
+	<h2 className={cn(TITLE, className)} {...props}>{children}</h2>
 );
 
 export const DialogDescription = ({ className = '', ...props }) => (
-	<p className={DESCRIPTION + ' ' + className} {...props}/>
+	<p className={cn(DESCRIPTION, className)} {...props} />
 );

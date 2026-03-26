@@ -66,7 +66,6 @@ export const FORMAT_DURATION = (startDate, endDate = null, labels = null) => {
 		return '(' + years + ' ' + yearText + ' ' + months + ' ' + monthText + ')';
 	}
 };
-
 export const FORMAT_DATE = (dateString, includeTime = false) => {
 	if (!dateString) return '';
 

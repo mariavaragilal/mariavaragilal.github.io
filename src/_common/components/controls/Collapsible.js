@@ -1,5 +1,6 @@
 import React, { useState, createContext, useContext } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
+import { cn } from '../../../constants/utils/cn';
 
 const CollapsibleContext = createContext({ open: false, onOpenChange: () => {} });
 
@@ -38,7 +39,7 @@ export const CollapsibleContent = ({ className = '', children, ...props }) => {
 					animate={{ height: 'auto', opacity: 1 }}
 					exit={{ height: 0, opacity: 0 }}
 					transition={{ duration: 0.2, ease: 'easeInOut' }}
-					className={'overflow-hidden ' + className}
+					className={cn('overflow-hidden', className)}
 					{...props}
 				>
 					{children}
