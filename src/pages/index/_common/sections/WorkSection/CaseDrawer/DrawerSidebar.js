@@ -44,6 +44,16 @@ export const DrawerSidebar = ({ app, ui }) => {
 						<p className='text-[.8em] font-mono text-current'>{app.tools}</p>
 					</CaseSection>
 				) : null}
+				{app.references?.links?.length > 0 ? (
+					<CaseSection heading={hasCaseStudy(app) ? ui.live : ui.directLink} headingAs='h6'>
+						<nav className='p-0' aria-label={ui.liveWorkNav}>
+							<h1 className='sr-only'>{ui.liveWorkSr}</h1>
+							{app.references.links.map((l) => (
+								<ReferenceLink key={l.url} href={l.url} label={l.label} hostname={new URL(l.url).hostname.replace('www.', '')} opensNewTab={opensNewTab} />
+							))}
+						</nav>
+					</CaseSection>
+				) : null}
 				{sources?.length > 0 && (isGroupedSources(sources) || isLegacySourceList(sources)) ? (
 					<CaseSection heading={refUi.sourcesHeading || 'Sources'} headingAs='h6'>
 						{isGroupedSources(sources) ? (
@@ -77,16 +87,6 @@ export const DrawerSidebar = ({ app, ui }) => {
 								))}
 							</nav>
 						)}
-					</CaseSection>
-				) : null}
-				{app.references?.links?.length > 0 ? (
-					<CaseSection heading={hasCaseStudy(app) ? ui.live : ui.directLink} headingAs='h6'>
-						<nav className='p-0' aria-label={ui.liveWorkNav}>
-							<h1 className='sr-only'>{ui.liveWorkSr}</h1>
-							{app.references.links.map((l) => (
-								<ReferenceLink key={l.url} href={l.url} label={l.label} hostname={new URL(l.url).hostname.replace('www.', '')} opensNewTab={opensNewTab} />
-							))}
-						</nav>
 					</CaseSection>
 				) : null}
 				{app.references?.clients?.length > 0 ? (

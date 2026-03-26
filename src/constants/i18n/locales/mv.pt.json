@@ -1168,6 +1168,12 @@
 						"Prova de que skills espelham limites, não modelos"
 					],
 					"references": {
+						"links": [
+							{
+								"label": "prompt-architect-skill (GitHub)",
+								"url": "https://github.com/mariavaragilal/prompt-architect-skill"
+							}
+						],
 						"sources": [
 							"Material em que me apoiei — não exaustivo.",
 							{

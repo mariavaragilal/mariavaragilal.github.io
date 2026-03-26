@@ -1269,6 +1269,12 @@
 						"Proof that skills mirror boundaries, not templates"
 					],
 					"references": {
+						"links": [
+							{
+								"label": "prompt-architect-skill (GitHub)",
+								"url": "https://github.com/mariavaragilal/prompt-architect-skill"
+							}
+						],
 						"sources": [
 							"Material I drew on — not exhaustive.",
 							{
