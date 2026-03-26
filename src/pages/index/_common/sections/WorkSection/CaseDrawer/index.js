@@ -17,7 +17,7 @@ export const CaseDrawer = ({ open, onClose, app, cases = [], onSelectCase }) => 
 				side='right'
 				closeButton={false}
 				wrapperClassName='full lg:max-w-full top-4 left-4 bottom-4 right-4 rounded-xl'
-				className='p-0! overflow-hidden!'
+				className='p-0! overflow-hidden! w-full'
 				aria-label={app ? (ui.caseStudyPrefix + ' ' + app.title) : ui.caseStudy}
 			>
 				{app && (

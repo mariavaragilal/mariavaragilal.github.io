@@ -13,25 +13,27 @@ const normalizeImpl = (impl) => {
 const ImplementationBlocks = ({ blocks, title }) => {
 	if (!blocks?.length) return null;
 	const items = Array.isArray(blocks) ? blocks : [blocks];
-	return items.map((para, i) =>
-		para && typeof para === 'object' && para.heading && para.items ? (
-			<div className='w-full space-y-0' key={i}>
-				<p className={'text-xs uppercase tracking-[0.16em] text-current/66 mt-2' + (i > 0 ? ' opacity-0 hidden 2xl:block' : '')}>{title}</p>
-				<p className='font-medium text-base text-current'>{para.heading}</p>
-				<ul className='space-y-0.5 text-sm leading-relaxed text-current/66 mt-1'>
-					{para.items.map((item, j) => (
-						<li key={j} className='flex gap-2'>
-							<span className='text-current/50 shrink-0'>—</span>
-							<span>{item}</span>
-						</li>
-					))}
-				</ul>
-			</div>
-		) : (
-			<div className='w-full space-y-0' key={i}>
-				<p className='text-sm leading-relaxed text-current/66'>{para}</p>
-				{i === 0 ? <Separator className='mt-6 lg:mt-8' decorative /> : null}
-			</div>
+	return (
+		items.map((para, i) =>
+			para && typeof para === 'object' && para.heading && para.items ? (
+				<div className='min-w-0 w-full space-y-0' key={i}>
+					<p className={'text-xs uppercase tracking-[0.16em] text-current/66 mt-2' + (i > 0 ? ' opacity-0 hidden 2xl:block' : '')}>{title}</p>
+					<p className='font-medium text-base text-current break-words'>{para.heading}</p>
+					<ul className='space-y-0.5 text-sm leading-relaxed text-current/66 mt-1'>
+						{para.items.map((item, j) => (
+							<li key={j} className='flex min-w-0 gap-2'>
+								<span className='text-current/50 shrink-0'>—</span>
+								<span className='min-w-0 break-words'>{item}</span>
+							</li>
+						))}
+					</ul>
+				</div>
+			) : (
+				<div className='min-w-0 w-full space-y-0' key={i}>
+					<p className='text-sm leading-relaxed text-current/66 break-words'>{para}</p>
+					{i === 0 ? <Separator className='mt-6 lg:mt-8' decorative /> : null}
+				</div>
+			)
 		)
 	);
 };
@@ -45,7 +47,7 @@ export const CaseStudyBlock = ({ caseStudy, as: Tag = 'div' }) => {
 	const hasCode = impl?.code?.length > 0;
 
 	return (
-		<Card variant='secondary' className='px-6 py-8 lg:px-10 space-y-10 md:col-span-2' role='region' aria-label={ui.caseStudyDetailsAria} as={Tag}>
+		<Card variant='secondary' className='min-w-0 w-full px-6 py-8 lg:px-10 space-y-10 md:col-span-auto' role='region' aria-label={ui.caseStudyDetailsAria} as={Tag}>
 			{(caseStudy.businessProblem || caseStudy.strategicDecision) ? (
 				<CaseSection heading={b.context} headingAs='h6' className='relative'>
 					{caseStudy.businessProblem ? <p className='text-base leading-relaxed text-current/88 mb-4'>{caseStudy.businessProblem}</p> : null}
@@ -78,7 +80,7 @@ export const CaseStudyBlock = ({ caseStudy, as: Tag = 'div' }) => {
 			) : null}
 			{impl && (hasDesign || hasCode) ? (
 				<CaseSection heading={b.implementation} headingAs='h6'>
-					<div className={'grid w-full gap-6 2xl:gap-8 ' + (hasDesign && hasCode ? 'grid-cols-[repeat(auto-fill,minmax(20rem,1fr))]' : 'grid-cols-[repeat(auto-fill,minmax(25rem,1fr))]')}>
+					<div className={'grid w-full min-w-0 gap-6 2xl:gap-8 ' + (hasDesign && hasCode ? 'grid-cols-1 lg:grid-cols-2' : 'grid-cols-1')}>
 						{hasDesign && hasCode ? (
 							<>
 								<ImplementationBlocks blocks={impl.design} title={b.implementationDesign} />
