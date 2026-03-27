@@ -25,20 +25,20 @@ const CVPage = () => {
 		return () => window.removeEventListener('scroll', onScroll);
 	}, []);
 	return (
-		<Layout title={t('cv.name')} description={t('cv.title')}>
-			<CVHeader/>
+		<Layout title='CV' description={t('cv.title')}>
+			<CVHeader />
 			<main className='grid grid-cols-1 lg:grid-cols-3 gap-4'>
 				<div className='p-8 space-y-12 border-r border-border'>
-					<CVAboutSection/>
-					<CVEducationSection/>
-					<CVAwardsSection/>
+					<CVAboutSection />
+					<CVEducationSection />
+					<CVAwardsSection />
 				</div>
 				<div className='p-8 lg:pr-10 lg:pl-4 space-y-16 lg:col-span-2'>
-					<CVExperienceSection/>
+					<CVExperienceSection />
 				</div>
 			</main>
-			<ScrollToTop visible={showScrollTop}/>
-			<CVFooter/>
+			<ScrollToTop visible={showScrollTop} />
+			<CVFooter />
 		</Layout>
 	);
 };
