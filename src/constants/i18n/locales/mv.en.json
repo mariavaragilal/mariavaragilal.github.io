@@ -888,12 +888,12 @@
 							{
 								"url": "https://www.connectlime.com/en/work/GererMaBoite",
 								"label": "Gerer Ma Boite — POS for entrepreneurs",
-								"role": "Senior Design oversight & final UI · acquired by CEGID"
+								"role": "Lead Design oversight & final UI · acquired by CEGID"
 							},
 							{
 								"url": "https://www.connectlime.com/work/HotelAppz/",
 								"label": "HotelAppz — hotel CRM platform",
-								"role": "Senior Design supervision"
+								"role": "Lead Design supervision"
 							},
 							{
 								"url": "https://www.assistarobase.fr",
@@ -970,10 +970,10 @@
 					"status": "shipped",
 					"title": "Gerer Ma Boite (GMB)",
 					"subtitle": "SaaS point of sale platform for entrepreneurs · acquired by CEGID",
-					"role": "Senior Designer",
+					"role": "Lead Designer",
 					"tools": "Figma · AngularJS · Azure",
 					"dimensions": "Dimensions 2, 3, 4",
-					"highlight": "Served as Senior Designer, mentoring the project team and stepping in to deliver the final UI. The platform was later acquired by CEGID and integrated into their enterprise offering.",
+					"highlight": "Served as Lead Designer, mentoring the project team and stepping in to deliver the final UI. The platform was later acquired by CEGID and integrated into their enterprise offering.",
 					"results": [
 						"Mentored the product team through strategy, branding, and architecture phases",
 						"Delivered the final UI design, ensuring a polished, cohesive finish",
@@ -986,7 +986,7 @@
 							{
 								"url": "https://www.connectlime.com/en/work/GererMaBoite",
 								"label": "Gerer Ma Boite case study",
-								"role": "Senior Design oversight & final UI"
+								"role": "Lead Design oversight & final UI"
 							}
 						]
 					},
@@ -997,10 +997,10 @@
 					"status": "shipped",
 					"title": "HotelAppz",
 					"subtitle": "Next-gen CRM platform for hotels",
-					"role": "Senior Design supervision",
+					"role": "Lead Design supervision",
 					"tools": "Figma · PMS systems",
 					"dimensions": "Dimensions 2, 3, 4",
-					"highlight": "Provided senior design oversight and mentorship for a comprehensive hotel CRM platform. Supervised the team through product strategy, branding, and UX/UI development.",
+					"highlight": "Provided Lead design oversight and mentorship for a comprehensive hotel CRM platform. Supervised the team through product strategy, branding, and UX/UI development.",
 					"results": [
 						"Supervised product design and User Experience",
 						"Mentored the design team on information architecture and interaction patterns",
@@ -1012,7 +1012,7 @@
 							{
 								"url": "https://www.connectlime.com/work/HotelAppz/",
 								"label": "HotelAppz case study",
-								"role": "Senior Design supervision"
+								"role": "Lead Design supervision"
 							},
 							{
 								"url": "https://hoteltechreport.com/marketing/hotel-crm/hotelappz",
@@ -1408,8 +1408,8 @@
 		"heroNameLine1": "Maria",
 		"heroNameLine2": "Varagilal",
 		"tagline": "B2B · SaaS · Fintech · AI-accelerated design & development",
-		"title": "Senior Technical Product Designer who ships code.",
-		"schemaJobTitle": "Senior Technical Product Designer & Frontend Development",
+		"title": "Lead Technical Product Designer who ships code.",
+		"schemaJobTitle": "Lead Technical Product Designer & Frontend Development",
 		"body": "10+ years turning SaaS products into unified platforms: designing the system, writing the code, protecting the vision as products scale. Today, I use AI to accelerate every stage — from design system workflows to production-ready components.",
 		"viewWork": "View My Work",
 		"fullCv": "Full CV",
@@ -1493,8 +1493,8 @@
 		]
 	},
 	"seo": {
-		"defaultDescription": "Senior Technical Product Designer who ships code. 10+ years turning SaaS products into unified platforms — design systems, React, and the MVP Method.",
-		"defaultKeywords": "Maria Varagilal, Senior Technical Product Designer, Frontend Development, UI, UX, React, Redux, Design Systems, B2B SaaS, MVP Method",
+		"defaultDescription": "Lead Technical Product Designer who ships code. 10+ years turning SaaS products into unified platforms — design systems, React, and the MVP Method.",
+		"defaultKeywords": "Maria Varagilal, Lead Technical Product Designer, Frontend Development, UI, UX, React, Redux, Design Systems, B2B SaaS, MVP Method",
 		"occupationDescription": "Designs and develops digital products from concept to production"
 	},
 	"footer": {

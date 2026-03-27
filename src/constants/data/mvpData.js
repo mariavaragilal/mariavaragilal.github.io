@@ -4,8 +4,8 @@
 
 export const person = {
 	name: 'Maria Varagilal',
-	jobTitle: 'Senior Technical Product Designer & Frontend Development',
-	description: 'Senior Technical Product Designer who ships code. 10+ years turning SaaS products into unified platforms — design systems, product strategy, React, Redux, and frontend implementation.',
+	jobTitle: 'Lead Technical Product Designer & Frontend Development',
+	description: 'Lead Technical Product Designer who ships code. 10+ years turning SaaS products into unified platforms — design systems, product strategy, React, Redux, and frontend implementation.',
 	url: 'https://mariavaragilal.github.io',
 	image: 'https://mariavaragilal.github.io/avatar.png',
 	sameAs: ['https://www.linkedin.com/in/mariavaragilal', 'https://codepen.io/mariavaragilal', 'https://dribbble.com/mariavaragilal', 'https://be.net/mariavaragilal'],

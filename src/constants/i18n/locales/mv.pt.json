@@ -787,12 +787,12 @@
 							{
 								"url": "https://www.connectlime.com/en/work/GererMaBoite",
 								"label": "Gerer Ma Boite — POS para empreendedores",
-								"role": "Supervisão de design sénior e UI final · adquirido pela CEGID"
+								"role": "Supervisão de design Lead e UI final · adquirido pela CEGID"
 							},
 							{
 								"url": "https://www.connectlime.com/work/HotelAppz/",
 								"label": "HotelAppz — plataforma CRM para hotéis",
-								"role": "Supervisão de design sénior"
+								"role": "Supervisão de design Lead"
 							},
 							{
 								"url": "https://www.assistarobase.fr",
@@ -869,10 +869,10 @@
 					"status": "lançado",
 					"title": "Gerer Ma Boite (GMB)",
 					"subtitle": "Plataforma SaaS de ponto de venda para empreendedores · adquirida pela CEGID",
-					"role": "Designer Sénior",
+					"role": "Designer Lead",
 					"tools": "Figma · AngularJS · Azure",
 					"dimensions": "Dimensões 2, 3, 4",
-					"highlight": "Actuação como Designer Sénior, com mentoria à equipa do projecto e intervenção para entregar a UI final. A plataforma foi mais tarde adquirida pela CEGID e integrada na sua oferta empresarial.",
+					"highlight": "Actuação como Designer Lead, com mentoria à equipa do projecto e intervenção para entregar a UI final. A plataforma foi mais tarde adquirida pela CEGID e integrada na sua oferta empresarial.",
 					"results": [
 						"Mentoria à equipa de produto nas fases de estratégia, marca e arquitectura",
 						"Entrega do design de UI final, com acabamento polido e coeso",
@@ -885,7 +885,7 @@
 							{
 								"url": "https://www.connectlime.com/en/work/GererMaBoite",
 								"label": "Estudo de caso Gerer Ma Boite",
-								"role": "Supervisão de design sénior e UI final"
+								"role": "Supervisão de design Lead e UI final"
 							}
 						]
 					},
@@ -896,10 +896,10 @@
 					"status": "lançado",
 					"title": "HotelAppz",
 					"subtitle": "Plataforma CRM de nova geração para hotéis",
-					"role": "Supervisão de design sénior",
+					"role": "Supervisão de design Lead",
 					"tools": "Figma · React · Sistemas PMS",
 					"dimensions": "Dimensões 2, 3, 4",
-					"highlight": "Supervisão e mentoria de design sénior para uma plataforma CRM completa para hotéis. Acompanhamento da equipa em estratégia de produto, marca e desenvolvimento UX/UI.",
+					"highlight": "Supervisão e mentoria de design Lead para uma plataforma CRM completa para hotéis. Acompanhamento da equipa em estratégia de produto, marca e desenvolvimento UX/UI.",
 					"results": [
 						"Supervisão do design de produto e da experiência do utilizador",
 						"Mentoria à equipa de design em arquitectura de informação e padrões de interacção",
@@ -911,7 +911,7 @@
 							{
 								"url": "https://www.connectlime.com/work/HotelAppz/",
 								"label": "Estudo de caso HotelAppz",
-								"role": "Supervisão de design sénior"
+								"role": "Supervisão de design Lead"
 							},
 							{
 								"url": "https://hoteltechreport.com/marketing/hotel-crm/hotelappz",
@@ -1307,8 +1307,8 @@
 		"heroNameLine1": "Maria",
 		"heroNameLine2": "Varagilal",
 		"tagline": "B2B · SaaS · Fintech · Design e desenvolvimento acelerados por IA",
-		"title": "Techincal Product Designer Sénior que lança código.",
-		"schemaJobTitle": "Techincal Product Designer Sénior e desenvolvimento frontend",
+		"title": "Techincal Product Designer Lead que lança código.",
+		"schemaJobTitle": "Techincal Product Designer Lead e desenvolvimento frontend",
 		"body": "Mais de 10 anos a transformar produtos SaaS em plataformas unificadas: desenhar o sistema, escrever o código, proteger a visão à medida que os produtos escalam. Hoje, uso IA para acelerar todas as etapas — desde fluxos de design-para-código até componentes prontos para produção.",
 		"viewWork": "Ver o Meu Trabalho",
 		"fullCv": "CV Completo",
@@ -1392,8 +1392,8 @@
 		]
 	},
 	"seo": {
-		"defaultDescription": "Techincal Product Designer Sénior que lança código. Mais de 10 anos a transformar produtos SaaS em plataformas unificadas — sistemas de design, React e o Método MVP.",
-		"defaultKeywords": "Maria Varagilal, Techincal Product Designer Sénior, desenvolvimento frontend, UI, UX, React, Redux, sistemas de design, B2B SaaS, Método MVP",
+		"defaultDescription": "Techincal Product Designer Lead que lança código. Mais de 10 anos a transformar produtos SaaS em plataformas unificadas — sistemas de design, React e o Método MVP.",
+		"defaultKeywords": "Maria Varagilal, Techincal Product Designer Lead, desenvolvimento frontend, UI, UX, React, Redux, sistemas de design, B2B SaaS, Método MVP",
 		"occupationDescription": "Concebe e desenvolve produtos digitais do conceito à produção"
 	},
 	"footer": {

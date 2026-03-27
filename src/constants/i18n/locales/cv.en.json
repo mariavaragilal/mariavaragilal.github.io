@@ -1,8 +1,8 @@
 {
   "cv": {
     "name": "Maria Varagilal",
-    "title": "Senior Technical Product Designer & Frontend Development",
-    "summary": "Technical Product Designer with 10+ years of experience delivering digital products from concept to production. Skilled in design systems, product strategy, and frontend implementation using JavaScript, React, Redux, HTML, and CSS.",
+    "title": "Lead Technical Product Designer & Frontend Development",
+    "summary": "Technical Product Designer with 10+ years of experience delivering digital products from concept to production. Sole design lead across a multi-product B2B SaaS portfolio — owns design strategy, mentors contributors, and ships production code. Skilled in design systems, product strategy, and frontend implementation using JavaScript, React, Redux, HTML, and CSS.",
     "note": "Currently using AI to accelerate design-to-code workflows, from component generation and documentation scaffolding to rapid prototyping."
   },
   "nav": {
@@ -25,8 +25,10 @@
       "period": "September 2015 - Present",
       "description": [
         "Led end-to-end design strategy and vision: shaped product experience, UI/UX design, information architecture, and brand identity across a multi-product B2B SaaS portfolio.",
+        "Led design across multiple products in parallel, owning tailored workflows end-to-end and working directly with backend engineers.",
+        "Reviewed work across teams, mentored designers through problems without obvious answers, and guided them toward better decisions independently.",
         "Architected intuitive product flows, content organization, and complex enterprise workflows from discovery to delivery.",
-        "Operated as both senior designer and frontend developer: designed pixel-perfect interfaces in Figma and translated them directly into production code using React, Redux, Vite, Gatsby, JavaScript, HTML, and CSS.",
+        "Operated as both Lead designer and frontend developer: designed pixel-perfect interfaces in Figma and translated them directly into production code using React, Redux, Vite, Gatsby, JavaScript, HTML, and CSS.",
         "Built fully responsive, accessible, and performant UIs that strictly followed design-system rules and WCAG standards.",
         "Partnered daily with engineering teams on API integration, technical architecture decisions, feature implementation, and shipping high-quality code.",
         "Balanced strategic design leadership with deep technical execution in a fast-paced, product-driven environment.",
@@ -39,9 +41,9 @@
       "position": "UI/UX Designer",
       "period": "January 2013 - September 2015",
       "description": [
-        "Development of projects internally and externally.",
-        "Design and development of graphic concepts, proposals and projects for mobile and web app.",
-        "Social Media campaigns, images and apps."
+        "Led design execution on client-facing digital projects, coordinating with developers and account managers from brief to delivery.",
+        "Designed and developed graphic concepts, proposals and projects for mobile and web apps.",
+        "Produced social media campaigns, visual assets, and interactive experiences."
       ]
     },
     "infoportugal": {
@@ -89,7 +91,7 @@
     }
   },
   "home": {
-    "description": "Senior Technical Product Designer who ships code. 10+ years turning SaaS products into unified platforms — design systems, React, and the MVP Method.",
+    "description": "Lead Technical Product Designer who ships code. 10+ years turning SaaS products into unified platforms — design systems, React, and the MVP Method.",
     "skipToMain": "Skip to main content"
   },
   "about": {
