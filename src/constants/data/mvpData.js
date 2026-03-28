@@ -4,27 +4,27 @@
 
 export const person = {
 	name: 'Maria Varagilal',
-	jobTitle: 'Lead Technical Product Designer & Frontend Development',
-	description: 'Lead Technical Product Designer who ships code. 10+ years turning SaaS products into unified platforms — design systems, product strategy, React, Redux, and frontend implementation.',
+	jobTitle: 'Lead Design Engineer',
+	description: 'Design Engineer. Coherent multi-product experiences from concept to production — product strategy, UI/UX, and the MVP Method.',
 	url: 'https://mariavaragilal.github.io',
 	image: 'https://mariavaragilal.github.io/avatar.png',
 	sameAs: ['https://www.linkedin.com/in/mariavaragilal', 'https://codepen.io/mariavaragilal', 'https://dribbble.com/mariavaragilal', 'https://be.net/mariavaragilal'],
 	address: { locality: 'Lisbon', country: 'Portugal' },
-	knowsAbout: ['User Experience Design', 'User Interface Design', 'Product Design', 'React', 'Redux', 'JavaScript (ES6+)', 'Design Systems', 'Frontend Development', 'AI-Augmented', 'LLM prompting'],
-	skills: ['UX Design', 'UI Design', 'React', 'Redux', 'JavaScript (ES6+)', 'Design Systems', 'Gatsby'],
+	knowsAbout: ['User Experience Design', 'User Interface Design', 'Product Design', 'React', 'Redux', 'JavaScript (ES6+)', 'Frontend Development', 'AI-accelerated workflows', 'Prompt engineering'],
+	skills: ['UX Design', 'UI Design', 'React', 'Redux', 'JavaScript (ES6+)', 'Gatsby'],
 	education: [
 		{ name: 'Universidade Lusíada de Lisboa', description: 'Bachelor\'s Degree in Design' },
 		{ name: 'Academia Flag', description: 'Specialization in Communication Design' },
 	],
-	worksFor: { name: 'Securibox', url: 'https://www.securibox.eu', description: 'Head Technical Product Designer' },
+	worksFor: { name: 'Securibox', url: 'https://www.securibox.eu', description: 'Lead Design Engineer' },
 	awards: [
 		{ name: 'Bronze cyber', description: 'Young Lions Portugal', date: '2014-05-01' },
 		{ name: 'Web Design Served', description: 'Behance', date: '2013-07-01' },
 	],
 };
 
-// Landing copy (method, dimensions, outcomes, evolution, keyMetrics, work cases) lives in
-// MV copy lives in `mv.en.json` / `mv.pt.json` (merged in `en.js` / `pt.js`).
+// Landing copy (method, dimensions, outcomes, evolution, keyMetrics, work cases)
+// lives in `mv.en.json` / `mv.pt.json` (merged in `en.js` / `pt.js`).
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Philosophy — MVP Method (three commitments: cohesion, priority, boundaries)
@@ -40,7 +40,7 @@ export const method = [
 		title: 'Cohesion Before Creation',
 		summary: 'Map reality before making decisions. Understand the problem before shaping the solution.',
 		content: [
-			'Before any line is drawn or code is written, the most important work is seeing the problem clearly — not aesthetics or features first.This means disciplined observation that eliminates illusion and reveals reality. Mapping every touchpoint creates the true picture: who the user actually is, what they are trying to achieve, and where the current experience is quietly breaking down.',
+			'Before any line is drawn or code is written, the most important work is seeing the problem clearly — not aesthetics or features first. This means disciplined observation that eliminates illusion and reveals reality. Mapping every touchpoint creates the true picture: who the user actually is, what they are trying to achieve, and where the current experience is quietly breaking down.',
 			'Clarity at this stage is the highest-leverage act in the entire process. This is where the vision either ignites — or fades.',
 		],
 		checkpoint: 'If the problem isn\'t clear, nothing built on top of it will be.',

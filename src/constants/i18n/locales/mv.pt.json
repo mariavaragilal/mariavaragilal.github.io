@@ -7,7 +7,7 @@
 		},
 		{
 			"value": "5+",
-			"label": "Plataformas unificadas",
+			"label": "Produtos unificados",
 			"ctx": "experiência única"
 		},
 		{
@@ -28,7 +28,9 @@
 		"mediumFraming": "Em escala empresarial o Método mapeia muitos pontos de contacto; aqui aplica-se a mesma disciplina à escala deste portefólio — com provas no trabalho abaixo (Dimensão 4).",
 		"intro": {
 			"column1": "O crescimento gera complexidade. Quando um único produto se torna uma plataforma de soluções interligadas, o maior risco é perder a sensação de uma experiência única.",
-			"column2": "O Método MVP é a abordagem que desenvolvi e refinei ao longo da minha carreira — traduzindo a filosofia por trás do meu trabalho numa prática repetível. Aplicada à estratégia, design, implementação e lançamento — não apenas documentação — protege a visão original à medida que os produtos evoluem."
+			"column2": "O Método MVP é a abordagem que desenvolvi e refinei ao longo da minha carreira — traduzindo a filosofia por trás do meu trabalho numa prática repetível. Aplicada à estratégia, design, implementação e lançamento — não apenas documentação — protege a visão original à medida que os produtos evoluem. ",
+			"column3": "Passei a maior parte da minha carreira a resolver esse problema preciso: como manter uma experiência multi-produto coerente à medida que escala.",
+			"column4": "Para mim, o design vive directamente no código — num componente, num layout ou numa página. Exploro e valido em ferramentas de design; quando uma direcção é aprovada, construo-o onde tem de estar para continuar real."
 		}
 	},
 	"dimensions": [
@@ -98,11 +100,11 @@
 			"philosophy": {
 				"principle": "Coesão Antes da Criação",
 				"ask": "Por que fazer a ponte entre design e código?",
-				"answer": "Um sistema de design só funciona se viver no produto. Quando se afasta do que é lançado, torna-se prateleira — e a fragmentação começa de novo.",
-				"checkpoint": "Tokens validados em produção, não apenas aprovados no Figma."
+				"answer": "Um design só funciona se viver no produto. Quando se afasta do que é lançado, torna-se prateleira — e a fragmentação começa de novo.",
+				"checkpoint": "Validado em produção, não apenas aprovado num mockup."
 			},
 			"detail": [
-				"Tokens, componentes e padrões são validados em produção — não apenas aprovados no Figma. A lacuna entre o que foi desenhado e o que foi lançado fecha-se para zero."
+				"Componentes e padrões são validados em produção — não apenas aprovados num mockup. A lacuna entre o que foi desenhado e o que foi lançado fecha-se para zero."
 			]
 		},
 		{
@@ -166,20 +168,20 @@
 				"dimension": "Dimensão 1 + Dimensão 2"
 			}
 		],
-		"closing": "Cada passagem pelo ciclo afina o produto e aprofunda a compreensão. O papel da liderança é proteger a clareza, confiança e consistência — para que a equipa possa lançar, aprender e avançar com propósito.",
+		"closing": "Cada passagem pelo ciclo afina o produto e aprofunda a compreensão. O papel da liderança é proteger a clareza, confiança e consistência — para que a equipa possa lançar, aprender e avançar com propósito. O trabalho sempre foi mais do que qualquer método único — trata-se do que a prática disciplinada torna possível.",
 		"whyItMatters": "Declarar 'Feito' cria o espaço para aprender. Aprender mantém a visão honesta. O ciclo constrói uma vantagem silenciosa e composta que nenhum sprint de funcionalidade única pode replicar."
 	},
 	"workCases": {
 		"Securibox": {
-			"context": "Concepção e desenvolvimento de toda a família de produtos — identidade de marca, sistema de design e frontend de produção em todas as propriedades.",
+			"context": "Concepção e desenvolvimento de toda a família de produtos — identidade de marca, experiência de produto e frontend de produção em todas as propriedades.",
 			"period": "2015–Presente",
 			"cases": [
 				{
 					"period": "2015–Presente",
-					"status": "lançado",
+					"status": "shipped",
 					"title": "Securibox: Identidade Unificada",
 					"subtitle": "Soluções automatizadas de recolha, análise e classificação de dados e documentos · de produtos individuais a ecossistema",
-					"role": "Designer de Produto Técnico Principal e Desenvolvimento Frontend",
+					"role": "Lead Design Engineer",
 					"tools": "Sketch · Figma · Gatsby · Bootstrap · React · Vite · Redux · Acessibilidade (WCAG)",
 					"dimensions": "As 5 dimensões",
 					"highlight": "Liderança na criação de uma fundação unificada de marca e experiência. Proposta e entrega de uma Marca de Soluções Unificada — linguagem visual coesa, filosofia de experiência partilhada e padrões reutilizáveis em produção.",
@@ -194,7 +196,7 @@
 							{
 								"url": "https://www.securibox.eu",
 								"label": "Site corporativo",
-								"role": "Marca, sistema de design, construção Gatsby"
+								"role": "Marca, linguagem de design, construção de produção"
 							},
 							{
 								"url": "https://cube.securibox.eu",
@@ -297,7 +299,7 @@
 									"heading": "O que foi construído",
 									"items": [
 										"Gatsby: propriedades corporativas e de marketing em sites estáticos com a linguagem de design aplicada em produção.",
-										"Bootstrap: marca codificada através de configuração partilhada (tokens, grelhas, componentes) para as mesmas regras alimentarem especificações e CSS em produção.",
+										"Bootstrap: marca aplicada através de configuração partilhada — grelhas, componentes e regras consistentes — para especificações e CSS em produção partilharem a mesma fonte.",
 										"React com Redux quando necessário: experiências de produto — cube.securibox.eu, superfícies de operador e Webview relacionadas com SCA, Securibox ID, Me, RH e portais de clientes white-label no âmbito deste trabalho.",
 										"Acessibilidade: padrões orientados para WCAG e revisão integrados na UI lançada, não acrescentados depois.",
 										"Consistência entre propriedades: uma disciplina de implementação na base React/Gatsby para que o desvio apareça como excepção, não como regra."
@@ -322,13 +324,13 @@
 				},
 				{
 					"period": "2015",
-					"status": "lançado",
+					"status": "shipped",
 					"title": "Cube - Controle os seus dados",
-					"role": "Designer de Produto Técnico Principal e Desenvolvimento Frontend",
+					"role": "Lead Design Engineer",
 					"tools": "Figma · React · Gatsby · Acessibilidade (WCAG)",
 					"subtitle": "Tornar a entrega de credenciais segura e que vale a pena — demonstrando uma tecnologia",
 					"dimensions": "Consumidor · Confiança · Sistemas",
-					"highlight": "O Cube pede aos utilizadores que entreguem credenciais de login das suas contas bancárias, telecomunicações, seguros e retalho para que agentes automatizados recolham documentos em seu nome. O problema de design: tornar algo intrinsecamente invasivo seguro, claro e que vale a pena — em mais de 300 integrações, concebido e construído em produção.",
+					"highlight": "O Cube pede aos utilizadores que entreguem credenciais de login das suas contas bancárias, telecomunicações, seguros e retalho para que agentes automatizados recolham documentos em seu nome. O problema de design: tornar algo intrinsecamente invasivo seguro, claro e que vale a pena — em mais de 300 integrações, concebido e construído em produção. Tipografia, grelha e detalhe visual não são um detalhe — quando um produto tem de ganhar confiança antes de uma única interação, o craft faz trabalho funcional, não decorativo.",
 					"results": [
 						"Integrações de agentes em múltiplos sectores: banca, utilities, RH, retalho, ...",
 						"Categorias de documentos expostas através de uma taxonomia única",
@@ -427,10 +429,10 @@
 				},
 				{
 					"period": "2015",
-					"status": "lançado",
+					"status": "shipped",
 					"title": "SCA - CloudAgents",
 					"subtitle": "Conceber a camada de operador para um produto API — da configuração de agentes à monitorização de sincronização em mais de 500 integrações",
-					"role": "Designer de Produto Técnico Principal e Desenvolvimento Frontend",
+					"role": "Lead Design Engineer",
 					"tools": "Figma · React · Vite · Bootstrap · Acessibilidade (WCAG)",
 					"dimensions": "Programador · Operações · Sistemas",
 					"highlight": "A SCA é a infraestrutura em que o Cube funciona. O trabalho abrangeu ambos os lados da mesma tecnologia: o produto para consumidores onde os utilizadores recolhem os seus documentos e a plataforma de operador onde os programadores configuram integrações e as equipas de operações as monitorizam em escala.",
@@ -538,10 +540,10 @@
 				},
 				{
 					"period": "2019",
-					"status": "lançado",
+					"status": "shipped",
 					"title": "Me - Conta Securibox",
 					"subtitle": "Identidade e arquitectura de conta entre produtos — uma camada de conta a servir todo o ecossistema Securibox",
-					"role": "Designer de Produto Técnico Principal",
+					"role": "Lead Design Engineer",
 					"tools": "Figma · UX de Conta",
 					"dimensions": "Dimensões 3, 5",
 					"highlight": "Concepção do hub de gestão de conta que dá aos utilizadores controlo sobre o seu perfil, preferências e dados em todo o ecossistema Securibox.",
@@ -604,10 +606,10 @@
 				},
 				{
 					"period": "2017",
-					"status": "lançado",
+					"status": "shipped",
 					"title": "Securibox ID",
 					"subtitle": "Autenticação e registo críticos de segurança — equilibrar conversão, confiança e acessibilidade WCAG no primeiro momento em que os utilizadores encontram a plataforma",
-					"role": "Designer de Produto Técnico Principal",
+					"role": "Lead Design Engineer",
 					"tools": "Figma · React · Vite · Acessibilidade (WCAG)",
 					"dimensions": "Dimensões 3, 5",
 					"highlight": "Concepção da experiência central de autenticação usada por todos os produtos Securibox — uma única camada de identidade consistente em todo o ecossistema.",
@@ -669,7 +671,7 @@
 							]
 						},
 						"skillsDemonstrated": "UX de autenticação · Consistência entre produtos",
-						"tradeoffsLearnings": "A autenticação é muitas vezes tratada como um pensamento posterior. A centralidade no sistema de design garantiu que cada produto herdasse a mesma linha de base de confiança.",
+						"tradeoffsLearnings": "A autenticação é muitas vezes tratada como um pensamento posterior. A centralidade na linguagem de design garantiu que cada produto herdasse a mesma linha de base de confiança.",
 						"quote": {
 							"title": "Uma identidade em toda a plataforma.",
 							"subtitle": "Autenticação que parece um acolhimento, não um ponto de controlo."
@@ -679,7 +681,7 @@
 				},
 				{
 					"period": "2017",
-					"status": "lançado",
+					"status": "shipped",
 					"title": "RH — Distribuição de Recibos de Salário",
 					"subtitle": "Plataforma B2B de recibos de salário de dois lados — operações em massa de RH de um lado, acesso seguro de empregados do outro, com conformidade regulamentar integrada em todos os fluxos",
 					"role": "Designer de Produto",
@@ -762,7 +764,7 @@
 			"cases": [
 				{
 					"period": "2019",
-					"status": "lançado",
+					"status": "shipped",
 					"title": "Site e Marca ConnectLime",
 					"subtitle": "Agência digital B2B · identidade de marca + web",
 					"role": "Designer UX/UI e Desenvolvedor de Marca · 2019",
@@ -866,7 +868,7 @@
 				},
 				{
 					"period": "2019",
-					"status": "lançado",
+					"status": "shipped",
 					"title": "Gerer Ma Boite (GMB)",
 					"subtitle": "Plataforma SaaS de ponto de venda para empreendedores · adquirida pela CEGID",
 					"role": "Designer Lead",
@@ -893,7 +895,7 @@
 				},
 				{
 					"period": "2018",
-					"status": "lançado",
+					"status": "shipped",
 					"title": "HotelAppz",
 					"subtitle": "Plataforma CRM de nova geração para hotéis",
 					"role": "Supervisão de design Lead",
@@ -924,7 +926,7 @@
 				},
 				{
 					"period": "2019",
-					"status": "lançado",
+					"status": "shipped",
 					"title": "Assist@ — Gestão de Vida Administrativa",
 					"subtitle": "Gestão de vida e portal de empregados — corre em RH Securibox white-label)",
 					"role": "Designer de Produto",
@@ -954,7 +956,7 @@
 			"cases": [
 				{
 					"period": "2016",
-					"status": "proposta",
+					"status": "proposal",
 					"title": "Epaye — Folha de Salário Electrónica",
 					"subtitle": "Fintech · proposta (aplicação + página de destino)",
 					"role": "Designer de Produto e UX · 2016",
@@ -1010,7 +1012,7 @@
 				},
 				{
 					"period": "2014",
-					"status": "proposta",
+					"status": "proposal",
 					"title": "Campanha Digital Continente.pt",
 					"subtitle": "Retalho · Bronze Young Lions",
 					"role": "Equipa criativa · Bronze Young Lions · 2014",
@@ -1060,7 +1062,7 @@
 				},
 				{
 					"period": "2014",
-					"status": "proposta",
+					"status": "proposal",
 					"title": "SCP GameBox",
 					"subtitle": "Clube desportivo · proposta (conceito de site)",
 					"role": "Proposta digital e site · 2014",
@@ -1104,7 +1106,7 @@
 				},
 				{
 					"period": "2013",
-					"status": "proposta",
+					"status": "proposal",
 					"title": "CCV — Correios de Cabo Verde",
 					"subtitle": "Correios · proposta (página de destino + moeda)",
 					"role": "Design de página de destino · 2013",
@@ -1149,12 +1151,12 @@
 			]
 		},
 		"AI dentro de limites": {
-			"context": "Projectos paralelos em IA: experiências e ferramentas que construo para o meu fluxo de trabalho. Um exemplo concreto abaixo.",
+			"context": "A IA tem vindo a transformar a forma como trabalho. Uso-a em todo o fluxo — geração de design systems, scaffolding de componentes, lógica de prototipagem.",
 			"period": "Pessoal",
 			"cases": [
 				{
 					"period": "2025",
-					"status": "ideia",
+					"status": "ideation",
 					"title": "Prompt Architect",
 					"subtitle": "Uma skill que codifica disciplina em prompts — não uma biblioteca de dicas.",
 					"role": "Autora · ferramentas pessoais",
@@ -1272,7 +1274,7 @@
 								"phase": "Edição",
 								"label": "Corte",
 								"title": "Deriva de regulação",
-								"description": "Cortei tudo o que soava como um conselho genérico ou que inflacionava a habilidade ao ponto de a transformar num artigo. A skill espelha um sistema de design:  opinativo, delimitado e reutilizável."
+								"description": "Cortei tudo o que soava como um conselho genérico ou que inflacionava a habilidade ao ponto de a transformar num artigo. A skill espelha uma linguagem de design:  opinativo, delimitado e reutilizável."
 							}
 						],
 						"implementation": {
@@ -1299,17 +1301,19 @@
 					},
 					"slug": "prompt-architect-skill"
 				}
-			]
+			],
+			"contextNote": "Ainda não desenhei uma experiência de produto orientada por IA desde o início — e gostaria de a poder ter."
 		}
 	},
 	"intro": {
 		"locationLine": "Lisboa",
 		"heroNameLine1": "Maria",
 		"heroNameLine2": "Varagilal",
-		"tagline": "B2B · SaaS · Fintech · Design e desenvolvimento acelerados por IA",
-		"title": "Techincal Product Designer Lead que lança código.",
-		"schemaJobTitle": "Techincal Product Designer Lead e desenvolvimento frontend",
-		"body": "Mais de 10 anos a transformar produtos SaaS em plataformas unificadas: desenhar o sistema, escrever o código, proteger a visão à medida que os produtos escalam. Hoje, uso IA para acelerar todas as etapas — desde fluxos de design-para-código até componentes prontos para produção.",
+		"tagline": "B2B · SaaS · Fintech · Fluxos acelerados por IA",
+		"title": "Lead Design Engineer — do design ao código.",
+		"schemaJobTitle": "Lead Design Engineer",
+		"body": "+10 anos a transformar experiências de produto em B2B SaaS — da estratégia à produção. Responsável por todo o ciclo de design: conceitos, fluxos, UI e depois de aprovado, construo-o — do design até à implementação, sem handoff.",
+		"detail": "Hoje, uso IA para acelerar todas as etapas — desde exploração e prototipagem até componentes prontos para produção.",
 		"viewWork": "Ver o Meu Trabalho",
 		"fullCv": "CV Completo",
 		"metricsAriaLabel": "Métricas chave"
@@ -1332,13 +1336,13 @@
 	"workSection": {
 		"kicker": "O meu trabalho",
 		"heading": "Do Design à Produção",
-		"p1": "Eu concebo, eu construo. Abaixo está o trabalho ao vivo — identidade de marca, sistemas de design, fluxos e desenvolvimento frontend em que trabalhei. As tecnologias incluem React, Gatsby, Figma, Redux, Bootstrap, AngularJS e mais.",
+		"p1": "Eu concebo, eu construo. Abaixo está o trabalho ao vivo — identidade de marca, fluxos de produto e frontend de produção que concebi e construí.",
 		"p2Lead": "Marca e identidade:",
 		"p2": "Logótipos, linguagem visual e experiência coesa em ecossistemas e produtos.",
 		"p3": "Cada projecto abre uma vista detalhada — estudo de caso completo ou resumo com resultados — seleccione um cartão para ler.",
-		"designSystemKicker": "Sistema de design — este site",
+		"designSystemKicker": "Biblioteca de componentes — este site",
 		"designSystemBody": "Biblioteca de componentes personalizada (50+ componentes): Construída com React, Tailwind v4, sistema de temas e acessibilidade em mente.",
-		"designSystemCtaNote": "Componentes e tokens de design partilham a mesma base de código que esta página.",
+		"designSystemCtaNote": "Componentes e configuração de tema partilham a mesma base de código que esta página.",
 		"designSystemComponents": [
 			"Botão",
 			"Acordeão",
@@ -1392,9 +1396,9 @@
 		]
 	},
 	"seo": {
-		"defaultDescription": "Techincal Product Designer Lead que lança código. Mais de 10 anos a transformar produtos SaaS em plataformas unificadas — sistemas de design, React e o Método MVP.",
-		"defaultKeywords": "Maria Varagilal, Techincal Product Designer Lead, desenvolvimento frontend, UI, UX, React, Redux, sistemas de design, B2B SaaS, Método MVP",
-		"occupationDescription": "Concebe e desenvolve produtos digitais do conceito à produção"
+		"defaultDescription": "Design Engineer. Experiências multi-produto coerentes do conceito à produção — estratégia de produto, UI/UX e o Método MVP.",
+		"defaultKeywords": "Maria Varagilal, Design Engineer, Design de Produto, desenvolvimento frontend, UI, UX, React, Redux, B2B SaaS, Método MVP",
+		"occupationDescription": "Design Engineer que entrega produtos digitais do conceito à produção"
 	},
 	"footer": {
 		"builtWithLabel": "Construído com:",
@@ -1424,10 +1428,10 @@
 		"shipped": "lançado",
 		"concept": "conceito",
 		"ideation": "ideia",
-		"prototyping": "prototipo",
+		"prototyping": "protótipo",
 		"development": "desenvolvimento",
-		"testing": "testing",
-		"deployment": "deployment",
+		"testing": "testes",
+		"deployment": "implementação",
 		"maintenance": "manutenção",
 		"support": "suporte",
 		"enhancement": "melhoria",
@@ -1467,6 +1471,7 @@
 			"resultsMetrics": "Resultados e Métricas",
 			"tradeoffsDefault": "Compromissos e Aprendizagens",
 			"skills": "Competências"
-		}
+		},
+		"proposal": "proposta"
 	}
 }

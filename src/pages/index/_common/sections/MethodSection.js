@@ -27,7 +27,9 @@ export const MethodSection = ({ expandedDimension, toggleDimensionDetail }) => {
 					<div className='space-y-4 text-[1.125rem] leading-relaxed text-foreground'>
 						<p>{method.intro?.column1}</p>
 					</div>
+					<p className='text-[1.125rem] leading-relaxed text-current/88 md:order-2'>{method.intro?.column3}</p>
 					<p className='text-[1.125rem] leading-relaxed text-current/88'>{method.intro?.column2}</p>
+					<p className='text-[1.125rem] leading-relaxed text-current/88 md:order-last'>{method.intro?.column4}</p>
 				</div>
 			</div>
 			<div className='relative flex flex-col gap-8'>

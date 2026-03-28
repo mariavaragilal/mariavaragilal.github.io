@@ -117,8 +117,9 @@ export const WorkSection = () => {
 											<span className='uppercase tracking-[0.16em] text-current/22 font-medium' aria-hidden='true'>{group.period}</span>
 											<h3 className='font-mono text-[clamp(1.2rem,2.5vw,1.5rem)] leading-8 font-medium text-current mb-0'>{groupName}</h3>
 										</div>
-										<div className='relative w-full max-w-xl flex flex-col gap-2'>
-											<p className='leading-relaxed text-current/66'>{group.context}</p>
+										<div className='relative w-full max-w-3xl flex flex-col gap-2'>
+											{group.context && <p className='leading-relaxed text-current/66'>{group.context}</p>}
+											{group.contextNote && <p className='leading-relaxed text-current/66 text-sm italic'>{group.contextNote}</p>}
 										</div>
 									</AccordionTrigger>
 									<AccordionContent animate={false} ariaLabel={groupName + ' case studies'}>

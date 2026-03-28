@@ -1,114 +1,114 @@
 {
-  "cv": {
-    "name": "Maria Varagilal",
-    "title": "Lead Technical Product Designer & Frontend Development",
-    "summary": "Technical Product Designer with 10+ years of experience delivering digital products from concept to production. Sole design lead across a multi-product B2B SaaS portfolio — owns design strategy, mentors contributors, and ships production code. Skilled in design systems, product strategy, and frontend implementation using JavaScript, React, Redux, HTML, and CSS.",
-    "note": "Currently using AI to accelerate design-to-code workflows, from component generation and documentation scaffolding to rapid prototyping."
-  },
-  "nav": {
-    "about": "about",
-    "education": "education",
-    "awards": "awards",
-    "experience": "experience"
-  },
-  "duration": {
-    "year": "year",
-    "years": "years",
-    "month": "month",
-    "months": "months"
-  },
-  "experience": {
-    "securibox": {
-      "company": "Securibox",
-      "location": "Lisbon, Portugal",
-      "position": "Head Technical Product Designer",
-      "period": "September 2015 - Present",
-      "description": [
-        "Led end-to-end design strategy and vision: shaped product experience, UI/UX design, information architecture, and brand identity across a multi-product B2B SaaS portfolio.",
-        "Led design across multiple products in parallel, owning tailored workflows end-to-end and working directly with backend engineers.",
-        "Reviewed work across teams, mentored designers through problems without obvious answers, and guided them toward better decisions independently.",
-        "Architected intuitive product flows, content organization, and complex enterprise workflows from discovery to delivery.",
-        "Operated as both Lead designer and frontend developer: designed pixel-perfect interfaces in Figma and translated them directly into production code using React, Redux, Vite, Gatsby, JavaScript, HTML, and CSS.",
-        "Built fully responsive, accessible, and performant UIs that strictly followed design-system rules and WCAG standards.",
-        "Partnered daily with engineering teams on API integration, technical architecture decisions, feature implementation, and shipping high-quality code.",
-        "Balanced strategic design leadership with deep technical execution in a fast-paced, product-driven environment.",
-        "Leveraged AI tools to dramatically accelerate design-to-code workflows while maintaining design quality and engineering excellence."
-      ]
-    },
-    "youngnetwork": {
-      "company": "YoungNetwork Group",
-      "location": "Campo Grande, Lisbon, Portugal",
-      "position": "UI/UX Designer",
-      "period": "January 2013 - September 2015",
-      "description": [
-        "Led design execution on client-facing digital projects, coordinating with developers and account managers from brief to delivery.",
-        "Designed and developed graphic concepts, proposals and projects for mobile and web apps.",
-        "Produced social media campaigns, visual assets, and interactive experiences."
-      ]
-    },
-    "infoportugal": {
-      "company": "InfoPortugal S.A.",
-      "location": "Lisbon, Portugal",
-      "position": "Graphic Designer",
-      "period": "September 2012 - January 2013",
-      "description": [
-        "Development of projects internally and externally. The tasks include developing graphic concepts, designing brochures, guides, roadmaps, and digital and paper infographics.",
-        "Development of proposals and projects for mobile and web app."
-      ]
-    },
-    "cofina": {
-      "company": "Cofina media",
-      "location": "Lisbon, Portugal",
-      "position": "Intern Designer",
-      "period": "July 2012 - August 2012",
-      "description": [
-        "Design and development of editorial pages for magazines TV GUIA and FLASH"
-      ]
-    }
-  },
-  "education": {
-    "university": {
-      "name": "Universidade Lusíada de Lisboa",
-      "degree": "Bachelor’s Degree, Design",
-      "period": "2008 - 2011"
-    },
-    "academy": {
-      "name": "Academia Flag",
-      "degree": "Specialization, Communication Design",
-      "period": "2011 - 2012"
-    }
-  },
-  "awards": {
-    "younglions": {
-      "name": "Young Lions Portugal",
-      "award": "Bronze cyber",
-      "date": "May 2014"
-    },
-    "behance": {
-      "name": "Behance",
-      "award": "Web Design Served",
-      "date": "July 2013"
-    }
-  },
-  "home": {
-    "description": "Lead Technical Product Designer who ships code. 10+ years turning SaaS products into unified platforms — design systems, React, and the MVP Method.",
-    "skipToMain": "Skip to main content"
-  },
-  "about": {
-    "quote": "Do it with passion, or not at all.",
-    "description1": "Energetic by nature and licensed in Design—during the undergraduate degree the passion for digital took hold. Authentic Workaholic & Perfectionist: nothing is perfect and everything has room for improvement.",
-    "description2": "From pixels to production—bridging design and code with JavaScript, modern frameworks, Redux, and clean UI development to turn ideas into full experiences that are thought through, built out, and ready to perform.",
-    "skills": {
-      "productDesign": "Product Design",
-      "userInterface": "User Interface",
-      "react": "React",
-      "graphicDesign": "Graphic Design",
-      "javaScriptEs6": "JavaScript (ES6+)",
-      "redux": "Redux",
-      "frontEnd": "FrontEnd",
-      "webDesign": "Web Design",
-      "aiTools": "AI tools"
-    }
-  },
-  "location": "Lisbon"
+	"cv": {
+		"name": "Maria Varagilal",
+		"title": "Lead Design Engineer",
+		"summary": "Lead Design Engineer with 10+ years transforming product experiences across B2B SaaS — from strategy through to production. Sole design lead across a multi-product portfolio: I own the full design lifecycle, mentor contributors, and when the design is approved, I build it. A designer who ships — no handoff required.",
+		"note": "Currently using AI to accelerate design-to-code workflows, from exploration and prototyping to production-ready components."
+	},
+	"nav": {
+		"about": "about",
+		"education": "education",
+		"awards": "awards",
+		"experience": "experience"
+	},
+	"duration": {
+		"year": "year",
+		"years": "years",
+		"month": "month",
+		"months": "months"
+	},
+	"experience": {
+		"securibox": {
+			"company": "Securibox",
+			"location": "Lisbon, Portugal",
+			"position": "Lead Design Engineer",
+			"period": "September 2015 - Present",
+			"description": [
+				"Led end-to-end design strategy and vision: shaped product experience, UI/UX design, information architecture, and brand identity across a multi-product B2B SaaS portfolio.",
+				"Led design across multiple products in parallel, owning tailored workflows end-to-end and working directly with backend engineers.",
+				"Reviewed work across teams, mentored designers through problems without obvious answers, and guided them toward better decisions independently.",
+				"Architected intuitive product flows, content organization, and complex enterprise workflows from discovery to delivery.",
+				"Designed interfaces in design tools, then built them directly into production code using React, Redux, Vite, Gatsby, JavaScript, HTML, and CSS — no handoff to a separate frontend team.",
+				"Built fully responsive, accessible, and performant UIs following WCAG standards.",
+				"Partnered daily with engineering teams on API integration, technical architecture decisions, feature implementation, and shipping high-quality code.",
+				"Balanced strategic design leadership with deep technical execution in a fast-paced, product-driven environment.",
+				"Leveraged AI tools to accelerate design-to-code workflows while maintaining design quality and engineering standards."
+			]
+		},
+		"youngnetwork": {
+			"company": "YoungNetwork Group",
+			"location": "Campo Grande, Lisbon, Portugal",
+			"position": "UI/UX Designer",
+			"period": "January 2013 - September 2015",
+			"description": [
+				"Led design execution on client-facing digital projects, coordinating with developers and account managers from brief to delivery.",
+				"Designed and developed graphic concepts, proposals and projects for mobile and web apps.",
+				"Produced social media campaigns, visual assets, and interactive experiences."
+			]
+		},
+		"infoportugal": {
+			"company": "InfoPortugal S.A.",
+			"location": "Lisbon, Portugal",
+			"position": "Graphic Designer",
+			"period": "September 2012 - January 2013",
+			"description": [
+				"Development of projects internally and externally. The tasks include developing graphic concepts, designing brochures, guides, roadmaps, and digital and paper infographics.",
+				"Development of proposals and projects for mobile and web app."
+			]
+		},
+		"cofina": {
+			"company": "Cofina media",
+			"location": "Lisbon, Portugal",
+			"position": "Intern Designer",
+			"period": "July 2012 - August 2012",
+			"description": [
+				"Design and development of editorial pages for magazines TV GUIA and FLASH"
+			]
+		}
+	},
+	"education": {
+		"university": {
+			"name": "Universidade Lusíada de Lisboa",
+			"degree": "Bachelor's Degree, Design",
+			"period": "2008 - 2011"
+		},
+		"academy": {
+			"name": "Academia Flag",
+			"degree": "Specialization, Communication Design",
+			"period": "2011 - 2012"
+		}
+	},
+	"awards": {
+		"younglions": {
+			"name": "Young Lions Portugal",
+			"award": "Bronze cyber",
+			"date": "May 2014"
+		},
+		"behance": {
+			"name": "Behance",
+			"award": "Web Design Served",
+			"date": "July 2013"
+		}
+	},
+	"home": {
+		"description": "Design Engineer. Coherent multi-product experiences from concept to production — product experience, strategy, UI/UX, and the MVP Method.",
+		"skipToMain": "Skip to main content"
+	},
+	"about": {
+		"quote": "Do it with passion, or not at all.",
+		"description1": "Energetic by nature and licensed in Design — during the undergraduate degree the passion for digital took hold. From there, a career built on owning the full path from concept to production.",
+		"description2": "From concept to production — bridging design and code with JavaScript, modern frameworks, Redux, and clean UI development to turn ideas into full experiences that are thought through, built out, and ready to perform.",
+		"skills": {
+			"productDesign": "Product Design",
+			"userInterface": "User Interface",
+			"react": "React",
+			"graphicDesign": "Graphic Design",
+			"javaScriptEs6": "JavaScript (ES6+)",
+			"redux": "Redux",
+			"frontEnd": "FrontEnd",
+			"webDesign": "Web Design",
+			"aiTools": "AI tools"
+		}
+	},
+	"location": "Lisbon"
 }

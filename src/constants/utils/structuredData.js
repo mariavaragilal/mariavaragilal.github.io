@@ -97,9 +97,7 @@ const buildCreativeWork = (app, groupName) => {
 	return work;
 };
 
-const defaultPersonBlurb = '10+ years turning SaaS products into unified platforms — designing the system, writing the code, protecting the vision as products scale.';
-const defaultPortfolioName = 'Maria Varagilal — Portfolio';
-const defaultPortfolioDesc = 'Design to Production — brand identity, design systems, and frontend development across B2B SaaS and fintech products.';
+const defaultPortfolioName = person.name + ' — Portfolio';
 
 export const generatePortfolioStructuredData = (cases, mv) => {
 	const allCases = [];
@@ -108,8 +106,11 @@ export const generatePortfolioStructuredData = (cases, mv) => {
 	});
 	const workHeading = mv && mv.workSection ? mv.workSection.heading : null;
 	const workP1 = mv && mv.workSection ? mv.workSection.p1 : null;
-	const introBody = mv && mv.intro ? mv.intro.body : null;
-	const personDesc = introBody && introBody.length > 320 ? introBody.slice(0, 317) + '...' : (introBody || defaultPersonBlurb);
+	const introParts = [];
+	if (mv?.intro?.body) introParts.push(mv.intro.body);
+	if (mv?.intro?.detail) introParts.push(mv.intro.detail);
+	const introBody = introParts.length ? introParts.join(' ') : null;
+	const personDesc = introBody && introBody.length > 320 ? introBody.slice(0, 317) + '...' : (introBody || person.description);
 	const personSchema = {
 		'@type': 'Person',
 		'@id': BASE_URL + '/#person',
@@ -117,9 +118,9 @@ export const generatePortfolioStructuredData = (cases, mv) => {
 		url: BASE_URL,
 		jobTitle: person.jobTitle,
 		description: personDesc,
-		knowsAbout: ['Product Design', 'UX Design', 'Design Systems', 'Frontend Development', 'React', 'Gatsby', 'JavaScript', 'Accessibility (WCAG)', 'B2B SaaS', 'API Design', 'Brand Identity'],
+		knowsAbout: ['Product Design', 'UX Design', 'Frontend Development', 'React', 'Gatsby', 'JavaScript', 'Accessibility (WCAG)', 'B2B SaaS', 'API Design', 'Brand Identity'],
 		sameAs: person.sameAs,
-		hasOccupation: { '@type': 'Occupation', name: 'Technical Product Designer', occupationLocation: { '@type': 'City', name: 'Lisbon' } },
+		hasOccupation: { '@type': 'Occupation', name: 'Lead Design Engineer', occupationLocation: { '@type': 'City', name: 'Lisbon' } },
 		alumniOf: [{ '@type': 'CollegeOrUniversity', name: 'Universidade Lusíada de Lisboa', url: 'https://www.ulusiada.pt' }],
 		award: 'Bronze Young Lions 2014, Cannes Lions',
 	};
@@ -127,7 +128,7 @@ export const generatePortfolioStructuredData = (cases, mv) => {
 		'@type': 'CollectionPage',
 		'@id': BASE_URL + '/#portfolio',
 		name: workHeading ? person.name + ' — ' + workHeading : defaultPortfolioName,
-		description: workP1 || defaultPortfolioDesc,
+		description: workP1 || person.description,
 		url: BASE_URL,
 		author: { '@id': BASE_URL + '/#person' },
 		hasPart: allCases.map((c) => ({ '@id': c['@id'] })),
@@ -137,4 +138,3 @@ export const generatePortfolioStructuredData = (cases, mv) => {
 		'@graph': [personSchema, portfolioSchema, ...allCases],
 	};
 };
-

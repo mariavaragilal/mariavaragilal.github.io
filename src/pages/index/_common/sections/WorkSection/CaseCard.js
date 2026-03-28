@@ -53,7 +53,7 @@ export const CaseCard = ({ app, isSelected, onToggle, href, icon, iconChar = '+'
 						{app.status === 'shipped' ? (
 							<Badge variant='secondary' size='sm' className=' tracking-[0.06em] uppercase'>{ui.shipped}</Badge>
 						) : (
-							<Badge variant='outline' size='sm' className=' tracking-[0.06em] uppercase'>{ui[app.status]}</Badge>
+							<Badge variant='outline' size='sm' className=' tracking-[0.06em] uppercase'>{ui[app.status] ?? ui.concept}</Badge>
 						)}
 						<CardTitle className='font-mono text-xl text-primary w-full'>{app.title}</CardTitle>
 					</span>
@@ -86,7 +86,7 @@ export const CaseCard = ({ app, isSelected, onToggle, href, icon, iconChar = '+'
 						{app.status === 'shipped' ? (
 							<Badge variant='secondary' size='sm' className=' tracking-[0.06em] uppercase'>{ui.shipped}</Badge>
 						) : (
-							<Badge variant='outline' size='sm' className=' tracking-[0.06em] uppercase'>{ui.concept}</Badge>
+							<Badge variant='outline' size='sm' className=' tracking-[0.06em] uppercase'>{ui[app.status] ?? ui.concept}</Badge>
 						)}
 						<CardTitle className='font-mono text-xl text-primary w-full text-inherit'>{app.title}</CardTitle>
 					</span>

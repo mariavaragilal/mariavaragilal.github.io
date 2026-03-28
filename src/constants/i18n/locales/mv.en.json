@@ -7,7 +7,7 @@
 		},
 		{
 			"value": "5+",
-			"label": "Platforms unified",
+			"label": "Products unified",
 			"ctx": "single experience"
 		},
 		{
@@ -28,7 +28,9 @@
 		"mediumFraming": "At enterprise scale the Method maps many touchpoints; here the same discipline applies at portfolio scale — with evidence in the work below (Dimension 4).",
 		"intro": {
 			"column1": "Growth creates complexity. When a single product becomes a platform of interconnected solutions, the biggest risk is losing the feeling of one coherent experience.",
-			"column2": "The MVP Method is the approach I've developed and refined throughout my career — translating the philosophy behind my work into a repeatable practice. Applied across strategy, design, implementation, and rollout — not just documentation — it protects the original vision as products evolve."
+			"column2": "The MVP Method is the approach I've developed and refined throughout my career — translating the philosophy behind my work into a repeatable practice. Applied across strategy, design, implementation, and rollout — not just documentation — it protects the original vision as products evolve.",
+			"column3": "Most of my career has been spent solving that exact problem: how to keep a multi-product experience coherent as it scales.",
+			"column4": "For me, the design lives directly in code — whether in a component, a layout, or a page. I explore and validate in design tools; once a direction is approved, I build it where it has to live to stay real."
 		}
 	},
 	"dimensions": [
@@ -98,11 +100,11 @@
 			"philosophy": {
 				"principle": "Cohesion Before Creation",
 				"ask": "Why bridge design and code?",
-				"answer": "A design system only works if it lives in the product. When it drifts from what is shipped, it becomes shelfware — and the fragmentation starts again.",
-				"checkpoint": "Tokens validated in production, not just approved in Figma."
+				"answer": "A design only works if it lives in the product. When it drifts from what is shipped, it becomes shelfware — and the fragmentation starts again.",
+				"checkpoint": "Validated in production, not just approved in a mockup."
 			},
 			"detail": [
-				"Tokens, components, and patterns are validated in production — not just approved in Figma. The gap between what was designed and what launched closes to zero."
+				"Components and patterns are validated in production — not just approved in a mockup. The gap between what was designed and what launched closes to zero."
 			]
 		},
 		{
@@ -166,29 +168,29 @@
 				"dimension": "Dimension 1 + Dimension 2"
 			}
 		],
-		"closing": "Each pass through the loop sharpens the product and deepens understanding. The role of leadership is to protect clarity, confidence, and consistency — so the team can release, learn, and move forward with purpose.",
+		"closing": "Each pass through the loop sharpens the product and deepens understanding. The role of leadership is to protect clarity, confidence, and consistency — so the team can release, learn, and move forward with purpose. The work has always been about more than any single method — it's about what disciplined practice makes possible.",
 		"whyItMatters": "Declaring Done creates the space to learn. Learning keeps the vision honest. The cycle builds quiet, compounding advantage that no single feature sprint can replicate."
 	},
 	"workCases": {
 		"Securibox": {
-			"context": "Designed and developed the entire product family — brand identity, design system, and production frontend across all properties.",
+			"context": "Designed and developed the entire product family — brand identity, product experience, and production frontend across all properties.",
 			"period": "2015–Present",
 			"cases": [
 				{
 					"period": "2015–Present",
 					"status": "shipped",
 					"title": "Securibox: Unified Identity",
-					"subtitle": "Brand identity, visual language, and every public-facing page — from logo to production Gatsby build — for a data-automation company that needed to feel like one trusted platform",
-					"role": "Head Technical Product Designer & Frontend Development",
+					"subtitle": "Brand identity, visual language, and every public-facing page — from logo to production build — for a data-automation company that needed to feel like one trusted platform",
+					"role": "Lead Design Engineer",
 					"tools": "Sketch · Figma · Gatsby · Bootstrap · React · Vite · Redux · Accessibility (WCAG)",
 					"dimensions": "MVP Methodology",
 					"highlight": "Created the Securibox brand identity from scratch — logo, colour system, typography, imagery rules — and designed and built every public-facing page: corporate site, solution pages (CloudAgents, ParseXtract), about, careers, and contact. Then extended this foundation into a Unified Solutions Brand that carries across all product UIs, sub-brands, and white-label surfaces in production.",
 					"results": [
 						"Brand identity and logo designed from the ground up — colour system, typography scale, imagery direction, and application rules",
-						"Corporate site: homepage, about, careers, offices, contact — designed and built in Gatsby with the brand language applied end-to-end",
+						"Corporate site: homepage, about, careers, offices, contact — designed and built with the brand language applied end-to-end",
 						"Solution pages strategy, visual storytelling, content structure, integration diagrams, and security narrative",
 						"Unified Solutions Brand extending identity across six properties and sub-brands",
-						"Design-to-development alignment — Bootstrap configuration as the single source of truth for tokens, grids, and components",
+						"Design-to-development alignment — shared styling foundation as the single source of truth for grids and components",
 						"Reduced task completion time and friction across key workflows"
 					],
 					"references": {
@@ -196,7 +198,7 @@
 							{
 								"url": "https://www.securibox.eu",
 								"label": "Corporate site",
-								"role": "Brand, design system, Gatsby build"
+								"role": "Brand, design language, production build"
 							},
 							{
 								"url": "https://cube.securibox.eu",
@@ -237,7 +239,7 @@
 					},
 					"caseStudy": {
 						"businessProblem": "Securibox had no established brand identity. As the company expanded from original document-management service into multiple solutions, each product emerged with its own visual language and no shared foundation. The corporate site needed to present a credible, unified platform to enterprise prospects. Solution pages needed to introduce technical products to both developers and business decision-makers. Without a brand, a visual language, or a page strategy, every touchpoint told a different story — fragmenting trust in a company that needed to feel like one reliable partner.",
-						"skillsDemonstrated": "Brand identity from scratch · Visual language design · Corporate site strategy · Public page design & build · Design system foundations · Sub-brand architecture",
+						"skillsDemonstrated": "Brand identity from scratch · Visual language design · Corporate site strategy · Public page design & build · Shared design language foundations · Sub-brand architecture",
 						"strategicDecision": {
 							"intro": "Every decision began with one question:",
 							"question": "Does this make Securibox feel like one trusted company — or multiple separate tools?"
@@ -271,7 +273,7 @@
 								"phase": "Phase 5",
 								"label": "Implementation",
 								"title": "Design Language in Production",
-								"description": "Implemented the full visual language in production using Gatsby for static marketing properties and Bootstrap configuration as the shared token system. The corporate site, solution pages, and sub-brand properties all draw from the same Gatsby build and Bootstrap rules — so design specs and shipped CSS stay aligned without a separate documentation layer."
+								"description": "Implemented the full visual language in production using Gatsby for static marketing properties and Bootstrap configuration as the shared styling foundation. The corporate site, solution pages, and sub-brand properties all draw from the same build and shared rules — so design specs and shipped CSS stay aligned without a separate documentation layer."
 							}
 						],
 						"implementation": {
@@ -295,7 +297,7 @@
 									]
 								},
 								{
-									"heading": "Unified system & touchpoints",
+									"heading": "Unified language & touchpoints",
 									"items": [
 										"Unified Solutions Brand: one design language across the corporate site, six product UIs, white-label portals, and client-facing surfaces — shared foundations, not shared templates.",
 										"Reusable hierarchy, spacing, grids, and UI patterns serving marketing pages, logged-in applications, onboarding, and email.",
@@ -313,9 +315,9 @@
 									]
 								},
 								{
-									"heading": "Shared system",
+									"heading": "Shared styling foundation",
 									"items": [
-										"Bootstrap: brand applied through shared configuration — tokens, grids, components — so design specs and shipped CSS draw from the same source across properties."
+										"Bootstrap: brand applied through shared configuration — grids, components, and consistent rules — so design specs and shipped CSS draw from the same source across properties."
 									]
 								},
 								{
@@ -344,7 +346,7 @@
 						],
 						"quote": {
 							"title": "Define what matters, shrink the space between design and production.",
-							"subtitle": "One logo, one language, one build. The brand is the system."
+							"subtitle": "One logo, one language, one build. The brand is the language."
 						}
 					},
 					"slug": "securibox-unified-identity"
@@ -353,11 +355,11 @@
 					"period": "2015",
 					"status": "shipped",
 					"title": "Cube - Own your data",
-					"role": "Head Technical Product Designer & Frontend Development",
+					"role": "Lead Design Engineer",
 					"tools": "Figma · React · Gatsby · Vite · Accessibility (WCAG)",
 					"subtitle": "Making credential handover feel safe and worth doing — Cube is the consumer face of Securibox's agent technology",
 					"dimensions": "Consumer · Trust · Systems",
-					"highlight": "Cube asks users to hand over login credentials for their bank, telecoms, insurance, and retail accounts so automated agents collect documents on their behalf. The design problem: making something inherently invasive feel safe, clear, and worth doing — across 300+ integrations, designed and shipped in production code.",
+					"highlight": "Cube asks users to hand over login credentials for their bank, telecoms, insurance, and retail accounts so automated agents collect documents on their behalf. The design problem: making something inherently invasive feel safe, clear, and worth doing — across 300+ integrations, designed and shipped in production code. Typography, grid, and visual detail aren't afterthoughts — when a product has to earn trust before a single interaction, craft is doing functional work, not decorative work.",
 					"results": [
 						"Agent integrations across multiple industries: banking, utilities, HR, retail, ...",
 						"Document categories surfaced through a single taxonomy",
@@ -493,7 +495,7 @@
 					"status": "shipped",
 					"title": "SCA - CloudAgents",
 					"subtitle": "Designing the operator layer for an API product — from agent configuration to sync monitoring across 500+ integrations",
-					"role": "Head Technical Product Designer & Frontend Development",
+					"role": "Lead Design Engineer",
 					"tools": "Figma · React · Vite · Bootstrap · Accessibility (WCAG)",
 					"dimensions": "Developer · Operations · Systems",
 					"highlight": "SCA is the infrastructure Cube runs on. The work spanned both sides of the same technology: the consumer product where users collect their documents, and the operator platform where developers configure integrations and operations teams monitor agents at scale.",
@@ -609,7 +611,7 @@
 					"status": "shipped",
 					"title": "Me - Securibox Account",
 					"subtitle": "Account identity hub and connected-services surface — profile, credentials, data transparency - one account layer serving the entire Securibox ecosystem",
-					"role": "Head Technical Product Designer & Frontend Development",
+					"role": "Lead Design Engineer",
 					"tools": "Figma · React · Vite · Redux · Bootstrap · Accessibility (WCAG)",
 					"dimensions": "Dimensions 3, 5",
 					"highlight": "Designed and built the account hub that gives users a single home for their identity, connected services, and data-use transparency across the Securibox ecosystem — with inline explanations of how each piece of personal data is used.",
@@ -708,7 +710,7 @@
 					"status": "shipped",
 					"title": "Securibox ID",
 					"subtitle": "Security-critical auth and registration — balancing conversion, trust, and WCAG accessibility in the first moment users encounter the platform",
-					"role": "Head Technical Product Designer",
+					"role": "Lead Design Engineer",
 					"tools": "Figma · React · Vite · Accessibility (WCAG)",
 					"dimensions": "Dimensions 3, 5",
 					"highlight": "Designed the central authentication experience used by every Securibox product — creating a single, consistent identity layer across the ecosystem.",
@@ -770,7 +772,7 @@
 							]
 						},
 						"skillsDemonstrated": "Authentication UX · Cross-product consistency",
-						"tradeoffsLearnings": "Auth is often treated as an afterthought. Making it central to the design system ensured every product inherited the same trust baseline.",
+						"tradeoffsLearnings": "Auth is often treated as an afterthought. Making it central to the design language ensured every product inherited the same trust baseline.",
 						"quote": {
 							"title": "One identity across the entire platform.",
 							"subtitle": "Auth that feels like a welcome, not a checkpoint."
@@ -841,7 +843,7 @@
 								{
 									"heading": "What was built",
 									"items": [
-										"White-label RH product on Securibox solutions: secure document delivery and access implemented through the platform’s existing capabilities; production frontend work in scope for this role, not custom issuance or PKI infrastructure."
+										"White-label RH product on Securibox solutions: secure document delivery and access implemented through the platform's existing capabilities; production frontend work in scope for this role, not custom issuance or PKI infrastructure."
 									]
 								}
 							]
@@ -1027,7 +1029,7 @@
 					"period": "2019",
 					"status": "shipped",
 					"title": "Assist@ — Admin Life Management",
-					"subtitle": "Life management & Employee portal — runs on RH Securibox white-labeling)",
+					"subtitle": "Life management & Employee portal — runs on RH Securibox white-labelling",
 					"role": "Product Designer",
 					"tools": "Figma · App design",
 					"dimensions": "Dimensions 2, 4",
@@ -1092,7 +1094,7 @@
 								"phase": "Phase 1",
 								"label": "Concept",
 								"title": "Brand dimension — human relationships",
-								"description": "Defined the brand around one core dimension: the complexity and beauty of human iterations in payroll."
+								"description": "Defined the brand around one core dimension: the complexity and beauty of human interactions in payroll."
 							},
 							{
 								"phase": "Phase 2",
@@ -1250,7 +1252,7 @@
 			]
 		},
 		"AI within Boundaries": {
-			"context": "On going AI side projects: experiments and tooling I build for my free time. One concrete build below.",
+			"context": "AI has been changing how I work. I use it throughout my workflow — design system generation, component scaffolding, prototyping logic.",
 			"period": "Personal",
 			"cases": [
 				{
@@ -1344,7 +1346,7 @@
 					},
 					"caseStudy": {
 						"businessProblem": "I kept writing prompts that felt sharp in the moment and fell apart the next week. The failure was not the model — it was me. I had no repeatable way to fix role, constraints, and output shape before I asked for words. I developed Prompt Architect to resolve this once and for all by applying constraint-first prompting in my own work and my own conversations first. I drew on a wide range of AI-related material online — structured guidelines, documentation, and community threads about getting real work out of tools. I kept what survived contact with my own use and dropped the rest. I distilled what remained into one cohesive, practical approach that makes sense when you run it, not when you admire it. Only then did I freeze it into a skill — the 6-part anatomy and 4-D flow as the fence, execution underneath.",
-						"skillsDemonstrated": "Design systems thinking · Product behaviour definition · AI-assisted workflow design",
+						"skillsDemonstrated": "Structured product thinking · Product behaviour definition · AI-assisted workflow design",
 						"strategicDecision": {
 							"intro": "The question I answered before writing a line of SKILL.md:",
 							"question": "What must stay fixed so AI can run fast without rewriting the rules every session?"
@@ -1373,7 +1375,7 @@
 								"phase": "Edit",
 								"label": "Cut",
 								"title": "Trimming drift",
-								"description": "I cut anything that sounded like generic prompt advice or bloated the skill into a blog post. The skill mirrors a design system: opinionated, bounded, reusable."
+								"description": "I cut anything that sounded like generic prompt advice or bloated the skill into a blog post. The skill mirrors a design language: opinionated, bounded, reusable."
 							}
 						],
 						"implementation": {
@@ -1400,17 +1402,19 @@
 					},
 					"slug": "prompt-architect-skill"
 				}
-			]
+			],
+			"contextNote": "I haven't designed an AI-powered product experience yet from the ground up — and that would be exciting to own."
 		}
 	},
 	"intro": {
 		"locationLine": "Lisbon",
 		"heroNameLine1": "Maria",
 		"heroNameLine2": "Varagilal",
-		"tagline": "B2B · SaaS · Fintech · AI-accelerated design & development",
-		"title": "Lead Technical Product Designer who ships code.",
-		"schemaJobTitle": "Lead Technical Product Designer & Frontend Development",
-		"body": "10+ years turning SaaS products into unified platforms: designing the system, writing the code, protecting the vision as products scale. Today, I use AI to accelerate every stage — from design system workflows to production-ready components.",
+		"tagline": "B2B · SaaS · Fintech · AI-accelerated workflows",
+		"title": "Lead Design Engineer who ships product.",
+		"schemaJobTitle": "Lead Design Engineer",
+		"body": "10+ years transforming product experiences across B2B SaaS — from strategy through to production. I own the full design lifecycle: research, flows, UI, and when the design is approved, I build it. A designer who ships — no handoff required.",
+		"detail": "Today, I use AI to accelerate every stage — from exploration and prototyping to production-ready components.",
 		"viewWork": "View My Work",
 		"fullCv": "Full CV",
 		"metricsAriaLabel": "Key metrics"
@@ -1433,13 +1437,13 @@
 	"workSection": {
 		"kicker": "My work",
 		"heading": "Design to Production",
-		"p1": "I design it, I build it. Below is live work — brand identity, design systems, flows, and frontend development I worked on. Technologies include React, Gatsby, Figma, Redux, Bootstrap, AngularJS, and more.",
+		"p1": "I design it, I build it. Below is live work — brand identity, product flows, and production frontend I designed and built.",
 		"p2Lead": "Brand & identity:",
 		"p2": "Logos, visual language, and cohesive experience across ecosystems and products.",
 		"p3": "Each project opens a detailed view — full case study or summary with outcomes — select a card to read it.",
-		"designSystemKicker": "Design system — this site",
+		"designSystemKicker": "Component library — this site",
 		"designSystemBody": "Custom component library (50+ components): Built with React, Tailwind v4, theme system, and accessibility in mind.",
-		"designSystemCtaNote": "Components and design tokens live in the same codebase as this landing page.",
+		"designSystemCtaNote": "Components and theme configuration live in the same codebase as this landing page.",
 		"designSystemComponents": [
 			"Button",
 			"Accordion",
@@ -1493,9 +1497,9 @@
 		]
 	},
 	"seo": {
-		"defaultDescription": "Lead Technical Product Designer who ships code. 10+ years turning SaaS products into unified platforms — design systems, React, and the MVP Method.",
-		"defaultKeywords": "Maria Varagilal, Lead Technical Product Designer, Frontend Development, UI, UX, React, Redux, Design Systems, B2B SaaS, MVP Method",
-		"occupationDescription": "Designs and develops digital products from concept to production"
+		"defaultDescription": "Design Engineer. Coherent multi-product experiences from concept to production — product strategy, UI/UX, and the MVP Method.",
+		"defaultKeywords": "Maria Varagilal, Design Engineer, Product Design, Frontend Development, UI, UX, React, Redux, B2B SaaS, MVP Method",
+		"occupationDescription": "Design Engineer delivering digital products from concept to production"
 	},
 	"footer": {
 		"builtWithLabel": "Built with:",
@@ -1565,6 +1569,7 @@
 			"resultsMetrics": "Results & Metrics",
 			"tradeoffsDefault": "Trade-offs & Learnings",
 			"skills": "Skills"
-		}
+		},
+		"proposal": "proposal"
 	}
 }
