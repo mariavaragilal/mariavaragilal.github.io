@@ -1,4 +1,17 @@
 {
+	"intro": {
+		"locationLine": "Lisboa",
+		"heroNameLine1": "Maria",
+		"heroNameLine2": "Varagilal",
+		"tagline": "B2B · SaaS · Fintech · Fluxos acelerados por IA",
+		"title": "Lead Product Designer & Frontend Developer — do design ao código.",
+		"schemaJobTitle": "Lead Product Designer & Frontend Developer",
+		"body": "+10 anos a transformar experiências de produto em B2B SaaS — da estratégia à produção. Responsável por todo o ciclo de design: conceitos, fluxos, UI e depois de aprovado, construo-o — do design até à implementação, sem handoff.",
+		"detail": "Hoje, uso IA para acelerar todas as etapas — desde exploração e prototipagem até componentes prontos para produção.",
+		"viewWork": "Ver o Meu Trabalho",
+		"fullCv": "CV Completo",
+		"metricsAriaLabel": "Métricas chave"
+	},
 	"keyMetrics": [
 		{
 			"value": "9",
@@ -1302,19 +1315,6 @@
 			],
 			"contextNote": "Ainda não desenhei uma experiência de produto orientada por IA desde o início — e gostaria de a poder ter."
 		}
-	},
-	"intro": {
-		"locationLine": "Lisboa",
-		"heroNameLine1": "Maria",
-		"heroNameLine2": "Varagilal",
-		"tagline": "B2B · SaaS · Fintech · Fluxos acelerados por IA",
-		"title": "Lead Product Designer & Frontend Developer — do design ao código.",
-		"schemaJobTitle": "Lead Product Designer & Frontend Developer",
-		"body": "+10 anos a transformar experiências de produto em B2B SaaS — da estratégia à produção. Responsável por todo o ciclo de design: conceitos, fluxos, UI e depois de aprovado, construo-o — do design até à implementação, sem handoff.",
-		"detail": "Hoje, uso IA para acelerar todas as etapas — desde exploração e prototipagem até componentes prontos para produção.",
-		"viewWork": "Ver o Meu Trabalho",
-		"fullCv": "CV Completo",
-		"metricsAriaLabel": "Métricas chave"
 	},
 	"stickyNav": {
 		"sections": [

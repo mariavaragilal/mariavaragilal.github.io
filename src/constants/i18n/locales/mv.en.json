@@ -1,4 +1,17 @@
 {
+	"intro": {
+		"locationLine": "Lisbon",
+		"heroNameLine1": "Maria",
+		"heroNameLine2": "Varagilal",
+		"tagline": "B2B · SaaS · Fintech · AI-accelerated workflows",
+		"title": "Lead Design Engineer who ships product.",
+		"schemaJobTitle": "Lead Product Designer & Frontend Developer",
+		"body": "10+ years transforming product experiences across B2B SaaS — from strategy through to production. I own the full design lifecycle: research, flows, UI, and when the design is approved, I build it. A designer who ships — no handoff required.",
+		"detail": "Today, I use AI to accelerate every stage — from exploration and prototyping to production-ready components.",
+		"viewWork": "View My Work",
+		"fullCv": "Full CV",
+		"metricsAriaLabel": "Key metrics"
+	},
 	"keyMetrics": [
 		{
 			"value": "9",
@@ -1420,19 +1433,6 @@
 			],
 			"contextNote": "I haven't designed an AI-powered product experience yet from the ground up — and that would be exciting to own."
 		}
-	},
-	"intro": {
-		"locationLine": "Lisbon",
-		"heroNameLine1": "Maria",
-		"heroNameLine2": "Varagilal",
-		"tagline": "B2B · SaaS · Fintech · AI-accelerated workflows",
-		"title": "Lead Design Engineer who ships product.",
-		"schemaJobTitle": "Lead Product Designer & Frontend Developer",
-		"body": "10+ years transforming product experiences across B2B SaaS — from strategy through to production. I own the full design lifecycle: research, flows, UI, and when the design is approved, I build it. A designer who ships — no handoff required.",
-		"detail": "Today, I use AI to accelerate every stage — from exploration and prototyping to production-ready components.",
-		"viewWork": "View My Work",
-		"fullCv": "Full CV",
-		"metricsAriaLabel": "Key metrics"
 	},
 	"stickyNav": {
 		"sections": [
