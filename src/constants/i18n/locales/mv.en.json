@@ -28,11 +28,28 @@
 		"mediumFraming": "At enterprise scale the Method maps many touchpoints; here the same discipline applies at portfolio scale — with evidence in the work below (Dimension 4).",
 		"intro": {
 			"column1": "Growth creates complexity. When a single product becomes a platform of interconnected solutions, the biggest risk is losing the feeling of one coherent experience.",
-			"column2": "The Maria Varagilal Playbook Method is the approach I've developed and refined throughout my career — translating the philosophy behind my work into a repeatable practice. Applied across strategy, design, implementation, and rollout — not just documentation — it protects the original vision as products evolve.",
+			"column2": "The Maria Varagilal Playbook Method is the approach I've developed and refined along the way — translating the philosophy behind my work into a repeatable practice. Applied across strategy, design, implementation, and rollout — not just documentation — it protects the original vision as products evolve.",
 			"column3": "Most of my career has been spent solving that exact problem: how to keep a multi-product experience coherent as it scales.",
 			"column4": "For me, the design lives directly in code — whether in a component, a layout, or a page. I explore and validate in design tools; once a direction is approved, I build it where it has to live to stay real."
 		}
 	},
+	"commitments": [
+		{
+			"principle": "Cohesion",
+			"method": "Brand & Experience Audit + Design Implementation",
+			"protects": "The product is one experience — not a collection of products. Fragmentation risks surface before they cost clients."
+		},
+		{
+			"principle": "Boundaries",
+			"method": "Unified Brand Principles + Design Implementation + Continuous Alignment & Measurement",
+			"protects": "Intentional boundaries remind teams what truly matters. If it doesn't serve the committed problem, it doesn't ship now."
+		},
+		{
+			"principle": "Priority",
+			"method": "Priority & Flow Architecture + Design Implementation",
+			"protects": "The MVP line is an act of discipline, not compromise. The 2×2 matrix makes priorities visible and shared: what must launch now, and what can wait without weakening the core."
+		}
+	],
 	"dimensions": [
 		{
 			"num": "01",
@@ -43,7 +60,7 @@
 			],
 			"summary": "Map every touchpoint — portals, mobile, emails, onboarding, internal tools. Score visual and UX consistency and surface fragmentation risks before they cost clients.",
 			"philosophy": {
-				"principle": "Cohesion Before Creation",
+				"principle": "Cohesion",
 				"ask": "Why start here?",
 				"answer": "Before any line is drawn or code is written, the most important work is seeing the problem clearly. Mapping every touchpoint creates the real picture — who the user actually is, what they're trying to achieve, and where the experience is quietly breaking down.",
 				"checkpoint": "If the problem isn't clear, nothing built on top of it will be."
@@ -90,21 +107,21 @@
 		},
 		{
 			"num": "04",
-			"title": "Design-Language Implementation",
+			"title": "Design Implementation",
 			"icon": "◈",
 			"groundedIn": [
 				"Priority",
 				"Boundaries"
 			],
-			"summary": "The design language flows from strategy into production. Instead of documentation alone, I bridge design and implementation so it reaches the product — teams get something they can ship, not just specifications.",
+			"summary": "The design — visuals, interactions, and flows - translates from strategy into production. Instead of documentation alone, I bridge design and implementation so it reaches the product — teams get something they can ship, not just specifications.",
 			"philosophy": {
-				"principle": "Cohesion Before Creation",
+				"principle": "Cohesion",
 				"ask": "Why bridge design and code?",
 				"answer": "A design only works if it lives in the product. When it drifts from what is shipped, it becomes shelfware — and the fragmentation starts again.",
 				"checkpoint": "Validated in production, not just approved in a mockup."
 			},
 			"detail": [
-				"Components and patterns are validated in production — not just approved in a mockup. The gap between what was designed and what launched closes to zero."
+				"Components and patterns are validated in production — not just approved in a mockup. The gap between designed intent and launched reality closes to zero."
 			]
 		},
 		{
@@ -972,15 +989,13 @@
 					"status": "shipped",
 					"title": "Gerer Ma Boite (GMB)",
 					"subtitle": "SaaS point of sale platform for entrepreneurs · acquired by CEGID",
-					"role": "Lead Designer",
-					"tools": "Figma · AngularJS · Azure",
+					"role": "Mentor & Designer",
+					"tools": "Figma",
 					"dimensions": "Dimensions 2, 3, 4",
-					"highlight": "Served as Lead Designer, mentoring the project team and stepping in to deliver the final UI. The platform was later acquired by CEGID and integrated into their enterprise offering.",
+					"highlight": "Served as Mentor and Designer, mentoring the project team and stepping in to deliver the final UI. The platform was later acquired by CEGID and integrated into their enterprise offering.",
 					"results": [
 						"Mentored the product team through strategy, branding, and architecture phases",
 						"Delivered the final UI design, ensuring a polished, cohesive finish",
-						"Platform built in ~8 weeks with AngularJS front-end and robust Azure back-end",
-						"Integrated with Dropbox, Revolut, Stripe, and SendGrid APIs",
 						"Acquired by CEGID and integrated into their enterprise solution"
 					],
 					"references": {

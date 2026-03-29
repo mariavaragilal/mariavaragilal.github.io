@@ -28,7 +28,7 @@
 		"mediumFraming": "Em escala empresarial o Método mapeia muitos pontos de contacto; aqui aplica-se a mesma disciplina à escala deste portefólio — com provas no trabalho abaixo (Dimensão 4).",
 		"intro": {
 			"column1": "O crescimento gera complexidade. Quando um único produto se torna uma plataforma de soluções interligadas, o maior risco é perder a sensação de uma experiência única.",
-			"column2": "O Método Maria Varagilal Playbook é a abordagem que desenvolvi e refinei ao longo da minha carreira — traduzindo a filosofia por trás do meu trabalho numa prática repetível. Aplicada à estratégia, design, implementação e lançamento — não apenas documentação — protege a visão original à medida que os produtos evoluem. ",
+			"column2": "O Método Maria Varagilal Playbook é a abordagem que desenvolvi e refinei ao longo do caminho — traduzindo a filosofia por trás do meu trabalho numa prática repetível. Aplicada à estratégia, design, implementação e lançamento — não apenas documentação — protege a visão original à medida que os produtos evoluem. ",
 			"column3": "Passei a maior parte da minha carreira a resolver esse problema preciso: como manter uma experiência multi-produto coerente à medida que escala.",
 			"column4": "Para mim, o design vive directamente no código — num componente, num layout ou numa página. Exploro e valido em ferramentas de design; quando uma direcção é aprovada, construo-o onde tem de estar para continuar real."
 		}
@@ -43,7 +43,7 @@
 			],
 			"summary": "Mapear todos os pontos de contacto — portais, aplicações móveis, e-mails, onboarding, ferramentas internas. Avalie a consistência visual e de UX e identifique riscos de fragmentação antes que custem aos clientes.",
 			"philosophy": {
-				"principle": "Coesão Antes da Criação",
+				"principle": "Coesão",
 				"ask": "Por que começar aqui?",
 				"answer": "Antes de qualquer linha ser desenhada ou código escrito, o trabalho mais importante é ver o problema claramente. Mapear todos os pontos de contacto cria a imagem real — quem é realmente o utilizador, o que está a tentar alcançar e onde a experiência se está a quebrar silenciosamente.",
 				"checkpoint": "Se o problema não estiver claro, nada construído sobre ele estará."
@@ -96,9 +96,9 @@
 				"Prioridade",
 				"Limites"
 			],
-			"summary": "A linguagem de design flui da estratégia para a produção. Em vez de apenas documentação, faço a ponte entre design e implementação para que chegue ao produto — as equipas recebem algo que podem lançar, não apenas especificações.",
+			"summary": "O design — visuais, interações e fluxos — traduz a estratégia em produção. Em vez de apenas documentação, faço a ponte entre design e implementação para que chegue ao produto — as equipas recebem algo que podem lançar, não apenas especificações.",
 			"philosophy": {
-				"principle": "Coesão Antes da Criação",
+				"principle": "Coesão",
 				"ask": "Por que fazer a ponte entre design e código?",
 				"answer": "Um design só funciona se viver no produto. Quando se afasta do que é lançado, torna-se prateleira — e a fragmentação começa de novo.",
 				"checkpoint": "Validado em produção, não apenas aprovado num mockup."
@@ -871,15 +871,13 @@
 					"status": "shipped",
 					"title": "Gerer Ma Boite (GMB)",
 					"subtitle": "Plataforma SaaS de ponto de venda para empreendedores · adquirida pela CEGID",
-					"role": "Designer Lead",
-					"tools": "Figma · AngularJS · Azure",
+					"role": "Mentor & Designer",
+					"tools": "Figma ",
 					"dimensions": "Dimensões 2, 3, 4",
-					"highlight": "Actuação como Designer Lead, com mentoria à equipa do projecto e intervenção para entregar a UI final. A plataforma foi mais tarde adquirida pela CEGID e integrada na sua oferta empresarial.",
+					"highlight": "Actuação como Mentor e Designer, com mentoria à equipa do projecto e intervenção para entregar a UI final. A plataforma foi mais tarde adquirida pela CEGID e integrada na sua oferta empresarial.",
 					"results": [
 						"Mentoria à equipa de produto nas fases de estratégia, marca e arquitectura",
 						"Entrega do design de UI final, com acabamento polido e coeso",
-						"Plataforma construída em ~8 semanas com frontend AngularJS e backend Azure robusto",
-						"Integrada com APIs Dropbox, Revolut, Stripe e SendGrid",
 						"Adquirida pela CEGID e integrada na sua solução empresarial"
 					],
 					"references": {
