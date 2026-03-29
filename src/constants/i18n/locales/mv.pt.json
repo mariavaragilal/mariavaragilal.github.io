@@ -81,7 +81,7 @@
 			"philosophy": {
 				"principle": "Prioridade e Limiar",
 				"ask": "Quando é suficiente?",
-				"answer": "A linha Maria Varagilal Playbook é um acto de disciplina, não de compromisso. A matriz 2×2 torna as prioridades visíveis e partilhadas: o que deve ser lançado agora e o que pode esperar sem enfraquecer o núcleo.",
+				"answer": "A linha de lançamento é um acto de disciplina, não de compromisso. A matriz 2×2 torna as prioridades visíveis e partilhadas: o que deve ser lançado agora e o que pode esperar sem enfraquecer o núcleo.",
 				"checkpoint": "O produto diz-lhe o que refinar — o backlog nunca dirá."
 			},
 			"detail": [
@@ -119,7 +119,7 @@
 			"philosophy": {
 				"principle": "Evolução",
 				"ask": "Como se mantém honesto?",
-				"answer": "Cada compromisso evolui através do mesmo ciclo: construir dentro de limites, lançar na linha Maria Varagilal Playbook, testar com utilizadores reais, refinar enquanto protege a lente.",
+				"answer": "Cada compromisso evolui através do mesmo ciclo: construir dentro de limites, lançar na linha de lançamento, testar com utilizadores reais, refinar enquanto protege a lente.",
 				"checkpoint": "Declarar 'feito' cria o espaço para aprender."
 			},
 			"detail": [
@@ -154,7 +154,7 @@
 			},
 			{
 				"step": "Lançar",
-				"desc": "Alcançar a linha Maria Varagilal Playbook e lançar",
+				"desc": "Alcançar a linha de lançamento e lançar",
 				"dimension": "Dimensão 3"
 			},
 			{

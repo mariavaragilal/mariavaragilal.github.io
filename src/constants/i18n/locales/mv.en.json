@@ -47,7 +47,7 @@
 		{
 			"principle": "Priority",
 			"method": "Priority & Flow Architecture + Design Implementation",
-			"protects": "The MVP line is an act of discipline, not compromise. The 2×2 matrix makes priorities visible and shared: what must launch now, and what can wait without weakening the core."
+			"protects": "The launch line is an act of discipline, not compromise. The 2×2 matrix makes priorities visible and shared: what must launch now, and what can wait without weakening the core."
 		}
 	],
 	"dimensions": [
@@ -98,7 +98,7 @@
 			"philosophy": {
 				"principle": "Priority & Threshold",
 				"ask": "When is enough enough?",
-				"answer": "The Maria Varagilal Playbook line is an act of discipline, not compromise. The 2×2 matrix makes priorities visible and shared: what must launch now, and what can wait without weakening the core.",
+				"answer": "The launch line is an act of discipline, not compromise. The 2×2 matrix makes priorities visible and shared: what must launch now, and what can wait without weakening the core.",
 				"checkpoint": "The product tells you what to refine — the backlog never will."
 			},
 			"detail": [
@@ -136,7 +136,7 @@
 			"philosophy": {
 				"principle": "Evolution",
 				"ask": "How does it stay honest?",
-				"answer": "Each commitment evolves through the same cycle: build within boundaries, launch at the Maria Varagilal Playbook line, test with real users, refine while protecting the lens.",
+				"answer": "Each commitment evolves through the same cycle: build within boundaries, launch at the launch line, test with real users, refine while protecting the lens.",
 				"checkpoint": "Declaring 'done' creates the space to learn."
 			},
 			"detail": [
@@ -171,7 +171,7 @@
 			},
 			{
 				"step": "Launch",
-				"desc": "Reach the Maria Varagilal Playbook line and release",
+				"desc": "Reach the launch line and release",
 				"dimension": "Dimension 3"
 			},
 			{
