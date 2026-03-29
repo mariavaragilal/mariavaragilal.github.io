@@ -4,8 +4,8 @@
 
 export const person = {
 	name: 'Maria Varagilal',
-	jobTitle: 'Lead Design Engineer',
-	description: 'Design Engineer. Coherent multi-product experiences from concept to production — product strategy, UI/UX, and the MVP Method.',
+	jobTitle: 'Design Engineer · Lead Product Designer',
+	description: 'Design Engineer. Coherent multi-product experiences from concept to production — product strategy, UI/UX, and the Maria Varagilal Playbook Method.',
 	url: 'https://mariavaragilal.github.io',
 	image: 'https://mariavaragilal.github.io/avatar.png',
 	sameAs: ['https://www.linkedin.com/in/mariavaragilal', 'https://codepen.io/mariavaragilal', 'https://dribbble.com/mariavaragilal', 'https://be.net/mariavaragilal'],
@@ -16,7 +16,7 @@ export const person = {
 		{ name: 'Universidade Lusíada de Lisboa', description: 'Bachelor\'s Degree in Design' },
 		{ name: 'Academia Flag', description: 'Specialization in Communication Design' },
 	],
-	worksFor: { name: 'Securibox', url: 'https://www.securibox.eu', description: 'Lead Design Engineer' },
+	worksFor: { name: 'Securibox', url: 'https://www.securibox.eu', description: 'Lead Product Designer & Frontend Engineer' },
 	awards: [
 		{ name: 'Bronze cyber', description: 'Young Lions Portugal', date: '2014-05-01' },
 		{ name: 'Web Design Served', description: 'Behance', date: '2013-07-01' },
@@ -27,7 +27,7 @@ export const person = {
 // lives in `mv.en.json` / `mv.pt.json` (merged in `en.js` / `pt.js`).
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Philosophy — MVP Method (three commitments: cohesion, priority, boundaries)
+// Philosophy — Maria Varagilal Playbook Method (three commitments: cohesion, priority, boundaries)
 //
 // Markup convention: {{bold:text}} marks inline emphasis.
 // Render helper: str.split(/(\{\{bold:.*?\}\})/g) then match {{bold:(.+)}}
@@ -51,9 +51,9 @@ export const method = [
 	{
 		num: '02',
 		title: 'Priority & Threshold',
-		summary: 'Know when enough is enough. The MVP line is an act of discipline, not compromise.',
+		summary: 'Know when enough is enough. The Maria Varagilal Playbook line is an act of discipline, not compromise.',
 		content: [
-			'Excellent design recognises the moment when further refinement stops creating meaningful value — the MVP line. The 2×2 matrix (Business Value vs. User Friction) makes priorities visible and shared: what must launch now, and what can wait without weakening the core.'
+			'Excellent design recognises the moment when further refinement stops creating meaningful value — the Maria Varagilal Playbook line. The 2×2 matrix (Business Value vs. User Friction) makes priorities visible and shared: what must launch now, and what can wait without weakening the core.'
 		],
 		checkpoint: 'When user understanding, problem specificity, and flow context align — launch the work. The product tells you what to refine — the backlog never will.',
 		practice: 'A checkout flow blocking 30% of users — high friction, high value. Ships first. A settings redesign improving aesthetics but not behaviour — it can wait. The matrix makes that call explicit, not political.',
@@ -61,7 +61,7 @@ export const method = [
 			high: 'A checkout flow blocking 30% of users — high friction, high value. Ships first.',
 			low: 'A settings redesign improving aesthetics but not behaviour. It can wait.',
 		},
-		evolution: 'The MVP line is not fixed. After each release, real data reshapes the matrix. Yesterday\'s "can wait" becomes today\'s high-friction item as the user base shifts. Priority recalibrates so the team is always working on the problem that matters most right now — not the one that mattered most last quarter.',
+		evolution: 'The Maria Varagilal Playbook line is not fixed. After each release, real data reshapes the matrix. Yesterday\'s "can wait" becomes today\'s high-friction item as the user base shifts. Priority recalibrates so the team is always working on the problem that matters most right now — not the one that mattered most last quarter.',
 		whyItMatters: 'Teams that cannot define "done" lose weeks to endless refinement. Knowing when to stop keeps momentum alive.',
 	},
 	{

@@ -24,11 +24,11 @@
 	"method": {
 		"label": "O meu playbook",
 		"heading": "O Método MVP",
-		"subtitle": "Maria Varagilal Playbook",
+		"subtitle": "MVP — Maria Varagilal Playbook",
 		"mediumFraming": "Em escala empresarial o Método mapeia muitos pontos de contacto; aqui aplica-se a mesma disciplina à escala deste portefólio — com provas no trabalho abaixo (Dimensão 4).",
 		"intro": {
 			"column1": "O crescimento gera complexidade. Quando um único produto se torna uma plataforma de soluções interligadas, o maior risco é perder a sensação de uma experiência única.",
-			"column2": "O Método MVP é a abordagem que desenvolvi e refinei ao longo da minha carreira — traduzindo a filosofia por trás do meu trabalho numa prática repetível. Aplicada à estratégia, design, implementação e lançamento — não apenas documentação — protege a visão original à medida que os produtos evoluem. ",
+			"column2": "O Método Maria Varagilal Playbook é a abordagem que desenvolvi e refinei ao longo da minha carreira — traduzindo a filosofia por trás do meu trabalho numa prática repetível. Aplicada à estratégia, design, implementação e lançamento — não apenas documentação — protege a visão original à medida que os produtos evoluem. ",
 			"column3": "Passei a maior parte da minha carreira a resolver esse problema preciso: como manter uma experiência multi-produto coerente à medida que escala.",
 			"column4": "Para mim, o design vive directamente no código — num componente, num layout ou numa página. Exploro e valido em ferramentas de design; quando uma direcção é aprovada, construo-o onde tem de estar para continuar real."
 		}
@@ -81,7 +81,7 @@
 			"philosophy": {
 				"principle": "Prioridade e Limiar",
 				"ask": "Quando é suficiente?",
-				"answer": "A linha MVP é um acto de disciplina, não de compromisso. A matriz 2×2 torna as prioridades visíveis e partilhadas: o que deve ser lançado agora e o que pode esperar sem enfraquecer o núcleo.",
+				"answer": "A linha Maria Varagilal Playbook é um acto de disciplina, não de compromisso. A matriz 2×2 torna as prioridades visíveis e partilhadas: o que deve ser lançado agora e o que pode esperar sem enfraquecer o núcleo.",
 				"checkpoint": "O produto diz-lhe o que refinar — o backlog nunca dirá."
 			},
 			"detail": [
@@ -119,7 +119,7 @@
 			"philosophy": {
 				"principle": "Evolução",
 				"ask": "Como se mantém honesto?",
-				"answer": "Cada compromisso evolui através do mesmo ciclo: construir dentro de limites, lançar na linha MVP, testar com utilizadores reais, refinar enquanto protege a lente.",
+				"answer": "Cada compromisso evolui através do mesmo ciclo: construir dentro de limites, lançar na linha Maria Varagilal Playbook, testar com utilizadores reais, refinar enquanto protege a lente.",
 				"checkpoint": "Declarar 'feito' cria o espaço para aprender."
 			},
 			"detail": [
@@ -154,7 +154,7 @@
 			},
 			{
 				"step": "Lançar",
-				"desc": "Alcançar a linha MVP e lançar",
+				"desc": "Alcançar a linha Maria Varagilal Playbook e lançar",
 				"dimension": "Dimensão 3"
 			},
 			{
@@ -181,7 +181,7 @@
 					"status": "shipped",
 					"title": "Securibox: Identidade Unificada",
 					"subtitle": "Soluções automatizadas de recolha, análise e classificação de dados e documentos · de produtos individuais a ecossistema",
-					"role": "Lead Design Engineer",
+					"role": "Lead Product Designer & Frontend Developer",
 					"tools": "Sketch · Figma · Gatsby · Bootstrap · React · Vite · Redux · Acessibilidade (WCAG)",
 					"dimensions": "As 5 dimensões",
 					"highlight": "Liderança na criação de uma fundação unificada de marca e experiência. Proposta e entrega de uma Marca de Soluções Unificada — linguagem visual coesa, filosofia de experiência partilhada e padrões reutilizáveis em produção.",
@@ -326,7 +326,7 @@
 					"period": "2015",
 					"status": "shipped",
 					"title": "Cube - Controle os seus dados",
-					"role": "Lead Design Engineer",
+					"role": "Lead Product Designer & Frontend Developer",
 					"tools": "Figma · React · Gatsby · Acessibilidade (WCAG)",
 					"subtitle": "Tornar a entrega de credenciais segura e que vale a pena — demonstrando uma tecnologia",
 					"dimensions": "Consumidor · Confiança · Sistemas",
@@ -432,7 +432,7 @@
 					"status": "shipped",
 					"title": "SCA - CloudAgents",
 					"subtitle": "Conceber a camada de operador para um produto API — da configuração de agentes à monitorização de sincronização em mais de 500 integrações",
-					"role": "Lead Design Engineer",
+					"role": "Lead Product Designer & Frontend Developer",
 					"tools": "Figma · React · Vite · Bootstrap · Acessibilidade (WCAG)",
 					"dimensions": "Programador · Operações · Sistemas",
 					"highlight": "A SCA é a infraestrutura em que o Cube funciona. O trabalho abrangeu ambos os lados da mesma tecnologia: o produto para consumidores onde os utilizadores recolhem os seus documentos e a plataforma de operador onde os programadores configuram integrações e as equipas de operações as monitorizam em escala.",
@@ -543,7 +543,7 @@
 					"status": "shipped",
 					"title": "Me - Conta Securibox",
 					"subtitle": "Identidade e arquitectura de conta entre produtos — uma camada de conta a servir todo o ecossistema Securibox",
-					"role": "Lead Design Engineer",
+					"role": "Lead Product Designer & Frontend Developer",
 					"tools": "Figma · UX de Conta",
 					"dimensions": "Dimensões 3, 5",
 					"highlight": "Concepção do hub de gestão de conta que dá aos utilizadores controlo sobre o seu perfil, preferências e dados em todo o ecossistema Securibox.",
@@ -609,7 +609,7 @@
 					"status": "shipped",
 					"title": "Securibox ID",
 					"subtitle": "Autenticação e registo críticos de segurança — equilibrar conversão, confiança e acessibilidade WCAG no primeiro momento em que os utilizadores encontram a plataforma",
-					"role": "Lead Design Engineer",
+					"role": "Lead Product Designer & Frontend Developer",
 					"tools": "Figma · React · Vite · Acessibilidade (WCAG)",
 					"dimensions": "Dimensões 3, 5",
 					"highlight": "Concepção da experiência central de autenticação usada por todos os produtos Securibox — uma única camada de identidade consistente em todo o ecossistema.",
@@ -1310,8 +1310,8 @@
 		"heroNameLine1": "Maria",
 		"heroNameLine2": "Varagilal",
 		"tagline": "B2B · SaaS · Fintech · Fluxos acelerados por IA",
-		"title": "Lead Design Engineer — do design ao código.",
-		"schemaJobTitle": "Lead Design Engineer",
+		"title": "Lead Product Designer & Frontend Developer — do design ao código.",
+		"schemaJobTitle": "Lead Product Designer & Frontend Developer",
 		"body": "+10 anos a transformar experiências de produto em B2B SaaS — da estratégia à produção. Responsável por todo o ciclo de design: conceitos, fluxos, UI e depois de aprovado, construo-o — do design até à implementação, sem handoff.",
 		"detail": "Hoje, uso IA para acelerar todas as etapas — desde exploração e prototipagem até componentes prontos para produção.",
 		"viewWork": "Ver o Meu Trabalho",
@@ -1396,8 +1396,8 @@
 		]
 	},
 	"seo": {
-		"defaultDescription": "Design Engineer. Experiências multi-produto coerentes do conceito à produção — estratégia de produto, UI/UX e o Método MVP.",
-		"defaultKeywords": "Maria Varagilal, Design Engineer, Design de Produto, desenvolvimento frontend, UI, UX, React, Redux, B2B SaaS, Método MVP",
+		"defaultDescription": "Design Engineer · Lead Product Designer. Experiências multi-produto coerentes do conceito à produção — estratégia de produto, UI/UX e o Método Maria Varagilal Playbook.",
+		"defaultKeywords": "Maria Varagilal, Design Engineer, Lead Product Designer, Design de Produto, desenvolvimento frontend, UI, UX, React, Redux, B2B SaaS, Método Maria Varagilal Playbook",
 		"occupationDescription": "Design Engineer que entrega produtos digitais do conceito à produção"
 	},
 	"footer": {
@@ -1421,7 +1421,7 @@
 		"builtWithNavAria": "Construído com",
 		"referencesNavAria": "Referências",
 		"navGlossaryLead": "Na página inicial, «Playbook» na barra fixa é a mesma secção que ",
-		"navGlossaryLink": "O Método MVP",
+		"navGlossaryLink": "O Método Maria Varagilal Playbook",
 		"navGlossaryTail": " (#framework)."
 	},
 	"caseUi": {

@@ -12,7 +12,7 @@ const CVHeader = () => {
 			</div>
 			<div className='block mt-auto'>
 				<p className='text-[1em] text-foreground mb-auto'>{t('location')}</p>
-				<p className='font-mon font-medium leading-[1.175em] text-[1.675em] text-foreground mt-0 mb-0 w-full'>{t('cv.title')}</p>
+				<p className='font-mon font-medium leading-[1.175em] text-[1.675em] text-foreground mt-0 mb-0 w-full  max-w-xs'>{t('cv.title')}</p>
 				<a href='https://www.linkedin.com/in/mariavaragilal' target='_blank' rel='noopener noreferrer' className='text-[1em] text-current/66 hover:text-blue-600 dark:hover:text-blue-400 hover:underline'>linkedin.com/in/mariavaragilal</a>
 			</div>
 			<nav className='p-0 mt-auto' aria-label='External profiles'>

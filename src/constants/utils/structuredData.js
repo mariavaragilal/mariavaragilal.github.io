@@ -120,7 +120,7 @@ export const generatePortfolioStructuredData = (cases, mv) => {
 		description: personDesc,
 		knowsAbout: ['Product Design', 'UX Design', 'Frontend Development', 'React', 'Gatsby', 'JavaScript', 'Accessibility (WCAG)', 'B2B SaaS', 'API Design', 'Brand Identity'],
 		sameAs: person.sameAs,
-		hasOccupation: { '@type': 'Occupation', name: 'Lead Design Engineer', occupationLocation: { '@type': 'City', name: 'Lisbon' } },
+		hasOccupation: { '@type': 'Occupation', name: 'Design Engineer · Lead Product Designer', occupationLocation: { '@type': 'City', name: 'Lisbon' } },
 		alumniOf: [{ '@type': 'CollegeOrUniversity', name: 'Universidade Lusíada de Lisboa', url: 'https://www.ulusiada.pt' }],
 		award: 'Bronze Young Lions 2014, Cannes Lions',
 	};

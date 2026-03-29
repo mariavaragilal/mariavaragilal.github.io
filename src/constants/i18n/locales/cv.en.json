@@ -1,7 +1,7 @@
 {
 	"cv": {
 		"name": "Maria Varagilal",
-		"title": "Lead Design Engineer",
+		"title": "Design Engineer · Lead Product Designer",
 		"summary": "Lead Design Engineer with 10+ years transforming product experiences across B2B SaaS — from strategy through to production. Sole design lead across a multi-product portfolio: I own the full design lifecycle, mentor contributors, and when the design is approved, I build it. A designer who ships — no handoff required.",
 		"note": "Currently using AI to accelerate design-to-code workflows, from exploration and prototyping to production-ready components."
 	},
@@ -21,7 +21,7 @@
 		"securibox": {
 			"company": "Securibox",
 			"location": "Lisbon, Portugal",
-			"position": "Lead Design Engineer",
+			"position": "Lead Product Designer & Frontend Engineer",
 			"period": "September 2015 - Present",
 			"description": [
 				"Led end-to-end design strategy and vision: shaped product experience, UI/UX design, information architecture, and brand identity across a multi-product B2B SaaS portfolio.",
@@ -91,7 +91,7 @@
 		}
 	},
 	"home": {
-		"description": "Design Engineer. Coherent multi-product experiences from concept to production — product experience, strategy, UI/UX, and the MVP Method.",
+		"description": "Design Engineer. Coherent multi-product experiences from concept to production — product experience, strategy, UI/UX, and the Maria Varagilal Playbook Method.",
 		"skipToMain": "Skip to main content"
 	},
 	"about": {

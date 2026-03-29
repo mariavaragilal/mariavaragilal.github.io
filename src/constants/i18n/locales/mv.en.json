@@ -24,11 +24,11 @@
 	"method": {
 		"label": "My playbook",
 		"heading": "The MVP Method",
-		"subtitle": "Maria Varagilal Playbook",
+		"subtitle": "MVP — Maria Varagilal Playbook",
 		"mediumFraming": "At enterprise scale the Method maps many touchpoints; here the same discipline applies at portfolio scale — with evidence in the work below (Dimension 4).",
 		"intro": {
 			"column1": "Growth creates complexity. When a single product becomes a platform of interconnected solutions, the biggest risk is losing the feeling of one coherent experience.",
-			"column2": "The MVP Method is the approach I've developed and refined throughout my career — translating the philosophy behind my work into a repeatable practice. Applied across strategy, design, implementation, and rollout — not just documentation — it protects the original vision as products evolve.",
+			"column2": "The Maria Varagilal Playbook Method is the approach I've developed and refined throughout my career — translating the philosophy behind my work into a repeatable practice. Applied across strategy, design, implementation, and rollout — not just documentation — it protects the original vision as products evolve.",
 			"column3": "Most of my career has been spent solving that exact problem: how to keep a multi-product experience coherent as it scales.",
 			"column4": "For me, the design lives directly in code — whether in a component, a layout, or a page. I explore and validate in design tools; once a direction is approved, I build it where it has to live to stay real."
 		}
@@ -81,7 +81,7 @@
 			"philosophy": {
 				"principle": "Priority & Threshold",
 				"ask": "When is enough enough?",
-				"answer": "The MVP line is an act of discipline, not compromise. The 2×2 matrix makes priorities visible and shared: what must launch now, and what can wait without weakening the core.",
+				"answer": "The Maria Varagilal Playbook line is an act of discipline, not compromise. The 2×2 matrix makes priorities visible and shared: what must launch now, and what can wait without weakening the core.",
 				"checkpoint": "The product tells you what to refine — the backlog never will."
 			},
 			"detail": [
@@ -119,7 +119,7 @@
 			"philosophy": {
 				"principle": "Evolution",
 				"ask": "How does it stay honest?",
-				"answer": "Each commitment evolves through the same cycle: build within boundaries, launch at the MVP line, test with real users, refine while protecting the lens.",
+				"answer": "Each commitment evolves through the same cycle: build within boundaries, launch at the Maria Varagilal Playbook line, test with real users, refine while protecting the lens.",
 				"checkpoint": "Declaring 'done' creates the space to learn."
 			},
 			"detail": [
@@ -154,7 +154,7 @@
 			},
 			{
 				"step": "Launch",
-				"desc": "Reach the MVP line and release",
+				"desc": "Reach the Maria Varagilal Playbook line and release",
 				"dimension": "Dimension 3"
 			},
 			{
@@ -181,9 +181,9 @@
 					"status": "shipped",
 					"title": "Securibox: Unified Identity",
 					"subtitle": "Brand identity, visual language, and every public-facing page — from logo to production build — for a data-automation company that needed to feel like one trusted platform",
-					"role": "Lead Design Engineer",
+					"role": "Lead Product Designer & Frontend Developer",
 					"tools": "Sketch · Figma · Gatsby · Bootstrap · React · Vite · Redux · Accessibility (WCAG)",
-					"dimensions": "MVP Methodology",
+					"dimensions": "Maria Varagilal Playbook Methodology",
 					"highlight": "Created the Securibox brand identity from scratch — logo, colour system, typography, imagery rules — and designed and built every public-facing page: corporate site, solution pages (CloudAgents, ParseXtract), about, careers, and contact. Then extended this foundation into a Unified Solutions Brand that carries across all product UIs, sub-brands, and white-label surfaces in production.",
 					"results": [
 						"Brand identity and logo designed from the ground up — colour system, typography scale, imagery direction, and application rules",
@@ -355,7 +355,7 @@
 					"period": "2015",
 					"status": "shipped",
 					"title": "Cube - Own your data",
-					"role": "Lead Design Engineer",
+					"role": "Lead Product Designer & Frontend Development",
 					"tools": "Figma · React · Gatsby · Vite · Accessibility (WCAG)",
 					"subtitle": "Making credential handover feel safe and worth doing — Cube is the consumer face of Securibox's agent technology",
 					"dimensions": "Consumer · Trust · Systems",
@@ -495,7 +495,7 @@
 					"status": "shipped",
 					"title": "SCA - CloudAgents",
 					"subtitle": "Designing the operator layer for an API product — from agent configuration to sync monitoring across 500+ integrations",
-					"role": "Lead Design Engineer",
+					"role": "Lead Product Designer & Frontend Developer",
 					"tools": "Figma · React · Vite · Bootstrap · Accessibility (WCAG)",
 					"dimensions": "Developer · Operations · Systems",
 					"highlight": "SCA is the infrastructure Cube runs on. The work spanned both sides of the same technology: the consumer product where users collect their documents, and the operator platform where developers configure integrations and operations teams monitor agents at scale.",
@@ -611,7 +611,7 @@
 					"status": "shipped",
 					"title": "Me - Securibox Account",
 					"subtitle": "Account identity hub and connected-services surface — profile, credentials, data transparency - one account layer serving the entire Securibox ecosystem",
-					"role": "Lead Design Engineer",
+					"role": "Lead Product Designer & Frontend Developer",
 					"tools": "Figma · React · Vite · Redux · Bootstrap · Accessibility (WCAG)",
 					"dimensions": "Dimensions 3, 5",
 					"highlight": "Designed and built the account hub that gives users a single home for their identity, connected services, and data-use transparency across the Securibox ecosystem — with inline explanations of how each piece of personal data is used.",
@@ -710,7 +710,7 @@
 					"status": "shipped",
 					"title": "Securibox ID",
 					"subtitle": "Security-critical auth and registration — balancing conversion, trust, and WCAG accessibility in the first moment users encounter the platform",
-					"role": "Lead Design Engineer",
+					"role": "Lead Product Designer & Frontend Developer",
 					"tools": "Figma · React · Vite · Accessibility (WCAG)",
 					"dimensions": "Dimensions 3, 5",
 					"highlight": "Designed the central authentication experience used by every Securibox product — creating a single, consistent identity layer across the ecosystem.",
@@ -1412,7 +1412,7 @@
 		"heroNameLine2": "Varagilal",
 		"tagline": "B2B · SaaS · Fintech · AI-accelerated workflows",
 		"title": "Lead Design Engineer who ships product.",
-		"schemaJobTitle": "Lead Design Engineer",
+		"schemaJobTitle": "Lead Product Designer & Frontend Developer",
 		"body": "10+ years transforming product experiences across B2B SaaS — from strategy through to production. I own the full design lifecycle: research, flows, UI, and when the design is approved, I build it. A designer who ships — no handoff required.",
 		"detail": "Today, I use AI to accelerate every stage — from exploration and prototyping to production-ready components.",
 		"viewWork": "View My Work",
@@ -1497,8 +1497,8 @@
 		]
 	},
 	"seo": {
-		"defaultDescription": "Design Engineer. Coherent multi-product experiences from concept to production — product strategy, UI/UX, and the MVP Method.",
-		"defaultKeywords": "Maria Varagilal, Design Engineer, Product Design, Frontend Development, UI, UX, React, Redux, B2B SaaS, MVP Method",
+		"defaultDescription": "Lead Product Designer & Frontend Developer. Coherent multi-product experiences from concept to production — product strategy, UI/UX, and the Maria Varagilal Playbook Method.",
+		"defaultKeywords": "Maria Varagilal, Lead Product Designer & Frontend Developer, Product Design, Frontend Development, UI, UX, React, Redux, B2B SaaS, Maria Varagilal Playbook Method",
 		"occupationDescription": "Design Engineer delivering digital products from concept to production"
 	},
 	"footer": {
