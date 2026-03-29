@@ -10,30 +10,30 @@
 		"detail": "Today, I use AI to accelerate every stage — from exploration and prototyping to production-ready components.",
 		"viewWork": "View My Work",
 		"fullCv": "Full CV",
-		"metricsAriaLabel": "Key metrics"
+		"metricsAriaLabel": "Key metrics",
+		"keyMetrics": [
+			{
+				"value": "9",
+				"label": "Digital products",
+				"ctx": "designed & shipped"
+			},
+			{
+				"value": "5+",
+				"label": "Products unified",
+				"ctx": "single experience"
+			},
+			{
+				"value": "4+",
+				"label": "B2B SaaS",
+				"ctx": "complex workflows"
+			},
+			{
+				"value": "10+",
+				"label": "Years",
+				"ctx": "experience"
+			}
+		]
 	},
-	"keyMetrics": [
-		{
-			"value": "9",
-			"label": "Digital products",
-			"ctx": "designed & shipped"
-		},
-		{
-			"value": "5+",
-			"label": "Products unified",
-			"ctx": "single experience"
-		},
-		{
-			"value": "4+",
-			"label": "B2B SaaS",
-			"ctx": "complex workflows"
-		},
-		{
-			"value": "10+",
-			"label": "Years",
-			"ctx": "experience"
-		}
-	],
 	"method": {
 		"label": "My playbook",
 		"heading": "The MVP Method",
@@ -126,7 +126,7 @@
 				"Priority",
 				"Boundaries"
 			],
-			"summary": "The design — visuals, interactions, and flows — translates from strategy into production. Instead of documentation alone, I bridge design and implementation so the intended experience is validated in the live product — teams get something they can ship, not just specifications.",
+			"summary": "The design — visuals, interactions, and flows — translates from strategy into production. Bridging design and implementation — not documentation alone — validates the intended experience in the live product.",
 			"philosophy": {
 				"lens": "Cohesion Before Creation",
 				"ask": "Why bridge design and code?",

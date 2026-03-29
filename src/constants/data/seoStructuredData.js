@@ -60,5 +60,5 @@ export const buildKeyMetricsStructuredData = (mv) => ({
 	url: person.url + '/',
 	license: person.url + '/license.txt',
 	creator: { '@type': 'Person', name: person.name },
-	variableMeasured: mv.keyMetrics.map((m) => ({ '@type': 'PropertyValue', name: m.label + ' — ' + m.ctx, value: m.value })),
+	variableMeasured: (mv.intro.keyMetrics || []).map((m) => ({ '@type': 'PropertyValue', name: m.label + ' — ' + m.ctx, value: m.value })),
 });

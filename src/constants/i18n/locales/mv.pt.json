@@ -10,30 +10,30 @@
 		"detail": "Hoje, uso IA para acelerar todas as etapas — desde exploração e prototipagem até componentes prontos para produção.",
 		"viewWork": "Ver o Meu Trabalho",
 		"fullCv": "CV Completo",
-		"metricsAriaLabel": "Métricas chave"
+		"metricsAriaLabel": "Métricas chave",
+		"keyMetrics": [
+			{
+				"value": "9",
+				"label": "Produtos digitais",
+				"ctx": "concebidos e lançados"
+			},
+			{
+				"value": "5+",
+				"label": "Produtos unificados",
+				"ctx": "experiência única"
+			},
+			{
+				"value": "4+",
+				"label": "B2B SaaS",
+				"ctx": "fluxos complexos"
+			},
+			{
+				"value": "10+",
+				"label": "Anos",
+				"ctx": "experiência"
+			}
+		]
 	},
-	"keyMetrics": [
-		{
-			"value": "9",
-			"label": "Produtos digitais",
-			"ctx": "concebidos e lançados"
-		},
-		{
-			"value": "5+",
-			"label": "Produtos unificados",
-			"ctx": "experiência única"
-		},
-		{
-			"value": "4+",
-			"label": "B2B SaaS",
-			"ctx": "fluxos complexos"
-		},
-		{
-			"value": "10+",
-			"label": "Anos",
-			"ctx": "experiência"
-		}
-	],
 	"method": {
 		"label": "O meu playbook",
 		"heading": "O Método MVP",
@@ -109,7 +109,7 @@
 				"Prioridade",
 				"Limites"
 			],
-			"summary": "O design completo — visuais, interacções e fluxos — passa da estratégia para a produção. Em vez de apenas documentação, faço a ponte entre design e implementação para que a experiência prevista seja validada no produto em vivo — as equipas recebem algo que podem lançar, não apenas especificações.",
+			"summary": "O design completo — visuais, interacções e fluxos — passa da estratégia para a produção. Fazer a ponte entre design e implementação — e não apenas documentação — valida a experiência prevista no produto em vivo.",
 			"philosophy": {
 				"lens": "Coesão Antes da Criação",
 				"ask": "Por que fazer a ponte entre design e código?",

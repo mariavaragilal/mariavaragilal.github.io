@@ -6,7 +6,7 @@ import { Button, Card } from '../../../../_common/components';
 
 export const IntroSection = ({ onScrollToWork }) => {
 	const { t } = useTranslation();
-	const keyMetrics = t('mv.keyMetrics', { returnObjects: true }) || [];
+	const keyMetrics = t('mv.intro.keyMetrics', { returnObjects: true }) || [];
 	const intro = t('mv.intro', { returnObjects: true }) || {};
 	return (
 		<header className='relative w-full rounded-t-lg' aria-labelledby='hero-heading'>

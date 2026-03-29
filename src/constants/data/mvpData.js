@@ -23,7 +23,7 @@ export const person = {
 	],
 };
 
-// Landing copy (dimensions, commitments, outcomes, evolution, keyMetrics, work cases)
+// Landing copy (dimensions, commitments, outcomes, evolution, work cases; intro.keyMetrics in mv.*.json)
 // lives in `mv.en.json` / `mv.pt.json` (merged in `en.js` / `pt.js`). Each dimension’s
 // `philosophy.lens` there is a short kicker aligned with this file’s three pillars below.
 
