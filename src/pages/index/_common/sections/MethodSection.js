@@ -60,6 +60,12 @@ export const MethodSection = ({ expandedDimension, toggleDimensionDetail }) => {
 										</p>
 										{dimension.philosophy && (
 											<div className='flex flex-col gap-2.5 pt-3 border-t border-border/50'>
+												{dimension.philosophy.lens && (
+													<div className='flex flex-wrap flex-1 items-center gap-1 text-xs leading-relaxed '>
+														<p className='font-semibold uppercase tracking-[0.0875em] text-current/66'>{ms.philosophyLensKicker}: </p>
+														<p className='font-mono font-medium text-primary'>{dimension.philosophy.lens}</p>
+													</div>
+												)}
 												<ChatBubbleQuestion>
 													{dimension.philosophy.ask}
 												</ChatBubbleQuestion>

@@ -23,8 +23,9 @@ export const person = {
 	],
 };
 
-// Landing copy (method, dimensions, outcomes, evolution, keyMetrics, work cases)
-// lives in `mv.en.json` / `mv.pt.json` (merged in `en.js` / `pt.js`).
+// Landing copy (dimensions, commitments, outcomes, evolution, keyMetrics, work cases)
+// lives in `mv.en.json` / `mv.pt.json` (merged in `en.js` / `pt.js`). Each dimension’s
+// `philosophy.lens` there is a short kicker aligned with this file’s three pillars below.
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Philosophy — Maria Varagilal Playbook Method (three commitments: cohesion, priority, boundaries)
@@ -45,7 +46,7 @@ export const method = [
 		],
 		checkpoint: 'If the problem isn\'t clear, nothing built on top of it will be.',
 		practice: 'A team is tasked with improving onboarding conversion. The instinct is to redesign the sign-up screen. The audit reveals the real drop-off happens two steps later — users land on an empty dashboard with no guidance. The sign-up screen was never the problem. Without the audit, the team ships a polished solution to the wrong question.',
-		evolution: 'Each cycle deepens understanding. After launch, real user data feeds the next audit. What looked like the problem in sprint one often turns out to be a symptom. The loop — build, launch, test, refine — keeps the foundation honest, not just the surface.',
+		evolution: 'Each cycle deepens understanding. After launch, real user data feeds the next audit. What looked like the problem in sprint one often turns out to be a symptom. The loop — create, launch, test, refine — keeps the foundation honest, not just the surface.',
 		whyItMatters: 'Every hour spent on the wrong question is an hour stolen from the right one. Clarity at the foundation prevents drift downstream — in priorities, in design, and in engineering.',
 	},
 	{
@@ -56,7 +57,7 @@ export const method = [
 			'Excellent design recognises the moment when further refinement stops creating meaningful value — the Maria Varagilal Playbook line. The 2×2 matrix (Business Value vs. User Friction) makes priorities visible and shared: what must launch now, and what can wait without weakening the core.'
 		],
 		checkpoint: 'When user understanding, problem specificity, and flow context align — launch the work. The product tells you what to refine — the backlog never will.',
-		practice: 'A checkout flow blocking 30% of users — high friction, high value. Ships first. A settings redesign improving aesthetics but not behaviour — it can wait. The matrix makes that call explicit, not political.',
+		practice: 'A checkout flow blocking 30% of users — high friction, high value. Ships first. A settings redesign improving aesthetics but not behaviour — it can wait. The matrix keeps that call explicit and visible for everyone.',
 		matrix: {
 			high: 'A checkout flow blocking 30% of users — high friction, high value. Ships first.',
 			low: 'A settings redesign improving aesthetics but not behaviour. It can wait.',

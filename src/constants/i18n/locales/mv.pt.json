@@ -41,9 +41,9 @@
 			"groundedIn": [
 				"Coesão"
 			],
-			"summary": "Mapear todos os pontos de contacto — portais, aplicações móveis, e-mails, onboarding, ferramentas internas. Avalie a consistência visual e de UX e identifique riscos de fragmentação antes que custem aos clientes.",
+			"summary": "Mapear todos os pontos de contacto — portais, aplicações móveis, e-mails, onboarding, ferramentas internas. Avalie a consistência visual e de UX, identifique onde o entendimento das necessidades dos utilizadores é mais frágil e exponha riscos de fragmentação antes de começar qualquer trabalho.",
 			"philosophy": {
-				"principle": "Coesão",
+				"lens": "Clareza Antes da Execução",
 				"ask": "Por que começar aqui?",
 				"answer": "Antes de qualquer linha ser desenhada ou código escrito, o trabalho mais importante é ver o problema claramente. Mapear todos os pontos de contacto cria a imagem real — quem é realmente o utilizador, o que está a tentar alcançar e onde a experiência se está a quebrar silenciosamente.",
 				"checkpoint": "Se o problema não estiver claro, nada construído sobre ele estará."
@@ -59,15 +59,15 @@
 			"groundedIn": [
 				"Limites"
 			],
-			"summary": "Destilar a visão da empresa em princípios accionáveis que todos os designers, programadores e partes interessadas possam consultar instantaneamente.",
+			"summary": "Destilar a visão da empresa num conjunto conciso de princípios accionáveis e regras de decisão que todos os designers, programadores e partes interessadas possam consultar instantaneamente como filtros de decisão — pequenas apostas que se confrontam com a realidade em produção à medida que se lança.",
 			"philosophy": {
-				"principle": "Limites",
+				"lens": "Intenção Acima da Distracção",
 				"ask": "Como protege a visão?",
 				"answer": "O desenvolvimento moderno de produtos está cheio de distracções subtis: novas APIs, floreios visuais, tecnologias adicionadas simplesmente porque são possíveis. Limites intencionais lembram as equipas do que realmente importa. Se não serve o problema comprometido, não é lançado agora.",
 				"checkpoint": "Cada 'sim' a uma distracção é um 'não' invisível à visão."
 			},
 			"detail": [
-				"Os princípios não são documentação — são ferramentas de tomada de decisão. Quando um designer, programador ou parte interessada enfrenta uma troca, os princípios respondem à pergunta antes de uma reunião ser necessária."
+				"São ferramentas de decisão em tempo real — não documentação. Quando surge uma troca, os princípios respondem antes de ser necessária uma reunião."
 			]
 		},
 		{
@@ -77,15 +77,15 @@
 			"groundedIn": [
 				"Prioridade"
 			],
-			"summary": "Matriz 2×2 (Valor de Negócio vs. Fricção do Utilizador) decide o que é priorizado. Alto Valor + Alta Fricção lança primeiro — autenticação partilhada, navegação central, visualizador de documentos. Itens de baixa fricção vêm depois.",
+			"summary": "Matriz 2×2 (Valor de Negócio vs. Fricção do Utilizador) para definir o que ganha prioridade de lançamento. Alto Valor + Alta Fricção lança primeiro — autenticação partilhada, navegação central, visualizador de documentos. Itens de baixa fricção vêm depois.",
 			"philosophy": {
-				"principle": "Prioridade e Limiar",
+				"lens": "A Linha de Lançamento",
 				"ask": "Quando é suficiente?",
 				"answer": "A linha de lançamento é um acto de disciplina, não de compromisso. A matriz 2×2 torna as prioridades visíveis e partilhadas: o que deve ser lançado agora e o que pode esperar sem enfraquecer o núcleo.",
 				"checkpoint": "O produto diz-lhe o que refinar — o backlog nunca dirá."
 			},
 			"detail": [
-				"A matriz transforma a priorização numa decisão partilhada e visível — não política. Alto Valor + Alta Fricção lança primeiro. Itens de baixa fricção ficam em fila sem bloquear o impulso."
+				"A matriz mantém a priorização e a definição de âmbito explícitas e visíveis para toda a equipa. Alto Valor + Alta Fricção lança primeiro; itens de baixa fricção ficam em fila sem bloquear o impulso."
 			]
 		},
 		{
@@ -96,9 +96,9 @@
 				"Prioridade",
 				"Limites"
 			],
-			"summary": "O design — visuais, interações e fluxos — traduz a estratégia em produção. Em vez de apenas documentação, faço a ponte entre design e implementação para que chegue ao produto — as equipas recebem algo que podem lançar, não apenas especificações.",
+			"summary": "O design completo — visuais, interacções e fluxos — passa da estratégia para a produção. Em vez de apenas documentação, faço a ponte entre design e implementação para que a experiência prevista seja validada no produto em vivo — as equipas recebem algo que podem lançar, não apenas especificações.",
 			"philosophy": {
-				"principle": "Coesão",
+				"lens": "Coesão Antes da Criação",
 				"ask": "Por que fazer a ponte entre design e código?",
 				"answer": "Um design só funciona se viver no produto. Quando se afasta do que é lançado, torna-se prateleira — e a fragmentação começa de novo.",
 				"checkpoint": "Validado em produção, não apenas aprovado num mockup."
@@ -115,15 +115,15 @@
 				"Coesão",
 				"Limites"
 			],
-			"summary": "Ciclo contínuo que mantém a estratégia, execução e resultados na mesma direcção para que a marca unificada permaneça viva.",
+			"summary": "Um ciclo contínuo de construir–medir–aprender mantém a estratégia, a execução e os resultados honestos, na mesma direcção, para que a marca unificada continue viva após o lançamento.",
 			"philosophy": {
-				"principle": "Evolução",
+				"lens": "Honestidade Contínua",
 				"ask": "Como se mantém honesto?",
-				"answer": "Cada compromisso evolui através do mesmo ciclo: construir dentro de limites, lançar na linha de lançamento, testar com utilizadores reais, refinar enquanto protege a lente.",
+				"answer": "Depois de lançar, a honestidade está no que consegue medir em produção — uso, fricção, resultados — e no feedback para as decisões seguintes. Construir–medir–aprender é esse ritmo; sem ele, o desvio acumula-se enquanto todos acreditam ainda no mapa.",
 				"checkpoint": "Declarar 'feito' cria o espaço para aprender."
 			},
 			"detail": [
-				"A medição é integrada no ciclo — não adicionada depois. As pontuações de coesão são reavaliadas após cada lançamento importante. Novos colaboradores e funcionalidades são potenciais pontos de desvio que o ciclo detecta."
+				"A medição é integrada no ciclo — não adicionada depois. As pontuações de coesão são reavaliadas após cada lançamento importante. Novos colaboradores e funcionalidades são potenciais pontos de desvio que o ciclo deteta cedo."
 			]
 		}
 	],
@@ -145,11 +145,11 @@
 		}
 	],
 	"evolution": {
-		"intro": "Cada compromisso descreve como evolui, mas o ciclo subjacente é o mesmo em todos os três — o ciclo de aprendizagem constante que mantém a visão honesta.",
+		"intro": "Cada compromisso descreve como evolui, mas o ciclo subjacente é o mesmo nos três — criar, lançar, testar, refinar — o ciclo de evolução que mantém a visão honesta.",
 		"loop": [
 			{
-				"step": "Construir",
-				"desc": "Criar dentro de limites definidos",
+				"step": "Criar",
+				"desc": "Trabalhar dentro de limites definidos",
 				"dimension": "Dimensão 4"
 			},
 			{
@@ -1354,6 +1354,7 @@
 		]
 	},
 	"methodSection": {
+		"philosophyLensKicker": "Lente",
 		"outcomesKicker": "Resultados",
 		"outcomesHeading": "Quando as dimensões operam em conjunto",
 		"outcomesLead": "Estes são resultados, não passos. Emergiram quando as cinco dimensões trabalham em conjunto ao nível da liderança.",
