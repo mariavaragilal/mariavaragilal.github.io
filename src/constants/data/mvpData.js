@@ -4,19 +4,19 @@
 
 export const person = {
 	name: 'Maria Varagilal',
-	jobTitle: 'Design Engineer · Lead Product Designer',
-	description: 'Design Engineer. Coherent multi-product experiences from concept to production — product strategy, UI/UX, and the Maria Varagilal Playbook Method.',
+	jobTitle: 'Senior Technical Product Designer · Design Engineer',
+	description: 'Frontend Designer. Coherent multi-product experiences from concept to production — product strategy, UI/UX, and the Maria Varagilal Playbook Method.',
 	url: 'https://mariavaragilal.github.io',
 	image: 'https://mariavaragilal.github.io/avatar.png',
 	sameAs: ['https://www.linkedin.com/in/mariavaragilal', 'https://codepen.io/mariavaragilal', 'https://dribbble.com/mariavaragilal', 'https://be.net/mariavaragilal'],
 	address: { locality: 'Lisbon', country: 'Portugal' },
-	knowsAbout: ['User Experience Design', 'User Interface Design', 'Product Design', 'React', 'Redux', 'JavaScript (ES6+)', 'Frontend Development', 'AI-accelerated workflows', 'Prompt engineering'],
+	knowsAbout: ['User Experience Design', 'User Interface Design', 'Product Design', 'React', 'Redux', 'JavaScript (ES6+)', 'Frontend Developer', 'AI-accelerated workflows', 'Prompt engineering'],
 	skills: ['UX Design', 'UI Design', 'React', 'Redux', 'JavaScript (ES6+)', 'Gatsby'],
 	education: [
 		{ name: 'Universidade Lusíada de Lisboa', description: 'Bachelor\'s Degree in Design' },
 		{ name: 'Academia Flag', description: 'Specialization in Communication Design' },
 	],
-	worksFor: { name: 'Securibox', url: 'https://www.securibox.eu', description: 'Lead Product Designer & Frontend Engineer' },
+	worksFor: { name: 'Securibox', url: 'https://www.securibox.eu', description: 'Lead Technical Product Designer & Frontend Developer' },
 	awards: [
 		{ name: 'Bronze cyber', description: 'Young Lions Portugal', date: '2014-05-01' },
 		{ name: 'Web Design Served', description: 'Behance', date: '2013-07-01' },

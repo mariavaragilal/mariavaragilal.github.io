@@ -1,8 +1,8 @@
 {
 	"cv": {
 		"name": "Maria Varagilal",
-		"title": "Design Engineer · Lead Product Designer",
-		"summary": "Lead Design Engineer com mais de 10 anos a transformar experiências de produto em B2B SaaS — da estratégia à produção. Única responsável de design num portfólio multi-produto: responsável por todo o ciclo de design, orientação de contribuidores, e depois de aprovado, construo-o. Uma designer que entrega — sem handoff.",
+		"title": "Senior Technical Product Designer · Design Engineer",
+		"summary": "Lead Frontend Designer com mais de 10 anos a transformar experiências de produto em B2B SaaS — da estratégia à produção. Única responsável de design num portfólio multi-produto: responsável por todo o ciclo de design, orientação de contribuidores, e depois de aprovado, construo-o. Uma designer que entrega — sem handoff.",
 		"note": "Atualmente a usar IA para acelerar os fluxos de design-para-código, desde exploração e prototipagem até componentes prontos para produção."
 	},
 	"nav": {
@@ -21,7 +21,7 @@
 		"securibox": {
 			"company": "Securibox",
 			"location": "Lisboa, Portugal",
-			"position": "Lead Product Designer & Frontend Engineer",
+			"position": "Lead Technical Product Designer & Frontend Developer",
 			"period": "Setembro 2015 - Presente",
 			"description": [
 				"Liderança da estratégia e da visão de design de ponta a ponta: definição da experiência de produto, do design UI/UX, da arquitectura de informação e da identidade de marca num portfólio B2B SaaS multi-produto.",
@@ -91,7 +91,7 @@
 		}
 	},
 	"home": {
-		"description": "Design Engineer. Experiências multi-produto coerentes do conceito à produção — estratégia de produto, UI/UX e o Método Maria Varagilal Playbook.",
+		"description": "Frontend Designer. Experiências multi-produto coerentes do conceito à produção — estratégia de produto, UI/UX e o Método Maria Varagilal Playbook.",
 		"skipToMain": "Saltar para o conteúdo principal"
 	},
 	"about": {

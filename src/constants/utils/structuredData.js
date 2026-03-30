@@ -68,7 +68,7 @@ const buildKeywords = (app) => {
 	if (app.tools) app.tools.split(/[·,]/).map((t) => t.trim()).filter(Boolean).forEach((t) => keywords.push(t));
 	if (app.role) keywords.push(app.role);
 	if (app.results?.length) app.results.slice(0, 3).forEach((r) => keywords.push(r));
-	keywords.push('product design', 'UX design', 'frontend development');
+	keywords.push('product design', 'UX design', 'Frontend Developer');
 	return [...new Set(keywords)].join(', ');
 };
 
@@ -118,9 +118,9 @@ export const generatePortfolioStructuredData = (cases, mv) => {
 		url: BASE_URL,
 		jobTitle: person.jobTitle,
 		description: personDesc,
-		knowsAbout: ['Product Design', 'UX Design', 'Frontend Development', 'React', 'Gatsby', 'JavaScript', 'Accessibility (WCAG)', 'B2B SaaS', 'API Design', 'Brand Identity'],
+		knowsAbout: ['Product Design', 'UX Design', 'Frontend Developer', 'React', 'Gatsby', 'JavaScript', 'Accessibility (WCAG)', 'B2B SaaS', 'API Design', 'Brand Identity'],
 		sameAs: person.sameAs,
-		hasOccupation: { '@type': 'Occupation', name: 'Design Engineer · Lead Product Designer', occupationLocation: { '@type': 'City', name: 'Lisbon' } },
+		hasOccupation: { '@type': 'Occupation', name: 'Senior Technical Product Designer · Design Engineer', occupationLocation: { '@type': 'City', name: 'Lisbon' } },
 		alumniOf: [{ '@type': 'CollegeOrUniversity', name: 'Universidade Lusíada de Lisboa', url: 'https://www.ulusiada.pt' }],
 		award: 'Bronze Young Lions 2014, Cannes Lions',
 	};
