@@ -25,12 +25,11 @@ const CasesIndexPage = () => {
 					<h1 className='font-mono font-medium text-[clamp(1.5rem,4vw,2.5rem)] tracking-tight text-foreground mt-2'>{ws.heading}</h1>
 					<p className='text-[1.125rem] leading-relaxed text-current/88 mt-4 max-w-3xl'>{ws.p1}</p>
 					<nav aria-label={ws.browseAllCases} className={srOnly}>
-						<h1 className='sr-only'>{ws.browseAllCases}</h1>
-						<Link to='/' className='text-current/88 hover:underline'>{ws.browseAllCases}</Link>
+						<h1><Link to='/work/' className='text-current/88 hover:underline'>{ws.browseAllCases}</Link></h1>
 						<ul>
 							{flattenWorkCasesOrdered(workCases).map((app) => {
 								const slug = caseSlug(app);
-								return <li key={slug}><Link to={'/work/' + slug + '/'}>{app.title}</Link></li>;
+								return <li key={slug}><Link className='font-mono' to={'/work/' + slug + '/'}><h2 className='fs-[.5rem] inline-block fs-inherit'>[{app.title}] url: {'/work/' + slug + '/'}</h2></Link></li>;
 							})}
 						</ul>
 					</nav>

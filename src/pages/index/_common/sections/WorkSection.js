@@ -69,12 +69,11 @@ export const WorkSection = () => {
 						</Card>
 					</div>
 					<nav aria-label={ws.browseAllCases} className={srOnly}>
-						<h1 className='sr-only'>{ws.browseAllCases}</h1>
-						<Link to='/work/' className='text-current/88 hover:underline'>{ws.browseAllCases}</Link>
+						<h1><Link to='/work/' className='text-current/88 hover:underline'>{ws.browseAllCases}</Link></h1>
 						<ul>
 							{flattenWorkCasesOrdered(workCases).map((app) => {
 								const slug = caseSlug(app);
-								return <li key={slug}><Link to={'/work/' + slug + '/'}><h2 className='fs-sm font-mono'>{app.title}</h2>{app.title}</Link></li>;
+								return <li key={slug}><Link className='font-mono' to={'/work/' + slug + '/'}><h2 className='fs-[.5rem] inline-block fs-inherit'>[{app.title}] url: {'/work/' + slug + '/'}</h2></Link></li>;
 							})}
 						</ul>
 					</nav>
@@ -112,6 +111,6 @@ export const WorkSection = () => {
 					})}
 				</div>
 			</Card>
-		</React.Fragment>
+		</React.Fragment >
 	);
 };
