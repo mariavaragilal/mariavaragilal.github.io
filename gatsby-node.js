@@ -17,16 +17,18 @@ const toSlug = (title) =>
 		.replace(/\s+/g, '-')
 		.replace(/-+/g, '-');
 
-exports.createPages = ({ actions: { createPage } }) => {
+exports.createPages = ({ actions: { createPage, createRedirect } }) => {
+	createRedirect({ fromPath: '/cases/', toPath: '/work/', isPermanent: true, redirectInBrowser: true });
 	const workCases = mvEn.workCases || {};
 	Object.values(workCases).forEach((group) => {
 		(group.cases || []).forEach((app) => {
 			const slug = app.slug || toSlug(app.title);
 			createPage({
-				path: '/cases/' + slug + '/',
-				component: path.resolve(__dirname, 'src/pages/cases/_common/CaseStudyPage.js'),
+				path: '/work/' + slug + '/',
+				component: path.resolve(__dirname, 'src/pages/work/_common/CaseStudyPage.js'),
 				context: { slug },
 			});
+			createRedirect({ fromPath: '/cases/' + slug + '/', toPath: '/work/' + slug + '/', isPermanent: true, redirectInBrowser: true });
 		});
 	});
 };
@@ -46,14 +48,14 @@ exports.onPreBootstrap = async () => {
 		}
 	}
 };
-
-// gatsby-plugin-sitemap emits sitemap-index.xml; copy to sitemap.xml so /sitemap.xml and robots.txt match.
 exports.onPostBuild = async () => {
 	const publicDir = path.join(__dirname, 'public');
+	const chunkPath = path.join(publicDir, 'sitemap-0.xml');
 	const indexPath = path.join(publicDir, 'sitemap-index.xml');
 	const legacyPath = path.join(publicDir, 'sitemap.xml');
 	try {
-		if (await fs.pathExists(indexPath)) await fs.copy(indexPath, legacyPath);
+		if (await fs.pathExists(chunkPath)) await fs.copy(chunkPath, legacyPath);
+		else if (await fs.pathExists(indexPath)) await fs.copy(indexPath, legacyPath);
 	} catch (e) {
 		process.stdout.write('onPostBuild sitemap copy: ' + (e && e.message ? e.message : e) + '\n');
 	}

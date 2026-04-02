@@ -1455,6 +1455,7 @@
 		"p1": "I design it, I build it. Below is live work — brand identity, product flows, and production frontend I designed and built.",
 		"p2Lead": "Brand & identity:",
 		"p2": "Logos, visual language, and cohesive experience across ecosystems and products.",
+		"browseAllCases": "Browse all case studies on one page",
 		"p3": "Each project opens a detailed view — full case study or summary with outcomes — select a card to read it.",
 		"designSystemKicker": "Component library — this site",
 		"designSystemBody": "Custom component library (50+ components): Built with React, Tailwind v4, theme system, and accessibility in mind.",
@@ -1532,6 +1533,7 @@
 			"SEO & structured data"
 		],
 		"viewSource": "View source",
+		"caseStudiesIndex": "Case studies",
 		"referencesLabel": "References:",
 		"wcag": "WCAG",
 		"mdnA11y": "MDN Accessibility",

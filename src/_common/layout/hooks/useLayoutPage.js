@@ -5,7 +5,7 @@ import { initWebVitals } from '../../../constants/utils/webVitals';
 const useLayoutPage = () => {
 	const location = useLocation();
 	const pathParts = location.pathname.replace(/\/$/, '').split('/').filter(Boolean);
-	const isCaseStudyPage = pathParts.length >= 2 && pathParts[0] === 'cases';
+	const isCaseStudyPage = pathParts.length >= 2 && pathParts[0] === 'work';
 	const isLandingPage = location.pathname === '/landing';
 
 	useEffect(() => {

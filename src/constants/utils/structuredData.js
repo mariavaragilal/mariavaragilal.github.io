@@ -85,7 +85,7 @@ const buildKeywords = (app) => {
 
 const buildCreativeWork = (app, groupName) => {
 	const slug = app.slug || toSlug(app.title);
-	const url = BASE_URL + '/cases/' + slug + '/';
+	const url = BASE_URL + '/work/' + slug + '/';
 	const work = {
 		'@type': 'CreativeWork',
 		'@id': url,

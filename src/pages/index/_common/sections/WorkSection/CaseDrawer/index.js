@@ -9,7 +9,7 @@ import { DrawerMain } from './DrawerMain';
 
 const caseSlug = (c) => c.slug || toSlug(c.title);
 
-/** Full case study layout for `/cases/:slug/` — no Sheet; scroll is contained in columns (main column on desktop). */
+/** Full case study layout for `/work/:slug/` — no Sheet; scroll is contained in columns (main column on desktop). */
 export const CaseStudyView = ({ app, cases = [] }) => {
 	const { t } = useTranslation();
 	const ui = t('mv.caseUi', { returnObjects: true }) || {};
@@ -23,11 +23,11 @@ export const CaseStudyView = ({ app, cases = [] }) => {
 
 	const goPrev = () => {
 		if (!hasPrev) return;
-		navigate('/cases/' + caseSlug(cases[idx - 1]) + '/');
+		navigate('/work/' + caseSlug(cases[idx - 1]) + '/');
 	};
 	const goNext = () => {
 		if (!hasNext) return;
-		navigate('/cases/' + caseSlug(cases[idx + 1]) + '/');
+		navigate('/work/' + caseSlug(cases[idx + 1]) + '/');
 	};
 
 	return (

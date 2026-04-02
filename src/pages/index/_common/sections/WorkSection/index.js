@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { navigate } from 'gatsby';
+import { navigate, Link } from 'gatsby';
 import { useTranslation } from 'react-i18next';
 import { Card, Separator } from '../../../../../_common/components';
 import { AccordionItem, AccordionTrigger, AccordionContent } from '../../../../../_common/components/controls/Accordion';
+import { srOnly } from '../../../../../constants/utils/a11y';
 import { findCaseByHash, toSlug } from '../../../../../constants/utils/structuredData';
 import { LazyTerminalTypeEffect } from '../../../../../constants/utils/terminalTypeEffect';
 import { CaseCard } from './CaseCard';
@@ -25,7 +26,7 @@ export const WorkSection = () => {
 		const hashMatch = getInitialStateFromHash();
 		if (!hashMatch) return;
 		const slug = caseSlug(hashMatch.app);
-		navigate('/cases/' + slug + '/', { replace: true });
+		navigate('/work/' + slug + '/', { replace: true });
 		// eslint-disable-next-line react-hooks/exhaustive-deps -- workCases follows i18n.language
 	}, [i18n.language]);
 
@@ -51,6 +52,9 @@ export const WorkSection = () => {
 							</p>
 							<p className='text-base leading-relaxed text-current/66 mt-4'>
 								<strong className='text-current/88'>{ws.p2Lead}</strong> {ws.p2}
+							</p>
+							<p className={srOnly}>
+								<Link to='/work/'>{ws.browseAllCases}</Link>
 							</p>
 						</div>
 						<Card variant='default' className='p-6' as='div'>
@@ -90,7 +94,7 @@ export const WorkSection = () => {
 											<div className='grid gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[repeat(auto-fill,minmax(25rem,1fr))]'>
 												{group.cases.map((app) => {
 													const slug = caseSlug(app);
-													return <CaseCard key={app.title} id={'case-' + slug} app={app} isSelected={false} to={'/cases/' + slug + '/'} as='h4' />;
+													return <CaseCard key={app.title} id={'case-' + slug} app={app} isSelected={false} to={'/work/' + slug + '/'} as='h4' />;
 												})}
 											</div>
 										</div>

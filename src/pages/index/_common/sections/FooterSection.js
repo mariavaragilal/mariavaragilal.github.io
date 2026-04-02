@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import { useTranslation } from 'react-i18next';
 import { Copyright } from '../../../../_common/layout/components/Copyright';
 import Languages from '../../../../_common/layout/components/languages';
@@ -27,6 +28,8 @@ export const FooterSection = () => {
 						))}
 						<span>.</span>
 						{' '}
+						<Link to='/work/' className='hover:underline'>{f.caseStudiesIndex}</Link>
+						<span className='shrink-0 text-current/66' aria-hidden='true'>·</span>
 						<a href='https://github.com/mariavaragilal/mariavaragilal.github.io' target='_blank' rel='noopener noreferrer' className='hover:underline'>{f.viewSource}</a>
 					</div>
 				</nav>
