@@ -7,6 +7,29 @@
 
 const path = require('path');
 const fs = require('fs-extra');
+const mvEn = require('./src/constants/i18n/locales/mv.en.json');
+
+const toSlug = (title) =>
+	title
+		.toLowerCase()
+		.replace(/[^a-z0-9\s]/g, '')
+		.trim()
+		.replace(/\s+/g, '-')
+		.replace(/-+/g, '-');
+
+exports.createPages = ({ actions: { createPage } }) => {
+	const workCases = mvEn.workCases || {};
+	Object.values(workCases).forEach((group) => {
+		(group.cases || []).forEach((app) => {
+			const slug = app.slug || toSlug(app.title);
+			createPage({
+				path: '/cases/' + slug + '/',
+				component: path.resolve(__dirname, 'src/pages/cases/_common/CaseStudyPage.js'),
+				context: { slug },
+			});
+		});
+	});
+};
 
 // Ensure plugin target directories exist to avoid EPERM during build.
 exports.onPreBootstrap = async () => {

@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
+import { navigate } from 'gatsby';
 import { useTranslation } from 'react-i18next';
 import { Card, Separator } from '../../../../../_common/components';
 import { AccordionItem, AccordionTrigger, AccordionContent } from '../../../../../_common/components/controls/Accordion';
 import { findCaseByHash, toSlug } from '../../../../../constants/utils/structuredData';
 import { LazyTerminalTypeEffect } from '../../../../../constants/utils/terminalTypeEffect';
 import { CaseCard } from './CaseCard';
-import { CaseDrawer } from './CaseDrawer';
 
 const caseSlug = (app) => app.slug || toSlug(app.title);
 
@@ -13,7 +13,6 @@ export const WorkSection = () => {
 	const { t, i18n } = useTranslation();
 	const workCases = t('mv.workCases', { returnObjects: true }) || {};
 	const ws = t('mv.workSection', { returnObjects: true }) || {};
-	const _initialSelected = Object.fromEntries(Object.entries(workCases).map(([group]) => [group, null]));
 
 	const getInitialStateFromHash = () => {
 		if (typeof window === 'undefined') return null;
@@ -21,51 +20,16 @@ export const WorkSection = () => {
 	};
 
 	const [expandedGroup, setExpandedGroup] = useState('Securibox');
-	const [selectedByGroup, setSelectedByGroup] = useState(_initialSelected);
-	const [drawerOpen, setDrawerOpen] = useState(false);
-	const [drawerGroup, setDrawerGroup] = useState(null);
-	const didScrollRef = useRef(false);
 
 	useEffect(() => {
 		const hashMatch = getInitialStateFromHash();
 		if (!hashMatch) return;
-		setExpandedGroup(hashMatch.groupName);
-		setSelectedByGroup((prev) => ({ ...prev, [hashMatch.groupName]: hashMatch.app }));
-		setDrawerOpen(true);
-		setDrawerGroup(hashMatch.groupName);
-		if (didScrollRef.current) return;
-		didScrollRef.current = true;
-		setTimeout(() => {
-			const slug = caseSlug(hashMatch.app);
-			const el = document.getElementById('case-' + slug);
-			if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-		}, 100);
+		const slug = caseSlug(hashMatch.app);
+		navigate('/cases/' + slug + '/', { replace: true });
 		// eslint-disable-next-line react-hooks/exhaustive-deps -- workCases follows i18n.language
 	}, [i18n.language]);
 
 	const toggleGroup = (groupName) => setExpandedGroup((prev) => (prev === groupName ? null : groupName));
-	const selectCase = (groupName, app) => {
-		const current = selectedByGroup[groupName];
-		if (current?.title === app.title) {
-			setDrawerOpen(false);
-			if (typeof window !== 'undefined') history.replaceState(null, '', window.location.pathname);
-		} else {
-			setSelectedByGroup((prev) => ({ ...prev, [groupName]: app }));
-			setDrawerGroup(groupName);
-			setDrawerOpen(true);
-			if (typeof window !== 'undefined') history.replaceState(null, '', '#' + caseSlug(app));
-		}
-	};
-	const closeDrawer = () => {
-		setDrawerOpen(false);
-		if (drawerGroup) {
-			setSelectedByGroup((prev) => ({ ...prev, [drawerGroup]: null }));
-		}
-		setDrawerGroup(null);
-		if (typeof window !== 'undefined') history.replaceState(null, '', window.location.pathname);
-	};
-
-	const drawerCase = drawerGroup ? selectedByGroup[drawerGroup] : null;
 
 	return (
 		<React.Fragment>
@@ -107,7 +71,6 @@ export const WorkSection = () => {
 				<div className='relative flex flex-col gap-8'>
 					{Object.entries(workCases).map(([groupName, group]) => {
 						const isExpanded = expandedGroup === groupName;
-						const selectedCase = selectedByGroup[groupName];
 						return (
 							<React.Fragment key={groupName}>
 								<Separator decorative />
@@ -125,22 +88,9 @@ export const WorkSection = () => {
 									<AccordionContent animate={false} ariaLabel={groupName + ' case studies'}>
 										<div className='px-1 pb-6 -mx-3 lg:mx-0'>
 											<div className='grid gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[repeat(auto-fill,minmax(25rem,1fr))]'>
-												{group.cases.flatMap((app) => {
-													const isSelected = selectedCase?.title === app.title;
+												{group.cases.map((app) => {
 													const slug = caseSlug(app);
-													return [
-														<CaseCard key={app.title} id={'case-' + slug} app={app} isSelected={isSelected} onToggle={() => selectCase(groupName, app)} as='h4' />,
-														...(isSelected && selectedCase ? [
-															<CaseDrawer
-																key={app.title + '-detail'}
-																open={drawerOpen}
-																onClose={closeDrawer}
-																app={drawerCase}
-																cases={group.cases}
-																onSelectCase={(nextApp) => selectCase(groupName, nextApp)}
-															/>
-														] : []),
-													];
+													return <CaseCard key={app.title} id={'case-' + slug} app={app} isSelected={false} to={'/cases/' + slug + '/'} as='h4' />;
 												})}
 											</div>
 										</div>
@@ -151,6 +101,6 @@ export const WorkSection = () => {
 					})}
 				</div>
 			</Card>
-		</React.Fragment >
+		</React.Fragment>
 	);
 };

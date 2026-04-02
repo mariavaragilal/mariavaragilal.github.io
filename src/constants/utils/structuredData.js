@@ -18,6 +18,11 @@ export const toSlug = (title) =>
 export const findCaseByHash = (cases, hash) => {
 	if (!hash) return null;
 	const slug = hash.replace('#', '');
+	return findCaseBySlug(cases, slug);
+};
+
+export const findCaseBySlug = (cases, slug) => {
+	if (!slug) return null;
 	for (const [groupName, group] of Object.entries(cases)) {
 		for (const app of group.cases) {
 			const appSlug = app.slug || toSlug(app.title);
@@ -27,7 +32,13 @@ export const findCaseByHash = (cases, hash) => {
 	return null;
 };
 
-const buildDescription = (app) => {
+/** All case apps in WorkSection order (Object.entries(workCases)), for cross-group prev/next on case routes. */
+export const flattenWorkCasesOrdered = (workCases) => {
+	if (!workCases || typeof workCases !== 'object') return [];
+	return Object.values(workCases).flatMap((group) => (group && Array.isArray(group.cases) ? group.cases : []));
+};
+
+export const buildDescription = (app) => {
 	const parts = [];
 	if (app.highlight) parts.push(app.highlight);
 	if (app.caseStudy?.businessProblem) parts.push(app.caseStudy.businessProblem);
@@ -74,7 +85,7 @@ const buildKeywords = (app) => {
 
 const buildCreativeWork = (app, groupName) => {
 	const slug = app.slug || toSlug(app.title);
-	const url = BASE_URL + '/#' + slug;
+	const url = BASE_URL + '/cases/' + slug + '/';
 	const work = {
 		'@type': 'CreativeWork',
 		'@id': url,

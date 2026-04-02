@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 import { Badge, Button, Card, CardAction, CardDescription, CardContent, CardHeader, CardTitle } from '../../../../../_common/components';
 import { focusRing } from '../../../../../constants/utils/a11y';
+import { Link } from 'gatsby';
 
 const DEFAULT_ICON_CLASSNAME = 'font-mono font-thin text-xl leading-none';
 
@@ -15,7 +16,7 @@ const defaultIcon = (showRotated, iconChar, iconClassName, prefersReducedMotion)
 	>{iconChar}</motion.span>
 );
 
-export const CaseCard = ({ app, isSelected, onToggle, href, icon, iconChar = '+', iconClassName = DEFAULT_ICON_CLASSNAME, as: _as, id }) => {
+export const CaseCard = ({ app, isSelected, onToggle, href, to, icon, iconChar = '+', iconClassName = DEFAULT_ICON_CLASSNAME, as: _as, id, variant = 'default' }) => {
 	const { t } = useTranslation();
 	const ui = t('mv.caseUi', { returnObjects: true }) || {};
 	const [isHovered, setIsHovered] = useState(false);
@@ -31,8 +32,9 @@ export const CaseCard = ({ app, isSelected, onToggle, href, icon, iconChar = '+'
 	const cardClassBase = 'flex flex-col items-start p-4 w-full text-left rounded-lg transition-colors ' + (isSelected ? 'border-primary/50 bg-card/75 ring-2 ring-primary/15' : 'border-border hover:bg-card/75') + ' ' + focusRing;
 	const cardClassLink = cardClassBase + ' cursor-pointer';
 	const isLink = !!href;
+	const isInternalCase = !!to;
 	const hostnameEl = app.references?.links?.[0] ? (
-		isLink ? (
+		(isLink || isInternalCase) ? (
 			<span className='inline-flex items-center gap-1 font-mono text-[0.65rem] text-current/88'>
 				{new URL(app.references.links[0].url).hostname.replace('www.', '')}
 				<span aria-hidden>↗</span>
@@ -45,7 +47,40 @@ export const CaseCard = ({ app, isSelected, onToggle, href, icon, iconChar = '+'
 		)
 	) : null;
 	const cardAria = app.title + ' — ' + (isSelected ? ui.cardAriaOpen : ui.cardAriaClosed);
-	return isLink ? (
+	return isInternalCase ? (
+		<Card as={Link} to={to} variant={variant} className={cardClassLink} id={id}>
+			<CardHeader className='flex gap-1' headerPadding='p-0'>
+				<div className='flex flex-col space-y-2'>
+					<span className='text-lg font-medium flex flex-wrap items-center gap-2.5'>
+						{app.status === 'shipped' ? (
+							<Badge variant='secondary' size='sm' className=' tracking-[0.06em] uppercase'>{ui.shipped}</Badge>
+						) : (
+							<Badge variant='outline' size='sm' className=' tracking-[0.06em] uppercase'>{ui[app.status] ?? ui.concept}</Badge>
+						)}
+						<CardTitle className='font-mono text-xl text-primary w-full'>{app.title}</CardTitle>
+					</span>
+					<CardDescription>
+						{app.subtitle}
+					</CardDescription>
+				</div>
+				<CardAction>
+					<Button title={ui.fullCaseStudy} as='span' variant='secondary' size='icon' aria-hidden='true' className='shrink-0 size-11' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+						{resolvedIcon}
+					</Button>
+					<p className='font-mono text-[0.65rem] leading-relaxed text-current/88 sr-only'>{ui.fullCaseStudy}<span aria-hidden>↗</span></p>
+				</CardAction>
+			</CardHeader>
+
+			{(app.tools || hostnameEl) ? (
+				<CardContent className='rounded-md border border-border/40 bg-secondary/75 w-full mt-auto' customPadding='px-4 py-2'>
+					<div className='flex flex-col gap-0.5'>
+						{app.tools ? <span className='font-mono text-[0.65rem] leading-relaxed line-clamp-1'>{app.tools}</span> : null}
+						{hostnameEl}
+					</div>
+				</CardContent>
+			) : null}
+		</Card>
+	) : isLink ? (
 		<Card as='a' href={href} target='_blank' rel='noopener noreferrer' variant='default' className={cardClassLink} id={id}>
 			<CardHeader className='flex gap-1' headerPadding='p-0'>
 				<div className='flex flex-col space-y-2'>

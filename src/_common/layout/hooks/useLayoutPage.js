@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useLocation } from '@reach/router';
 import { initWebVitals } from '../../../constants/utils/webVitals';
 
 const useLayoutPage = () => {
 	const location = useLocation();
-	const [isVisible, setIsVisible] = useState(false);
-	const isWorkPage = location.pathname.startsWith('/work/');
+	const pathParts = location.pathname.replace(/\/$/, '').split('/').filter(Boolean);
+	const isCaseStudyPage = pathParts.length >= 2 && pathParts[0] === 'cases';
 	const isLandingPage = location.pathname === '/landing';
 
 	useEffect(() => {
@@ -14,14 +14,9 @@ const useLayoutPage = () => {
 		} catch (error) {
 			console.warn('Web Vitals initialization failed:', error);
 		}
-		if (isWorkPage) {
-			const timer = setTimeout(() => setIsVisible(true), 800);
-			return () => clearTimeout(timer);
-		}
-		setIsVisible(true);
-	}, [isWorkPage]);
+	}, []);
 
-	return { pathname: location.pathname, isWorkPage, isLandingPage, isVisible };
+	return { pathname: location.pathname, isCaseStudyPage, isLandingPage };
 };
 
 export default useLayoutPage;
