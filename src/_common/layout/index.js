@@ -30,7 +30,7 @@ const Layout = ({ children, title, description, showWork, className, ...others }
 	return (
 		<React.Fragment>
 			<I18nextProvider i18n={i18n}>
-				<Seo title={title} description={description} />
+				<Seo title={title} description={description} pathname={pathname} />
 				<ThemeProvider>
 					<ErrorBoundary>
 						<div className={wrapperClass} data-print-root {...others}>

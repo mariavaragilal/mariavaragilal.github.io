@@ -6,7 +6,13 @@ import { buildPersonStructuredData, buildWebsiteStructuredData, buildMvpDimensio
 import { generatePortfolioStructuredData } from '../../constants/utils/structuredData';
 import mvEn from '../../constants/i18n/locales/mv.en.json';
 
-const Seo = ({ title, description }) => {
+const absolutePageUrl = (siteOrigin, pathname) => {
+	const p = pathname && pathname !== '/' ? pathname : '/';
+	const withSlash = p !== '/' && !p.endsWith('/') ? p + '/' : p;
+	return withSlash === '/' ? siteOrigin + '/' : siteOrigin + withSlash;
+};
+
+const Seo = ({ title, description, pathname = '/' }) => {
 	const { i18n, t } = useTranslation();
 	const bundle = i18n.getResourceBundle(i18n.language, 'translation');
 	const mv = bundle.mv || mvEn;
@@ -20,7 +26,8 @@ const Seo = ({ title, description }) => {
 	const siteTitle = title !== null ? 'Maria Varagilal: ' + (title || 'CV') : 'Maria Varagilal';
 	const siteDescription = description !== null && description !== undefined && description !== '' ? description : t('mv.seo.defaultDescription');
 	const metaKeywords = t('mv.seo.defaultKeywords');
-	const siteUrl = 'https://mariavaragilal.github.io';
+	const siteOrigin = 'https://mariavaragilal.github.io';
+	const pageUrl = absolutePageUrl(siteOrigin, pathname);
 	const criticalCss = 'body { margin: 0; font-family: \'Rubik\', sans-serif; }\n.dark { color-scheme: dark; }\n.bg-slate-100 { background-color: #f1f5f9; }\n.dark .bg-slate-700 { background-color: #334155; }\n.rounded { border-radius: 0.25rem; }';
 
 	return (
@@ -38,17 +45,17 @@ const Seo = ({ title, description }) => {
 
 			{/* Open Graph / Facebook */}
 			<meta property='og:type' content='website' />
-			<meta property='og:url' content={siteUrl} />
+			<meta property='og:url' content={pageUrl} />
 			<meta property='og:title' content={siteTitle} />
 			<meta property='og:description' content={siteDescription} />
-			<meta property='og:image' content={siteUrl + '/avatar.png'} />
+			<meta property='og:image' content={siteOrigin + '/avatar.png'} />
 
 			{/* Twitter */}
 			<meta name='twitter:card' content='summary_large_image' />
-			<meta name='twitter:url' content={siteUrl} />
+			<meta name='twitter:url' content={pageUrl} />
 			<meta name='twitter:title' content={siteTitle} />
 			<meta name='twitter:description' content={siteDescription} />
-			<meta name='twitter:image' content={siteUrl + '/avatar.png'} />
+			<meta name='twitter:image' content={siteOrigin + '/avatar.png'} />
 
 			{/* Critical CSS for above-the-fold content */}
 			<style dangerouslySetInnerHTML={{ __html: criticalCss }} />
@@ -63,7 +70,8 @@ const Seo = ({ title, description }) => {
 			{/* DNS prefetch for external resources */}
 			<link rel='dns-prefetch' href='//fonts.googleapis.com' />
 			<link rel='dns-prefetch' href='//fonts.gstatic.com' />
-			<link rel='sitemap' type='application/xml' href={siteUrl + '/sitemap.xml'} />
+			<link rel='canonical' href={pageUrl} />
+			<link rel='sitemap' type='application/xml' href={siteOrigin + '/sitemap.xml'} />
 
 			{/* Structured Data */}
 			<script type='application/ld+json'>{JSON.stringify(personStructuredData, null, 2)}</script>
