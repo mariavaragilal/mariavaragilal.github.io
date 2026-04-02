@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { navigate, Link } from 'gatsby';
 import { useTranslation } from 'react-i18next';
-import { Card, Separator } from '../../../../../_common/components';
-import { AccordionItem, AccordionTrigger, AccordionContent } from '../../../../../_common/components/controls/Accordion';
-import { srOnly } from '../../../../../constants/utils/a11y';
-import { findCaseByHash, toSlug } from '../../../../../constants/utils/structuredData';
-import { LazyTerminalTypeEffect } from '../../../../../constants/utils/terminalTypeEffect';
-import { CaseCard } from './CaseCard';
+import { Card, Separator } from '../../../../_common/components';
+import { AccordionItem, AccordionTrigger, AccordionContent } from '../../../../_common/components/controls/Accordion';
+import { srOnly } from '../../../../constants/utils/a11y';
+import { findCaseByHash, flattenWorkCasesOrdered, toSlug } from '../../../../constants/utils/structuredData';
+import { LazyTerminalTypeEffect } from '../../../../constants/utils/terminalTypeEffect';
+import { CaseCard } from '../../../_common/WorkCases/CaseCard';
 
 const caseSlug = (app) => app.slug || toSlug(app.title);
 
@@ -53,9 +53,6 @@ export const WorkSection = () => {
 							<p className='text-base leading-relaxed text-current/66 mt-4'>
 								<strong className='text-current/88'>{ws.p2Lead}</strong> {ws.p2}
 							</p>
-							<p className={srOnly}>
-								<Link to='/work/'>{ws.browseAllCases}</Link>
-							</p>
 						</div>
 						<Card variant='default' className='p-6' as='div'>
 							<p className='text-[.75em] uppercase tracking-[0.16em] font-medium text-current/66 mb-2'>{ws.designSystemKicker}</p>
@@ -71,6 +68,16 @@ export const WorkSection = () => {
 							<p className='text-sm text-current/55 mt-4'>{ws.designSystemCtaNote}</p>
 						</Card>
 					</div>
+					<nav aria-label={ws.browseAllCases} className={srOnly}>
+						<h1 className='sr-only'>{ws.browseAllCases}</h1>
+						<Link to='/work/' className='text-current/88 hover:underline'>{ws.browseAllCases}</Link>
+						<ul>
+							{flattenWorkCasesOrdered(workCases).map((app) => {
+								const slug = caseSlug(app);
+								return <li key={slug}><Link to={'/work/' + slug + '/'}><h2 className='fs-sm font-mono'>{app.title}</h2>{app.title}</Link></li>;
+							})}
+						</ul>
+					</nav>
 				</div>
 				<div className='relative flex flex-col gap-8'>
 					{Object.entries(workCases).map(([groupName, group]) => {

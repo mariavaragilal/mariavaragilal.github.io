@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Badge, ChatBubbleQuestion } from '../../../../../../_common/components';
+import { Badge, ChatBubbleQuestion } from '../../../../_common/components';
 import { hasCaseStudy, CaseSection } from './DrawerShared';
 import { CaseStudyBlock } from './DrawerStudyBlock';
 

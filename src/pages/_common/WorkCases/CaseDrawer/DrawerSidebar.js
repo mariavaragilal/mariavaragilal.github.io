@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { srOnly, focusRing } from '../../../../../../constants/utils/a11y';
+import { srOnly, focusRing } from '../../../../constants/utils/a11y';
 import { hasCaseStudy, CaseSection } from './DrawerShared';
 
 const isGroupedSources = (sources) => Array.isArray(sources) && sources.some((s) => s && typeof s === 'object' && s.theme && Array.isArray(s.links));

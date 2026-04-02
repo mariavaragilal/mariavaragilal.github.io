@@ -4,7 +4,9 @@ import Layout from '../../_common/layout';
 import { srOnly } from '../../constants/utils/a11y';
 import { Card, Separator } from '../../_common/components';
 import { toSlug } from '../../constants/utils/structuredData';
-import { CaseCard } from '../index/_common/sections/WorkSection/CaseCard';
+import { CaseCard } from '../_common/WorkCases/CaseCard';
+import { Link } from 'gatsby';
+import { flattenWorkCasesOrdered } from '../../constants/utils/structuredData';
 
 const caseSlug = (app) => app.slug || toSlug(app.title);
 
@@ -22,6 +24,16 @@ const CasesIndexPage = () => {
 					<p className='text-[.75em] uppercase tracking-[0.2em] font-semibold text-current/66'>{ws.kicker}</p>
 					<h1 className='font-mono font-medium text-[clamp(1.5rem,4vw,2.5rem)] tracking-tight text-foreground mt-2'>{ws.heading}</h1>
 					<p className='text-[1.125rem] leading-relaxed text-current/88 mt-4 max-w-3xl'>{ws.p1}</p>
+					<nav aria-label={ws.browseAllCases} className={srOnly}>
+						<h1 className='sr-only'>{ws.browseAllCases}</h1>
+						<Link to='/' className='text-current/88 hover:underline'>{ws.browseAllCases}</Link>
+						<ul>
+							{flattenWorkCasesOrdered(workCases).map((app) => {
+								const slug = caseSlug(app);
+								return <li key={slug}><Link to={'/work/' + slug + '/'}>{app.title}</Link></li>;
+							})}
+						</ul>
+					</nav>
 				</div>
 				<div className='relative flex flex-col gap-8'>
 					{Object.entries(workCases).map(([groupName, group]) => (

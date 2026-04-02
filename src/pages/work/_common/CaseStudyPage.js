@@ -3,7 +3,7 @@ import Layout from '../../../_common/layout';
 import { Card } from '../../../_common/components';
 import { srOnly } from '../../../constants/utils/a11y';
 import { buildDescription, findCaseBySlug, flattenWorkCasesOrdered } from '../../../constants/utils/structuredData';
-import { CaseStudyView } from '../../index/_common/sections/WorkSection/CaseDrawer';
+import { CaseStudyView } from '../../_common/WorkCases/CaseDrawer';
 
 const CaseStudyPage = ({ pageContext }) => {
 	const { slug } = pageContext;

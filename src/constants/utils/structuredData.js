@@ -32,7 +32,6 @@ export const findCaseBySlug = (cases, slug) => {
 	return null;
 };
 
-/** All case apps in WorkSection order (Object.entries(workCases)), for cross-group prev/next on case routes. */
 export const flattenWorkCasesOrdered = (workCases) => {
 	if (!workCases || typeof workCases !== 'object') return [];
 	return Object.values(workCases).flatMap((group) => (group && Array.isArray(group.cases) ? group.cases : []));

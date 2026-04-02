@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Blockquote, BlockquoteMain, BlockquoteSecondary, Card, ChatBubbleAnswer, Separator } from '../../../../../../_common/components';
+import { Blockquote, BlockquoteMain, BlockquoteSecondary, Card, ChatBubbleAnswer, Separator } from '../../../../_common/components';
 import { CaseSection } from './DrawerShared';
 
 const normalizeImpl = (impl) => {

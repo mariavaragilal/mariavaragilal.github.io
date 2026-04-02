@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
-import { Badge, Button, Card, CardAction, CardDescription, CardContent, CardHeader, CardTitle } from '../../../../../_common/components';
-import { focusRing } from '../../../../../constants/utils/a11y';
+import { Badge, Button, Card, CardAction, CardDescription, CardContent, CardHeader, CardTitle } from '../../../_common/components';
+import { focusRing } from '../../../constants/utils/a11y';
 import { Link } from 'gatsby';
 
 const DEFAULT_ICON_CLASSNAME = 'font-mono font-thin text-xl leading-none';
