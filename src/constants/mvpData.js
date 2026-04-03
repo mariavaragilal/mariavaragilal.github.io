@@ -2,13 +2,12 @@
 // Person & identity
 // ─────────────────────────────────────────────────────────────────────────────
 
+// All person/identity SEO data lives in gatsby-config.js siteMetadata — access via useSiteMetadata().
+// name, url, image, sameAs live in gatsby-config.js siteMetadata — access via useSiteMetadata()
 export const person = {
 	name: 'Maria Varagilal',
 	jobTitle: 'Senior Technical Product Designer · Design Engineer',
 	description: 'Frontend Designer. Coherent multi-product experiences from concept to production — product strategy, UI/UX, and the Maria Varagilal Playbook Method.',
-	url: 'https://mariavaragilal.github.io',
-	image: 'https://mariavaragilal.github.io/avatar.png',
-	sameAs: ['https://www.linkedin.com/in/mariavaragilal', 'https://codepen.io/mariavaragilal', 'https://dribbble.com/mariavaragilal', 'https://be.net/mariavaragilal'],
 	address: { locality: 'Lisbon', country: 'Portugal' },
 	knowsAbout: ['User Experience Design', 'User Interface Design', 'Product Design', 'React', 'Redux', 'JavaScript (ES6+)', 'Frontend Developer', 'AI-accelerated workflows', 'Prompt engineering'],
 	skills: ['UX Design', 'UI Design', 'React', 'Redux', 'JavaScript (ES6+)', 'Gatsby'],
@@ -22,7 +21,6 @@ export const person = {
 		{ name: 'Web Design Served', description: 'Behance', date: '2013-07-01' },
 	],
 };
-
 // Landing copy (dimensions, commitments, outcomes, evolution, work cases; intro.keyMetrics in mv.*.json)
 // lives in `mv.en.json` / `mv.pt.json` (merged in `en.js` / `pt.js`). Each dimension’s
 // `philosophy.lens` there is a short kicker aligned with this file’s three pillars below.

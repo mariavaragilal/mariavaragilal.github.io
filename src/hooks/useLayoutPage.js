@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from '@reach/router';
-import { initWebVitals } from '../../../constants/utils/webVitals';
+import { initWebVitals } from '../constants/utils/webVitals';
 
 const useLayoutPage = () => {
 	const location = useLocation();

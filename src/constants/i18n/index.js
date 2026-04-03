@@ -1,6 +1,6 @@
-import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
-import LOCALES from "./locales";
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+import LOCALES from './locales';
 
 const resources = {
 	en: { translation: LOCALES.en },
@@ -9,8 +9,8 @@ const resources = {
 
 i18n.use(initReactI18next).init({
 	resources,
-	lng: "en", // default language
-	fallbackLng: "en",
+	lng: 'en', // default language
+	fallbackLng: 'en',
 	interpolation: {
 		escapeValue: false,
 	},

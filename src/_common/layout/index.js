@@ -4,8 +4,8 @@ import { I18nextProvider } from 'react-i18next';
 import i18n from '../../constants/i18n';
 import Seo from './seo';
 import ErrorBoundary from './components/ErrorBoundary';
-import { ThemeProvider } from '../hooks/useTheme';
-import useLayoutPage from './hooks/useLayoutPage';
+import { ThemeProvider } from '../../hooks/useTheme';
+import useLayoutPage from '../../hooks/useLayoutPage';
 import LayoutHeader from './components/layoutHeader';
 import LayoutMain from './components/layoutMain';
 

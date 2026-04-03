@@ -58,6 +58,8 @@ exports.onPostBuild = async () => {
 		if (await fs.pathExists(chunkPath)) {
 			await fs.copy(chunkPath, legacyPath);
 			await fs.remove(chunkPath);
+		}
+		if (await fs.pathExists(indexPath)) {
 			await fs.remove(indexPath);
 		}
 	} catch (e) {

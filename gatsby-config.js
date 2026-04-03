@@ -11,6 +11,26 @@ module.exports = {
 		author: 'Maria Varagilal',
 		keywords: 'Maria Varagilal, Principal Product Designer, Frontend Dev, UI, UX, React, Redux, Design Systems, B2B SaaS',
 		siteUrl: 'https://mariavaragilal.github.io',
+		image: '/avatar.png',
+		social: {
+			linkedin: 'https://www.linkedin.com/in/mariavaragilal',
+			dribbble: 'https://dribbble.com/mariavaragilal',
+			codepen: 'https://codepen.io/mariavaragilal',
+			behance: 'https://be.net/mariavaragilal',
+			github: 'https://github.com/mariavaragilal',
+		},
+		address: { locality: 'Lisbon', country: 'Portugal' },
+		knowsAbout: ['User Experience Design', 'User Interface Design', 'Product Design', 'React', 'Redux', 'JavaScript (ES6+)', 'Frontend Developer', 'AI-accelerated workflows', 'Prompt engineering'],
+		skills: ['UX Design', 'UI Design', 'React', 'Redux', 'JavaScript (ES6+)', 'Gatsby'],
+		education: [
+			{ name: 'Universidade Lusíada de Lisboa', description: 'Bachelor\'s Degree in Design' },
+			{ name: 'Academia Flag', description: 'Specialization in Communication Design' },
+		],
+		worksFor: { name: 'Securibox', url: 'https://www.securibox.eu', description: 'Lead Technical Product Designer & Frontend Developer' },
+		awards: [
+			{ name: 'Bronze cyber', description: 'Young Lions Portugal', date: '2014-05-01' },
+			{ name: 'Web Design Served', description: 'Behance', date: '2013-07-01' },
+		],
 	},
 	flags: {
 		FAST_DEV: false,
@@ -110,6 +130,24 @@ module.exports = {
 			options: {
 				createLinkInHead: true,
 				output: '/',
+				serialize: ({ path }) => {
+					let priority = 0.6;
+					let changefreq = 'monthly';
+					if (path === '/') {
+						priority = 1.0;
+						changefreq = 'weekly';
+					} else if (path === '/work/') {
+						priority = 0.9;
+						changefreq = 'weekly';
+					} else if (path === '/cv/') {
+						priority = 0.8;
+						changefreq = 'monthly';
+					} else if (path.startsWith('/work/')) {
+						priority = 0.7;
+						changefreq = 'monthly';
+					}
+					return { url: path, changefreq, priority };
+				},
 			},
 		},
 		{
