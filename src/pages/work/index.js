@@ -26,11 +26,11 @@ const CasesIndexPage = () => {
 					<h1 className='font-mono font-medium text-[clamp(1.5rem,4vw,2.5rem)] tracking-tight text-foreground mt-2'>{ws.heading}</h1>
 					<p className='text-[1.125rem] leading-relaxed text-current/88 mt-4 max-w-3xl'>{ws.p1}</p>
 					<nav aria-label={ws.browseAllCases} className={srOnly}>
-						<h1><Link to='/work/' className='text-current/88 hover:underline'>{ws.browseAllCases}</Link></h1>
+						<h1><Link to={getAbsoluteUrl('/work')} className='text-current/88 hover:underline'>{ws.browseAllCases}</Link></h1>
 						<ul>
 							{flattenWorkCasesOrdered(workCases).map((app) => {
 								const slug = caseSlug(app);
-								return <li key={slug}><Link className='font-mono' to={'/work/' + slug + '/'}><h2 className='fs-[.5rem] inline-block fs-inherit'>[{app.title}] url: {getAbsoluteUrl('/work/' + slug + '/')}</h2></Link></li>;
+								return <li key={slug}><Link className='font-mono' to={getAbsoluteUrl('/work/' + slug)}><h2 className='fs-[.5rem] inline-block fs-inherit'>[{app.title}] url: {getAbsoluteUrl('/work/' + slug + '/')}</h2></Link></li>;
 							})}
 						</ul>
 					</nav>
@@ -54,7 +54,7 @@ const CasesIndexPage = () => {
 									<div className='grid gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[repeat(auto-fill,minmax(25rem,1fr))]'>
 										{group.cases.map((app) => {
 											const slug = caseSlug(app);
-											return <CaseCard className='border border-border/50' key={app.title} id={'case-' + slug} app={app} isSelected={false} to={'/work/' + slug + '/'} as='h4' />;
+											return <CaseCard className='border border-border/50' key={app.title} id={'case-' + slug} app={app} isSelected={false} to={getAbsoluteUrl('/work/' + slug)} as='h4' />;
 										})}
 									</div>
 								</div>
