@@ -7,6 +7,7 @@ import { toSlug } from '../../constants/utils/structuredData';
 import { CaseCard } from '../_common/WorkCases/CaseCard';
 import { Link } from 'gatsby';
 import { flattenWorkCasesOrdered } from '../../constants/utils/structuredData';
+import { getAbsoluteUrl } from '../../constants/utils/index';
 
 const caseSlug = (app) => app.slug || toSlug(app.title);
 
@@ -29,7 +30,7 @@ const CasesIndexPage = () => {
 						<ul>
 							{flattenWorkCasesOrdered(workCases).map((app) => {
 								const slug = caseSlug(app);
-								return <li key={slug}><Link className='font-mono' to={'/work/' + slug + '/'}><h2 className='fs-[.5rem] inline-block fs-inherit'>[{app.title}] url: {'/work/' + slug + '/'}</h2></Link></li>;
+								return <li key={slug}><Link className='font-mono' to={'/work/' + slug + '/'}><h2 className='fs-[.5rem] inline-block fs-inherit'>[{app.title}] url: {getAbsoluteUrl('/work/' + slug + '/')}</h2></Link></li>;
 							})}
 						</ul>
 					</nav>

@@ -7,6 +7,7 @@ import { srOnly } from '../../../../constants/utils/a11y';
 import { findCaseByHash, flattenWorkCasesOrdered, toSlug } from '../../../../constants/utils/structuredData';
 import { LazyTerminalTypeEffect } from '../../../../constants/utils/terminalTypeEffect';
 import { CaseCard } from '../../../_common/WorkCases/CaseCard';
+import { getAbsoluteUrl } from '../../../../constants/utils/index';
 
 const caseSlug = (app) => app.slug || toSlug(app.title);
 
@@ -73,7 +74,7 @@ export const WorkSection = () => {
 						<ul>
 							{flattenWorkCasesOrdered(workCases).map((app) => {
 								const slug = caseSlug(app);
-								return <li key={slug}><Link className='font-mono' to={'/work/' + slug + '/'}><h2 className='fs-[.5rem] inline-block fs-inherit'>[{app.title}] url: {'/work/' + slug + '/'}</h2></Link></li>;
+								return <li key={slug}><Link className='font-mono' to={'/work/' + slug + '/'}><h2 className='fs-[.5rem] inline-block fs-inherit'>[{app.title}] url: {getAbsoluteUrl('/work/' + slug + '/')}</h2></Link></li>;
 							})}
 						</ul>
 					</nav>

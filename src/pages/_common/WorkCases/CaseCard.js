@@ -1,23 +1,14 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 import { Badge, Button, Card, CardAction, CardDescription, CardContent, CardHeader, CardTitle } from '../../../_common/components';
 import { focusRing } from '../../../constants/utils/a11y';
+import { useLocation } from '@gatsbyjs/reach-router';
 import { Link } from 'gatsby';
+import { getAbsoluteUrl } from '../../../constants/utils/index';
 
-const DEFAULT_ICON_CLASSNAME = 'font-mono font-thin text-xl leading-none';
-
-const defaultIcon = (showRotated, iconChar, iconClassName, prefersReducedMotion) => (
-	<motion.span
-		animate={{ rotate: (!prefersReducedMotion && showRotated) ? 45 : 0 }}
-		transition={{ duration: 0.2, ease: 'easeInOut' }}
-		className={iconClassName}
-		aria-hidden='true'
-	>{iconChar}</motion.span>
-);
-
-export const CaseCard = ({ app, isSelected, onToggle, href, to, icon, iconChar = '+', iconClassName = DEFAULT_ICON_CLASSNAME, as: _as, id, variant = 'default' }) => {
+export const CaseCard = ({ app, isSelected, onToggle, href, to, icon, iconChar = '+', iconClassName, as: _as, id, variant = 'default' }) => {
 	const { t } = useTranslation();
+	const location = useLocation();
 	const ui = t('mv.caseUi', { returnObjects: true }) || {};
 	const [isHovered, setIsHovered] = useState(false);
 	const [prefersReducedMotion, setPrefersReducedMotion] = useState(() => (typeof window !== 'undefined' ? window.matchMedia('(prefers-reduced-motion: reduce)').matches : true));
@@ -28,7 +19,7 @@ export const CaseCard = ({ app, isSelected, onToggle, href, to, icon, iconChar =
 		return () => mq.removeEventListener('change', handler);
 	}, []);
 	const showRotated = isSelected || isHovered;
-	const resolvedIcon = typeof icon === 'function' ? icon(showRotated) : (icon !== undefined ? icon : defaultIcon(showRotated, iconChar, iconClassName, prefersReducedMotion));
+	const resolvedIcon = typeof icon === 'function' ? icon(showRotated) : (icon !== undefined ? icon : <span className={iconClassName}>{iconChar}</span>);
 	const cardClassBase = 'flex flex-col items-start p-4 w-full text-left rounded-lg transition-colors ' + (isSelected ? 'border-primary/50 bg-card/75 ring-2 ring-primary/15' : 'border-border hover:bg-card/75') + ' ' + focusRing;
 	const cardClassLink = cardClassBase + ' cursor-pointer';
 	const isLink = !!href;
@@ -64,7 +55,7 @@ export const CaseCard = ({ app, isSelected, onToggle, href, to, icon, iconChar =
 					</CardDescription>
 				</div>
 				<CardAction>
-					<Button title={ui.fullCaseStudy} as='span' variant='secondary' size='icon' aria-hidden='true' className='shrink-0 size-11' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+					<Button title={ui.fullCaseStudy + ' ' + app.title + ' - ' + getAbsoluteUrl(to)} as='span' variant='secondary' size='icon' aria-hidden='true' className='shrink-0 size-11' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
 						{resolvedIcon}
 					</Button>
 					<p className='font-mono text-[0.65rem] leading-relaxed text-current/88 sr-only'>{ui.fullCaseStudy}<span aria-hidden>↗</span></p>

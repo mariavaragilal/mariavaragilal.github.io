@@ -130,3 +130,8 @@ export const FORMAT_RATE = new Intl.NumberFormat('fr-FR', {
 	style: 'percent',
 	maximumFractionDigits: 2,
 });
+
+export const getAbsoluteUrl = pathname =>
+	typeof window !== 'undefined'
+		? `${window.location.origin}${pathname}`
+		: pathname;
