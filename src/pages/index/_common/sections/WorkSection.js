@@ -70,11 +70,11 @@ export const WorkSection = () => {
 						</Card>
 					</div>
 					<nav aria-label={ws.browseAllCases} className={srOnly}>
-						<h1><Link to={getAbsoluteUrl('/work')} className='text-current/88 hover:underline'>{ws.browseAllCases}</Link></h1>
+						<a href='/work/'>{ws.browseAllCases}</a>
 						<ul>
 							{flattenWorkCasesOrdered(workCases).map((app) => {
 								const slug = caseSlug(app);
-								return <li key={slug}><Link className='font-mono' to={getAbsoluteUrl('/work/' + slug)}><h2 className='fs-[.5rem] inline-block fs-inherit'>[{app.title}] url: {getAbsoluteUrl('/work/' + slug + '/')}</h2></Link></li>;
+								return <li key={slug}><a href={'/work/' + slug + '/'}>{app.title}</a></li>;
 							})}
 						</ul>
 					</nav>
@@ -110,6 +110,11 @@ export const WorkSection = () => {
 							</React.Fragment>
 						);
 					})}
+				</div>
+				<div className='flex justify-end px-1'>
+					<Link to='/work/' className='font-mono text-[0.75rem] tracking-[0.12em] uppercase text-current/55 hover:text-current hover:underline underline-offset-4 transition-colors inline-flex items-center gap-1.5'>
+						{ws.seeAllWork || 'See all work'}<span aria-hidden>→</span>
+					</Link>
 				</div>
 			</Card>
 		</React.Fragment >

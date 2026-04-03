@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Badge, Button, Card, CardAction, CardDescription, CardContent, CardHeader, CardTitle } from '../../../_common/components';
 import { focusRing } from '../../../constants/utils/a11y';
 import { useLocation } from '@gatsbyjs/reach-router';
-import { Link } from 'gatsby';
+import { navigate, Link } from 'gatsby';
 import { getAbsoluteUrl } from '../../../constants/utils/index';
 
 export const CaseCard = ({ app, isSelected, onToggle, href, to, icon, iconChar = '+', iconClassName, as: _as, id, variant = 'default' }) => {
@@ -25,13 +25,13 @@ export const CaseCard = ({ app, isSelected, onToggle, href, to, icon, iconChar =
 	const isLink = !!href;
 	const isInternalCase = !!to;
 	const hostnameEl = app.references?.links?.[0] ? (
-		(isLink || isInternalCase) ? (
+		isLink ? (
 			<span className='inline-flex items-center gap-1 font-mono text-[0.65rem] text-current/88'>
 				{new URL(app.references.links[0].url).hostname.replace('www.', '')}
 				<span aria-hidden>↗</span>
 			</span>
 		) : (
-			<a href={app.references.links[0].url} target='_blank' rel='noopener noreferrer' className='inline-flex items-center gap-1 font-mono text-[0.65rem] text-current/88 underline-offset-2 hover:underline hover:text-current'>
+			<a href={app.references.links[0].url} target='_blank' rel='noopener noreferrer' className='inline-flex items-center gap-1 font-mono text-[0.65rem] text-current/88 underline-offset-2 hover:underline hover:text-current' onClick={isInternalCase ? (e => e.stopPropagation()) : undefined}>
 				{new URL(app.references.links[0].url).hostname.replace('www.', '')}
 				<span aria-hidden>↗</span>
 			</a>
@@ -39,7 +39,7 @@ export const CaseCard = ({ app, isSelected, onToggle, href, to, icon, iconChar =
 	) : null;
 	const cardAria = app.title + ' — ' + (isSelected ? ui.cardAriaOpen : ui.cardAriaClosed);
 	return isInternalCase ? (
-		<Card as={Link} to={to} variant={variant} className={cardClassLink} id={id}>
+		<Card as='div' variant={variant} className={cardClassLink} id={id} onClick={() => navigate(to)}>
 			<CardHeader className='flex gap-1' headerPadding='p-0'>
 				<div className='flex flex-col space-y-2'>
 					<span className='text-lg font-medium flex flex-wrap items-center gap-2.5'>
@@ -55,7 +55,17 @@ export const CaseCard = ({ app, isSelected, onToggle, href, to, icon, iconChar =
 					</CardDescription>
 				</div>
 				<CardAction>
-					<Button title={ui.fullCaseStudy + ' ' + app.title + ' - ' + getAbsoluteUrl(to)} as='span' variant='secondary' size='icon' aria-hidden='true' className='shrink-0 size-11' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+					<Button
+						as='a'
+						href={to}
+						variant='secondary'
+						size='icon'
+						aria-label={ui.fullCaseStudy + ': ' + app.title}
+						className='shrink-0 size-11'
+						onMouseEnter={() => setIsHovered(true)}
+						onMouseLeave={() => setIsHovered(false)}
+						onClick={e => e.stopPropagation()}
+					>
 						{resolvedIcon}
 					</Button>
 					<p className='font-mono text-[0.65rem] leading-relaxed text-current/88 sr-only'>{ui.fullCaseStudy}<span aria-hidden>↗</span></p>
