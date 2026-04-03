@@ -21,64 +21,118 @@ export const person = {
 		{ name: 'Web Design Served', description: 'Behance', date: '2013-07-01' },
 	],
 };
-// Landing copy (dimensions, commitments, outcomes, evolution, work cases; intro.keyMetrics in mv.*.json)
-// lives in `mv.en.json` / `mv.pt.json` (merged in `en.js` / `pt.js`). Each dimension’s
-// `philosophy.lens` there is a short kicker aligned with this file’s three pillars below.
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Philosophy — Maria Varagilal Playbook Method (three commitments: cohesion, priority, boundaries)
-//
-// Markup convention: {{bold:text}} marks inline emphasis.
-// Render helper: str.split(/(\{\{bold:.*?\}\})/g) then match {{bold:(.+)}}
-// to wrap in <strong> — keeps data free of JSX.
+// Maria Varagilal Playbook Method — JS-accessible export for non-i18n contexts
+// (gatsby-node, scripts, tests). Keep in sync with mv.en.json.
 // ─────────────────────────────────────────────────────────────────────────────
 
-export const method = [
-	{
-		num: '01',
-		title: 'Cohesion Before Creation',
-		summary: 'Map reality before making decisions. Understand the problem before shaping the solution.',
-		content: [
-			'Before any line is drawn or code is written, the most important work is seeing the problem clearly — not aesthetics or features first. This means disciplined observation that eliminates illusion and reveals reality. Mapping every touchpoint creates the true picture: who the user actually is, what they are trying to achieve, and where the current experience is quietly breaking down.',
-			'Clarity at this stage is the highest-leverage act in the entire process. This is where the vision either ignites — or fades.',
-		],
-		checkpoint: 'If the problem isn\'t clear, nothing built on top of it will be.',
-		practice: 'A team is tasked with improving onboarding conversion. The instinct is to redesign the sign-up screen. The audit reveals the real drop-off happens two steps later — users land on an empty dashboard with no guidance. The sign-up screen was never the problem. Without the audit, the team ships a polished solution to the wrong question.',
-		evolution: 'Each cycle deepens understanding. After launch, real user data feeds the next audit. What looked like the problem in sprint one often turns out to be a symptom. The loop — create, launch, test, refine — keeps the foundation honest, not just the surface.',
-		whyItMatters: 'Every hour spent on the wrong question is an hour stolen from the right one. Clarity at the foundation prevents drift downstream — in priorities, in design, and in engineering.',
-	},
-	{
-		num: '02',
-		title: 'Priority & Threshold',
-		summary: 'Know when enough is enough. The Maria Varagilal Playbook line is an act of discipline, not compromise.',
-		content: [
-			'Excellent design recognises the moment when further refinement stops creating meaningful value — the Maria Varagilal Playbook line. The 2×2 matrix (Business Value vs. User Friction) makes priorities visible and shared: what must launch now, and what can wait without weakening the core.'
-		],
-		checkpoint: 'When user understanding, problem specificity, and flow context align — launch the work. The product tells you what to refine — the backlog never will.',
-		practice: 'A checkout flow blocking 30% of users — high friction, high value. Ships first. A settings redesign improving aesthetics but not behaviour — it can wait. The matrix keeps that call explicit and visible for everyone.',
-		matrix: {
-			high: 'A checkout flow blocking 30% of users — high friction, high value. Ships first.',
-			low: 'A settings redesign improving aesthetics but not behaviour. It can wait.',
+export const methodMVP = {
+	heading: 'The MVP Method',
+	subtitle: 'MVP — Maria Varagilal Playbook',
+	commitments: [
+		{
+			principle: 'Cohesion',
+			method: 'Brand & Experience Audit + Design Implementation',
+			protects: 'The product is one experience — not a collection of products. Fragmentation risks surface before they cost clients.',
 		},
-		evolution: 'The Maria Varagilal Playbook line is not fixed. After each release, real data reshapes the matrix. Yesterday\'s "can wait" becomes today\'s high-friction item as the user base shifts. Priority recalibrates so the team is always working on the problem that matters most right now — not the one that mattered most last quarter.',
-		whyItMatters: 'Teams that cannot define "done" lose weeks to endless refinement. Knowing when to stop keeps momentum alive.',
-	},
-	{
-		num: '03',
-		title: 'Boundaries',
-		summary: 'Protect the lens. Saying no with intention keeps the vision intact.',
-		content: [
-			'Modern product development is full of subtle distractions: new APIs, visual flourishes, technologies added simply because they are possible. Strategy is protecting the original way of seeing the problem as the product evolves. Intentional boundaries are firm reminders of what truly matters.',
+		{
+			principle: 'Boundaries',
+			method: 'Unified Brand Principles + Design Implementation + Continuous Alignment & Measurement',
+			protects: 'Intentional boundaries remind teams what truly matters. If it doesn\'t serve the committed problem, it doesn\'t ship now.',
+		},
+		{
+			principle: 'Priority',
+			method: 'Priority & Flow Architecture + Design Implementation',
+			protects: 'The launch line is an act of discipline, not compromise. The 2×2 matrix makes priorities visible and shared: what must launch now, and what can wait without weakening the core.',
+		},
+	],
+	dimensions: [
+		{
+			num: '01',
+			title: 'Brand & Experience Audit',
+			icon: '◎',
+			groundedIn: ['Cohesion'],
+			summary: 'Map every touchpoint — portals, mobile, emails, onboarding, internal tools. Score visual and UX consistency, identify where understanding of user needs is thinnest, and surface fragmentation risks before any work begins.',
+			philosophy: {
+				lens: 'Clarity Before Execution',
+				ask: 'Why start here?',
+				answer: 'Before any line is drawn or code is written, the most important work is seeing the problem clearly. Mapping every touchpoint creates the real picture — who the user actually is, what they\'re trying to achieve, and where the experience is quietly breaking down.',
+				checkpoint: 'If the problem isn\'t clear, nothing built on top of it will be.',
+			},
+			detail: ['Each touchpoint is scored for visual consistency, UX coherence, and accessibility. Treat the entire ecosystem as one experience — not a collection of products. Fragmentation risks surface here before they cost clients.'],
+		},
+		{
+			num: '02',
+			title: 'Unified Brand Principles',
+			icon: '◆',
+			groundedIn: ['Boundaries'],
+			summary: 'Distill company vision into a concise set of actionable principles and decision rules every designer, developer, and stakeholder can reference instantly as decision filters — small bets you sanity-check in production as you ship.',
+			philosophy: {
+				lens: 'Intention Over Distraction',
+				ask: 'How do you protect the vision?',
+				answer: 'Modern product development is full of subtle distractions: new APIs, visual flourishes, technologies added simply because they\'re possible. Intentional boundaries remind teams what truly matters. If it doesn\'t serve the committed problem, it doesn\'t ship now.',
+				checkpoint: 'Every \'yes\' to a distraction is an invisible \'no\' to the vision.',
+			},
+			detail: ['Principles and decision rules aren\'t documentation — they\'re decision-making tools. When a trade-off appears, the answers are there before a meeting is needed.'],
+		},
+		{
+			num: '03',
+			title: 'Priority & Flow Architecture',
+			icon: '⬡',
+			groundedIn: ['Priority'],
+			summary: 'A 2×2 matrix (Business Value vs. User Friction) to define what ships first. High Value + High Friction ships first — shared auth, core navigation, document viewer. Low-friction items come later.',
+			philosophy: {
+				lens: 'The Launch Line',
+				ask: 'When is enough enough?',
+				answer: 'The launch line is an act of discipline, not compromise. The 2×2 matrix makes priorities visible and shared: what must launch now, and what can wait without weakening the core.',
+				checkpoint: 'The product tells you what to refine — the backlog never will.',
+			},
+			detail: ['The matrix keeps prioritization and scope definition explicit and visible for the whole project. High Value + High Friction ships first; low-friction items queue without blocking momentum.'],
+		},
+		{
+			num: '04',
+			title: 'Design Implementation',
+			icon: '◈',
+			groundedIn: ['Priority', 'Boundaries'],
+			summary: 'The design — visuals, interactions, and flows — translates from strategy into production. Bridging design and implementation — not documentation alone — validates the intended experience in the live product.',
+			philosophy: {
+				lens: 'Cohesion Before Creation',
+				ask: 'Why bridge design and code?',
+				answer: 'A design only works if it lives in the product. When it drifts from what is shipped, it becomes shelfware — and the fragmentation starts again.',
+				checkpoint: 'Validated in production, not just approved in a mockup.',
+			},
+			detail: ['Components and patterns are validated in production — not just approved in a mockup. The gap between designed intent and launched reality closes to zero.'],
+		},
+		{
+			num: '05',
+			title: 'Continuous Alignment & Measurement',
+			icon: '↻',
+			groundedIn: ['Cohesion', 'Boundaries'],
+			summary: 'An ongoing build–measure–learn cycle keeps strategy, execution, and outcomes honest, moving in the same direction so the unified brand stays alive after launch.',
+			philosophy: {
+				lens: 'Continuous Honesty',
+				ask: 'How does it stay honest?',
+				answer: 'Once something ships, honesty is what you can measure in production — usage, friction, outcomes — fed back into the next decisions. Build–measure–learn is that rhythm; without it, drift stacks up while everyone still believes the map.',
+				checkpoint: 'Declaring \'done\' creates the space to learn.',
+			},
+			detail: ['Measurement is built into the loop — not added after. Cohesion scores are re-run after each major release. New contributors and features are potential drift points the loop catches early.'],
+		},
+	],
+	outcomes: [
+		{ principle: 'Clarity', drivenBy: 'Dimension 1 + Dimension 3', protects: 'Seeing only what truly matters — stripping noise before it compounds' },
+		{ principle: 'Confidence', drivenBy: 'Dimension 4', protects: 'Decisions made once, launched, and trusted — no second-guessing in production' },
+		{ principle: 'Consistency', drivenBy: 'Dimension 2 + Dimension 5', protects: 'A unified experience that evolves without losing its identity' },
+	],
+	evolution: {
+		intro: 'Each commitment describes how it evolves, but the underlying cycle is the same across all three — create, launch, test, refine — the evolution loop that keeps the vision honest.',
+		loop: [
+			{ step: 'Create', desc: 'Work within defined boundaries', dimension: 'Dimension 4' },
+			{ step: 'Launch', desc: 'Reach the launch line and release', dimension: 'Dimension 3' },
+			{ step: 'Test', desc: 'Learn from real users and real data', dimension: 'Dimension 5' },
+			{ step: 'Refine', desc: 'Iterate while protecting the vision', dimension: 'Dimension 1 + Dimension 2' },
 		],
-		checkpoint: 'If it doesn\'t serve the committed problem, it doesn\'t ship now.',
-		boundaries: [
-			{ domain: 'Interface', protect: 'Clear information hierarchy and flow', reconsider: 'Decorative elements that compete with content' },
-			{ domain: 'Technology', protect: 'Direct service to the user\'s real need', reconsider: 'Layers added for novelty rather than purpose' },
-			{ domain: 'Process', protect: 'Shipping with confidence, not perfection', reconsider: 'Repeated refinement without new user insight' },
-			{ domain: 'Scope', protect: 'The problem you committed to solve', reconsider: 'Adjacent problems that feel urgent but aren\'t yours' },
-		],
-		practice: 'During a platform unification sprint, a team proposes adding analytics to the document viewer. Useful in theory — but not the problem being solved. The viewer needs consistent navigation and accessibility across portals first. The boundary holds: solve the committed problem first, then revisit.',
-		evolution: 'Boundaries are not walls — they are decisions that stay open to evidence. The discipline is not in never moving the line, but in only moving it for reasons grounded in user reality.',
-		whyItMatters: 'Every \'yes\' to a distraction is an invisible \'no\' to the vision.'
+		closing: 'Each pass through the loop sharpens the product and deepens understanding. The role of leadership is to protect clarity, confidence, and consistency — so the team can release, learn, and move forward with purpose. The work has always been about more than any single method — it\'s about what disciplined practice makes possible.',
+		whyItMatters: 'Declaring Done creates the space to learn. Learning keeps the vision honest. The cycle builds quiet, compounding advantage that no single feature sprint can replicate.',
 	},
-];
+};
