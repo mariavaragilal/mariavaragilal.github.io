@@ -108,8 +108,8 @@ module.exports = {
 		{
 			resolve: 'gatsby-plugin-sitemap',
 			options: {
-				createLinkInHead: false,
-				excludes: [],
+				createLinkInHead: true,
+				output: '/',
 			},
 		},
 		{

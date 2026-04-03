@@ -48,16 +48,20 @@ exports.onPreBootstrap = async () => {
 		}
 	}
 };
+
 exports.onPostBuild = async () => {
 	const publicDir = path.join(__dirname, 'public');
 	const chunkPath = path.join(publicDir, 'sitemap-0.xml');
 	const indexPath = path.join(publicDir, 'sitemap-index.xml');
 	const legacyPath = path.join(publicDir, 'sitemap.xml');
 	try {
-		if (await fs.pathExists(chunkPath)) await fs.copy(chunkPath, legacyPath);
-		else if (await fs.pathExists(indexPath)) await fs.copy(indexPath, legacyPath);
+		if (await fs.pathExists(chunkPath)) {
+			await fs.copy(chunkPath, legacyPath);
+			await fs.remove(chunkPath);
+			await fs.remove(indexPath);
+		}
 	} catch (e) {
-		process.stdout.write('onPostBuild sitemap copy: ' + (e && e.message ? e.message : e) + '\n');
+		process.stdout.write('onPostBuild sitemap: ' + (e && e.message ? e.message : e) + '\n');
 	}
 };
 
