@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { graphql } from 'gatsby';
 
 // _Common
 import Layout from '../../_common/layout';
@@ -44,3 +45,13 @@ const CVPage = () => {
 };
 
 export default CVPage;
+
+export const query = graphql`
+	query CvPageQuery {
+		site {
+			siteMetadata {
+				title
+			}
+		}
+	}
+`;

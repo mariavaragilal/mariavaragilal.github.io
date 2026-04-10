@@ -1,6 +1,5 @@
 import { motion, useReducedMotion } from 'motion/react';
 import { cn } from '../../../../constants/utils/cn';
-import { caseImageMap } from '../../../../assets/images/cases';
 
 // ─── Variant config ───────────────────────────────────────────────────────────
 const VARIANT_CONFIG = {
@@ -54,7 +53,7 @@ const BrowserChrome = ({ url }) => (
 );
 
 // ─── Component ───────────────────────────────────────────────────────────────
-export const DrawerMedia = ({ image, variant = 'annotated', className = '' }) => {
+export const DrawerMedia = ({ image, variant = 'annotated', className = '', caseImageMap = {} }) => {
 	const prefersReducedMotion = useReducedMotion();
 
 	const img = typeof image === 'string' ? { src: image } : image;
