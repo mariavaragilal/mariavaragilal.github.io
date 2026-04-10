@@ -16,21 +16,20 @@ const _applyTheme = (resolved) => {
 };
 
 const useThemeCore = ({ initialTheme, persist = true, applyToDOM = true } = {}) => {
-	const [theme, _setTheme] = useState(() => {
-		if (!isBrowser) return initialTheme || 'system';
-		if (persist) return localStorage.getItem(STORAGE_KEY) || initialTheme || 'system';
-		return initialTheme || 'system';
-	});
-	const [resolvedTheme, setResolvedTheme] = useState(() => {
-		if (!isBrowser) return 'light';
-		const initial = persist ? (localStorage.getItem(STORAGE_KEY) || initialTheme || 'system') : (initialTheme || 'system');
-		return initial === 'system' ? _getSystemTheme() : initial;
-	});
+	// Initial render must match SSR: never read localStorage in useState (avoids React #418 hydration text mismatch on theme toggle, etc.).
+	const [theme, _setTheme] = useState(() => initialTheme || 'system');
+	const [resolvedTheme, setResolvedTheme] = useState('light');
 
 	const setTheme = useCallback((value) => {
 		if (!isBrowser) return;
 		if (persist) localStorage.setItem(STORAGE_KEY, value);
 		_setTheme(value);
+	}, [persist]);
+
+	useEffect(() => {
+		if (!isBrowser || !persist) return;
+		const stored = localStorage.getItem(STORAGE_KEY);
+		if (stored === 'light' || stored === 'dark' || stored === 'system') _setTheme(stored);
 	}, [persist]);
 
 	useEffect(() => {
