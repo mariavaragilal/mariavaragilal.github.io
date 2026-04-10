@@ -8,7 +8,6 @@ import { srOnly } from '../../../../constants/utils/a11y';
 import { findCaseByHash, flattenWorkCasesOrdered, toSlug, caseMatchesStrengthTag } from '../../../../constants/utils/structuredData';
 import { LazyTerminalTypeEffect } from '../../../../constants/utils/terminalTypeEffect';
 import { CaseCard } from '../../../_common/WorkCases/CaseCard';
-import { getAbsoluteUrl } from '../../../../constants/utils/index';
 
 const caseSlug = (app) => app.slug || toSlug(app.title);
 const isUnfilteredGroup = (groupName) => groupName === 'Earlier work';
@@ -251,7 +250,7 @@ export const WorkSection = () => {
 													const isMatch = skipFilter || !activeEvidenceSet || activeEvidenceSet.has(app);
 													return (
 														<div key={app.title} className={'transition-opacity duration-300 ' + (isMatch ? 'opacity-100' : 'opacity-20')}>
-															<CaseCard id={'case-' + slug} app={app} isSelected={false} to={getAbsoluteUrl('/work/' + slug)} as='h4' />
+															<CaseCard id={'case-' + slug} app={app} isSelected={false} to={'/work/' + slug + '/'} as='h4' />
 														</div>
 													);
 												})}

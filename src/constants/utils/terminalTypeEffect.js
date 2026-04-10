@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback, useMemo, cloneElement, isValidElement, Suspense } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useMemo, cloneElement, isValidElement } from 'react';
 
 const FRAME_MS = 1000 / 60;
 
@@ -216,15 +216,9 @@ const TerminalTypeEffect = ({ children, className = '', animationType = 'shuffle
 	);
 };
 
-// Lazy loading wrapper component
-const LazyTerminalTypeEffect = ({ children, fallback, ...props }) => {
-	const fallbackElement = fallback || children;
-
-	return (
-		<Suspense fallback={fallbackElement}>
-			<TerminalTypeEffect {...props}>{children}</TerminalTypeEffect>
-		</Suspense>
-	);
-};
+// Wrapper kept for a stable import name; inner effect is synchronous (no React.lazy) — avoid Suspense here to prevent SSR/client markup drift.
+const LazyTerminalTypeEffect = ({ children, fallback: _fallback, ...props }) => (
+	<TerminalTypeEffect {...props}>{children}</TerminalTypeEffect>
+);
 
 export { LazyTerminalTypeEffect };

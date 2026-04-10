@@ -131,7 +131,8 @@ export const FORMAT_RATE = new Intl.NumberFormat('fr-FR', {
 	maximumFractionDigits: 2,
 });
 
-export const getAbsoluteUrl = pathname =>
-	typeof window !== 'undefined'
-		? `${window.location.origin}${pathname}`
-		: pathname;
+/** Path-only URL for Gatsby <Link> and consistent SSR/client output (never use window.location here — that caused React #418 text hydration mismatches). */
+export const getAbsoluteUrl = (pathname) => {
+	if (pathname == null || pathname === '') return '/';
+	return pathname.charAt(0) === '/' ? pathname : '/' + pathname;
+};

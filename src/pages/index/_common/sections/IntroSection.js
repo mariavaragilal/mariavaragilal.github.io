@@ -23,7 +23,6 @@ export const IntroSection = ({ onScrollToWork }) => {
 							duration={500}
 							element='h1'
 							className='relative transition-all ease-in-out duration-500 drop-shadow-[0_0_5px_rgba(0,0,0,0.1)] dark:drop-shadow-[0_0_5px_rgba(255,255,255,0.1)] font-mono md:font-light text-[clamp(2rem,15vw,8.5rem)] leading-[clamp(2.5rem,15vw,8rem)] md:text-[clamp(2rem,8vw,8.5rem)] md:leading-[clamp(2.5rem,7vw,7rem)] tracking-[-.075em]'
-							fallback={<h1 id='hero-heading' className='font-mono md:font-light text-[clamp(2rem,15vw,8.5rem)] leading-[clamp(2.5rem,15vw,8rem)] md:text-[clamp(2rem,8vw,8.5rem)] md:leading-[clamp(2.5rem,7vw,7rem)] tracking-[-.075em]'>{t('cv.name')}</h1>}
 							id='hero-heading'>
 							{intro?.heroNameLine1} <br />{intro?.heroNameLine2}
 						</LazyTerminalTypeEffect>
