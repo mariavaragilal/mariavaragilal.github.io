@@ -16,7 +16,7 @@ const CVHeader = () => {
 	const { t } = useTranslation();
 	const { social } = useSiteMetadata();
 	return (
-		<header className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-8 border-b border-border'>
+		<header className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-8 border-b border-border'>
 			<div className='block w-full'>
 				<h1 className='sr-only'>CV</h1>
 				<p className='text-7xl/15 text-foreground max-w-xs min-h-[7.5rem] font-mon tracking-tighter font-medium'>{t('cv.name')}</p>
@@ -26,7 +26,7 @@ const CVHeader = () => {
 				<p className='font-mon font-medium leading-[1.175em] text-[1.675em] text-foreground mt-0 mb-0 w-full max-w-md'>{t('cv.title')}</p>
 				<a href={social.linkedin} target='_blank' rel='noopener noreferrer' className='text-[1em] text-current/66 hover:text-blue-600 dark:hover:text-blue-400 hover:underline'>{stripProtocol(social.linkedin)}</a>
 			</div>
-			<nav className='p-0 mt-auto' aria-label='External profiles'>
+			<nav className='p-0 mt-auto col-span-2 lg:col-span-1' aria-label='External profiles'>
 				<h1 className='sr-only'>links</h1>
 				{NAV_LINKS.map(({ key, label }, i) => (
 					<a

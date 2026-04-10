@@ -6,8 +6,8 @@ const CVAwardsSection = () => {
 	return (
 		<section>
 			<h2 className='font-mon font-medium tracking-tighter text-4xl text-foreground mb-3'>{t('nav.awards')}</h2>
-			<div className='space-y-4'>
-				<div className='pb-4 border-b border-border'>
+			<div className='space-y-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4'>
+				<div className='pb-4 lg:border-b border-border'>
 					<h3 className='text-[1.25em] text-foreground font-bold'>
 						<a href='https://www.canneslions.com/festival' target='_blank' rel='noopener noreferrer' className='text-foreground hover:text-primary hover:underline'>{t('awards.younglions.name')}</a>
 					</h3>

@@ -39,7 +39,7 @@ export const CaseCard = ({ app, isSelected, onToggle, href, to, icon, iconChar =
 	) : null;
 
 	const footer = (app.tools || hostnameEl) ? (
-		<CardContent className='rounded-md border border-border/40 bg-secondary/75 w-full mt-auto' customPadding='px-4 py-2'>
+		<CardContent className={`rounded-md ${variant === 'secondary' ? 'border border-border/50 bg-background' : 'border border-border/40 bg-secondary/75'} w-full mt-auto`} customPadding='px-4 py-2'>
 			<div className='flex flex-col gap-0.5'>
 				{app.tools ? <span className='font-mono text-[0.65rem] leading-relaxed line-clamp-1'>{app.tools}</span> : null}
 				{hostnameEl}
@@ -132,6 +132,7 @@ export const CaseCard = ({ app, isSelected, onToggle, href, to, icon, iconChar =
 					</CardAction>
 				</div>
 				<CardDescription className='text-[1em] lg:max-w-[90%]'>{app.subtitle}</CardDescription>
+				{Array.isArray(app.skillsDemonstrated) && app.skillsDemonstrated.length > 0 ? <p className='font-mono text-[0.65rem] leading-relaxed text-current/44 mt-1'>{app.skillsDemonstrated.join(' · ')}</p> : null}
 			</CardHeader>
 			{footer}
 		</Card>

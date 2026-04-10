@@ -9,6 +9,8 @@ const cardVariants = cva('flex flex-col rounded-lg', {
 			secondary: 'bg-secondary/50 text-secondary-foreground',
 			muted: 'bg-secondary/25 text-card-foreground border-border',
 			inverse: 'bg-primary/5',
+			ghost: 'bg-transparent border border-border',
+			transparent: 'bg-transparent',
 		},
 	},
 	defaultVariants: {
@@ -22,7 +24,7 @@ const DEFAULT_CONTENT_PADDING = '[&:last-child]:pb-6';
 const DEFAULT_FOOTER_PADDING = 'pb-6 [.border-t]:pt-6';
 const HEADER_BASE = 'grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 w-full';
 const TITLE = 'leading-none font-medium tracking-tight';
-const DESCRIPTION = 'text-current/66';
+const DESCRIPTION = 'text-current/66 mb-2';
 const CONTENT_BASE = '';
 const FOOTER_BASE = 'flex items-center';
 const ACTION = 'col-start-2 row-span-2 row-start-1 self-start justify-self-end';

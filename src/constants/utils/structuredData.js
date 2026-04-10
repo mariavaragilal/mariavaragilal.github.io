@@ -38,3 +38,15 @@ export const buildDescription = (app) => {
 	if (app.caseStudy?.businessProblem) parts.push(app.caseStudy.businessProblem);
 	return parts.join(' ').trim();
 };
+
+export const joinSkillsDemonstrated = (value) => {
+	if (!Array.isArray(value)) return '';
+	return value.filter(Boolean).join(' · ');
+};
+
+export const caseSkillsDemonstratedLabel = (app) => joinSkillsDemonstrated(app.skillsDemonstrated);
+
+export const caseMatchesStrengthTag = (app, tag) => {
+	if (!tag) return false;
+	return caseSkillsDemonstratedLabel(app).includes(tag);
+};

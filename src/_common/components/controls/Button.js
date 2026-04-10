@@ -13,6 +13,7 @@ const buttonVariants = cva('inline-flex items-center justify-center gap-2 whites
 			link: 'text-primary underline-offset-4 hover:underline',
 			primary: 'bg-primary text-primary-foreground hover:bg-primary/90',
 			inverse: 'bg-foreground/90 text-background hover:bg-foreground',
+			card: 'bg-card text-card-foreground hover:bg-card/90',
 		},
 		size: {
 			default: 'h-9 px-4 py-2',

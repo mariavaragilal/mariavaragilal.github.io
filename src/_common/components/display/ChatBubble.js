@@ -4,7 +4,7 @@ import { cn } from '../../../constants/utils/cn';
 const WIDTH_CLASSES = { 'fit-content': 'w-fit', full: 'w-full', auto: 'w-auto' };
 
 const VARIANTS = {
-	default: 'bg-primary/10 text-primary',
+	default: 'bg-secondary text-primary',
 	primary: 'bg-primary text-primary-foreground',
 	inverse: 'bg-primary-foreground text-primary',
 	secondary: 'bg-secondary text-secondary-foreground',

@@ -23,7 +23,7 @@ export const MethodSection = ({ expandedDimension, toggleDimensionDetail }) => {
 					{method.heading}
 				</LazyTerminalTypeEffect>
 				<p className='text-[1.25em] text-current tracking-wide underline'>{method.subtitle}</p>
-				<div className='grid gap-x-10 gap-y-6 md:grid-cols-[minmax(0,.8fr)_minmax(0,1.4fr)] mt-10'>
+				<div className='grid gap-x-10 gap-y-6 md:grid-cols-[minmax(0,.8fr)_minmax(0,1.4fr)]'>
 					<div className='space-y-4 text-[1.125rem] leading-relaxed text-foreground'>
 						<p>{method.intro?.column1}</p>
 					</div>

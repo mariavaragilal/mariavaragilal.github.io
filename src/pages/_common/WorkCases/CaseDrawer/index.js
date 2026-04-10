@@ -30,12 +30,12 @@ export const CaseStudyView = ({ app, cases = [] }) => {
 	};
 
 	return (
-		<div className='flex flex-col lg:flex-row flex-1 min-h-0 overflow-y-auto lg:overflow-hidden lg:h-full'>
-			<nav className='sticky z-10 top-0 left-0 flex flex-wrap lg:flex-col lg:h-full gap-5 items-center shrink-0 bg-secondary/50 p-4 justify-between'>
+		<div className='flex flex-col xl:flex-row flex-1 min-h-0 overflow-y-auto xl:overflow-hidden xl:h-full'>
+			<nav className='sticky z-10 top-0 left-0 flex flex-wrap xl:flex-col xl:h-full gap-5 items-center shrink-0 bg-secondary/50 p-4 justify-between'>
 				<Button as={Link} to='/#work' variant='secondary' size='icon' className='size-8' aria-label={'Back to ' + (ws.heading || '')}>
 					<motion.span animate={{ rotate: 45 }} className='font-mono font-thin text-xl leading-none' aria-hidden='true'>+</motion.span>
 				</Button>
-				<div className='flex lg:flex-col gap-2'>
+				<div className='flex xl:flex-col gap-2'>
 					<Button variant='secondary' size='icon' className='size-8' onClick={goPrev} disabled={!hasPrev} aria-label={ui.previousCase}>←</Button>
 					<Button variant='secondary' size='icon' className='size-8' onClick={goNext} disabled={!hasNext} aria-label={ui.nextCase}>→</Button>
 				</div>

@@ -43,7 +43,7 @@
 			"column1": "Growth creates complexity. When a single product becomes a platform of interconnected solutions, the biggest risk is losing the feeling of one coherent experience.",
 			"column2": "The Maria Varagilal Playbook Method is the approach I've developed and refined along the way — translating the philosophy behind my work into a repeatable practice. Applied across strategy, design, implementation, and rollout — not just documentation — it protects the original vision as products evolve.",
 			"column3": "Most of my career has been spent solving that exact problem: how to keep a multi-product experience coherent as it scales.",
-			"column4": "For me, the design lives directly in code — whether in a component, a layout, or a page. I explore and validate in design tools; once a direction is approved, I build it where it has to live to stay real."
+			"column4": "For me, the design lives where it has to survive — in code, in a brand system, in a campaign. I explore and validate in design tools; once a direction is approved, I build it where it needs to live to stay real."
 		}
 	},
 	"commitments": [
@@ -188,8 +188,8 @@
 				"dimension": "Dimension 3"
 			},
 			{
-				"step": "Test",
-				"desc": "Learn from real users and real data",
+				"step": "Observe",
+				"desc": "Learn from real usage and real signals",
 				"dimension": "Dimension 5"
 			},
 			{
@@ -210,10 +210,9 @@
 					"period": "2015–Present",
 					"status": "shipped",
 					"title": "Securibox: Unified Identity",
-					"subtitle": "Brand identity, visual language, and every public-facing page — from logo to production build — for a data-automation company that needed to feel like one trusted platform",
+					"subtitle": "Built brand identity and design language from zero, then enforced it across six products and sub-brands — creating patterns that flex per audience while keeping the platform coherent",
 					"role": "Technical Product Designer & Frontend Developer",
 					"tools": "Sketch · Figma · Gatsby · Bootstrap · React · Vite · Redux · Accessibility (WCAG)",
-					"dimensions": "Maria Varagilal Playbook Methodology",
 					"highlight": "Created the Securibox brand identity from scratch — logo, colour system, typography, imagery rules — and designed and built every public-facing page: corporate site, solution pages (CloudAgents, ParseXtract), about, careers, and contact. Then extended this foundation into a Unified Solutions Brand that carries across all product UIs, sub-brands, and white-label surfaces in production.",
 					"results": [
 						"Brand identity and logo designed from the ground up — colour system, typography scale, imagery direction, and application rules",
@@ -269,7 +268,6 @@
 					},
 					"caseStudy": {
 						"businessProblem": "Securibox had no established brand identity. As the company expanded from original document-management service into multiple solutions, each product emerged with its own visual language and no shared foundation. The corporate site needed to present a credible, unified platform to enterprise prospects. Solution pages needed to introduce technical products to both developers and business decision-makers. Without a brand, a visual language, or a page strategy, every touchpoint told a different story — fragmenting trust in a company that needed to feel like one reliable partner.",
-						"skillsDemonstrated": "Brand identity from scratch · Visual language design · Corporate site strategy · Public page design & build · Shared design language foundations · Sub-brand architecture",
 						"strategicDecision": {
 							"intro": "Every decision began with one question:",
 							"question": "Does this make Securibox feel like one trusted company — or multiple separate tools?"
@@ -368,18 +366,67 @@
 						"tradeoffsLearnings": [
 							"— Prioritising shared principles over visual flourish meant scaling back early design iterations. Adoption across teams mattered more than any single page looking its best in isolation.",
 							"",
-							"— Bootstrap was a strategic choice — not a limitation. Using a framework with established conventions reduced documentation overhead and made it possible for one designer to maintain consistency across six properties.",
-							"",
-							"— The corporate site and solution pages were designed as the brand's first expression. Every decision made there — colour, type, hierarchy, tone — became the reference point for product UIs that followed. Getting it wrong publicly would have undermined the system before it reached internal surfaces.",
-							"",
 							"— Unification proved to be as much about culture as design. The identity was built to remain resilient even as teams evolve and new products are introduced."
 						],
 						"quote": {
 							"title": "Define what matters, shrink the space between design and production.",
 							"subtitle": "One logo, one language, one build. The brand is the language."
-						}
+						},
+						"skillsDemonstrated": [
+							"Systems thinking",
+							"Design to code",
+							"Design rationale",
+							"Tool exploration"
+						],
+						"projectSpecificSkills": "Brand identity from scratch · Visual language design · Corporate site strategy · Public page design & build · Shared design language foundations · Sub-brand architecture",
+						"skillsByStrength": [
+							{
+								"strength": "Systems thinking",
+								"items": "Brand identity from scratch · Visual language design"
+							},
+							{
+								"strength": "Design to code",
+								"items": "Corporate site strategy"
+							},
+							{
+								"strength": "Design rationale",
+								"items": "Public page design & build · Shared design language foundations"
+							},
+							{
+								"strength": "Tool exploration",
+								"items": "Sub-brand architecture"
+							}
+						],
+						"decisionsInPractice": [
+							{
+								"badge": "strategic",
+								"strength": "Systems thinking",
+								"title": "Bootstrap as shared styling foundation — not a limitation, a leverage point",
+								"task": "Needed a consistent styling system across six properties maintained by one designer.",
+								"issue": "Custom CSS per property would create drift and maintenance overhead at the scale of a solo design-to-code workflow.",
+								"insight": "A framework with established conventions reduces documentation overhead — the configuration becomes the spec.",
+								"decision": "Adopted Bootstrap as the shared styling foundation. Brand applied through configuration, not custom builds.",
+								"outcome": "Design specs and shipped CSS draw from the same source across all properties. One person can maintain consistency at platform scale."
+							},
+							{
+								"badge": "strategic",
+								"strength": "Design rationale",
+								"title": "Corporate site designed as the brand's first expression — not an afterthought",
+								"task": "The brand identity needed its first public validation before being extended to product UIs.",
+								"issue": "Getting it wrong on a public page would undermine the entire system before it reached internal surfaces.",
+								"insight": "Every decision made on the corporate site — colour, type, hierarchy, tone — becomes the reference point for everything that follows.",
+								"decision": "Designed and shipped the corporate site and solution pages first. Every brand decision was stress-tested publicly before entering product UIs.",
+								"outcome": "The public site became the living brand reference. Product UIs inherit from a foundation that was already validated with external audiences."
+							}
+						]
 					},
-					"slug": "securibox-unified-identity"
+					"slug": "securibox-unified-identity",
+					"skillsDemonstrated": [
+						"Systems thinking",
+						"Design to code",
+						"Design rationale",
+						"Tool exploration"
+					]
 				},
 				{
 					"period": "2015",
@@ -387,8 +434,7 @@
 					"title": "Cube - Own your data",
 					"role": "Technical Product Designer & Frontend Developer",
 					"tools": "Figma · React · Gatsby · Vite · Accessibility (WCAG)",
-					"subtitle": "Making credential handover feel safe and worth doing — Cube is the consumer face of Securibox's agent technology",
-					"dimensions": "Consumer · Trust · Systems",
+					"subtitle": "Designing trust into credential handover across 300+ integrations — error handling, progressive disclosure, and empty states for a product where one wrong signal breaks everything",
 					"highlight": "Cube asks users to hand over login credentials for their bank, telecoms, insurance, and retail accounts so automated agents collect documents on their behalf. The design problem: making something inherently invasive feel safe, clear, and worth doing — across 300+ integrations, designed and shipped in production code. Typography, grid, and visual detail aren't afterthoughts — when a product has to earn trust before a single interaction, craft is doing functional work, not decorative work.",
 					"results": [
 						"Agent integrations across multiple industries: banking, utilities, HR, retail, ...",
@@ -415,8 +461,7 @@
 					"caseStudy": {
 						"processHeading": "Key decisions",
 						"tradeoffsHeading": "Trade-offs & Learnings",
-						"businessProblem": "Securibox's agent technology automates document collection by connecting to users' bank, telecoms, insurance, and retail accounts through stored credentials. The technology worked — the design problem was the moment of handover. Users had to trust a product with their login credentials for every provider, and one wrong signal — an unclear sync status, a missing storage path, an unexplained error — breaks that trust entirely. The same platform powers both Cube (consumer) and SCA (developer/operator). I designed the product experience and built the frontend for both, but the audiences diverge completely: Cube needed emotional safety and progressive disclosure; SCA needed operational density and configuration precision. This case covers the consumer side.",
-						"skillsDemonstrated": "Consumer product design · Trust-pattern UX · Sub-brand creation · Information architecture at scale · Credential & security UX · Bilingual i18n · React + Gatsby frontend",
+						"businessProblem": "Users had to trust a product with their login credentials for every provider — bank, telecoms, insurance, retail — and one wrong signal breaks that trust entirely. Securibox's agent technology automates document collection through stored credentials; the technology worked, but the design problem was the moment of handover. An unclear sync status, a missing storage path, an unexplained error — any of these could shatter confidence. Both Cube (consumer) and the SCA BackOffice (developer/operator) are built on the same underlying solution — Securibox CloudAgents. I designed the product experience and built the frontend for both, but the audiences diverge completely: Cube needed emotional safety and progressive disclosure; the SCA BackOffice needed operational density and configuration precision. This case covers the consumer side.",
 						"strategicDecision": {
 							"intro": "Users already wanted to automate. The only question that mattered:",
 							"question": "Can I trust you with my credentials?"
@@ -432,7 +477,7 @@
 								"phase": "Decision 2",
 								"label": "Scale",
 								"title": "Two views for 300+ agents — both necessary",
-								"description": "A user who knows exactly which provider they want needs a scannable list with status at a glance. A user exploring needs logo density — to feel the scale of what's possible. List view: provider name, document types, last sync, and connection status in one row. Card view: same data, denser grid, prioritising provider identity and the add action. The filter sidebar is identical in both modes — same system, two expressions. The \"Unavailable\" badge was a late decision: testing showed users couldn't distinguish working from unconfigured with only a status dot, so the explicit text label was added alongside the colour signal."
+								"description": "A user who knows exactly which provider they want needs a scannable list with status at a glance. A user exploring needs logo density — to feel the scale of what's possible. List view: provider name, document types, last sync, and connection status in one row. Card view: same data, denser grid, prioritising provider identity and the add action. The filter sidebar is identical in both modes — same system, two expressions. The \"Unavailable\" badge was a late decision: a status dot alone wouldn't let users distinguish working from unconfigured at scan speed — so the explicit text label was designed alongside the colour signal from the start."
 							},
 							{
 								"phase": "Decision 3",
@@ -505,8 +550,6 @@
 						"tradeoffsLearnings": [
 							"— The landing page (cube.securibox.eu) was designed alongside the app — not after it. It handles the first layer of understanding (what agents are, how sync works) so the app itself can skip the explainer and let users explore immediately.",
 							"",
-							"— Inside the app, there used to be a step-by-step walkthrough. It was removed. Instead of pushing actions or asking for immediate commitment, the experience stays open and pressure-free. When no agent is set up, the interface shows a single clear entry point: \"Configure your first agent.\" Only after interacting do users see available options. Progressive reveal over guided tours.",
-							"",
 							"— Cube as a sub-brand had to feel distinct from Securibox corporate — approachable, personal, consumer-grade — while clearly belonging to the same family. The tension surfaced in every colour and type decision: too far from the parent brand and enterprise clients question the relationship; too close and consumers feel they've landed in a B2B tool. The resolution was accent colour and tone of voice, not structural divergence.",
 							"",
 							"— Maintaining two build systems — Gatsby for the marketing site and React/Vite for the app — introduced overhead. The trade-off was worth it: the marketing site needed static generation, SEO, and fast first-paint; the app needed SPA routing, shared state, and component reuse with SCA. Keeping them separate meant each could optimise for its audience without compromising the other.",
@@ -516,19 +559,83 @@
 						"quote": {
 							"title": "Trust is the product. Everything else is plumbing.",
 							"subtitle": "300+ agents, one credential moment — designed so the hardest step feels like the safest one."
-						}
+						},
+						"skillsDemonstrated": [
+							"Edge cases & resilience",
+							"Design rationale",
+							"Production-informed iteration",
+							"Design to code",
+							"Tool exploration",
+							"Systems thinking"
+						],
+						"projectSpecificSkills": "Consumer product design · Trust-pattern UX · Sub-brand creation · Information architecture at scale · Credential & security UX · Bilingual i18n · React + Gatsby frontend",
+						"skillsByStrength": [
+							{
+								"strength": "Edge cases & resilience",
+								"items": "Consumer product design · Trust-pattern UX · Sub-brand creation"
+							},
+							{
+								"strength": "Design rationale",
+								"items": "Information architecture at scale · Credential & security UX"
+							},
+							{
+								"strength": "Production-informed iteration",
+								"items": "Bilingual i18n · React + Gatsby frontend"
+							},
+							{
+								"strength": "Design to code",
+								"items": "React + Gatsby frontend · Dashboard and agent views"
+							},
+							{
+								"strength": "Tool exploration",
+								"items": "Multi-tool delivery across Figma, Gatsby, and React"
+							},
+							{
+								"strength": "Systems thinking",
+								"items": "Cross-surface architecture from marketing to app flows"
+							}
+						],
+						"decisionsInPractice": [
+							{
+								"badge": "proactive",
+								"strength": "Edge cases & resilience",
+								"title": "Unavailable badge — designed in from the start, not patched after",
+								"task": "Agent card grid needed to communicate three states: active, available to configure, and temporarily offline.",
+								"issue": "A colour-coded status dot alone would force users to learn a legend before the interface made sense.",
+								"insight": "If someone has to pause and decode a signal, it's not a signal — it's a puzzle. The pain point was obvious before it ever reached a user.",
+								"decision": "Designed the explicit \"Unavailable\" text label alongside the colour dot from the start — redundant by design, not by accident.",
+								"outcome": "Status legible at scan speed from day one. No user ever had to guess what the dot meant."
+							},
+							{
+								"badge": "production-informed",
+								"strength": "Production-informed iteration",
+								"title": "Step-by-step walkthrough removed after launch",
+								"task": "Onboarding needed to guide new users toward configuring their first agent.",
+								"issue": "The walkthrough created commitment pressure — users felt pushed to act before they understood the product.",
+								"insight": "Guided tours optimise for activation metrics. The product needed to optimise for trust — a user who browses first commits better.",
+								"decision": "Removed the walkthrough. Replaced it with a single clear entry point: \"Configure your first agent.\" Options reveal only after interaction.",
+								"outcome": "Progressive reveal over guided tours. Users explored before committing — no onboarding friction disguised as help."
+							}
+						]
 					},
-					"slug": "cube-own-your-data"
+					"slug": "cube-own-your-data",
+					"skillsDemonstrated": [
+						"Edge cases & resilience",
+						"Design rationale",
+						"Production-informed iteration",
+						"Design to code",
+						"Tool exploration",
+						"Systems thinking"
+					]
 				},
 				{
 					"period": "2015",
 					"status": "shipped",
 					"title": "SCA - CloudAgents",
-					"subtitle": "Designing the operator layer for an API product — from agent configuration to sync monitoring across 500+ integrations",
+					"subtitle": "Two audiences sharing one platform — developers and operators each needing clarity the other reads as noise. Designed the information architecture and status systems, then built the frontend",
 					"role": "Technical Product Designer & Frontend Developer",
 					"tools": "Figma · React · Vite · Bootstrap · Accessibility (WCAG)",
-					"dimensions": "Developer · Operations · Systems",
-					"highlight": "SCA is the infrastructure Cube runs on. The work spanned both sides of the same technology: the consumer product where users collect their documents, and the operator platform where developers configure integrations and operations teams monitor agents at scale.",
+					"highlight": "The SCA BackOffice is where developers configure integrations and operations teams monitor agents at scale — the management layer for the Securibox CloudAgents solution. The work spanned information architecture, status systems, and the production frontend for a tool where two completely different audiences share the same interface.",
 					"results": [
 						"BackOffice with 6 operational sections, role-based permission management, dark and light theme",
 						"Multilingual BO — French, English, Portuguese",
@@ -553,7 +660,7 @@
 					"caseStudy": {
 						"processHeading": "Key decisions",
 						"tradeoffsHeading": "Trade-offs & Learnings",
-						"businessProblem": "SCA is the infrastructure Cube runs on — but its users are developers and operations teams, not consumers. They share the same platform but think differently, work at different speeds, and fail differently when the interface doesn't support their job. A developer misconfiguring a field definition causes a downstream integration error. An operator missing a divergent sync status under time pressure means an account stays broken. Both need clarity, but clarity for one audience is noise for the other",
+						"businessProblem": "Two audiences — developers and operations teams — manage the same Securibox CloudAgents solution but think differently, work at different speeds, and fail differently when the interface doesn't support their job. A developer misconfiguring a field definition causes a downstream integration error. An operator missing a divergent sync status under time pressure means an account stays broken. Both need clarity, but clarity for one audience is noise for the other.",
 						"strategicDecision": {
 							"intro": "The operator challenge:",
 							"question": "How do you keep two completely different jobs clear on the same platform?"
@@ -625,25 +732,87 @@
 						"tradeoffsLearnings": [
 							"The BackOffice was designed to support the configuration and management of agents. Each section is internally coherent, while the relationships between them remain intentionally implicit.",
 							"Some connections are naturally discoverable. *CloudAgents* and *Statistiques*, for example, are tightly linked — the agent detail links directly to 'Open in Statistiques', and users can move between isolated and aggregate views without losing context. *Support* operates at the account level, and the transition between support and account management is straightforward enough that it doesn't require explicit linking.",
-							"The Webview configuration surface evolved from field-level control to a full brand customisation tool. The live preview pane was a late addition — originally, clients configured and deployed blind. Adding the preview reduced integration cycles significantly, because clients could validate their branding before generating the embeddable link.",
 							"This structure reflects the product's original build. Today, it could evolve to better align with its updated usage — shifting the BackOffice toward a support-first workflow as the primary entry point, with agent configuration and permissions becoming secondary paths."
 						],
 						"quote": {
 							"title": "Two audiences, one platform — each job clear at every level of zoom.",
 							"subtitle": "From grid overview to account-level sync history, the path never breaks."
 						},
-						"skillsDemonstrated": "Developer platform UX · Operator tooling · Multi-audience Information Architecture · White-label configuration · Status system design"
+						"skillsDemonstrated": [
+							"Systems thinking",
+							"Design rationale",
+							"Proactive & collaborative",
+							"Tool exploration",
+							"Design to code",
+							"Edge cases & resilience"
+						],
+						"projectSpecificSkills": "Developer platform UX · Operator tooling · Multi-audience Information Architecture · White-label configuration · Status system design",
+						"skillsByStrength": [
+							{
+								"strength": "Systems thinking",
+								"items": "Developer platform UX · Multi-audience Information Architecture"
+							},
+							{
+								"strength": "Design rationale",
+								"items": "Status system design · Decision framing across operator and developer contexts"
+							},
+							{
+								"strength": "Proactive & collaborative",
+								"items": "Operator tooling clarity · Cross-team alignment on workflow boundaries"
+							},
+							{
+								"strength": "Tool exploration",
+								"items": "White-label configuration strategy · API-first product tooling context"
+							},
+							{
+								"strength": "Design to code",
+								"items": "React + Vite frontend implementation across BackOffice and Webview"
+							},
+							{
+								"strength": "Edge cases & resilience",
+								"items": "Divergent sync status handling and operational error surfaces"
+							}
+						],
+						"decisionsInPractice": [
+							{
+								"badge": "proactive",
+								"strength": "Proactive & collaborative",
+								"title": "Webview live preview — self-service customisation instead of back-and-forth",
+								"task": "Clients needed to customise the embeddable Webview appearance — logo, colours, theme, fonts, consent text.",
+								"issue": "Every visual change required clients to describe what they wanted and wait for the team to apply it. The feedback loop was slow and error-prone.",
+								"insight": "If clients can see the result in real time, they stop requesting changes and start making them. Ownership shifts from the team to the client.",
+								"decision": "Added a live preview pane beside the configuration form — clients see the Webview update as they adjust settings.",
+								"outcome": "Clients customise independently. Support requests for visual changes dropped. The configuration surface became a self-service tool."
+							},
+							{
+								"badge": "strategic",
+								"strength": "Systems thinking",
+								"title": "Three top-level navigation paths — separating jobs at architecture level",
+								"task": "Operators and developers share the same BackOffice platform but work at different speeds and fail differently.",
+								"issue": "A unified navigation risks someone editing agent definitions accidentally landing in sync failure triage.",
+								"insight": "The people using each section are in completely different headspaces. Navigation should reflect job boundaries, not product structure.",
+								"decision": "Three distinct starting points — agent management, support/troubleshooting, permission configuration. Not tabs, not a sidebar with everything visible.",
+								"outcome": "Each job starts from its own entry point. The dashboard gives aggregate health before drill-down."
+							}
+						]
 					},
-					"slug": "sca-cloudagents"
+					"slug": "sca-cloudagents",
+					"skillsDemonstrated": [
+						"Systems thinking",
+						"Design rationale",
+						"Proactive & collaborative",
+						"Tool exploration",
+						"Design to code",
+						"Edge cases & resilience"
+					]
 				},
 				{
 					"period": "2019",
 					"status": "shipped",
 					"title": "Me - Securibox Account",
-					"subtitle": "Account identity hub and connected-services surface — profile, credentials, data transparency - one account layer serving the entire Securibox ecosystem",
+					"subtitle": "One account hub for the whole ecosystem — scoped tightly on purpose. The hardest work was deciding what to keep out. Inline data transparency, intentional empty states, per-service deletion consequences",
 					"role": "Technical Product Designer & Frontend Developer",
 					"tools": "Figma · React · Vite · Redux · Bootstrap · Accessibility (WCAG)",
-					"dimensions": "Dimensions 3, 5",
 					"highlight": "Designed and built the account hub that gives users a single home for their identity, connected services, and data-use transparency across the Securibox ecosystem — with inline explanations of how each piece of personal data is used.",
 					"results": [
 						"Unified identity layer across all services",
@@ -665,7 +834,7 @@
 					"caseStudy": {
 						"processHeading": "Key decisions",
 						"tradeoffsHeading": "Trade-offs & Learnings",
-						"businessProblem": "As the Securibox ecosystem grew — Cube, SCA, RH, ParseXtract, and client portals — users had no central place to manage their identity. Profile edits, password changes, and connected-service visibility were scattered or absent. Each product either rolled its own account fragment or had none. Users couldn't see which services were connected to their account, couldn't manage credentials from one place, and had no visibility into how their data was used across the platform. The result was friction, redundant support requests, and eroded trust in a platform that needed to feel unified.",
+						"businessProblem": "Users had no central place to manage their identity across the Securibox ecosystem. As the platform grew — Cube, SCA, RH, ParseXtract, and client portals — profile edits, password changes, and connected-service visibility were scattered or absent. Each product either rolled its own account fragment or had none. Users couldn't see which services were connected to their account, couldn't manage credentials from one place, and had no visibility into how their data was used across the platform. The result was friction, redundant support requests, and eroded trust in a platform that needed to feel unified.",
 						"strategicDecision": {
 							"intro": "The account challenge:",
 							"question": "How do you give users a single home for their identity and connected services — without duplicating product-specific settings or creating another silo?"
@@ -716,9 +885,7 @@
 							]
 						},
 						"tradeoffsLearnings": [
-							"The hardest boundary to maintain was scope. Every product team had settings they wanted to surface in Me — notification preferences, billing details, feature flags. The decision to keep Me focused on identity and ecosystem visibility meant saying no repeatedly. The alternative was a settings mega-page that would grow with every product release and become nobody's responsibility.",
-							"The data-use sidebar was initially planned as a tooltip. Testing showed users dismissed tooltips without reading them. Moving the explanation to a persistent, always-visible panel beside the form changed completion behaviour — users paused, read, and edited with more confidence. A small layout decision with outsized trust impact.",
-							"The 'Recently updated' section ships empty for new accounts ('No updates yet!'). This was intentional — showing an empty state rather than hiding the section establishes the mental model early. Users learn this is a place to check back, even before there's content."
+							"The hardest boundary to maintain was scope. Every product team had settings they wanted to surface in Me — notification preferences, billing details, feature flags. The decision to keep Me focused on identity and ecosystem visibility meant saying no repeatedly. The alternative was a settings mega-page that would grow with every product release and become nobody's responsibility."
 						],
 						"resultsMetrics": [
 							"Single identity layer across the entire Securibox ecosystem",
@@ -731,18 +898,75 @@
 							"title": "An account hub that shows users what their identity touches — and explains why.",
 							"subtitle": "Transparency as a design decision, not a compliance checkbox."
 						},
-						"skillsDemonstrated": "Cross-product identity architecture · Data transparency UX · Ecosystem visibility · Scope discipline"
+						"skillsDemonstrated": [
+							"Systems thinking",
+							"Edge cases & resilience",
+							"Production-informed iteration",
+							"Design rationale",
+							"Design to code"
+						],
+						"projectSpecificSkills": "Cross-product identity architecture · Data transparency UX · Ecosystem visibility · Scope discipline",
+						"skillsByStrength": [
+							{
+								"strength": "Systems thinking",
+								"items": "Cross-product identity architecture · Ecosystem visibility · Scope discipline"
+							},
+							{
+								"strength": "Edge cases & resilience",
+								"items": "Data transparency UX · Intentional empty states · Per-service deletion consequences"
+							},
+							{
+								"strength": "Production-informed iteration",
+								"items": "Tooltip-to-inline-panel evolution based on real usage behaviour"
+							},
+							{
+								"strength": "Design rationale",
+								"items": "Scope boundaries and trust decisions across identity surfaces"
+							},
+							{
+								"strength": "Design to code",
+								"items": "Production account hub implementation and service-card interactions"
+							}
+						],
+						"decisionsInPractice": [
+							{
+								"badge": "proactive",
+								"strength": "Production-informed iteration",
+								"title": "Data-use explanation as a persistent panel, not a tooltip",
+								"task": "Each account field needed a contextual explanation of how Securibox uses that data.",
+								"issue": "A tooltip requires the user to hover and actively seek the information — most won't.",
+								"insight": "Transparency shouldn't depend on curiosity. If the explanation matters, it should be visible by default — not hidden behind a hover.",
+								"decision": "Designed the explanation as an always-visible sidebar panel beside the form, not as a tooltip.",
+								"outcome": "Users see how their data is used in the same view where they edit it. Transparency as the default state, not an opt-in."
+							},
+							{
+								"badge": "proactive",
+								"strength": "Edge cases & resilience",
+								"title": "Empty state shown from day one — not hidden until there's content",
+								"task": "The 'Recently updated' section needed to handle new accounts with no activity.",
+								"issue": "Hiding the section until there's content means users never learn it exists.",
+								"insight": "Showing an empty state establishes the mental model early — users learn this is a place to check back.",
+								"decision": "Shipped the section empty with 'No updates yet!' rather than hiding it conditionally.",
+								"outcome": "Users discovered the feature before they needed it. The mental model was in place when the first update arrived."
+							}
+						]
 					},
-					"slug": "me-securibox-account"
+					"slug": "me-securibox-account",
+					"skillsDemonstrated": [
+						"Systems thinking",
+						"Edge cases & resilience",
+						"Production-informed iteration",
+						"Design rationale",
+						"Design to code"
+					]
 				},
 				{
 					"period": "2017",
 					"status": "shipped",
 					"title": "Securibox ID",
-					"subtitle": "Security-critical auth and registration — balancing conversion, trust, and WCAG accessibility in the first moment users encounter the platform",
+					"subtitle": "Central auth layer inherited by every product — designed so authentication feels like a welcome, not a gate. WCAG accessibility, explicit error surfaces, and shared keyboard behaviour across the ecosystem",
 					"role": "Technical Product Designer & Frontend Developer",
 					"tools": "Figma · React · Vite · Accessibility (WCAG)",
-					"dimensions": "Dimensions 3, 5",
 					"highlight": "Designed the central authentication experience used by every Securibox product — creating a single, consistent identity layer across the ecosystem.",
 					"results": [
 						"Google & Microsoft OAuth integration",
@@ -801,14 +1025,50 @@
 								}
 							]
 						},
-						"skillsDemonstrated": "Authentication UX · Cross-product consistency",
-						"tradeoffsLearnings": "Auth is often treated as an afterthought. Making it central to the design language ensured every product inherited the same trust baseline.",
+						"tradeoffsLearnings": "The Securibox ID auth layer became the first thing every new product inherits — the trust baseline that makes the ecosystem feel unified from the very first interaction.",
 						"quote": {
 							"title": "One identity across the entire platform.",
 							"subtitle": "Auth that feels like a welcome, not a checkpoint."
-						}
+						},
+						"skillsDemonstrated": [
+							"Systems thinking",
+							"Edge cases & resilience",
+							"Design to code"
+						],
+						"projectSpecificSkills": "Authentication UX · Cross-product consistency",
+						"skillsByStrength": [
+							{
+								"strength": "Systems thinking",
+								"items": "Authentication UX"
+							},
+							{
+								"strength": "Edge cases & resilience",
+								"items": "Cross-product consistency"
+							},
+							{
+								"strength": "Design to code",
+								"items": "Production React auth UI and validation flows"
+							}
+						],
+						"decisionsInPractice": [
+							{
+								"badge": "strategic",
+								"strength": "Systems thinking",
+								"title": "Auth designed as a central layer, not an afterthought per product",
+								"task": "Every Securibox product required authentication — each was rolling its own or had none.",
+								"issue": "Inconsistent auth flows across products eroded trust and created repeated sign-up friction.",
+								"insight": "Making auth central to the design language ensures every product inherits the same trust baseline from day one.",
+								"decision": "Built one shared auth shell — OAuth, registration, recovery, WCAG focus order — inherited by all products.",
+								"outcome": "Single identity across the ecosystem. Dependent products get consistent keyboard behaviour, error patterns, and trust cues for free."
+							}
+						]
 					},
-					"slug": "securibox-id"
+					"slug": "securibox-id",
+					"skillsDemonstrated": [
+						"Systems thinking",
+						"Edge cases & resilience",
+						"Design to code"
+					]
 				},
 				{
 					"period": "2017",
@@ -817,7 +1077,6 @@
 					"subtitle": "Two-sided B2B payslip platform — HR bulk operations on one side, employee secure access on the other, with regulatory compliance built into every flow",
 					"role": "Product Designer",
 					"tools": "Figma",
-					"dimensions": "Dimensions 1, 4",
 					"highlight": "Designed and developed an app on Securibox solutions to answer the 2017 French norm: digital payslips as default, with employee opt-out right and secure document delivery.",
 					"results": [
 						"User flows that translate the 2017 norm into clear opt-in/opt-out choices",
@@ -834,7 +1093,7 @@
 						]
 					},
 					"caseStudy": {
-						"businessProblem": "In 2017, France authorised employers to issue payslips in electronic format by default. Employers must inform employees but do not need permission to switch. Employees retain a legal right to opt out and request paper. Securibox needed a product built on its existing solutions — document collection, parsing, and secure delivery — to support this norm while ensuring confidential, long-term access.",
+						"businessProblem": "Securibox needed a product to support France's 2017 electronic payslip norm — built on its existing document collection, parsing, and secure delivery solutions — while ensuring confidential, long-term access. The regulation authorised employers to issue payslips in electronic format by default; employers must inform employees but do not need permission to switch. Employees retain a legal right to opt out and request paper.",
 						"strategicDecision": {
 							"intro": "The design question:",
 							"question": "How do we answer the 2017 norm — digital payslips by default, employee opt-out for paper — with a product that guarantees secure, personal, and long-term access?"
@@ -878,14 +1137,44 @@
 								}
 							]
 						},
-						"skillsDemonstrated": "Platform product design · Regulatory UX · Secure document delivery",
-						"tradeoffsLearnings": "Building on Securibox solutions accelerated delivery. The norm shifted behaviour overnight — the app had to feel trustworthy from day one, with employees confident that opting in to digital would not compromise access or confidentiality.",
+						"tradeoffsLearnings": "The norm shifted behaviour overnight — the product had to feel trustworthy from day one, with employees confident that opting in to digital would not compromise access or confidentiality.",
 						"quote": {
 							"title": "Digital payslips for everyone.",
 							"subtitle": "Securibox solutions, built for the 2017 norm."
-						}
+						},
+						"skillsDemonstrated": [
+							"Edge cases & resilience",
+							"Design rationale"
+						],
+						"projectSpecificSkills": "Platform product design · Regulatory UX · Secure document delivery",
+						"skillsByStrength": [
+							{
+								"strength": "Edge cases & resilience",
+								"items": "Platform product design · Regulatory UX"
+							},
+							{
+								"strength": "Design rationale",
+								"items": "Secure document delivery"
+							}
+						],
+						"decisionsInPractice": [
+							{
+								"badge": "strategic",
+								"strength": "Edge cases & resilience",
+								"title": "Built on existing Securibox solutions — speed without starting from scratch",
+								"task": "The 2017 French norm required digital payslips by default. Securibox needed a product fast.",
+								"issue": "Building from scratch would miss the regulatory window. Employees needed to trust the product from day one.",
+								"insight": "Existing document collection and secure delivery capabilities could serve the payslip use case directly.",
+								"decision": "Designed the RH portal on top of Securibox's existing solutions — secure delivery and access through the platform's capabilities.",
+								"outcome": "Accelerated delivery. The product inherited trust and security from the platform it was built on."
+							}
+						]
 					},
-					"slug": "rh-hr-payslip-distribution"
+					"slug": "rh-hr-payslip-distribution",
+					"skillsDemonstrated": [
+						"Edge cases & resilience",
+						"Design rationale"
+					]
 				}
 			]
 		},
@@ -897,10 +1186,9 @@
 					"period": "2019",
 					"status": "shipped",
 					"title": "ConnectLime Website & Brand",
-					"subtitle": "B2B digital agency · brand identity + web",
+					"subtitle": "Built the agency's brand identity and bilingual website from zero — stakeholder alignment on \"professionalism through simplicity\" drove every decision, from content strategy to adaptive theme system",
 					"role": "UX/UI Designer & Brand Developer · 2019",
 					"tools": "Figma · Gatsby · Brand Guidelines",
-					"dimensions": "Dimensions 1, 2, 3",
 					"highlight": "Built complete brand identity and website from concept to implementation — clarity and trust for non-technical decision-makers.",
 					"results": [
 						"Deep brand identity definition — logo, colour system, typography",
@@ -923,11 +1211,6 @@
 								"role": "Lead Design oversight & final UI · acquired by CEGID"
 							},
 							{
-								"url": "https://www.connectlime.com/work/HotelAppz/",
-								"label": "HotelAppz — hotel CRM platform",
-								"role": "Lead Design supervision"
-							},
-							{
 								"url": "https://www.assistarobase.fr",
 								"label": "Assist@ — admin life management",
 								"role": "App design · brand and public site by third parties · employer portal runs on Securibox"
@@ -941,7 +1224,7 @@
 						]
 					},
 					"caseStudy": {
-						"businessProblem": "ConnectLime, a digital agency for startups and SMEs, lacked differentiation and trust. Fragmented service presentation and weak navigation meant potential clients left without engaging.",
+						"businessProblem": "ConnectLime was a new digital agency for startups and SMEs that needed to establish differentiation and trust from day one. Fragmented service presentation and weak navigation meant potential clients left without engaging.",
 						"strategicDecision": {
 							"intro": "The guiding principle:",
 							"question": "How do we balance credibility with approachability for SMEs choosing a digital partner?"
@@ -989,27 +1272,69 @@
 							"Bilingual FR/EN with i18n — culturally adapted, not just translated",
 							"Adaptive theme system shipped in production"
 						],
-						"tradeoffsLearnings": "Prioritised simplicity over feature density — resisted adding more content that would dilute the message. Stakeholder alignment on 'communicate professionalism through simplicity' drove faster decisions.",
+						"tradeoffsLearnings": "Stakeholder alignment on a clear principle — 'professionalism through simplicity' — made every subsequent decision faster. The constraint was the accelerant.",
 						"quote": {
 							"title": "Communicate professionalism through simplicity.",
 							"subtitle": "Clarity and trust for non-technical decision-makers choosing a digital partner."
-						}
+						},
+						"skillsDemonstrated": [
+							"Design rationale",
+							"Design to code",
+							"Proactive & collaborative",
+							"Tool exploration"
+						],
+						"projectSpecificSkills": "Brand strategy · Bilingual IA · Content architecture · Adaptive theming · Gatsby implementation",
+						"skillsByStrength": [
+							{
+								"strength": "Design rationale",
+								"items": "Brand strategy · Bilingual IA · Content architecture"
+							},
+							{
+								"strength": "Design to code",
+								"items": "Adaptive theming · Gatsby implementation"
+							},
+							{
+								"strength": "Proactive & collaborative",
+								"items": "Stakeholder alignment and iterative collaboration during delivery"
+							},
+							{
+								"strength": "Tool exploration",
+								"items": "Adaptive theming and Gatsby workflow experimentation"
+							}
+						],
+						"decisionsInPractice": [
+							{
+								"badge": "strategic",
+								"strength": "Proactive & collaborative",
+								"title": "Simplicity over feature density — stakeholder alignment drove faster decisions",
+								"task": "ConnectLime needed a website that builds trust with non-technical SME decision-makers.",
+								"issue": "The instinct was to add more content — more services, more case studies, more proof points.",
+								"insight": "Each addition diluted the core message. Professionalism through simplicity landed faster than comprehensiveness.",
+								"decision": "Prioritised simplicity over feature density. Aligned stakeholders on 'communicate professionalism through simplicity' as the decision filter.",
+								"outcome": "Fewer pages, clearer message, faster delivery. The constraint made decisions easier, not harder."
+							}
+						]
 					},
-					"slug": "connectlime-website-brand"
+					"slug": "connectlime-website-brand",
+					"skillsDemonstrated": [
+						"Design rationale",
+						"Design to code",
+						"Proactive & collaborative",
+						"Tool exploration"
+					]
 				},
 				{
 					"period": "2019",
 					"status": "shipped",
 					"title": "Gerer Ma Boite (GMB)",
-					"subtitle": "SaaS point of sale platform for entrepreneurs · acquired by CEGID",
-					"role": "Mentor & Designer",
+					"subtitle": "SaaS point-of-sale platform for French entrepreneurs — mentored the product team through strategy and architecture, and designed the bank reconciliation workflow directly. Acquired by CEGID",
+					"role": "Mentor & Designer — strategy, architecture guidance, and one workflow designed directly",
 					"tools": "Figma",
-					"dimensions": "Dimensions 2, 3, 4",
-					"highlight": "Served as Mentor and Designer, mentoring the project team and stepping in to deliver the final UI. The platform was later acquired by CEGID and integrated into their enterprise offering.",
+					"highlight": "Mentored the product team through strategy and architecture at formative stages, then stepped in to design the bank reconciliation workflow directly — for GMB, a SaaS POS platform for French entrepreneurs later acquired by CEGID.",
 					"results": [
-						"Mentored the product team through strategy, branding, and architecture phases",
-						"Delivered the final UI design, ensuring a polished, cohesive finish",
-						"Acquired by CEGID and integrated into their enterprise solution"
+						"Mentored the product team through strategy and architecture phases — shaping decisions before they became entrenched",
+						"Designed the bank reconciliation workflow — replaced accounting terminology with a plain-language card-based decision modal so entrepreneurs without accounting backgrounds could reconcile their bank statements without guessing",
+						"Platform reached acquisition standard — acquired by CEGID and integrated into their enterprise solution"
 					],
 					"references": {
 						"links": [
@@ -1020,51 +1345,99 @@
 							}
 						]
 					},
-					"slug": "gerer-ma-boite-gmb"
-				},
-				{
-					"period": "2018",
-					"status": "shipped",
-					"title": "HotelAppz",
-					"subtitle": "Next-gen CRM platform for hotels",
-					"role": "Lead Design supervision",
-					"tools": "Figma · PMS systems",
-					"dimensions": "Dimensions 2, 3, 4",
-					"highlight": "Provided Lead design oversight and mentorship for a comprehensive hotel CRM platform. Supervised the team through product strategy, branding, and UX/UI development.",
-					"results": [
-						"Supervised product design and User Experience",
-						"Mentored the design team on information architecture and interaction patterns",
-						"Ensured platform integrations with PMS systems maintained UX consistency",
-						"Positive user feedback highlighted ease of use and understanding of hotelier needs"
-					],
-					"references": {
-						"links": [
+					"slug": "gerer-ma-boite-gmb",
+					"caseStudy": {
+						"businessProblem": "Making complex financial workflows accessible to non-accountants without oversimplifying the accounting logic underneath. French entrepreneurs running small businesses need to manage sales, stock, invoicing, and bank reconciliation — but most have no background in accounting software. GMB was later acquired by CEGID and integrated into their enterprise offering.",
+						"strategicDecision": {
+							"intro": "The mentorship question:",
+							"question": "How do you shape a product's direction during its formative stages — when decisions are still cheap to change but will be expensive to undo later?"
+						},
+						"process": [
 							{
-								"url": "https://www.connectlime.com/work/HotelAppz/",
-								"label": "HotelAppz case study",
-								"role": "Lead Design supervision"
+								"phase": "Phase 1",
+								"label": "Strategy",
+								"title": "Product direction and architecture",
+								"description": "Brainstormed the core UI concept with the designer — encouraging focus, research, and lateral thinking. This process led to the dossier/folder metaphor: vertical tab navigation where each section represents a chapter in the business owner's workflow, with guided paths adapting to user profile."
 							},
 							{
-								"url": "https://hoteltechreport.com/marketing/hotel-crm/hotelappz",
-								"label": "HotelAppz on Hotel Tech Report",
-								"role": "Product profile and reviews"
+								"phase": "Phase 2",
+								"label": "Design",
+								"title": "Bank reconciliation workflow",
+								"description": "Designed the bank reconciliation flow — the process where entrepreneurs match bank statement lines to invoices, expenses, or partial payments. The key decision: replacing accounting terminology with a card-based decision modal presenting four plain-language options ('I haven't registered the invoice,' 'It's a deposit or partial payment,' 'I have a registered invoice,' 'It's an exceptional operation'). Each option includes a short description so users understand the accounting implication without needing to know the terminology. The bank transaction stays visible on the right while the user works through the affectation on the left, and the remaining balance to reconcile updates live as items are assigned."
+							}
+						],
+						"implementation": {
+							"design": [
+								{
+									"heading": "What was shaped",
+									"items": [
+										"Strategy and architecture guidance throughout the product lifecycle — brainstormed the core UI concept with the designer, leading to the dossier/folder metaphor and vertical tab navigation with guided paths per user profile.",
+										"Bank reconciliation workflow: card-based decision modal replacing accounting terminology with four plain-language options, split-screen layout with bank transaction context always visible, live-updating reconciliation balance, collapsible sections for progressive disclosure, and invoice matching view with search and filtering."
+									]
+								}
+							],
+							"code": []
+						},
+						"tradeoffsLearnings": [
+							"Working in an advisory and mentorship capacity at formative stages of a product — shaping decisions before they become entrenched — is a different kind of contribution than solo execution. The CEGID acquisition is the outcome: external validation that the product had reached a commercial standard a major enterprise software company was willing to put their name on."
+						],
+						"quote": {
+							"title": "Shape decisions while they're still cheap to change.",
+							"subtitle": "Mentorship at the formative stage — where direction has the most leverage."
+						},
+						"skillsDemonstrated": [
+							"Proactive & collaborative",
+							"Design rationale"
+						],
+						"projectSpecificSkills": "Mentorship in product strategy · Architecture shaping at formative stage · Plain-language UX for complex domains",
+						"skillsByStrength": [
+							{
+								"strength": "Proactive & collaborative",
+								"items": "Mentorship in product strategy"
+							},
+							{
+								"strength": "Design rationale",
+								"items": "Architecture shaping at formative stage · Plain-language UX for complex domains"
+							}
+						],
+						"decisionsInPractice": [
+							{
+								"badge": "strategic",
+								"strength": "Design rationale",
+								"title": "Plain language over accounting terminology in bank reconciliation",
+								"task": "Entrepreneurs need to match bank statement lines to invoices — but most have no accounting background.",
+								"issue": "Standard accounting interfaces assume the user knows what 'rapprochement bancaire' means. These users don't.",
+								"insight": "The four possible actions ('I haven't registered the invoice', 'It's a deposit', etc.) can be expressed without a single accounting term.",
+								"decision": "Replaced accounting terminology with a card-based decision modal presenting four plain-language options, each with a short description of the accounting implication.",
+								"outcome": "Entrepreneurs reconcile bank statements without guessing. The accounting logic stays intact underneath."
 							}
 						]
 					},
-					"slug": "hotelappz"
+					"skillsDemonstrated": [
+						"Proactive & collaborative",
+						"Design rationale"
+					]
 				},
 				{
 					"period": "2019",
 					"status": "shipped",
 					"title": "Assist@ — Admin Life Management",
-					"subtitle": "Life management & Employee portal — runs on RH Securibox white-labelling",
-					"role": "Product Designer",
-					"tools": "Figma · App design",
-					"dimensions": "Dimensions 2, 4",
-					"highlight": "Implemented the core application experience for this French HR startup. Designed micro-interactions and flows to enhance the user experience.",
+					"subtitle": "Life admin platform for people navigating moves, bereavements, job changes — designed specific flows and built the frontend in React, including internal tools held to the same design standard as user-facing surfaces",
+					"role": "Product Designer & Frontend Developer — the bigger contribution was the frontend build",
+					"tools": "Figma · React · App design",
+					"skillsDemonstrated": [
+						"Systems thinking",
+						"Edge cases & resilience",
+						"Design to code",
+						"Proactive & collaborative",
+						"Tool exploration"
+					],
+					"highlight": "Designed specific flows and built the frontend in React alongside another developer for Assist@, a life admin platform covering bereavement, relocations, and other life transitions. The heavier contribution was the frontend implementation — interaction states and micro-patterns that make inherently tedious tasks feel fast and competent. Internal tools held to the same design standard as user-facing surfaces.",
 					"results": [
-						"Clean admin workflows",
-						"Micro-interactions and flows to enhance the user experience"
+						"Production-ready React frontend built alongside another developer: component implementations, interaction states, and micro-animations for system feedback.",
+						"Designed: reseller portal, death declaration workflow, letter generation flow, service configuration, and backoffice (access, teams, permissions).",
+						"Implemented existing Anticipa and Facilita designs into production React and refactored UI where production usage revealed UX friction.",
+						"Internal tools — including the Anticipa and Facilita back offices — held to the same design language and component patterns."
 					],
 					"references": {
 						"links": [
@@ -1075,7 +1448,114 @@
 							}
 						]
 					},
-					"slug": "assist-admin-life-management"
+					"slug": "assist-admin-life-management",
+					"caseStudy": {
+						"businessProblem": "Making something inherently bureaucratic feel manageable — without the interface ever becoming the source of friction. The people reaching for Assist@ are often already overwhelmed — grieving, relocating, navigating bureaucracy they've never dealt with before. The platform spans multiple services (Anticipa, Facilita) serving individuals directly and through professional resellers, plus a white-label employer service (Assist'RH) on Securibox's rh.securibox.eu.",
+						"strategicDecision": {
+							"intro": "The design goal:",
+							"question": "How do you make something inherently bureaucratic feel fast, clear, and safe — especially when the person behind it is stressed?"
+						},
+						"processHeading": "Key contributions",
+						"process": [
+							{
+								"phase": "Contribution 1",
+								"label": "Code",
+								"title": "Frontend implementation — from design to production",
+								"description": "The primary deliverable was production-ready React code, built alongside another developer: component implementations, interaction states, and the micro-animations that communicate system feedback without requiring navigation away from the current task. One example: the letter generation loading state showed progress per service provider — so users could see which letters had been processed and which were still pending, turning an opaque wait into a transparent sequence."
+							},
+							{
+								"phase": "Contribution 2",
+								"label": "Design",
+								"title": "New flows designed within the established system — and existing UI refactored from production signals",
+								"description": "Designed the reseller portal within the established Assist@ design system — a dedicated partner login where funeral home staff create user accounts on behalf of bereaved families, manage case status per service provider (accepted, rejected, pending), and track payments. Designed the death declaration workflow — registering the death and all associated data — and the letter generation flow, which produces a letter for each provider based on the services identified during the Anticipa or Facilita process. Designed the back office for managing reseller access, teams, and permissions. Anticipa and Facilita had existing initial designs — implemented those into production and refactored UI where the UX broke down in real usage."
+							},
+							{
+								"phase": "Contribution 3",
+								"label": "Systems",
+								"title": "Back office — system coherence on an invisible surface",
+								"description": "The platform includes an internal back office for managing the Anticipa and Facilita services — not exposed to end users, but built to follow the same UI language as the rest of the application. Maintaining the same visual language on a surface no client ever sees is a systems decision, not a polish decision. The practical consequence: anyone moving between the back office and the user-facing product works within a familiar environment, reducing context-switching during operations."
+							}
+						],
+						"implementation": {
+							"design": [
+								{
+									"heading": "What was designed",
+									"items": [
+										"Reseller portal: dedicated partner login within the Assist@ design system, account creation on behalf of families, per-service case management (acceptance status, rejection handling), payment tracking per dossier.",
+										"Death declaration workflow: registering the death with all related data, triggering downstream processes in Facilita.",
+										"Letter generation: produced from the services identified during the Anticipa or Facilita process — one letter per provider, reviewable before sending.",
+										"Document upload flow.",
+										"Service configuration flow: after selecting démarches, users configure each service individually — bridging the gap between choosing what needs to happen and providing the details each provider requires.",
+										"Back office: reseller access management, team configuration, permissions.",
+										"Existing Anticipa and Facilita UI refactored where production usage revealed UX friction."
+									]
+								}
+							],
+							"code": [
+								{
+									"heading": "What was built",
+									"items": [
+										"Production React frontend built alongside another developer across all surfaces: Anticipa, Facilita, reseller portal, and back office.",
+										"Project architecture and folder structure designed to mirror the routing structure — shared components reusable across services, with a directory layout that reflected the product's own information architecture.",
+										"Death declaration form and service configuration screens — multi-step flows with validation and conditional logic.",
+										"Letter generation UI with per-provider loading state showing progress through the sequence.",
+										"Reseller portal: case management interface, payment tracking, account creation flow.",
+										"Back office UI built to the same standard as user-facing surfaces — shared component patterns, consistent visual language.",
+										"Refactored existing Anticipa and Facilita UI where production usage revealed UX issues."
+									]
+								}
+							]
+						},
+						"tradeoffsLearnings": [
+							"Designing for people in difficult moments (bereavement, job loss, life transitions) means the interface can never be the source of friction. Every micro-interaction carries more weight when the user is already overwhelmed — a confirmation message isn't decoration, it's reassurance that the system did what was asked."
+						],
+						"quote": {
+							"title": "Same standard, every surface.",
+							"subtitle": "User-facing flows and internal tools built within one coherent system — because the pattern boundary shouldn't stop where the client's line of sight ends."
+						},
+						"skillsDemonstrated": [
+							"Systems thinking",
+							"Edge cases & resilience",
+							"Design to code",
+							"Proactive & collaborative",
+							"Tool exploration"
+						],
+						"projectSpecificSkills": "Frontend implementation · Stress-context design · Systems coherence across internal tools · Micro-interaction design",
+						"skillsByStrength": [
+							{
+								"strength": "Systems thinking",
+								"items": "Systems coherence across internal tools · Cross-surface design language"
+							},
+							{
+								"strength": "Edge cases & resilience",
+								"items": "Stress-context design · Multi-step workflows with conditional logic"
+							},
+							{
+								"strength": "Design to code",
+								"items": "Frontend implementation · Micro-interaction design"
+							},
+							{
+								"strength": "Proactive & collaborative",
+								"items": "Cross-surface alignment between internal and user-facing teams"
+							},
+							{
+								"strength": "Tool exploration",
+								"items": "React implementation patterns and micro-interaction experimentation"
+							}
+						],
+						"decisionsInPractice": [
+							{
+								"badge": "strategic",
+								"strength": "Systems thinking",
+								"title": "Back office held to the same design standard as user-facing surfaces",
+								"task": "The platform includes internal tools for managing Anticipa and Facilita services — not exposed to end users.",
+								"issue": "Most teams skip design quality on internal surfaces since no client ever sees them.",
+								"insight": "The design standard applies to everything the product touches. Anyone moving between internal and external surfaces works within a familiar environment.",
+								"decision": "Built the back office with the same component patterns and visual language as user-facing flows.",
+								"outcome": "Reduced context-switching during operations. The principled payoff: accountability doesn't stop where the client's line of sight ends."
+							}
+						]
+					}
 				}
 			]
 		},
@@ -1090,7 +1570,6 @@
 					"subtitle": "Fintech · proposal (app + landing)",
 					"role": "Product & UX Designer · 2016",
 					"tools": "Figma · Product design · Landing page",
-					"dimensions": "Dimensions 1, 2, 3",
 					"highlight": "Product and landing concept for a fintech solution — electronic payroll for everyone.",
 					"results": [
 						"Product and landing concept",
@@ -1112,7 +1591,7 @@
 						]
 					},
 					"caseStudy": {
-						"businessProblem": "Epaye — the electronic payroll for all — positions itself as the ideal entry point to start dematerialisation in a company. It simplifies and automates all steps of pay between employer and employee. The challenge: build a digital identity and product from scratch, rooted in one core dimension — human relationships.",
+						"businessProblem": "Building a digital identity and product from scratch, rooted in one core dimension — human relationships. Epaye — the electronic payroll for all — positions itself as the ideal entry point to start dematerialisation in a company, simplifying and automating all steps of pay between employer and employee.",
 						"strategicDecision": {
 							"intro": "The design question:",
 							"question": "How do we make payroll tech feel approachable and trustworthy to non-technical decision-makers?"
@@ -1135,9 +1614,34 @@
 						"quote": {
 							"title": "The electronic payroll for all.",
 							"subtitle": "The ideal entry point to start dematerialisation — a brand that reflects the complexity and beauty of human relationships."
-						}
+						},
+						"skillsDemonstrated": [
+							"Design rationale"
+						],
+						"projectSpecificSkills": "Fintech concept design · Payroll flow modeling · Trust-oriented onboarding",
+						"skillsByStrength": [
+							{
+								"strength": "Design rationale",
+								"items": "Fintech concept design · Payroll flow modeling · Trust-oriented onboarding"
+							}
+						],
+						"decisionsInPractice": [
+							{
+								"badge": "strategic",
+								"strength": "Design rationale",
+								"title": "Brand rooted in human relationships — not trust or adoption alone",
+								"task": "Needed a brand identity for a fintech payroll product that stands out in a conservative sector.",
+								"issue": "Every competitor leads with trust, security, or ease of adoption. The visual language is interchangeable.",
+								"insight": "Payroll is fundamentally about the relationship between employer and employee — the human dimension is the differentiator.",
+								"decision": "Built the brand and visual language on human relationships — making the abstract tangible through a distinctive identity.",
+								"outcome": "A deliberate bet on standing out over blending in. The identity rests on something no competitor owns."
+							}
+						]
 					},
-					"slug": "epaye-electronic-payroll"
+					"slug": "epaye-electronic-payroll",
+					"skillsDemonstrated": [
+						"Design rationale"
+					]
 				},
 				{
 					"period": "2014",
@@ -1146,7 +1650,6 @@
 					"subtitle": "Retail · Bronze Young Lions",
 					"role": "Creative team · Bronze Young Lions · 2014",
 					"tools": "Creative direction · Digital campaign",
-					"dimensions": "Dimensions 1, 2",
 					"highlight": "Bronze Young Lions 2014 — creative campaign proposal to strengthen brand connection with Portuguese families.",
 					"results": [
 						"Bronze Young Lions 2014",
@@ -1171,7 +1674,29 @@
 						"quote": {
 							"title": "Stand out in retail without losing trust.",
 							"subtitle": "Bold digital storytelling that extends Continente's family values rather than disrupting them."
-						}
+						},
+						"skillsDemonstrated": [
+							"Design rationale"
+						],
+						"projectSpecificSkills": "Campaign concept design · Retail communication strategy · Creative direction",
+						"skillsByStrength": [
+							{
+								"strength": "Design rationale",
+								"items": "Campaign concept design · Retail communication strategy · Creative direction"
+							}
+						],
+						"decisionsInPractice": [
+							{
+								"badge": "strategic",
+								"strength": "Design rationale",
+								"title": "Innovation that extends the brand rather than disrupting it",
+								"task": "Continente needed a digital campaign that strengthens emotional connection with Portuguese families.",
+								"issue": "Bold digital storytelling risks feeling disconnected from Continente's established family-oriented identity.",
+								"insight": "Innovation doesn't require disruption. Extending the existing values into a new medium preserves trust while showcasing ambition.",
+								"decision": "Balanced bold digital storytelling with respect for the established family values — extend, don't disrupt.",
+								"outcome": "Bronze Young Lions 2014. A campaign that felt both fresh and authentically Continente."
+							}
+						]
 					},
 					"references": {
 						"dribbble": [
@@ -1187,7 +1712,10 @@
 							}
 						]
 					},
-					"slug": "continentept-digital-campaign"
+					"slug": "continentept-digital-campaign",
+					"skillsDemonstrated": [
+						"Design rationale"
+					]
 				},
 				{
 					"period": "2014",
@@ -1196,7 +1724,6 @@
 					"subtitle": "Sporting club · proposal (website concept)",
 					"role": "Digital proposal & website · 2014",
 					"tools": "Design · Proposal · Web",
-					"dimensions": "Dimensions 1, 2",
 					"highlight": "Digital proposal and website concept for Sporting Clube de Portugal.",
 					"results": [
 						"Website concept and digital proposal",
@@ -1229,9 +1756,34 @@
 						"quote": {
 							"title": "Clear value presentation for Sporting Club.",
 							"subtitle": "Let Sporting Club's identity lead the design — authenticity over template."
-						}
+						},
+						"skillsDemonstrated": [
+							"Design rationale"
+						],
+						"projectSpecificSkills": "Digital concept proposal · Sports fan experience design · Website architecture",
+						"skillsByStrength": [
+							{
+								"strength": "Design rationale",
+								"items": "Digital concept proposal · Sports fan experience design · Website architecture"
+							}
+						],
+						"decisionsInPractice": [
+							{
+								"badge": "strategic",
+								"strength": "Design rationale",
+								"title": "Club identity leads the design — authenticity over template",
+								"task": "SCP GameBox needed to present offers and advantages to Sporting fans.",
+								"issue": "A generic offer-listing template would work functionally but miss the emotional connection with the club's audience.",
+								"insight": "The club's identity is the product's strongest asset. Let it lead rather than imposing a neutral framework.",
+								"decision": "Focused on brand experience and value proposition — let Sporting's identity drive the visual language and content structure.",
+								"outcome": "A digital proposal that feels authentically Sporting, not a reskinned template."
+							}
+						]
 					},
-					"slug": "scp-gamebox"
+					"slug": "scp-gamebox",
+					"skillsDemonstrated": [
+						"Design rationale"
+					]
 				},
 				{
 					"period": "2013",
@@ -1240,7 +1792,6 @@
 					"subtitle": "Post office · proposal (landing + currency)",
 					"role": "Landing page design · 2013",
 					"tools": "Design · Landing page · Government UX",
-					"dimensions": "Dimensions 1, 2, 3",
 					"highlight": "Landing page concept for Cabo Verde post office — currency exchange, foreign orders, and postal services.",
 					"results": [
 						"Landing page concept",
@@ -1273,14 +1824,45 @@
 						"quote": {
 							"title": "Making postal and currency services clear and accessible.",
 							"subtitle": "Trust and usability first in a government-sector context."
-						}
+						},
+						"skillsDemonstrated": [
+							"Edge cases & resilience",
+							"Design rationale"
+						],
+						"projectSpecificSkills": "Public-service UX · Service discoverability · Currency and postal flow design",
+						"skillsByStrength": [
+							{
+								"strength": "Edge cases & resilience",
+								"items": "Public-service UX · Service discoverability"
+							},
+							{
+								"strength": "Design rationale",
+								"items": "Currency and postal flow design"
+							}
+						],
+						"decisionsInPractice": [
+							{
+								"badge": "strategic",
+								"strength": "Edge cases & resilience",
+								"title": "Trust and usability first in a government-sector context",
+								"task": "Cabo Verde post office needed a digital presence for currency exchange, foreign orders, and postal services.",
+								"issue": "A diverse user base with varying digital literacy accessing complex multi-service offerings.",
+								"insight": "In a government context, trust and usability matter more than visual ambition. Clarity is the primary design value.",
+								"decision": "Prioritised information architecture clarity and accessibility over visual complexity.",
+								"outcome": "A landing concept that serves the full range of users — from postal services to currency exchange — without assuming digital fluency."
+							}
+						]
 					},
-					"slug": "ccv-correios-de-cabo-verde"
+					"slug": "ccv-correios-de-cabo-verde",
+					"skillsDemonstrated": [
+						"Edge cases & resilience",
+						"Design rationale"
+					]
 				}
 			]
 		},
 		"AI within Boundaries": {
-			"context": "AI has been changing how I work. I use it throughout my workflow — design system generation, component scaffolding, prototyping logic.",
+			"context": "AI has changed how I work. I use it throughout my workflow — design system generation, component scaffolding, prototyping, production code — and I'm always trying new tools to see what holds up beyond the first try.",
 			"period": "Personal",
 			"cases": [
 				{
@@ -1290,7 +1872,6 @@
 					"subtitle": "A skill that encodes prompt discipline — not a library of prompts.",
 					"role": "Author · personal tooling",
 					"tools": "Agent Skills · Markdown",
-					"dimensions": "AI · Skills · Instructions",
 					"highlight": "Side project: I developed constraint-first prompting in my own work and conversations first, then froze the 4-D flow and a 6-part anatomy into a skill; AI drafts inside rails I set.",
 					"results": [
 						"Two distribution formats — Skill for workflows, standalone paste-block for any AI tool",
@@ -1374,7 +1955,6 @@
 					},
 					"caseStudy": {
 						"businessProblem": "I kept writing prompts that felt sharp in the moment and fell apart the next week. The failure was not the model — it was me. I had no repeatable way to fix role, constraints, and output shape before I asked for words. I developed Prompt Architect to resolve this once and for all by applying constraint-first prompting in my own work and my own conversations first. I drew on a wide range of AI-related material online — structured guidelines, documentation, and community threads about getting real work out of tools. I kept what survived contact with my own use and dropped the rest. I distilled what remained into one cohesive, practical approach that makes sense when you run it, not when you admire it. Only then did I freeze it into a skill — the 6-part anatomy and 4-D flow as the fence, execution underneath.",
-						"skillsDemonstrated": "Structured product thinking · Product behaviour definition · AI-assisted workflow design",
 						"strategicDecision": {
 							"intro": "The question I answered before writing a line of SKILL.md:",
 							"question": "What must stay fixed so AI can run fast without rewriting the rules every session?"
@@ -1426,9 +2006,46 @@
 								}
 							],
 							"code": []
-						}
+						},
+						"skillsDemonstrated": [
+							"Systems thinking",
+							"Design rationale",
+							"Tool exploration"
+						],
+						"projectSpecificSkills": "Structured product thinking · Product behaviour definition · AI-assisted workflow design",
+						"skillsByStrength": [
+							{
+								"strength": "Systems thinking",
+								"items": "Structured product thinking · Product behaviour definition"
+							},
+							{
+								"strength": "Design rationale",
+								"items": "AI-assisted workflow design"
+							},
+							{
+								"strength": "Tool exploration",
+								"items": "Agent-skill experimentation and AI workflow prototyping"
+							}
+						],
+						"decisionsInPractice": [
+							{
+								"badge": "strategic",
+								"strength": "Systems thinking",
+								"title": "Structure locked before AI touched the content",
+								"task": "Needed a repeatable prompt framework — not another collection of tips.",
+								"issue": "Letting AI draft the structure leads to generic prompt advice that reads well but doesn't survive real use.",
+								"insight": "The 6-part anatomy and 4-D flow are product decisions, not copy decisions. They define behaviour, not words.",
+								"decision": "Locked the headings and section order into SKILL.md first. Only then let the model draft explanations and examples under each fixed heading.",
+								"outcome": "Structure before prose. The skill mirrors a design language: opinionated, bounded, reusable. No drift between sessions."
+							}
+						]
 					},
-					"slug": "prompt-architect-skill"
+					"slug": "prompt-architect-skill",
+					"skillsDemonstrated": [
+						"Systems thinking",
+						"Design rationale",
+						"Tool exploration"
+					]
 				}
 			],
 			"contextNote": "I haven't designed an AI-powered product experience yet from the ground up — and that would be exciting to own."
@@ -1453,13 +2070,80 @@
 		"kicker": "My work",
 		"heading": "Design to Production",
 		"p1": "I design it, I build it. Below is live work — brand identity, product flows, and production frontend I designed and built.",
-		"p2Lead": "Brand & identity:",
-		"p2": "Logos, visual language, and cohesive experience across ecosystems and products.",
+		"philosophy": "If someone from a different generation can navigate what I built without me having to explain it — that's when I know the design is doing its job.",
+		"strengths": {
+			"intro": "What the work below demonstrates:",
+			"items": [
+				{
+					"tag": "Systems thinking",
+					"body": "Identify whether to create, adapt, or retire patterns — the judgment call where the real design work happens.",
+					"evidence": [
+						"securibox-unified-identity",
+						"sca-cloudagents",
+						"me-securibox-account"
+					]
+				},
+				{
+					"tag": "Edge cases & resilience",
+					"body": "Trust lives in the margins - error states, empty states, accessibility, regulatory constraints. The moments most designs skip are the ones users remember.",
+					"evidence": [
+						"cube-own-your-data",
+						"me-securibox-account",
+						"rh-hr-payslip-distribution"
+					]
+				},
+				{
+					"tag": "Design rationale",
+					"body": "Evaluate options, name the trade-offs, and make decisions that hold up under scrutiny. Not just what got built, but why.",
+					"evidence": [
+						"cube-own-your-data",
+						"sca-cloudagents",
+						"me-securibox-account"
+					]
+				},
+				{
+					"tag": "Production-informed iteration",
+					"body": "Ship first, learn second. Real usage reveals what no review cycle ever will — then the real refinement starts.",
+					"evidence": [
+						"cube-own-your-data",
+						"me-securibox-account"
+					]
+				},
+				{
+					"tag": "Tool exploration",
+					"body": "The toolchain keeps moving. Figma, VSCode, Postman, AI tools — whatever sharpens the work is what gets adopted.",
+					"evidence": [
+						"securibox-unified-identity",
+						"sca-cloudagents",
+						"cube-own-your-data"
+					]
+				},
+				{
+					"tag": "Design to code",
+					"body": "Approved design goes straight to production. React, Vite, Gatsby, Redux, Figma, Illustrator, Photoshop — no handoff, no gap, no drift.",
+					"evidence": [
+						"securibox-unified-identity",
+						"cube-own-your-data",
+						"sca-cloudagents"
+					]
+				},
+				{
+					"tag": "Proactive & collaborative",
+					"body": "Gaps get fixed before they're flagged. Validate before shipping, adjust to critique, bring in the right people early.",
+					"evidence": [
+						"sca-cloudagents",
+						"gerer-ma-boite-gmb"
+					]
+				}
+			]
+		},
+		"p2Lead": "The less it needs me to explain, the better it works.",
+		"p2": "I design where the work has to survive — in code, in a brand, in a campaign — and I build it so the thinking doesn't get lost on the way.",
 		"browseAllCases": "All portfolio case studies",
 		"p3": "Each project opens a detailed view — full case study or summary with outcomes — select a card to read it.",
-		"designSystemKicker": "Component library — this site",
-		"designSystemBody": "Custom component library (50+ components): Built with React, Tailwind v4, theme system, and accessibility in mind.",
-		"designSystemCtaNote": "Components and theme configuration live in the same codebase as this landing page.",
+		"designSystemKicker": "Component library",
+		"designSystemBody": "50+ components built in React and Tailwind v4, with a full theme system and accessibility baked in from the start — available when needed. This site uses a focused subset of them.",
+		"designSystemCtaNote": "Built with it — not built to show it.",
 		"designSystemComponents": [
 			"Button",
 			"Accordion",
@@ -1470,7 +2154,47 @@
 			"DropdownMenu",
 			"Tabs",
 			"Form"
-		]
+		],
+		"strengthsMatrix": {
+			"phases": [
+				{
+					"key": "create",
+					"label": "Create",
+					"dimension": "Dimension 4",
+					"tags": [
+						"Systems thinking",
+						"Proactive & collaborative"
+					]
+				},
+				{
+					"key": "launch",
+					"label": "Launch",
+					"dimension": "Dimension 3",
+					"tags": [
+						"Design rationale",
+						"Design to code"
+					]
+				},
+				{
+					"key": "refine",
+					"label": "Refine",
+					"dimension": "Dimension 1 + 2",
+					"tags": [
+						"Edge cases & resilience",
+						"Tool exploration"
+					]
+				},
+				{
+					"key": "observe",
+					"label": "Observe",
+					"dimension": "Dimension 5",
+					"tags": [
+						"Production-informed iteration"
+					]
+				}
+			],
+			"loopLabel": "Create → Launch → Observe → Refine → repeat"
+		}
 	},
 	"methodSection": {
 		"philosophyLensKicker": "Lens",
@@ -1538,7 +2262,10 @@
 		"wcag": "WCAG",
 		"mdnA11y": "MDN Accessibility",
 		"builtWithNavAria": "Built with",
-		"referencesNavAria": "References"
+		"referencesNavAria": "References",
+		"navGlossaryLead": "On the homepage, «Playbook» in the sticky bar is the same section as ",
+		"navGlossaryLink": "The Maria Varagilal Playbook Method",
+		"navGlossaryTail": " (#framework)."
 	},
 	"caseUi": {
 		"shipped": "shipped",
@@ -1586,8 +2313,19 @@
 			"implementationCode": "Code",
 			"resultsMetrics": "Results & Metrics",
 			"tradeoffsDefault": "Trade-offs & Learnings",
-			"skills": "Skills"
+			"skills": "Skills",
+			"projectSkills": "Project-specific skills",
+			"decisionsInPractice": "In practice",
+			"decisionTask": "Task",
+			"decisionIssue": "Issue",
+			"decisionInsight": "Insight",
+			"decisionDecision": "Decision",
+			"decisionOutcome": "Outcome"
 		},
-		"proposal": "proposal"
+		"proposal": "proposal",
+		"strategic": "strategic",
+		"production-informed": "production-informed",
+		"proactive": "proactive",
+		"beyond spec": "beyond spec"
 	}
 }
