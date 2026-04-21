@@ -88,6 +88,15 @@
   --grid-opacity: 0.25;
 }
 
+// Bind --project-accent where light/dark vars are set (avoid :root resolving to currentColor too early).
+[data-project-accent] {
+  --project-accent: var(--project-accent-light, currentColor);
+}
+
+.dark [data-project-accent] {
+  --project-accent: var(--project-accent-dark, var(--project-accent-light, currentColor));
+}
+
 @theme {
   --font-sans: "Rubik", "Outfit", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-serif: "Noto Serif Display", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";

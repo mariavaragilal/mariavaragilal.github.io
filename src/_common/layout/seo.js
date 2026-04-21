@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { buildPersonStructuredData, buildWebsiteStructuredData } from '../../constants/utils/seoStructuredData';
 import { useSiteMetadata } from '../../hooks/useSiteMetadata';
 import mvEn from '../../constants/i18n/locales/mv.en.json';
+import avatarUrl from '../../assets/images/avatar.png';
 
 const absolutePageUrl = (siteOrigin, pathname) => {
 	const p = pathname && pathname !== '/' ? pathname : '/';
@@ -44,14 +45,14 @@ const Seo = ({ title, description, pathname = '/' }) => {
 			<meta property='og:url' content={pageUrl} />
 			<meta property='og:title' content={siteTitle} />
 			<meta property='og:description' content={siteDescription} />
-			<meta property='og:image' content={site.siteUrl + site.image} />
+			<meta property='og:image' content={site.siteUrl + avatarUrl} />
 
 			{/* Twitter */}
 			<meta name='twitter:card' content='summary_large_image' />
 			<meta name='twitter:url' content={pageUrl} />
 			<meta name='twitter:title' content={siteTitle} />
 			<meta name='twitter:description' content={siteDescription} />
-			<meta name='twitter:image' content={site.siteUrl + site.image} />
+			<meta name='twitter:image' content={site.siteUrl + avatarUrl} />
 
 			{/* Critical CSS for above-the-fold content */}
 			<style dangerouslySetInnerHTML={{ __html: criticalCss }} />
@@ -60,8 +61,7 @@ const Seo = ({ title, description, pathname = '/' }) => {
 			<link rel='preload' href='https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap' as='style' onLoad={'this.onload=null;this.rel=' + '\'stylesheet\''} />
 			<link rel='preconnect' href='https://fonts.googleapis.com' />
 			<link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='' />
-			{/* Same asset as src/assets/images/avatar.png — static/avatar.png copies to site root on build */}
-			<link rel='preload' href={site.image} as='image' />
+			<link rel='preload' href={avatarUrl} as='image' />
 
 			{/* DNS prefetch for external resources */}
 			<link rel='dns-prefetch' href='//fonts.googleapis.com' />

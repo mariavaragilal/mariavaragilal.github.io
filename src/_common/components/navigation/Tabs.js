@@ -42,7 +42,7 @@ const BUTTON_VARIANTS = {
 	primary: 'bg-primary text-primary-foreground hover:bg-primary/90',
 };
 
-const TabsContext = createContext({ activeTab: '', handleChange: () => { }, idPrefix: '' });
+const TabsContext = createContext({ activeTab: '', handleChange: () => {}, idPrefix: '' });
 
 export const Tabs = ({ defaultValue, value: controlledValue, onValueChange, className = '', children, ...props }) => {
 	const [internal, setInternal] = useState(defaultValue || '');

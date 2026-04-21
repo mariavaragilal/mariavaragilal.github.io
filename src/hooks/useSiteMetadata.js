@@ -7,7 +7,6 @@ export const useSiteMetadata = () => {
 				siteMetadata {
 					siteUrl
 					author
-					image
 					social {
 						linkedin
 						dribbble

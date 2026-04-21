@@ -231,13 +231,13 @@ export const WorkSection = () => {
 								<AccordionItem className='flex flex-col gap-4' isExpanded={isExpanded} onToggle={() => toggleGroup(groupName)}>
 									<AccordionTrigger icon='plus' gridCols='md:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)_1.6rem] items-start' triggerPadding='p-0'>
 										<div className='flex flex-col'>
-											<span className='uppercase tracking-[0.16em] text-current/22 font-medium' aria-hidden='true'>{group.period}</span>
+											<span className='font-mono uppercase tracking-[0.16em] text-current/22 font-medium text-sm' aria-hidden='true'>{group.period}</span>
 											<div className='flex flex-wrap items-center gap-2'>
 												<h3 className='font-mono text-[clamp(1.2rem,2.5vw,1.5rem)] leading-8 font-medium text-current my-auto'>{groupName}</h3>
 												{activeTag && !skipFilter && matchCount > 0 ? <Badge variant='secondary' size='sm' className='tracking-[0.04em] uppercase mt-1'>{matchCount + ' projects'}</Badge> : null}
 											</div>
 										</div>
-										<div className='relative w-full max-w-3xl flex flex-col gap-2'>
+										<div className='relative w-full flex flex-col gap-2'>
 											{group.context && <p className='leading-relaxed text-current/66'>{group.context}</p>}
 											{group.contextNote && <p className='leading-relaxed text-current/66 text-sm italic'>{group.contextNote}</p>}
 										</div>

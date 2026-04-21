@@ -7,11 +7,10 @@ EventEmitter.defaultMaxListeners = 20;
 module.exports = {
 	siteMetadata: {
 		title: 'Maria Varagilal: CV',
-		description: 'Principal-level Product Designer who ships code. 10+ years unifying fragmented SaaS platforms.',
+		description: 'Lead Frontend Designer who ships code. 10+ years unifying fragmented SaaS platforms.',
 		author: 'Maria Varagilal',
-		keywords: 'Maria Varagilal, Principal Product Designer, Frontend Dev, UI, UX, React, Redux, Design Systems, B2B SaaS',
+		keywords: 'Maria Varagilal, Design technologist, Lead Frontend Designer, Principal Product Designer, Frontend Dev, UI, UX, React, Redux, Design Systems, B2B SaaS',
 		siteUrl: 'https://mariavaragilal.github.io',
-		image: '/avatar.png',
 		social: {
 			linkedin: 'https://www.linkedin.com/in/mariavaragilal',
 			dribbble: 'https://dribbble.com/mariavaragilal',
@@ -47,7 +46,7 @@ module.exports = {
 			resolve: 'gatsby-plugin-page-creator',
 			options: {
 				path: __dirname + '/src/pages',
-				ignore: ['**/components/**', '**/_common/**', '**/_shared/**', '**/index/index.js'],
+				ignore: ['**/components/**', '**/_common/**', '**/index/index.js'],
 			},
 		},
 		'gatsby-plugin-react-helmet',
@@ -117,6 +116,22 @@ module.exports = {
 					{
 						name: 'DM Mono',
 						file: 'https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap',
+					},
+					{
+						name: 'Manrope',
+						file: 'https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap',
+					},
+					{
+						name: 'Poppins',
+						file: 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap',
+					},
+					{
+						name: 'Montserrat',
+						file: 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap',
+					},
+					{
+						name: 'Questrial',
+						file: 'https://fonts.googleapis.com/css2?family=Questrial&display=swap',
 					},
 					{
 						name: 'Material Symbols Rounded',

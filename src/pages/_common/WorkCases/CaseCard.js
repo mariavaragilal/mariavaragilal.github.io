@@ -52,8 +52,8 @@ export const CaseCard = ({ app, isSelected, onToggle, href, to, icon, iconChar =
 	if (isInternalCase) {
 		return (
 			<Card as='div' variant={variant} className={cardClassLink} id={id} onClick={() => navigate(to)}>
-				<CardHeader className='flex gap-1' headerPadding='p-0'>
-					<div className='flex flex-col space-y-2'>
+				<CardHeader className='flex flex-col gap-1' headerPadding='p-0'>
+					<div className='flex flex-1 justify-between w-full space-y-2'>
 						<span className='text-lg font-medium flex flex-wrap items-center gap-2.5'>
 							{app.status === 'shipped' ? (
 								<Badge variant='secondary' size='sm' className='tracking-[0.06em] uppercase'>{ui.shipped}</Badge>
@@ -62,23 +62,23 @@ export const CaseCard = ({ app, isSelected, onToggle, href, to, icon, iconChar =
 							)}
 							<CardTitle className='font-mono text-xl text-primary w-full'>{app.title}</CardTitle>
 						</span>
-						<CardDescription>{app.subtitle}</CardDescription>
+						<CardAction>
+							<Button
+								as='a'
+								href={to}
+								variant='secondary'
+								size='icon'
+								aria-label={ui.fullCaseStudy + ': ' + app.title}
+								className='shrink-0 size-11'
+								{...hoverHandlers}
+								onClick={e => e.stopPropagation()}
+							>
+								{resolvedIcon}
+							</Button>
+							<p className='font-mono text-[0.65rem] leading-relaxed text-current/88 sr-only'>{ui.fullCaseStudy}<span aria-hidden>↗</span></p>
+						</CardAction>
 					</div>
-					<CardAction>
-						<Button
-							as='a'
-							href={to}
-							variant='secondary'
-							size='icon'
-							aria-label={ui.fullCaseStudy + ': ' + app.title}
-							className='shrink-0 size-11'
-							{...hoverHandlers}
-							onClick={e => e.stopPropagation()}
-						>
-							{resolvedIcon}
-						</Button>
-						<p className='font-mono text-[0.65rem] leading-relaxed text-current/88 sr-only'>{ui.fullCaseStudy}<span aria-hidden>↗</span></p>
-					</CardAction>
+					<CardDescription>{app.subtitle}</CardDescription>
 				</CardHeader>
 				{footer}
 			</Card>

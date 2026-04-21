@@ -7,7 +7,7 @@ const LINK_BASE = 'inline-flex items-center justify-center gap-1 rounded-md bord
 const paginationLinkVariants = cva(LINK_BASE, {
 	variants: {
 		isActive: {
-			true: 'border-border bg-background shadow-sm',
+			true: 'border-border bg-background',
 			false: '',
 		},
 	},
@@ -17,15 +17,15 @@ const paginationLinkVariants = cva(LINK_BASE, {
 });
 
 export const Pagination = ({ className = '', ...props }) => (
-	<nav role='navigation' aria-label='pagination' className={className} {...props}/>
+	<nav role='navigation' aria-label='pagination' className={className} {...props} />
 );
 
 export const PaginationContent = ({ className = '', ...props }) => (
-	<ul className={cn('flex flex-row items-center gap-1', className)} {...props}/>
+	<ul className={cn('flex flex-row items-center gap-1', className)} {...props} />
 );
 
 export const PaginationItem = ({ className = '', ...props }) => (
-	<li className={className} {...props}/>
+	<li className={className} {...props} />
 );
 
 export const PaginationLink = ({ isActive = false, className = '', href, children, ...props }) => (

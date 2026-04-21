@@ -143,10 +143,10 @@ const CasesIndexPage = () => {
 							<section className='flex flex-col gap-4' aria-labelledby={'cases-group-' + toSlug(groupName)}>
 								<div className='flex w-full min-w-0 items-center gap-6 text-left grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] md:col-span-2 px-1 py-7 items-start'>
 									<div className='flex flex-col'>
-										<span className='uppercase tracking-[0.16em] text-current/22 font-medium' aria-hidden='true'>{group.period}</span>
+										<span className='font-mono uppercase tracking-[0.16em] text-current/22 font-medium text-sm' aria-hidden='true'>{group.period}</span>
 										<h2 id={'cases-group-' + toSlug(groupName)} className='font-mono text-[clamp(1.2rem,2.5vw,1.5rem)] leading-8 font-medium text-current mb-0'>{groupName}</h2>
 									</div>
-									<div className='relative w-full max-w-3xl flex flex-col gap-2'>
+									<div className='relative w-full flex flex-col gap-2'>
 										{group.context && <p className='leading-relaxed text-current/66'>{group.context}</p>}
 										{group.contextNote && <p className='leading-relaxed text-current/66 text-sm italic'>{group.contextNote}</p>}
 									</div>

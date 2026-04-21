@@ -3,6 +3,7 @@
 // All fields come from `site` (gatsby-config.js siteMetadata via useSiteMetadata)
 // and `mv` (active i18n bundle). No mvpData imports.
 // ─────────────────────────────────────────────────────────────────────────────
+import avatarUrl from '../../assets/images/avatar.png';
 
 export const buildPersonStructuredData = (mv, site) => ({
 	'@context': 'https://schema.org',
@@ -11,7 +12,7 @@ export const buildPersonStructuredData = (mv, site) => ({
 	jobTitle: mv.intro.schemaJobTitle,
 	description: mv.seo.defaultDescription,
 	url: site.siteUrl,
-	image: site.siteUrl + site.image,
+	image: site.siteUrl + avatarUrl,
 	sameAs: Object.values(site.social),
 	address: { '@type': 'PostalAddress', addressLocality: site.address.locality, addressCountry: site.address.country },
 	knowsAbout: site.knowsAbout,

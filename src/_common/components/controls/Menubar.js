@@ -2,7 +2,7 @@ import { useState, useRef, useEffect, createContext, useContext } from 'react';
 import { focusRing } from '../../../constants/utils/a11y';
 import { cn } from '../../../constants/utils/cn';
 
-const ROOT = 'flex h-9 items-center space-x-1 rounded-md border bg-background p-1 shadow-sm';
+const ROOT = 'flex h-9 items-center space-x-1 rounded-md border bg-background p-1';
 const TRIGGER = 'flex cursor-default select-none items-center rounded-sm px-3 py-1 text-sm font-medium outline-none hover:bg-accent hover:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground ' + focusRing;
 const CONTENT = 'z-50 min-w-[12rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md';
 const ITEM = 'relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none hover:bg-accent hover:text-accent-foreground disabled:pointer-events-none disabled:opacity-50 ' + focusRing;

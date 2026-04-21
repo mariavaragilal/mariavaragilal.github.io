@@ -11,6 +11,10 @@ const cardVariants = cva('flex flex-col rounded-lg', {
 			inverse: 'bg-primary/5',
 			ghost: 'bg-transparent border border-border',
 			transparent: 'bg-transparent',
+			paper: 'bg-transparent',
+			soft: 'bg-secondary/25 text-card-foreground border-border',
+			accent: 'bg-secondary/50 text-secondary-foreground',
+			ink: 'bg-foreground text-background border-transparent',
 		},
 	},
 	defaultVariants: {

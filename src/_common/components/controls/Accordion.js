@@ -4,8 +4,8 @@ import { focusRing } from '../../../constants/utils/a11y';
 import { cn } from '../../../constants/utils/cn';
 import { Button } from './Button';
 
-const AccordionContext = createContext({ type: 'single', value: null, onValueChange: () => { } });
-const AccordionItemContext = createContext({ value: null, isOpen: false, toggle: () => { }, triggerId: '', panelId: '' });
+const AccordionContext = createContext({ type: 'single', value: null, onValueChange: () => {} });
+const AccordionItemContext = createContext({ value: null, isOpen: false, toggle: () => {}, triggerId: '', panelId: '' });
 
 export const Accordion = ({ type = 'single', collapsible = false, value, defaultValue, onValueChange, className = '', children, ...props }) => {
 	const [internal, setInternal] = useState(defaultValue || (type === 'multiple' ? [] : null));

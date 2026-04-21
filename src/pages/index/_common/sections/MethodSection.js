@@ -41,7 +41,7 @@ export const MethodSection = ({ expandedDimension, toggleDimensionDetail }) => {
 							<AccordionItem className='flex flex-col gap-4' isExpanded={isExpanded} onToggle={() => toggleDimensionDetail(index)}>
 								<AccordionTrigger icon='plus' gridCols='md:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)_1.6rem] items-start' triggerPadding='p-0'>
 									<div className='flex flex-col'>
-										<span className='uppercase tracking-[0.16em] text-current/22 font-medium' aria-hidden='true'>{dimension.num}</span>
+										<span className='font-mono uppercase tracking-[0.16em] text-current/22 font-medium text-sm' aria-hidden='true'>{dimension.num}</span>
 										<h3 className='font-mono text-[clamp(1.2rem,2.5vw,1.5rem)] font-medium text-current'>{dimension.title}</h3>
 									</div>
 									<div className='relative w-full md:pr-32 flex flex-col gap-2'>
@@ -55,7 +55,7 @@ export const MethodSection = ({ expandedDimension, toggleDimensionDetail }) => {
 												{dimension.groundedIn.map((tag) => <Badge key={tag} variant='default'>{tag}</Badge>)}
 											</div>
 										)}
-										<p className='max-w-4xl text-[1rem] leading-relaxed text-current/88 my-5'>
+										<p className='max-w-full text-[1rem] leading-relaxed text-current/88 my-5'>
 											{dimension.detail[0]}
 										</p>
 										{dimension.philosophy && (

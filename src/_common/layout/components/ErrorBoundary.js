@@ -53,7 +53,7 @@ export const ErrorBoundary = ({ children }) => {
 				<div className='w-16 h-16 mx-auto mb-4 bg-red-100 dark:bg-red-900/20 rounded-full flex items-center justify-center'>
 					<span className='text-2xl' aria-hidden='true'>&#9888;</span>
 				</div>
-				<h2 className='text-xl text-foreground mb-2'>Something went wrong</h2>
+				<h2 className='text-xl text-current mb-2'>Something went wrong</h2>
 				<p className='text-current/66 mb-4'>We&apos;re sorry, but something unexpected happened. Please try refreshing the page.</p>
 				<Button variant='default' onClick={() => typeof window !== 'undefined' && window.location.reload()}>Refresh Page</Button>
 				{process.env.NODE_ENV === 'development' && error && (

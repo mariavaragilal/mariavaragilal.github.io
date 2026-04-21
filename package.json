@@ -68,6 +68,7 @@
 		"build:analyze": "ANALYZE_BUNDLE=true gatsby build",
 		"build:serve": "gatsby serve",
 		"deploy": "npm run build && gh-pages -d public",
+		"content:migrate-case-study": "node scripts/migrate-case-study-nested.mjs",
 		"test": "jest",
 		"test:watch": "jest --watch",
 		"test:coverage": "jest --coverage",

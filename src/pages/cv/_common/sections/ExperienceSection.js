@@ -1,6 +1,5 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { FORMAT_DURATION } from '../../../../constants/utils';
+import { FORMAT_DURATION } from '../../../../constants/utils/duration';
 import { Separator } from '../../../../_common/components';
 
 const CVExperienceSection = () => {

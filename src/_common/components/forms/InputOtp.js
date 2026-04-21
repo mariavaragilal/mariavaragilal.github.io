@@ -3,7 +3,7 @@ import { focusRing } from '../../../constants/utils/a11y';
 import { cn } from '../../../constants/utils/cn';
 
 const CONTAINER = 'flex items-center gap-2';
-const SLOT = 'relative flex h-9 w-9 items-center justify-center rounded-md border border-input bg-input-background text-sm font-medium shadow-sm';
+const SLOT = 'relative flex h-9 w-9 items-center justify-center rounded-md border border-input bg-input-background text-sm font-medium';
 const INPUT_CLS = 'absolute inset-0 h-full w-full opacity-0 text-center cursor-text ' + focusRing;
 
 export const InputOtp = ({ length = 6, value = '', onChange, className = '', ...props }) => {
@@ -45,7 +45,7 @@ export const InputOtp = ({ length = 6, value = '', onChange, className = '', ...
 };
 
 export const InputOtpGroup = ({ className = '', ...props }) => (
-	<div className={cn('flex items-center', className)} {...props}/>
+	<div className={cn('flex items-center', className)} {...props} />
 );
 
 export const InputOtpSeparator = ({ className = '', ...props }) => (

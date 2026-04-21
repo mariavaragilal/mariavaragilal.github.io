@@ -1,6 +1,7 @@
 # Maria Varagilal
  
 Personal portfolio and CV — Lead Technical Product Designer that ships code. Built with Gatsby, React, and Tailwind CSS. Presents 10+ years of B2B SaaS product work through detailed case studies, a design methodology (the Maria Varagilal Playbook Method), and a full CV.
+
 ## ✨ Features
 
 - **Responsive Design** - Optimized for desktop, tablet, and mobile devices
@@ -124,7 +125,7 @@ The site will be available at `https://mariavaragilal.github.io`
 
 ## 📄 License
 
-All original content, design, and code in this repository is copyright Maria Varagilal. All rights reserved. See [license.txt](static/license.txt) for details.
+All original content, design, and code in this repository is copyright Maria Varagilal. All rights reserved. See [license.txt](license.txt) for details.
 
 ## 👤 Author
 
