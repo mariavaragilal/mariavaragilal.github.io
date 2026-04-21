@@ -1,7 +1,7 @@
 import cubeDashboardMainView from '../../../../../../assets/images/cases/cube/cube-dashboard-main.webp';
 
-import scaBoDashboardDark from '../../../../../../assets/images/cases/sca/SCA-BackOffice-Dashboard-Dark--04-17-2026_09_54_AM.png';
-import scaBoDashboardLight from '../../../../../../assets/images/cases/sca/SCA-BackOffice-Dashboard--04-17-2026_10_50_AM.png';
+import scaBoDashboardDark from '../../../../../../assets/images/cases/sca/SCA-BackOffice-Dashboard-Dark.png';
+import scaBoDashboardLight from '../../../../../../assets/images/cases/sca/SCA-BackOffice-Dashboard.png';
 import scaCloudAgentsLanding from '../../../../../../assets/images/cases/sca/SCA-CloudAgents-Landing.png';
 
 import meAccountsDashboard from '../../../../../../assets/images/cases/me/meAccount.png';
@@ -17,7 +17,7 @@ import cubeWordmark from '../../../../../../assets/images/cases/cube/brand/cube-
 import cubeWordmarkDark from '../../../../../../assets/images/cases/cube/brand/cube-wordmark-dark.svg';
 import cubeWordmarkBrand from '../../../../../../assets/images/cases/cube/brand/cube-wordmark-brand.svg';
 
-import idAccountsSignup from '../../../../../../assets/images/cases/id/accounts-signup.png';
+import idAccountsSignup from '../../../../../../assets/images/cases/id/Accounts-signup.png';
 
 import connectlimePattern from '../../../../../../assets/images/cases/connectlime/pattern.svg';
 import connectlimeStudioSiteOverview from '../../../../../../assets/images/cases/connectlime/CONNECTLIME-Créateurdesolutionsdigitales.png';
