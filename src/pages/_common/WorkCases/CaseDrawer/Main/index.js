@@ -15,7 +15,7 @@ export const Main = ({ app }) => {
 			<main
 				id='main-content'
 				tabIndex={0}
-				className='min-w-0 min-h-0 max-w-7xl mx-auto flex-1 xl:overflow-y-auto xl:overscroll-y-contain overscroll-y-contain p-2 sm:p-4 xl:p-12 xl:pb-0 2xl:px-24 2xl:pt-16 flex flex-col gap-12 lg:gap-16 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-primary'
+				className='min-w-0 min-h-0 w-full max-w-7xl mx-auto flex-1 xl:overflow-y-auto xl:overscroll-y-contain overscroll-y-contain p-2 sm:p-4 xl:p-12 xl:pb-0 2xl:px-24 2xl:pt-16 flex flex-col gap-12 lg:gap-16 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-primary'
 				aria-label={ui.caseStudyPrefix + ' ' + app.title}
 			>
 				<Hero app={app} kicker={ui.caseStudy} projectColor={projectColor} />

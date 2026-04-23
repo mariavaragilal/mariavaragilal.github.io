@@ -23,10 +23,17 @@
   line-height: 1.175;
   letter-spacing: -0.0675em;
   margin-bottom: clamp(1rem, 3vw, 2rem);
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  padding-inline: 0.08em;
+  box-sizing: border-box;
 
   em {
     color: var(--project-accent, currentColor);
     font-style: italic;
+    overflow-wrap: break-word;
   }
 }
 
@@ -48,6 +55,11 @@
   margin-bottom: clamp(1rem, 3vw, 2rem);
   padding-bottom: clamp(1rem, 3vw, 2rem);
   border-bottom: .0625rem solid var(--border);
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
 }
 
 @utility text-editorial-section {

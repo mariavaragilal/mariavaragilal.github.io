@@ -26,7 +26,7 @@ const Layout = ({ children, title, description, showWork, className, ...others }
 		};
 	}, [isCaseStudyPage]);
 
-	const wrapperClass = 'flex flex-col font-dm-sans gap-2 bg-secondary p-2 text-foreground ' + (isCaseStudyPage ? 'h-dvh max-h-dvh overflow-hidden min-h-0' : 'min-h-dvh');
+	const wrapperClass = 'flex flex-col min-w-0 font-dm-sans gap-2 bg-secondary p-2 text-foreground ' + (isCaseStudyPage ? 'h-dvh max-h-dvh overflow-hidden min-h-0' : 'min-h-dvh');
 	return (
 		<React.Fragment>
 			<I18nextProvider i18n={i18n}>

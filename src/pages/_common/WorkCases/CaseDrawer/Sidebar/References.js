@@ -12,9 +12,9 @@ const getHostname = (url) => new URL(url).hostname.replace('www.', '');
 
 // Card-style external link used for live work, client deliveries, portfolios.
 const ReferenceLink = ({ href, label, opensNewTab }) => (
-	<a href={href} target='_blank' rel='noopener noreferrer' className={cn('flex flex-wrap items-center justify-between border-b border-border py-3', focusRing)}>
-		<span className='text-[.625em] text-current/66 uppercase tracking-[0.18em]'>{label}</span>
-		<span className='text-[.8em] font-mono text-current'>{getHostname(href)} →</span>
+	<a href={href} target='_blank' rel='noopener noreferrer' className={cn('flex flex-wrap items-center justify-between gap-x-2 gap-y-1 min-w-0 w-full border-b border-border py-3', focusRing)}>
+		<span className='text-[.625em] text-current/66 uppercase tracking-[0.18em] min-w-0 break-words'>{label}</span>
+		<span className='text-[.8em] font-mono text-current shrink-0 break-all text-right'>{getHostname(href)} →</span>
 		<span className={srOnly}>{opensNewTab}</span>
 	</a>
 );

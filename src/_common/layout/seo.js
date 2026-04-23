@@ -39,6 +39,7 @@ const Seo = ({ title, description, pathname = '/' }) => {
 			<meta name='keywords' content={metaKeywords} />
 			<meta name='author' content={site.author} />
 			<meta httpEquiv='X-UA-Compatible' content='IE=edge' />
+			<meta name='viewport' content='width=device-width, initial-scale=1' />
 
 			{/* Open Graph / Facebook */}
 			<meta property='og:type' content={ogType} />

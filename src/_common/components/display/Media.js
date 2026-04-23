@@ -141,7 +141,7 @@ export const Media = ({ image, variant = 'annotated', className = '', imageMap =
 	const ratioForBox = explicitRatio || cfg.defaultRatio;
 	const browserViewportRatio = scrollableBrowserViewport ? (explicitRatio || '16 / 9') : null;
 	const objectPosition = img.objectPosition || 'top center';
-	const figureClass = cn(cfg.wrapperClass, className, 'self-start');
+	const figureClass = cn(cfg.wrapperClass, className, 'self-start max-w-full min-w-0');
 
 	let figcaption = null;
 	if (!hideCaption) {

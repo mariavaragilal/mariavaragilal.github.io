@@ -15,10 +15,10 @@ export const Hero = ({ app, kicker, projectColor }) => {
 	const accentScope = projectColor && accentVars ? { 'data-project-accent': '', style: accentVars } : {};
 	const accentFg = projectColor ? { color: 'var(--project-accent)' } : undefined;
 	return (
-		<header className='min-w-0 space-y-4' {...accentScope}>
+		<header className='min-w-0 max-w-full space-y-4' {...accentScope}>
 			{hasHeading ? <p className='sr-only text-editorial-hero-tag text-current' style={accentFg}>{kicker}</p> : null}
-			{hasHeading ? <RichText as='h1' className='text-editorial-hero text-current break-words' text={heading} /> : null}
-			{hasDek ? <RichText as='p' className='text-editorial-hero-sub text-current/88 break-words' text={dek} /> : null}
+			{hasHeading ? <RichText as='h1' className='text-editorial-hero text-current break-words min-w-0 w-full max-w-full' text={heading} /> : null}
+			{hasDek ? <RichText as='p' className='text-editorial-hero-sub text-current/88 break-words min-w-0 w-full max-w-full' text={dek} /> : null}
 			{hasLabels ? (
 				<ul className='flex flex-wrap gap-4 pt-1 list-none m-0 p-0'>
 					{labels.map((label, i) => (

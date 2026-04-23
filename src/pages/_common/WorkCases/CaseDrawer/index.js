@@ -31,8 +31,8 @@ export const CaseStudyView = ({ app, cases = [] }) => {
 	};
 
 	return (
-		<div className='flex flex-col xl:flex-row flex-1 min-h-0 overflow-y-auto xl:overflow-hidden xl:h-full'>
-			<nav className='sticky z-10 top-0 left-0 flex flex-wrap xl:flex-col xl:h-full gap-5 items-center shrink-0 bg-secondary/50 p-4 justify-between' aria-label={ui.caseNavAria || 'Case navigation'}>
+		<div className='flex flex-col xl:flex-row flex-1 min-h-0 min-w-0 w-full overflow-y-auto overflow-x-hidden xl:overflow-hidden xl:h-full'>
+			<nav className='sticky z-10 top-0 left-0 flex flex-wrap xl:flex-col xl:h-full gap-5 items-center shrink-0 min-w-0 max-w-full bg-secondary/50 p-4 justify-between' aria-label={ui.caseNavAria || 'Case navigation'}>
 				<Button as={Link} to='/#work' variant='secondary' size='icon' className='size-8' aria-label={'Back to ' + (ws.heading || 'work')}>
 					<motion.span animate={{ rotate: 45 }} className='font-mono font-thin text-xl leading-none' aria-hidden='true'>+</motion.span>
 				</Button>
