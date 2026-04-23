@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { srOnly, focusRing } from '../../../constants/utils/a11y';
 import { useSiteMetadata } from '../../../hooks/useSiteMetadata';
+import { RichText } from '../../_common/RichText';
 
 const NAV_LINKS = [
 	{ key: 'dribbble', label: 'Dribbble' },
@@ -15,17 +16,17 @@ const CVHeader = () => {
 	const { t } = useTranslation();
 	const { social } = useSiteMetadata();
 	return (
-		<header className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-8 border-b border-border'>
-			<div className='min-w-0 w-full'>
+		<header className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 p-8 border-b border-border'>
+			<div className='min-w-0 w-full mt-auto'>
 				<h1 className='sr-only'>CV</h1>
-				<p className='text-7xl/15 text-foreground max-w-full md:min-h-[7.5rem] font-mon tracking-tighter font-medium break-words'>{t('cv.name')}</p>
+				<RichText as='p' className='text-7xl/15 text-foreground max-w-full md:min-h-[7.5rem] font-mon tracking-tighter font-medium break-words' text={t('cv.name')} />
 			</div>
 			<div className='min-w-0 flex h-full flex-col justify-end gap-3'>
 				<p className='text-[1em] text-foreground'>{t('location')}</p>
 				<p className='font-mon font-medium leading-[1.35] text-[1.675em] text-foreground w-full max-w-md'>{t('cv.title')}</p>
 				<a href={social.linkedin} target='_blank' rel='noopener noreferrer' className='text-[1em] text-current/66 hover:text-blue-600 dark:hover:text-blue-400 hover:underline'>{stripProtocol(social.linkedin)}</a>
 			</div>
-			<nav className='min-w-0 p-0 md:col-span-2 lg:col-span-1 flex h-full flex-col justify-end' aria-label='External profiles'>
+			<nav className='min-w-0 p-0 md:col-span-2 xl:col-span-1 flex h-full flex-col justify-end' aria-label='External profiles'>
 				<h1 className='sr-only'>links</h1>
 				{NAV_LINKS.map(({ key, label }, i) => (
 					<a
