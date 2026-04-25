@@ -3,10 +3,9 @@ import { useTranslation } from 'react-i18next';
 import Layout from '../../_common/layout';
 import { srOnly } from '../../constants/utils/a11y';
 import { Card, ToggleGroup, ToggleGroupItem } from '../../_common/components';
-import { toSlug, caseMatchesStrengthTag } from '../../constants/utils/structuredData';
+import { toSlug, caseMatchesStrengthTag, flattenWorkCasesOrdered } from '../../constants/utils/structuredData';
 import { CaseCard } from '../_common/WorkCases/CaseCard';
 import { Link } from 'gatsby';
-import { flattenWorkCasesOrdered } from '../../constants/utils/structuredData';
 import { Matrix } from '../../_common/components/complex/Matrix';
 
 /* ── Tag dot colors (both languages) ── */
@@ -31,6 +30,7 @@ const caseSlug = (app) => app.slug || toSlug(app.title);
 const CasesIndexPage = () => {
 	const { t, i18n } = useTranslation();
 	const workCases = t('mv.workCases', { returnObjects: true }) || {};
+	const aiWorkContextGroup = workCases['AI within Boundaries'] || {};
 	const ws = t('mv.workSection', { returnObjects: true }) || {};
 	const title = ws.kicker + ' — ' + ws.heading;
 	const strengthsItems = ws?.strengths?.items || [];
@@ -72,17 +72,20 @@ const CasesIndexPage = () => {
 	}, [activeTag, strengthsItems]);
 
 	const allCases = flattenWorkCasesOrdered(workCases);
+	const aiContext = aiWorkContextGroup.context || '';
+	const aiContextNote = aiWorkContextGroup.contextNote || '';
+	const showAiContextBlock = !!(aiContext || aiContextNote);
 
 	const hasStrengths = strengthsItems.length > 0 && matrixPhases.length > 0; //
 
 	return (
 		<Layout title={title} description={ws.p1} className='text-foreground flex-1 min-h-0 overflow-y-auto h-full'>
 			<a href='#main-content' className={srOnly + ' focus:static focus:w-auto focus:h-auto focus:p-3 focus:m-0 focus:overflow-visible focus:whitespace-normal focus:bg-primary focus:text-primary-foreground z-50'}>{t('home.skipToMain')}</a>
-			<Card as='section' id='main-content' className='flex-1 rounded-xl px-6 py-12 lg:px-10 space-y-10'>
+			<Card as='section' id='main-content' className='flex-1 rounded-xl px-6 py-12 lg:px-10 space-y-16'>
 				<div className='flex flex-col relative'>
 					<p className='text-[.75em] uppercase tracking-[0.2em] font-semibold text-current/66'>{ws.kicker}</p>
 					<h1 className='font-mono font-medium text-[clamp(1.5rem,4vw,2.5rem)] tracking-tight text-foreground mt-2'>{ws.heading}</h1>
-					<div className='grid gap-x-8 gap-y-6 md:grid-cols-[minmax(0,.8fr)_minmax(0,1.2fr)] items-start'>
+					<div className='grid gap-x-8 gap-y-6 md:gap-x-12 md:grid-cols-[minmax(0,.8fr)_minmax(0,1.2fr)] items-start'>
 						{/* ── Left column: text + component library ── */}
 						<div className='space-y-6 text-foreground'>
 							<p className='text-[1.125rem] leading-[1.7] text-current/88'>
@@ -174,6 +177,17 @@ const CasesIndexPage = () => {
 								return <CaseCard variant='secondary' className='border border-border/50' key={app.title} id={'case-' + slug} app={app} isSelected={false} to={'/work/' + slug + '/'} as='h4' />;
 							})}
 					</div>
+					{showAiContextBlock ? (
+						<div className='block space-y-1'>
+							<p className='text-[.7em] uppercase tracking-[0.16em] font-medium sr-only'>{ws.aiWithinBoundariesKicker}</p>
+							{aiContext ? (
+								<p className='text-xs leading-[1.6]'>{aiContext}</p>
+							) : null}
+							{aiContextNote ? (
+								<p className='text-xs leading-[1.6] italic text-current/66'>{aiContextNote}</p>
+							) : null}
+						</div>
+					) : null}
 				</div>
 			</Card>
 		</Layout>

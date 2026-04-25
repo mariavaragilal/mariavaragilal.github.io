@@ -31,6 +31,7 @@ const TAG_COLORS = {
 export const WorkSection = () => {
 	const { t, i18n } = useTranslation();
 	const workCases = t('mv.workCases', { returnObjects: true }) || {};
+	const aiWorkContextGroup = workCases['AI within Boundaries'] || {};
 	const ws = t('mv.workSection', { returnObjects: true }) || {};
 	const strengthsItems = ws?.strengths?.items || [];
 	const strengthsMatrix = ws?.strengthsMatrix || {};
@@ -88,6 +89,9 @@ export const WorkSection = () => {
 	const handleTagSelect = (tag) => setActiveTag((prev) => (prev === tag ? null : tag));
 
 	const hasStrengths = false; // strengthsItems.length > 0 && matrixPhases.length > 0; // 
+	const aiContext = aiWorkContextGroup.context || '';
+	const aiContextNote = aiWorkContextGroup.contextNote || '';
+	const showAiContextBlock = !!(aiContext || aiContextNote);
 
 	return (
 		<React.Fragment>
@@ -214,6 +218,17 @@ export const WorkSection = () => {
 								);
 							})}
 					</div>
+					{showAiContextBlock ? (
+						<div className='block space-y-1'>
+							<p className='text-[.7em] uppercase tracking-[0.16em] font-medium sr-only'>{ws.aiWithinBoundariesKicker}</p>
+							{aiContext ? (
+								<p className='text-xs leading-[1.6]'>{aiContext}</p>
+							) : null}
+							{aiContextNote ? (
+								<p className='text-xs leading-[1.6] italic text-current/66'>{aiContextNote}</p>
+							) : null}
+						</div>
+					) : null}
 				</div>
 			</Card>
 		</React.Fragment >
