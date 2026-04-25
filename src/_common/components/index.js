@@ -1,6 +1,6 @@
 // Flattened barrel — direct exports for tree-shaking (no deep re-export chain)
 export { Badge } from './display/Badge';
-export { Card, CardHeader, CardTitle, CardDescription, CardAction, CardContent, CardFooter, MetricCard } from './display/Card';
+export { Card, CardHeader, CardTitle, CardDescription, CardAction, CardContent, CardFooter, CardImage, MetricCard } from './display/Card';
 export { Avatar, AvatarImage, AvatarFallback } from './display/Avatar';
 export { Skeleton } from './display/Skeleton';
 export { Separator } from './display/Separator';

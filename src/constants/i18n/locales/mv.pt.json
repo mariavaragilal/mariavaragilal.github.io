@@ -277,6 +277,7 @@
 					},
 					"caseStudy": {
 						"projectColor": "#2b49d7",
+						"scope": "Branding · Web Design",
 						"context": {
 							"title": "Desenhar um sistema coeso.",
 							"lead": "A Securibox não tinha uma identidade de marca estabelecida. À medida que a empresa se expandiu do serviço original de gestão de documentos para múltiplas soluções, cada produto surgiu com a sua própria linguagem visual e sem base partilhada.",
@@ -681,6 +682,7 @@
 					},
 					"caseStudy": {
 						"projectColor": "#7137e6",
+						"scope": "Branding · Product Design",
 						"context": {
 							"title": "Credenciais, entregues.",
 							"lead": "Os utilizadores tinham de confiar num produto com as credenciais de login de cada fornecedor — banco, telecomunicações, seguros, retalho. A tecnologia de agentes da Securibox automatiza a recolha de documentos através dessas credenciais guardadas; a tecnologia funcionava. O problema de design estava em ambos os lados dessa equação: o momento do handover, e cada sinal depois dele a dizer \"sim, isto continua seguro.\"",
@@ -1139,12 +1141,12 @@
 					"slug": "sca-cloudagents",
 					"caseStudy": {
 						"projectColor": "#2461EC",
+						"scope": "Branding · Product Design · Web Design",
 						"context": {
 							"title": "Três trabalhos, <em>uma superfície</em>",
 							"head": "Três trabalhos acontecem lá dentro. <em>Admins</em> configuram o que cada agente recolhe e traduzem as labels que os utilizadores vão ver. Equipas de <em>suporte</em> seguem contas individuais — porque falhou esta sincronização, que credenciais estão erradas, que site de fornecedor mudou durante a noite — e relançam-nas. <em>Ops</em> vigia a latência da API e a taxa de sucesso em toda a frota.",
 							"body": "Pensam de forma diferente, trabalham a ritmos diferentes e falham de forma diferente quando a interface não os suporta. Um operador de suporte que falha um estado de sincronização divergente sob pressão de tempo significa que uma conta fica partida. Um admin que edita a label errada significa que os utilizadores reais vêem o formulário errado.",
-							"bridge": "Clareza para um trabalho é ruído para outro. O desafio:",
-							"scope": "Produto · Identidade · Landing"
+							"bridge": "Clareza para um trabalho é ruído para outro. O desafio:"
 						},
 						"role": {
 							"title": "Um par de <em>olhos,</em><br>três superfícies.",
@@ -1827,6 +1829,7 @@
 					},
 					"caseStudy": {
 						"projectColor": "#2b49d7",
+						"scope": "Product Design",
 						"context": {
 							"title": "Identidade espalhada por todos os produtos.",
 							"lead": "Os utilizadores não tinham um sítio central para gerir a sua identidade no ecossistema Securibox. À medida que a plataforma cresceu — Cube, SCA, RH, ParseXtract e portais de cliente — edições de perfil, mudanças de password e visibilidade dos serviços ligados estavam espalhadas ou ausentes.",
@@ -2111,6 +2114,7 @@
 					},
 					"caseStudy": {
 						"projectColor": "#2b49d7",
+						"scope": "Product Design",
 						"context": {
 							"title": "Auth como primeira impressão de cada produto.",
 							"lead": "Cada produto Securibox exigia autenticação. Sem uma camada de identidade central, os utilizadores enfrentavam sign-ups repetidos e fluxos inconsistentes no ecossistema, erodindo a confiança.",
@@ -2297,6 +2301,14 @@
 					"role": "Product Designer",
 					"tools": "Figma",
 					"highlight": "Desenhei e desenvolvi uma app sobre as soluções Securibox para responder à norma francesa de 2017: recibos digitais por omissão, com direito de opt-out do trabalhador e entrega segura de documentos.",
+					"overviewMockup": {
+						"src": "rh/payslip-landing-overview",
+						"label": "Portal RH",
+						"title": "Visão geral da página: site francês de marketing para distribuição electrónica de recibos — hero, benefícios, fluxo para empresas, código do trabalho, webinar e preços.",
+						"alt": "Landing longa RH Securibox em francês: hero sobre difusão de recibos, estatísticas e benefícios, processo em três passos para empresas, cartões do código do trabalho, bloco de webinar e preço por recibo.",
+						"url": "https://rh.securibox.eu",
+						"frame": "browser"
+					},
 					"results": [
 						"Fluxos de utilizador que traduzem a norma de 2017 em escolhas claras de opt-in/opt-out",
 						"Arquitectura de informação para entrega segura de recibos",
@@ -2312,8 +2324,10 @@
 						]
 					},
 					"caseStudy": {
+						"projectColor": "#616AD1",
+						"scope": "Product Design · Web Design",
 						"context": {
-							"title": "Recibos digitais por omissão — uma mudança regulatória, da noite para o dia.",
+							"title": "<em>Recibos digitais</em> por defeito — uma mudança regulatória, repentina.",
 							"lead": "A Securibox precisava de um produto para suportar a norma francesa de 2017 de recibos electrónicos — construído sobre as suas soluções existentes de recolha, parsing e entrega segura de documentos — garantindo ao mesmo tempo acesso confidencial e de longo prazo.",
 							"body": "A regulamentação autorizou os empregadores a emitir recibos em formato electrónico por omissão; os empregadores devem informar os trabalhadores mas não precisam de permissão para mudar. Os trabalhadores mantêm o direito legal de optar por papel. O produto tinha de fazer com que ambos os lados da equação parecessem igualmente claros.",
 							"bridge": "A pergunta de design:"
@@ -2448,7 +2462,7 @@
 					"title": "Website & Marca ConnectLime",
 					"subtitle": "Construí a identidade de marca do estúdio e o site bilingue — o alinhamento de stakeholders em \"profissionalismo através da simplicidade\" guiou cada decisão, da estratégia de conteúdo ao sistema de tema adaptativo",
 					"role": "UX/UI Designer · Mentora na wordmark logo · 2019",
-					"tools": "Figma · Gatsby · Brand Guidelines",
+					"tools": "Figma · Gatsby · VS Code",
 					"highlight": "Orientei a wordmark logo. Desenhei o site do estúdio — a face pública da empresa — e criei o padrão geométrico de linhas para transportar essa identidade — clareza e confiança para decisores não-técnicos.",
 					"overviewMockup": {
 						"src": "connectlime/studio-site-overview",
@@ -2494,6 +2508,7 @@
 					},
 					"caseStudy": {
 						"projectColor": "#C3F41D",
+						"scope": "Branding · Product Design · Web Design",
 						"context": {
 							"title": "Um estúdio de produto digital em Lisboa, a marcar a primeira impressão.",
 							"lead": "A ConnectLime é um estúdio de produto digital em Lisboa — design, desenvolvimento de software, transformação digital e suporte para startups e PMEs.",
@@ -2702,6 +2717,14 @@
 					"role": "Mentora & Designer — estratégia, orientação de arquitectura e um workflow desenhado directamente",
 					"tools": "Figma",
 					"highlight": "Orientei a equipa de produto na estratégia e arquitectura em fases formativas, depois entrei para desenhar directamente o workflow de reconciliação bancária — para a GMB, uma plataforma SaaS de POS para empreendedores franceses mais tarde adquirida pela CEGID.",
+					"overviewMockup": {
+						"src": "gmb/cover",
+						"label": "Gerer Ma Boite",
+						"title": "Visão isométrica do produto: caixa POS (Caisse) com grelha de categorias, painel de talão e janelas de gestão sobrepostas.",
+						"alt": "Mockup SaaS POS GererMaBoite em francês: navegação vermelha com fluxos de venda e caixa, teclado tipo calculadora, categorias de produto a cores, talão e janelas de dashboard empilhadas com marca GMB.",
+						"url": "https://www.connectlime.com/en/work/GererMaBoite",
+						"frame": "none"
+					},
 					"results": [
 						"Orientei a equipa de produto nas fases de estratégia e arquitectura — a moldar decisões antes de ficarem consolidadas",
 						"Desenhei o workflow de reconciliação bancária — substituí terminologia contabilística por um modal de decisão em linguagem simples baseado em cartões, para que empreendedores sem formação em contabilidade pudessem reconciliar extractos bancários sem adivinhar",
@@ -2718,6 +2741,7 @@
 					},
 					"slug": "gerer-ma-boite-gmb",
 					"caseStudy": {
+						"scope": "Mentorship · Product Design",
 						"context": {
 							"title": "Profundidade contabilística, utilizadores empreendedores.",
 							"lead": "Tornar workflows financeiros complexos acessíveis a não-contabilistas sem simplificar de mais a lógica contabilística por baixo.",
@@ -2842,6 +2866,14 @@
 						"Tool exploration"
 					],
 					"highlight": "Desenhei fluxos específicos e construí o frontend em React a par de outro developer para o Assist@, uma plataforma de gestão de vida administrativa que cobre lutos, mudanças de casa e outras transições de vida. A contribuição mais pesada foi a implementação do frontend — estados de interacção e micro-padrões que fazem com que tarefas inerentemente tediosas pareçam rápidas e competentes. Ferramentas internas mantidas no mesmo padrão de design das superfícies viradas ao utilizador.",
+					"overviewMockup": {
+						"src": "assista/signup-user",
+						"label": "Assist@",
+						"title": "Registo de utilizador: barra lateral roxa com passos, verificação por telefone e acções — UI em francês.",
+						"alt": "Criação de conta Assist@ em francês: barra lateral roxa escura com marca ASSIST@ e menu multi-passo (Créer un compte activo), painel principal com campo de telefone, França +33, Envoyer code, termos legais, botões Fermer e Passer à l'étape suivante, ligação FAQ.",
+						"url": "https://www.assistarobase.fr",
+						"frame": "browser"
+					},
 					"results": [
 						"Frontend React pronto para produção construído a par de outro developer: implementações de componente, estados de interacção e micro-animações para feedback do sistema.",
 						"Desenhei: portal de revendedor, workflow de declaração de óbito, fluxo de geração de cartas, configuração de serviços e backoffice (acesso, equipas, permissões).",
@@ -2859,6 +2891,7 @@
 					},
 					"slug": "assist-admin-life-management",
 					"caseStudy": {
+						"scope": "Product Design",
 						"context": {
 							"title": "Vida administrativa para pessoas já sobrecarregadas.",
 							"lead": "Tornar algo inerentemente burocrático em algo manejável — sem a interface alguma vez se tornar a fonte da fricção.",
@@ -3093,6 +3126,14 @@
 					"role": "Product & UX Designer · 2016",
 					"tools": "Figma · Design de produto · Landing page",
 					"highlight": "Conceito de produto e landing para uma solução fintech — o recibo electrónico para todos.",
+					"overviewMockup": {
+						"src": "epaye/fullview",
+						"label": "Epaye",
+						"title": "Conceito de produto e landing — scroll completo da proposta.",
+						"alt": "Proposta Epaye de recibo electrónico: landing longa e conceito de produto com narrativa de relações humanas e UI fintech.",
+						"url": "https://www.behance.net/gallery/41258845/Epaye-la-paye-lectronique-pour-tous",
+						"frame": "none"
+					},
 					"results": [
 						"Conceito de produto e landing",
 						"Proposta de valor clara para a adopção de recibos",
@@ -3113,6 +3154,7 @@
 						]
 					},
 					"caseStudy": {
+						"scope": "Product Design · Web Design",
 						"context": {
 							"title": "Recibos, repensados à volta de relações humanas.",
 							"lead": "Construir uma identidade digital e um produto de raiz, ancorados numa única dimensão central — relações humanas.",
@@ -3161,6 +3203,20 @@
 						},
 						"implementation": {
 							"title": "Conceito de design em produto e landing.",
+							"carousel": {
+								"images": [
+									{
+										"src": "epaye/detail",
+										"label": "Hero e UI principal",
+										"alt": "Proposta Epaye: vista focal da proposta de valor e identidade visual do recibo electrónico."
+									},
+									{
+										"src": "epaye/fullview",
+										"label": "Produto e landing completos",
+										"alt": "Conceito Epaye em comprimento completo: landing e fluxos de produto para recibo desmaterializado entre empregador e trabalhador."
+									}
+								]
+							},
 							"design": [
 								{
 									"heading": "Marca & narrativa",
@@ -3226,6 +3282,14 @@
 					"role": "Equipa criativa — Young Lions '14 · Direcção de Arte & UX",
 					"tools": "Adobe CS · Direcção de arte · UX · Conceito de campanha",
 					"highlight": "O Continente tem quase 30 anos de história — a primeira cadeia de hipermercados de Portugal, uma referência cultural com que o país inteiro cresceu. Em 2014, o continente.pt não carregava nada dessa confiança. O briefing do Young Lions pedia a redesenho da homepage. Propusemos uma experiência digital completa — homepage, loja online, páginas de categoria e mobile — que fizesse o site estar à altura da marca a que pertence.",
+					"overviewMockup": {
+						"src": "continente/original",
+						"label": "continente.pt (2014)",
+						"title": "Experiência digital anterior — o site a que a proposta Young Lions respondeu.",
+						"alt": "continente.pt em 2014: homepage sobrecarregada, hierarquia fraca e percurso de compra que não reflectia a confiança da marca física.",
+						"url": "https://www.behance.net/gallery/16891063/Bronze-Young-Lions-2014-Continentept",
+						"frame": "none"
+					},
 					"results": [
 						"Bronze Young Lions Portugal 2014 — categoria Internet / Cyber",
 						"Fluxo de homepage com lista-de-compras-primeiro — criar a lista antes do login",
@@ -3248,6 +3312,7 @@
 					},
 					"caseStudy": {
 						"projectColor": "#DA291C",
+						"scope": "Web Design",
 						"context": {
 							"title": "Uma marca cultural de retalho, a gritar consigo mesma online.",
 							"lead": "Quando se acedia ao Continente Online em 2014, a informação vinha de todos os ângulos. Cada pequeno espaço gritava, o site não conseguia respirar. Sem hierarquia clara, os compradores perdiam-se na procura de produtos, a gastar tempo em coisas que não queriam comprar.",
@@ -3418,6 +3483,25 @@
 						},
 						"implementation": {
 							"title": "Design na homepage, na loja e nas superfícies responsivas.",
+							"carousel": {
+								"images": [
+									{
+										"src": "continente/original",
+										"label": "continente.pt em 2014 (contexto)",
+										"alt": "Experiência anterior do Continente online: layout denso e hierarquia visual fraca antes da proposta."
+									},
+									{
+										"src": "continente/homepage",
+										"label": "Homepage proposta",
+										"alt": "Proposta Young Lions: homepage Continente com entrada lista-primeiro, hero, separadores Conte com Mais e estrutura de confiança."
+									},
+									{
+										"src": "continente/store",
+										"label": "Loja online",
+										"alt": "Proposta: superfícies de loja Continente com navegação por categorias e descoberta de produtos."
+									}
+								]
+							},
 							"design": [
 								{
 									"heading": "Marca & narrativa",
@@ -3502,6 +3586,14 @@
 					"role": "Proposta digital & website · 2014",
 					"tools": "Design · Proposta · Web",
 					"highlight": "Proposta digital e conceito de website para o Sporting Clube de Portugal.",
+					"overviewMockup": {
+						"src": "scp/gamebox-overview",
+						"label": "Microsite GameBox 14/15",
+						"title": "Proposta e hero: identidade do clube, fotografia de adepto e narrativa GameBox.",
+						"alt": "Conceito SCP GameBox 14/15: slide com hero do microsite em verde Sporting, manchete TU ÉS A NOSSA FÉ, linha do 12º jogador, foto de adepto, CTAs de login e vantagens, e navegação do clube.",
+						"url": "https://dribbble.com/shots/1741544-SCP-GameBox-14-15",
+						"frame": "none"
+					},
 					"results": [
 						"Conceito de website e proposta digital",
 						"Experiência de marca Sporting",
@@ -3516,6 +3608,7 @@
 						]
 					},
 					"caseStudy": {
+						"scope": "Web Design",
 						"context": {
 							"title": "Ofertas e vantagens, para uma marca com cultura própria.",
 							"lead": "A SCP GameBox 14'15 precisava de apresentar ofertas e vantagens de forma autêntica à marca e à audiência desportiva do Sporting Clube de Portugal.",
@@ -3607,128 +3700,6 @@
 					},
 					"slug": "scp-gamebox",
 					"skillsDemonstrated": [
-						"Design rationale"
-					]
-				},
-				{
-					"period": "2013",
-					"status": "proposal",
-					"title": "CCV — Correios de Cabo Verde",
-					"subtitle": "Correios · proposta (landing + câmbio)",
-					"role": "Design de landing page · 2013",
-					"tools": "Design · Landing page · UX governamental",
-					"highlight": "Conceito de landing page para os correios de Cabo Verde — câmbio de moeda, encomendas estrangeiras e serviços postais.",
-					"results": [
-						"Conceito de landing page",
-						"UX de câmbio e serviços postais",
-						"Presença digital do sector governamental"
-					],
-					"references": {
-						"dribbble": [
-							{
-								"url": "https://dribbble.com/shots/1676694-CCV-Correios-de-Cabo-Verde",
-								"label": "CCV — Correios de Cabo Verde"
-							}
-						]
-					},
-					"caseStudy": {
-						"context": {
-							"title": "Uma estação de correios, um balcão de câmbio e um público diverso.",
-							"lead": "Os Correios de Cabo Verde (CCV) precisavam de uma presença digital para câmbio de moeda, encomendas estrangeiras e serviços postais — ofertas complexas para uma base de utilizadores diversa.",
-							"body": "Num contexto de sector governamental, a landing page não pode assumir fluência digital. Tem de segurar múltiplos tipos de serviço lado a lado — postal, câmbio, encomendas estrangeiras — e deixar qualquer visitante encontrar a porta certa sem ser confrontado com ruído visual.",
-							"bridge": "O desafio de UX:"
-						},
-						"strategicDecision": {
-							"question": "Como apresentar serviços postais e de câmbio para uma base de utilizadores diversa?",
-							"lead": "Priorizar clareza e acessibilidade — num contexto governamental, a confiança e a usabilidade importam mais do que a ambição visual."
-						},
-						"keyDecisions": {
-							"heading": "Decisões-chave",
-							"title": "A decisão que pôs a confiança à frente da ambição visual.",
-							"items": [
-								{
-									"phase": "01",
-									"label": "Conceito",
-									"tagline": "Clareza como valor principal de design",
-									"title": "Conceito de estrutura da landing.",
-									"description": "Proposta de arquitectura de informação e design visual para câmbio de moeda, encomendas estrangeiras e serviços postais — organizada para que uma audiência diversa possa encontrar o serviço certo sem assumir fluência digital."
-								}
-							]
-						},
-						"inPractice": {
-							"title": "A decisão que pôs o público à frente da marca.",
-							"items": [
-								{
-									"badge": "Edge cases & resilience",
-									"strength": "Edge cases & resilience",
-									"title": "Confiança e usabilidade primeiro num contexto de sector governamental.",
-									"summary": "Uma landing que serve toda a gama de utilizadores sem assumir fluência digital.",
-									"task": "Os correios de Cabo Verde precisavam de uma presença digital para câmbio, encomendas estrangeiras e serviços postais.",
-									"issue": "Uma base de utilizadores diversa, com literacia digital variada, a aceder a ofertas multi-serviço complexas.",
-									"insight": "Num contexto governamental, a confiança e a usabilidade importam mais do que a ambição visual. A clareza é o valor principal de design.",
-									"decision": "Priorizei clareza da arquitectura de informação e acessibilidade em vez de complexidade visual.",
-									"outcome": "Um conceito de landing que serve toda a gama de utilizadores — dos serviços postais ao câmbio de moeda — sem assumir fluência digital."
-								}
-							]
-						},
-						"implementation": {
-							"title": "Proposta de landing, apenas design.",
-							"design": [
-								{
-									"heading": "Conceito de landing page",
-									"description": "Arquitectura de informação e design visual para uma landing page de sector governamental — câmbio de moeda, encomendas estrangeiras e serviços postais, organizados à volta de clareza de serviço e confiança."
-								}
-							],
-							"code": []
-						},
-						"metrics": {
-							"title": "Uma landing de serviço público que não assume fluência digital.",
-							"items": [
-								{
-									"value": "1",
-									"label": "Conceito de landing page para os CCV."
-								},
-								{
-									"value": "3",
-									"label": "Tipos de serviço segurados numa página — postal, câmbio, encomendas estrangeiras."
-								},
-								{
-									"value": "Confiança-primeiro",
-									"label": "Linguagem visual a priorizar clareza sobre ambição visual."
-								}
-							]
-						},
-						"tradeoffs": {
-							"heading": "Trade-offs & Aprendizagens",
-							"title": "O que uma proposta de serviço público ensinou.",
-							"items": [
-								"— Priorizei clareza e acessibilidade para um contexto de sector governamental — onde a confiança e a usabilidade importam mais do que a ambição visual."
-							]
-						},
-						"quote": {
-							"title": "Tornar serviços postais e de câmbio claros e acessíveis.",
-							"subtitle": "Confiança e usabilidade primeiro num contexto de sector governamental."
-						},
-						"skillsDemonstrated": [
-							"Edge cases & resilience",
-							"Design rationale"
-						],
-						"projectSpecificSkills": "UX de serviço público · Descobribilidade de serviços · Design de fluxo de câmbio e postal",
-						"skillsByStrength": [
-							{
-								"strength": "Edge cases & resilience",
-								"items": "UX de serviço público · Descobribilidade de serviços"
-							},
-							{
-								"strength": "Design rationale",
-								"items": "Design de fluxo de câmbio e postal"
-							}
-						],
-						"skillsByStrengthTitle": "Competências demonstradas neste projecto"
-					},
-					"slug": "ccv-correios-de-cabo-verde",
-					"skillsDemonstrated": [
-						"Edge cases & resilience",
 						"Design rationale"
 					]
 				}
@@ -3827,6 +3798,7 @@
 						]
 					},
 					"caseStudy": {
+						"scope": "Agent Skills · Prompting",
 						"context": {
 							"title": "Prompts que pareciam afiados, depois desfaziam-se.",
 							"lead": "Andava a escrever prompts que pareciam afiados no momento e desfaziam-se na semana seguinte. A falha não era no modelo — era minha. Não tinha uma forma repetível de fixar papel, restrições e forma de output antes de pedir palavras.",

@@ -33,6 +33,16 @@ const CONTENT_BASE = '';
 const FOOTER_BASE = 'flex items-center';
 const ACTION = 'col-start-2 row-span-2 row-start-1 self-start justify-self-end';
 
+const IMAGE_BASE = 'w-full overflow-hidden rounded-lg border border-border/60';
+const LOGOMARK_SVG = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' shape-rendering='crispEdges' fill='%23d655ad'><rect x='1' y='1' width='8' height='2'/><rect x='1' y='4' width='8' height='2'/><rect x='1' y='6' width='2' height='1'/><rect x='7' y='6' width='2' height='1'/><rect x='1' y='7' width='8' height='2'/></svg>`;
+const PLACEHOLDER_PATTERN = {
+	backgroundColor: 'color-mix(in oklab, var(--color-secondary) 35%, transparent)',
+	backgroundImage: `url("data:image/svg+xml;utf8,${LOGOMARK_SVG}")`,
+	backgroundRepeat: 'no-repeat',
+	backgroundPosition: 'center',
+	backgroundSize: '96px 96px',
+};
+
 const CardContext = createContext({
 	padding: DEFAULT_PADDING,
 	headerPadding: DEFAULT_HEADER_PADDING,
@@ -68,6 +78,23 @@ export const CardAction = ({ className = '', ...props }) => (
 export const CardContent = ({ className = '', customPadding = '', ...props }) => {
 	const { padding, contentPadding } = useContext(CardContext);
 	return <div data-slot='card-content' className={cn(CONTENT_BASE, customPadding ? customPadding : padding + ' ' + contentPadding, className)} {...props} />;
+};
+
+export const CardImage = ({ className = '', src, alt = '', aspectRatio = '16 / 9', imgClassName = '', loading = 'lazy', decoding = 'async', style, ...props }) => {
+	const hasSrc = !!src;
+	return (
+		<div data-slot='card-image' className={cn(IMAGE_BASE, className)} style={{ aspectRatio, ...(hasSrc ? null : PLACEHOLDER_PATTERN), ...style }} aria-label={!hasSrc && alt ? alt : undefined} role={!hasSrc ? 'img' : undefined} {...props} >
+			{hasSrc ? (
+				<img
+					src={src}
+					alt={alt}
+					loading={loading}
+					decoding={decoding}
+					className={cn('block w-full h-full object-cover object-top', imgClassName)}
+				/>
+			) : null}
+		</div>
+	);
 };
 
 export const CardFooter = ({ className = '', ...props }) => {

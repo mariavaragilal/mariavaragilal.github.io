@@ -19,6 +19,21 @@ import cubeWordmarkBrand from '../../../../../../assets/images/cases/cube/brand/
 
 import idAccountsSignup from '../../../../../../assets/images/cases/id/Accounts-signup.png';
 
+import rhPayslipLandingOverview from '../../../../../../assets/images/cases/rh/RH-Diffusion-électronique-de-bulletins-by-Securibox.png';
+
+import gmbCover from '../../../../../../assets/images/cases/gmb/GMB-cover.png';
+
+import assistaSignupUser from '../../../../../../assets/images/cases/assista/Assista-SignupUser.png';
+
+import continenteHomepage from '../../../../../../assets/images/cases/continente/homepage-continente.webp';
+import continenteStore from '../../../../../../assets/images/cases/continente/store-continente.webp';
+import continenteOriginal from '../../../../../../assets/images/cases/continente/original-20a4094b0afb11823fbe40d9760d8bb6.webp';
+
+import epayeFullview from '../../../../../../assets/images/cases/epaye/epaye-fullview.webp';
+import epayeDetail from '../../../../../../assets/images/cases/epaye/epaye-9184dcbc6bb8e157ac1a56896954ca1e.webp';
+
+import scpGameboxOverview from '../../../../../../assets/images/cases/scp/original-e0db555db92bcc7c5ef6174b79e005e5.gif';
+
 import connectlimePattern from '../../../../../../assets/images/cases/connectlime/pattern.svg';
 import connectlimeStudioSiteOverview from '../../../../../../assets/images/cases/connectlime/CONNECTLIME-Créateurdesolutionsdigitales.png';
 
@@ -39,6 +54,15 @@ export const CASE_IMAGES = {
 	'sca/brand/lockup-brand': cloudagentsLockupBrand,
 	'me/accounts-dashboard': meAccountsDashboard,
 	'id/accounts-signup': idAccountsSignup,
+	'rh/payslip-landing-overview': rhPayslipLandingOverview,
+	'gmb/cover': gmbCover,
+	'assista/signup-user': assistaSignupUser,
+	'continente/homepage': continenteHomepage,
+	'continente/store': continenteStore,
+	'continente/original': continenteOriginal,
+	'epaye/fullview': epayeFullview,
+	'epaye/detail': epayeDetail,
+	'scp/gamebox-overview': scpGameboxOverview,
 	'connectlime/pattern': connectlimePattern,
 	'connectlime/studio-site-overview': connectlimeStudioSiteOverview,
 };

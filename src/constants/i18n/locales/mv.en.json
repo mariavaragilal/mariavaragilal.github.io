@@ -277,6 +277,7 @@
 					},
 					"caseStudy": {
 						"projectColor": "#2b49d7",
+						"scope": "Branding · Web Design",
 						"context": {
 							"title": "Designing a cohesive system.",
 							"lead": "Securibox had no established brand identity. As the company expanded from original document-management service into multiple solutions, each product emerged with its own visual language and no shared foundation.",
@@ -681,6 +682,7 @@
 					},
 					"caseStudy": {
 						"projectColor": "#7137e6",
+						"scope": "Branding · Product Design · Web Design",
 						"context": {
 							"title": "Credentials, handed over.",
 							"lead": "Users had to trust a product with their login credentials for every provider — bank, telecoms, insurance, retail. Securibox's agent technology automates document collection through those stored credentials; the technology worked. The design problem sat on either side of that: the moment of handover, and every signal afterwards that said \"yes, this is still safe.\"",
@@ -1139,12 +1141,12 @@
 					"slug": "sca-cloudagents",
 					"caseStudy": {
 						"projectColor": "#2461EC",
+						"scope": "Branding · Product Design · Web Design",
 						"context": {
 							"title": "Three jobs, <em>one surface</em>",
 							"head": "Three jobs happen inside it. <em>Admins</em> configure what each agent collects and translate the labels their users will see. <em>Support</em> teams trace individual accounts — why did this sync fail, which credentials are wrong, which provider site changed overnight — and relaunch them. <em>Ops</em> watches API latency and success rate across the whole fleet.",
 							"body": "They think differently, work at different speeds, and fail differently when the interface doesn't support them. A support operator missing a divergent sync status under time pressure means an account stays broken. An admin editing the wrong agent label means real users see the wrong form.",
-							"bridge": "Clarity for one job is noise for another. The challenge:",
-							"scope": "Product · Identity · Landing"
+							"bridge": "Clarity for one job is noise for another. The challenge:"
 						},
 						"role": {
 							"title": "One pair of <em>eyes,</em><br>three surfaces.",
@@ -1828,6 +1830,7 @@
 					},
 					"caseStudy": {
 						"projectColor": "#2b49d7",
+						"scope": "Product Design",
 						"context": {
 							"title": "Identity scattered across every product.",
 							"lead": "Users had no central place to manage their identity across the Securibox ecosystem. As the platform grew — Cube, SCA, RH, ParseXtract, and client portals — profile edits, password changes, and connected-service visibility were scattered or absent.",
@@ -2112,6 +2115,7 @@
 					},
 					"caseStudy": {
 						"projectColor": "#2b49d7",
+						"scope": "Product Design",
 						"context": {
 							"title": "Auth as the first impression of every product.",
 							"lead": "Every Securibox product required authentication. Without a central identity layer, users faced repeated sign-ups and inconsistent flows across the ecosystem, eroding trust.",
@@ -2298,6 +2302,14 @@
 					"role": "Product Designer",
 					"tools": "Figma",
 					"highlight": "Designed and developed an app on Securibox solutions to answer the 2017 French norm: digital payslips as default, with employee opt-out right and secure document delivery.",
+					"overviewMockup": {
+						"src": "rh/payslip-landing-overview",
+						"label": "RH portal",
+						"title": "Full-page overview: French marketing site for electronic payslip distribution — hero, benefits, employer workflow, labour code, webinar, and pricing.",
+						"alt": "RH by Securibox long-form landing in French: hero on payslip distribution, stakeholder stats and benefits, three-step process for companies, labour-code cards, webinar block, and per-payslip pricing.",
+						"url": "https://rh.securibox.eu",
+						"frame": "browser"
+					},
 					"results": [
 						"User flows that translate the 2017 norm into clear opt-in/opt-out choices",
 						"Information architecture for secure payslip delivery",
@@ -2313,8 +2325,10 @@
 						]
 					},
 					"caseStudy": {
+						"projectColor": "#616AD1",
+						"scope": "Branding · Product Design · Web Design",
 						"context": {
-							"title": "Digital payslips by default — a regulatory shift, overnight.",
+							"title": "<em>Digital payslips</em> by default — a regulatory shift, overnight.",
 							"lead": "Securibox needed a product to support France's 2017 electronic payslip norm — built on its existing document collection, parsing, and secure delivery solutions — while ensuring confidential, long-term access.",
 							"body": "The regulation authorised employers to issue payslips in electronic format by default; employers must inform employees but do not need permission to switch. Employees retain a legal right to opt out and request paper. The product had to make both sides of that equation feel equally clear.",
 							"bridge": "The design question:"
@@ -2449,7 +2463,7 @@
 					"title": "ConnectLime Website & Brand",
 					"subtitle": "Built the agency's brand identity and bilingual website — stakeholder alignment on \"professionalism through simplicity\" drove every decision, from content strategy to adaptive theme system",
 					"role": "UX/UI Designer · Wordmark logo mentor · 2019",
-					"tools": "Figma · Gatsby · Brand Guidelines",
+					"tools": "Figma · Gatsby · VS Code",
 					"highlight": "Mentored the wordmark logo. Designed the studio site — the company's public face — and created the geometric line-pattern to carry that identity — clarity and trust for non-technical decision-makers.",
 					"overviewMockup": {
 						"src": "connectlime/studio-site-overview",
@@ -2495,6 +2509,7 @@
 					},
 					"caseStudy": {
 						"projectColor": "#C3F41D",
+						"scope": "Branding · Web Design",
 						"context": {
 							"title": "A Lisbon product studio making its first impression.",
 							"lead": "ConnectLime is a digital product studio based in Lisbon — design, software development, digital transformation, and support for startups and SMEs.",
@@ -2703,6 +2718,14 @@
 					"role": "Mentor & Designer — strategy, architecture guidance, and one workflow designed directly",
 					"tools": "Figma",
 					"highlight": "Mentored the product team through strategy and architecture at formative stages, then stepped in to design the bank reconciliation workflow directly — for GMB, a SaaS POS platform for French entrepreneurs later acquired by CEGID.",
+					"overviewMockup": {
+						"src": "gmb/cover",
+						"label": "Gerer Ma Boite",
+						"title": "Isometric product overview: POS register (Caisse) with category grid, ticket panel, and overlapping management windows.",
+						"alt": "GererMaBoite SaaS POS mockup in French: red navigation with sales and register flows, calculator keypad, colourful product categories, receipt ticket, and stacked dashboard windows with GMB branding.",
+						"url": "https://www.connectlime.com/en/work/GererMaBoite",
+						"frame": "none"
+					},
 					"results": [
 						"Mentored the product team through strategy and architecture phases — shaping decisions before they became entrenched",
 						"Designed the bank reconciliation workflow — replaced accounting terminology with a plain-language card-based decision modal so entrepreneurs without accounting backgrounds could reconcile their bank statements without guessing",
@@ -2719,6 +2742,7 @@
 					},
 					"slug": "gerer-ma-boite-gmb",
 					"caseStudy": {
+						"scope": "Mentorship · Product Design",
 						"context": {
 							"title": "Accounting depth, entrepreneurial users.",
 							"lead": "Making complex financial workflows accessible to non-accountants without oversimplifying the accounting logic underneath.",
@@ -2843,6 +2867,14 @@
 						"Tool exploration"
 					],
 					"highlight": "Designed specific flows and built the frontend in React alongside another developer for Assist@, a life admin platform covering bereavement, relocations, and other life transitions. The heavier contribution was the frontend implementation — interaction states and micro-patterns that make inherently tedious tasks feel fast and competent. Internal tools held to the same design standard as user-facing surfaces.",
+					"overviewMockup": {
+						"src": "assista/signup-user",
+						"label": "Assist@",
+						"title": "User signup: purple sidebar stepper, phone verification, and step actions — French UI.",
+						"alt": "Assist@ account creation in French: dark purple sidebar with ASSIST@ branding and multi-step menu (Créer un compte active), main panel with phone field, France +33, Envoyer code, legal terms, Fermer and Passer à l'étape suivante buttons, FAQ link.",
+						"url": "https://www.assistarobase.fr",
+						"frame": "browser"
+					},
 					"results": [
 						"Production-ready React frontend built alongside another developer: component implementations, interaction states, and micro-animations for system feedback.",
 						"Designed: reseller portal, death declaration workflow, letter generation flow, service configuration, and backoffice (access, teams, permissions).",
@@ -2860,6 +2892,7 @@
 					},
 					"slug": "assist-admin-life-management",
 					"caseStudy": {
+						"scope": "Product Design",
 						"context": {
 							"title": "Life admin for people already overwhelmed.",
 							"lead": "Making something inherently bureaucratic feel manageable — without the interface ever becoming the source of friction.",
@@ -3175,6 +3208,7 @@
 						]
 					},
 					"caseStudy": {
+						"scope": "Agent Skills · Prompting",
 						"context": {
 							"title": "Prompts that felt sharp, then fell apart.",
 							"lead": "I kept writing prompts that felt sharp in the moment and fell apart the next week. The failure was not the model — it was me. I had no repeatable way to fix role, constraints, and output shape before I asked for words.",
@@ -3334,6 +3368,14 @@
 					"role": "Creative team — Young Lions '14 · Art Direction & UX",
 					"tools": "Adobe CS · Art direction · UX · Campaign concept",
 					"highlight": "Continente has nearly 30 years of history — Portugal's first hypermarket chain, a cultural leader the whole country grew up with. In 2014, continente.pt carried none of that trust. The Young Lions brief asked us to redesign the homepage. We proposed a full digital experience — homepage, online shop, category pages, and mobile — that would make the site live up to the brand it belonged to.",
+					"overviewMockup": {
+						"src": "continente/original",
+						"label": "continente.pt (2014)",
+						"title": "Previous digital experience — the site the Young Lions proposal responded to.",
+						"alt": "continente.pt in 2014: crowded homepage, weak hierarchy, and a shopping path that did not match the trust of the physical brand.",
+						"url": "https://www.behance.net/gallery/16891063/Bronze-Young-Lions-2014-Continentept",
+						"frame": "none"
+					},
 					"results": [
 						"Bronze Young Lions Portugal 2014 — Internet / Cyber category",
 						"Shopping-list-first homepage flow — create the list before login",
@@ -3356,6 +3398,7 @@
 					},
 					"caseStudy": {
 						"projectColor": "#DA291C",
+						"scope": "Web Design",
 						"context": {
 							"title": "A cultural retail brand, shouting at itself online.",
 							"lead": "When you accessed Continente Online in 2014, information hit you from every angle. Every small space shouted, the site couldn't breathe. No clear hierarchy meant shoppers got lost in the search for products, wasting time on things they didn't want to buy.",
@@ -3526,6 +3569,25 @@
 						},
 						"implementation": {
 							"title": "Design across homepage, shop, and responsive surfaces.",
+							"carousel": {
+								"images": [
+									{
+										"src": "continente/original",
+										"label": "continente.pt in 2014 (context)",
+										"alt": "Previous Continente online experience: dense layout and weak visual hierarchy before the proposal."
+									},
+									{
+										"src": "continente/homepage",
+										"label": "Proposed homepage",
+										"alt": "Young Lions proposal: Continente homepage with list-first entry, hero, Conte com Mais tabs, and trust-building structure."
+									},
+									{
+										"src": "continente/store",
+										"label": "Online shop",
+										"alt": "Proposal: Continente shop surfaces with category browsing and product discovery."
+									}
+								]
+							},
 							"design": [
 								{
 									"heading": "Brand & narrative",
@@ -3610,6 +3672,14 @@
 					"role": "Product & UX Designer · 2016",
 					"tools": "Figma · Product design · Landing page",
 					"highlight": "Product and landing concept for a fintech solution — electronic payroll for everyone.",
+					"overviewMockup": {
+						"src": "epaye/fullview",
+						"label": "Epaye",
+						"title": "Product and landing concept — full scroll of the proposal.",
+						"alt": "Epaye electronic payroll proposal: long-form landing and product concept with human-relationships narrative and fintech UI.",
+						"url": "https://www.behance.net/gallery/41258845/Epaye-la-paye-lectronique-pour-tous",
+						"frame": "none"
+					},
 					"results": [
 						"Product and landing concept",
 						"Clear value proposition for payroll adoption",
@@ -3630,6 +3700,7 @@
 						]
 					},
 					"caseStudy": {
+						"scope": "Product Design · Web Design",
 						"context": {
 							"title": "Payroll, rethought around human relationships.",
 							"lead": "Building a digital identity and product from scratch, rooted in one core dimension — human relationships.",
@@ -3678,6 +3749,20 @@
 						},
 						"implementation": {
 							"title": "Design concept across product and landing.",
+							"carousel": {
+								"images": [
+									{
+										"src": "epaye/detail",
+										"label": "Hero & key UI",
+										"alt": "Epaye proposal: focal view of value proposition and visual identity for electronic payroll."
+									},
+									{
+										"src": "epaye/fullview",
+										"label": "Full product & landing",
+										"alt": "Epaye full-length concept: landing and product flows for dematerialised payroll between employer and employee."
+									}
+								]
+							},
 							"design": [
 								{
 									"heading": "Brand & narrative",
@@ -3743,6 +3828,14 @@
 					"role": "Digital proposal & website · 2014",
 					"tools": "Design · Proposal · Web",
 					"highlight": "Digital proposal and website concept for Sporting Clube de Portugal.",
+					"overviewMockup": {
+						"src": "scp/gamebox-overview",
+						"label": "GameBox 14/15 microsite",
+						"title": "Proposal deck and hero: club identity, fan photography, and GameBox narrative.",
+						"alt": "SCP GameBox 14/15 concept: slide with microsite hero in Sporting green, TU ÉS A NOSSA FÉ headline, 12th player line, supporter photo, login and advantages CTAs, and club navigation.",
+						"url": "https://dribbble.com/shots/1741544-SCP-GameBox-14-15",
+						"frame": "none"
+					},
 					"results": [
 						"Website concept and digital proposal",
 						"Sporting brand experience",
@@ -3757,6 +3850,7 @@
 						]
 					},
 					"caseStudy": {
+						"scope": "Web Design",
 						"context": {
 							"title": "Offers and advantages, for a brand with its own culture.",
 							"lead": "SCP GameBox 14'15 needed to present offers and advantages in a way that felt authentic to Sporting Clube de Portugal's brand and sporting audience.",
@@ -3848,128 +3942,6 @@
 					},
 					"slug": "scp-gamebox",
 					"skillsDemonstrated": [
-						"Design rationale"
-					]
-				},
-				{
-					"period": "2013",
-					"status": "proposal",
-					"title": "CCV — Correios de Cabo Verde",
-					"subtitle": "Post office · proposal (landing + currency)",
-					"role": "Landing page design · 2013",
-					"tools": "Design · Landing page · Government UX",
-					"highlight": "Landing page concept for Cabo Verde post office — currency exchange, foreign orders, and postal services.",
-					"results": [
-						"Landing page concept",
-						"Currency and postal services UX",
-						"Government-sector digital presence"
-					],
-					"references": {
-						"dribbble": [
-							{
-								"url": "https://dribbble.com/shots/1676694-CCV-Correios-de-Cabo-Verde",
-								"label": "CCV — Correios de Cabo Verde"
-							}
-						]
-					},
-					"caseStudy": {
-						"context": {
-							"title": "A post office, a currency counter, and a diverse public.",
-							"lead": "Correios de Cabo Verde (CCV) needed a digital presence for currency exchange, foreign orders, and postal services — complex offerings for a diverse user base.",
-							"body": "In a government-sector context, the landing page can't assume digital fluency. It has to hold multiple service types side by side — postal, currency, foreign orders — and let any visitor find the right door without being confronted by visual noise.",
-							"bridge": "The UX challenge:"
-						},
-						"strategicDecision": {
-							"question": "How do we present postal and currency services for a diverse user base?",
-							"lead": "Prioritise clarity and accessibility — in a government context, trust and usability matter more than visual ambition."
-						},
-						"keyDecisions": {
-							"heading": "Key decisions",
-							"title": "The decision that put trust ahead of visual ambition.",
-							"items": [
-								{
-									"phase": "01",
-									"label": "Concept",
-									"tagline": "Clarity as the primary design value",
-									"title": "Landing structure concept.",
-									"description": "Information architecture and visual design proposal for currency exchange, foreign orders, and postal services — organised so a diverse audience can find the right service without digital-fluency assumptions."
-								}
-							]
-						},
-						"inPractice": {
-							"title": "The decision that put the public ahead of the brand.",
-							"items": [
-								{
-									"badge": "Edge cases & resilience",
-									"strength": "Edge cases & resilience",
-									"title": "Trust and usability first in a government-sector context.",
-									"summary": "A landing that serves the full range of users without assuming digital fluency.",
-									"task": "Cabo Verde post office needed a digital presence for currency exchange, foreign orders, and postal services.",
-									"issue": "A diverse user base with varying digital literacy accessing complex multi-service offerings.",
-									"insight": "In a government context, trust and usability matter more than visual ambition. Clarity is the primary design value.",
-									"decision": "Prioritised information architecture clarity and accessibility over visual complexity.",
-									"outcome": "A landing concept that serves the full range of users — from postal services to currency exchange — without assuming digital fluency."
-								}
-							]
-						},
-						"implementation": {
-							"title": "Landing proposal, design only.",
-							"design": [
-								{
-									"heading": "Landing page concept",
-									"description": "Information architecture and visual design for a government-sector landing page — currency exchange, foreign orders, and postal services, organised around service clarity and trust."
-								}
-							],
-							"code": []
-						},
-						"metrics": {
-							"title": "A public-service landing that assumes no digital fluency.",
-							"items": [
-								{
-									"value": "1",
-									"label": "Landing page concept for CCV."
-								},
-								{
-									"value": "3",
-									"label": "Service types held on one page — postal, currency, foreign orders."
-								},
-								{
-									"value": "Trust-first",
-									"label": "Visual language prioritising clarity over visual ambition."
-								}
-							]
-						},
-						"tradeoffs": {
-							"heading": "Trade-offs & Learnings",
-							"title": "What a public-service proposal taught.",
-							"items": [
-								"— Prioritised clarity and accessibility for a government-sector context — where trust and usability matter more than visual ambition."
-							]
-						},
-						"quote": {
-							"title": "Making postal and currency services clear and accessible.",
-							"subtitle": "Trust and usability first in a government-sector context."
-						},
-						"skillsDemonstrated": [
-							"Edge cases & resilience",
-							"Design rationale"
-						],
-						"projectSpecificSkills": "Public-service UX · Service discoverability · Currency and postal flow design",
-						"skillsByStrength": [
-							{
-								"strength": "Edge cases & resilience",
-								"items": "Public-service UX · Service discoverability"
-							},
-							{
-								"strength": "Design rationale",
-								"items": "Currency and postal flow design"
-							}
-						],
-						"skillsByStrengthTitle": "Skills demonstrated in this project"
-					},
-					"slug": "ccv-correios-de-cabo-verde",
-					"skillsDemonstrated": [
-						"Edge cases & resilience",
 						"Design rationale"
 					]
 				}

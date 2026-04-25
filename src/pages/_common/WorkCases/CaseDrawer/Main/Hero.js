@@ -6,25 +6,28 @@ export const Hero = ({ app, kicker, projectColor }) => {
 	if (!hero) return null;
 	const heading = hero.heading;
 	const dek = hero.dek;
-	const labels = hero.labels;
+	const scope = app.caseStudy?.scope ?? app.scope;
+	const scopeItems = Array.isArray(scope) ? scope : (typeof scope === 'string' ? scope.split('·').map(s => s.trim()).filter(Boolean) : []);
 	const hasHeading = !!(heading && String(heading).length > 0);
 	const hasDek = !!(dek && String(dek).length > 0);
-	const hasLabels = Array.isArray(labels) && labels.length > 0;
-	if (!hasHeading && !hasDek && !hasLabels) return null;
+	const hasScope = scopeItems.length > 0;
+	if (!hasHeading && !hasDek && !hasScope) return null;
 	const accentVars = getProjectAccentVars(projectColor, 4.5);
 	const accentScope = projectColor && accentVars ? { 'data-project-accent': '', style: accentVars } : {};
 	const accentFg = projectColor ? { color: 'var(--project-accent)' } : undefined;
+	const scopeLabel = app.caseStudy?.scopeLabel || 'Scope';
+
 	return (
 		<header className='min-w-0 max-w-full space-y-4' {...accentScope}>
 			{hasHeading ? <p className='sr-only text-editorial-hero-tag text-current' style={accentFg}>{kicker}</p> : null}
 			{hasHeading ? <RichText as='h1' className='text-editorial-hero text-current break-words min-w-0 w-full max-w-full' text={heading} /> : null}
 			{hasDek ? <RichText as='p' className='text-editorial-hero-sub text-current/88 break-words min-w-0 w-full max-w-full' text={dek} /> : null}
-			{hasLabels ? (
-				<ul className='flex flex-wrap gap-4 pt-1 list-none m-0 p-0'>
-					{labels.map((label, i) => (
-						<li key={'hero-skill-' + i} className='text-editorial-hero-tag inline-flex gap-1'>
-							<span aria-hidden='true' className='inline-block items-middle leading-none lh-1' style={accentFg}>●</span>
-							<RichText as='span' className='text-current/66 items-middle' text={label} />
+			{hasScope ? (
+				<ul className='flex flex-wrap gap-6 pt-1 list-none m-0 p-0'>
+					{scopeItems.map((item, i) => (
+						<li key={'hero-scope-' + i} className='text-editorial-hero-tag inline-flex items-center gap-2'>
+							<span aria-hidden='true' className='inline-block items-middle leading-none leading-none mb-0.5' style={accentFg}>●</span>
+							<RichText as='span' className='tracking-normal text-current/88 items-middle' text={item} />
 						</li>
 					))}
 				</ul>

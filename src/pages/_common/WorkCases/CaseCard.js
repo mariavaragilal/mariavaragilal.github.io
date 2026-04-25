@@ -1,11 +1,14 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Badge, Button, Card, CardAction, CardDescription, CardContent, CardHeader, CardTitle } from '../../../_common/components';
+import { Badge, Button, Card, CardAction, CardDescription, CardContent, CardHeader, CardImage, CardTitle } from '../../../_common/components';
 import { focusRing } from '../../../constants/utils/a11y';
 import { navigate } from 'gatsby';
+import { useTheme } from '../../../hooks/useTheme';
+import { CASE_IMAGES } from './CaseDrawer/Main/_common/caseImages';
 
 export const CaseCard = ({ app, isSelected, onToggle, href, to, icon, iconChar = '+', iconClassName, as: _as, id, variant = 'default' }) => {
 	const { t } = useTranslation();
+	const { resolvedTheme } = useTheme();
 	const ui = t('mv.caseUi', { returnObjects: true }) || {};
 	const [isHovered, setIsHovered] = useState(false);
 
@@ -14,6 +17,12 @@ export const CaseCard = ({ app, isSelected, onToggle, href, to, icon, iconChar =
 
 	const isLink = !!href;
 	const isInternalCase = !!to;
+
+	const mockup = app.overviewMockup;
+	const preferDark = mockup ? (app.slug?.startsWith('sca-') ? !!mockup.srcDark : resolvedTheme === 'dark' && !!mockup.srcDark) : false;
+	const mockupKey = mockup ? (preferDark ? mockup.srcDark : mockup.src) : null;
+	const mockupSrc = mockupKey ? (CASE_IMAGES[mockupKey] || mockupKey) : null;
+	const mockupAlt = mockup ? (mockup.alt || mockup.caption || mockup.title || mockup.label || '') : '';
 
 	const cardClassBase = 'flex flex-col items-start p-4 w-full text-left rounded-lg transition-colors ' + (isSelected ? 'border-primary/50 bg-card/75 ring-2 ring-primary/15' : 'border-border hover:bg-card/75') + ' ' + focusRing;
 	const cardClassLink = cardClassBase + ' cursor-pointer h-full';
@@ -38,10 +47,11 @@ export const CaseCard = ({ app, isSelected, onToggle, href, to, icon, iconChar =
 		)
 	) : null;
 
-	const footer = (app.tools || hostnameEl) ? (
+	const scope = app.caseStudy?.scope;
+	const footer = (scope || hostnameEl) ? (
 		<CardContent className={`rounded-md ${variant === 'secondary' ? 'border border-border/50 bg-background' : 'border border-border/40 bg-secondary/75'} w-full mt-auto`} customPadding='px-4 py-2'>
 			<div className='flex flex-col gap-0.5'>
-				{app.tools ? <span className='font-mono text-[0.65rem] leading-relaxed line-clamp-1'>{app.tools}</span> : null}
+				{scope ? <span className='font-mono text-[0.65rem] leading-relaxed line-clamp-1'>{scope}</span> : null}
 				{hostnameEl}
 			</div>
 		</CardContent>
@@ -52,6 +62,7 @@ export const CaseCard = ({ app, isSelected, onToggle, href, to, icon, iconChar =
 	if (isInternalCase) {
 		return (
 			<Card as='div' variant={variant} className={cardClassLink} id={id} onClick={() => navigate(to)}>
+				<CardImage src={mockupSrc} alt={mockupAlt} className='mb-4' />
 				<CardHeader className='flex flex-col gap-1' headerPadding='p-0'>
 					<div className='flex flex-1 justify-between w-full space-y-2'>
 						<span className='text-lg font-medium flex flex-wrap items-center gap-2.5'>
@@ -88,6 +99,7 @@ export const CaseCard = ({ app, isSelected, onToggle, href, to, icon, iconChar =
 	if (isLink) {
 		return (
 			<Card as='a' href={href} target='_blank' rel='noopener noreferrer' variant='default' className={cardClassLink} id={id}>
+				{mockupSrc ? (<CardImage src={mockupSrc} alt={mockupAlt} className='mb-4' />) : null}
 				<CardHeader className='flex gap-1' headerPadding='p-0'>
 					<div className='flex flex-col space-y-2'>
 						<span className='text-lg font-medium flex flex-wrap items-center gap-2.5'>
@@ -114,6 +126,7 @@ export const CaseCard = ({ app, isSelected, onToggle, href, to, icon, iconChar =
 
 	return (
 		<Card as='div' variant='default' className={cardClassBase} id={id} aria-label={app.title + ' — ' + (isSelected ? ui.cardAriaOpen : ui.cardAriaClosed)}>
+			{mockupSrc ? (<CardImage src={mockupSrc} alt={mockupAlt} className='mb-4' />) : null}
 			<CardHeader as='button' type='button' className='flex flex-col gap-2 text-start mb-4 cursor-pointer' headerPadding='p-0' enableActionSlot={false} aria-expanded={isSelected} onClick={onToggle}>
 				<div className='grid flex-wrap flex-1 grid has-data-[slot=card-action]:grid-cols-[1fr_auto] mb-0 w-full'>
 					<span className='text-lg font-medium flex flex-wrap items-center gap-2.5'>

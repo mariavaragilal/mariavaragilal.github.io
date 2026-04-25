@@ -208,7 +208,7 @@ export const WorkSection = () => {
 						))}
 					</ToggleGroup>
 
-					<div className='grid gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[repeat(auto-fill,minmax(25rem,1fr))]'>
+					<div className='grid gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[repeat(auto-fill,minmax(25rem,1fr))] 2xl:grid-cols-[repeat(auto-fill,minmax(20rem,1fr))]'>
 						{allCases
 							.filter((app) => !activeEvidenceSet || activeEvidenceSet.has(app))
 							.map((app) => {

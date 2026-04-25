@@ -5,7 +5,7 @@ import { getProjectKickerStyle } from '../../../../../../constants/utils/colorCo
 
 export const isContextVisible = (caseStudy) => {
 	const ctx = caseStudy.context;
-	return Boolean((ctx?.lead || caseStudy.businessProblem) || ctx?.body || ctx?.bridge || ctx?.title || caseStudy.strategicDecision || ctx?.scope);
+	return Boolean((ctx?.lead || caseStudy.businessProblem) || ctx?.body || ctx?.bridge || ctx?.title || caseStudy.strategicDecision || caseStudy.scope);
 };
 
 export const Context = ({ caseStudy, labels, projectColor, sectionNumbers }) => {
@@ -15,23 +15,15 @@ export const Context = ({ caseStudy, labels, projectColor, sectionNumbers }) => 
 	const body = ctx?.body;
 	const bridge = ctx?.bridge;
 	const strat = caseStudy.strategicDecision;
-	const scope = ctx?.scope;
 
 	const eyebrow = formatChapterKicker(ctx?.eyebrow || labels.context || 'Context', sectionNumbers.context);
 	const eyebrowStyleVar = getProjectKickerStyle(projectColor, false, true);
 	const eyebrowStyle = getProjectKickerStyle(projectColor, false);
 	const stratLead = strat?.lead || strat?.intro;
-	const scopeLabel = labels.scope || 'Scope';
 
 	const contextHead = (
 		<div className='relative min-w-0'>
 			<p style={eyebrowStyle} className='text-editorial-eyebrow mb-4 md:mb-5 text-current'><span>{eyebrow}</span></p>
-			{scope ? (
-				<p className='text-editorial-eyebrow-sm mb-3 md:mb-4 text-current/66 tracking-[0.12em]'>
-					<span className='font-medium text-current/70'>{scopeLabel}: </span>
-					<RichText as='span' className='tracking-normal text-current/88' text={scope} />
-				</p>
-			) : null}
 			{ctx?.title ? <RichText as='h2' className='text-editorial-section text-current break-words text-current' text={ctx.title} style={eyebrowStyleVar} /> : null}
 		</div>
 	);

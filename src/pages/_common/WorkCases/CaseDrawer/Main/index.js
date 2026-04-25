@@ -24,6 +24,7 @@ export const Main = ({ app }) => {
 					imageMap={CASE_IMAGES}
 					fallback={{ label: ui.overviewLabel || ui.caseStudy, title: app.title, frame: 'browser', ratio: '16 / 9' }}
 					labels={{ themePreview: ui.overviewMockup?.previewTheme, lightMode: ui.overviewMockup?.lightMode, darkMode: ui.overviewMockup?.darkMode, opensNewTab: ui.opensNewTab }}
+					preferDark={app.slug?.startsWith('sca-')}
 				/>
 
 				{app.caseStudy ? <CaseStudy caseStudy={app.caseStudy} outcomes={app.results} /> : null}

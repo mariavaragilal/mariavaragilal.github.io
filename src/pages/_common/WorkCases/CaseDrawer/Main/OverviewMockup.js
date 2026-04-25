@@ -5,13 +5,14 @@ import { useTheme } from '../../../../../hooks/useTheme';
 const CAPTION_CLASS = 'mt-2 text-xs leading-5 text-current/77 tracking-[0.02em] max-w-sm select-text font-mono';
 const LABEL_CLASS = 'mt-2 text-editorial-eyebrow-sm text-current/66 tracking-[0.1em] max-w-full select-text';
 
-export const OverviewMockup = ({ image, imageMap, fallback, labels = {} }) => {
+export const OverviewMockup = ({ image, imageMap, fallback, labels = {}, preferDark = false }) => {
 	const { resolvedTheme } = useTheme();
 	const [override, setOverride] = useState(null);
 
 	const resolved = image || fallback;
 	const hasToggle = !!(image && image.src && image.srcDark);
-	const mode = override ?? (resolvedTheme === 'dark' ? 'dark' : 'light');
+	const defaultMode = preferDark && image?.srcDark ? 'dark' : (resolvedTheme === 'dark' ? 'dark' : 'light');
+	const mode = override ?? defaultMode;
 
 	if (!hasToggle) {
 		if (!resolved || !resolved.src) return null;
