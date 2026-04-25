@@ -62,7 +62,6 @@ export const CaseCard = ({ app, isSelected, onToggle, href, to, icon, iconChar =
 	if (isInternalCase) {
 		return (
 			<Card as='div' variant={variant} className={cardClassLink} id={id} onClick={() => navigate(to)}>
-				<CardImage src={mockupSrc} alt={mockupAlt} className='mb-4' />
 				<CardHeader className='flex flex-col gap-1' headerPadding='p-0'>
 					<div className='flex flex-1 justify-between w-full space-y-2'>
 						<span className='text-lg font-medium flex flex-wrap items-center gap-2.5'>
