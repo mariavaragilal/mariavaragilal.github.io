@@ -8,7 +8,7 @@ import { formatTwoDigit } from '../../../../../../constants/utils/formatNumberSt
 const IndexLine = ({ index, name, summary }) => {
 	const s = summary || '';
 	return (
-		<li className='grid grid-cols-[2.25rem_minmax(0,14rem)_1fr] gap-x-6 md:gap-x-8 gap-y-1 items-baseline py-2.5 min-w-0'>
+		<li className='grid md:grid-cols-[2.25rem_minmax(0,14rem)_1fr] gap-x-6 md:gap-x-8 gap-y-1 items-baseline py-2.5 min-w-0'>
 			<span className='font-mono text-[0.6875rem] font-medium text-current/40 tabular-nums' aria-hidden='true'>{formatTwoDigit(index)}</span>
 			<span className='font-mono text-[0.8125rem] md:text-[0.875rem] font-medium text-current leading-snug break-words min-w-0'>{name}</span>
 			{s ? <RichText as='span' className='text-[0.875rem] leading-relaxed text-current/70 break-words min-w-0' text={s} /> : <span className='text-[0.875rem] text-current/40'>—</span>}

@@ -3082,143 +3082,250 @@
 				}
 			]
 		},
-		"Earlier work": {
-			"context": "Other Proposals and award-winning concepts.",
-			"period": "2013–2016",
+		"AI within Boundaries": {
+			"context": "AI has changed how I work. I use it throughout my workflow — design system generation, component scaffolding, prototyping, production code — and I'm always trying new tools to see what holds up beyond the first try.",
+			"period": "Personal",
 			"cases": [
 				{
-					"period": "2016",
-					"status": "proposal",
-					"title": "Epaye — Electronic Payroll",
-					"subtitle": "Fintech · proposal (app + landing)",
-					"role": "Product & UX Designer · 2016",
-					"tools": "Figma · Product design · Landing page",
-					"highlight": "Product and landing concept for a fintech solution — electronic payroll for everyone.",
+					"period": "2025",
+					"status": "prototype",
+					"title": "Prompt Architect",
+					"subtitle": "A skill that encodes prompt discipline — not a library of prompts.",
+					"role": "Author · personal tooling",
+					"tools": "Agent Skills · Markdown",
+					"highlight": "Side project: I developed constraint-first prompting in my own work and conversations first, then froze the 4-D flow and a 6-part anatomy into a skill; AI drafts inside rails I set.",
 					"results": [
-						"Product and landing concept",
-						"Clear value proposition for payroll adoption",
-						"Trust-first visual language for fintech"
+						"Two distribution formats — Skill for workflows, standalone paste-block for any AI tool",
+						"Portable SKILL.md artifact with locked framework headings",
+						"Same anatomy every time — less drift, less rework",
+						"Proof that skills mirror boundaries, not templates"
 					],
 					"references": {
-						"dribbble": [
+						"links": [
 							{
-								"url": "https://dribbble.com/mariavaragilal",
-								"label": "Epaye design"
+								"label": "prompt-architect-skill (GitHub)",
+								"url": "https://github.com/mariavaragilal/prompt-architect-skill"
 							}
 						],
-						"behance": [
+						"sources": [
+							"Material I drew on — not exhaustive.",
 							{
-								"url": "https://www.behance.net/gallery/41258845/Epaye-la-paye-lectronique-pour-tous",
-								"label": "Epaye | Electronic Payroll"
+								"theme": "Skills",
+								"links": [
+									{
+										"label": "Introduction to Agent Skills",
+										"url": "https://anthropic.skilljar.com/introduction-to-agent-skills"
+									},
+									{
+										"label": "Agent Skills",
+										"url": "https://agentskills.io"
+									}
+								]
+							},
+							{
+								"theme": "4-D methodology",
+								"links": [
+									{
+										"label": "Anthropic AI Fluency Framework Foundations",
+										"url": "https://anthropic.skilljar.com/ai-fluency-framework-foundations"
+									},
+									{
+										"label": "GPT Central (Substack)",
+										"url": "https://gptcentral.substack.com/p/mastering-prompt-engineering-with-618"
+									},
+									{
+										"label": "Lyra Prompt Optimization Guide (Scribd)",
+										"url": "https://www.scribd.com/document/893913227/Lyra-Prompt-Optimization-Guide"
+									}
+								]
+							},
+							{
+								"theme": "Prompting guides — 6-part anatomy",
+								"links": [
+									{
+										"label": "OpenAI — GPT-5 prompting guide",
+										"url": "https://developers.openai.com/cookbook/examples/gpt-5/gpt-5_prompting_guide"
+									},
+									{
+										"label": "Medium — 6-part framework",
+										"url": "https://medium.com/@syedagulzarbano/ai-prompting-6-part-framework-30538adab337"
+									},
+									{
+										"label": "Medium — goal, return format, warnings, context",
+										"url": "https://medium.com/@feldyjudahk/the-anatomy-of-a-perfect-ai-prompt-goal-return-format-warnings-and-context-dump-893354da0205"
+									},
+									{
+										"label": "Medium — complete guide",
+										"url": "https://onlyoneaman.medium.com/anatomy-of-a-prompt-the-complete-guide-to-crafting-effective-ai-chatgpt-prompts-46a761e06048"
+									},
+									{
+										"label": "Medium — anatomy of the perfect GPT-5 prompt",
+										"url": "https://medium.com/@SarahMorino/the-anatomy-of-the-perfect-gpt-5-prompt-a-complete-guide-for-2025-c0b9947417e9"
+									},
+									{
+										"label": "Instagram — 6-part anatomy breakdown",
+										"url": "https://www.instagram.com/p/DNdfdiTxEiQ/"
+									},
+									{
+										"label": "CyberCorsairs — 6-part framework breakdown",
+										"url": "https://cybercorsairs.com/craft-perfect-ai-prompts-with-this-framework/"
+									}
+								]
 							}
 						]
 					},
 					"caseStudy": {
 						"context": {
-							"title": "Payroll, rethought around human relationships.",
-							"lead": "Building a digital identity and product from scratch, rooted in one core dimension — human relationships.",
-							"body": "Epaye — the electronic payroll for all — positions itself as the ideal entry point to start dematerialisation in a company, simplifying and automating all steps of pay between employer and employee.",
-							"bridge": "The design question:"
+							"title": "Prompts that felt sharp, then fell apart.",
+							"lead": "I kept writing prompts that felt sharp in the moment and fell apart the next week. The failure was not the model — it was me. I had no repeatable way to fix role, constraints, and output shape before I asked for words.",
+							"body": "I developed Prompt Architect to resolve this once and for all by applying constraint-first prompting in my own work and my own conversations first. I drew on a wide range of AI-related material online — structured guidelines, documentation, and community threads about getting real work out of tools. I kept what survived contact with my own use and dropped the rest. I distilled what remained into one cohesive, practical approach that makes sense when you run it, not when you admire it. Only then did I freeze it into a skill — the 6-part anatomy and 4-D flow as the fence, execution underneath.",
+							"bridge": "The question I answered before writing a line of SKILL.md:"
 						},
 						"strategicDecision": {
-							"question": "How do we make payroll tech feel approachable and trustworthy to non-technical decision-makers?",
-							"lead": "Anchor the brand in the relationship the product is really about — between employer and employee — rather than in trust or adoption tropes the whole sector already uses."
+							"question": "What must stay fixed so AI can run fast without rewriting the rules every session?",
+							"lead": "Lock the 6-part anatomy and the 4-D order first. Let AI draft inside those rails, never redefine them."
 						},
 						"keyDecisions": {
-							"heading": "Key decisions",
-							"title": "Decisions that made payroll feel human, not clinical.",
+							"heading": "How it was built",
+							"title": "Decisions that kept AI inside rails I set.",
 							"items": [
 								{
 									"phase": "01",
-									"label": "Concept",
-									"tagline": "One core dimension — human relationships",
-									"title": "Brand dimension anchored in the interaction the product is really about.",
-									"description": "Defined the brand around one core dimension: the complexity and beauty of human interactions in payroll. Every later decision could be tested against that anchor."
+									"label": "Before generation",
+									"tagline": "Structure before prose",
+									"title": "I locked the structure first.",
+									"description": "I locked the 6 anatomy headings and the 4-D order into SKILL.md — after distilling many threads into one approach that had already survived my own use. Only after that did I let the model draft explanations and examples under each heading. The rule was clear: structure before prose."
 								},
 								{
 									"phase": "02",
-									"label": "Design",
-									"tagline": "Digital identity and product concept",
-									"title": "Product and landing concept visualising human relationships.",
-									"description": "Product and landing concept that visualises human relationships — a brand and digital identity built from this foundation, rather than from a generic fintech template."
+									"label": "Human",
+									"tagline": "What I refused to outsource",
+									"title": "Judgment calls stayed mine.",
+									"description": "I decided what counts as a stop condition, what belongs in Output versus Task, and which failure modes matter for this skill. Those calls shape how the model behaves when a user is vague — I did not delegate them to a first draft."
+								},
+								{
+									"phase": "03",
+									"label": "AI",
+									"tagline": "Delivery, not direction",
+									"title": "What the model did well.",
+									"description": "Once the rails were set, AI filled sections, tightened wording, and surfaced edge cases in tables I had already defined. Execution — focused on delivery, not direction."
+								},
+								{
+									"phase": "04",
+									"label": "Cut",
+									"tagline": "Cut, don't admire",
+									"title": "Trimming drift.",
+									"description": "I cut anything that sounded like generic prompt advice or bloated the skill into a blog post. The skill mirrors a design language: opinionated, bounded, reusable."
 								}
 							]
 						},
 						"inPractice": {
-							"title": "The decision that owned a differentiator no competitor held.",
+							"title": "The decision that made the skill survive the next session.",
 							"items": [
 								{
-									"badge": "Design rationale",
-									"strength": "Design rationale",
-									"title": "Brand rooted in human relationships — not trust or adoption alone.",
-									"summary": "A deliberate bet on standing out over blending in.",
-									"task": "Needed a brand identity for a fintech payroll product that stands out in a conservative sector.",
-									"issue": "Every competitor leads with trust, security, or ease of adoption. The visual language is interchangeable.",
-									"insight": "Payroll is fundamentally about the relationship between employer and employee — the human dimension is the differentiator.",
-									"decision": "Built the brand and visual language on human relationships — making the abstract tangible through a distinctive identity.",
-									"outcome": "A deliberate bet on standing out over blending in. The identity rests on something no competitor owns."
+									"badge": "Systems thinking",
+									"strength": "Systems thinking",
+									"title": "Structure locked before AI touched the content.",
+									"summary": "Anatomy and flow treated as product decisions, not copy.",
+									"task": "Needed a repeatable prompt framework — not another collection of tips.",
+									"issue": "Letting AI draft the structure leads to generic prompt advice that reads well but doesn't survive real use.",
+									"insight": "The 6-part anatomy and 4-D flow are product decisions, not copy decisions. They define behaviour, not words.",
+									"decision": "Locked the headings and section order into SKILL.md first. Only then let the model draft explanations and examples under each fixed heading.",
+									"outcome": "Structure before prose. The skill mirrors a design language: opinionated, bounded, reusable. No drift between sessions."
 								}
 							]
 						},
 						"implementation": {
-							"title": "Design concept across product and landing.",
+							"title": "Where AI entered, and where judgment stayed mine.",
 							"design": [
 								{
-									"heading": "Brand & narrative",
-									"description": "Brand positioned around 'the electronic payroll for all', with a visual language tuned to make the employer-employee relationship tangible rather than transactional."
+									"heading": "Where AI entered",
+									"items": [
+										"After headings and section order were fixed, AI drafted body copy, examples, and platform notes under each locked heading.",
+										"Iteration stayed inside the same file shape — no surprise sections, no alternate frameworks sneaking in.",
+										"When text drifted toward motivational fluff, I deleted it. The skill is operational, not inspirational."
+									]
 								},
 								{
-									"heading": "Product & landing concept",
-									"description": "Proposal-stage product concept and landing page exploring onboarding, monthly payslip flow, and trust-building moments — all filtered through the human-relationships anchor."
+									"heading": "Where judgment stayed mine",
+									"items": [
+										"Choosing the Agent Skill format and file layout — what ships as the contract.",
+										"Defining BASIC versus DETAIL modes and what each may skip — that is product behaviour, not copy.",
+										"Naming failure modes in the anatomy table — what \"weak\" looks like per section."
+									]
 								}
 							],
 							"code": []
 						},
 						"metrics": {
-							"title": "A proposal with a distinct brand dimension.",
+							"title": "A portable skill that survives the next session.",
 							"items": [
 								{
+									"value": "2",
+									"label": "Distribution formats — Skill for workflows, standalone paste-block for any AI tool."
+								},
+								{
 									"value": "1",
-									"label": "Product and landing concept, designed together."
+									"label": "Portable SKILL.md artifact with locked framework headings."
 								},
 								{
-									"value": "Clear",
-									"label": "Value proposition for payroll adoption in SMEs."
+									"value": "6",
+									"label": "Anatomy headings fixed before any AI drafting."
 								},
 								{
-									"value": "Trust-first",
-									"label": "Visual language tuned to fintech without fading into it."
+									"value": "4-D",
+									"label": "Flow locked as the operating order."
 								}
 							]
 						},
 						"tradeoffs": {
 							"heading": "Trade-offs & Learnings",
-							"title": "What a proposal-stage brand bet taught.",
+							"title": "What constraint-first prompting taught.",
 							"items": [
-								"— Built on a brand new concept: instead of focusing on trust or adoption alone, the identity rests on human relationships — making the abstract tangible through a distinctive visual language. A deliberate bet on standing out over blending in a sector dominated by conservative interfaces."
+								"— Proof that skills mirror boundaries, not templates: the anatomy and flow are product decisions, not copy decisions.",
+								"— Constraint-first prompting only works once you've run it on your own work — the skill freezes what already survived, it doesn't invent it."
 							]
 						},
 						"quote": {
-							"title": "The electronic payroll for all.",
-							"subtitle": "The ideal entry point to start dematerialisation — a brand that reflects the complexity and beauty of human relationships."
+							"title": "AI drafts inside rails I set.",
+							"subtitle": "Structure before prose — skills mirror boundaries, not templates."
 						},
 						"skillsDemonstrated": [
-							"Design rationale"
+							"Systems thinking",
+							"Design rationale",
+							"Tool exploration"
 						],
-						"projectSpecificSkills": "Fintech concept design · Payroll flow modeling · Trust-oriented onboarding",
+						"projectSpecificSkills": "Structured product thinking · Product behaviour definition · AI-assisted workflow design",
 						"skillsByStrength": [
 							{
+								"strength": "Systems thinking",
+								"items": "Structured product thinking · Product behaviour definition"
+							},
+							{
 								"strength": "Design rationale",
-								"items": "Fintech concept design · Payroll flow modeling · Trust-oriented onboarding"
+								"items": "AI-assisted workflow design"
+							},
+							{
+								"strength": "Tool exploration",
+								"items": "Agent-skill experimentation and AI workflow prototyping"
 							}
 						],
 						"skillsByStrengthTitle": "Skills demonstrated in this project"
 					},
-					"slug": "epaye-electronic-payroll",
+					"slug": "prompt-architect-skill",
 					"skillsDemonstrated": [
-						"Design rationale"
+						"Systems thinking",
+						"Design rationale",
+						"Tool exploration"
 					]
-				},
+				}
+			],
+			"contextNote": "I haven't designed an AI-powered product experience yet from the ground up — and that would be exciting to own."
+		},
+		"Earlier work": {
+			"context": "Other Proposals and award-winning concepts.",
+			"period": "2013–2016",
+			"cases": [
 				{
 					"period": "2014",
 					"status": "concept",
@@ -3496,6 +3603,139 @@
 					]
 				},
 				{
+					"period": "2016",
+					"status": "proposal",
+					"title": "Epaye — Electronic Payroll",
+					"subtitle": "Fintech · proposal (app + landing)",
+					"role": "Product & UX Designer · 2016",
+					"tools": "Figma · Product design · Landing page",
+					"highlight": "Product and landing concept for a fintech solution — electronic payroll for everyone.",
+					"results": [
+						"Product and landing concept",
+						"Clear value proposition for payroll adoption",
+						"Trust-first visual language for fintech"
+					],
+					"references": {
+						"dribbble": [
+							{
+								"url": "https://dribbble.com/mariavaragilal",
+								"label": "Epaye design"
+							}
+						],
+						"behance": [
+							{
+								"url": "https://www.behance.net/gallery/41258845/Epaye-la-paye-lectronique-pour-tous",
+								"label": "Epaye | Electronic Payroll"
+							}
+						]
+					},
+					"caseStudy": {
+						"context": {
+							"title": "Payroll, rethought around human relationships.",
+							"lead": "Building a digital identity and product from scratch, rooted in one core dimension — human relationships.",
+							"body": "Epaye — the electronic payroll for all — positions itself as the ideal entry point to start dematerialisation in a company, simplifying and automating all steps of pay between employer and employee.",
+							"bridge": "The design question:"
+						},
+						"strategicDecision": {
+							"question": "How do we make payroll tech feel approachable and trustworthy to non-technical decision-makers?",
+							"lead": "Anchor the brand in the relationship the product is really about — between employer and employee — rather than in trust or adoption tropes the whole sector already uses."
+						},
+						"keyDecisions": {
+							"heading": "Key decisions",
+							"title": "Decisions that made payroll feel human, not clinical.",
+							"items": [
+								{
+									"phase": "01",
+									"label": "Concept",
+									"tagline": "One core dimension — human relationships",
+									"title": "Brand dimension anchored in the interaction the product is really about.",
+									"description": "Defined the brand around one core dimension: the complexity and beauty of human interactions in payroll. Every later decision could be tested against that anchor."
+								},
+								{
+									"phase": "02",
+									"label": "Design",
+									"tagline": "Digital identity and product concept",
+									"title": "Product and landing concept visualising human relationships.",
+									"description": "Product and landing concept that visualises human relationships — a brand and digital identity built from this foundation, rather than from a generic fintech template."
+								}
+							]
+						},
+						"inPractice": {
+							"title": "The decision that owned a differentiator no competitor held.",
+							"items": [
+								{
+									"badge": "Design rationale",
+									"strength": "Design rationale",
+									"title": "Brand rooted in human relationships — not trust or adoption alone.",
+									"summary": "A deliberate bet on standing out over blending in.",
+									"task": "Needed a brand identity for a fintech payroll product that stands out in a conservative sector.",
+									"issue": "Every competitor leads with trust, security, or ease of adoption. The visual language is interchangeable.",
+									"insight": "Payroll is fundamentally about the relationship between employer and employee — the human dimension is the differentiator.",
+									"decision": "Built the brand and visual language on human relationships — making the abstract tangible through a distinctive identity.",
+									"outcome": "A deliberate bet on standing out over blending in. The identity rests on something no competitor owns."
+								}
+							]
+						},
+						"implementation": {
+							"title": "Design concept across product and landing.",
+							"design": [
+								{
+									"heading": "Brand & narrative",
+									"description": "Brand positioned around 'the electronic payroll for all', with a visual language tuned to make the employer-employee relationship tangible rather than transactional."
+								},
+								{
+									"heading": "Product & landing concept",
+									"description": "Proposal-stage product concept and landing page exploring onboarding, monthly payslip flow, and trust-building moments — all filtered through the human-relationships anchor."
+								}
+							],
+							"code": []
+						},
+						"metrics": {
+							"title": "A proposal with a distinct brand dimension.",
+							"items": [
+								{
+									"value": "1",
+									"label": "Product and landing concept, designed together."
+								},
+								{
+									"value": "Clear",
+									"label": "Value proposition for payroll adoption in SMEs."
+								},
+								{
+									"value": "Trust-first",
+									"label": "Visual language tuned to fintech without fading into it."
+								}
+							]
+						},
+						"tradeoffs": {
+							"heading": "Trade-offs & Learnings",
+							"title": "What a proposal-stage brand bet taught.",
+							"items": [
+								"— Built on a brand new concept: instead of focusing on trust or adoption alone, the identity rests on human relationships — making the abstract tangible through a distinctive visual language. A deliberate bet on standing out over blending in a sector dominated by conservative interfaces."
+							]
+						},
+						"quote": {
+							"title": "The electronic payroll for all.",
+							"subtitle": "The ideal entry point to start dematerialisation — a brand that reflects the complexity and beauty of human relationships."
+						},
+						"skillsDemonstrated": [
+							"Design rationale"
+						],
+						"projectSpecificSkills": "Fintech concept design · Payroll flow modeling · Trust-oriented onboarding",
+						"skillsByStrength": [
+							{
+								"strength": "Design rationale",
+								"items": "Fintech concept design · Payroll flow modeling · Trust-oriented onboarding"
+							}
+						],
+						"skillsByStrengthTitle": "Skills demonstrated in this project"
+					},
+					"slug": "epaye-electronic-payroll",
+					"skillsDemonstrated": [
+						"Design rationale"
+					]
+				},
+				{
 					"period": "2014",
 					"status": "proposal",
 					"title": "SCP GameBox",
@@ -3734,246 +3974,6 @@
 					]
 				}
 			]
-		},
-		"AI within Boundaries": {
-			"context": "AI has changed how I work. I use it throughout my workflow — design system generation, component scaffolding, prototyping, production code — and I'm always trying new tools to see what holds up beyond the first try.",
-			"period": "Personal",
-			"cases": [
-				{
-					"period": "2025",
-					"status": "prototype",
-					"title": "Prompt Architect",
-					"subtitle": "A skill that encodes prompt discipline — not a library of prompts.",
-					"role": "Author · personal tooling",
-					"tools": "Agent Skills · Markdown",
-					"highlight": "Side project: I developed constraint-first prompting in my own work and conversations first, then froze the 4-D flow and a 6-part anatomy into a skill; AI drafts inside rails I set.",
-					"results": [
-						"Two distribution formats — Skill for workflows, standalone paste-block for any AI tool",
-						"Portable SKILL.md artifact with locked framework headings",
-						"Same anatomy every time — less drift, less rework",
-						"Proof that skills mirror boundaries, not templates"
-					],
-					"references": {
-						"links": [
-							{
-								"label": "prompt-architect-skill (GitHub)",
-								"url": "https://github.com/mariavaragilal/prompt-architect-skill"
-							}
-						],
-						"sources": [
-							"Material I drew on — not exhaustive.",
-							{
-								"theme": "Skills",
-								"links": [
-									{
-										"label": "Introduction to Agent Skills",
-										"url": "https://anthropic.skilljar.com/introduction-to-agent-skills"
-									},
-									{
-										"label": "Agent Skills",
-										"url": "https://agentskills.io"
-									}
-								]
-							},
-							{
-								"theme": "4-D methodology",
-								"links": [
-									{
-										"label": "Anthropic AI Fluency Framework Foundations",
-										"url": "https://anthropic.skilljar.com/ai-fluency-framework-foundations"
-									},
-									{
-										"label": "GPT Central (Substack)",
-										"url": "https://gptcentral.substack.com/p/mastering-prompt-engineering-with-618"
-									},
-									{
-										"label": "Lyra Prompt Optimization Guide (Scribd)",
-										"url": "https://www.scribd.com/document/893913227/Lyra-Prompt-Optimization-Guide"
-									}
-								]
-							},
-							{
-								"theme": "Prompting guides — 6-part anatomy",
-								"links": [
-									{
-										"label": "OpenAI — GPT-5 prompting guide",
-										"url": "https://developers.openai.com/cookbook/examples/gpt-5/gpt-5_prompting_guide"
-									},
-									{
-										"label": "Medium — 6-part framework",
-										"url": "https://medium.com/@syedagulzarbano/ai-prompting-6-part-framework-30538adab337"
-									},
-									{
-										"label": "Medium — goal, return format, warnings, context",
-										"url": "https://medium.com/@feldyjudahk/the-anatomy-of-a-perfect-ai-prompt-goal-return-format-warnings-and-context-dump-893354da0205"
-									},
-									{
-										"label": "Medium — complete guide",
-										"url": "https://onlyoneaman.medium.com/anatomy-of-a-prompt-the-complete-guide-to-crafting-effective-ai-chatgpt-prompts-46a761e06048"
-									},
-									{
-										"label": "Medium — anatomy of the perfect GPT-5 prompt",
-										"url": "https://medium.com/@SarahMorino/the-anatomy-of-the-perfect-gpt-5-prompt-a-complete-guide-for-2025-c0b9947417e9"
-									},
-									{
-										"label": "Instagram — 6-part anatomy breakdown",
-										"url": "https://www.instagram.com/p/DNdfdiTxEiQ/"
-									},
-									{
-										"label": "CyberCorsairs — 6-part framework breakdown",
-										"url": "https://cybercorsairs.com/craft-perfect-ai-prompts-with-this-framework/"
-									}
-								]
-							}
-						]
-					},
-					"caseStudy": {
-						"context": {
-							"title": "Prompts that felt sharp, then fell apart.",
-							"lead": "I kept writing prompts that felt sharp in the moment and fell apart the next week. The failure was not the model — it was me. I had no repeatable way to fix role, constraints, and output shape before I asked for words.",
-							"body": "I developed Prompt Architect to resolve this once and for all by applying constraint-first prompting in my own work and my own conversations first. I drew on a wide range of AI-related material online — structured guidelines, documentation, and community threads about getting real work out of tools. I kept what survived contact with my own use and dropped the rest. I distilled what remained into one cohesive, practical approach that makes sense when you run it, not when you admire it. Only then did I freeze it into a skill — the 6-part anatomy and 4-D flow as the fence, execution underneath.",
-							"bridge": "The question I answered before writing a line of SKILL.md:"
-						},
-						"strategicDecision": {
-							"question": "What must stay fixed so AI can run fast without rewriting the rules every session?",
-							"lead": "Lock the 6-part anatomy and the 4-D order first. Let AI draft inside those rails, never redefine them."
-						},
-						"keyDecisions": {
-							"heading": "How it was built",
-							"title": "Decisions that kept AI inside rails I set.",
-							"items": [
-								{
-									"phase": "01",
-									"label": "Before generation",
-									"tagline": "Structure before prose",
-									"title": "I locked the structure first.",
-									"description": "I locked the 6 anatomy headings and the 4-D order into SKILL.md — after distilling many threads into one approach that had already survived my own use. Only after that did I let the model draft explanations and examples under each heading. The rule was clear: structure before prose."
-								},
-								{
-									"phase": "02",
-									"label": "Human",
-									"tagline": "What I refused to outsource",
-									"title": "Judgment calls stayed mine.",
-									"description": "I decided what counts as a stop condition, what belongs in Output versus Task, and which failure modes matter for this skill. Those calls shape how the model behaves when a user is vague — I did not delegate them to a first draft."
-								},
-								{
-									"phase": "03",
-									"label": "AI",
-									"tagline": "Delivery, not direction",
-									"title": "What the model did well.",
-									"description": "Once the rails were set, AI filled sections, tightened wording, and surfaced edge cases in tables I had already defined. Execution — focused on delivery, not direction."
-								},
-								{
-									"phase": "04",
-									"label": "Cut",
-									"tagline": "Cut, don't admire",
-									"title": "Trimming drift.",
-									"description": "I cut anything that sounded like generic prompt advice or bloated the skill into a blog post. The skill mirrors a design language: opinionated, bounded, reusable."
-								}
-							]
-						},
-						"inPractice": {
-							"title": "The decision that made the skill survive the next session.",
-							"items": [
-								{
-									"badge": "Systems thinking",
-									"strength": "Systems thinking",
-									"title": "Structure locked before AI touched the content.",
-									"summary": "Anatomy and flow treated as product decisions, not copy.",
-									"task": "Needed a repeatable prompt framework — not another collection of tips.",
-									"issue": "Letting AI draft the structure leads to generic prompt advice that reads well but doesn't survive real use.",
-									"insight": "The 6-part anatomy and 4-D flow are product decisions, not copy decisions. They define behaviour, not words.",
-									"decision": "Locked the headings and section order into SKILL.md first. Only then let the model draft explanations and examples under each fixed heading.",
-									"outcome": "Structure before prose. The skill mirrors a design language: opinionated, bounded, reusable. No drift between sessions."
-								}
-							]
-						},
-						"implementation": {
-							"title": "Where AI entered, and where judgment stayed mine.",
-							"design": [
-								{
-									"heading": "Where AI entered",
-									"items": [
-										"After headings and section order were fixed, AI drafted body copy, examples, and platform notes under each locked heading.",
-										"Iteration stayed inside the same file shape — no surprise sections, no alternate frameworks sneaking in.",
-										"When text drifted toward motivational fluff, I deleted it. The skill is operational, not inspirational."
-									]
-								},
-								{
-									"heading": "Where judgment stayed mine",
-									"items": [
-										"Choosing the Agent Skill format and file layout — what ships as the contract.",
-										"Defining BASIC versus DETAIL modes and what each may skip — that is product behaviour, not copy.",
-										"Naming failure modes in the anatomy table — what \"weak\" looks like per section."
-									]
-								}
-							],
-							"code": []
-						},
-						"metrics": {
-							"title": "A portable skill that survives the next session.",
-							"items": [
-								{
-									"value": "2",
-									"label": "Distribution formats — Skill for workflows, standalone paste-block for any AI tool."
-								},
-								{
-									"value": "1",
-									"label": "Portable SKILL.md artifact with locked framework headings."
-								},
-								{
-									"value": "6",
-									"label": "Anatomy headings fixed before any AI drafting."
-								},
-								{
-									"value": "4-D",
-									"label": "Flow locked as the operating order."
-								}
-							]
-						},
-						"tradeoffs": {
-							"heading": "Trade-offs & Learnings",
-							"title": "What constraint-first prompting taught.",
-							"items": [
-								"— Proof that skills mirror boundaries, not templates: the anatomy and flow are product decisions, not copy decisions.",
-								"— Constraint-first prompting only works once you've run it on your own work — the skill freezes what already survived, it doesn't invent it."
-							]
-						},
-						"quote": {
-							"title": "AI drafts inside rails I set.",
-							"subtitle": "Structure before prose — skills mirror boundaries, not templates."
-						},
-						"skillsDemonstrated": [
-							"Systems thinking",
-							"Design rationale",
-							"Tool exploration"
-						],
-						"projectSpecificSkills": "Structured product thinking · Product behaviour definition · AI-assisted workflow design",
-						"skillsByStrength": [
-							{
-								"strength": "Systems thinking",
-								"items": "Structured product thinking · Product behaviour definition"
-							},
-							{
-								"strength": "Design rationale",
-								"items": "AI-assisted workflow design"
-							},
-							{
-								"strength": "Tool exploration",
-								"items": "Agent-skill experimentation and AI workflow prototyping"
-							}
-						],
-						"skillsByStrengthTitle": "Skills demonstrated in this project"
-					},
-					"slug": "prompt-architect-skill",
-					"skillsDemonstrated": [
-						"Systems thinking",
-						"Design rationale",
-						"Tool exploration"
-					]
-				}
-			],
-			"contextNote": "I haven't designed an AI-powered product experience yet from the ground up — and that would be exciting to own."
 		}
 	},
 	"stickyNav": {

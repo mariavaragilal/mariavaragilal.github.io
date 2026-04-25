@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { navigate, Link } from 'gatsby';
+import { navigate } from 'gatsby';
 import { useTranslation } from 'react-i18next';
-import { Card, Badge, Button, Separator } from '../../../../_common/components';
-import { AccordionItem, AccordionTrigger, AccordionContent } from '../../../../_common/components/controls/Accordion';
+import { Card, ToggleGroup, ToggleGroupItem } from '../../../../_common/components';
 import { Matrix } from '../../../../_common/components/complex/Matrix';
 import { srOnly } from '../../../../constants/utils/a11y';
 import { findCaseByHash, flattenWorkCasesOrdered, toSlug, caseMatchesStrengthTag } from '../../../../constants/utils/structuredData';
@@ -10,7 +9,6 @@ import { LazyTerminalTypeEffect } from '../../../../constants/utils/terminalType
 import { CaseCard } from '../../../_common/WorkCases/CaseCard';
 
 const caseSlug = (app) => app.slug || toSlug(app.title);
-const isUnfilteredGroup = (groupName) => groupName === 'Earlier work';
 
 /* ── Tag dot colors (both languages) ── */
 const TAG_COLORS = {
@@ -37,8 +35,6 @@ export const WorkSection = () => {
 	const strengthsItems = ws?.strengths?.items || [];
 	const strengthsMatrix = ws?.strengthsMatrix || {};
 	const allCases = flattenWorkCasesOrdered(workCases);
-	const groupEntries = Object.entries(workCases);
-	const firstGroupName = groupEntries[0]?.[0];
 
 	/* ── Bridge: strengths JSON → Matrix props ── */
 	const matrixItems = useMemo(
@@ -71,7 +67,6 @@ export const WorkSection = () => {
 		return findCaseByHash(workCases, window.location.hash);
 	};
 
-	const [expandedGroups, setExpandedGroups] = useState(() => (firstGroupName ? { [firstGroupName]: true } : {}));
 	const [activeTag, setActiveTag] = useState(null);
 	const activeStrength = strengthsItems.find((s) => s.tag === activeTag) || null;
 	const activeEvidenceSet = activeStrength ? { has: (app) => caseMatchesStrengthTag(app, activeStrength.tag || '') } : null;
@@ -90,36 +85,7 @@ export const WorkSection = () => {
 		}
 	}, [activeTag, strengthsItems]);
 
-	useEffect(() => {
-		if (activeTag || !firstGroupName) return;
-		const visibleCount = groupEntries.reduce((count, [groupName]) => (expandedGroups[groupName] ? count + 1 : count), 0);
-		if (visibleCount > 0) return;
-		setExpandedGroups({ [firstGroupName]: true });
-	}, [expandedGroups, firstGroupName, groupEntries, activeTag]);
-
-	/* ── Handlers ── */
-	const getGroupMatchCount = (group, evidenceSet) => {
-		if (!evidenceSet) return 0;
-		return (group.cases || []).reduce((count, app) => (evidenceSet.has(app) ? count + 1 : count), 0);
-	};
-
-	const toggleGroup = (groupName) => setExpandedGroups((prev) => ({ ...prev, [groupName]: !prev[groupName] }));
-
-	const handleTagSelect = (tag) => {
-		if (tag === activeTag) {
-			setActiveTag(null);
-			setExpandedGroups(firstGroupName ? { [firstGroupName]: true } : {});
-			return;
-		}
-		setActiveTag(tag);
-		const evidenceSet = { has: (app) => caseMatchesStrengthTag(app, tag) };
-		const nextExpandedGroups = {};
-		groupEntries.forEach(([groupName, group]) => {
-			if (isUnfilteredGroup(groupName)) return;
-			nextExpandedGroups[groupName] = getGroupMatchCount(group, evidenceSet) > 0;
-		});
-		setExpandedGroups(nextExpandedGroups);
-	};
+	const handleTagSelect = (tag) => setActiveTag((prev) => (prev === tag ? null : tag));
 
 	const hasStrengths = false; // strengthsItems.length > 0 && matrixPhases.length > 0; // 
 
@@ -220,52 +186,34 @@ export const WorkSection = () => {
 					</nav>
 				</div>
 
-				<div className='relative flex flex-col gap-8'>
-					{groupEntries.map(([groupName, group]) => {
-						const skipFilter = isUnfilteredGroup(groupName);
-						const isExpanded = !!expandedGroups[groupName];
-						const matchCount = skipFilter ? 0 : getGroupMatchCount(group, activeEvidenceSet);
-						return (
-							<React.Fragment key={groupName}>
-								<Separator decorative />
-								<AccordionItem className='flex flex-col gap-4' isExpanded={isExpanded} onToggle={() => toggleGroup(groupName)}>
-									<AccordionTrigger icon='plus' gridCols='md:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)_1.6rem] items-start' triggerPadding='p-0'>
-										<div className='flex flex-col'>
-											<span className='font-mono uppercase tracking-[0.16em] text-current/22 font-medium text-sm' aria-hidden='true'>{group.period}</span>
-											<div className='flex flex-wrap items-center gap-2'>
-												<h3 className='font-mono text-[clamp(1.2rem,2.5vw,1.5rem)] leading-8 font-medium text-current my-auto'>{groupName}</h3>
-												{activeTag && !skipFilter && matchCount > 0 ? <Badge variant='secondary' size='sm' className='tracking-[0.04em] uppercase mt-1'>{matchCount + ' projects'}</Badge> : null}
-											</div>
-										</div>
-										<div className='relative w-full flex flex-col gap-2'>
-											{group.context && <p className='leading-relaxed text-current/66'>{group.context}</p>}
-											{group.contextNote && <p className='leading-relaxed text-current/66 text-sm italic'>{group.contextNote}</p>}
-										</div>
-									</AccordionTrigger>
-									<AccordionContent animate={false} ariaLabel={groupName + ' case studies'}>
-										<div className='px-1 pb-6 -mx-3 lg:mx-0'>
-											<div className='grid gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[repeat(auto-fill,minmax(25rem,1fr))]'>
-												{group.cases.map((app) => {
-													const slug = caseSlug(app);
-													const isMatch = skipFilter || !activeEvidenceSet || activeEvidenceSet.has(app);
-													return (
-														<div key={app.title} className={'transition-opacity duration-300 ' + (isMatch ? 'opacity-100' : 'opacity-20')}>
-															<CaseCard id={'case-' + slug} app={app} isSelected={false} to={'/work/' + slug + '/'} as='h4' />
-														</div>
-													);
-												})}
-											</div>
-										</div>
-									</AccordionContent>
-								</AccordionItem>
-							</React.Fragment>
-						);
-					})}
-				</div>
-				<div className='flex justify-end px-1'>
-					<Link to='/work/' className='font-mono text-[0.75rem] tracking-[0.12em] uppercase text-current/55 hover:text-current hover:underline underline-offset-4 transition-colors inline-flex items-center gap-1.5'>
-						{ws.seeAllWork || 'See all work'}<span aria-hidden>→</span>
-					</Link>
+				<div className='flex flex-col gap-6'>
+					<ToggleGroup
+						type='single'
+						value={activeTag || ''}
+						onValueChange={(val) => setActiveTag(val || null)}
+						variant='outline'
+						size='sm'
+						aria-label={ws.strengths?.intro || 'Filter by strength'}
+						className='flex-wrap justify-start gap-2'>
+						<ToggleGroupItem value=''>{i18n.language?.startsWith('pt') ? 'Todos' : 'All'}</ToggleGroupItem>
+						{strengthsItems.map((s) => (
+							<ToggleGroupItem key={s.tag} value={s.tag} className='gap-2'>
+								<span className='inline-block w-[6px] h-[6px] rounded-full shrink-0' style={{ backgroundColor: TAG_COLORS[s.tag] }} aria-hidden='true' />
+								{s.tag}
+							</ToggleGroupItem>
+						))}
+					</ToggleGroup>
+
+					<div className='grid gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[repeat(auto-fill,minmax(25rem,1fr))]'>
+						{allCases
+							.filter((app) => !activeEvidenceSet || activeEvidenceSet.has(app))
+							.map((app) => {
+								const slug = caseSlug(app);
+								return (
+									<CaseCard key={app.title} id={'case-' + slug} app={app} isSelected={false} to={'/work/' + slug + '/'} as='h4' />
+								);
+							})}
+					</div>
 				</div>
 			</Card>
 		</React.Fragment >

@@ -1,9 +1,9 @@
-import React, { useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import Layout from '../../_common/layout';
 import { srOnly } from '../../constants/utils/a11y';
-import { Card, Separator } from '../../_common/components';
-import { toSlug } from '../../constants/utils/structuredData';
+import { Card, ToggleGroup, ToggleGroupItem } from '../../_common/components';
+import { toSlug, caseMatchesStrengthTag } from '../../constants/utils/structuredData';
 import { CaseCard } from '../_common/WorkCases/CaseCard';
 import { Link } from 'gatsby';
 import { flattenWorkCasesOrdered } from '../../constants/utils/structuredData';
@@ -61,7 +61,19 @@ const CasesIndexPage = () => {
 	const matrixFooter = (strengthsMatrix.loopLabel || '').replace(/\s*(repeat|repetir)\s*/i, '').trim();
 	const matrixFooterRepeat = i18n.language?.startsWith('pt') ? 'repetir' : 'repeat';
 
-	const hasStrengths = strengthsItems.length > 0 && matrixPhases.length > 0; // 
+	const [activeTag, setActiveTag] = useState(null);
+	const activeStrength = strengthsItems.find((s) => s.tag === activeTag) || null;
+	const activeEvidenceSet = activeStrength ? { has: (app) => caseMatchesStrengthTag(app, activeStrength.tag || '') } : null;
+
+	useEffect(() => {
+		if (activeTag && !strengthsItems.some((s) => s.tag === activeTag)) {
+			setActiveTag(null);
+		}
+	}, [activeTag, strengthsItems]);
+
+	const allCases = flattenWorkCasesOrdered(workCases);
+
+	const hasStrengths = strengthsItems.length > 0 && matrixPhases.length > 0; //
 
 	return (
 		<Layout title={title} description={ws.p1} className='text-foreground flex-1 min-h-0 overflow-y-auto h-full'>
@@ -129,39 +141,39 @@ const CasesIndexPage = () => {
 					<nav aria-label={ws.browseAllCases} className={srOnly}>
 						<h1><Link to='/work/' className='text-current/88 hover:underline'>{ws.browseAllCases}</Link></h1>
 						<ul>
-							{flattenWorkCasesOrdered(workCases).map((app) => {
+							{allCases.map((app) => {
 								const slug = caseSlug(app);
 								return <li key={slug}><Link className='font-mono' to={'/work/' + slug + '/'}><span className='block'>{app.title}</span></Link></li>;
 							})}
 						</ul>
 					</nav>
 				</div>
-				<div className='relative flex flex-col gap-8'>
-					{Object.entries(workCases).map(([groupName, group]) => (
-						<React.Fragment key={groupName}>
-							<Separator decorative />
-							<section className='flex flex-col gap-4' aria-labelledby={'cases-group-' + toSlug(groupName)}>
-								<div className='flex w-full min-w-0 items-center gap-6 text-left grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] md:col-span-2 px-1 py-7 items-start'>
-									<div className='flex flex-col'>
-										<span className='font-mono uppercase tracking-[0.16em] text-current/22 font-medium text-sm' aria-hidden='true'>{group.period}</span>
-										<h2 id={'cases-group-' + toSlug(groupName)} className='font-mono text-[clamp(1.2rem,2.5vw,1.5rem)] leading-8 font-medium text-current mb-0'>{groupName}</h2>
-									</div>
-									<div className='relative w-full flex flex-col gap-2'>
-										{group.context && <p className='leading-relaxed text-current/66'>{group.context}</p>}
-										{group.contextNote && <p className='leading-relaxed text-current/66 text-sm italic'>{group.contextNote}</p>}
-									</div>
-								</div>
-								<div className='px-1 pb-6 -mx-3 lg:mx-0' role='region' aria-label={groupName + ' case studies'}>
-									<div className='grid gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[repeat(auto-fill,minmax(25rem,1fr))]'>
-										{group.cases.map((app) => {
-											const slug = caseSlug(app);
-											return <CaseCard variant='secondary' className='border border-border/50' key={app.title} id={'case-' + slug} app={app} isSelected={false} to={'/work/' + slug + '/'} as='h4' />;
-										})}
-									</div>
-								</div>
-							</section>
-						</React.Fragment>
-					))}
+				<div className='flex flex-col gap-6'>
+					<ToggleGroup
+						type='single'
+						value={activeTag || ''}
+						onValueChange={(val) => setActiveTag(val || null)}
+						variant='outline'
+						size='sm'
+						aria-label={ws.strengths?.intro || 'Filter by strength'}
+						className='flex-wrap justify-start gap-2'>
+						<ToggleGroupItem value=''>{i18n.language?.startsWith('pt') ? 'Todos' : 'All'}</ToggleGroupItem>
+						{strengthsItems.map((s) => (
+							<ToggleGroupItem key={s.tag} value={s.tag} className='gap-2'>
+								<span className='inline-block w-[6px] h-[6px] rounded-full shrink-0' style={{ backgroundColor: TAG_COLORS[s.tag] }} aria-hidden='true' />
+								{s.tag}
+							</ToggleGroupItem>
+						))}
+					</ToggleGroup>
+
+					<div className='grid gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[repeat(auto-fill,minmax(25rem,1fr))]'>
+						{allCases
+							.filter((app) => !activeEvidenceSet || activeEvidenceSet.has(app))
+							.map((app) => {
+								const slug = caseSlug(app);
+								return <CaseCard variant='secondary' className='border border-border/50' key={app.title} id={'case-' + slug} app={app} isSelected={false} to={'/work/' + slug + '/'} as='h4' />;
+							})}
+					</div>
 				</div>
 			</Card>
 		</Layout>

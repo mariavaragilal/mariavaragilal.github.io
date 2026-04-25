@@ -16,7 +16,7 @@ export const CaseCard = ({ app, isSelected, onToggle, href, to, icon, iconChar =
 	const isInternalCase = !!to;
 
 	const cardClassBase = 'flex flex-col items-start p-4 w-full text-left rounded-lg transition-colors ' + (isSelected ? 'border-primary/50 bg-card/75 ring-2 ring-primary/15' : 'border-border hover:bg-card/75') + ' ' + focusRing;
-	const cardClassLink = cardClassBase + ' cursor-pointer';
+	const cardClassLink = cardClassBase + ' cursor-pointer h-full';
 
 	const hostnameEl = app.references?.links?.[0] ? (
 		isLink ? (
