@@ -115,7 +115,7 @@ module.exports = {
 				'inherit': 'inherit',
 			},
 		},
-		container: { center: true, padding: "2rem", screens: { "2xl": "1400px" } },
+		container: { center: true, padding: "2rem", screens: { "2xl": "1440px", "hd": "1680px" } },
 	},
 	plugins: [require("tailwindcss-animate")],
 };
