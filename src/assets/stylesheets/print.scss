@@ -285,7 +285,7 @@
 		border: 1px solid rgba(0, 0, 0, 0.12) !important;
 	}
 
-	/* Force single column for 2-col grids (e.g. MethodSection Outcomes + Evolution) */
+	/* Force single column for 2-col grids (e.g. PlaybookSection outcomes + evolution) */
 	[class*='sm:grid-cols-2'] {
 		grid-template-columns: 1fr !important;
 	}

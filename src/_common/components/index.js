@@ -12,6 +12,7 @@ export { Blockquote, BlockquoteMain, BlockquoteSecondary } from './display/Block
 export { Media, MediaUrlLink, MediaA11yProvider } from './display/Media';
 export { ChatBubble, ChatBubbleQuestion, ChatBubbleAnswer } from './display/ChatBubble';
 export { Insight } from './display/Insight';
+export { Stack } from './display/Stack';
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from './controls/Accordion';
 export { Button } from './controls/Button';
 export { Collapsible, CollapsibleTrigger, CollapsibleContent } from './controls/Collapsible';
@@ -46,6 +47,7 @@ export { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuT
 export { Command, CommandDialog, CommandInput, CommandList, CommandEmpty, CommandGroup, CommandItem, CommandSeparator, CommandShortcut } from './complex/Command';
 export { Calendar } from './complex/Calendar';
 export { Carousel, CarouselContent, CarouselItem, CarouselFooter, CarouselCaption, CarouselCounter, CarouselPrevious, CarouselNext } from './complex/Carousel';
+export { Loop } from './complex/Loop';
 export { ChartContainer, ChartTooltip, ChartTooltipContent, ChartLegend, ChartLegendContent, useChart } from './complex/Chart';
 export { SidebarProvider, Sidebar, SidebarInset, SidebarTrigger, SidebarRail, SidebarHeader, SidebarFooter, SidebarSeparator, SidebarContent, SidebarGroup, SidebarGroupLabel, SidebarGroupContent, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarMenuBadge, SidebarMenuSub, SidebarMenuSubItem, SidebarMenuSubButton, SidebarMenuSkeleton, useSidebar } from './complex/Sidebar';
 export { Toaster, toast } from './complex/Sonner';

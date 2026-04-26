@@ -17,7 +17,7 @@ const CVExperienceSection = () => {
 	};
 	return (
 		<section>
-			<h2 className='font-mon font-medium tracking-tighter text-4xl text-foreground mb-3'>{t('nav.experience')}</h2>
+			<h2 className='font-mono font-medium tracking-tighter text-4xl text-foreground mb-3'>{t('nav.experience')}</h2>
 			<div className='space-y-12'>
 				<div className='pb-12'>
 					<div className='grid grid-cols-1 md:grid-cols-2 gap-8 mb-6'>

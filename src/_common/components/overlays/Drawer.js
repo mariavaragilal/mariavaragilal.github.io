@@ -5,7 +5,7 @@ import { cn } from '../../../constants/utils/cn';
 
 const HEADER = 'grid gap-1.5 p-4 text-center sm:text-left';
 const FOOTER = 'mt-auto flex flex-col gap-2 p-4';
-const TITLE = 'text-lg font-semibold leading-none tracking-tight text-current';
+const TITLE = 'font-mono text-lg font-semibold leading-none tracking-tight text-current';
 const DESCRIPTION = 'text-sm text-muted-foreground';
 const HANDLE = 'mx-auto mt-4 h-2 w-24 rounded-full bg-muted shrink-0';
 

@@ -12,7 +12,8 @@ const caseSlug = (c) => c.slug || toSlug(c.title);
 export const CaseStudyView = ({ app, cases = [] }) => {
 	const { t } = useTranslation();
 	const ui = t('mv.caseUi', { returnObjects: true }) || {};
-	const ws = t('mv.workSection', { returnObjects: true }) || {};
+	const w = t('mv.work', { returnObjects: true }) || {};
+	const ws = w.intro || {};
 
 	if (!app) return null;
 	const normalizedApp = normalizeCaseApp(app);

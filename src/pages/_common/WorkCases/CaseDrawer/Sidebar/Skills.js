@@ -3,7 +3,7 @@ import { LabelSection } from './LabelSection';
 
 const SubGroup = ({ label, value }) => (
 	<div className='space-y-0.5'>
-		<p className='text-[.72em] uppercase tracking-[0.08em] text-current/66'>{label}</p>
+		<p className='text-[.72em] uppercase tracking-[0.08em] text-current/66 font-bold'>{label}</p>
 		<p className='text-[.8em] font-mono text-current'>{value}</p>
 	</div>
 );
@@ -29,13 +29,13 @@ export const Skills = ({ caseStudy, ui }) => {
 			{byStrength.length > 0 ? (
 				<div className='space-y-3'>
 					{byStrength.map((group) => (
-						<SubGroup key={group.strength} label={group.strength} value={group.items}/>
+						<SubGroup key={group.strength} label={group.strength} value={group.items} />
 					))}
 				</div>
 			) : (
 				<div className='space-y-3'>
-					{demonstrated ? <SubGroup label={strengthsLabel} value={demonstrated}/> : null}
-					{projectSpecific ? <SubGroup label={projectLabel} value={projectSpecific}/> : null}
+					{demonstrated ? <SubGroup label={strengthsLabel} value={demonstrated} /> : null}
+					{projectSpecific ? <SubGroup label={projectLabel} value={projectSpecific} /> : null}
 				</div>
 			)}
 		</LabelSection>

@@ -33,18 +33,18 @@ export const methodMVP = {
 	commitments: [
 		{
 			principle: 'Cohesion',
-			method: 'Brand & Experience Audit + Design Implementation',
+			dimensionNos: ['01', '04'],
 			protects: 'The product is one experience — not a collection of products. Fragmentation risks surface before they cost clients.',
 		},
 		{
 			principle: 'Boundaries',
-			method: 'Unified Brand Principles + Design Implementation + Continuous Alignment & Measurement',
+			dimensionNos: ['02', '04', '05'],
 			protects: 'Intentional boundaries remind teams what truly matters. If it doesn\'t serve the committed problem, it doesn\'t ship now.',
 		},
 		{
 			principle: 'Priority',
-			method: 'Priority & Flow Architecture + Design Implementation',
-			protects: 'The launch line is an act of discipline, not compromise. The 2×2 matrix makes priorities visible and shared: what must launch now, and what can wait without weakening the core.',
+			dimensionNos: ['03', '04'],
+			protects: 'The launch line is an act of discipline, not compromise. It names what must ship now, what can wait, and what the core cannot lose.',
 		},
 	],
 	dimensions: [
@@ -81,14 +81,14 @@ export const methodMVP = {
 			title: 'Priority & Flow Architecture',
 			icon: '⬡',
 			groundedIn: ['Priority'],
-			summary: 'A 2×2 matrix (Business Value vs. User Friction) to define what ships first. High Value + High Friction ships first — shared auth, core navigation, document viewer. Low-friction items come later.',
+			summary: 'A prioritization grid: define what ships first. High Value + High Friction ships first — shared auth, core navigation, document viewer. Low-friction items come later.',
 			philosophy: {
 				lens: 'The Launch Line',
 				ask: 'When is enough enough?',
-				answer: 'The launch line is an act of discipline, not compromise. The 2×2 matrix makes priorities visible and shared: what must launch now, and what can wait without weakening the core.',
+				answer: 'The launch line is an act of discipline, not compromise. The grid makes priorities visible and shared: what must launch now, and what can wait without weakening the core.',
 				checkpoint: 'The product tells you what to refine — the backlog never will.',
 			},
-			detail: ['The matrix keeps prioritization and scope definition explicit and visible for the whole project. High Value + High Friction ships first; low-friction items queue without blocking momentum.'],
+			detail: ['The grid keeps prioritization and scope definition explicit and visible for the whole project. High Value + High Friction ships first; low-friction items queue without blocking momentum.'],
 		},
 		{
 			num: '04',
@@ -120,9 +120,9 @@ export const methodMVP = {
 		},
 	],
 	outcomes: [
-		{ principle: 'Clarity', drivenBy: 'Dimension 1 + Dimension 3', protects: 'Seeing only what truly matters — stripping noise before it compounds' },
-		{ principle: 'Confidence', drivenBy: 'Dimension 4', protects: 'Decisions made once, launched, and trusted — no second-guessing in production' },
-		{ principle: 'Consistency', drivenBy: 'Dimension 2 + Dimension 5', protects: 'A unified experience that evolves without losing its identity' },
+		{ principle: 'Clarity', drivenBy: 'D01 · D03', protects: 'Seeing only what truly matters — stripping noise before it compounds' },
+		{ principle: 'Confidence', drivenBy: 'D04', protects: 'Decisions made once, launched, and trusted — no second-guessing' },
+		{ principle: 'Consistency', drivenBy: 'D02 · D05', protects: 'A unified experience that evolves without losing its identity' },
 	],
 	evolution: {
 		intro: 'Each commitment describes how it evolves, but the underlying cycle is the same across all three — create, launch, test, refine — the evolution loop that keeps the vision honest.',
@@ -132,7 +132,7 @@ export const methodMVP = {
 			{ step: 'Test', desc: 'Learn from real users and real data', dimension: 'Dimension 5' },
 			{ step: 'Refine', desc: 'Iterate while protecting the vision', dimension: 'Dimension 1 + Dimension 2' },
 		],
-		closing: 'Each pass through the loop sharpens the product and deepens understanding. The role of leadership is to protect clarity, confidence, and consistency — so the team can release, learn, and move forward with purpose. The work has always been about more than any single method — it\'s about what disciplined practice makes possible.',
-		whyItMatters: 'Declaring Done creates the space to learn. Learning keeps the vision honest. The cycle builds quiet, compounding advantage that no single feature sprint can replicate.',
+		closing: 'Each pass through the loop sharpens the product and deepens understanding. The work has always been about more than any single method — it\'s about what disciplined practice makes possible.',
+		whyItMatters: 'Declaring Done creates the space to learn. Learning keeps the vision honest. The cycle builds quiet, compounding advantage.',
 	},
 };

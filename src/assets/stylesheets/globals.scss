@@ -1,92 +1,8 @@
+@use './tokens';
+
+@config '../../../tailwind.config.js';
+
 @custom-variant dark (&:is(.dark *));
-
-:root {
-  --font-size: 16px;
-  --stage: oklch(98.4% .003 247.858);
-  --background: #ffffff;
-  --foreground: oklch(20.8% .042 265.755);
-  --card: #ffffff;
-  --card-foreground: oklch(20.8% .042 265.755);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(20.8% .042 265.755);
-  --primary: 222 47% 11%;
-  --primary-foreground: 0 0% 100%;
-  --secondary: oklch(0.95 0.0058 264.53);
-  --secondary-foreground: hwb(244 1% 93%);
-  --muted: oklch(92.9% .013 255.508);
-  --muted-foreground: oklch(55.4% .046 257.417);
-  --accent: oklch(92.9% .013 255.508);
-  --accent-foreground: #030213;
-  --destructive: #d4183d;
-  --destructive-foreground: #ffffff;
-  --border: rgba(0, 0, 0, 0.1);
-  --input: transparent;
-  --input-background: oklch(96.8% .007 247.896);
-  --switch-background: oklch(86.9% .022 252.894);
-  --font-weight-medium: 500;
-  --font-weight-normal: 400;
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(20.8% .042 265.755);
-  --sidebar-primary: oklch(0.99% 7.85 292.2);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
-  --grid-line-color: var(--color-slate-600);
-  --grid-line-size: .0625rem;
-  --grid-cell-size: 4rem;
-  --grid-opacity: 0.25;
-}
-
-.dark {
-  --stage: oklch(12.9% .042 264.695);
-  --background: oklch(20.8% .042 265.755);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(20.8% .042 265.755);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(20.8% .042 265.755);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: 210 40% 96%;
-  --primary-foreground: 222 47% 11%;
-  --secondary: oklch(27.9% .041 260.031);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(27.9% .041 260.031);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(27.9% .041 260.031);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(27.9% .041 260.031);
-  --input: oklch(27.9% .041 260.031);
-  --ring: oklch(0.439 0 0);
-  --font-weight-medium: 500;
-  --font-weight-normal: 400;
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(27.9% .041 260.031);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(27.9% .041 260.031);
-  --sidebar-ring: oklch(0.439 0 0);
-  --grid-line-color: rgba(0, 0, 0, 0.15);
-  --grid-line-size: .0625rem;
-  --grid-cell-size: 4rem;
-  --grid-opacity: 0.25;
-}
 
 // Bind --project-accent where light/dark vars are set (avoid :root resolving to currentColor too early).
 [data-project-accent] {
@@ -101,6 +17,8 @@
   --font-sans: "Rubik", "Outfit", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-serif: "Noto Serif Display", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-mono: "DM Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  /* Aligns with former theme.container.screens; enables hd: variant */
+  --breakpoint-hd: 105rem;
 }
 
 @theme inline {
@@ -129,6 +47,8 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
@@ -141,10 +61,10 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 0.25rem);
+  --radius-md: calc(var(--radius) - 0.125rem);
   --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 0.25rem);
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
@@ -153,6 +73,19 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* v4: theme.container in JS is ignored; load tailwind.config via @config above */
+@utility container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 2rem;
+  @media (width >= 90rem) {
+    max-width: 90rem;
+  }
+  @media (width >= 105rem) {
+    max-width: 105rem;
+  }
 }
 
 /**
@@ -211,6 +144,15 @@
     .lh-1 {
       line-height: 1;
     }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-mono);
   }
 }
 

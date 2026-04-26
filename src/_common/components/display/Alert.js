@@ -13,7 +13,7 @@ const alertVariants = cva('relative w-full rounded-lg border p-4 [&>svg~*]:pl-7 
 	},
 });
 
-const TITLE = 'mb-1 font-medium leading-none tracking-tight';
+const TITLE = 'font-mono mb-1 font-medium leading-none tracking-tight';
 const DESCRIPTION = 'text-sm [&_p]:leading-relaxed';
 
 export const Alert = ({ variant = 'default', role = 'alert', className = '', ...props }) => (

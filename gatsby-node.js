@@ -19,13 +19,13 @@ const toSlug = (title) =>
 
 exports.createPages = ({ actions: { createPage, createRedirect } }) => {
 	createRedirect({ fromPath: '/cases/', toPath: '/work/', isPermanent: true, redirectInBrowser: true });
-	const workCases = mvEn.workCases || {};
+	const workCases = (mvEn.work && mvEn.work.cases) || {};
 	Object.values(workCases).forEach((group) => {
 		(group.cases || []).forEach((app) => {
 			const slug = app.slug || toSlug(app.title);
 			createPage({
 				path: '/work/' + slug + '/',
-				component: path.resolve(__dirname, 'src/pages/work/_common/CaseStudyPage.js'),
+				component: path.resolve(__dirname, 'src/pages/work/CaseStudyPage.js'),
 				context: { slug },
 			});
 			createRedirect({ fromPath: '/cases/' + slug + '/', toPath: '/work/' + slug + '/', isPermanent: true, redirectInBrowser: true });

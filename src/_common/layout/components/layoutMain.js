@@ -8,9 +8,9 @@ const LayoutMain = ({ children, isCaseStudyPage, isLandingPage, showWork, classN
 	const caseStudyClass = isCaseStudyPage ? 'flex-1 min-h-0 min-w-0 w-full overflow-hidden flex flex-col ' : '';
 	const sectionClass = baseClass + workClass + caseStudyClass + (className ? ' ' + className : '');
 	return (
-		<section ref={cvRef} className={sectionClass} aria-label='Page content' id='page-scroll-container'>
+		<div ref={cvRef} className={sectionClass} id='page-scroll-container'>
 			{children}
-		</section>
+		</div>
 	);
 };
 

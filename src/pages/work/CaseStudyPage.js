@@ -1,16 +1,17 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import Layout from '../../../_common/layout';
-import { Card } from '../../../_common/components';
-import { srOnly } from '../../../constants/utils/a11y';
-import { buildDescription, findCaseBySlug, flattenWorkCasesOrdered } from '../../../constants/utils/structuredData';
-import { CaseStudyView } from '../../_common/WorkCases/CaseDrawer';
-import { ScrollToTop } from '../../_common/ScrollToTop';
+import Layout from '../../_common/layout';
+import { Card } from '../../_common/components';
+import { srOnly } from '../../constants/utils/a11y';
+import { buildDescription, findCaseBySlug, flattenWorkCasesOrdered } from '../../constants/utils/structuredData';
+import { CaseStudyView } from '../_common/WorkCases/CaseDrawer';
+import { ScrollToTop } from '../_common/ScrollToTop';
 
 const CaseStudyPage = ({ pageContext }) => {
 	const { slug } = pageContext;
 	const { t } = useTranslation();
-	const workCases = t('mv.workCases', { returnObjects: true }) || {};
+	const work = t('mv.work', { returnObjects: true }) || {};
+	const workCases = work.cases || {};
 	const match = findCaseBySlug(workCases, slug);
 
 	const [showScrollTop, setShowScrollTop] = useState(false);

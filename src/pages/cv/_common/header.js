@@ -19,12 +19,12 @@ const CVHeader = () => {
 		<header className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 p-8 border-b border-border'>
 			<div className='min-w-0 w-full mt-auto'>
 				<h1 className='sr-only'>CV</h1>
-				<RichText as='p' className='text-7xl/15 text-foreground max-w-full md:min-h-[7.5rem] font-mon tracking-tighter font-medium break-words' text={t('cv.name')} />
+				<RichText as='p' className='text-7xl/15 text-foreground max-w-full md:min-h-[7.5rem] font-mono tracking-tighter font-medium break-words' text={t('cv.name')} />
 			</div>
-			<div className='min-w-0 flex h-full flex-col justify-end gap-3'>
-				<p className='text-[1em] text-foreground'>{t('location')}</p>
-				<p className='font-mon font-medium leading-[1.35] text-[1.675em] text-foreground w-full max-w-md'>{t('cv.title')}</p>
-				<a href={social.linkedin} target='_blank' rel='noopener noreferrer' className='text-[1em] text-current/66 hover:text-blue-600 dark:hover:text-blue-400 hover:underline'>{stripProtocol(social.linkedin)}</a>
+			<div className='min-w-0 flex h-full flex-col justify-end'>
+				<p className='text-[1em] text-foreground mb-3'>{t('location')}</p>
+				<p className='font-mono font-medium leading-[1.35] text-[1.675em] text-foreground w-full max-w-md'>{t('cv.title')}</p>
+				<a href={social.linkedin} target='_blank' rel='noopener noreferrer' className='text-[1em] text-current/66 hover:text-brand dark:hover:text-brand/75 hover:underline'>{stripProtocol(social.linkedin)}</a>
 			</div>
 			<nav className='min-w-0 p-0 md:col-span-2 xl:col-span-1 flex h-full flex-col justify-end' aria-label='External profiles'>
 				<h1 className='sr-only'>links</h1>

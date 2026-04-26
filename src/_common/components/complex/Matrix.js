@@ -1,5 +1,5 @@
 /**
- * Matrix — 2×2 phase-based tag matrix with optional selection and highlighting.
+ * Matrix — four-quadrant phase-based tag matrix with optional selection and highlighting.
  *
  * @example — Interactive (WorkSection)
  * <Matrix
@@ -7,7 +7,7 @@
  *   items={items}
  *   activeTag='Design to code'
  *   onTagSelect={(tag) => toggle(tag)}
- *   footer='Create → Launch → Observe → Refine'
+ *   footer='Create → Launch → Test → Refine'
  *   footerRepeat='repeat'
  * />
  *
@@ -67,8 +67,9 @@ const TAG_COLORS = {
 /* ── Case variant: derive props from caseStudy + JSON ── */
 const useCaseProps = (caseStudy) => {
 	const { t, i18n } = useTranslation();
-	const ws = t('mv.workSection', { returnObjects: true }) || {};
-	const strengthsMatrix = ws?.strengthsMatrix || {};
+	const wk = t('mv.work', { returnObjects: true }) || {};
+	const ws = wk.intro || {};
+	const strengthsMatrix = ws?.strengths?.matrix || {};
 	const genericStrengths = ws?.strengths?.items || [];
 
 	const skills = caseStudy?.skillsDemonstrated || [];
@@ -197,7 +198,7 @@ const MatrixGrid = ({
 										>
 											<span className='flex items-center gap-2'>
 												<span
-													className='w-[6px] h-[6px] rounded-full shrink-0'
+													className='w-[0.375rem] h-[0.375rem] rounded-full shrink-0'
 													style={{ backgroundColor: isActive ? 'currentColor' : dotColor }}
 													aria-hidden='true'
 												/>
@@ -211,7 +212,7 @@ const MatrixGrid = ({
 
 											{item?.body && (
 												<span
-													className={`text-[0.68rem] leading-snug pl-[14px] line-clamp-2 ${isActive ? 'text-background/66' : 'text-current/66'
+													className={`text-[0.68rem] leading-snug pl-[0.875rem] line-clamp-2 ${isActive ? 'text-background/66' : 'text-current/66'
 														}`}
 												>
 													{item.body}

@@ -36,6 +36,7 @@
 		"@testing-library/user-event": "^14.6.1",
 		"autoprefixer": "^10.4.27",
 		"babel-preset-gatsby": "^3.16.0",
+		"culori": "^4.0.2",
 		"eslint": "^8.57.0",
 		"eslint-plugin-jsx-a11y": "^6.10.2",
 		"eslint-plugin-react": "^7.37.5",
@@ -45,6 +46,7 @@
 		"jest": "^30.2.0",
 		"jest-environment-jsdom": "^30.2.0",
 		"postcss": "^8.5.8",
+		"style-dictionary": "^5.4.0",
 		"tailwindcss": "^4.2.1",
 		"tailwindcss-animate": "^1.0.7"
 	},
@@ -68,7 +70,6 @@
 		"build:analyze": "ANALYZE_BUNDLE=true gatsby build",
 		"build:serve": "gatsby serve",
 		"deploy": "npm run build && gh-pages -d public",
-		"content:migrate-case-study": "node scripts/migrate-case-study-nested.mjs",
 		"test": "jest",
 		"test:watch": "jest --watch",
 		"test:coverage": "jest --coverage",

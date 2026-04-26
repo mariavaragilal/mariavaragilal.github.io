@@ -10,7 +10,7 @@ const OVERLAY_BASE = 'fixed inset-0 z-250 cursor-pointer bg-foreground text-curr
 const WRAPPER = 'fixed z-250 overflow-hidden text-foreground';
 const HEADER = 'flex flex-col space-y-2 text-center sm:text-left';
 const FOOTER = 'flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2';
-const TITLE = 'text-lg font-semibold';
+const TITLE = 'font-mono text-lg font-semibold';
 const DESCRIPTION = 'text-sm text-current/66';
 
 const sheetContentVariants = cva('absolute inset-0 gap-4 bg-background p-6 shadow-lg text-current overflow-y-auto', {

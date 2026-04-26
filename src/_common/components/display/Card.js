@@ -7,7 +7,7 @@ const cardVariants = cva('flex flex-col rounded-lg', {
 		variant: {
 			default: 'bg-card text-card-foreground gap-x-6',
 			secondary: 'bg-secondary/50 text-secondary-foreground',
-			muted: 'bg-secondary/25 text-card-foreground border-border',
+			muted: 'bg-secondary/20 text-card-foreground border-border',
 			inverse: 'bg-primary/5',
 			ghost: 'bg-transparent border border-border',
 			transparent: 'bg-transparent',
@@ -27,7 +27,7 @@ const DEFAULT_HEADER_PADDING = 'pt-6 [.border-b]:pb-6';
 const DEFAULT_CONTENT_PADDING = '[&:last-child]:pb-6';
 const DEFAULT_FOOTER_PADDING = 'pb-6 [.border-t]:pt-6';
 const HEADER_BASE = 'grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 w-full';
-const TITLE = 'leading-none font-medium tracking-tight';
+const TITLE = 'font-mono leading-none font-medium tracking-tight';
 const DESCRIPTION = 'text-current/66 mb-2';
 const CONTENT_BASE = '';
 const FOOTER_BASE = 'flex items-center';
@@ -40,7 +40,7 @@ const PLACEHOLDER_PATTERN = {
 	backgroundImage: `url("data:image/svg+xml;utf8,${LOGOMARK_SVG}")`,
 	backgroundRepeat: 'no-repeat',
 	backgroundPosition: 'center',
-	backgroundSize: '96px 96px',
+	backgroundSize: '6rem 6rem',
 };
 
 const CardContext = createContext({

@@ -19,8 +19,8 @@ module.exports = {
 			},
 			borderRadius: {
 				lg: "var(--radius)",
-				md: "calc(var(--radius) - 2px)",
-				sm: "calc(var(--radius) - 4px)",
+				md: "calc(var(--radius) - 0.125rem)",
+				sm: "calc(var(--radius) - 0.25rem)",
 			},
 			colors: {
 				background: "hsl(var(--background))",
@@ -80,18 +80,18 @@ module.exports = {
 				},
 				"terminal-glow": {
 					"0%": {
-						"text-shadow": "0 0 5px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.2), 0 0 15px rgba(0, 0, 0, 0.1)",
+						"text-shadow": "0 0 0.3125rem rgba(0, 0, 0, 0.3), 0 0 0.625rem rgba(0, 0, 0, 0.2), 0 0 0.9375rem rgba(0, 0, 0, 0.1)",
 					},
 					"100%": {
-						"text-shadow": "0 0 2px rgba(0, 0, 0, 0.2), 0 0 5px rgba(0, 0, 0, 0.1), 0 0 8px rgba(0, 0, 0, 0.05)",
+						"text-shadow": "0 0 0.125rem rgba(0, 0, 0, 0.2), 0 0 0.3125rem rgba(0, 0, 0, 0.1), 0 0 0.5rem rgba(0, 0, 0, 0.05)",
 					},
 				},
 				"terminal-glow-dark": {
 					"0%": {
-						"text-shadow": "0 0 5px rgba(255, 255, 255, 0.3), 0 0 10px rgba(255, 255, 255, 0.2), 0 0 15px rgba(255, 255, 255, 0.1)",
+						"text-shadow": "0 0 0.3125rem rgba(255, 255, 255, 0.3), 0 0 0.625rem rgba(255, 255, 255, 0.2), 0 0 0.9375rem rgba(255, 255, 255, 0.1)",
 					},
 					"100%": {
-						"text-shadow": "0 0 2px rgba(255, 255, 255, 0.2), 0 0 5px rgba(255, 255, 255, 0.1), 0 0 8px rgba(255, 255, 255, 0.05)",
+						"text-shadow": "0 0 0.125rem rgba(255, 255, 255, 0.2), 0 0 0.3125rem rgba(255, 255, 255, 0.1), 0 0 0.5rem rgba(255, 255, 255, 0.05)",
 					},
 				},
 			},
@@ -115,7 +115,6 @@ module.exports = {
 				'inherit': 'inherit',
 			},
 		},
-		container: { center: true, padding: "2rem", screens: { "2xl": "1440px", "hd": "1680px" } },
 	},
 	plugins: [require("tailwindcss-animate")],
 };

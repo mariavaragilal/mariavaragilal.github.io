@@ -5,8 +5,8 @@ import { Badge } from '../../../../_common/components';
 const CVAboutSection = () => {
 	const { t } = useTranslation();
 	return (
-		<section>
-			<h2 className='font-mon font-medium tracking-tighter text-4xl text-foreground mb-3'>{t('nav.about')}</h2>
+		<section className='relative'>
+			<h2 className='font-mono font-medium tracking-tighter text-4xl text-foreground mb-3'>{t('nav.about')}</h2>
 			<p className='text-[1em] mb-4 text-foreground'>{t('cv.summary')}</p>
 			<blockquote className='text-[1em] mb-4 text-foreground font-medium'>{t('about.quote')}</blockquote>
 			<p className='text-[1em] text-current/66 leading-relaxed mb-2'>{t('about.description1')}</p>
