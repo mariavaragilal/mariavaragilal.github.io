@@ -73,7 +73,7 @@
 					"value": "B2B SaaS & fintech · strategy through production · design and frontend"
 				}
 			],
-			"headline": "A designer who <br class=\"hidden lg:block\" /> ships  — the <em class=\"not-italic text-brand\">handoff</em> frictionless.",
+			"headline": "A designer who <br class=\"hidden 2xl:block\" /> ships  — the <em class=\"not-italic text-brand\">handoff</em> frictionless.",
 			"deckPrimary": "I'm a Product Designer. My foundation is design. The tools change — Figma, React, Gatsby, a brand, a campaign — but the <em>thinking</em> does not. 10+ years transforming product experiences across B2B SaaS — from strategy through to production.",
 			"deckSecondary": "I design where the design has to survive. Sometimes that's a React component. Sometimes it's a brand system. Sometimes it's a landing page for a campaign. The medium depends on where the work needs to live to stay real — code is one of those places, not the only one."
 		}

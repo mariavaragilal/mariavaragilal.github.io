@@ -18,7 +18,7 @@ export const StickyNav = ({ showScrollTop, isScrolled, activeSection, onScrollTo
 							key={s.id}
 							href={'#' + s.id}
 							onClick={(e) => { e.preventDefault(); onScrollToSection(s.id); setNavOpen(false); }}
-							className={'relative px-2.5 py-2 md:px-4 rounded-full text-[.725rem] tracking-[0.15em] uppercase whitespace-nowrap transition-all duration-300 ' + (activeSection === s.id ? 'text-primary-foreground font-medium' : 'text-muted-foreground hover:text-foreground')}
+							className={'relative px-2.5 py-2 md:px-4 rounded-full text-[.725rem] tracking-[0.15em] uppercase font-bold whitespace-nowrap transition-all duration-300 ' + (activeSection === s.id ? 'text-primary-foreground font-medium' : 'text-muted-foreground hover:text-foreground')}
 						>
 							{activeSection === s.id && (
 								<motion.div layoutId='activeNavBackground' className='absolute inset-0 bg-primary rounded-full' />

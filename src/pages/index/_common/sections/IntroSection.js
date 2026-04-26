@@ -14,7 +14,7 @@ export const IntroSection = () => {
 
 	return (
 		<header className='relative w-full py-12 lg:py-14 border-b border-border' aria-labelledby='hero-heading'>
-			<div className='max-w-full hd:max-w-[160ch] mx-auto px-6 lg:px-10 space-y-16 md:space-y-24'>
+			<div className='max-w-full hd:max-w-[160ch] mx-auto px-6 lg:px-10 space-y-16 xl:space-y-24'>
 				<div role='group' aria-label='Identity' className='border-b border-t border-border grid gap-4 md:grid-cols-4 lg:gap-2 py-6 lg:-mt-8'>
 					{identityRows.map((row, i) => (
 						<div className={'block' + (i === identityRows.length - 1 ? ' md:col-span-2 ms-auto mr-8' : '')} key={row.label + '-' + i}>
@@ -42,9 +42,9 @@ export const IntroSection = () => {
 						))}
 					</Card>
 				</div>
-				<div className='w-full max-w-[95%]'>
-					<RichText as='p' className='font-sans tracking-[-0.02em] leading-[1.44] text-[clamp(1.125rem,1.6vw,1.375rem)] text-foreground max-w-[85%]' text={intro.deckPrimary} />
-					<RichText as='p' className='text-base leading-[1.55] text-current/75 mt-4 max-w-[75%]' text={intro.deckSecondary} />
+				<div className='w-full 2xl:max-w-[95%]'>
+					<RichText as='p' className='font-sans tracking-[-0.02em] leading-[1.44] text-[clamp(1.125rem,1.6vw,1.375rem)] text-foreground 2xl:max-w-[85%]' text={intro.deckPrimary} />
+					<RichText as='p' className='text-base leading-[1.55] text-current/75 mt-4 2xl:max-w-[75%]' text={intro.deckSecondary} />
 					<div className='flex flex-wrap gap-3 mt-6'>
 						<Button as='a' href='#work' variant='default' size='label'>
 							{intro?.viewWork}
