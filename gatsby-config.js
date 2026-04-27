@@ -7,7 +7,7 @@ EventEmitter.defaultMaxListeners = 20;
 module.exports = {
 	siteMetadata: {
 		title: 'Maria Varagilal: CV',
-		description: 'Lead Product Designer who ships code. 10+ years unifying fragmented SaaS platforms.',
+		description: 'Senior Product Designer who ships code. 10+ years unifying fragmented SaaS platforms.',
 		author: 'Maria Varagilal',
 		keywords: 'Maria Varagilal, Design technologist, Lead Frontend Designer, Principal Product Designer, Frontend Dev, UI, UX, React, Redux, Design Systems, B2B SaaS',
 		siteUrl: 'https://mariavaragilal.github.io',

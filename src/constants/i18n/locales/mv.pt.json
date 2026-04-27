@@ -21,7 +21,7 @@
 			"heroNameLine1": "Maria",
 			"heroNameLine2": "Varagilal",
 			"tagline": "B2B · SaaS · Fintech · Fluxos acelerados por IA",
-			"title": "Lead Product Designer — do design ao código.",
+			"title": "Senior Product Designer — do design ao código.",
 			"schemaJobTitle": "Technical Product Designer & Design Technologist / Frontend Designer",
 			"body": "+10 anos a transformar experiências de produto em B2B SaaS — da estratégia à produção. Responsável pelo design e pela camada de frontend: pesquisa, fluxos, UI — e quando a direcção está definida, construo-o. Uma designer que entrega — o handoff sem atrito.",
 			"detail": "Hoje, uso IA para acelerar todas as etapas — desde exploração e prototipagem até componentes prontos para produção.",
@@ -53,10 +53,10 @@
 			"code": [
 				"# identity.js",
 				"const maria = {",
-				"  name: \"Maria Varagilal\",",
-				"  role: \"Lead Product Designer\",",
-				"  suffix: \"que entrega produto\",",
-				"  ecosystem: \"6 produtos / 1 identidade / 10+ anos\",",
+				"  nome: \"Maria Varagilal\",",
+				"  titulo: \"Technical Product Designer\",",
+				"  sufixo: \"que entrega produtos digitais\",",
+				"  métricas: \"9 produtos · 5+ unificados · 4+ SaaS B2B · 10+ anos\",",
 				"};"
 			],
 			"identity": [
@@ -66,15 +66,15 @@
 				},
 				{
 					"label": "função",
-					"value": "Lead Product Designer"
+					"value": "Senior Product Designer"
 				},
 				{
 					"label": "foco",
 					"value": "B2B SaaS & fintech · da estratégia à produção · design e frontend"
 				}
 			],
-			"headline": "Um designer que entrega — o <em class=\"not-italic text-brand\">handoff</em> sem fricção.",
-			"deckPrimary": "Sou designer. A minha base é design. As ferramentas mudam — Figma, React, Gatsby, uma marca, uma campanha — <em>mas o pensamento não</em>.",
+			"headline": "Product Designer que entrega — o <em class=\"not-italic text-brand\">handoff</em> sem fricção.",
+			"deckPrimary": "Sou designer. A minha base é design. As ferramentas mudam — Figma, React, Gatsby, uma marca, uma campanha — <em>mas o pensamento não</em>. +10 anos a transformar experiências de produto em B2B SaaS — da estratégia à produção.",
 			"deckSecondary": "Desenho onde o design tem de sobreviver. Por vezes é um componente React. Outras é um sistema de marca. Outras é uma landing page para uma campanha. O meio depende de onde o trabalho precisa de viver para se manter real — o código é um desses lugares, não o único."
 		}
 	},

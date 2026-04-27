@@ -21,7 +21,7 @@
 			"heroNameLine1": "Maria",
 			"heroNameLine2": "Varagilal",
 			"tagline": "B2B · SaaS · Fintech · AI-accelerated workflows",
-			"title": "Lead Product Designer who ships product.",
+			"title": "Senior Product Designer who ships product.",
 			"schemaJobTitle": "Technical Product Designer & Design Technologist / Frontend Designer",
 			"body": "10+ years transforming product experiences across B2B SaaS — from strategy through to production. I own the design and frontend layer: research, flows, UI — and when the direction is set, I build it. A designer who ships — the handoff frictionless.",
 			"detail": "Today, I use AI to accelerate every stage — from exploration and prototyping to production-ready components.",
@@ -54,7 +54,7 @@
 				"# identity.js",
 				"const maria = {",
 				"  name: \"Maria Varagilal\",",
-				"  role: \"Lead Product Designer\",",
+				"  title: \"Technical Product Designer\",",
 				"  suffix: \"who ships product\",",
 				"  metrics: \"9 products · 5+ unified · 4+ B2B SaaS · 10+ years\",",
 				"};"
@@ -66,15 +66,15 @@
 				},
 				{
 					"label": "role",
-					"value": "Lead Product Designer"
+					"value": "Senior Product Designer"
 				},
 				{
 					"label": "focus",
 					"value": "B2B SaaS & fintech · strategy through production · design and frontend"
 				}
 			],
-			"headline": "A designer who <br class=\"hidden 2xl:block\" /> ships  — the <em class=\"not-italic text-brand\">handoff</em> frictionless.",
-			"deckPrimary": "I'm a Product Designer. My foundation is design. The tools change — Figma, React, Gatsby, a brand, a campaign — but the <em>thinking</em> does not. 10+ years transforming product experiences across B2B SaaS — from strategy through to production.",
+			"headline": "Product designer who <br class=\"hidden 2xl:block\" /> ships  — the <em class=\"not-italic text-brand\">handoff</em> frictionless.",
+			"deckPrimary": "I'm a Designer. My foundation is design. The tools change — Figma, React, Gatsby, a brand, a campaign — but the <em>thinking</em> does not. 10+ years transforming product experiences across B2B SaaS — from strategy through to production.",
 			"deckSecondary": "I design where the design has to survive. Sometimes that's a React component. Sometimes it's a brand system. Sometimes it's a landing page for a campaign. The medium depends on where the work needs to live to stay real — code is one of those places, not the only one."
 		}
 	},
