@@ -1,8 +1,8 @@
 {
 	"cv": {
 		"name": "Maria <br />  Varagilal",
-		"title": "Senior Technical Product Designer · Design Engineer",
-		"summary": "Technical Product Designer with 10+ years transforming product experiences across B2B SaaS — from strategy through to production. Sole design lead across a multi-product portfolio: I own the full design lifecycle, mentor contributors, and when the design is approved, I build it. A designer who ships — no handoff required.",
+		"title": "Principal Product Designer · Design Engineer",
+		"summary": "Principal Technical Product Designer with 10+ years transforming product experiences across B2B SaaS — from strategy through to production. Sole design lead across a multi-product portfolio: I own the full design lifecycle, mentor contributors, and when the design is approved, I build it. A designer who ships — no handoff required.",
 		"note": "Currently using AI to accelerate design-to-code workflows, from exploration and prototyping to production-ready components."
 	},
 	"nav": {
@@ -21,8 +21,37 @@
 		"securibox": {
 			"company": "Securibox",
 			"location": "Lisbon, Portugal",
-			"position": "Lead Technical Product Designer & Frontend Developer",
+			"position": "Principal Product Designer & Frontend Developer",
 			"period": "September 2015 - Present",
+			"roles": [
+				{
+					"position": "Principal Product Designer & Design Engineer",
+					"period": "September 2020 - Present",
+					"description": [
+						"Defined product experience, interface, and brand strategy across a multi-product B2B SaaS solution.",
+						"Architected product flows, content organisation, and complex enterprise workflows from discovery to delivery.",
+						"Implemented designs into code with JavaScript, Redux, Gatsby, HTML, and CSS, using AI to accelerate the design-to-code workflow.",
+						"Migrating design system to Tailwind, adopting a utility-first approach while maintaining brand consistency across the product suite.",
+						"Built responsive, accessible UIs following WCAG standards.",
+						"Implemented API integration on the frontend partnering with backend engineers — consuming responses, handling state, and delivering features directly in production code.",
+						"Drove continuous product improvement across design and frontend.",
+						"Operated in a fast-paced, product-driven environment, balancing strategic design ownership and hands-on coding in a lean team setting."
+					]
+				},
+				{
+					"position": "Product Designer",
+					"period": "September 2015 - September 2020",
+					"description": [
+						"Built the Securibox brand identity — visual language, design principles, and identity system across the entire product solution, in Illustrator.",
+						"Operated as sole designer across the entire solution, owning every touchpoint from strategy to production.",
+						"Architected product flows, information architecture, and complex enterprise workflows from discovery to delivery.",
+						"Built and maintained a design system in Sass, establishing shared tokens, components, and patterns across the product suite — migrated to Bootstrap for variable support, documentation benefits, and a shared root brand configuration.",
+						"Structured Sketch and Figma projects around a shared file system to enforce consistency and prevent design drift.",
+						"Implemented interfaces directly in HTML and Sass, owning concept to production without handoff.",
+						"Partnered daily with product owners and engineers on feature decisions, product architecture, and delivery.​​​​​​​​​​​​​​​​"
+					]
+				}
+			],
 			"description": [
 				"Led end-to-end design strategy and vision: shaped product experience, UI/UX design, information architecture, and brand identity across a multi-product B2B SaaS portfolio.",
 				"Drove design across multiple products in parallel, owning tailored workflows end-to-end and working directly with backend engineers.",
@@ -91,7 +120,7 @@
 		}
 	},
 	"home": {
-		"description": "Frontend Designer. Coherent multi-product experiences from concept to production — product experience, strategy, UI/UX, and the Maria Varagilal Playbook Method.",
+		"description": "Design Engineer. Coherent multi-product experiences from concept to production — product experience, strategy, UI/UX, and the Maria Varagilal Playbook Method.",
 		"skipToMain": "Skip to main content"
 	},
 	"about": {

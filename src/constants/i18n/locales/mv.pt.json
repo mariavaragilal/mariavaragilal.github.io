@@ -21,8 +21,8 @@
 			"heroNameLine1": "Maria",
 			"heroNameLine2": "Varagilal",
 			"tagline": "B2B · SaaS · Fintech · Fluxos acelerados por IA",
-			"title": "Senior Product Designer — do design ao código.",
-			"schemaJobTitle": "Technical Product Designer & Design Technologist / Frontend Designer",
+			"title": "Principal Product Designer — do design ao código.",
+			"schemaJobTitle": "Principal Product Designer & Design Engineer",
 			"body": "+10 anos a transformar experiências de produto em B2B SaaS — da estratégia à produção. Responsável pelo design e pela camada de frontend: pesquisa, fluxos, UI — e quando a direcção está definida, construo-o. Uma designer que entrega — o handoff sem atrito.",
 			"detail": "Hoje, uso IA para acelerar todas as etapas — desde exploração e prototipagem até componentes prontos para produção.",
 			"viewWork": "Ver o Meu Trabalho",
@@ -54,7 +54,7 @@
 				"# identity.js",
 				"const maria = {",
 				"  nome: \"Maria Varagilal\",",
-				"  titulo: \"Technical Product Designer\",",
+				"  titulo: \"Principal Technical Product Designer\",",
 				"  sufixo: \"que entrega produtos digitais\",",
 				"  métricas: \"9 produtos · 5+ unificados · 4+ SaaS B2B · 10+ anos\",",
 				"};"
@@ -66,7 +66,7 @@
 				},
 				{
 					"label": "função",
-					"value": "Senior Product Designer"
+					"value": "Principal Product Designer"
 				},
 				{
 					"label": "foco",
@@ -586,7 +586,7 @@
 						"title": "Securibox: Identidade Unificada",
 						"heading": "Uma <em>empresa</em>, suportada por um único vocabulário visual.",
 						"subtitle": "Construí a identidade de marca e a linguagem de design, depois apliquei-as a seis produtos e sub-marcas — criando padrões que flexibilizam por audiência mantendo a plataforma coerente",
-						"role": "Technical Product Designer & Frontend Developer",
+						"role": "Principal Product Designer & Frontend Developer",
 						"tools": "Sketch · Figma · Gatsby · Bootstrap · React · Vite · Redux · Accessibility (WCAG)",
 						"highlight": "Criei a identidade de marca da Securibox de raiz — logo, sistema de cor, tipografia, regras de imagem — e desenhei e construí todas as páginas públicas: site corporativo, páginas de soluções, about, careers e contacto. Depois estendi essa base para uma Marca de Soluções Unificada que atravessa todos os UIs de produto, sub-marcas e superfícies white-label em produção.",
 						"overviewMockup": {
@@ -1026,7 +1026,7 @@
 						"period": "2015",
 						"status": "shipped",
 						"title": "Cube - Own your data",
-						"role": "Technical Product Designer & Frontend Developer",
+						"role": "Principal Product Designer & Frontend Developer",
 						"tools": "Figma · React · Gatsby · Vite · Accessibility (WCAG)",
 						"heading": "Um produto que <em>convidas</em> para a tua vida de dados pessoais.",
 						"subtitle": "Desenhar confiança no handover de credenciais em mais de 300 integrações — equilibrar segurança emocional com clareza operacional, onde um sinal errado parte tudo.",
@@ -2173,7 +2173,7 @@
 						"title": "Me - Securibox Account",
 						"heading": "A tua identidade, <em>legível</em> — não enterrada numa política.",
 						"subtitle": "Um hub de conta para todo o ecossistema — deliberadamente restrito no âmbito. O trabalho mais difícil foi decidir o que deixar de fora. Transparência inline dos dados, empty states intencionais, consequências de eliminação por serviço",
-						"role": "Technical Product Designer & Frontend Developer",
+						"role": "Principal Product Designer & Frontend Developer",
 						"tools": "Figma · React · Vite · Redux · Bootstrap · Accessibility (WCAG)",
 						"highlight": "Desenhei e construí o hub de conta que dá aos utilizadores uma casa única para a sua identidade, serviços ligados e transparência de uso de dados em todo o ecossistema Securibox — com explicações inline sobre como cada pedaço de dados pessoais é usado.",
 						"overviewMockup": {
@@ -2460,7 +2460,7 @@
 						"status": "shipped",
 						"title": "Securibox ID",
 						"subtitle": "Camada de auth central herdada por cada produto — desenhada para que a autenticação pareça um acolhimento, não um portão. Acessibilidade WCAG, superfícies de erro explícitas e comportamento de teclado partilhado em todo o ecossistema",
-						"role": "Technical Product Designer",
+						"role": "Principal Technical Product Designer",
 						"tools": "Figma · React · Vite · Accessibility (WCAG)",
 						"highlight": "Desenhei a experiência central de autenticação usada por cada produto Securibox — a criar uma única camada de identidade consistente em todo o ecossistema.",
 						"overviewMockup": {
@@ -4354,9 +4354,9 @@
 		]
 	},
 	"seo": {
-		"defaultDescription": "Senior Technical Product Designer · Design Engineer. Experiências multi-produto coerentes do conceito à produção — estratégia de produto, UI/UX e o Método Maria Varagilal Playbook.",
-		"defaultKeywords": "Maria Varagilal, Frontend Designer, Technical Product Designer, Design de Produto, desenvolvimento frontend, UI, UX, React, Redux, B2B SaaS, Método Maria Varagilal Playbook",
-		"occupationDescription": "Frontend Designer que entrega produtos digitais do conceito à produção"
+		"defaultDescription": "Principal Product Designer · Design Engineer. Experiências multi-produto coerentes do conceito à produção — estratégia de produto, UI/UX e o Método Maria Varagilal Playbook.",
+		"defaultKeywords": "Maria Varagilal, Design Engineer, Principal Technical Product Designer, Design de Produto, desenvolvimento frontend, UI, UX, React, Redux, B2B SaaS, Método Maria Varagilal Playbook",
+		"occupationDescription": "Design Engineer que entrega produtos digitais do conceito à produção"
 	},
 	"footer": {
 		"builtWithLabel": "Construído com:",

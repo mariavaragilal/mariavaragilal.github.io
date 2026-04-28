@@ -1,6 +1,6 @@
 # Maria Varagilal
  
-Personal portfolio and CV — Lead Technical Product Designer that ships code. Built with Gatsby, React, and Tailwind CSS. Presents 10+ years of B2B SaaS product work through detailed case studies, a design methodology (the Maria Varagilal Playbook Method), and a full CV.
+Personal portfolio and CV — Principal Product Designer that ships code. Built with Gatsby, React, and Tailwind CSS. Presents 10+ years of B2B SaaS product work through detailed case studies, a design methodology (the Maria Varagilal Playbook Method), and a full CV.
 
 ## ✨ Features
 

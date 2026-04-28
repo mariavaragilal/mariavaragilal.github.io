@@ -6,8 +6,8 @@
 // name, url, image, sameAs live in gatsby-config.js siteMetadata — access via useSiteMetadata()
 export const person = {
 	name: 'Maria Varagilal',
-	jobTitle: 'Senior Technical Product Designer · Design Engineer',
-	description: 'Frontend Designer. Coherent multi-product experiences from concept to production — product strategy, UI/UX, and the Maria Varagilal Playbook Method.',
+	jobTitle: 'Principal Product Designer · Design Engineer',
+	description: 'Design Engineer. Coherent multi-product experiences from concept to production — product strategy, UI/UX, and the Maria Varagilal Playbook Method.',
 	address: { locality: 'Lisbon', country: 'Portugal' },
 	knowsAbout: ['User Experience Design', 'User Interface Design', 'Product Design', 'React', 'Redux', 'JavaScript (ES6+)', 'Frontend Developer', 'AI-accelerated workflows', 'Prompt engineering'],
 	skills: ['UX Design', 'UI Design', 'React', 'Redux', 'JavaScript (ES6+)', 'Gatsby'],
@@ -15,7 +15,7 @@ export const person = {
 		{ name: 'Universidade Lusíada de Lisboa', description: 'Bachelor\'s Degree in Design' },
 		{ name: 'Academia Flag', description: 'Specialization in Communication Design' },
 	],
-	worksFor: { name: 'Securibox', url: 'https://www.securibox.eu', description: 'Lead Technical Product Designer & Frontend Developer' },
+	worksFor: { name: 'Securibox', url: 'https://www.securibox.eu', description: 'Principal Product Designer & Frontend Developer' },
 	awards: [
 		{ name: 'Bronze cyber', description: 'Young Lions Portugal', date: '2014-05-01' },
 		{ name: 'Web Design Served', description: 'Behance', date: '2013-07-01' },

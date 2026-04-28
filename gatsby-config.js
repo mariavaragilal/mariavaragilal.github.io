@@ -7,9 +7,9 @@ EventEmitter.defaultMaxListeners = 20;
 module.exports = {
 	siteMetadata: {
 		title: 'Maria Varagilal: CV',
-		description: 'Senior Product Designer who ships code. 10+ years unifying fragmented SaaS platforms.',
+		description: 'Principal Product Designer who ships code. 10+ years unifying fragmented SaaS platforms.',
 		author: 'Maria Varagilal',
-		keywords: 'Maria Varagilal, Design technologist, Lead Frontend Designer, Principal Product Designer, Frontend Dev, UI, UX, React, Redux, Design Systems, B2B SaaS',
+		keywords: 'Maria Varagilal, Design technologist, Design Engineer, Principal Product Designer, Frontend Dev, UI, UX, React, Redux, Design Systems, B2B SaaS',
 		siteUrl: 'https://mariavaragilal.github.io',
 		social: {
 			linkedin: 'https://www.linkedin.com/in/mariavaragilal',
@@ -25,7 +25,7 @@ module.exports = {
 			{ name: 'Universidade Lusíada de Lisboa', description: 'Bachelor\'s Degree in Design' },
 			{ name: 'Academia Flag', description: 'Specialization in Communication Design' },
 		],
-		worksFor: { name: 'Securibox', url: 'https://www.securibox.eu', description: 'Lead Technical Product Designer & Frontend Developer' },
+		worksFor: { name: 'Securibox', url: 'https://www.securibox.eu', description: 'Principal Product Designer & Frontend Developer' },
 		awards: [
 			{ name: 'Bronze cyber', description: 'Young Lions Portugal', date: '2014-05-01' },
 			{ name: 'Web Design Served', description: 'Behance', date: '2013-07-01' },

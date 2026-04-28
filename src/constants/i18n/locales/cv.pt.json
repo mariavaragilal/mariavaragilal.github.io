@@ -1,7 +1,7 @@
 {
 	"cv": {
 		"name": "Maria <br /> Varagilal",
-		"title": "Senior Technical Product Designer · Design Engineer",
+		"title": "Principal Product Designer · Design Engineer",
 		"summary": "Lead Product Designer com mais de 10 anos a transformar experiências de produto em B2B SaaS — da estratégia à produção. Única responsável de design num portfólio multi-produto: responsável por todo o ciclo de design, orientação de contribuidores, e depois de aprovado, construo-o. Uma designer que entrega — sem handoff.",
 		"note": "Atualmente a usar IA para acelerar os fluxos de design-para-código, desde exploração e prototipagem até componentes prontos para produção."
 	},
@@ -21,18 +21,36 @@
 		"securibox": {
 			"company": "Securibox",
 			"location": "Lisboa, Portugal",
-			"position": "Lead Technical Product Designer & Frontend Developer",
+			"position": "Principal Product Designer & Frontend Developer",
 			"period": "Setembro 2015 - Presente",
-			"description": [
-				"Liderança da estratégia e da visão de design de ponta a ponta: definição da experiência de produto, do design UI/UX, da arquitectura de informação e da identidade de marca num portfólio B2B SaaS multi-produto.",
-				"Liderança de design em múltiplos produtos em paralelo, com responsabilidade total sobre fluxos à medida e trabalho directo com engenheiros backend.",
-				"Trabalho entre equipas, mentoria de designers em problemas sem respostas óbvias e orientação para tomarem melhores decisões de forma autónoma.",
-				"Concepção de fluxos de produto intuitivos, organização de conteúdos e fluxos de trabalho empresariais complexos, da descoberta à entrega.",
-				"Concepção de interfaces em ferramentas de design, construção directa em código de produção com React, Redux, Vite, Gatsby, JavaScript, HTML e CSS — sem handoff para uma equipa de frontend separada.",
-				"Construção de interfaces totalmente responsivas, acessíveis e performantes, em conformidade com padrões WCAG.",
-				"Colaboração diária com equipas de engenharia em integração de APIs, decisões de arquitectura técnica, implementação de funcionalidades e entrega de código de elevada qualidade.",
-				"Equilíbrio entre liderança estratégica de design e execução técnica profunda num ambiente acelerado e orientado ao produto.",
-				"Utilização de ferramentas de IA para acelerar os fluxos de design para código, mantendo a qualidade de design e os padrões de engenharia."
+			"roles": [
+				{
+					"position": "Principal Product Designer & Design Engineer",
+					"period": "Setembro 2020 - Presente",
+					"description": [
+						"Definição da experiência do produto, da interface e da estratégia de marca numa solução SaaS B2B com múltiplos produtos.",
+						"Estruturação de fluxos de produto, organização de conteúdos e fluxos de trabalho empresariais complexos, desde a descoberta até à entrega.",
+						"Implementação de designs em código com JavaScript, Redux, Gatsby, HTML e CSS, utilizando IA para acelerar o fluxo de trabalho de design para código.",
+						"Migração do sistema de design para o Tailwind, adotando uma abordagem orientada a utilitários, mantendo a consistência da marca em todo o conjunto de produtos.",
+						"Criação de interfaces de utilizador responsivas e acessíveis, seguindo as normas WCAG.",
+						"Implementação da integração de API no frontend em parceria com engenheiros de backend — consumindo respostas, gerindo o estado e entregando funcionalidades diretamente no código de produção.",
+						"Liderança da melhoria contínua do produto em design e frontend.",
+						"Atuação em ambiente dinâmico, orientado para o produto, conciliando a liderança estratégica do design com a programação hands-on numa equipa ágil e compacta."
+					]
+				},
+				{
+					"position": "Product Designer",
+					"period": "Setembro 2015 - Setembro 2020",
+					"description": [
+						"Desenvolvimento da identidade da marca Securibox — linguagem visual, princípios de design e sistema de identidade para toda a solução de produto.",
+						"Atuação como único designer em toda a solução, com responsabilidade sobre todos os pontos de contacto, desde a estratégia até à produção.",
+						"Estruturação de fluxos de produto, arquitetura da informação e fluxos de trabalho empresariais complexos, desde a descoberta até à entrega.",
+						"Desenvolvimento e manutenção de um sistema de design em Sass, estabelecendo tokens, componentes e padrões partilhados em todo o conjunto de produtos — migração para o Bootstrap para suporte de variáveis, benefícios de documentação e uma configuração de marca raiz partilhada.",
+						"Estruturação de projetos no Sketch e no Figma em torno de um sistema de ficheiros partilhado para garantir a consistência e prevenir desvios de design.",
+						"Implementação de interfaces diretamente em HTML e Sass, responsável desde o conceito à produção sem transferência de responsabilidades.",
+						"Parceria diária com os product owners e engenheiros em decisões sobre funcionalidades, arquitetura de produto e entrega."
+					]
+				}
 			]
 		},
 		"youngnetwork": {
@@ -91,7 +109,7 @@
 		}
 	},
 	"home": {
-		"description": "Frontend Designer. Experiências multi-produto coerentes do conceito à produção — estratégia de produto, UI/UX e o Método Maria Varagilal Playbook.",
+		"description": "Design Engineer. Experiências multi-produto coerentes do conceito à produção — estratégia de produto, UI/UX e o Método Maria Varagilal Playbook.",
 		"skipToMain": "Saltar para o conteúdo principal"
 	},
 	"about": {
