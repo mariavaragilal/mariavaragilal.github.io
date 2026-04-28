@@ -54,7 +54,7 @@
 				"# identity.js",
 				"const maria = {",
 				"  nome: \"Maria Varagilal\",",
-				"  titulo: \"Principal Technical Product Designer\",",
+				"  função: \"Product Designer\",",
 				"  sufixo: \"que entrega produtos digitais\",",
 				"  métricas: \"9 produtos · 5+ unificados · 4+ SaaS B2B · 10+ anos\",",
 				"};"
@@ -65,8 +65,8 @@
 					"value": "Maria Varagilal"
 				},
 				{
-					"label": "função",
-					"value": "Principal Product Designer"
+					"label": "título",
+					"value": "Principal Product Designer · Design Engineer"
 				},
 				{
 					"label": "foco",
