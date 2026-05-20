@@ -1,7 +1,7 @@
 import { ChapterBand, EditorialHeading, formatChapterKicker } from '../_common/CaseChapter';
 import { RichText } from '../../../../RichText';
 import { cn } from '../../../../../../constants/utils/cn';
-import { getProjectKickerStyle, pickForegroundForBg } from '../../../../../../constants/utils/colorContrast';
+import { getChapterKickerStyle, pickForegroundForBg } from '../../../../../../constants/utils/colorContrast';
 
 const splitTradeoffs = (tradeoffs) => (Array.isArray(tradeoffs) ? tradeoffs : tradeoffs.split('\n\n'));
 
@@ -35,8 +35,7 @@ export const Tradeoffs = ({ caseStudy, labels, projectColor, sectionNumbers }) =
 			<EditorialHeading
 				eyebrow={formatChapterKicker(t.heading || labels.tradeoffsDefault || 'Trade-offs & Learnings', sectionNumbers.tradeoffs)}
 				title={t.title}
-				onInk={!onBrand}
-				eyebrowStyle={getProjectKickerStyle(projectColor, true)}
+				eyebrowStyle={getChapterKickerStyle(projectColor, onBrand)}
 			>
 				{(() => {
 					const paras = splitTradeoffs(raw);

@@ -1,7 +1,7 @@
 import { Card } from '../../../../../../_common/components';
 import { ChapterBand, formatChapterKicker } from '../_common/CaseChapter';
 import { RichText } from '../../../../RichText';
-import { getProjectKickerStyle } from '../../../../../../constants/utils/colorContrast';
+import { getProjectAccentStyle, getProjectAccentValue } from '../../../../../../constants/utils/colorContrast';
 
 export const isContextVisible = (caseStudy) => {
 	const ctx = caseStudy.context;
@@ -17,8 +17,8 @@ export const Context = ({ caseStudy, labels, projectColor, sectionNumbers }) => 
 	const strat = caseStudy.strategicDecision;
 
 	const eyebrow = formatChapterKicker(ctx?.eyebrow || labels.context || 'Context', sectionNumbers.context);
-	const eyebrowStyleVar = getProjectKickerStyle(projectColor, false, true);
-	const eyebrowStyle = getProjectKickerStyle(projectColor, false);
+	const eyebrowStyleVar = getProjectAccentValue(projectColor, false);
+	const eyebrowStyle = getProjectAccentStyle(projectColor, false);
 	const stratLead = strat?.lead || strat?.intro;
 
 	const contextHead = (

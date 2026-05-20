@@ -1,6 +1,6 @@
 import { ChapterBand, formatChapterKicker } from '../_common/CaseChapter';
 import { RichText } from '../../../../RichText';
-import { getProjectKickerStyle } from '../../../../../../constants/utils/colorContrast';
+import { getProjectAccentStyle } from '../../../../../../constants/utils/colorContrast';
 
 export const isRoleVisible = (caseStudy) => {
 	const raw = caseStudy.role?.body;
@@ -15,7 +15,7 @@ export const RoleChapter = ({ caseStudy, labels, projectColor, sectionNumbers })
 	const paragraphs = Array.isArray(raw) ? raw : raw ? [raw] : [];
 	const nonEmpty = paragraphs.filter((p) => p && String(p).trim());
 	const eyebrow = formatChapterKicker(rc?.eyebrow || labels.role || 'Role', sectionNumbers.role);
-	const eyebrowStyle = getProjectKickerStyle(projectColor, false);
+	const eyebrowStyle = getProjectAccentStyle(projectColor, false);
 	return (
 		<ChapterBand variant='paper' projectColor={projectColor} className={'!space-y-0 !p-0 border-0 bg-transparent rounded-lg mb-6 md:mb-8'}>
 			<div className={'rounded-lg bg-transparent min-w-0 w-full border-0 pt-[clamp(5rem,10vw,7rem)] pb-[clamp(5rem,10vw,6rem)] grid grid-cols-1 md:grid-cols-[7fr_4fr] gap-8 md:gap-12 xl:gap-[clamp(5rem,10vw,9rem)] items-center'}>

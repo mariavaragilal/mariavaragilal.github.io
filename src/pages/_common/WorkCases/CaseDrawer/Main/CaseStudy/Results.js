@@ -1,7 +1,7 @@
 import { ChapterBand, EditorialHeading, formatChapterKicker } from '../_common/CaseChapter';
 import { RichText } from '../../../../RichText';
 import { cn } from '../../../../../../constants/utils/cn';
-import { getProjectKickerStyle } from '../../../../../../constants/utils/colorContrast';
+import { getChapterKickerStyle } from '../../../../../../constants/utils/colorContrast';
 
 const toMetricObjects = (raw) => {
 	if (raw.length === 0) return [];
@@ -54,7 +54,7 @@ export const Results = ({ caseStudy, outcomes, labels, projectColor, sectionNumb
 			<EditorialHeading
 				eyebrow={formatChapterKicker(labels.metrics || 'Results & Metrics', sectionNumbers.metrics)}
 				title={m.title}
-				eyebrowStyle={getProjectKickerStyle(projectColor, false)}
+				eyebrowStyle={getChapterKickerStyle(projectColor, false)}
 				className='mb-2 md:mb-4'
 			>
 				<MetricsRow metrics={metrics} projectColor={projectColor} />

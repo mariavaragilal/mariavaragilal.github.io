@@ -3,7 +3,7 @@ import { ChapterBand, formatChapterKicker } from '../_common/CaseChapter';
 import { DecisionDiagram } from '../_common/CaseDecisions';
 import { RichText } from '../../../../RichText';
 import { cn } from '../../../../../../constants/utils/cn';
-import { getProjectKickerStyle } from '../../../../../../constants/utils/colorContrast';
+import { getProjectAccentStyle } from '../../../../../../constants/utils/colorContrast';
 import { CASE_IMAGES } from '../_common/caseImages';
 
 const resolveLogo = (src) => (src ? (CASE_IMAGES[src] || src) : null);
@@ -87,7 +87,7 @@ export const Identity = ({ caseStudy, labels, projectColor, sectionNumbers }) =>
 	if (!isIdentityVisible(caseStudy)) return null;
 	const identity = caseStudy.identity;
 	const eyebrow = formatChapterKicker(identity.eyebrow || labels.identity || 'Identity', sectionNumbers.identity);
-	const eyebrowStyle = getProjectKickerStyle(projectColor, false);
+	const eyebrowStyle = getProjectAccentStyle(projectColor, false);
 	const concept = identity.concept;
 	const identityConceptPunch = concept?.punchline || concept?.closing;
 	const hasMarkColumn = identity.logo?.image || identity.logo?.marks?.length > 0;

@@ -1,9 +1,9 @@
 import { Card, Media } from '../../../../../../_common/components';
-import { ChapterBand, formatChapterKicker } from '../_common/CaseChapter';
+import { ChapterBand, ChapterKicker, formatChapterKicker } from '../_common/CaseChapter';
 import { CASE_MEDIA } from '../_common/caseImages';
 import { RichText } from '../../../../RichText';
 import { cn } from '../../../../../../constants/utils/cn';
-import { getProjectKickerStyle } from '../../../../../../constants/utils/colorContrast';
+import { getChapterKickerStyle } from '../../../../../../constants/utils/colorContrast';
 
 const STEP_ORDER = ['task', 'issue', 'insight', 'decision', 'outcome'];
 const labelKey = (step) => 'decision' + step.charAt(0).toUpperCase() + step.slice(1);
@@ -43,11 +43,11 @@ export const InPractice = ({ caseStudy, labels, projectColor, sectionNumbers }) 
 	const ip = caseStudy.inPractice || {};
 	const items = ip.items;
 	const heading = formatChapterKicker(labels.inPractice || 'In practice', sectionNumbers.inPractice);
-	const eyebrowStyle = getProjectKickerStyle(projectColor, false);
+	const eyebrowStyle = getChapterKickerStyle(projectColor, false);
 	return (
-		<ChapterBand variant='paper'>
+		<ChapterBand variant='paper' projectColor={projectColor}>
 			<section className='mx-auto w-full' aria-label={heading}>
-				<p style={eyebrowStyle} className='text-editorial-eyebrow text-current mb-4 md:mb-5'><span>{heading}</span></p>
+				<ChapterKicker text={heading} style={eyebrowStyle}/>
 				{ip.title ? <RichText as='p' className='text-base leading-snug font-medium text-current mb-6 md:mb-8 sr-only' text={ip.title} /> : null}
 				<div className='grid gap-x-2 gap-y-6 md:grid-cols-[repeat(auto-fit,minmax(25em,1fr))]'>
 					{items.map((item, i) => <DecisionCard key={item.title || i} item={item} labels={labels} projectColor={projectColor}/>)}

@@ -4,7 +4,7 @@ import { ChapterBand, EditorialHeading, formatChapterKicker } from '../_common/C
 import { CASE_MEDIA } from '../_common/caseImages';
 import { RichText } from '../../../../RichText';
 import { cn } from '../../../../../../constants/utils/cn';
-import { getProjectKickerStyle } from '../../../../../../constants/utils/colorContrast';
+import { getChapterKickerStyle } from '../../../../../../constants/utils/colorContrast';
 
 const hasProse = (block) => !!(block && (block.heading || block.description || (block.items && block.items.length > 0)));
 
@@ -179,12 +179,11 @@ export const Implementation = ({ caseStudy, labels, projectColor, sectionNumbers
 	const onAccent = !!projectColor;
 	const singleEach = hasDesign && hasCode && impl.design.length === 1 && impl.code.length === 1;
 	return (
-		<ChapterBand variant='accent' projectColor={projectColor} className='px-6 sm:px-12 lg:px-16'>
+		<ChapterBand variant='paper' projectColor={projectColor} className='px-6 sm:px-12 lg:px-16'>
 			<EditorialHeading
 				eyebrow={formatChapterKicker(impl.eyebrow || labels.implementation || 'Implementation', sectionNumbers.implementation)}
 				title={impl.title}
-				onAccent={onAccent}
-				eyebrowStyle={getProjectKickerStyle(projectColor, true)}
+				eyebrowStyle={getChapterKickerStyle(projectColor, false)}
 			>
 				{hasTopScreens ? (
 					<div className='w-full min-w-0 mb-6 md:mb-8'>

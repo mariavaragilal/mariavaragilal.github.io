@@ -2,7 +2,7 @@ import { Media } from '../../../../../../_common/components';
 import { ChapterBand, EditorialHeading, formatChapterKicker } from '../_common/CaseChapter';
 import { CASE_MEDIA } from '../_common/caseImages';
 import { RichText } from '../../../../RichText';
-import { getProjectKickerStyle } from '../../../../../../constants/utils/colorContrast';
+import { getProjectAccentStyle } from '../../../../../../constants/utils/colorContrast';
 
 export const isLandingPageVisible = (caseStudy) => {
 	const block = caseStudy.landingPage;
@@ -22,7 +22,7 @@ export const LandingPage = ({ caseStudy, labels, projectColor, sectionNumbers })
 			<EditorialHeading
 				eyebrow={formatChapterKicker(block.eyebrow || labels.landingPage || 'Landing page', sectionNumbers.landingPage)}
 				title={block.title}
-				eyebrowStyle={getProjectKickerStyle(projectColor, false)}
+				eyebrowStyle={getProjectAccentStyle(projectColor, false)}
 			>
 				{paragraphs.filter((p) => p && String(p).trim()).map((p, i) => (
 					<RichText key={i} as='p' className='text-base leading-relaxed text-current/88 mb-4 last:mb-0' text={p} />

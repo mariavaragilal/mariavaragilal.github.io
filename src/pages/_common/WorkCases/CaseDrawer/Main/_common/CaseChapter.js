@@ -13,10 +13,12 @@ export const formatChapterKicker = (heading, number) => {
 	return prefix + ' · ' + label;
 };
 
+const CHAPTER_KICKER_CLASS = 'text-editorial-eyebrow font-mono uppercase tracking-[0.08em] mb-4 md:mb-5';
+
 export const ChapterKicker = ({ text, style, className = '', labelClassName = '' }) => {
 	if (!text) return null;
 	return (
-		<p style={style} className={cn('text-editorial-eyebrow text-current mb-4 md:mb-5', labelClassName, className)}>
+		<p style={style} className={cn(CHAPTER_KICKER_CLASS, labelClassName, className)}>
 			<span>{text}</span>
 		</p>
 	);
@@ -50,15 +52,13 @@ export const EditorialHeading = ({
 	title,
 	children,
 	as: Tag = 'div',
-	onAccent = false,
-	onInk = false,
 	className = '',
 	eyebrowClassName = '',
 	eyebrowStyle,
 	leadBelow = false,
 }) => (
 	<Tag className={cn('relative flex flex-col mx-auto w-full', className)}>
-		<ChapterKicker text={eyebrow} style={eyebrowStyle} labelClassName={cn((onAccent || onInk) && 'text-current/88', eyebrowClassName)} />
+		<ChapterKicker text={eyebrow} style={eyebrowStyle} labelClassName={eyebrowClassName} />
 		{title ? <div className={cn('mb-6 md:mb-8', leadBelow && 'order-last')}>
 			<RichText as='h2' className='text-editorial-section text-current break-words' text={title} />
 		</div> : null}

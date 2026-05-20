@@ -2,7 +2,7 @@ import { ChapterBand, EditorialHeading, formatChapterKicker } from '../_common/C
 import { DecisionList } from '../_common/CaseDecisions';
 import { Card } from '../../../../../../_common/components';
 import { RichText } from '../../../../RichText';
-import { getProjectKickerStyle } from '../../../../../../constants/utils/colorContrast';
+import { getProjectAccentStyle } from '../../../../../../constants/utils/colorContrast';
 import { formatTwoDigit } from '../../../../../../constants/utils/strings';
 
 const IndexLine = ({ index, name, summary }) => {
@@ -74,7 +74,7 @@ export const KeyDecisions = ({ caseStudy, labels, projectColor, sectionNumbers }
 			<EditorialHeading
 				eyebrow={formatChapterKicker(kd.heading || labels.keyDecisionsDefault || 'Key decisions', sectionNumbers.keyDecisions)}
 				title={kd.title}
-				eyebrowStyle={getProjectKickerStyle(projectColor, false)}
+				eyebrowStyle={getProjectAccentStyle(projectColor, false)}
 			>
 				{showProcessIntro ? (
 					<div className='relative mb-10 space-y-4'>
