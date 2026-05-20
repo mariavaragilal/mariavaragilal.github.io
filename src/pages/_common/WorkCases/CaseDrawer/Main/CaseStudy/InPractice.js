@@ -1,6 +1,6 @@
 import { Card, Media } from '../../../../../../_common/components';
 import { ChapterBand, formatChapterKicker } from '../_common/CaseChapter';
-import { CASE_IMAGES } from '../_common/caseImages';
+import { CASE_MEDIA } from '../_common/caseImages';
 import { RichText } from '../../../../RichText';
 import { cn } from '../../../../../../constants/utils/cn';
 import { getProjectKickerStyle } from '../../../../../../constants/utils/colorContrast';
@@ -20,9 +20,9 @@ const StepRow = ({ label, text, isOutcome, isDecision }) => {
 	);
 };
 
-const DecisionCard = ({ item, labels }) => (
+const DecisionCard = ({ item, labels, projectColor }) => (
 	<Card variant='ghost' className='border border-border bg-card px-4 sm:px-5 py-5'>
-		{item.image ? <Media image={item.image} imageMap={CASE_IMAGES} variant='annotated' className='w-full mb-5 mt-0' /> : null}
+		{item.image ? <Media image={item.image} imageMap={CASE_MEDIA} variant='annotated' className='w-full mb-5 mt-0' projectColor={projectColor}/> : null}
 		<div className='flex flex-col items-start gap-2 justify-between mb-5'>
 			<RichText as='p' className='text-sm text-current/66' text={item.badge || item.strength} />
 			{item.title ? <RichText as='p' className='text-base leading-snug font-medium -mt-1' text={item.title} /> : null}
@@ -50,7 +50,7 @@ export const InPractice = ({ caseStudy, labels, projectColor, sectionNumbers }) 
 				<p style={eyebrowStyle} className='text-editorial-eyebrow text-current mb-4 md:mb-5'><span>{heading}</span></p>
 				{ip.title ? <RichText as='p' className='text-base leading-snug font-medium text-current mb-6 md:mb-8 sr-only' text={ip.title} /> : null}
 				<div className='grid gap-x-2 gap-y-6 md:grid-cols-[repeat(auto-fit,minmax(25em,1fr))]'>
-					{items.map((item, i) => <DecisionCard key={item.title || i} item={item} labels={labels} />)}
+					{items.map((item, i) => <DecisionCard key={item.title || i} item={item} labels={labels} projectColor={projectColor}/>)}
 				</div>
 			</section>
 		</ChapterBand>

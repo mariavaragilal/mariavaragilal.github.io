@@ -46,8 +46,8 @@ export const CaseStudyView = ({ app, cases = [] }) => {
 					</Button>
 				</div>
 			</nav>
-			<Sidebar app={normalizedApp} ui={ui}/>
-			<Main app={normalizedApp}/>
+			<Sidebar app={normalizedApp} ui={ui} />
+			<Main app={normalizedApp} />
 		</div>
 	);
 };

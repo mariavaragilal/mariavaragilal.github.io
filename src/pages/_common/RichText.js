@@ -1,4 +1,4 @@
-import { stringContainsHtmlMarkup } from '../../constants/utils/htmlString';
+import { stringContainsHtmlMarkup } from '../../constants/utils/strings';
 
 // Renders trusted copy from locale JSON: plain text, or HTML when the string
 // contains `<` (uses dangerouslySetInnerHTML). Use for titles, leads, body, etc.

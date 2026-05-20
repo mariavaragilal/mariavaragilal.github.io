@@ -3,7 +3,7 @@ import { DecisionList } from '../_common/CaseDecisions';
 import { Card } from '../../../../../../_common/components';
 import { RichText } from '../../../../RichText';
 import { getProjectKickerStyle } from '../../../../../../constants/utils/colorContrast';
-import { formatTwoDigit } from '../../../../../../constants/utils/formatNumberString';
+import { formatTwoDigit } from '../../../../../../constants/utils/strings';
 
 const IndexLine = ({ index, name, summary }) => {
 	const s = summary || '';

@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { MediaA11yProvider } from '../../../../../_common/components';
-import { CASE_IMAGES } from './_common/caseImages';
+import { CASE_MEDIA } from './_common/caseImages';
 import { OverviewMockup } from './OverviewMockup';
 import { Hero } from './Hero';
 import { CaseStudy } from './CaseStudy';
@@ -21,10 +21,11 @@ export const Main = ({ app }) => {
 				<Hero app={app} kicker={ui.caseStudy} projectColor={projectColor} />
 				<OverviewMockup
 					image={app.overviewMockup}
-					imageMap={CASE_IMAGES}
+					imageMap={CASE_MEDIA}
 					fallback={{ label: ui.overviewLabel || ui.caseStudy, title: app.title, frame: 'browser', ratio: '16 / 9' }}
 					labels={{ themePreview: ui.overviewMockup?.previewTheme, lightMode: ui.overviewMockup?.lightMode, darkMode: ui.overviewMockup?.darkMode, opensNewTab: ui.opensNewTab }}
 					preferDark={app.slug?.startsWith('sca-')}
+					projectColor={projectColor}
 				/>
 
 				{app.caseStudy ? <CaseStudy caseStudy={app.caseStudy} outcomes={app.results} /> : null}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Carousel, CarouselCaption, CarouselContent, CarouselCounter, CarouselFooter, CarouselItem, CarouselNext, CarouselPrevious, Media } from '../../../../../../_common/components';
 import { ChapterBand, EditorialHeading, formatChapterKicker } from '../_common/CaseChapter';
-import { CASE_IMAGES } from '../_common/caseImages';
+import { CASE_MEDIA } from '../_common/caseImages';
 import { RichText } from '../../../../RichText';
 import { cn } from '../../../../../../constants/utils/cn';
 import { getProjectKickerStyle } from '../../../../../../constants/utils/colorContrast';
@@ -35,7 +35,7 @@ const implementationImageWillRender = (image) => {
 	return Boolean(img.src || img.label || img.title);
 };
 
-const ImplementationScreensCarousel = ({ images, defaultRatio }) => {
+const ImplementationScreensCarousel = ({ images, defaultRatio, projectColor }) => {
 	const def = typeof defaultRatio === 'string' && defaultRatio.trim() ? defaultRatio.trim() : null;
 	const list = (Array.isArray(images) ? images : [])
 		.filter(implementationImageWillRender)
@@ -48,7 +48,7 @@ const ImplementationScreensCarousel = ({ images, defaultRatio }) => {
 	if (list.length === 1) {
 		return (
 			<div className='col-span-full w-full min-w-0'>
-				<Media image={list[0]} imageMap={CASE_IMAGES} variant='strip' className='mb-4 mt-0' />
+				<Media image={list[0]} imageMap={CASE_MEDIA} variant='strip' className='mb-4 mt-0' projectColor={projectColor}/>
 			</div>
 		);
 	}
@@ -58,7 +58,7 @@ const ImplementationScreensCarousel = ({ images, defaultRatio }) => {
 			<CarouselContent>
 				{list.map((img, idx) => (
 					<CarouselItem key={idx}>
-						<Media image={img} imageMap={CASE_IMAGES} variant='strip' className='my-0' hideCaption />
+						<Media image={img} imageMap={CASE_MEDIA} variant='strip' className='my-0' hideCaption projectColor={projectColor}/>
 					</CarouselItem>
 				))}
 			</CarouselContent>
@@ -74,9 +74,9 @@ const ImplementationScreensCarousel = ({ images, defaultRatio }) => {
 	);
 };
 
-const ImplementationBlock = ({ block, showImages }) => (
+const ImplementationBlock = ({ block, showImages, projectColor }) => (
 	<div className='min-w-0 space-y-2'>
-		{showImages && block.image ? <Media image={normalizeImplementationImage(block.image)} imageMap={CASE_IMAGES} variant='strip' className='mb-4 mt-0' /> : null}
+		{showImages && block.image ? <Media image={normalizeImplementationImage(block.image)} imageMap={CASE_MEDIA} variant='strip' className='mb-4 mt-0' projectColor={projectColor}/> : null}
 		{block.heading ? <RichText as='p' className='font-mono font-medium text-base text-current break-words' text={block.heading} /> : null}
 		{block.description ? <RichText as='p' className='text-sm leading-relaxed text-current/88 break-words' text={block.description} /> : null}
 		{block.items?.length > 0 ? (
@@ -98,7 +98,7 @@ const gridClassForProseCount = (n) => {
 	return 'grid-cols-1 md:grid-cols-2 xl:grid-cols-3';
 };
 
-const ImplementationColumn = ({ blocks, title, onAccent, showImages = true, className = '' }) => {
+const ImplementationColumn = ({ blocks, title, onAccent, showImages = true, className = '', projectColor }) => {
 	if (!blocks?.length) return null;
 	const titleClass = onAccent ? 'text-current/90' : 'text-current/66';
 	const segments = [];
@@ -148,9 +148,9 @@ const ImplementationColumn = ({ blocks, title, onAccent, showImages = true, clas
 			<div className={cn('grid max-w-full min-w-0 gap-6 md:gap-8', gridCols)}>
 				{segments.map((seg) => {
 					if (seg.type === 'prose') {
-						return <ImplementationBlock key={seg.key} block={seg.block} showImages={showImages} />;
+						return <ImplementationBlock key={seg.key} block={seg.block} showImages={showImages} projectColor={projectColor}/>;
 					}
-					return <ImplementationScreensCarousel key={seg.key} images={seg.images} defaultRatio={seg.defaultRatio} />;
+					return <ImplementationScreensCarousel key={seg.key} images={seg.images} defaultRatio={seg.defaultRatio} projectColor={projectColor}/>;
 				})}
 			</div>
 		</div>
@@ -188,18 +188,18 @@ export const Implementation = ({ caseStudy, labels, projectColor, sectionNumbers
 			>
 				{hasTopScreens ? (
 					<div className='w-full min-w-0 mb-6 md:mb-8'>
-						<ImplementationScreensCarousel images={car.images} defaultRatio={topScreensDefaultRatio} />
+						<ImplementationScreensCarousel images={car.images} defaultRatio={topScreensDefaultRatio} projectColor={projectColor}/>
 					</div>
 				) : null}
 				{singleEach ? (
 					<div className={TWO_COL_GRID}>
-						<ImplementationColumn blocks={impl.design} title={labels.implementationDesign || 'Design'} onAccent={onAccent} showImages={true} />
-						<ImplementationColumn blocks={impl.code} title={labels.implementationCode || 'Code'} onAccent={onAccent} showImages={false} />
+						<ImplementationColumn blocks={impl.design} title={labels.implementationDesign || 'Design'} onAccent={onAccent} showImages={true} projectColor={projectColor}/>
+						<ImplementationColumn blocks={impl.code} title={labels.implementationCode || 'Code'} onAccent={onAccent} showImages={false} projectColor={projectColor}/>
 					</div>
 				) : (
 					<React.Fragment>
-						{hasDesign ? <ImplementationColumn blocks={impl.design} title={labels.implementationDesign || 'Design'} onAccent={onAccent} showImages={true} className={hasCode ? 'mb-8' : ''} /> : null}
-						{hasCode ? <ImplementationColumn blocks={impl.code} title={labels.implementationCode || 'Code'} onAccent={onAccent} showImages={false} /> : null}
+						{hasDesign ? <ImplementationColumn blocks={impl.design} title={labels.implementationDesign || 'Design'} onAccent={onAccent} showImages={true} className={hasCode ? 'mb-8' : ''} projectColor={projectColor}/> : null}
+						{hasCode ? <ImplementationColumn blocks={impl.code} title={labels.implementationCode || 'Code'} onAccent={onAccent} showImages={false} projectColor={projectColor}/> : null}
 					</React.Fragment>
 				)}
 			</EditorialHeading>

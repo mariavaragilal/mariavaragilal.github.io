@@ -5,7 +5,7 @@ import { useTheme } from '../../../../../hooks/useTheme';
 const CAPTION_CLASS = 'mt-2 text-xs leading-5 text-current/77 tracking-[0.02em] max-w-sm select-text font-mono';
 const LABEL_CLASS = 'mt-2 text-editorial-eyebrow-sm text-current/66 tracking-[0.1em] max-w-full select-text';
 
-export const OverviewMockup = ({ image, imageMap, fallback, labels = {}, preferDark = false }) => {
+export const OverviewMockup = ({ image, imageMap, fallback, labels = {}, preferDark = false, projectColor }) => {
 	const { resolvedTheme } = useTheme();
 	const [override, setOverride] = useState(null);
 
@@ -16,7 +16,7 @@ export const OverviewMockup = ({ image, imageMap, fallback, labels = {}, preferD
 
 	if (!hasToggle) {
 		if (!resolved || !resolved.src) return null;
-		return <Media image={resolved} imageMap={imageMap} variant='annotated' className='my-0' opensNewTabLabel={labels.opensNewTab} />;
+		return <Media image={resolved} imageMap={imageMap} variant='annotated' className='my-0' opensNewTabLabel={labels.opensNewTab} projectColor={projectColor}/>;
 	}
 
 	const activeSrc = mode === 'dark' ? image.srcDark : image.src;
@@ -29,7 +29,7 @@ export const OverviewMockup = ({ image, imageMap, fallback, labels = {}, preferD
 
 	return (
 		<div className='my-0'>
-			<Media image={mediaImage} imageMap={imageMap} variant='annotated' className='my-0' hideUrlLink={true} />
+			<Media image={mediaImage} imageMap={imageMap} variant='annotated' className='my-0' hideUrlLink={true} projectColor={projectColor}/>
 			<div className='flex items-start justify-between gap-4'>
 				<div className='flex flex-wrap items-baseline gap-x-3 gap-y-1 min-w-0'>
 					{captionText ? <p className={captionClassName}>{captionText}</p> : null}

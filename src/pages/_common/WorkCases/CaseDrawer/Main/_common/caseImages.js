@@ -9,7 +9,7 @@ import meAccountsDashboard from '../../../../../../assets/images/cases/me/meAcco
 import securiboxLogo from '../../../../../../assets/images/cases/securibox/brand/securibox.svg';
 import securiboxLogoDark from '../../../../../../assets/images/cases/securibox/brand/securibox-dark.svg';
 import securiboxLogoBrand from '../../../../../../assets/images/cases/securibox/brand/securibox-brand.svg';
-import securiboxCorporateOverview from '../../../../../../assets/images/cases/securibox/Securibox-LessdataMoreinformation.png';
+import securiboxCorporateOverview from '../../../../../../assets/images/cases/securibox/Securibox-Corp.gif'
 import cloudagentsLockup from '../../../../../../assets/images/cases/sca/brand/cloudagents-lockup.svg';
 import cloudagentsLockupDark from '../../../../../../assets/images/cases/sca/brand/cloudagents-lockup-dark.svg';
 import cloudagentsLockupBrand from '../../../../../../assets/images/cases/sca/brand/cloudagents-lockup-brand.svg';
@@ -66,3 +66,6 @@ export const CASE_IMAGES = {
 	'connectlime/pattern': connectlimePattern,
 	'connectlime/studio-site-overview': connectlimeStudioSiteOverview,
 };
+
+export const CASE_VIDEOS = {};
+export const CASE_MEDIA = { ...CASE_IMAGES, ...CASE_VIDEOS };

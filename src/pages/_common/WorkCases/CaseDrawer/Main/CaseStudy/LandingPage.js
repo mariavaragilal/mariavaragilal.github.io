@@ -1,6 +1,6 @@
 import { Media } from '../../../../../../_common/components';
 import { ChapterBand, EditorialHeading, formatChapterKicker } from '../_common/CaseChapter';
-import { CASE_IMAGES } from '../_common/caseImages';
+import { CASE_MEDIA } from '../_common/caseImages';
 import { RichText } from '../../../../RichText';
 import { getProjectKickerStyle } from '../../../../../../constants/utils/colorContrast';
 
@@ -27,7 +27,7 @@ export const LandingPage = ({ caseStudy, labels, projectColor, sectionNumbers })
 				{paragraphs.filter((p) => p && String(p).trim()).map((p, i) => (
 					<RichText key={i} as='p' className='text-base leading-relaxed text-current/88 mb-4 last:mb-0' text={p} />
 				))}
-				{block.image ? <Media image={block.image} imageMap={CASE_IMAGES} variant='strip' className='mt-6 md:mt-8 w-full' /> : null}
+				{block.image ? <Media image={block.image} imageMap={CASE_MEDIA} variant='strip' className='mt-6 md:mt-8 w-full' projectColor={projectColor}/> : null}
 			</EditorialHeading>
 		</ChapterBand>
 	);

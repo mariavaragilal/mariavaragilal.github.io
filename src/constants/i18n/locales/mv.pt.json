@@ -595,7 +595,7 @@
 							"title": "Visão de página completa: hero com pilares de soluções, about, careers, journal e rodapé.",
 							"alt": "Homepage corporativa da Securibox do hero ao rodapé, incluindo Less data More information e os pilares CloudAgents, ParseXtract e Consulting.",
 							"url": "https://www.securibox.eu",
-							"frame": "browser"
+							"frame": "none"
 						},
 						"results": [
 							"Identidade de marca e logo desenhados de raiz — sistema de cor, escala tipográfica, direcção de imagem e regras de aplicação",
@@ -1036,7 +1036,7 @@
 							"url": "https://cube.securibox.eu",
 							"label": "Overview do dashboard",
 							"title": "À primeira vista: dashboard de três colunas — A Minha Colecção, Os Meus Agentes, Documentos RH.",
-							"frame": "browser",
+							"frame": "cover",
 							"ratio": "16 / 9"
 						},
 						"references": {
@@ -1480,7 +1480,7 @@
 							"label": "Directório de Agentes",
 							"title": "Grelha de agentes. Cada cartão mostra nome do agente, categoria, contagem de contas e taxa de sucesso.",
 							"caption": "Índice de agentes — uma das três portas do BackOffice.",
-							"frame": "browser",
+							"frame": "cover",
 							"ratio": "16.5 / 9"
 						},
 						"results": [
@@ -2182,7 +2182,9 @@
 							"title": "Overview de página inteira: hero com marca do produto, título sobre autenticação e call-to-action.",
 							"alt": "Dashboard de conta Securibox Me, do hero ao rodapé, incluindo marca do produto, título sobre autenticação e call-to-action.",
 							"url": "https://me.securibox.eu",
-							"frame": "browser"
+							"browserFrame": true,
+							"ratio": "16 / 9",
+							"frame": "cover"
 						},
 						"results": [
 							"Camada de identidade unificada em todos os serviços",
@@ -2469,7 +2471,9 @@
 							"title": "Overview de página inteira: hero com marca do produto, título sobre autenticação e call-to-action.",
 							"alt": "Landing pública Securibox ID, do hero ao rodapé, incluindo marca do produto, título sobre autenticação e call-to-action.",
 							"url": "https://accounts.securibox.eu/id/register",
-							"frame": "browser"
+							"browserFrame": true,
+							"ratio": "16 / 9",
+							"frame": "cover"
 						},
 						"results": [
 							"Integração OAuth Google & Microsoft",
@@ -2681,7 +2685,9 @@
 							"title": "Visão geral da página: site francês de marketing para distribuição electrónica de recibos — hero, benefícios, fluxo para empresas, código do trabalho, webinar e preços.",
 							"alt": "Landing longa RH Securibox em francês: hero sobre difusão de recibos, estatísticas e benefícios, processo em três passos para empresas, cartões do código do trabalho, bloco de webinar e preço por recibo.",
 							"url": "https://rh.securibox.eu",
-							"frame": "browser"
+							"browserFrame": true,
+							"ratio": "16 / 9",
+							"frame": "cover"
 						},
 						"results": [
 							"Fluxos de utilizador que traduzem a norma de 2017 em escolhas claras de opt-in/opt-out",
@@ -2844,7 +2850,9 @@
 							"title": "Visão de página completa: hero com padrão geométrico, serviços Objectivos Smart, faixa de portfolio, valores e CTA em lima.",
 							"alt": "Página inicial ConnectLime do hero ao rodapé: arte de linhas geométricas, manchete, grelha de serviços, mockups inclinados, secção Agile & Singulière e faixa de contacto.",
 							"url": "https://www.connectlime.com/",
-							"frame": "browser"
+							"browserFrame": true,
+							"ratio": "16 / 9",
+							"frame": "cover"
 						},
 						"results": [
 							"Orientei a aplicação da wordmark logo e a consistência visual — paleta, tipografia e comportamento no site",
@@ -3246,7 +3254,7 @@
 							"title": "Registo de utilizador: barra lateral roxa com passos, verificação por telefone e acções — UI em francês.",
 							"alt": "Criação de conta Assist@ em francês: barra lateral roxa escura com marca ASSIST@ e menu multi-passo (Créer un compte activo), painel principal com campo de telefone, França +33, Envoyer code, termos legais, botões Fermer e Passer à l'étape suivante, ligação FAQ.",
 							"url": "https://www.assistarobase.fr",
-							"frame": "browser"
+							"frame": "cover"
 						},
 						"results": [
 							"Frontend React pronto para produção construído a par de outro developer: implementações de componente, estados de interacção e micro-animações para feedback do sistema.",

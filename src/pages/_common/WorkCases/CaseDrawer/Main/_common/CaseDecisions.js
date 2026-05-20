@@ -1,9 +1,9 @@
 import { Fragment } from 'react';
 import { Blockquote, Separator, Media } from '../../../../../../_common/components';
-import { CASE_IMAGES } from './caseImages';
+import { CASE_MEDIA } from './caseImages';
 import { RichText } from '../../../../RichText';
 import { cn } from '../../../../../../constants/utils/cn';
-import { formatTwoDigit } from '../../../../../../constants/utils/formatNumberString';
+import { formatTwoDigit } from '../../../../../../constants/utils/strings';
 
 const DecisionDescription = ({ text }) => {
 	if (text == null || text === '') return null;
@@ -212,10 +212,10 @@ const DecisionRow = ({ item, index = 0, projectColor, labels }) => {
 				{(item.image || item.mobileImage || item.imageMobile) ? (
 					<div className='flex flex-col md:flex-row items-start gap-4 mt-4'>
 						{item.image ? (
-							<Media image={item.image} imageMap={CASE_IMAGES} variant='annotated' className='w-full min-w-0 my-0' />
+							<Media image={item.image} imageMap={CASE_MEDIA} variant='annotated' className='w-full min-w-0 my-0' projectColor={projectColor}/>
 						) : null}
 						{(item.mobileImage || item.imageMobile) ? (
-							<Media image={item.mobileImage || item.imageMobile} imageMap={CASE_IMAGES} variant='mobile' className='w-full md:w-[min(7rem,28vw)] md:w-28 shrink-0 my-0' />
+							<Media image={item.mobileImage || item.imageMobile} imageMap={CASE_MEDIA} variant='mobile' className='w-full md:w-[min(7rem,28vw)] md:w-28 shrink-0 my-0' projectColor={projectColor}/>
 						) : null}
 					</div>
 				) : null}

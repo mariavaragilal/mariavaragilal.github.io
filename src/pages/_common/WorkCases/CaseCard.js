@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Badge, Button, Card, CardAction, CardDescription, CardContent, CardHeader, CardImage, CardTitle } from '../../../_common/components';
 import { focusRing } from '../../../constants/utils/a11y';
+import { getHostname } from '../../../constants/utils/strings';
 import { navigate } from 'gatsby';
 import { useTheme } from '../../../hooks/useTheme';
 import { CASE_IMAGES } from './CaseDrawer/Main/_common/caseImages';
@@ -27,21 +28,22 @@ export const CaseCard = ({ app, isSelected, onToggle, href, to, icon, iconChar =
 	const cardClassBase = 'flex flex-col items-start p-4 w-full text-left rounded-lg transition-colors ' + (isSelected ? 'border-primary/50 bg-card/75 ring-2 ring-primary/15' : 'border-border hover:bg-card/75') + ' ' + focusRing;
 	const cardClassLink = cardClassBase + ' cursor-pointer h-full';
 
-	const hostnameEl = app.references?.links?.[0] ? (
+	const refUrl = app.references?.links?.[0]?.url;
+	const hostnameEl = refUrl ? (
 		isLink ? (
 			<span className='inline-flex items-center gap-1 font-mono text-[0.65rem] text-current/88'>
-				{new URL(app.references.links[0].url).hostname.replace('www.', '')}
+				{getHostname(refUrl)}
 				<span aria-hidden>↗</span>
 			</span>
 		) : (
 			<a
-				href={app.references.links[0].url}
+				href={refUrl}
 				target='_blank'
 				rel='noopener noreferrer'
 				className='inline-flex items-center gap-1 font-mono text-[0.65rem] text-current/88 underline-offset-2 hover:underline hover:text-current'
 				onClick={isInternalCase ? (e => e.stopPropagation()) : undefined}
 			>
-				{new URL(app.references.links[0].url).hostname.replace('www.', '')}
+				{getHostname(refUrl)}
 				<span aria-hidden>↗</span>
 			</a>
 		)

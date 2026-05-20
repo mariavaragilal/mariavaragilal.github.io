@@ -1,14 +1,13 @@
 import React from 'react';
 import { srOnly, focusRing } from '../../../../../constants/utils/a11y';
 import { cn } from '../../../../../constants/utils/cn';
+import { getHostname } from '../../../../../constants/utils/strings';
 import { LabelSection } from './LabelSection';
 
 // Grouped sources: [{ theme, links: [...] }]. Flat sources: [{ url, label }].
 // We support both shapes because older case files use the flat form.
 const isGrouped = (sources) => Array.isArray(sources) && sources.some((s) => s && typeof s === 'object' && s.theme && Array.isArray(s.links));
 const isLegacyFlat = (sources) => Array.isArray(sources) && sources.length > 0 && sources.every((s) => s && typeof s === 'object' && typeof s.url === 'string' && typeof s.label === 'string');
-
-const getHostname = (url) => new URL(url).hostname.replace('www.', '');
 
 // Card-style external link used for live work, client deliveries, portfolios.
 const ReferenceLink = ({ href, label, opensNewTab }) => (

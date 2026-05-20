@@ -1,7 +1,7 @@
 import { Card } from '../../../../../../_common/components';
 import { cn } from '../../../../../../constants/utils/cn';
 import { getProjectAccentVars } from '../../../../../../constants/utils/colorContrast';
-import { formatTwoDigit } from '../../../../../../constants/utils/formatNumberString';
+import { formatTwoDigit } from '../../../../../../constants/utils/strings';
 import { RichText } from '../../../../RichText';
 
 export const formatChapterKicker = (heading, number) => {

@@ -599,7 +599,7 @@
 							"title": "Full-page overview: hero with solutions pillars, about, careers, journal, and footer.",
 							"alt": "Securibox corporate homepage from hero through footer, including Less data More information and CloudAgents, ParseXtract, and Consulting pillars.",
 							"url": "https://www.securibox.eu",
-							"frame": "browser"
+							"frame": "none"
 						},
 						"results": [
 							"Brand identity and logo designed from the ground up — colour system, typography scale, imagery direction, and application rules",
@@ -1040,7 +1040,7 @@
 							"url": "https://cube.securibox.eu",
 							"label": "Dashboard overview",
 							"title": "Drop in: three-column dashboard — My Collection, My Agents, HR Documents.",
-							"frame": "browser",
+							"frame": "cover",
 							"ratio": "16 / 9"
 						},
 						"references": {
@@ -1484,7 +1484,7 @@
 							"label": "Agents Dashboard",
 							"title": "Agents Dashboard: three doors — agents, support, permissions.",
 							"caption": "Agents Directory overview: three doors — agents, support, permissions.",
-							"frame": "browser",
+							"frame": "cover",
 							"ratio": "16.5 / 9"
 						},
 						"results": [
@@ -2187,7 +2187,9 @@
 							"title": "Full-page overview: hero with product mark, headline on authentication, and call-to-action.",
 							"alt": "Securibox Me account dashboard from hero through footer, including product mark, headline on authentication, and call-to-action.",
 							"url": "https://me.securibox.eu",
-							"frame": "browser"
+							"browserFrame": true,
+							"ratio": "16 / 9",
+							"frame": "cover"
 						},
 						"results": [
 							"Unified identity layer across all services",
@@ -2474,7 +2476,9 @@
 							"title": "Full-page overview: hero with product mark, headline on authentication, and call-to-action.",
 							"alt": "Securibox ID public landing from hero through footer, including product mark, headline on authentication, and call-to-action.",
 							"url": "https://accounts.securibox.eu/id/register",
-							"frame": "browser"
+							"browserFrame": true,
+							"ratio": "16 / 9",
+							"frame": "cover"
 						},
 						"results": [
 							"Google & Microsoft OAuth integration",
@@ -2686,7 +2690,9 @@
 							"title": "Full-page overview: French marketing site for electronic payslip distribution — hero, benefits, employer workflow, labour code, webinar, and pricing.",
 							"alt": "RH by Securibox long-form landing in French: hero on payslip distribution, stakeholder stats and benefits, three-step process for companies, labour-code cards, webinar block, and per-payslip pricing.",
 							"url": "https://rh.securibox.eu",
-							"frame": "browser"
+							"browserFrame": true,
+							"ratio": "16 / 9",
+							"frame": "cover"
 						},
 						"results": [
 							"User flows that translate the 2017 norm into clear opt-in/opt-out choices",
@@ -2849,7 +2855,9 @@
 							"title": "Full-page overview: hero with geometric pattern, Smart Objectives services, portfolio strip, values, and lime CTA.",
 							"alt": "ConnectLime homepage from hero through footer: geometric line art, headline, services grid, tilted mockups, Agile & Singulière section, and contact banner.",
 							"url": "https://www.connectlime.com/",
-							"frame": "browser"
+							"browserFrame": true,
+							"ratio": "16 / 9",
+							"frame": "cover"
 						},
 						"results": [
 							"Wordmark logo mentorship and visual consistency — palette, typography, and on-site behaviour",
@@ -3251,7 +3259,7 @@
 							"title": "User signup: purple sidebar stepper, phone verification, and step actions — French UI.",
 							"alt": "Assist@ account creation in French: dark purple sidebar with ASSIST@ branding and multi-step menu (Créer un compte active), main panel with phone field, France +33, Envoyer code, legal terms, Fermer and Passer à l'étape suivante buttons, FAQ link.",
 							"url": "https://www.assistarobase.fr",
-							"frame": "browser"
+							"frame": "cover"
 						},
 						"results": [
 							"Production-ready React frontend built alongside another developer: component implementations, interaction states, and micro-animations for system feedback.",

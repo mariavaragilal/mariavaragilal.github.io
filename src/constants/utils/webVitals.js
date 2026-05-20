@@ -16,9 +16,8 @@ const getRating = (value, thresholds) => {
 	return 'poor';
 };
 
-// Send metrics to analytics (replace with your preferred analytics service)
+// Send metrics to analytics (GA4 via gtag when present)
 const sendToAnalytics = (metric) => {
-	// Example: Send to Google Analytics 4
 	if (typeof window !== 'undefined' && typeof window.gtag !== 'undefined') {
 		window.gtag('event', metric.name, {
 			event_category: 'Web Vitals',
@@ -28,7 +27,6 @@ const sendToAnalytics = (metric) => {
 		});
 	}
 
-	// Log to console in development
 	if (process.env.NODE_ENV === 'development') {
 		console.log('Web Vital:', metric);
 	}
@@ -162,7 +160,6 @@ export const trackTTFB = () => {
 export const initWebVitals = () => {
 	if (typeof window === 'undefined') return;
 
-	// Check if PerformanceObserver is supported
 	if (!('PerformanceObserver' in window)) {
 		console.warn('PerformanceObserver not supported, Web Vitals tracking disabled');
 		return;
@@ -188,7 +185,6 @@ export const getWebVitalsScores = () => {
 
 	const scores = {};
 
-	// TTFB
 	if (navigation) {
 		scores.TTFB = {
 			value: navigation.responseStart - navigation.requestStart,
@@ -196,7 +192,6 @@ export const getWebVitalsScores = () => {
 		};
 	}
 
-	// FCP
 	const fcp = paint.find((entry) => entry.name === 'first-contentful-paint');
 	if (fcp) {
 		scores.FCP = {
