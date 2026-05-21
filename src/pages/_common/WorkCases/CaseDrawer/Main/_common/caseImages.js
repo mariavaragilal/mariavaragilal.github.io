@@ -1,9 +1,9 @@
 import cubeDashboardMainView from '../../../../../../assets/images/cases/cube/cube-dashboard-main.webp';
 
+import scaBo from '../../../../../../assets/images/cases/sca/SCA-BO.gif';
 import scaBoDashboardDark from '../../../../../../assets/images/cases/sca/SCA-BackOffice-Dashboard-Dark.png';
 import scaBoDashboardLight from '../../../../../../assets/images/cases/sca/SCA-BackOffice-Dashboard.png';
 import scaCloudAgentsLanding from '../../../../../../assets/images/cases/sca/SCA-CloudAgents-Landing.png';
-
 import meAccountsDashboard from '../../../../../../assets/images/cases/me/meAccount.png';
 
 import securiboxLogo from '../../../../../../assets/images/cases/securibox/brand/securibox.svg';
@@ -46,6 +46,7 @@ export const CASE_IMAGES = {
 	'securibox/logo-dark': securiboxLogoDark,
 	'securibox/logo-brand': securiboxLogoBrand,
 	'securibox/corporate-overview': securiboxCorporateOverview,
+	'sca/sca-bo': scaBo,
 	'sca/bo-dashboard-dark': scaBoDashboardDark,
 	'sca/bo-dashboard-light': scaBoDashboardLight,
 	'sca/cloudagents-landing': scaCloudAgentsLanding,

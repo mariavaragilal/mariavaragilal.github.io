@@ -1478,15 +1478,24 @@
 						"highlight": "The SCA BackOffice is where admins configure agents, support teams triage failures, and ops watches the fleet — the management layer for the Securibox CloudAgents solution. The work spanned information architecture, status systems, and the production frontend for a tool where three completely different jobs share the same interface.",
 						"role": "Product designer",
 						"tools": "Figma · React · Vite · Bootstrap · Accessibility (WCAG)",
-						"overviewMockup": {
-							"src": "sca/bo-dashboard-light",
-							"srcDark": "sca/bo-dashboard-dark",
-							"label": "Agents Dashboard",
-							"title": "Agents Dashboard: three doors — agents, support, permissions.",
-							"caption": "Agents Directory overview: three doors — agents, support, permissions.",
-							"frame": "cover",
-							"ratio": "16.5 / 9"
-						},
+						"overviewMockup": [
+							{
+								"src": "sca/bo-dashboard-light",
+								"srcDark": "sca/bo-dashboard-dark",
+								"label": "SCA Dashboard",
+								"title": "Dashboard SCA Backoffice: three jobs — agents, support, permissions.",
+								"caption": "SCA Dashboard: three jobs — agents, support, permissions.",
+								"frame": "cover",
+								"ratio": "16.625 / 9"
+							},
+							{
+								"src": "sca/sca-bo",
+								"label": "SCA BackOffice",
+								"title": "SCA - CloudAgents: BackOffice",
+								"caption": "Overview of the SCA BackOffice",
+								"frame": "none"
+							}
+						],
 						"results": [
 							"BackOffice with 6 operational sections, role-based permission management, dark and light theme",
 							"Multilingual BO — French, English, Portuguese",
@@ -1518,7 +1527,7 @@
 						},
 						"slug": "sca-cloudagents",
 						"caseStudy": {
-							"projectColor": "#2461EC",
+							"projectColor": "#2675d9",
 							"scope": "Branding · Product Design · Web Design",
 							"context": {
 								"title": "Three jobs, <em>one surface</em>",

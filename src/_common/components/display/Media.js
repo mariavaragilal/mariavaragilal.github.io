@@ -3,6 +3,7 @@ import { motion, useReducedMotion } from 'motion/react';
 import { cn } from '../../../constants/utils/cn';
 import { focusRing, srOnly } from '../../../constants/utils/a11y';
 import { getHostname } from '../../../constants/utils/strings';
+import { Switch } from '../forms/Switch';
 
 // --- Constants ---
 
@@ -276,6 +277,26 @@ const EmbedBody = ({ src, alt }) => (
 	<iframe src={src} title={alt || 'Animated UI demo'} loading='lazy' sandbox='allow-scripts' referrerPolicy='no-referrer' className='block w-full h-full border-0' />
 );
 
+const CoverThemeToggle = ({ coverThemeToggle }) => {
+	if (!coverThemeToggle) return null;
+	const { mode, onCheckedChange, switchLabel, stateLabel } = coverThemeToggle;
+	return (
+		<div className='flex items-center gap-2' data-cover-theme-toggle=''>
+			<span className='text-xs text-current/66 tracking-[0.02em] font-mono' aria-hidden='true'>{stateLabel}</span>
+			<Switch checked={mode === 'dark'} onCheckedChange={onCheckedChange} aria-label={switchLabel} />
+		</div>
+	);
+};
+
+const CoverThemeToggleRow = ({ coverThemeToggle }) => {
+	if (!coverThemeToggle) return null;
+	return (
+		<div className='absolute top-4 right-4 z-20' data-cover-theme-row=''>
+			<CoverThemeToggle coverThemeToggle={coverThemeToggle} />
+		</div>
+	);
+};
+
 const CoverContentFrame = ({ contentRatio, resolvedSrc, alt, objectPosition, showBrowser, url }) => {
 	const fitRef = useRef(null);
 	const [boxSize, setBoxSize] = useState(null);
@@ -319,33 +340,34 @@ const CoverContentFrame = ({ contentRatio, resolvedSrc, alt, objectPosition, sho
 	const plainContentStyle = boxSize ? { width: boxSize.width, height: boxSize.height } : { aspectRatio: contentRatio, width: '100%', maxHeight: '100%' };
 	const viewportStyle = boxSize ? { width: boxSize.width, height: boxSize.height } : undefined;
 	const browserCardStyle = boxSize ? { width: boxSize.width, height: boxSize.height + COVER_BROWSER_CHROME_HEIGHT } : { width: '100%', height: '100%', maxHeight: '100%' };
+	const coverContentClass = cn('relative shrink-0 overflow-hidden', showBrowser ? 'rounded-b-xl' : 'rounded-xl shadow-xl');
+	const coverMediaClass = cn('relative min-h-0 shrink-0 overflow-hidden', showBrowser ? 'rounded-b-xl' : 'rounded-xl');
 
 	return (
 		<div ref={fitRef} className='relative z-10 h-full w-full max-h-full min-h-0 min-w-0 flex items-center justify-center'>
 			{showBrowser ? (
 				<div className='flex min-h-0 flex-col overflow-hidden rounded-lg border border-border/60 bg-background shadow-xl' data-cover-browser='' style={browserCardStyle}>
 					<BrowserChrome url={url} compact={true} />
-					{boxSize ? (
-						<div className='shrink-0 overflow-hidden rounded-b-xl' data-cover-content='' data-cover-content-ratio={contentRatio} style={viewportStyle}>
-							<AspectRatioImageViewport viewportAspect={contentRatio} resolvedSrc={resolvedSrc} alt={alt} objectPosition={objectPosition} fillParent={true} className='rounded-b-xl' />
+					<div className={coverContentClass} data-cover-content='' data-cover-content-ratio={contentRatio} style={boxSize ? { width: boxSize.width, height: boxSize.height } : undefined}>
+						<div className={coverMediaClass} style={viewportStyle}>
+							<AspectRatioImageViewport viewportAspect={contentRatio} resolvedSrc={resolvedSrc} alt={alt} objectPosition={objectPosition} fillParent={!!boxSize} className='rounded-b-xl' />
 						</div>
-					) : (
-						<div className='relative min-h-0 flex-1 overflow-hidden rounded-b-xl' data-cover-content='' data-cover-content-ratio={contentRatio}>
-							<AspectRatioImageViewport viewportAspect={contentRatio} resolvedSrc={resolvedSrc} alt={alt} objectPosition={objectPosition} fillParent={true} className='h-full w-full rounded-b-xl' />
-						</div>
-					)}
+					</div>
 				</div>
 			) : (
-				<div className='shrink-0 overflow-hidden rounded-xl shadow-xl' data-cover-content='' data-cover-content-ratio={contentRatio} style={plainContentStyle}>
-					<AspectRatioImageViewport viewportAspect={contentRatio} resolvedSrc={resolvedSrc} alt={alt} objectPosition={objectPosition} fillParent={!!boxSize} className='rounded-xl' />
+				<div className={coverContentClass} data-cover-content='' data-cover-content-ratio={contentRatio} style={plainContentStyle}>
+					<div className={coverMediaClass} style={viewportStyle}>
+						<AspectRatioImageViewport viewportAspect={contentRatio} resolvedSrc={resolvedSrc} alt={alt} objectPosition={objectPosition} fillParent={!!boxSize} className='rounded-xl' />
+					</div>
 				</div>
 			)}
 		</div>
 	);
 };
 
-const CoverBody = ({ resolvedSrc, alt, backgroundColor, shellRatio, contentRatio, padding, objectPosition, label, title, hasSrc, showBrowser, url }) => (
+const CoverBody = ({ resolvedSrc, alt, backgroundColor, shellRatio, contentRatio, padding, objectPosition, label, title, hasSrc, showBrowser, url, coverThemeToggle }) => (
 	<div className='relative w-full min-h-0 overflow-hidden flex items-center justify-center box-border' data-cover-shell='' data-cover-shell-ratio={shellRatio} style={{ aspectRatio: shellRatio, backgroundColor, padding: Math.round(padding * 100) + '%' }}>
+		<CoverThemeToggleRow coverThemeToggle={coverThemeToggle} />
 		{hasSrc ? (
 			<CoverContentFrame contentRatio={contentRatio} resolvedSrc={resolvedSrc} alt={alt} objectPosition={objectPosition} showBrowser={showBrowser} url={url} />
 		) : (
@@ -359,7 +381,7 @@ const CoverBody = ({ resolvedSrc, alt, backgroundColor, shellRatio, contentRatio
 
 // --- Render helpers ---
 
-const resolveImageBody = ({ img, cfg, resolvedSrc, alt, objectPosition, explicitRatio, showChrome, isCover, coverBackground, coverPadding, showCoverBrowser }) => {
+const resolveImageBody = ({ img, cfg, resolvedSrc, alt, objectPosition, explicitRatio, showChrome, isCover, coverBackground, coverPadding, showCoverBrowser, coverThemeToggle }) => {
 	const scrollableBrowserViewport = showChrome && !!img.src;
 	const ratioFramedImage = !!img.src && explicitRatio && !showChrome && !isCover;
 	const useAspectRatioBox = !img.src && !isCover;
@@ -381,6 +403,7 @@ const resolveImageBody = ({ img, cfg, resolvedSrc, alt, objectPosition, explicit
 				hasSrc={!!img.src}
 				showBrowser={showCoverBrowser}
 				url={img.url}
+				coverThemeToggle={coverThemeToggle}
 			/>
 		);
 	}
@@ -414,7 +437,7 @@ const resolveFigcaption = (img, hasSrc, hasVideoSources, hideCaption) => {
 
 // --- Main export ---
 
-export const Media = ({ image, variant = 'annotated', className = '', imageMap = {}, hideCaption = false, hideUrlLink = false, opensNewTabLabel, showBrowserFrame, projectColor }) => {
+export const Media = ({ image, variant = 'annotated', className = '', imageMap = {}, hideCaption = false, hideUrlLink = false, opensNewTabLabel, showBrowserFrame, projectColor, coverThemeToggle }) => {
 	const prefersReducedMotion = useReducedMotion();
 
 	const img = typeof image === 'string' ? { src: image } : image;
@@ -460,7 +483,7 @@ export const Media = ({ image, variant = 'annotated', className = '', imageMap =
 			</div>
 		);
 	} else {
-		body = resolveImageBody({ img, cfg, resolvedSrc, alt, objectPosition, explicitRatio, showChrome, isCover, coverBackground, coverPadding, showCoverBrowser });
+		body = resolveImageBody({ img, cfg, resolvedSrc, alt, objectPosition, explicitRatio, showChrome, isCover, coverBackground, coverPadding, showCoverBrowser, coverThemeToggle: isCover ? coverThemeToggle : undefined });
 	}
 
 	const figcaption = resolveFigcaption(img, hasSrc, hasVideoSources, hideCaption);

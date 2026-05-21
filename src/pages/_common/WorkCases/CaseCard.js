@@ -19,9 +19,12 @@ export const CaseCard = ({ app, isSelected, onToggle, href, to, icon, iconChar =
 	const isLink = !!href;
 	const isInternalCase = !!to;
 
-	const mockup = app.overviewMockup;
+	const mockupRaw = app.overviewMockup;
+	const mockup = Array.isArray(mockupRaw)
+		? (mockupRaw.find((m) => m && m.src && m.frame === 'cover') || mockupRaw.find((m) => m && m.src) || mockupRaw[0])
+		: mockupRaw;
 	const preferDark = mockup ? (app.slug?.startsWith('sca-') ? !!mockup.srcDark : resolvedTheme === 'dark' && !!mockup.srcDark) : false;
-	const mockupKey = mockup ? (preferDark ? mockup.srcDark : mockup.src) : null;
+	const mockupKey = mockup ? (preferDark && mockup.srcDark ? mockup.srcDark : mockup.src) : null;
 	const mockupSrc = mockupKey ? (CASE_IMAGES[mockupKey] || mockupKey) : null;
 	const mockupAlt = mockup ? (mockup.alt || mockup.caption || mockup.title || mockup.label || '') : '';
 

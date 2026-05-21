@@ -1474,15 +1474,24 @@
 						"highlight": "O SCA BackOffice é onde os admins configuram agentes, as equipas de suporte fazem triagem de falhas, e as ops vigiam a frota — a camada de gestão para a solução Securibox CloudAgents. O trabalho abrangeu arquitectura de informação, sistemas de estado e o frontend de produção para uma ferramenta onde três trabalhos completamente diferentes partilham a mesma interface.",
 						"role": "Product designer",
 						"tools": "Figma · React · Vite · Bootstrap · Accessibility (WCAG)",
-						"overviewMockup": {
-							"src": "sca/bo-dashboard-light",
-							"srcDark": "sca/bo-dashboard-dark",
-							"label": "Directório de Agentes",
-							"title": "Grelha de agentes. Cada cartão mostra nome do agente, categoria, contagem de contas e taxa de sucesso.",
-							"caption": "Índice de agentes — uma das três portas do BackOffice.",
-							"frame": "cover",
-							"ratio": "16.5 / 9"
-						},
+						"overviewMockup": [
+							{
+								"src": "sca/bo-dashboard-light",
+								"srcDark": "sca/bo-dashboard-dark",
+								"label": "SCA Dashboard",
+								"title": "Dashboard SCA Backoffice: três trabalhos — agentes, suporte, permissões.",
+								"caption": "SCA Dashboard: três trabalhos — agentes, suporte, permissões.",
+								"frame": "cover",
+								"ratio": "16.625 / 9"
+							},
+							{
+								"src": "sca/sca-bo",
+								"label": "SCA BackOffice",
+								"title": "SCA - CloudAgents: BackOffice",
+								"caption": "Visão geral do SCA BackOffice",
+								"frame": "none"
+							}
+						],
 						"results": [
 							"BackOffice com 6 secções operacionais, gestão de permissões por papel, tema claro e escuro",
 							"BO multilingue — Francês, Inglês, Português",
@@ -1514,7 +1523,7 @@
 						},
 						"slug": "sca-cloudagents",
 						"caseStudy": {
-							"projectColor": "#2461EC",
+							"projectColor": "#2675d9",
 							"scope": "Branding · Product Design · Web Design",
 							"context": {
 								"title": "Três trabalhos, <em>uma superfície</em>",

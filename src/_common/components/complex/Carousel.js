@@ -20,6 +20,8 @@ const CarouselContext = createContext({
 	setSlideCount: () => {},
 });
 
+export const useCarousel = () => useContext(CarouselContext);
+
 export const Carousel = ({
 	orientation = 'horizontal',
 	navigationMode = 'scroll',

@@ -46,7 +46,7 @@ export { Tabs, TabsList, TabsTrigger, TabsContent } from './navigation/Tabs';
 export { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuTrigger, NavigationMenuContent, NavigationMenuLink, NavigationMenuViewport, NavigationMenuIndicator } from './navigation/NavigationMenu';
 export { Command, CommandDialog, CommandInput, CommandList, CommandEmpty, CommandGroup, CommandItem, CommandSeparator, CommandShortcut } from './complex/Command';
 export { Calendar } from './complex/Calendar';
-export { Carousel, CarouselContent, CarouselItem, CarouselFooter, CarouselCaption, CarouselCounter, CarouselPrevious, CarouselNext } from './complex/Carousel';
+export { Carousel, CarouselContent, CarouselItem, CarouselFooter, CarouselCaption, CarouselCounter, CarouselPrevious, CarouselNext, useCarousel } from './complex/Carousel';
 export { Loop } from './complex/Loop';
 export { ChartContainer, ChartTooltip, ChartTooltipContent, ChartLegend, ChartLegendContent, useChart } from './complex/Chart';
 export { SidebarProvider, Sidebar, SidebarInset, SidebarTrigger, SidebarRail, SidebarHeader, SidebarFooter, SidebarSeparator, SidebarContent, SidebarGroup, SidebarGroupLabel, SidebarGroupContent, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarMenuBadge, SidebarMenuSub, SidebarMenuSubItem, SidebarMenuSubButton, SidebarMenuSkeleton, useSidebar } from './complex/Sidebar';
