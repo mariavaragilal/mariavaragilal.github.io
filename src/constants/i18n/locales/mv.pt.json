@@ -592,8 +592,8 @@
 						"overviewMockup": {
 							"src": "securibox/corporate-overview",
 							"label": "Site corporativo",
-							"title": "Visão de página completa: hero com pilares de soluções, about, careers, journal e rodapé.",
-							"alt": "Homepage corporativa da Securibox do hero ao rodapé, incluindo Less data More information e os pilares CloudAgents, ParseXtract e Consulting.",
+							"title": "Visão de página completa: hero com missão e soluções, about, careers, journal e rodapé.",
+							"alt": "Homepage corporativa da Securibox do hero ao rodapé, incluindo Less data More information, a missão Analisar–Organizar–Visualizar e páginas de soluções CloudAgents, ParseXtract e Consulting.",
 							"url": "https://www.securibox.eu",
 							"frame": "none"
 						},
@@ -663,56 +663,52 @@
 								"lead": "Cada touchpoint, cada página, cada sub-marca tinha de passar esse filtro antes de sair."
 							},
 							"principles": {
-								"title": "Quatro princípios como filtros de decisão",
-								"subtitle": "Princípios de Marca Unificados",
-								"intro": "Com a identidade definida, a visão precisava de ser operacional — algo com que a equipa pudesse de facto decidir. Quatro princípios traduziram 'Less data, More information' em filtros que governaram cada escolha, desde a marca em si à hierarquia de página nas páginas de soluções e ao tom dos textos sobre segurança.",
-								"principles": [
+								"title": "Missão de Marca Unificada",
+								"subtitle": "Analisar · Organizar · Visualizar",
+								"intro": "Antes de se desenhar a marca, a visão precisava de ser operacional — algo com que a equipa pudesse de facto decidir. A missão de marca unificada — Analisar, Organizar e Visualizar — traduziu 'Less data, More information' em filtros que governaram cada escolha, desde a marca em si à hierarquia de página nas páginas de soluções e ao tom dos textos sobre segurança. Os serviços emergem dessa missão; não estão codificados no logo como eixos separados.",
+								"items": [
 									{
-										"label": "Confiança pela Clareza",
-										"description": "O losango que envolve não é decoração — é a fronteira segura que o nome da marca já implica, tornada visível. Cada superfície herda essa promessa: dizer a coisa com clareza, mostrar a estrutura, não esconder atrás de ornamento."
+										"label": "Analisar",
+										"description": "Encontrar o sinal na fonte. Seja um fluxo de documentos, uma sincronização de credenciais ou um pipeline de extracção — o primeiro movimento é sempre o mesmo: identificar o que importa, descartar o que não importa e chegar à informação sobre a qual o utilizador pode agir."
 									},
 									{
-										"label": "Precisão em Cada Interacção",
-										"description": "Três eixos, uma forma. A marca codifica a precisão ao nível da identidade; os produtos carregam-na adiante — extracção exacta, linguagem exacta, hierarquia exacta. Nada aproximado, nada inflado."
+										"label": "Organizar",
+										"description": "A estrutura é a promessa. Documentos recolhidos, credenciais armazenadas, dados encaminhados — cada interacção respeita uma fronteira segura e uma hierarquia legível. Nada flutua solto, nada se esconde na opacidade."
 									},
 									{
-										"label": "Fluxo Contínuo",
-										"description": "Os eixos convergem em vez de colidir. Mesma lógica ao longo do sistema: site corporativo até aos UIs de produto e até às superfícies white-label, uma família, sem costuras onde a audiência muda."
-									},
-									{
-										"label": "Informação Sobre Ruído",
-										"description": "A tagline como filtro de trabalho. Se uma palavra, um campo ou um pixel não aproxima o utilizador da informação que importa, sai — no logo, na página, no texto."
+										"label": "Visualizar",
+										"description": "A informação só funciona quando é legível. Dashboards, hierarquia de página, diagramas de integração — a mesma clareza que a tagline exige, aplicada em qualquer escala. Menos dados no ecrã; mais compreensão nas mãos do utilizador."
 									}
 								]
 							},
 							"identity": {
 								"title": "Uma identidade de família, flexibilizada por audiência.",
-								"intro": "A identidade Securibox foi construída para carregar a família inteira — site corporativo, UIs de produto e superfícies white-label. Com os quatro princípios definidos como filtros de decisão, a identidade tinha um briefing claro a que responder: ancorar-se em confiança e profissionalismo, depois flexibilizar por audiência sem fragmentar. A marca são esses princípios tornados visíveis — um losango envolvente que segura três eixos direccionais a convergir numa única forma, para que a marca carregue a missão antes de se ler uma palavra.",
+								"intro": "A identidade Securibox foi construída para carregar a família inteira — site corporativo, UIs de produto e superfícies white-label. Com a missão de marca unificada definida como filtros de decisão, a identidade tinha um briefing claro a que responder: ancorar-se em confiança e profissionalismo, depois flexibilizar por audiência sem fragmentar. A marca é a missão tornada visível — um losango envolvente que segura três eixos direccionais a convergir numa única forma, para que a marca carregue Analisar, Organizar e Visualizar antes de se ler uma palavra.",
 								"concept": {
 									"description": [
-										"O ícone é a arquitectura do produto tornada visual, e cada elemento responde a um princípio. Um losango aberto — não uma caixa fechada — ancora <strong>Confiança pela Clareza</strong>. Três eixos a partir de um ponto carregam <strong>Precisão em Cada Interacção</strong> e <strong>Fluxo Contínuo</strong> por toda a família de produto.",
-										"A wordmark tinha de carregar o mesmo peso de forma independente — <strong>Informação Sobre Ruído</strong> aplicada à própria identidade, sem ornamento; forte e legível em qualquer tamanho."
+										"O ícone é a missão tornada visual — e cada elemento carrega parte dela. Um losango aberto — não uma caixa fechada — segura a família e declara a fronteira segura com clareza. Três eixos a partir de um ponto codificam <strong>Analisar</strong>, <strong>Organizar</strong> e <strong>Visualizar</strong>, a convergir numa única forma em vez de fragmentar à medida que os serviços se multiplicam.",
+										"A wordmark tinha de carregar o mesmo peso de forma independente — 'Less data, More information' aplicada à própria identidade: sem ornamento; forte e legível em qualquer tamanho."
 									],
 									"diagrams": [
 										{
 											"kind": "paths",
 											"title": "A marca, identificada.",
-											"caption": "— cada parte do logo mapeia para um princípio —",
+											"caption": "— cada parte do logo carrega parte da missão —",
 											"items": [
 												{
 													"key": "01",
 													"label": "Losango envolvente",
-													"detail": "Confiança pela Clareza, desenhada. A moldura que segura a família e torna visível a promessa do nome da marca — uma fronteira segura, dita com clareza."
+													"detail": "A moldura que segura a família e torna visível a promessa do nome da marca — uma fronteira segura, dita com clareza. A missão começa aqui, antes de se nomear qualquer serviço."
 												},
 												{
 													"key": "02",
 													"label": "Três eixos",
-													"detail": "Precisão e Fluxo num só gesto. Um eixo por serviço core, cada um exacto em direcção, a convergir numa única forma em vez de fragmentar a família."
+													"detail": "Três eixos, uma forma — um por parte da missão de marca unificada: Analisar, Organizar e Visualizar. Cada um exacto em direcção, a convergir numa única forma em vez de fragmentar a família. Os serviços emergem da marca de missão."
 												},
 												{
 													"key": "03",
 													"label": "Wordmark",
-													"detail": "Informação Sobre Ruído à escala da identidade. Forte, sem ornamento, legível em qualquer tamanho — uma imagem clara por si só, independente do ícone."
+													"detail": "'Less data, More information' à escala da identidade. Forte, sem ornamento, legível em qualquer tamanho — uma imagem clara por si só, independente do ícone."
 												}
 											]
 										}
@@ -750,19 +746,19 @@
 								},
 								"palette": [
 									{
-										"hex": "#2b49d7",
-										"name": "Primária",
-										"role": "Corporate · Confiança"
+										"hex": "#26e0d6",
+										"name": "Analisar",
+										"role": "Missão · Analisar"
 									},
 									{
-										"hex": "#26e0d6",
-										"name": "Secundária",
-										"role": "Pilar · CloudAgents"
+										"hex": "#2b49d7",
+										"name": "Organizar",
+										"role": "Missão · Organizar"
 									},
 									{
 										"hex": "#7137e6",
-										"name": "Acento",
-										"role": "Pilar · ParseXtract"
+										"name": "Visualizar",
+										"role": "Missão · Visualizar"
 									},
 									{
 										"hex": "#181a22",
@@ -846,10 +842,10 @@
 									},
 									{
 										"phase": "02",
-										"label": "Princípios",
-										"tagline": "Quatro princípios como filtros de decisão",
-										"title": "Princípios de Marca Unificados",
-										"description": "Traduzi a visão da empresa em quatro princípios accionáveis: Confiança pela Clareza, Precisão em Cada Interacção, Fluxo Contínuo, Informação Sobre Ruído. Estes governaram cada decisão — do logótipo à hierarquia de página nas páginas de soluções e ao tom dos textos sobre segurança."
+										"label": "Missão",
+										"tagline": "Missão de marca unificada como filtros de decisão",
+										"title": "Missão de Marca Unificada",
+										"description": "Traduzi 'Less data, More information' numa missão de marca unificada — Analisar, Organizar e Visualizar — que governou cada decisão, do logótipo à hierarquia de página nas páginas de soluções e ao tom dos textos sobre segurança. Os serviços seguem a marca de missão; a marca carrega a missão, não a lista de produtos."
 									},
 									{
 										"phase": "03",
@@ -908,7 +904,7 @@
 										"heading": "Identidade de marca",
 										"items": [
 											"Logo e marca Securibox: desenhados de raiz — um sistema de símbolos que funciona à escala do favicon e em apresentações enterprise.",
-											"Sistema de cor: paleta primária ancorada em confiança e profissionalismo, estendida com cores de acento específicas para as sub-marcas (Cube, SCA, PX).",
+											"Sistema de cor: três cores de missão — Analisar, Organizar, Visualizar — ancoradas em confiança e profissionalismo, estendidas com acentos específicos para as sub-marcas (Cube, SCA, PX) à medida que os serviços emergiram da missão.",
 											"Escala tipográfica: regras de hierarquia para títulos, body e excertos de código — consistentes entre páginas de marketing e UIs de produto.",
 											"Direcção de imagem: estilo de ilustração, sistema de ícones (integração com Material Design) e tom de fotografia — suficientemente sério para contextos regulados, suficientemente acessível para audiências de developers."
 										]

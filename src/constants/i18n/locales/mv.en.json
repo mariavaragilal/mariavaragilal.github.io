@@ -596,8 +596,8 @@
 						"overviewMockup": {
 							"src": "securibox/corporate-overview",
 							"label": "Corporate site",
-							"title": "Full-page overview: hero with solutions pillars, about, careers, journal, and footer.",
-							"alt": "Securibox corporate homepage from hero through footer, including Less data More information and CloudAgents, ParseXtract, and Consulting pillars.",
+							"title": "Full-page overview: hero with mission and solutions, about, careers, journal, and footer.",
+							"alt": "Securibox corporate homepage from hero through footer, including Less data More information, the Analyze, Organize, Visualize mission, and solution pages for CloudAgents, ParseXtract, and Consulting.",
 							"url": "https://www.securibox.eu",
 							"frame": "none"
 						},
@@ -667,56 +667,52 @@
 								"lead": "Each touchpoint, each page, each sub-brand had to pass that filter before it shipped."
 							},
 							"principles": {
-								"title": "Four principles as decision filters",
-								"subtitle": "Unified Brand Principles",
-								"intro": "With the identity set, the vision needed to be operational — something the team could actually decide with. Four principles translated 'Less data, More information' into filters that governed every call, from the mark itself to the page hierarchy on solution pages to the tone of security copy.",
-								"principles": [
+								"title": "Unified Brand Mission",
+								"subtitle": "Analyze · Organize · Visualize",
+								"intro": "Before the mark was drawn, the vision needed to be operational — something the team could actually decide with. The unified brand mission — Analyze, Organize & Visualize — translated 'Less data, More information' into filters that governed every call, from the mark itself to the page hierarchy on solution pages to the tone of security copy. Services emerge from that mission; they aren't encoded in the logo as separate axes.",
+								"items": [
 									{
-										"label": "Trust through Clarity",
-										"description": "The enclosing diamond isn't decoration — it's the secure boundary the brand name already implies, made visible. Every surface inherits that promise: say the thing plainly, show the structure, don't hide behind ornament."
+										"label": "Analyze",
+										"description": "Find the signal in the source. Whether it's a document stream, a credential sync, or an extraction pipeline — the first move is always the same: identify what matters, discard what doesn't, and arrive at information the user can act on."
 									},
 									{
-										"label": "Precision in Every Interaction",
-										"description": "Three axes, one form. The mark encodes precision at the identity level; the products carry it through — exact extraction, exact language, exact hierarchy. Nothing approximate, nothing padded."
+										"label": "Organize",
+										"description": "Structure is the promise. Documents collected, credentials stored, data routed — every interaction respects a secure boundary and a legible hierarchy. Nothing floats loose, nothing hides in opacity."
 									},
 									{
-										"label": "Seamless Flow",
-										"description": "The axes converge rather than collide. Same logic across the system: corporate site into product UIs into white-label surfaces, one family, no seams where the audience changes."
-									},
-									{
-										"label": "Information over Noise",
-										"description": "The tagline as a working filter. If a word, a field, or a pixel doesn't move the user closer to the information that matters, it comes out — at the logo, on the page, in the copy."
+										"label": "Visualize",
+										"description": "Information only works when it's readable. Dashboards, page hierarchy, integration diagrams — the same clarity the tagline demands, applied at every scale. Less data on screen; more understanding in the user's hands."
 									}
 								]
 							},
 							"identity": {
 								"title": "A family identity, flexed per audience.",
-								"intro": "The Securibox identity was built to carry the whole family — corporate site, product UIs, and white-label surfaces. With the four principles set as decision filters, the identity had a clear brief to answer to: anchor in trust and professionalism, then flex per audience without fragmenting. The mark is those principles made visible — an enclosing diamond holding three directional axes converging into a single form, so the brand carries the mission before a single word is read.",
+								"intro": "The Securibox identity was built to carry the whole family — corporate site, product UIs, and white-label surfaces. With the unified brand mission set as decision filters, the identity had a clear brief to answer to: anchor in trust and professionalism, then flex per audience without fragmenting. The mark is the mission made visible — an enclosing diamond holding three directional axes converging into a single form, so the brand carries Analyze, Organize & Visualize before a single word is read.",
 								"concept": {
 									"description": [
-										"The icon is the product's architecture made visual, and every element in it answers to a principle. An open diamond — not a sealed box — grounds <strong>Trust through Clarity</strong>. Three axes from one point carry <strong>Precision in Every Interaction</strong> and <strong>Seamless Flow</strong> across the whole product family.",
-										"The wordmark had to carry the same weight independently — <strong>Information over Noise</strong> applied to the identity itself: unadorned, strong, legible at any size"
+										"The icon is the mission made visual — and every element in it carries part of it. An open diamond — not a sealed box — holds the family and states the secure boundary plain. Three axes from one point encode <strong>Analyze</strong>, <strong>Organize</strong>, and <strong>Visualize</strong>, converging into a single form rather than fragmenting as services multiply.",
+										"The wordmark had to carry the same weight independently — 'Less data, More information' applied to the identity itself: unadorned, strong, legible at any size"
 									],
 									"diagrams": [
 										{
 											"kind": "paths",
 											"title": "The mark, labelled.",
-											"caption": "— each part of the logo maps to a principle —",
+											"caption": "— each part of the logo carries part of the mission —",
 											"items": [
 												{
 													"key": "01",
 													"label": "Enclosing diamond",
-													"detail": "Trust through Clarity, drawn. The frame that holds the family and makes the brand name's promise visible — a secure boundary, stated plainly."
+													"detail": "The frame that holds the family and makes the brand name's promise visible — a secure boundary, stated plainly. The mission starts here, before any service is named."
 												},
 												{
 													"key": "02",
 													"label": "Three axes",
-													"detail": "Precision and Flow in one gesture. One axis per core service, each exact in direction, converging into a single form rather than fragmenting the family."
+													"detail": "Three axes, one form — one per part of the unified brand mission: Analyze, Organize & Visualize. Each exact in direction, converging into a single form rather than fragmenting the family. Services emerge from the mission brand."
 												},
 												{
 													"key": "03",
 													"label": "Wordmark",
-													"detail": "Information over Noise at identity scale. Strong, unadorned, legible at any size — a clear picture on its own, independent of the icon."
+													"detail": "'Less data, More information' at identity scale. Strong, unadorned, legible at any size — a clear picture on its own, independent of the icon."
 												}
 											]
 										}
@@ -754,19 +750,19 @@
 								},
 								"palette": [
 									{
-										"hex": "#2b49d7",
-										"name": "Primary",
-										"role": "Corporate · Trust"
+										"hex": "#26e0d6",
+										"name": "Analyze",
+										"role": "Mission · Analyze"
 									},
 									{
-										"hex": "#26e0d6",
-										"name": "Secondary",
-										"role": "Pillar · CloudAgents"
+										"hex": "#2b49d7",
+										"name": "Organize",
+										"role": "Mission · Organize"
 									},
 									{
 										"hex": "#7137e6",
-										"name": "Accent",
-										"role": "Pillar · ParseXtract"
+										"name": "Visualize",
+										"role": "Mission · Visualize"
 									},
 									{
 										"hex": "#181a22",
@@ -850,10 +846,10 @@
 									},
 									{
 										"phase": "02",
-										"label": "Principles",
-										"tagline": "Four principles as decision filters",
-										"title": "Unified Brand Principles",
-										"description": "Translated the company vision into four actionable principles: Trust through Clarity, Precision in Every Interaction, Seamless Flow, Information over Noise. These governed every decision — from the logo mark to the page hierarchy on solution pages to the tone of security copy."
+										"label": "Mission",
+										"tagline": "Unified brand mission as decision filters",
+										"title": "Unified Brand Mission",
+										"description": "Translated 'Less data, More information' into a unified brand mission — Analyze, Organize & Visualize — that governed every decision, from the logo mark to the page hierarchy on solution pages to the tone of security copy. Services follow from the mission brand; the mark carries the mission, not the product list."
 									},
 									{
 										"phase": "03",
@@ -912,7 +908,7 @@
 										"heading": "Brand identity",
 										"items": [
 											"Securibox logo and mark: designed from scratch — a symbol system that works at favicon scale and on enterprise presentations alike.",
-											"Colour system: primary palette anchored in trust and professionalism, extended with solution-specific accent colours for sub-brands (Cube, SCA, PX).",
+											"Colour system: three mission colours — Analyze, Organize, Visualize — anchored in trust and professionalism, extended with solution-specific accents for sub-brands (Cube, SCA, PX) as services emerged from the mission.",
 											"Typography scale: hierarchy rules for headings, body, and code samples — consistent across marketing pages and product UIs.",
 											"Imagery direction: illustration style, icon system (Material Design integration), and photography tone — serious enough for regulated contexts, approachable enough for developer audiences."
 										]
