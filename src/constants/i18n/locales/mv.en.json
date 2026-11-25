@@ -1023,7 +1023,7 @@
 						]
 					},
 					{
-						"period": "2015",
+						"period": "2015 – present",
 						"status": "shipped",
 						"title": "Cube - Own your data",
 						"role": "Principal Product Designer & Frontend Developer",
@@ -1035,7 +1035,7 @@
 							"src": "cube/dashboard-main-view",
 							"url": "https://cube.securibox.eu",
 							"label": "Dashboard overview",
-							"title": "Drop in: three-column dashboard — My Collection, My Agents, HR Documents.",
+							"title": "Dashboard overview: three columns — My Collection, My Agents, HR Documents.",
 							"frame": "cover",
 							"ratio": "16 / 9"
 						},
@@ -1078,11 +1078,16 @@
 									},
 									{
 										"hex": "#E01585",
+										"name": "Secondary",
+										"role": "Secondary"
+									},
+									{
+										"hex": "#6CC4D5",
 										"name": "Accent",
 										"role": "Accent"
 									},
 									{
-										"hex": "#2a2632",
+										"hex": "#474055",
 										"name": "Ink",
 										"role": "Ink"
 									},
@@ -1131,7 +1136,7 @@
 											"src": "cube/brand/wordmark-dark",
 											"alt": "Cube wordmark on dark background",
 											"label": "On dark",
-											"bg": "#111111"
+											"bg": "#2A2632"
 										},
 										{
 											"src": "cube/brand/wordmark-brand",
@@ -1140,7 +1145,7 @@
 											"bg": "#7137e6"
 										}
 									],
-									"description": "Icon nods to the product's core metaphor — discrete units of data, stored as cleanly as books on a shelf. Wordmark set in Rubik: warm enough to feel consumer-grade, disciplined enough to sit beside enterprise siblings."
+									"description": "Icon is a single diamond, nodding to the product's core metaphor — discrete units of data, stored as cleanly as books on a shelf. Wordmark set in Rubik: warm enough to feel consumer-grade, disciplined enough to sit beside enterprise siblings."
 								},
 								"concept": {
 									"description": "Cube had to feel like something a user would invite into their personal data life — approachable, warm, trust-led — while still reading as part of Securibox. The bet: resolve the tension through accent colour and tone of voice, not structural divergence. Same type system, same geometry, same spacing rhythm as the family — different temperature.",
@@ -1151,11 +1156,11 @@
 										},
 										{
 											"label": "Standing apart",
-											"description": "magenta accent, warmer type choice, plain-language voice — signals consumer without abandoning the family."
+											"description": "magenta secondary, warmer type choice, plain-language voice — signals consumer without abandoning the family."
 										},
 										{
 											"label": "Logomark",
-											"description": "a single cube primitive — discrete units of data, stored as cleanly as books on a shelf."
+											"description": "a single diamond — discrete units of data, stored as cleanly as books on a shelf."
 										}
 									]
 								}
@@ -1169,15 +1174,15 @@
 										"label": "Trust",
 										"tagline": "Same screen, different zones",
 										"title": "Credentials and sync status on one view — spatially separated, not behind a tab.",
-										"description": "The instinct is to put sync status on a separate screen. Instead, credentials live on the left, synchronisation status on the right — same view, different zones. Users returning to check on an agent shouldn't have to navigate away to confirm it worked. The MFA button is persistent in the top right. The folder path breadcrumb appears here too — seeing exactly where documents will land, at the moment of saving credentials, reduces the anxiety that the data is going somewhere unknown.",
+										"description": "The instinct is to put sync status on a separate screen. Instead, credentials live on the left, synchronisation status on the right — same view, different zones. Users returning to check on an agent shouldn't have to navigate away to confirm it worked. For agents that use MFA, an MFA indicator sits in the top right of the header. The folder path breadcrumb appears here too — seeing exactly where documents will land, at the moment of saving credentials, reduces the anxiety that the data is going somewhere unknown.",
 										"system": {
 											"kind": "component",
 											"name": "CredentialSyncPanel",
 											"summary": "Credentials left, sync status right — one view, spatially zoned.",
 											"specs": [
-												"persistent MFA, top right",
+												"MFA indicator top right, on MFA agents",
 												"breadcrumb to exact storage path",
-												"states: idle · validating · retry · locked-out · provider-down"
+												"states: in progress · wrong credentials · additional authentication required · account blocked · website in maintenance"
 											]
 										}
 									},
@@ -1186,13 +1191,13 @@
 										"label": "Scale",
 										"tagline": "Two views for 300+ agents — both necessary",
 										"title": "List for the user who knows. Grid for the user who's exploring.",
-										"description": "A user who knows exactly which provider they want needs a scannable list with status at a glance. A user exploring needs logo density — to feel the scale of what's possible. List view: provider name, document types, last sync, connection status in one row. Card view: same data, denser grid, prioritising provider identity. The filter sidebar is identical in both modes. The \"Unavailable\" badge was a late decision: a status dot alone wouldn't let users distinguish working from unconfigured at scan speed, so the explicit text label was designed alongside the colour signal from the start.",
+										"description": "A user who knows exactly which provider they want needs a scannable list with status at a glance. A user exploring needs logo density — to feel the scale of what's possible. List view: provider name, document types, last sync, connection status in one row. Card view: same data, denser grid, prioritising provider identity. The filter sidebar is identical in both modes. The \"Unavailable\" label was deliberate: a status dot alone wouldn't let users tell working from unconfigured at scan speed, so the explicit text label was designed alongside the colour signal from the start.",
 										"system": {
 											"kind": "component",
 											"name": "AgentsIndex",
 											"summary": "Card for scanning, list for triage — shared filter, sort, selection.",
 											"specs": [
-												"views: card (3-up) · list (dense rows)",
+												"views: card (auto-fit grid) · list (dense rows)",
 												"state persists across toggle",
 												"filter sidebar identical in both"
 											]
@@ -1222,25 +1227,25 @@
 											"name": "CubeAgent",
 											"summary": "Agent card communicates full provider lifecycle without opening.",
 											"specs": [
-												"states: new · idle · syncing · error · credentials-required",
+												"states: not configured (Add) · last sync · loading · N accounts in error · under maintenance · unavailable",
 												"slots: mark · name · last sync · inline action",
-												"reused in dashboard, agents index, onboarding"
+												"reused in agents index and agent view header"
 											]
 										},
 										{
 											"name": "CredentialSyncPanel",
 											"summary": "Credentials on the left, sync status on the right — same view, different zones.",
 											"specs": [
-												"states: idle · validating · retry · locked-out · provider-down",
+												"states: in progress · wrong credentials · additional authentication required · account blocked · website in maintenance",
 												"copy contract: never blames the user",
-												"persistent MFA + breadcrumb to storage path"
+												"MFA indicator top right (MFA agents) + breadcrumb to storage path"
 											]
 										},
 										{
 											"name": "AgentsIndex",
 											"summary": "Card for scanning, list for triage. Shared filter, sort, selection.",
 											"specs": [
-												"views: card (3-up) · list (dense rows)",
+												"views: card (auto-fit grid) · list (dense rows)",
 												"state persists across toggle",
 												"no scroll jump, no re-fetch"
 											]
@@ -1258,8 +1263,8 @@
 											"name": "DashboardSummary",
 											"summary": "Three legible zones — My Collection, My Agents, HR Documents.",
 											"specs": [
-												"3 equal columns at lg, stacks at md",
-												"per-zone: count · latest event · primary action",
+												"three columns from xl (My Collection · My Agents · a narrower profile + HR Documents column); two from sm; one below sm",
+												"summary on My Collection and My Agents: configured count · 30-day or code-delivery stat",
 												"per-zone empty state, never generic"
 											]
 										}
@@ -1280,7 +1285,7 @@
 											"specs": [
 												"surfaces always expose: what · where · how to revoke",
 												"consent sits next to the control, not under a link",
-												"revoke = one click, reversible grace window"
+												"revoke = one click, from Settings › Applications"
 											]
 										},
 										{
@@ -1311,11 +1316,11 @@
 										"badge": "Edge cases",
 										"title": "The \"Unavailable\" badge — designed in from the start.",
 										"summary": "Explicit text label alongside colour, not instead of it.",
-										"task": "Agent card grid needed to communicate three states: active, available to configure, temporarily offline.",
+										"task": "Agent card grid needed to communicate three states: configured, available to configure, and offline (under maintenance or unavailable).",
 										"issue": "A colour-coded status dot alone forces users to learn a legend before the interface makes sense.",
 										"insight": "If someone has to pause and decode a signal, it's not a signal — it's a puzzle. The pain point was obvious before it ever reached a user.",
-										"decision": "Designed the explicit \"Unavailable\" text label alongside the colour dot from the start — redundant by design, not by accident.",
-										"outcome": "Status legible at scan speed from day one. No user ever had to guess what the dot meant."
+										"decision": "Designed the explicit \"Unavailable\" text label into a tinted pill from the start — colour and words together, redundant by design, not by accident.",
+										"outcome": "Status legible at scan speed from day one — the label says what the colour means."
 									},
 									{
 										"badge": "Production-informed iteration",
@@ -1324,7 +1329,7 @@
 										"task": "Onboarding needed to guide new users toward configuring their first agent.",
 										"issue": "The walkthrough created commitment pressure — users felt pushed to act before they understood the product.",
 										"insight": "Guided tours optimise for activation metrics. The product needed to optimise for trust — a user who browses first commits better.",
-										"decision": "Removed the walkthrough. Replaced it with a single clear entry point: \"Configure your first agent.\" Options reveal only after interaction.",
+										"decision": "Removed the walkthrough. Replaced it with plain entry points in the empty dashboard zones: \"Configure your agents\" with a \"Get Started\" link. Options reveal only after interaction.",
 										"outcome": "Progressive reveal over guided tours. Users explored before committing — no onboarding friction disguised as help."
 									}
 								]
@@ -1343,15 +1348,15 @@
 									{
 										"heading": "Setup & configuration",
 										"items": [
-											"Agent discovery: list and card modes sharing one filter sidebar with a 12-category document taxonomy, sort controls, and view toggle; explicit \"Unavailable\" labelling when an integration is offline; \"Add suggestion\" CTA for provider requests.",
-											"Credential and synchronisation: credentials and sync status kept in the same view but spatially separated — so users never navigate away to confirm an agent worked. Persistent MFA entry, masked fields, help tooltips, password visibility toggle, and a breadcrumb showing exact storage path at the moment of saving.",
+											"Agent discovery: list and card modes sharing one filter sidebar with a 12-category document taxonomy, sort controls, and view toggle; explicit \"Unavailable\" labelling when an integration is offline; \"Add suggestion\" CTA for provider requests (designed; shipped disabled).",
+											"Credential and synchronisation: credentials and sync status kept in the same view but spatially separated — so users never navigate away to confirm an agent worked. An MFA indicator on MFA agents, masked fields, help tooltips, password visibility toggle, and a breadcrumb showing exact storage path at the moment of saving.",
 											"Connected-app settings and revoke patterns for cloud destinations"
 										]
 									},
 									{
 										"heading": "Ongoing use",
 										"items": [
-											"Dashboard designed as a single surface across screen sizes: summary metrics bar (accounts, documents, agents, delivery status) followed by three legible source columns on desktop and stacked sections with bottom tab navigation on mobile. Inline agent status expansion showing file count or contextual error without navigation; HR Documents spatially separated and explicitly labelled.",
+											"Dashboard designed as a single surface across screen sizes: summary metrics bar (configured accounts, documents retrieved in the last 30 days, configured agents, agents with code delivery) followed by three legible source columns on desktop and stacked sections on mobile, with the navigation rail moved to a horizontal bar at the bottom, within thumb reach like a native app. Inline agent status expansion showing file count or contextual error without navigation; HR Documents spatially separated and explicitly labelled.",
 											"Folder tree rendering multiple storage sources (Securibox, employer, Google Drive, OneDrive) as one unified view — different origins, one browsing experience."
 										]
 									}
@@ -1368,16 +1373,16 @@
 									{
 										"heading": "App shell & agent views",
 										"items": [
-											"React with a Vite-based toolchain; FR/EN i18n throughout. Shared component patterns with the SCA frontend where the underlying API endpoints overlapped.",
+											"React with a Vite-based toolchain; FR/EN/PT i18n. Shared component patterns with the SCA frontend where the underlying API endpoints overlapped.",
 											"Agent views: grid and list rendered from the same data source and shared filter state — one taxonomy and sort model driving both expressions, so switching view mode preserves filter context.",
-											"Credential UI: help tooltips, password visibility toggle, persistent MFA action; synchronisation status panel consuming API sync history and document counts."
+											"Credential UI: help tooltips, password visibility toggle, MFA indicator on MFA agents; synchronisation status panel consuming API sync history and document counts."
 										]
 									},
 									{
 										"heading": "Dashboard, files & settings",
 										"items": [
-											"Summary metrics bar and three-column layout; inline agent status expansion with conditional rendering (file count vs error state); mobile reorganisation to single column with bottom tabs.",
-											"Files explorer: folder tree rendering multiple storage sources (Securibox, employer, Google Drive, OneDrive) as one unified view; storage capacity visualisation.",
+											"Summary metrics bar and three-column layout; inline agent status expansion with conditional rendering (file count vs error state); mobile reorganisation to a single column, the rail reflowed into a horizontal bar at the bottom.",
+											"Files explorer: folder tree rendering multiple storage sources (Securibox, employer, Google Drive, OneDrive) as one unified view; storage capacity bar in Settings.",
 											"Connected applications: settings and revoke flows for cloud destinations in the UI."
 										]
 									}
@@ -1399,8 +1404,8 @@
 										"label": "View modes from the same component system."
 									},
 									{
-										"value": "FR / EN",
-										"label": "Bilingual app, marketing site, and onboarding."
+										"value": "FR / EN / PT",
+										"label": "App in three languages; marketing site in English and French."
 									}
 								]
 							},
@@ -1411,7 +1416,7 @@
 									"— Cube as a sub-brand had to feel distinct from Securibox corporate — approachable, personal, consumer-grade — while clearly belonging to the same family. The tension surfaced in every colour and type decision: too far from the parent brand and enterprise clients question the relationship; too close and consumers feel they've landed in a B2B tool. The resolution was accent colour and tone of voice, not structural divergence.",
 									"— Maintaining two build systems — Gatsby for the marketing site and React/Vite for the app — introduced overhead. The trade-off was worth it: the marketing site needed static generation, SEO, and fast first-paint; the app needed SPA routing, shared state, and component reuse with SCA. Keeping them separate meant each could optimise for its audience without compromising the other.",
 									"— The landing page (cube.securibox.eu) was designed alongside the app — not after it. It handles the first layer of understanding (what agents are, how sync works) so the app itself can skip the explainer and let users explore immediately.",
-									"— Designing mobile as a dedicated single-column layout with bottom tab navigation — rather than a responsive adaptation of the desktop grid — meant maintaining a parallel layout system. The payoff: the mobile experience reads as intentional, not squeezed. The cost: every new dashboard feature ships twice."
+									"— Designing mobile as a single-column layout with the navigation rail moved to a horizontal bar at the bottom — within thumb reach, the way a native app is held — rather than a squeezed desktop grid, meant designing every dashboard feature at both sizes. The payoff: the mobile experience feels native and intentional, not squeezed. The cost: each new feature has to work in both arrangements."
 								]
 							},
 							"quote": {
@@ -1426,7 +1431,7 @@
 								"Tool exploration",
 								"Systems thinking"
 							],
-							"projectSpecificSkills": "Consumer product design · Trust-pattern UX · Sub-brand creation · Information architecture at scale · Credential & security UX · Bilingual i18n · React + Gatsby frontend",
+							"projectSpecificSkills": "Consumer product design · Trust-pattern UX · Sub-brand creation · Information architecture at scale · Credential & security UX · Multilingual i18n · React + Gatsby frontend",
 							"skillsByStrength": [
 								{
 									"strength": "Edge cases & resilience",
@@ -1438,7 +1443,7 @@
 								},
 								{
 									"strength": "Production-informed iteration",
-									"items": "Bilingual i18n · React + Gatsby frontend"
+									"items": "Multilingual i18n · React + Gatsby frontend"
 								},
 								{
 									"strength": "Design to code",
